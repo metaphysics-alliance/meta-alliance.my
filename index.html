@@ -1,10 +1,387 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Welcome to Meta Alliance</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>This page is currently undergoing development. Stay Tune!!</p>
-  </body>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>玄域联盟 · Metaphysics Alliance</title>
+  <meta name="description" content="玄域联盟：命理 · 风水 · 奇门 · 数字磁场 · 企业堪舆。权威典籍传承 + 科学历法交叉验证。">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              900: "#070b16", // 深蓝宇宙底色
+              800: "#0a0f1c",
+              700: "#0b1224"
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Icons (Lucide) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="/assets/logo.png">
+  <style>
+    /* 简单的 dropdown 显隐 */
+    .dropdown:hover .dropdown-menu{ display:block }
+    .dropdown-menu{ display:none }
+    /* 抽屉遮罩滚动锁定 */
+    .no-scroll { overflow: hidden }
+    /* 滚动缩小导航 */
+    .nav-compact { padding-top: .25rem !important; padding-bottom: .25rem !important; backdrop-filter: saturate(180%) blur(10px) }
+  </style>
+</head>
+<body class="bg-space-900 text-slate-100 selection:bg-amber-400/30 selection:text-amber-50">
+
+  <!-- ===== Header / Top Nav ===== -->
+  <header id="topNav" class="sticky top-0 z-50 w-full border-b border-white/10 bg-space-800/60 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8 transition-all">
+      <!-- Left: Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <!-- 替换为你的 LOGO 图片路径 -->
+        <img src="/assets/logo.png" alt="玄域联盟 Metaphysics Alliance" class="h-8 w-auto" />
+        <span class="hidden sm:block bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold tracking-wide">
+          玄域联盟 · Metaphysics Alliance
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden items-center gap-1 lg:flex">
+        <li><a href="/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">首页 Home</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown relative">
+          <button class="inline-flex items-center gap-1 rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">
+            服务 Services
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-80 rounded-xl border border-white/10 bg-space-700/95 p-2 shadow-xl">
+            <a href="/services/bazi.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">四柱八字 Bazi</a>
+            <a href="/services/zi-wei.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">紫微斗数 Zi Wei Dou Shu</a>
+            <a href="/services/qimen.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">奇门遁甲 Qimen（布局/择日）</a>
+            <a href="/services/advanced.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">高级术数（皇极/太乙/六壬）</a>
+            <a href="/services/numerics.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">姓名学/生命数字/数字磁场</a>
+            <a href="/services/feng-shui.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">风水勘察（家居/办公室/商铺/楼盘）</a>
+            <a href="/services/feng-shui-layout.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">风水布局（三元九运/玄空飞星）</a>
+            <a href="/services/enterprise.html" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/10">企业/高管专案</a>
+          </div>
+        </li>
+
+        <li><a href="/academy/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">学院 Academy</a></li>
+        <li><a href="/shop/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">商城 Shop</a></li>
+        <li><a href="/cases/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">案例 Case Studies</a></li>
+        <li><a href="/resources/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">资源 Resources</a></li>
+        <li><a href="/about/" class="rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white">关于 About</a></li>
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="hidden items-center gap-2 lg:flex">
+        <!-- Language -->
+        <div class="dropdown relative">
+          <button class="inline-flex items-center gap-1 rounded-xl px-3 py-2 text-sm text-slate-200 hover:bg-white/5 hover:text-white" aria-haspopup="true">
+            <i data-lucide="globe-2" class="h-4 w-4"></i>
+            语言 / Lang
+          </button>
+          <div class="dropdown-menu absolute right-0 mt-2 w-28 rounded-xl border border-white/10 bg-space-700/95 p-1 shadow-xl">
+            <button data-lang="zh" class="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-white/10">中文</button>
+            <button data-lang="en" class="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-white/10">EN</button>
+            <button data-lang="ms" class="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-white/10">MS</button>
+          </div>
+        </div>
+
+        <!-- Cart (占位) -->
+        <a href="/shop/cart" class="rounded-xl p-2 text-slate-200 hover:bg-white/5 hover:text-white" title="Cart">
+          <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+        </a>
+
+        <!-- Primary CTA -->
+        <a href="/booking/" class="rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 px-4 py-2 text-sm font-medium text-black shadow-[0_0_30px_rgba(234,179,8,0.25)] hover:from-amber-300 hover:to-yellow-400">预约 / Book Now</a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/60123456789" target="_blank" rel="noopener" class="rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm text-slate-100 hover:bg-white/10">
+          <i data-lucide="phone" class="mr-1 inline-block h-4 w-4"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <a href="/shop/cart" class="rounded-xl p-2 text-slate-200 hover:bg-white/5 hover:text-white">
+          <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+        </a>
+        <button id="openMenu" class="rounded-xl p-2 text-slate-200 hover:bg-white/5 hover:text-white" aria-label="Open menu">
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="drawer" class="fixed inset-0 z-40 hidden">
+      <div id="drawerBackdrop" class="absolute inset-0 bg-black/50"></div>
+      <aside class="absolute right-0 top-0 h-full w-[88vw] max-w-sm border-l border-white/10 bg-space-700 p-0">
+        <div class="flex items-center justify-between border-b border-white/10 px-4 py-3">
+          <a href="/" class="font-semibold">玄域联盟 · Metaphysics Alliance</a>
+          <button id="closeMenu" class="rounded-lg p-2 hover:bg-white/10" aria-label="Close menu">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="px-2 py-2">
+          <a href="/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">首页 Home</a>
+          <details class="group">
+            <summary class="cursor-pointer rounded-lg px-3 py-2 text-sm hover:bg-white/5">服务 Services</summary>
+            <div class="ml-3">
+              <a href="/services/bazi.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">四柱八字 Bazi</a>
+              <a href="/services/zi-wei.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">紫微斗数</a>
+              <a href="/services/qimen.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">奇门遁甲（布局/择日）</a>
+              <a href="/services/advanced.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">高级术数（皇极/太乙/六壬）</a>
+              <a href="/services/numerics.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">姓名学/生命数字/数字磁场</a>
+              <a href="/services/feng-shui.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">风水勘察</a>
+              <a href="/services/feng-shui-layout.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">风水布局</a>
+              <a href="/services/enterprise.html" class="block rounded-lg px-3 py-1.5 text-xs text-slate-300 hover:bg-white/5">企业/高管专案</a>
+            </div>
+          </details>
+          <a href="/academy/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">学院 Academy</a>
+          <a href="/shop/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">商城 Shop</a>
+          <a href="/cases/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">案例 Case Studies</a>
+          <a href="/resources/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">资源 Resources</a>
+          <a href="/about/" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">关于 About</a>
+        </div>
+        <div class="mt-2 border-t border-white/10 px-3 py-3">
+          <div class="mb-2 flex gap-2">
+            <button data-lang="zh" class="flex-1 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs hover:bg-white/10">中文</button>
+            <button data-lang="en" class="flex-1 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs hover:bg-white/10">EN</button>
+            <button data-lang="ms" class="flex-1 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-xs hover:bg-white/10">MS</button>
+          </div>
+          <div class="flex gap-2">
+            <a href="/booking/" class="flex-1 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 px-4 py-2 text-center text-sm font-medium text-black hover:from-amber-300 hover:to-yellow-400">预约 / Book Now</a>
+            <a href="https://wa.me/60123456789" target="_blank" rel="noopener" class="flex-1 rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-center text-sm hover:bg-white/10">WhatsApp</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="relative">
+    <!-- 替换为你的横幅图 -->
+    <img src="/assets/banner.jpg" alt="玄域联盟宇宙横幅" class="h-[58svh] w-full object-cover object-center md:h-[70svh]" />
+    <div class="absolute inset-0 bg-gradient-to-t from-space-900 via-space-800/70 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-4 pb-10 md:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+          以道御术 · 运筹帷幄<br class="hidden md:block">
+          <span class="text-amber-300">Metaphysics for Winning Moves</span>
+        </h1>
+        <p class="mt-4 text-slate-300">
+          四柱八字 · 紫微斗数 · 奇门遁甲 · 风水 · 数字磁场。<br>
+          权威典籍传承 × 中国国家天文台 & 台湾万年历 × 24节气交叉验证。
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/packages/" class="rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 px-5 py-2.5 text-sm font-semibold text-black hover:from-amber-300 hover:to-yellow-400">查看配套 Packages</a>
+          <!-- Calendly/预约：替换为你的链接 -->
+          <a href="https://calendly.com/your-id" target="_blank" rel="noopener" class="rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-sm hover:bg-white/10">快速预约 / Quick Booking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 快速入口 Services ===== -->
+  <section class="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:px-8">
+    <h2 class="text-xl font-semibold">热门服务 · Quick Access</h2>
+    <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- 卡片模板 -->
+      <a href="/services/bazi.html" class="group rounded-2xl border border-white/10 bg-space-800/60 p-5 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition">
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">四柱八字 Bazi</h3>
+          <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400 group-hover:text-amber-300"></i>
+        </div>
+        <p class="mt-2 text-sm text-slate-300">命局格局、十神喜忌、流年运势，一页清晰。</p>
+      </a>
+
+      <a href="/services/zi-wei.html" class="group rounded-2xl border border-white/10 bg-space-800/60 p-5 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition">
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">紫微斗数 Zi Wei</h3>
+          <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400 group-hover:text-amber-300"></i>
+        </div>
+        <p class="mt-2 text-sm text-slate-300">12宫立体剖析，事业/财帛/婚姻/健康一网打尽。</p>
+      </a>
+
+      <a href="/services/qimen.html" class="group rounded-2xl border border-white/10 bg-space-800/60 p-5 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition">
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">奇门遁甲 Qimen</h3>
+          <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400 group-hover:text-amber-300"></i>
+        </div>
+        <p class="mt-2 text-sm text-slate-300">布局 + 择日 + 方向，与行动结合的胜率提升法。</p>
+      </a>
+
+      <a href="/services/feng-shui.html" class="group rounded-2xl border border-white/10 bg-space-800/60 p-5 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition">
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">风水勘察 & 布局</h3>
+          <i data-lucide="chevron-right" class="h-4 w-4 text-slate-400 group-hover:text-amber-300"></i>
+        </div>
+        <p class="mt-2 text-sm text-slate-300">三元九运 × 玄空飞星 × 藏风聚气，宅运与财运齐升。</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== USP / 背书 ===== -->
+  <section class="mx-auto max-w-7xl px-4 pb-4 md:px-6 lg:px-8">
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-space-800/60 p-6">
+        <div class="mb-2 text-amber-300">权威传承</div>
+        <p class="text-sm text-slate-300">《渊海子平》《紫微斗数全书》《奇门正宗》… 古今典籍系统融会贯通。</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-space-800/60 p-6">
+        <div class="mb-2 text-amber-300">科学历法交叉验证</div>
+        <p class="text-sm text-slate-300">中国国家天文台 × 台湾万年历 × 24节气，确保推演时刻与天象一致。</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-space-800/60 p-6">
+        <div class="mb-2 text-amber-300">实战导向</div>
+        <p class="text-sm text-slate-300">报告可执行、布局可落地、择日可操作，直达结果与提升。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 配套 Packages 占位 ===== -->
+  <section class="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:px-8">
+    <div class="rounded-2xl border border-white/10 bg-space-800/60 p-6">
+      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <h2 class="text-xl font-semibold">VIP 专业命理配套（Lite / Pro / Supreme）</h2>
+          <p class="mt-1 text-sm text-slate-300">对比功能、交付物、时长与售后，清晰选择最适合你的方案。</p>
+        </div>
+        <a href="/packages/" class="inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 px-4 py-2 text-sm font-semibold text-black hover:from-amber-300 hover:to-yellow-400">
+          立即查看
+          <i data-lucide="arrow-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 客户见证 ===== -->
+  <section class="mx-auto max-w-7xl px-4 pb-14 md:px-6 lg:px-8">
+    <h2 class="text-xl font-semibold">客户见证 · Testimonials</h2>
+    <div class="mt-5 grid gap-4 md:grid-cols-3">
+      <blockquote class="rounded-2xl border border-white/10 bg-space-800/60 p-6 text-sm text-slate-300">
+        “Bazi + Zi Wei 交叉验证太清楚了！我直接知道下一步要怎么做。”<br>
+        <span class="mt-3 block text-slate-400">— Ms. Lee, KL</span>
+      </blockquote>
+      <blockquote class="rounded-2xl border border-white/10 bg-space-800/60 p-6 text-sm text-slate-300">
+        “奇门布局 + 择日，签约成功率明显提升。”<br>
+        <span class="mt-3 block text-slate-400">— Mr. Tan, SG</span>
+      </blockquote>
+      <blockquote class="rounded-2xl border border-white/10 bg-space-800/60 p-6 text-sm text-slate-300">
+        “飞星布局后，办公室气场真的稳定下来，团队状态更好了。”<br>
+        <span class="mt-3 block text-slate-400">— Startup Founder, JB</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="border-t border-white/10 bg-space-800/60">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-4 md:px-6 lg:px-8">
+      <div>
+        <img src="/assets/logo.png" alt="玄域联盟 Logo" class="h-8 w-auto" />
+        <p class="mt-3 text-sm text-slate-400">Metaphysics Alliance · 运筹帷幄，决胜千里。</p>
+      </div>
+      <div>
+        <div class="font-semibold">服务</div>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300">
+          <li><a class="hover:text-white" href="/services/bazi.html">四柱八字</a></li>
+          <li><a class="hover:text-white" href="/services/zi-wei.html">紫微斗数</a></li>
+          <li><a class="hover:text-white" href="/services/qimen.html">奇门遁甲</a></li>
+          <li><a class="hover:text-white" href="/services/feng-shui.html">风水勘察/布局</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">导航</div>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300">
+          <li><a class="hover:text-white" href="/packages/">配套</a></li>
+          <li><a class="hover:text-white" href="/cases/">案例</a></li>
+          <li><a class="hover:text-white" href="/resources/">资源中心</a></li>
+          <li><a class="hover:text-white" href="/about/">关于我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">联系</div>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300">
+          <li>WhatsApp: <a class="hover:text-white" href="https://wa.me/60123456789" target="_blank" rel="noopener">+60 12-345 6789</a></li>
+          <li>Email: <a class="hover:text-white" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+          <li>预约：<a class="hover:text-white" href="/booking/">/booking/</a></li>
+          <li>地址：Kuala Lumpur / Johor / Singapore</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-slate-400">
+      © <span id="y"></span> 玄域联盟 · Metaphysics Alliance · All rights reserved.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating CTA -->
+  <a href="https://wa.me/60123456789" target="_blank" rel="noopener"
+     class="fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 px-4 py-2 text-sm font-semibold text-black shadow-lg hover:from-amber-300 hover:to-yellow-400">
+    <i data-lucide="phone" class="h-4 w-4"></i> WhatsApp 咨询
+  </a>
+
+  <!-- ===== Minimal JS ===== -->
+  <script>
+    // Icons
+    lucide.createIcons();
+
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mobile drawer
+    const drawer = document.getElementById('drawer');
+    const openBtn = document.getElementById('openMenu');
+    const closeBtn = document.getElementById('closeMenu');
+    const backdrop = document.getElementById('drawerBackdrop');
+
+    function openDrawer(){
+      drawer.classList.remove('hidden');
+      document.documentElement.classList.add('no-scroll');
+    }
+    function closeDrawer(){
+      drawer.classList.add('hidden');
+      document.documentElement.classList.remove('no-scroll');
+    }
+    openBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    backdrop?.addEventListener('click', closeDrawer);
+
+    // Scroll shrink
+    const topNav = document.getElementById('topNav');
+    let last = 0;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY || window.pageYOffset;
+      if (y > 24 && last <= 24) topNav.classList.add('nav-compact');
+      else if (y <= 24 && last > 24) topNav.classList.remove('nav-compact');
+      last = y;
+    });
+
+    // Active link highlight (basic by path)
+    const path = location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('header a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const clean = href.replace(/\/$/, '');
+      if (clean && clean !== '/' && path.startsWith(clean)) {
+        a.classList.add('text-white','bg-white/5');
+      }
+    });
+
+    // Language buttons (占位：后续接入多语言路由/切换)
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.getAttribute('data-lang');
+        alert('Language switch placeholder: ' + code + '（后续接入多语言版本 /zh /en /ms）');
+      });
+    });
+  </script>
+</body>
 </html>
