@@ -43,10 +43,11 @@ export default function VIPTiers(){
     <section id="vip-tiers" className="py-12">
       <SectionDivider title={title} />
       <div className="container grid md:grid-cols-3 gap-6 mt-6">
-        <TierCard title={tierLite}    lines={lite}    href="/vip-report/lite"    cta={cta} />
-        <TierCard title={tierPro}     lines={pro}     href="/vip-report/pro"     cta={cta} />
+        <TierCard title={tierLite}    lines={lite}    href="/vip-report/essential"    cta={cta} />
+        <TierCard title={tierPro}     lines={pro}     href="/vip-report/advanced"     cta={cta} />
         <TierCard title={tierSupreme} lines={supreme} href="/vip-report/supreme" cta={cta} />
       </div>
     </section>
   )
 }
+
