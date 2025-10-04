@@ -1,0 +1,4 @@
+v2.3.7
+Build: meta-alliance-website-full-v2.3.7.zip
+Date: 2025-10-03
+Notes: Homepage About section revamped — WHO above WHY; WHY uses inner icon cards.
