@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 import Brand from './Brand.jsx'
 import { useI18n } from '../i18n.jsx'
@@ -42,7 +41,7 @@ function useHoverDelay(isTouch = false){
 
   const toggle = () => {
     if (timer.current) clearTimeout(timer.current)
-    setOpen((v) => !v)
+    setOpen(v => !v)
   }
 
   const instantOpen = () => {
@@ -61,14 +60,14 @@ function useHoverDelay(isTouch = false){
 const transformItems = (items) => Array.isArray(items)
   ? items.map((item) => ({
       label: item?.title ?? '',
-      href: item?.href ?? '#',
+      href: item?.href ?? '#'
     }))
   : []
 
 const transformSections = (sections) => Array.isArray(sections)
   ? sections.map((section) => ({
       label: section?.title ?? '',
-      children: transformItems(section?.items),
+      children: transformItems(section?.items)
     }))
   : []
 
@@ -79,9 +78,9 @@ function SecondLevel({ group, isTouch }){
   if (!hasChildren){
     return (
       <div className="px-2 py-1.5">
-        <Link to={group.href ?? '#'} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
+        <a href={group.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
           <div className="font-medium">{group.label}</div>
-        </Link>
+        </a>
       </div>
     )
   }
@@ -109,9 +108,9 @@ function SecondLevel({ group, isTouch }){
       {open && (
         <div className="absolute top-0 left-full ml-2 w-[18rem] rounded-xl bg-black/80 backdrop-blur-xl border border-white/10 shadow-soft-xl p-2 z-50 nav-submenu-panel">
           {group.children.map((item, idx) => (
-            <Link key={idx} to={item.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
+            <a key={idx} href={item.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
               <div className="font-medium">{item.label}</div>
-            </Link>
+            </a>
           ))}
         </div>
       )}
@@ -125,9 +124,7 @@ function Dropdown({ item, isTouch }){
 
   if (!hasChildren){
     return (
-      <Link to={item.href ?? '#'} className="nav-item nav-link whitespace-nowrap">
-        {item.label}
-      </Link>
+      <a href={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</a>
     )
   }
 
@@ -172,48 +169,32 @@ export default function Nav(){
   const MAP = [
     { label: t('nav.home'), href: '/' },
     { label: t('nav.celestial'), children: celestialMenu },
-    {
-      label: t('nav.oracles'),
-      children: [
-        { label: t('nav.celestial_numbers'), href: '/oracle/celestial-numbers' },
-        { label: t('nav.taiyi_numbers'), href: '/oracle/taiyi-numbers' },
-        { label: t('nav.six_ren'), href: '/oracle/six-ren' },
-      ],
-    },
-    {
-      label: t('nav.vip_report'),
-      href: '/vip-report',
-      children: [
-        { label: t('nav.vip_essential'), href: '/vip-report/essential' },
-        { label: t('nav.vip_advanced'), href: '/vip-report/advanced' },
-        { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
-      ],
-    },
-    {
-      label: t('nav.academy'),
-      children: [
-        { label: t('nav.courses'), href: '/academy/courses' },
-        { label: t('nav.beginner'), href: '/academy/beginner' },
-        { label: t('nav.advanced'), href: '/academy/advanced' },
-        { label: t('nav.pro'), href: '/academy/pro' },
-        { label: t('nav.calendar'), href: '/academy/calendar' },
-      ],
-    },
-    {
-      label: t('nav.enterprise'),
-      children: [
-        { label: t('nav.audit'), href: '/enterprise/audit' },
-        { label: t('nav.site'), href: '/enterprise/site' },
-        { label: t('nav.cycles'), href: '/enterprise/cycles' },
-      ],
-    },
-    {
-      label: t('nav.resources'),
-      children: [
-        { label: t('nav.four_pillars'), href: '/resources/four-pillars' },
-        { label: t('nav.purple_star'), href: '/resources/purple-star' },
-      ],
-    },
+    { label: t('nav.oracles'), children: [
+      { label: t('nav.celestial_numbers'), href: '/oracle/celestial' },
+      { label: t('nav.taiyi_numbers'), href: '/oracle/celestial' },
+      { label: t('nav.six_ren'), href: '/oracle/celestial' },
+    ]},
+    { label: t('nav.vip_report'), href: lang === 'EN' ? '/vip-report' : '/services/vip-report', children: [
+      { label: t('nav.vip_essential'), href: '/vip-report/essential' },
+      { label: t('nav.vip_advanced'), href: '/vip-report/advanced' },
+      { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
+    ]},
+    { label: t('nav.academy'), children: [
+      { label: t('nav.courses'), href: '/academy/courses' },
+      { label: t('nav.beginner'), href: '/academy/beginner' },
+      { label: t('nav.advanced'), href: '/academy/advanced' },
+      { label: t('nav.pro'), href: '/academy/pro' },
+      { label: t('nav.calendar'), href: '/academy/calendar' },
+    ]},
+    { label: t('nav.enterprise'), children: [
+      { label: t('nav.audit'), href: '/enterprise/audit' },
+      { label: t('nav.site'), href: '/enterprise/site' },
+      { label: t('nav.cycles'), href: '/enterprise/cycles' },
+    ]},
+    { label: t('nav.resources'), children: [
+      { label: t('nav.four_pillars'), href: '/resources/four-pillars' },
+      { label: t('nav.purple_star'), href: '/resources/purple-star' },
+    ]},
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.contact'), href: '/contact' },
   ]
@@ -221,16 +202,16 @@ export default function Nav(){
   return (
     <header className="navbar">
       <div className="container py-3 md:py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img src="/logo.png" alt="logo" className="w-10 h-10 rounded-full ring-1 ring-white/20" />
           <Brand />
-        </Link>
+        </a>
 
         <nav className="hidden lg:flex items-center gap-5 flex-nowrap">
           {MAP.map((item, i) => (
             item.children && item.children.length
               ? <Dropdown key={i} item={item} isTouch={isTouch} />
-              : <Link key={i} to={item.href ?? '#'} className="nav-item nav-link whitespace-nowrap">{item.label}</Link>
+              : <a key={i} href={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</a>
           ))}
         </nav>
 
@@ -245,12 +226,12 @@ export default function Nav(){
             onClick={() => setLang('CN')}
             aria-label="切换到中文"
           >中文</button>
-          <button className="lg:hidden p-2 rounded-xl border border-white/10 text-white/80 ml-2 transition-colors duration-150" onClick={() => setMobileOpen((v) => !v)} aria-label="Toggle menu">
+          <button className="lg:hidden p-2 rounded-xl border border-white/10 text-white/80 ml-2 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
-        <button className="md:hidden p-2 rounded-xl border border-white/10 text-white/80 transition-colors duration-150" onClick={() => setMobileOpen((v) => !v)} aria-label="Toggle menu">
+        <button className="md:hidden p-2 rounded-xl border border-white/10 text-white/80 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
@@ -274,18 +255,18 @@ export default function Nav(){
                             <div className="text-xs uppercase tracking-wide text-white/50 my-1">{c.label}</div>
                             <div className="flex flex-col gap-1 pl-2">
                               {c.children.map((cc, j) => (
-                                <Link key={j} to={cc.href} className="nav-link">{cc.label}</Link>
+                                <a key={j} href={cc.href} className="nav-link">{cc.label}</a>
                               ))}
                             </div>
                           </div>
                         ) : (
-                          <Link key={idx} to={c.href ?? '#'} className="nav-link">{c.label}</Link>
+                          <a key={idx} href={c.href} className="nav-link">{c.label}</a>
                         )
                       ))}
                     </div>
                   </details>
                 ) : (
-                  <Link to={item.href ?? '#'} className="nav-link">{item.label}</Link>
+                  <a href={item.href} className="nav-link">{item.label}</a>
                 )}
               </div>
             ))}
