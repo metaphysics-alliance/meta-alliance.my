@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react'
+
 import { useI18n } from '../i18n.jsx'
 
 /**
- * NewsletterCard — 3D transparent card with email subscribe.
+ * NewsletterCard - 3D transparent card with email subscribe.
  * - i18n aware (uses t('newsletter.*'))
  * - Client-side validation
  * - Honeypot anti-bot
@@ -21,12 +22,12 @@ export default function NewsletterCard({ actionUrl = '', method = 'POST', classN
 
   const labels = useMemo(() => ({
     title: t?.('newsletter.title') ?? (lang === 'EN' ? 'Newsletter' : '订阅资讯'),
-    sub: t?.('newsletter.sub') ?? (lang === 'EN' ? 'Insights, timing windows & case studies. No spam.' : '实战洞见、时机窗口与案例解读。拒绝骚扰。'),
-    placeholder: t?.('newsletter.placeholder') ?? (lang === 'EN' ? 'Enter your email' : '输入邮箱'),
-    button: t?.('newsletter.button') ?? (lang === 'EN' ? 'Subscribe' : '订阅'),
+    sub: t?.('newsletter.sub') ?? (lang === 'EN' ? 'Insights, timing windows & case studies. No spam.' : '洞察、时机窗口与案例分享，不做垃圾推送。'),
+    placeholder: t?.('newsletter.placeholder') ?? (lang === 'EN' ? 'Enter your email' : '输入你的邮箱'),
+    button: t?.('newsletter.button') ?? (lang === 'EN' ? 'Subscribe' : '立即订阅'),
     success: t?.('newsletter.success') ?? (lang === 'EN' ? 'Thank you! You are subscribed.' : '感谢订阅！'),
-    invalid: lang === 'EN' ? 'Please enter a valid email.' : '请输入有效邮箱。',
-    fail: lang === 'EN' ? 'Subscription failed. Please try again.' : '订阅失败，请重试。'
+    invalid: lang === 'EN' ? 'Please enter a valid email.' : '请输入有效的邮箱地址。',
+    fail: lang === 'EN' ? 'Subscription failed. Please try again.' : '订阅失败，请稍后再试。'
   }), [t, lang])
 
   const [email, setEmail] = useState('')
@@ -61,7 +62,7 @@ export default function NewsletterCard({ actionUrl = '', method = 'POST', classN
       }
       setMessage(labels.success)
       setEmail('')
-    } catch (err){
+    } catch {
       setMessage(labels.fail)
     } finally {
       setLoading(false)
@@ -89,14 +90,14 @@ export default function NewsletterCard({ actionUrl = '', method = 'POST', classN
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={labels.placeholder}
-            className="flex-1 px-4 py-3 rounded-xl bg-white/5 ring-1 ring-white/10 focus:outline-none focus:ring-gold/40 placeholder-white/40"
+            className="flex-1 px-4 py-3 rounded-xl bg-white/5 ring-1 ring-white/10 focus:outline-none focus:ring-gold/40 placeholder:text-white/40"
           />
           <button
             type="submit"
             disabled={loading}
             className="px-5 py-3 rounded-xl bg-gradient-to-r from-yellow-500/80 to-yellow-300/80 text-black font-semibold shadow-soft-xl hover:from-yellow-500 hover:to-yellow-300 disabled:opacity-60"
           >
-            {loading ? (lang === 'EN' ? 'Submitting…' : '提交中…') : labels.button}
+            {loading ? (lang === 'EN' ? 'Submitting...' : '提交中...') : labels.button}
           </button>
         </form>
 

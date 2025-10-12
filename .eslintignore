@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.next/
+backups/
+coverage/
+playwright-report/
+test-results/
+app/
+middleware.ts

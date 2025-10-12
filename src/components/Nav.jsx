@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import Brand from './Brand.jsx'
 import { useI18n } from '../i18n.jsx'
 
@@ -78,9 +80,9 @@ function SecondLevel({ group, isTouch }){
   if (!hasChildren){
     return (
       <div className="px-2 py-1.5">
-        <a href={group.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
+        <Link to={group.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
           <div className="font-medium">{group.label}</div>
-        </a>
+        </Link>
       </div>
     )
   }
@@ -106,11 +108,11 @@ function SecondLevel({ group, isTouch }){
         <ChevronRight className={`w-3.5 h-3.5 nav-icon transition-transform duration-150 ${open ? 'translate-x-0.5' : ''}`} />
       </button>
       {open && (
-        <div className="absolute top-0 left-full ml-2 w-[18rem] rounded-xl bg-black/80 backdrop-blur-xl border border-white/10 shadow-soft-xl p-2 z-50 nav-submenu-panel">
+        <div className="absolute top-0 left-full ml-2 w-72 rounded-xl bg-black/80 backdrop-blur-xl border border-white/10 shadow-soft-xl p-2 z-50 nav-submenu-panel">
           {group.children.map((item, idx) => (
-            <a key={idx} href={item.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
+            <Link key={idx} to={item.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
               <div className="font-medium">{item.label}</div>
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -124,7 +126,7 @@ function Dropdown({ item, isTouch }){
 
   if (!hasChildren){
     return (
-      <a href={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</a>
+      <Link to={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</Link>
     )
   }
 
@@ -202,16 +204,16 @@ export default function Nav(){
   return (
     <header className="navbar">
       <div className="container py-3 md:py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src="/logo.png" alt="logo" className="w-10 h-10 rounded-full ring-1 ring-white/20" />
           <Brand />
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-5 flex-nowrap">
           {MAP.map((item, i) => (
             item.children && item.children.length
               ? <Dropdown key={i} item={item} isTouch={isTouch} />
-              : <a key={i} href={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</a>
+              : <Link key={i} to={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</Link>
           ))}
         </nav>
 
@@ -255,18 +257,18 @@ export default function Nav(){
                             <div className="text-xs uppercase tracking-wide text-white/50 my-1">{c.label}</div>
                             <div className="flex flex-col gap-1 pl-2">
                               {c.children.map((cc, j) => (
-                                <a key={j} href={cc.href} className="nav-link">{cc.label}</a>
+                                <Link key={j} to={cc.href} className="nav-link">{cc.label}</Link>
                               ))}
                             </div>
                           </div>
                         ) : (
-                          <a key={idx} href={c.href} className="nav-link">{c.label}</a>
+                          <Link key={idx} to={c.href} className="nav-link">{c.label}</Link>
                         )
                       ))}
                     </div>
                   </details>
                 ) : (
-                  <a href={item.href} className="nav-link">{item.label}</a>
+                  <Link to={item.href} className="nav-link">{item.label}</Link>
                 )}
               </div>
             ))}
@@ -276,3 +278,6 @@ export default function Nav(){
     </header>
   )
 }
+
+
+

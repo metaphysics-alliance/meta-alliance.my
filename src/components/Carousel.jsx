@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+
 import { useI18n } from '../i18n.jsx'
 
 const AUTOPLAY_MS = 3500
 const PAUSE_ON_HOVER = true
 
-export default function Carousel() {
+export default function Carousel(){
   const { t } = useI18n()
   const slides = [
     { id: 1, title: t('slide1_title'), subtitle: t('slide1_sub'), img: '../assets/carousel/banner1.jpg' },
@@ -23,11 +24,13 @@ export default function Carousel() {
 
   useEffect(() => {
     let alive = true
+
     function loop(){
       if (!alive) return
       if (!pausedRef.current) next()
       timeoutRef.current = setTimeout(loop, AUTOPLAY_MS)
     }
+
     timeoutRef.current = setTimeout(loop, AUTOPLAY_MS)
     return () => { alive = false; clearTimeout(timeoutRef.current) }
   }, [next])
@@ -45,11 +48,11 @@ export default function Carousel() {
         <div
           key={s.id}
           className="absolute inset-0 transition-opacity duration-[1200ms] ease-out"
-          style={{opacity: i === index ? 1 : 0}}
+          style={{ opacity: i === index ? 1 : 0 }}
           aria-hidden={i !== index}
         >
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${s.img}')` }} />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 h-full container flex flex-col justify-end md:justify-center">
             <div className="mb-10 md:mb-0">
               <h2 className="text-2xl md:text-5xl font-extrabold drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">{s.title}</h2>
@@ -65,7 +68,7 @@ export default function Carousel() {
             key={i}
             onClick={() => setIndex(i)}
             className={`h-1.5 w-6 rounded-full ${i === index ? 'bg-gold' : 'bg-white/40'}`}
-            aria-label={`Go to slide ${i+1}`}
+            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>
@@ -80,7 +83,7 @@ export default function Carousel() {
           onFocus={() => (pausedRef.current = true)}
           onBlur={() => (pausedRef.current = false)}
         >
-          <svg viewBox="0 0 24 24" className="w-6 h-6 mx-auto my-auto"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          <svg viewBox="0 0 24 24" className="w-6 h-6 mx-auto my-auto"><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
         </button>
       </div>
 
@@ -94,7 +97,7 @@ export default function Carousel() {
           onFocus={() => (pausedRef.current = true)}
           onBlur={() => (pausedRef.current = false)}
         >
-          <svg viewBox="0 0 24 24" className="w-6 h-6 mx-auto my-auto"><path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          <svg viewBox="0 0 24 24" className="w-6 h-6 mx-auto my-auto"><path fill="currentColor" d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6z" /></svg>
         </button>
       </div>
     </div>

@@ -8,10 +8,9 @@ import { getDict, type Locale } from '@/lib/i18n';
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);
   const title = dictTitle(dict, 'shop.ornaments');
-  const sub = '' ? dictTitle(dict, '') : undefined;
   return (
     <div className='space-y-10'>
-      <Hero title={title} sub={sub} />
+      <Hero title={title} />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>
@@ -28,3 +27,4 @@ function dictTitle(dict:any, key:string){
     return key.split('.').reduce((o:any,k)=>o&&o[k]!=null?o[k]:key, dict);
   }catch(e){return key;}
 }
+

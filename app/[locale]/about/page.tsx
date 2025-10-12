@@ -1,30 +1,172 @@
-import Hero from '@/components/Hero';
-import Content from '@/components/Content';
-import MediaGrid from '@/components/MediaGrid';
-import Testimonials from '@/components/Testimonials';
-import MapEmbed from '@/components/MapEmbed';
-import { getDict, type Locale } from '@/lib/i18n';
+import Link from 'next/link'
+
+import Hero from '@/components/Hero'
+import Content from '@/components/Content'
+import MediaGrid from '@/components/MediaGrid'
+import Testimonials from '@/components/Testimonials'
+import VideoCarousel from '@/components/VideoCarousel'
+import { getDict, type Locale } from '@/lib/i18n'
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
-  const dict = getDict(params.locale);
-  const title = dictTitle(dict, 'nav.about');
-  const sub = '' ? dictTitle(dict, '') : undefined;
+  const locale = params.locale
+  const dict = getDict(locale)
+  const about = dict.about ?? {}
+  const navTitle = (dict.nav && dict.nav.about) || 'About'
+
+  const hero = about.hero ?? {}
+  const founder = about.founder ?? {}
+  const philosophy = about.philosophy ?? {}
+  const what = about.what ?? {}
+  const videos = about.videos ?? {}
+  const story = about.story ?? {}
+  const milestones = about.milestones ?? {}
+  const team = about.team ?? {}
+  const faq = about.faq ?? {}
+  const faqExtras = locale === 'CN'
+    ? [
+      { q: '使用哪些方法？', a: '以中国玄学为核心：八字、紫微斗数、奇门遁甲、风水与数字能量；以交叉验证确保一致性。' },
+      { q: '远程还是现场？', a: '均可。个人与多数企业咨询可通过 Zoom/Meet；风水与大型企业项目可预约现场。' },
+      { q: '支持哪些语言？', a: '中英双语（CN/EN）。可在导航栏切换语言。' },
+    ]
+    : [
+      { q: 'What methods do you use?', a: 'Chinese metaphysics across BaZi, Zi Wei Dou Shu, Qi Men Dun Jia, Feng Shui and numerology — cross‑validated for consistency.' },
+      { q: 'Remote or onsite?', a: 'Both. Individuals and most corporate advisories via Zoom/Meet; Feng Shui and larger enterprise work onsite by arrangement.' },
+      { q: 'What languages are supported?', a: 'English and Chinese (EN/CN). Use the navbar toggle to switch.' },
+    ]
+
+  const localise = (href: string) => (href === '/' ? `/${locale}` : `/${locale}${href}`)
+
   return (
-    <div className='space-y-10'>
-      <Hero title={title} sub={sub} />
-      <Content title={title} />
-      <MediaGrid/>
-      <Testimonials/>
-      <section className='space-y-4'>
-        <h2 className='text-2xl md:text-3xl font-semibold'>Map</h2>
-        <MapEmbed/>
+    <div className="space-y-10">
+      {/* Hero */}
+      <Hero
+        title={hero.title || navTitle}
+        sub={hero.sub}
+        description={hero.description}
+        actions={
+          <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
+            {(about.cta && about.cta.label) || (hero.cta || 'Contact Us')}
+          </Link>
+        }
+      />
+
+      {/* Founder’s Note */}
+      <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/20 p-6 md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
+        <div className="space-y-3">
+          <img
+            src={(team.members && team.members[0] && team.members[0].portrait) || '/images/team/shaun-quan.jpg'}
+            alt={`${founder.name_en || 'Founder'} portrait`}
+            className="h-64 w-full rounded-2xl object-cover object-center ring-1 ring-white/10"
+          />
+          <div className="text-white/85">
+            <div className="text-lg font-semibold">
+              {(founder.name_en || 'Shaun Quan')} {founder.name_cn ? ` / ${founder.name_cn}` : ''}
+            </div>
+            <div className="text-sm text-white/65">{founder.role || 'Chief Chinese Metaphysician Analyst'}</div>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">{founder.title || "Founder's Note"}</h2>
+          {(founder.paragraphs || []).map((p: string, i: number) => (
+            <p key={i} className="text-base leading-relaxed text-white/75">{p}</p>
+          ))}
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <Content
+        title={philosophy.title}
+        highlight={philosophy.highlight}
+        paragraphs={philosophy.paragraphs}
+      />
+
+      {/* What We Do */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white md:text-3xl">{what.title || 'What We Do'}</h2>
+        <MediaGrid dict={dict as any} path="about.what.items" />
+      </section>
+
+      {/* 1‑Minute Video Carousel */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white md:text-3xl">{videos.title || '1‑Minute Intros'}</h2>
+        <VideoCarousel dict={dict as any} path="about.videos.items" locale={locale} />
+      </section>
+
+      {/* Story & Milestones */}
+      <section className="grid gap-6 md:grid-cols-2">
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+          <h3 className="text-xl font-semibold text-white">{story.title || 'Our Story'}</h3>
+          <div className="mt-4 space-y-3 text-sm text-white/75">
+            {(story.timeline || []).map((item: any, idx: number) => (
+              <div key={idx} className="flex items-start gap-3">
+                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{item.date}</span>
+                <div>
+                  <div className="font-medium text-white/90">{item.title}</div>
+                  <div className="text-white/65">{item.outcome}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </article>
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+          <h3 className="text-xl font-semibold text-white">{(milestones.title) || 'Milestones'}</h3>
+          <div className="mt-4 space-y-3 text-sm text-white/75">
+            {(milestones.items || []).map((m: any, idx: number) => (
+              <div key={idx} className="flex items-start gap-3">
+                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{m.date}</span>
+                <div className="text-white/70">{m.outcome}</div>
+              </div>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      {/* Team */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white md:text-3xl">{team.title || 'Our Team'}</h2>
+        <div className="grid gap-5 md:grid-cols-3">
+          {(team.members || []).map((m: any, idx: number) => (
+            <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5">
+              <img src={m.portrait} alt={`${m.name_en} portrait`} className="mb-3 h-48 w-full rounded-xl object-cover object-center ring-1 ring-white/10" />
+              <div className="text-white/90 font-semibold">
+                {m.name_en} {m.name_cn ? <span className="text-white/70 font-normal">/ {m.name_cn}</span> : null}
+              </div>
+              <div className="text-sm text-white/65">{m.role}</div>
+              <div className="mt-2 text-sm text-white/70">{m.focus}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <Testimonials dict={dict as any} path="testimonials" />
+
+      {/* FAQ */}
+      {Array.isArray(faq.items) && faq.items.length ? (
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">{faq.title || 'FAQ'}</h2>
+          <div className="divide-y divide-white/10 rounded-2xl border border-white/10 bg-black/25">
+            {[...faq.items, ...faqExtras].map((qa: any, idx: number) => (
+              <div key={idx} className="p-5">
+                <div className="text-white/90 font-medium">{qa.q}</div>
+                <div className="mt-1 text-sm text-white/70">{qa.a}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {/* Final CTA */}
+      <section className="rounded-3xl border border-white/10 bg-black/25 p-6 text-center">
+        <h3 className="text-xl font-semibold text-white">{hero.sub || navTitle}</h3>
+        <p className="mt-2 text-sm text-white/70">{hero.description}</p>
+        <div className="mt-4">
+          <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gold-soft">
+            {(about.cta && about.cta.label) || 'Contact Us'}
+          </Link>
+        </div>
       </section>
     </div>
-  );
+  )
 }
 
-function dictTitle(dict:any, key:string){
-  try{
-    return key.split('.').reduce((o:any,k)=>o&&o[k]!=null?o[k]:key, dict);
-  }catch(e){return key;}
-}

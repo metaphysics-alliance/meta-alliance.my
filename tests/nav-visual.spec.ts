@@ -1,8 +1,8 @@
-import { expect, test } from '@playwright/test'
+import { expect, test, type Page } from '@playwright/test'
 
 const NAV_SELECTOR = 'header.navbar'
 
-async function ensurePageReady(page){
+async function ensurePageReady(page: Page){
   await page.goto('/')
   await page.waitForLoadState('networkidle')
   await page.waitForTimeout(300)

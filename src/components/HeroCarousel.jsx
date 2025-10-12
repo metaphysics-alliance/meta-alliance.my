@@ -1,6 +1,7 @@
 // src/components/HeroCarousel.jsx
-import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+
 import { useI18n } from '../i18n.jsx'
 
 // Static image sources only; captions resolved from i18n at runtime
@@ -13,13 +14,13 @@ const SOURCES = [
 ]
 
 // Adjust these to your preference
-const MAX_VH_DESKTOP = 1.08   // max 68% of viewport height on ≥768px
+const MAX_VH_DESKTOP = 1.08   // max 68% of viewport height on ?768px
 const MAX_VH_MOBILE  = 0.95   // max 45% of viewport height on <768px
 
 export default function HeroCarousel(){
-  const { t, lang } = useI18n()
+  const { t } = useI18n()
   const [idx, setIdx] = useState(0)
-  const [ratio, setRatio] = useState(9/21) // current image H/W
+  const [ratio, setRatio] = useState(9 / 21) // current image H/W
   const [heightPx, setHeightPx] = useState(null)
   const timer = useRef(null)
   const hovering = useRef(false)
@@ -27,18 +28,24 @@ export default function HeroCarousel(){
 
   // Resolve captions from i18n with safe fallbacks
   const slides = useMemo(() => {
-    const TT = (key, fallback='') => {
+    const TT = (key, fallback = '') => {
       const v = t(key)
       return v === key ? fallback : v
     }
-    return SOURCES.map(({src, tKey}) => ({
+
+    return SOURCES.map(({ src, tKey }) => ({
       src,
       title: TT(`hero.slide${tKey}_title`, ''),
-      sub:   TT(`hero.slide${tKey}_sub`,   ''),
+      sub: TT(`hero.slide${tKey}_sub`, ''),
     }))
-  }, [t, lang])
+  }, [t])
 
-  const stop = () => { if (timer.current) { clearInterval(timer.current); timer.current = null } }
+  const stop = () => {
+    if (timer.current){
+      clearInterval(timer.current)
+      timer.current = null
+    }
+  }
 
   // autoplay with pause-on-hover
   useEffect(() => {
@@ -56,8 +63,7 @@ export default function HeroCarousel(){
     if (nw && nh) setRatio(nh / nw)
   }
 
-  // recompute clamped height: min(image natural ratio * stage width, maxVH)
-  const recomputeHeight = () => {
+  const recomputeHeight = useCallback(() => {
     const el = stageRef.current
     if (!el) return
     const width = el.offsetWidth
@@ -66,15 +72,18 @@ export default function HeroCarousel(){
     const maxVH = isDesktop ? MAX_VH_DESKTOP : MAX_VH_MOBILE
     const maxPx = window.innerHeight * maxVH
     setHeightPx(Math.min(desired, maxPx))
-  }
+  }, [ratio])
 
-  // recompute on ratio/index/resize
   useEffect(() => {
     recomputeHeight()
     const onResize = () => recomputeHeight()
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
-  }, [ratio, idx])
+  }, [recomputeHeight])
+
+  useEffect(() => {
+    recomputeHeight()
+  }, [idx, recomputeHeight])
 
   const prev = () => setIdx(i => (i - 1 + slides.length) % slides.length)
   const next = () => setIdx(i => (i + 1) % slides.length)
@@ -93,12 +102,12 @@ export default function HeroCarousel(){
           {slides.map((s, i) => (
             <img
               key={i}
-              src={`${s.src}?v=233`}   // cache-bust on replace
+              src={`${s.src}?v=233`}
               alt=""
               onLoad={i === idx ? onImgLoad : undefined}
               className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-out
                          ${i === idx ? 'opacity-100' : 'opacity-0'} object-contain`}
-              fetchpriority={i === idx ? 'high' : undefined}
+              fetchPriority={i === idx ? 'high' : undefined}
               loading={i === 0 ? 'eager' : 'lazy'}
               decoding="async"
             />
@@ -119,7 +128,7 @@ export default function HeroCarousel(){
           </div>
         </div>
 
-        {/* Arrows — hidden until hover */}
+        {/* Arrows - hidden until hover */}
         <button
           onClick={prev}
           aria-label="Previous slide"

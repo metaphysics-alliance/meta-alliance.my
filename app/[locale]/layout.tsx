@@ -12,12 +12,10 @@ export async function generateStaticParams() {
 export default function LocaleLayout({ params, children }:{ params:{ locale: Locale }, children: React.ReactNode }){
   getDict(params.locale);
   return (
-    <html lang={params.locale}>
-      <body>
-        <Navbar locale={params.locale} />
-        <main className="container py-10">{children}</main>
-        <Footer locale={params.locale} />
-      </body>
-    </html>
+    <>
+      <Navbar locale={params.locale} />
+      <main className="container py-10">{children}</main>
+      <Footer locale={params.locale} />
+    </>
   );
 }

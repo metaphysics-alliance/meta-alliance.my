@@ -31,9 +31,9 @@ function makeProject(name: string, caps: Caps){
     name,
     use: {
       baseURL: baseURL || 'http://127.0.0.1:5173',
-      trace: 'retain-on-failure',
-      screenshot: 'only-on-failure',
-      video: 'retain-on-failure',
+      trace: 'retain-on-failure' as const,
+      screenshot: 'only-on-failure' as const,
+      video: 'retain-on-failure' as const,
       connectOptions: {
         wsEndpoint: wsEndpoint(caps),
       },
