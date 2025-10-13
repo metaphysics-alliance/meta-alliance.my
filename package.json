@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "run-p dev:next dev:vite",
     "dev:next": "next dev -p 3000",
-    "dev:vite": "vite -p 5173",
+    "dev:vite": "vite --port 5173",
     "build": "vite build",
     "preview": "vite preview",
     "test:visual": "playwright test",
