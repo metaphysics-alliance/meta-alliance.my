@@ -45,16 +45,21 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         sub={hero.sub}
         description={hero.description}
         actions={
-          <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
-            {(about.cta && about.cta.label) || (hero.cta || 'Contact Us')}
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
+              {(about.cta && about.cta.label) || (hero.cta || 'Contact Us')}
+            </Link>
+            <Link href={localise('/services')} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white/85 transition hover:border-gold/40 hover:text-white">
+              {locale === 'CN' ? '了解我们的服务' : 'Explore Our Services'}
+            </Link>
+          </div>
         }
       />
 
       <SectionDivider title={locale === 'CN' ? '关于我们' : 'About Us'} />
 
       {/* Founder's Note */}
-      <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/20 p-6 md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
+      <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/20 p-6 backdrop-blur-md md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
         <div className="space-y-3">
           <img
             src={(team.members && team.members[0] && team.members[0].portrait) || '/images/team/shaun-quan.jpg'}
@@ -105,7 +110,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
 
       {/* Story & Milestones */}
       <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{story.title || 'Our Story'}</h3>
           <div className="mt-4 space-y-3 text-sm text-white/75">
             {(story.timeline || []).map((item: any, idx: number) => (
@@ -119,7 +124,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
             ))}
           </div>
         </article>
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{(milestones.title) || 'Milestones'}</h3>
           <div className="mt-4 space-y-3 text-sm text-white/75">
             {(milestones.items || []).map((m: any, idx: number) => (

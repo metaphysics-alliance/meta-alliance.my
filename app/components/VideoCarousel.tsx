@@ -77,7 +77,7 @@ export default function VideoCarousel({ dict, path, items, locale = 'EN' as Loca
         {derived.map((v, idx) => (
           <article
             key={`${v.title}-${idx}`}
-            className="min-w-[280px] max-w-[320px] shrink-0 snap-start rounded-2xl border border-white/10 bg-black/35 p-4"
+            className="min-w-[280px] max-w-[320px] shrink-0 snap-start rounded-2xl border border-white/10 bg-black/35 p-4 backdrop-blur-md"
           >
             <div className="relative mb-3 h-40 w-full overflow-hidden rounded-xl ring-1 ring-white/10">
               <img

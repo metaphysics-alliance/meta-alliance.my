@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import { useI18n } from '../i18n.jsx'
 import dictAll from '../../shared/i18n/dictionary.js'
 import SectionDivider from '../components/SectionDivider.jsx'
+import { useI18n } from '../i18n.jsx'
 
 export default function ServicesIndex(){
   const { lang } = useI18n()
@@ -40,4 +40,3 @@ export default function ServicesIndex(){
     </main>
   )
 }
-
