@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 import i18nDict from '../../shared/i18n/dictionary.js'
 import SectionDivider from '../components/SectionDivider.jsx'
+import VideoCarousel from '../components/VideoCarousel.jsx'
 import { useI18n } from '../i18n.jsx'
 
 export default function AboutPage(){
@@ -75,20 +76,9 @@ export default function AboutPage(){
         </div>
       </section>
 
-      {/* Videos (simple list) */}
+      {/* Videos (carousel) */}
       <SectionDivider title={videos.title || (lang === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')} />
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
-        <h3 className="text-xl font-semibold text-white">{videos.title || (lang === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')}</h3>
-        <div className="mt-4 grid gap-3 md:grid-cols-3">
-          {(videos.items || []).map((v, i) => (
-            <article key={i} className="rounded-lg border border-white/10 bg-black/30 p-4 backdrop-blur-md">
-              <div className="font-medium text-white/90">{v.title}</div>
-              {v.description ? <p className="mt-1 text-sm text-white/70">{v.description}</p> : null}
-              <div className="mt-2 text-xs text-white/60">{lang === 'CN' ? (v.script_cn ? '已提供脚本' : '暂无脚本') : (v.script_en ? 'Script available' : 'No script yet')}</div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <VideoCarousel items={videos.items} locale={lang} />
 
       {/* Story & Milestones */}
       <SectionDivider title={lang === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
