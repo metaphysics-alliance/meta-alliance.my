@@ -6,6 +6,7 @@ import MediaGrid from '@/components/MediaGrid'
 import Testimonials from '@/components/Testimonials'
 import VideoCarousel from '@/components/VideoCarousel'
 import SectionDivider from '@/components/SectionDivider'
+import StructuredData from '@/components/StructuredData'
 import { getDict, type Locale } from '@/lib/i18n'
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
@@ -39,6 +40,29 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
 
   return (
     <div className="space-y-10">
+      {/* JSON-LD: Organization + (optional) VideoObjects */}
+      <StructuredData json={{
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Metaphysics Alliance',
+        url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+        logo: '/logo.png',
+        sameAs: ['https://facebook.com', 'https://instagram.com', 'https://www.tiktok.com']
+      }} />
+      {Array.isArray(videos?.items) && videos.items.length ? (
+        <StructuredData json={{
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          itemListElement: videos.items.map((v: any, i: number) => ({
+            '@type': 'VideoObject',
+            name: v.title,
+            description: v.description || hero.description,
+            thumbnailUrl: v.thumbnail || '/images/video/placeholder.svg',
+            uploadDate: new Date().toISOString(),
+            contentUrl: v.src || undefined,
+          }))
+        }} />
+      ) : null}
       {/* Hero */}
       <Hero
         title={hero.title || navTitle}
@@ -170,12 +194,15 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
       {Array.isArray(faq.items) && faq.items.length ? (
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white md:text-3xl">{faq.title || 'FAQ'}</h2>
-          <div className="divide-y divide-white/10 rounded-2xl border border-white/10 bg-black/25">
+          <div className="rounded-2xl border border-white/10 bg-black/25 backdrop-blur-md">
             {[...faq.items, ...faqExtras].map((qa: any, idx: number) => (
-              <div key={idx} className="p-5">
-                <div className="text-white/90 font-medium">{qa.q}</div>
-                <div className="mt-1 text-sm text-white/70">{qa.a}</div>
-              </div>
+              <details key={idx} className="group border-b border-white/10 last:border-none">
+                <summary className="flex cursor-pointer list-none items-center justify-between p-5 text-white/90 transition hover:bg-white/5">
+                  <span>{qa.q}</span>
+                  <span className="text-white/50 transition group-open:rotate-180">▾</span>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-white/70">{qa.a}</div>
+              </details>
             ))}
           </div>
         </section>
