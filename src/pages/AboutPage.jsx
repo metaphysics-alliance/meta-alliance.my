@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import i18nDict from '../../shared/i18n/dictionary.js'
+import SectionDivider from '../components/SectionDivider.jsx'
 import { useI18n } from '../i18n.jsx'
 
 export default function AboutPage(){
@@ -25,11 +26,14 @@ export default function AboutPage(){
         {hero.description ? <p className="mt-3 max-w-3xl text-white/70">{hero.description}</p> : null}
         <div className="mt-5 flex flex-wrap gap-3 text-sm">
           <Link to="/contact" className="rounded-lg bg-gold px-4 py-2 font-medium text-black hover:bg-gold-soft">{(about.cta && about.cta.label) || (lang === 'CN' ? '联系我们' : 'Contact Us')}</Link>
+          <Link to="/services" className="rounded-lg border border-white/15 px-4 py-2 font-medium text-white/85 transition hover:border-gold/40 hover:text-white">{lang === 'CN' ? '了解我们的服务' : 'Explore Our Services'}</Link>
         </div>
       </header>
 
-      {/* Founder’s Note */}
-      <section className="grid gap-6 rounded-2xl border border-white/10 bg-black/20 p-6 md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
+      <SectionDivider title={lang === 'CN' ? '关于我们' : 'About Us'} subtitle={hero.sub || ''} />
+
+      {/* Founder's Note */}
+      <section className="grid gap-6 rounded-2xl border border-white/10 bg-black/20 p-6 backdrop-blur-md md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
         <div className="space-y-3">
           <div className="h-64 w-full rounded-2xl bg-white/5 ring-1 ring-white/10" />
           <div className="text-white/85">
@@ -48,7 +52,8 @@ export default function AboutPage(){
       </section>
 
       {/* Philosophy */}
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6">
+      <SectionDivider title={philosophy.title || (lang === 'CN' ? '我们的理念' : 'Our Philosophy')} subtitle={philosophy.highlight || ''} />
+      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white">{philosophy.title || (lang === 'CN' ? '我们的理念' : 'Our Philosophy')}</h3>
         {philosophy.highlight ? <p className="mt-1 text-sm text-gold-soft/90">{philosophy.highlight}</p> : null}
         <div className="mt-3 grid gap-3">
@@ -57,11 +62,12 @@ export default function AboutPage(){
       </section>
 
       {/* What We Do */}
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6">
+      <SectionDivider title={what.title || (lang === 'CN' ? '我们的服务' : 'What We Do')} />
+      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white">{what.title || (lang === 'CN' ? '我们的服务' : 'What We Do')}</h3>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           {(what.items || []).map((item, i) => (
-            <article key={i} className="rounded-lg border border-white/10 bg-black/30 p-4">
+            <article key={i} className="rounded-lg border border-white/10 bg-black/30 p-4 backdrop-blur-md">
               <div className="font-medium text-white/90">{item.title}</div>
               {item.description ? <p className="mt-1 text-sm text-white/70">{item.description}</p> : null}
             </article>
@@ -70,11 +76,12 @@ export default function AboutPage(){
       </section>
 
       {/* Videos (simple list) */}
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6">
+      <SectionDivider title={videos.title || (lang === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')} />
+      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white">{videos.title || (lang === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')}</h3>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           {(videos.items || []).map((v, i) => (
-            <article key={i} className="rounded-lg border border-white/10 bg-black/30 p-4">
+            <article key={i} className="rounded-lg border border-white/10 bg-black/30 p-4 backdrop-blur-md">
               <div className="font-medium text-white/90">{v.title}</div>
               {v.description ? <p className="mt-1 text-sm text-white/70">{v.description}</p> : null}
               <div className="mt-2 text-xs text-white/60">{lang === 'CN' ? (v.script_cn ? '已提供脚本' : '暂无脚本') : (v.script_en ? 'Script available' : 'No script yet')}</div>
@@ -84,8 +91,9 @@ export default function AboutPage(){
       </section>
 
       {/* Story & Milestones */}
+      <SectionDivider title={lang === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
       <section className="grid gap-6 md:grid-cols-2">
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{story.title || (lang === 'CN' ? '成长历程' : 'Our Story')}</h3>
           <div className="mt-4 space-y-3 text-sm text-white/75">
             {(story.timeline || []).map((item, idx) => (
@@ -99,7 +107,7 @@ export default function AboutPage(){
             ))}
           </div>
         </article>
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6">
+        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{milestones.title || (lang === 'CN' ? '里程碑' : 'Milestones')}</h3>
           <div className="mt-4 space-y-3 text-sm text-white/75">
             {(milestones.items || []).map((m, idx) => (
@@ -113,11 +121,12 @@ export default function AboutPage(){
       </section>
 
       {/* Team */}
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6">
+      <SectionDivider title={team.title || (lang === 'CN' ? '团队' : 'Our Team')} />
+      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white">{team.title || (lang === 'CN' ? '团队' : 'Our Team')}</h3>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           {(team.members || []).map((m, idx) => (
-            <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5">
+            <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md">
               <div className="text-white/90 font-semibold">{m.name_en} {m.name_cn ? <span className="text-white/70 font-normal">/ {m.name_cn}</span> : null}</div>
               <div className="text-sm text-white/65">{m.role}</div>
               <div className="mt-2 text-sm text-white/70">{m.focus}</div>
@@ -128,9 +137,11 @@ export default function AboutPage(){
 
       {/* FAQ */}
       {Array.isArray(faq.items) && faq.items.length ? (
+        <>
+        <SectionDivider title={faq.title || (lang === 'CN' ? '常见问题' : 'FAQ')} />
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white md:text-3xl">{faq.title || (lang === 'CN' ? '常见问题' : 'FAQ')}</h2>
-          <div className="divide-y divide-white/10 rounded-2xl border border-white/10 bg-black/25">
+          <div className="divide-y divide-white/10 rounded-2xl border border-white/10 bg-black/25 backdrop-blur-md">
             {faq.items.map((qa, idx) => (
               <div key={idx} className="p-5">
                 <div className="text-white/90 font-medium">{qa.q}</div>
@@ -139,14 +150,16 @@ export default function AboutPage(){
             ))}
           </div>
         </section>
+        </>
       ) : null}
 
       {/* Final CTA */}
-      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 text-center">
+      <section className="rounded-2xl border border-white/10 bg-black/25 p-6 text-center backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white">{(about.cta && about.cta.title) || (lang === 'CN' ? '联系团队' : 'Get in touch')}</h3>
         {about?.cta?.message ? <p className="mt-2 text-sm text-white/70">{about.cta.message}</p> : null}
         <div className="mt-4 flex justify-center gap-3">
           <Link to="/contact" className="rounded-lg bg-gold px-5 py-2.5 text-sm font-medium text-black hover:bg-gold-soft">{(about.cta && about.cta.label) || (lang === 'CN' ? '联系我们' : 'Contact Us')}</Link>
+          <Link to="/services" className="rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-white/85 transition hover:border-gold/40 hover:text-white">{lang === 'CN' ? '了解我们的服务' : 'Explore Our Services'}</Link>
         </div>
       </section>
     </main>
