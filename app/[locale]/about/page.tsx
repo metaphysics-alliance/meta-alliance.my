@@ -5,6 +5,7 @@ import Content from '@/components/Content'
 import MediaGrid from '@/components/MediaGrid'
 import Testimonials from '@/components/Testimonials'
 import VideoCarousel from '@/components/VideoCarousel'
+import SectionDivider from '@/components/SectionDivider'
 import { getDict, type Locale } from '@/lib/i18n'
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
@@ -50,7 +51,9 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         }
       />
 
-      {/* Founder’s Note */}
+      <SectionDivider title={locale === 'CN' ? '关于我们' : 'About Us'} />
+
+      {/* Founder's Note */}
       <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/20 p-6 md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
         <div className="space-y-3">
           <img
@@ -73,6 +76,8 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         </div>
       </section>
 
+      <SectionDivider title={philosophy.title || (locale === 'CN' ? '我们的理念' : 'Our Philosophy')} />
+
       {/* Philosophy */}
       <Content
         title={philosophy.title}
@@ -80,17 +85,23 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         paragraphs={philosophy.paragraphs}
       />
 
+      <SectionDivider title={what.title || (locale === 'CN' ? '我们的服务' : 'What We Do')} />
+
       {/* What We Do */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-white md:text-3xl">{what.title || 'What We Do'}</h2>
         <MediaGrid dict={dict as any} path="about.what.items" />
       </section>
 
-      {/* 1‑Minute Video Carousel */}
+      <SectionDivider title={videos.title || (locale === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')} />
+
+      {/* 1-Minute Video Carousel */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-white md:text-3xl">{videos.title || '1‑Minute Intros'}</h2>
         <VideoCarousel dict={dict as any} path="about.videos.items" locale={locale} />
       </section>
+
+      <SectionDivider title={locale === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
 
       {/* Story & Milestones */}
       <section className="grid gap-6 md:grid-cols-2">
@@ -121,6 +132,8 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         </article>
       </section>
 
+      <SectionDivider title={team.title || (locale === 'CN' ? '团队' : 'Our Team')} />
+
       {/* Team */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-white md:text-3xl">{team.title || 'Our Team'}</h2>
@@ -141,6 +154,8 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
       {/* Testimonials */}
       <Testimonials dict={dict as any} path="testimonials" />
 
+      <SectionDivider title={faq.title || (locale === 'CN' ? '常见问题' : 'FAQ')} />
+
       {/* FAQ */}
       {Array.isArray(faq.items) && faq.items.length ? (
         <section className="space-y-4">
@@ -158,15 +173,20 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
 
       {/* Final CTA */}
       <section className="rounded-3xl border border-white/10 bg-black/25 p-6 text-center">
-        <h3 className="text-xl font-semibold text-white">{hero.sub || navTitle}</h3>
-        <p className="mt-2 text-sm text-white/70">{hero.description}</p>
-        <div className="mt-4">
+        <h3 className="text-xl font-semibold text-white">{(about.cta && (about.cta as any).title) || (locale === 'CN' ? '联系团队' : 'Get in touch')}</h3>
+        {about?.cta?.message ? <p className="mt-2 text-sm text-white/70">{(about.cta as any).message}</p> : null}
+        <div className="mt-4 flex items-center justify-center gap-3">
           <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gold-soft">
-            {(about.cta && about.cta.label) || 'Contact Us'}
+            {(about.cta && about.cta.label) || (locale === 'CN' ? '联系我们' : 'Contact Us')}
+          </Link>
+          <Link href={localise('/services')} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-white/85 transition hover:border-gold/40 hover:text-white">
+            {locale === 'CN' ? '了解我们的服务' : 'Explore Our Services'}
           </Link>
         </div>
       </section>
     </div>
   )
 }
+
+
 

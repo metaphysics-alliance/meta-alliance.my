@@ -65,7 +65,7 @@ export default function MediaGrid({ dict, path, items }: MediaGridProps){
         {data.map((item, index) => (
           <article
             key={`${item.title}-${index}`}
-            className="flex h-full flex-col justify-between gap-3 rounded-2xl border border-white/10 bg-black/40 p-5"
+            className="flex h-full flex-col justify-between gap-3 rounded-2xl border border-white/10 bg-black/40 p-5 backdrop-blur-md"
           >
             <div className="space-y-2">
               <h3 className="text-lg font-semibold text-white/95">{item.title}</h3>
