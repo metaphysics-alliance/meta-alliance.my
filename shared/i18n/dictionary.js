@@ -369,7 +369,7 @@ dictionary.EN.about = {
       { q: 'How do I start?', a: 'Contact us to book a discovery call.' }
     ]
   },
-  cta: { label: 'Contact Us' }
+  cta: { label: 'Contact Us', title: 'Ready to get clarity?', message: 'Share your goals and timing horizon. We will propose a path and schedule a discovery call.' }
 }
 
 // About page content (CN)
@@ -454,7 +454,7 @@ dictionary.CN.about = {
       { q: '如何开始？', a: '联系预约体验咨询或沟通需求。' }
     ]
   },
-  cta: { label: '联系我们' }
+  cta: { label: '联系我们', title: '准备开始？', message: '告诉我们你的目标与时间规划。我们会提供路线建议并安排首次沟通。' }
 }
 // Inject placeholder video src/thumbnails for About videos (EN/CN)
 try {

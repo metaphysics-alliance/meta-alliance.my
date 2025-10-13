@@ -1,3 +1,4 @@
+import AboutPage from '../pages/AboutPage.jsx'
 import CelestialServicePage from '../pages/CelestialServicePage.jsx'
 import ContentPage from '../pages/ContentPage.jsx'
 import Home from '../pages/Home.jsx'
@@ -1351,27 +1352,7 @@ export const ROUTES = [
   }),
   {
     path: '/about',
-    element: (
-      <ContentPage
-        title="About Metaphysics Alliance"
-        intro="Metaphysics Alliance is a Malaysia-based boutique translating classical Chinese metaphysics into executive-ready strategy. We honour the lineage while ensuring every reading is practical, evidence-driven and anchored to True Solar Time."
-        sections={[
-          {
-            heading: 'Our approach',
-            bullets: [
-              'Cross-validate every recommendation across BaZi, Zi Wei, Qi Men, Feng Shui and numerology.',
-              'Ground rituals and remedies in measurable outcomes for homes, leadership and enterprises.',
-              'Document processes rigorously so knowledge can be handed to future generations or teams.',
-            ],
-          },
-          {
-            heading: 'Our lineage',
-            body: 'We study under classic schools in Malaysia, Taiwan and Hong Kong, combining imperial methods with modern research. Each consultant completes annual recertification and field audits.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    element: (<AboutPage />),
   },
   {
     path: '/contact',
