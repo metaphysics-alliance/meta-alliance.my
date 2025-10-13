@@ -21,10 +21,19 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
               <Link
                 key={`${gi}-${ii}-${item.title}`}
                 href={localise(item.href || '#')}
-                className='block rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md transition hover:border-gold/40 hover:bg-black/40'
+                className='block rounded-2xl border border-white/10 bg-black/30 p-0 backdrop-blur-md transition hover:border-gold/40 hover:bg-black/40'
               >
-                <div className='text-white/95 font-semibold'>{item.title}</div>
-                {item.description ? <div className='mt-1 text-sm text-white/65'>{item.description}</div> : null}
+                <div className='overflow-hidden rounded-t-2xl ring-1 ring-white/10'>
+                  <img
+                    src={(item.thumbnail as string) || '/images/services/placeholder.svg'}
+                    alt={item.title}
+                    className='h-40 w-full object-contain bg-black/20'
+                  />
+                </div>
+                <div className='p-5'>
+                  <div className='text-white/95 font-semibold'>{item.title}</div>
+                  {item.description ? <div className='mt-1 text-sm text-white/65'>{item.description}</div> : null}
+                </div>
               </Link>
             ))}
           </div>
