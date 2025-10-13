@@ -20,7 +20,7 @@ export default function AboutPage(){
   return (
     <main className="container mx-auto max-w-6xl space-y-12 px-4 py-10">
       {/* Hero */}
-      <header className="rounded-2xl border border-white/10 bg-black/30 p-8">
+      <header className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-md">
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
         <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{hero.title || 'About Metaphysics Alliance'}</h1>
         {hero.description ? <p className="mt-3 max-w-3xl text-white/70">{hero.description}</p> : null}
@@ -127,6 +127,7 @@ export default function AboutPage(){
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           {(team.members || []).map((m, idx) => (
             <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md">
+              <img src={m.portrait || '/images/team/placeholder.svg'} alt={`${m.name_en} portrait`} className="mb-3 w-full h-auto rounded-xl object-contain object-center ring-1 ring-white/10" />
               <div className="text-white/90 font-semibold">{m.name_en} {m.name_cn ? <span className="text-white/70 font-normal">/ {m.name_cn}</span> : null}</div>
               <div className="text-sm text-white/65">{m.role}</div>
               <div className="mt-2 text-sm text-white/70">{m.focus}</div>
@@ -141,12 +142,15 @@ export default function AboutPage(){
         <SectionDivider title={faq.title || (lang === 'CN' ? '常见问题' : 'FAQ')} />
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold text-white md:text-3xl">{faq.title || (lang === 'CN' ? '常见问题' : 'FAQ')}</h2>
-          <div className="divide-y divide-white/10 rounded-2xl border border-white/10 bg-black/25 backdrop-blur-md">
+          <div className="rounded-2xl border border-white/10 bg-black/25 backdrop-blur-md">
             {faq.items.map((qa, idx) => (
-              <div key={idx} className="p-5">
-                <div className="text-white/90 font-medium">{qa.q}</div>
-                <div className="mt-1 text-sm text-white/70">{qa.a}</div>
-              </div>
+              <details key={idx} className="group border-b border-white/10 last:border-none">
+                <summary className="flex cursor-pointer list-none items-center justify-between p-5 text-white/90 transition hover:bg-white/5">
+                  <span>{qa.q}</span>
+                  <span className="text-white/50 transition group-open:rotate-180">▾</span>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-white/70">{qa.a}</div>
+              </details>
             ))}
           </div>
         </section>

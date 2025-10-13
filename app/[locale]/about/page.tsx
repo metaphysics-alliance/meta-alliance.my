@@ -44,6 +44,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         title={hero.title || navTitle}
         sub={hero.sub}
         description={hero.description}
+        className="backdrop-blur-md"
         actions={
           <div className="flex items-center gap-3">
             <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
@@ -144,8 +145,12 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         <h2 className="text-2xl font-semibold text-white md:text-3xl">{team.title || 'Our Team'}</h2>
         <div className="grid gap-5 md:grid-cols-3">
           {(team.members || []).map((m: any, idx: number) => (
-            <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5">
-              <img src={m.portrait} alt={`${m.name_en} portrait`} className="mb-3 h-48 w-full rounded-xl object-cover object-center ring-1 ring-white/10" />
+            <article key={idx} className="rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md">
+              <img
+                src={m.portrait || '/images/team/placeholder.svg'}
+                alt={`${m.name_en} portrait`}
+                className="mb-3 w-full h-auto rounded-xl object-contain object-center ring-1 ring-white/10"
+              />
               <div className="text-white/90 font-semibold">
                 {m.name_en} {m.name_cn ? <span className="text-white/70 font-normal">/ {m.name_cn}</span> : null}
               </div>

@@ -7,11 +7,12 @@ interface HeroProps {
   description?: string
   actions?: ReactNode
   children?: ReactNode
+  className?: string
 }
 
-export default function Hero({ title, sub, eyebrow, description, actions, children }: HeroProps){
+export default function Hero({ title, sub, eyebrow, description, actions, children, className }: HeroProps){
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 p-8 md:p-12 shadow-soft-xl">
+    <section className={`relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 p-8 md:p-12 shadow-soft-xl ${className ?? ''}`}>
       <div className="space-y-4 text-center md:text-left">
         {eyebrow ? <span className="text-xs uppercase tracking-[0.3em] text-white/60">{eyebrow}</span> : null}
         {title ? <h1 className="text-3xl md:text-5xl font-semibold leading-tight text-white">{title}</h1> : null}
