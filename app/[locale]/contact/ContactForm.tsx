@@ -67,6 +67,69 @@ export default function ContactForm({ locale }: Props){
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Country / region options
+  const malaysiaStates: { value: string; label: string }[] = [
+    { value: 'MY', label: 'Malaysia' },
+    { value: 'MY-JHR', label: 'Johor' },
+    { value: 'MY-KDH', label: 'Kedah' },
+    { value: 'MY-KTN', label: 'Kelantan' },
+    { value: 'MY-MLK', label: 'Melaka' },
+    { value: 'MY-NSN', label: 'Negeri Sembilan' },
+    { value: 'MY-PHG', label: 'Pahang' },
+    { value: 'MY-PRK', label: 'Perak' },
+    { value: 'MY-PLS', label: 'Perlis' },
+    { value: 'MY-PNG', label: 'Penang (Pulau Pinang)' },
+    { value: 'MY-SBH', label: 'Sabah' },
+    { value: 'MY-SRW', label: 'Sarawak' },
+    { value: 'MY-SGR', label: 'Selangor' },
+    { value: 'MY-TRG', label: 'Terengganu' },
+    { value: 'MY-KUL', label: 'Kuala Lumpur' },
+    { value: 'MY-LBN', label: 'Labuan' },
+    { value: 'MY-PJY', label: 'Putrajaya' },
+  ]
+
+  const asiaCountries: { value: string; label: string }[] = [
+    { value: 'SG', label: 'Singapore' },
+    { value: 'HK', label: 'Hong Kong' },
+    { value: 'MO', label: 'Macau' },
+    { value: 'CN', label: 'China' },
+    { value: 'JP', label: 'Japan' },
+    { value: 'KR', label: 'South Korea' },
+    { value: 'TH', label: 'Thailand' },
+    { value: 'VN', label: 'Vietnam' },
+    { value: 'ID', label: 'Indonesia' },
+    { value: 'PH', label: 'Philippines' },
+    { value: 'LA', label: 'Laos' },
+    { value: 'KH', label: 'Cambodia' },
+    { value: 'MM', label: 'Myanmar' },
+    { value: 'BN', label: 'Brunei' },
+    { value: 'IN', label: 'India' },
+    { value: 'PK', label: 'Pakistan' },
+    { value: 'BD', label: 'Bangladesh' },
+    { value: 'LK', label: 'Sri Lanka' },
+    { value: 'NP', label: 'Nepal' },
+    { value: 'MV', label: 'Maldives' },
+    { value: 'AE', label: 'United Arab Emirates' },
+  ]
+
+  const worldCountries: { value: string; label: string }[] = [
+    { value: 'US', label: 'United States' },
+    { value: 'CA', label: 'Canada' },
+    { value: 'GB', label: 'United Kingdom' },
+    { value: 'AU', label: 'Australia' },
+    { value: 'NZ', label: 'New Zealand' },
+    { value: 'DE', label: 'Germany' },
+    { value: 'FR', label: 'France' },
+    { value: 'IT', label: 'Italy' },
+    { value: 'ES', label: 'Spain' },
+    { value: 'CH', label: 'Switzerland' },
+    { value: 'SA', label: 'Saudi Arabia' },
+    { value: 'QA', label: 'Qatar' },
+    { value: 'KW', label: 'Kuwait' },
+    { value: 'OM', label: 'Oman' },
+    { value: 'BH', label: 'Bahrain' },
+  ]
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type, checked } = e.target as any
     setState((s) => ({ ...s, [name]: type === 'checkbox' ? !!checked : value }))
@@ -269,13 +332,31 @@ export default function ContactForm({ locale }: Props){
       <div className="grid gap-4 sm:grid-cols-3">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
-          <input
-            name="country"
-            value={state.country}
-            onChange={handleChange}
-            className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white placeholder-white/40"
-            placeholder={locale === 'CN' ? '马来西亚' : 'Malaysia'}
-          />
+          <div className="relative">
+            <select
+              name="country"
+              value={state.country}
+              onChange={handleChange}
+              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+            >
+              <optgroup label={locale === 'CN' ? '马来西亚与州属' : 'Malaysia & States'}>
+                {malaysiaStates.map((o) => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </optgroup>
+              <optgroup label={locale === 'CN' ? '亚洲' : 'Asia'}>
+                {asiaCountries.map((o) => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </optgroup>
+              <optgroup label={locale === 'CN' ? '世界其他地区' : 'Rest of World'}>
+                {worldCountries.map((o) => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </optgroup>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+          </div>
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>

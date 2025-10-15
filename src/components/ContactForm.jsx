@@ -240,7 +240,70 @@ export default function ContactForm(){
       <div className="grid gap-4 sm:grid-cols-3">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
-          <input name="country" value={state.country} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-white placeholder-white/40" placeholder={lang === 'CN' ? '马来西亚' : 'Malaysia'} />
+          <div className="relative">
+            <select name="country" value={state.country} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
+              <optgroup label={lang === 'CN' ? '马来西亚与州属' : 'Malaysia & States'}>
+                <option value="MY">Malaysia</option>
+                <option value="MY-JHR">Johor</option>
+                <option value="MY-KDH">Kedah</option>
+                <option value="MY-KTN">Kelantan</option>
+                <option value="MY-MLK">Melaka</option>
+                <option value="MY-NSN">Negeri Sembilan</option>
+                <option value="MY-PHG">Pahang</option>
+                <option value="MY-PRK">Perak</option>
+                <option value="MY-PLS">Perlis</option>
+                <option value="MY-PNG">Penang (Pulau Pinang)</option>
+                <option value="MY-SBH">Sabah</option>
+                <option value="MY-SRW">Sarawak</option>
+                <option value="MY-SGR">Selangor</option>
+                <option value="MY-TRG">Terengganu</option>
+                <option value="MY-KUL">Kuala Lumpur</option>
+                <option value="MY-LBN">Labuan</option>
+                <option value="MY-PJY">Putrajaya</option>
+              </optgroup>
+              <optgroup label={lang === 'CN' ? '亚洲' : 'Asia'}>
+                <option value="SG">Singapore</option>
+                <option value="HK">Hong Kong</option>
+                <option value="MO">Macau</option>
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="KR">South Korea</option>
+                <option value="TH">Thailand</option>
+                <option value="VN">Vietnam</option>
+                <option value="ID">Indonesia</option>
+                <option value="PH">Philippines</option>
+                <option value="LA">Laos</option>
+                <option value="KH">Cambodia</option>
+                <option value="MM">Myanmar</option>
+                <option value="BN">Brunei</option>
+                <option value="IN">India</option>
+                <option value="PK">Pakistan</option>
+                <option value="BD">Bangladesh</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="NP">Nepal</option>
+                <option value="MV">Maldives</option>
+                <option value="AE">United Arab Emirates</option>
+              </optgroup>
+              <optgroup label={lang === 'CN' ? '世界其他地区' : 'Rest of World'}>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="AU">Australia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="IT">Italy</option>
+                <option value="ES">Spain</option>
+                <option value="CH">Switzerland</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="QA">Qatar</option>
+                <option value="KW">Kuwait</option>
+                <option value="OM">Oman</option>
+                <option value="BH">Bahrain</option>
+              </optgroup>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+          </div>
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
