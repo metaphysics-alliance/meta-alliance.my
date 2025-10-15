@@ -72,23 +72,22 @@ export default function ContactForm({ locale }: Props){
 
   // Country / region options
   const malaysiaStates: { value: string; label: string }[] = [
-    { value: 'MY', label: 'Malaysia' },
-    { value: 'MY-JHR', label: 'Johor' },
-    { value: 'MY-KDH', label: 'Kedah' },
-    { value: 'MY-KTN', label: 'Kelantan' },
-    { value: 'MY-MLK', label: 'Melaka' },
-    { value: 'MY-NSN', label: 'Negeri Sembilan' },
-    { value: 'MY-PHG', label: 'Pahang' },
-    { value: 'MY-PRK', label: 'Perak' },
-    { value: 'MY-PLS', label: 'Perlis' },
-    { value: 'MY-PNG', label: 'Penang (Pulau Pinang)' },
-    { value: 'MY-SBH', label: 'Sabah' },
-    { value: 'MY-SRW', label: 'Sarawak' },
-    { value: 'MY-SGR', label: 'Selangor' },
-    { value: 'MY-TRG', label: 'Terengganu' },
-    { value: 'MY-KUL', label: 'Kuala Lumpur' },
-    { value: 'MY-LBN', label: 'Labuan' },
-    { value: 'MY-PJY', label: 'Putrajaya' },
+    { value: 'Johor', label: 'Johor' },
+    { value: 'Kedah', label: 'Kedah' },
+    { value: 'Kelantan', label: 'Kelantan' },
+    { value: 'Melaka', label: 'Melaka' },
+    { value: 'Negeri Sembilan', label: 'Negeri Sembilan' },
+    { value: 'Pahang', label: 'Pahang' },
+    { value: 'Perak', label: 'Perak' },
+    { value: 'Perlis', label: 'Perlis' },
+    { value: 'Penang (Pulau Pinang)', label: 'Penang (Pulau Pinang)' },
+    { value: 'Sabah', label: 'Sabah' },
+    { value: 'Sarawak', label: 'Sarawak' },
+    { value: 'Selangor', label: 'Selangor' },
+    { value: 'Terengganu', label: 'Terengganu' },
+    { value: 'Kuala Lumpur', label: 'Kuala Lumpur' },
+    { value: 'Labuan', label: 'Labuan' },
+    { value: 'Putrajaya', label: 'Putrajaya' },
   ]
 
   const asiaCountries: { value: string; label: string }[] = [
@@ -368,7 +367,7 @@ export default function ContactForm({ locale }: Props){
                 className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
               >
                 <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
-                {malaysiaStates.filter(o => o.value !== 'MY').map((o) => (
+                {malaysiaStates.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>

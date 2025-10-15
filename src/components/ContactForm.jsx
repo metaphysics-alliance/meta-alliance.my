@@ -293,22 +293,22 @@ export default function ContactForm(){
             <div className="relative">
               <select name="malaysiaState" value={state.malaysiaState || ''} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
                 <option value="">{lang === 'CN' ? '请选择州属' : 'Select state'}</option>
-                <option value="MY-JHR">Johor</option>
-                <option value="MY-KDH">Kedah</option>
-                <option value="MY-KTN">Kelantan</option>
-                <option value="MY-MLK">Melaka</option>
-                <option value="MY-NSN">Negeri Sembilan</option>
-                <option value="MY-PHG">Pahang</option>
-                <option value="MY-PRK">Perak</option>
-                <option value="MY-PLS">Perlis</option>
-                <option value="MY-PNG">Penang (Pulau Pinang)</option>
-                <option value="MY-SBH">Sabah</option>
-                <option value="MY-SRW">Sarawak</option>
-                <option value="MY-SGR">Selangor</option>
-                <option value="MY-TRG">Terengganu</option>
-                <option value="MY-KUL">Kuala Lumpur</option>
-                <option value="MY-LBN">Labuan</option>
-                <option value="MY-PJY">Putrajaya</option>
+                <option value="Johor">Johor</option>
+                <option value="Kedah">Kedah</option>
+                <option value="Kelantan">Kelantan</option>
+                <option value="Melaka">Melaka</option>
+                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                <option value="Pahang">Pahang</option>
+                <option value="Perak">Perak</option>
+                <option value="Perlis">Perlis</option>
+                <option value="Penang (Pulau Pinang)">Penang (Pulau Pinang)</option>
+                <option value="Sabah">Sabah</option>
+                <option value="Sarawak">Sarawak</option>
+                <option value="Selangor">Selangor</option>
+                <option value="Terengganu">Terengganu</option>
+                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                <option value="Labuan">Labuan</option>
+                <option value="Putrajaya">Putrajaya</option>
               </select>
               <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
             </div>
