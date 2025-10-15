@@ -37,5 +37,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          cname: www.meta-alliance.my
+          cname: meta-alliance.my
           force_orphan: false

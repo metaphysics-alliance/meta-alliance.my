@@ -38,7 +38,9 @@ Standard Commands
 Deployment Notes
 
 - GitHub Pages publishes from `dist/` on `gh-pages` branch via CI.
-- Keep `CNAME` present to preserve custom domain (www.meta-alliance.my).
+- Custom domain MUST be `meta-alliance.my` (no `www`).
+  - Keep `CNAME` present with exactly `meta-alliance.my`.
+  - CI workflow `deploy-gh-pages.yml` must set `cname: meta-alliance.my`.
 - Do not remove or overwrite `CNAME` in builds/commits.
 
 i18n & Content Rules
@@ -69,4 +71,3 @@ Common Pitfalls
 
 - Unescaped apostrophes in long strings in `shared/i18n/dictionary.js` can break Next builds. Prefer backticks for long literals when needed.
 - Keep both Roadmap implementations aligned (props shape and optional `icon` support).
-
