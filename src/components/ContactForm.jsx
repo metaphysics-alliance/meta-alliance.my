@@ -244,76 +244,74 @@ export default function ContactForm(){
             <select name="country" value={state.country} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
               <option value="MY">{lang === 'CN' ? '马来西亚' : 'Malaysia'}</option>
               <optgroup label={lang === 'CN' ? '亚洲' : 'Asia'}>
-                <option value="SG">Singapore</option>
-                <option value="HK">Hong Kong</option>
-                <option value="MO">Macau</option>
-                <option value="CN">China</option>
-                <option value="JP">Japan</option>
-                <option value="KR">South Korea</option>
-                <option value="TH">Thailand</option>
-                <option value="VN">Vietnam</option>
-                <option value="ID">Indonesia</option>
-                <option value="PH">Philippines</option>
-                <option value="LA">Laos</option>
-                <option value="KH">Cambodia</option>
-                <option value="MM">Myanmar</option>
-                <option value="BN">Brunei</option>
-                <option value="IN">India</option>
-                <option value="PK">Pakistan</option>
-                <option value="BD">Bangladesh</option>
-                <option value="LK">Sri Lanka</option>
-                <option value="NP">Nepal</option>
-                <option value="MV">Maldives</option>
-                <option value="AE">United Arab Emirates</option>
+                <option value="SG">{lang === 'CN' ? '新加坡' : 'Singapore'}</option>
+                <option value="HK">{lang === 'CN' ? '香港' : 'Hong Kong'}</option>
+                <option value="MO">{lang === 'CN' ? '澳门' : 'Macau'}</option>
+                <option value="CN">{lang === 'CN' ? '中国' : 'China'}</option>
+                <option value="JP">{lang === 'CN' ? '日本' : 'Japan'}</option>
+                <option value="KR">{lang === 'CN' ? '韩国' : 'South Korea'}</option>
+                <option value="TH">{lang === 'CN' ? '泰国' : 'Thailand'}</option>
+                <option value="VN">{lang === 'CN' ? '越南' : 'Vietnam'}</option>
+                <option value="ID">{lang === 'CN' ? '印度尼西亚' : 'Indonesia'}</option>
+                <option value="PH">{lang === 'CN' ? '菲律宾' : 'Philippines'}</option>
+                <option value="LA">{lang === 'CN' ? '老挝' : 'Laos'}</option>
+                <option value="KH">{lang === 'CN' ? '柬埔寨' : 'Cambodia'}</option>
+                <option value="MM">{lang === 'CN' ? '缅甸' : 'Myanmar'}</option>
+                <option value="BN">{lang === 'CN' ? '文莱' : 'Brunei'}</option>
+                <option value="IN">{lang === 'CN' ? '印度' : 'India'}</option>
+                <option value="PK">{lang === 'CN' ? '巴基斯坦' : 'Pakistan'}</option>
+                <option value="BD">{lang === 'CN' ? '孟加拉国' : 'Bangladesh'}</option>
+                <option value="LK">{lang === 'CN' ? '斯里兰卡' : 'Sri Lanka'}</option>
+                <option value="NP">{lang === 'CN' ? '尼泊尔' : 'Nepal'}</option>
+                <option value="MV">{lang === 'CN' ? '马尔代夫' : 'Maldives'}</option>
+                <option value="AE">{lang === 'CN' ? '阿联酋' : 'United Arab Emirates'}</option>
               </optgroup>
               <optgroup label={lang === 'CN' ? '世界其他地区' : 'Rest of World'}>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="GB">United Kingdom</option>
-                <option value="AU">Australia</option>
-                <option value="NZ">New Zealand</option>
-                <option value="DE">Germany</option>
-                <option value="FR">France</option>
-                <option value="IT">Italy</option>
-                <option value="ES">Spain</option>
-                <option value="CH">Switzerland</option>
-                <option value="SA">Saudi Arabia</option>
-                <option value="QA">Qatar</option>
-                <option value="KW">Kuwait</option>
-                <option value="OM">Oman</option>
-                <option value="BH">Bahrain</option>
+                <option value="US">{lang === 'CN' ? '美国' : 'United States'}</option>
+                <option value="CA">{lang === 'CN' ? '加拿大' : 'Canada'}</option>
+                <option value="GB">{lang === 'CN' ? '英国' : 'United Kingdom'}</option>
+                <option value="AU">{lang === 'CN' ? '澳大利亚' : 'Australia'}</option>
+                <option value="NZ">{lang === 'CN' ? '新西兰' : 'New Zealand'}</option>
+                <option value="DE">{lang === 'CN' ? '德国' : 'Germany'}</option>
+                <option value="FR">{lang === 'CN' ? '法国' : 'France'}</option>
+                <option value="IT">{lang === 'CN' ? '意大利' : 'Italy'}</option>
+                <option value="ES">{lang === 'CN' ? '西班牙' : 'Spain'}</option>
+                <option value="CH">{lang === 'CN' ? '瑞士' : 'Switzerland'}</option>
+                <option value="SA">{lang === 'CN' ? '沙特阿拉伯' : 'Saudi Arabia'}</option>
+                <option value="QA">{lang === 'CN' ? '卡塔尔' : 'Qatar'}</option>
+                <option value="KW">{lang === 'CN' ? '科威特' : 'Kuwait'}</option>
+                <option value="OM">{lang === 'CN' ? '阿曼' : 'Oman'}</option>
+                <option value="BH">{lang === 'CN' ? '巴林' : 'Bahrain'}</option>
               </optgroup>
             </select>
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
         </div>
-        {state.country === 'MY' ? (
-          <div>
-            <label className="block text-sm text-white/80 mb-1">{t.state}</label>
-            <div className="relative">
-              <select name="malaysiaState" value={state.malaysiaState || ''} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-                <option value="">{lang === 'CN' ? '请选择州属' : 'Select state'}</option>
-                <option value="Johor">Johor</option>
-                <option value="Kedah">Kedah</option>
-                <option value="Kelantan">Kelantan</option>
-                <option value="Melaka">Melaka</option>
-                <option value="Negeri Sembilan">Negeri Sembilan</option>
-                <option value="Pahang">Pahang</option>
-                <option value="Perak">Perak</option>
-                <option value="Perlis">Perlis</option>
-                <option value="Penang (Pulau Pinang)">Penang (Pulau Pinang)</option>
-                <option value="Sabah">Sabah</option>
-                <option value="Sarawak">Sarawak</option>
-                <option value="Selangor">Selangor</option>
-                <option value="Terengganu">Terengganu</option>
-                <option value="Kuala Lumpur">Kuala Lumpur</option>
-                <option value="Labuan">Labuan</option>
-                <option value="Putrajaya">Putrajaya</option>
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-            </div>
+        <div>
+          <label className="block text-sm text-white/80 mb-1">{t.state}</label>
+          <div className="relative">
+            <select name="malaysiaState" value={state.malaysiaState || ''} onChange={handleChange} disabled={state.country !== 'MY'} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white disabled:opacity-50 disabled:cursor-not-allowed focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
+              <option value="">{lang === 'CN' ? '请选择州属' : 'Select state'}</option>
+              <option value="Johor">{lang === 'CN' ? '柔佛' : 'Johor'}</option>
+              <option value="Kedah">{lang === 'CN' ? '吉打' : 'Kedah'}</option>
+              <option value="Kelantan">{lang === 'CN' ? '吉兰丹' : 'Kelantan'}</option>
+              <option value="Melaka">{lang === 'CN' ? '马六甲' : 'Melaka'}</option>
+              <option value="Negeri Sembilan">{lang === 'CN' ? '森美兰' : 'Negeri Sembilan'}</option>
+              <option value="Pahang">{lang === 'CN' ? '彭亨' : 'Pahang'}</option>
+              <option value="Perak">{lang === 'CN' ? '霹雳' : 'Perak'}</option>
+              <option value="Perlis">{lang === 'CN' ? '玻璃市' : 'Perlis'}</option>
+              <option value="Penang (Pulau Pinang)">{lang === 'CN' ? '槟城（槟榔屿）' : 'Penang (Pulau Pinang)'}</option>
+              <option value="Sabah">{lang === 'CN' ? '沙巴' : 'Sabah'}</option>
+              <option value="Sarawak">{lang === 'CN' ? '砂拉越' : 'Sarawak'}</option>
+              <option value="Selangor">{lang === 'CN' ? '雪兰莪' : 'Selangor'}</option>
+              <option value="Terengganu">{lang === 'CN' ? '登嘉楼' : 'Terengganu'}</option>
+              <option value="Kuala Lumpur">{lang === 'CN' ? '吉隆坡' : 'Kuala Lumpur'}</option>
+              <option value="Labuan">{lang === 'CN' ? '纳闽' : 'Labuan'}</option>
+              <option value="Putrajaya">{lang === 'CN' ? '布城' : 'Putrajaya'}</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
-        ) : null}
+        </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
           <select name="topic" value={state.topic} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">

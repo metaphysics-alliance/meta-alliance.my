@@ -46,13 +46,13 @@ export default function ContactForm({ locale }: Props){
     name: locale === 'CN' ? '姓名*' : 'Full name*',
     email: locale === 'CN' ? '邮箱*' : 'Email*',
     phone: locale === 'CN' ? '电话（自动识别国家）' : 'Phone (auto-detect country)',
-    company: locale === 'CN' ? '公司 / 角色' : 'Company / Role',
+    company: locale === 'CN' ? '公司 / 职位' : 'Company / Role',
     country: locale === 'CN' ? '国家/地区' : 'Country/Region',
     topic: locale === 'CN' ? '主题' : 'Topic',
     budget: locale === 'CN' ? '预算（可选）' : 'Budget (optional)',
-    timeline: locale === 'CN' ? '时间线' : 'Timeline',
+    timeline: locale === 'CN' ? '时间规划' : 'Timeline',
     message: locale === 'CN' ? '留言*' : 'Message*',
-    consent: locale === 'CN' ? '我同意贵司依据隐私政策处理我的信息*' : 'I consent to data processing per privacy policy*',
+    consent: locale === 'CN' ? '我同意按照隐私政策处理数据*' : 'I consent to data processing per privacy policy*',
     submit: locale === 'CN' ? '提交' : 'Submit',
     successTitle: locale === 'CN' ? '已收到您的咨询' : 'Thanks — we’ve received your inquiry',
     successBody: locale === 'CN' ? '我们已生成案件编号并发送确认邮件。后续会在1个工作日内联系您。' : 'We’ve generated a case ID and sent an auto‑reply. We’ll follow up within 1 business day.',
@@ -69,6 +69,13 @@ export default function ContactForm({ locale }: Props){
     }catch{}
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  // Clear state if country changes away from Malaysia
+  useEffect(() => {
+    if (state.country !== 'MY' && state.malaysiaState){
+      setState((s) => ({ ...s, malaysiaState: '' }))
+    }
+  }, [state.country])
 
   // Country / region options
   const malaysiaStates: { value: string; label: string }[] = [
@@ -344,37 +351,36 @@ export default function ContactForm({ locale }: Props){
               <option value="MY">{locale === 'CN' ? '马来西亚' : 'Malaysia'}</option>
               <optgroup label={locale === 'CN' ? '亚洲' : 'Asia'}>
                 {asiaCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
+                  <option key={o.value} value={o.value}>{locale === 'CN' ? (o as any).labelCn : o.label}</option>
                 ))}
               </optgroup>
               <optgroup label={locale === 'CN' ? '世界其他地区' : 'Rest of World'}>
                 {worldCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
+                  <option key={o.value} value={o.value}>{locale === 'CN' ? (o as any).labelCn : o.label}</option>
                 ))}
               </optgroup>
             </select>
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
         </div>
-        {state.country === 'MY' ? (
-          <div>
-            <label className="block text-sm text-white/80 mb-1">{t.state}</label>
-            <div className="relative">
-              <select
-                name="malaysiaState"
-                value={state.malaysiaState || ''}
-                onChange={handleChange}
-                className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-              >
-                <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
-                {malaysiaStates.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
-                ))}
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-            </div>
+        <div>
+          <label className="block text-sm text-white/80 mb-1">{t.state}</label>
+          <div className="relative">
+            <select
+              name="malaysiaState"
+              value={state.malaysiaState || ''}
+              onChange={handleChange}
+              disabled={state.country !== 'MY'}
+              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white disabled:opacity-50 disabled:cursor-not-allowed focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+            >
+              <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
+              {malaysiaStates.map((o) => (
+                <option key={o.value} value={o.value}>{locale === 'CN' ? o.labelCn : o.label}</option>
+              ))}
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
-        ) : null}
+        </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
           <div className="relative">
