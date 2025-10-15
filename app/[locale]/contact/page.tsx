@@ -33,6 +33,11 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
   const locale = params.locale
   const dict = getDict(locale)
   const title = dictTitle(dict, 'nav.contact') || (locale === 'CN' ? '联系我们' : 'Contact')
+  const heroTitle = locale === 'CN' ? '联系我们' : 'Talk To A Human Who Can Help Today'
+  const heroSub = locale === 'CN' ? '我们如何帮助您达成目标' : 'Real guidance. Fast reply. No bots.'
+  const heroDesc = locale === 'CN'
+    ? replyTime
+    : 'Ready to move now? Tell us what you need and we’ll reply fast with practical next steps, timelines, and options. No automated fluff—just a real expert focused on your outcome. Slots are limited this week, so reach out now and secure the earliest window for your case today if possible.'
 
   const replyTime = locale === 'CN'
     ? '我们通常在1个工作日内回复。'
@@ -64,10 +69,11 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
 
       {/* Header / Hero */}
       <Hero
-        title={title}
-        sub={locale === 'CN' ? '我们如何帮助您达成目标' : 'How we can help'}
-        description={replyTime}
-        className="backdrop-blur-md"
+        title={heroTitle}
+        sub={heroSub}
+        description={heroDesc}
+        className="bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-blend-multiply bg-black/50 min-h-[50vh] flex items-center -mt-10 -mb-10"
+        fullBleed
       />
 
       {/* Primary contact cards */}

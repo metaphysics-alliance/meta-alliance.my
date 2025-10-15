@@ -14,6 +14,9 @@ export default function ContactPage(){
 
   const title = t('nav.contact') || (lang === 'CN' ? '联系我们' : 'Contact')
   const replyTime = lang === 'CN' ? '我们通常在1个工作日内回复。' : 'We typically reply within 1 business day.'
+  const heroTitle = lang === 'CN' ? '联系我们' : 'Talk To A Human Who Can Help Today'
+  const heroSub = lang === 'CN' ? '我们如何帮助您达成目标' : 'Real guidance. Fast reply. No bots.'
+  const heroDesc = lang === 'CN' ? replyTime : 'Ready to move now? Tell us what you need and we’ll reply fast with practical next steps, timelines, and options. No automated fluff—just a real expert focused on your outcome. Slots are limited this week, so reach out now and secure the earliest window for your case today if possible.'
 
   const emailSales = import.meta.env.VITE_EMAIL_SALES || 'sales@meta-alliance.my'
   const emailSupport = import.meta.env.VITE_EMAIL_SUPPORT || 'support@meta-alliance.my'
@@ -23,10 +26,12 @@ export default function ContactPage(){
 
   return (
     <div className="container my-8 space-y-10">
-      <header className="rounded-3xl border border-white/10 bg-black/20 p-6 text-center backdrop-blur-md">
-        <h1 className="text-3xl font-semibold text-white md:text-4xl">{title}</h1>
-        <p className="mt-2 text-white/70">{lang === 'CN' ? '我们如何帮助您达成目标' : 'How we can help'}</p>
-        <p className="mt-1 text-sm text-white/60">{replyTime}</p>
+      <header className="w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-black/50 bg-blend-multiply min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-3xl font-semibold text-white md:text-5xl">{heroTitle}</h1>
+          <p className="mt-3 text-white/80 text-lg">{heroSub}</p>
+          <p className="mt-4 text-white/70 text-base">{heroDesc}</p>
+        </div>
       </header>
 
       <SectionDivider title={lang === 'CN' ? '主要联系' : 'Primary Contacts'} />
