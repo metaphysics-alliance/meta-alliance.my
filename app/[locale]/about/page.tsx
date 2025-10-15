@@ -70,7 +70,12 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         name: 'Metaphysics Alliance',
         url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
         logo: '/logo.png',
-        sameAs: ['https://facebook.com', 'https://instagram.com', 'https://www.tiktok.com']
+        sameAs: [
+          'https://www.facebook.com/MetaphysicsAlliance/',
+          'https://www.instagram.com/metaphysics.alliance/',
+          'https://www.tiktok.com/@metaphysicsalliance',
+          'https://www.threads.com/@metaphysics.alliance?hl=en',
+        ]
       }} />
       {Array.isArray(videos?.items) && videos.items.length ? (
         <StructuredData json={{

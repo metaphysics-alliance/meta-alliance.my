@@ -5,12 +5,10 @@ import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n.jsx'
 
 const SOCIAL_LINKS = [
-  { href: 'https://facebook.com', label: 'Facebook', Icon: FaFacebookF },
-  { href: 'https://instagram.com', label: 'Instagram', Icon: FaInstagram },
-  { href: 'https://www.tiktok.com', label: 'TikTok', Icon: SiTiktok },
-  { href: 'https://linkedin.com', label: 'LinkedIn', Icon: FaLinkedinIn },
-  { href: 'https://twitter.com', label: 'X (Twitter)', Icon: FaXTwitter },
-  { href: 'https://www.lemon8-app.com', label: 'Lemon8', Icon: FaLemon },
+  { href: 'https://www.facebook.com/MetaphysicsAlliance/', label: 'Facebook', Icon: FaFacebookF },
+  { href: 'https://www.instagram.com/metaphysics.alliance/', label: 'Instagram', Icon: FaInstagram },
+  { href: 'https://www.tiktok.com/@metaphysicsalliance', label: 'TikTok', Icon: SiTiktok },
+  { href: 'https://www.threads.com/@metaphysics.alliance?hl=en', label: 'Threads', Icon: FaInstagram },
 ]
 
 export default function Footer(){

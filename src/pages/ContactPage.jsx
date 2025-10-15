@@ -58,8 +58,8 @@ export default function ContactPage(){
             <h3 className="text-lg font-semibold text-white">{lang === 'CN' ? '即时沟通' : 'Live Chat & Social'}</h3>
             <ul className="mt-2 space-y-2 text-sm text-white/75">
               <li><a href={`https://wa.me/${whatsapp.replace(/[^\d]/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaWhatsapp className="text-green-500" /> WhatsApp</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaInstagram className="text-pink-500" /> Instagram</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaFacebook className="text-blue-500" /> Facebook</a></li>
+              <li><a href="https://www.instagram.com/metaphysics.alliance/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaInstagram className="text-pink-500" /> Instagram</a></li>
+              <li><a href="https://www.facebook.com/MetaphysicsAlliance/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaFacebook className="text-blue-500" /> Facebook</a></li>
               <li><a className="flex items-center gap-2 underline hover:text-white" href={`mailto:${emailSales}`}><FiMail className="text-white/80" /> {lang === "CN" ? "邮件" : "Email"}</a></li>
               <li><Link className="flex items-center gap-2 underline hover:text-white" to="/resources"><FiBook className="text-white/80" /> {lang === "CN" ? "资源" : "Resources"}</Link></li>
             </ul>

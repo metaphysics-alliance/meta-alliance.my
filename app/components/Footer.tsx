@@ -8,12 +8,10 @@ interface FooterProps {
 }
 
 const SOCIAL_LINKS = [
-  { href: 'https://facebook.com', label: 'Facebook' },
-  { href: 'https://instagram.com', label: 'Instagram' },
-  { href: 'https://www.tiktok.com', label: 'TikTok' },
-  { href: 'https://linkedin.com', label: 'LinkedIn' },
-  { href: 'https://twitter.com', label: 'X (Twitter)' },
-  { href: 'https://www.lemon8-app.com', label: 'Lemon8' },
+  { href: 'https://www.facebook.com/MetaphysicsAlliance/', label: 'Facebook' },
+  { href: 'https://www.instagram.com/metaphysics.alliance/', label: 'Instagram' },
+  { href: 'https://www.tiktok.com/@metaphysicsalliance', label: 'TikTok' },
+  { href: 'https://www.threads.com/@metaphysics.alliance?hl=en', label: 'Threads' },
 ] as const
 
 export default function Footer({ locale }: FooterProps){
