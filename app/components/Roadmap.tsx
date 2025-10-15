@@ -1,4 +1,19 @@
-type Item = { date: string; title?: string; outcome: string }
+import { FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle } from 'react-icons/fi'
+
+type Item = { date: string; title?: string; outcome: string; icon?: string }
+
+const IconMap: Record<string, (props: any) => JSX.Element> = {
+  FiFlag,
+  FiCompass,
+  FiClock,
+  FiLayers,
+  FiVideo,
+  FiUsers,
+  FiGlobe,
+  FiCheckCircle,
+}
+
+const fallbackIcons = [FiFlag, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle, FiCompass]
 
 export default function Roadmap({ items }: { items: Item[] }){
   if (!Array.isArray(items) || !items.length) return null
@@ -12,7 +27,13 @@ export default function Roadmap({ items }: { items: Item[] }){
               {i + 1}
             </span>
             <div className="rounded-xl border border-white/10 bg-black/30 p-4 backdrop-blur-md">
-              <div className="text-xs text-white/60">{m.date}</div>
+              <div className="flex items-center justify-between">
+                <div className="text-xs text-white/60">{m.date}</div>
+                {(() => {
+                  const Ico = (m.icon && IconMap[m.icon]) || fallbackIcons[i % fallbackIcons.length]
+                  return <Ico className="text-yellow-400/90" size={18} />
+                })()}
+              </div>
               {m.title ? <div className="mt-0.5 font-medium text-white/90">{m.title}</div> : null}
               <div className="mt-1 text-sm leading-relaxed text-white/70">{m.outcome}</div>
             </div>
@@ -30,7 +51,17 @@ export default function Roadmap({ items }: { items: Item[] }){
                   <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-semibold text-black ring-2 ring-black">
                     {i + 1}
                   </div>
-                  <div className="text-xs text-white/60">{m.date}</div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-xs text-white/60">{m.date}</div>
+                    {(() => {
+                      const Ico = (m.icon && IconMap[m.icon]) || fallbackIcons[i % fallbackIcons.length]
+                      return (
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-yellow-500/50 bg-yellow-400/10">
+                          <Ico className="text-yellow-400/90" size={16} />
+                        </span>
+                      )
+                    })()}
+                  </div>
                 </div>
                 {m.title ? <div className="mt-2 text-base font-medium text-white/90">{m.title}</div> : null}
                 <div className="mt-1 text-sm leading-relaxed text-white/70">{m.outcome}</div>
