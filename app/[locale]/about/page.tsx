@@ -108,8 +108,11 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         title={hero.title || navTitle}
         sub={hero.sub}
         description={hero.description}
-        className={"bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-blend-multiply bg-black/70 min-h-[50vh] flex items-center -mt-10 -mb-10"}
+        className={"min-h-[50vh] flex items-center -mt-10 -mb-10"}
         fullBleed
+        bannerSrc="/page-banner.png"
+        bannerOpacity={0.3}
+        noPaddingY
         actions={
           <div className="flex items-center gap-3">
             <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">

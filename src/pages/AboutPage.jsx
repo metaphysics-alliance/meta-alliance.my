@@ -25,8 +25,9 @@ export default function AboutPage(){
     <main className="container mx-auto max-w-6xl space-y-12 px-4 py-10">
       <SEOAbout lang={lang} title={hero.title} description={hero.description} />
       {/* Hero (edge-to-edge banner, match Contact) */}
-      <header className="w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12">
-        <div className="mx-auto max-w-6xl">
+      <header className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12">
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 mx-auto max-w-6xl">
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
         <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{hero.title || 'About Metaphysics Alliance'}</h1>
         {hero.description ? <p className="mt-3 max-w-3xl text-white/70">{hero.description}</p> : null}
