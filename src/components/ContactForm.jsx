@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { useI18n } from '../i18n.jsx'
+import Dropdown from './Dropdown.jsx'
 
 export default function ContactForm(){
   const { lang } = useI18n()
@@ -240,52 +241,52 @@ export default function ContactForm(){
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
-          <div className="relative">
-            <select name="country" value={state.country} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-              <option value="MY">{lang === 'CN' ? '马来西亚' : 'Malaysia'}</option>
-              <optgroup label={lang === 'CN' ? '亚洲' : 'Asia'}>
-                <option value="SG">{lang === 'CN' ? '新加坡' : 'Singapore'}</option>
-                <option value="HK">{lang === 'CN' ? '香港' : 'Hong Kong'}</option>
-                <option value="MO">{lang === 'CN' ? '澳门' : 'Macau'}</option>
-                <option value="CN">{lang === 'CN' ? '中国' : 'China'}</option>
-                <option value="JP">{lang === 'CN' ? '日本' : 'Japan'}</option>
-                <option value="KR">{lang === 'CN' ? '韩国' : 'South Korea'}</option>
-                <option value="TH">{lang === 'CN' ? '泰国' : 'Thailand'}</option>
-                <option value="VN">{lang === 'CN' ? '越南' : 'Vietnam'}</option>
-                <option value="ID">{lang === 'CN' ? '印度尼西亚' : 'Indonesia'}</option>
-                <option value="PH">{lang === 'CN' ? '菲律宾' : 'Philippines'}</option>
-                <option value="LA">{lang === 'CN' ? '老挝' : 'Laos'}</option>
-                <option value="KH">{lang === 'CN' ? '柬埔寨' : 'Cambodia'}</option>
-                <option value="MM">{lang === 'CN' ? '缅甸' : 'Myanmar'}</option>
-                <option value="BN">{lang === 'CN' ? '文莱' : 'Brunei'}</option>
-                <option value="IN">{lang === 'CN' ? '印度' : 'India'}</option>
-                <option value="PK">{lang === 'CN' ? '巴基斯坦' : 'Pakistan'}</option>
-                <option value="BD">{lang === 'CN' ? '孟加拉国' : 'Bangladesh'}</option>
-                <option value="LK">{lang === 'CN' ? '斯里兰卡' : 'Sri Lanka'}</option>
-                <option value="NP">{lang === 'CN' ? '尼泊尔' : 'Nepal'}</option>
-                <option value="MV">{lang === 'CN' ? '马尔代夫' : 'Maldives'}</option>
-                <option value="AE">{lang === 'CN' ? '阿联酋' : 'United Arab Emirates'}</option>
-              </optgroup>
-              <optgroup label={lang === 'CN' ? '世界其他地区' : 'Rest of World'}>
-                <option value="US">{lang === 'CN' ? '美国' : 'United States'}</option>
-                <option value="CA">{lang === 'CN' ? '加拿大' : 'Canada'}</option>
-                <option value="GB">{lang === 'CN' ? '英国' : 'United Kingdom'}</option>
-                <option value="AU">{lang === 'CN' ? '澳大利亚' : 'Australia'}</option>
-                <option value="NZ">{lang === 'CN' ? '新西兰' : 'New Zealand'}</option>
-                <option value="DE">{lang === 'CN' ? '德国' : 'Germany'}</option>
-                <option value="FR">{lang === 'CN' ? '法国' : 'France'}</option>
-                <option value="IT">{lang === 'CN' ? '意大利' : 'Italy'}</option>
-                <option value="ES">{lang === 'CN' ? '西班牙' : 'Spain'}</option>
-                <option value="CH">{lang === 'CN' ? '瑞士' : 'Switzerland'}</option>
-                <option value="SA">{lang === 'CN' ? '沙特阿拉伯' : 'Saudi Arabia'}</option>
-                <option value="QA">{lang === 'CN' ? '卡塔尔' : 'Qatar'}</option>
-                <option value="KW">{lang === 'CN' ? '科威特' : 'Kuwait'}</option>
-                <option value="OM">{lang === 'CN' ? '阿曼' : 'Oman'}</option>
-                <option value="BH">{lang === 'CN' ? '巴林' : 'Bahrain'}</option>
-              </optgroup>
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.country}
+            onChange={(v) => setState(s => ({ ...s, country: v }))}
+            items={[
+              { type: 'heading', label: lang === 'CN' ? '马来西亚' : 'Malaysia' },
+              { type: 'option', label: lang === 'CN' ? '马来西亚' : 'Malaysia', value: 'MY' },
+              { type: 'heading', label: lang === 'CN' ? '亚洲' : 'Asia' },
+              { type: 'option', label: lang === 'CN' ? '新加坡' : 'Singapore', value: 'SG' },
+              { type: 'option', label: lang === 'CN' ? '香港' : 'Hong Kong', value: 'HK' },
+              { type: 'option', label: lang === 'CN' ? '澳门' : 'Macau', value: 'MO' },
+              { type: 'option', label: lang === 'CN' ? '中国' : 'China', value: 'CN' },
+              { type: 'option', label: lang === 'CN' ? '日本' : 'Japan', value: 'JP' },
+              { type: 'option', label: lang === 'CN' ? '韩国' : 'South Korea', value: 'KR' },
+              { type: 'option', label: lang === 'CN' ? '泰国' : 'Thailand', value: 'TH' },
+              { type: 'option', label: lang === 'CN' ? '越南' : 'Vietnam', value: 'VN' },
+              { type: 'option', label: lang === 'CN' ? '印度尼西亚' : 'Indonesia', value: 'ID' },
+              { type: 'option', label: lang === 'CN' ? '菲律宾' : 'Philippines', value: 'PH' },
+              { type: 'option', label: lang === 'CN' ? '老挝' : 'Laos', value: 'LA' },
+              { type: 'option', label: lang === 'CN' ? '柬埔寨' : 'Cambodia', value: 'KH' },
+              { type: 'option', label: lang === 'CN' ? '缅甸' : 'Myanmar', value: 'MM' },
+              { type: 'option', label: lang === 'CN' ? '文莱' : 'Brunei', value: 'BN' },
+              { type: 'option', label: lang === 'CN' ? '印度' : 'India', value: 'IN' },
+              { type: 'option', label: lang === 'CN' ? '巴基斯坦' : 'Pakistan', value: 'PK' },
+              { type: 'option', label: lang === 'CN' ? '孟加拉国' : 'Bangladesh', value: 'BD' },
+              { type: 'option', label: lang === 'CN' ? '斯里兰卡' : 'Sri Lanka', value: 'LK' },
+              { type: 'option', label: lang === 'CN' ? '尼泊尔' : 'Nepal', value: 'NP' },
+              { type: 'option', label: lang === 'CN' ? '马尔代夫' : 'Maldives', value: 'MV' },
+              { type: 'option', label: lang === 'CN' ? '阿联酋' : 'United Arab Emirates', value: 'AE' },
+              { type: 'heading', label: lang === 'CN' ? '世界其他地区' : 'Rest of World' },
+              { type: 'option', label: lang === 'CN' ? '美国' : 'United States', value: 'US' },
+              { type: 'option', label: lang === 'CN' ? '加拿大' : 'Canada', value: 'CA' },
+              { type: 'option', label: lang === 'CN' ? '英国' : 'United Kingdom', value: 'GB' },
+              { type: 'option', label: lang === 'CN' ? '澳大利亚' : 'Australia', value: 'AU' },
+              { type: 'option', label: lang === 'CN' ? '新西兰' : 'New Zealand', value: 'NZ' },
+              { type: 'option', label: lang === 'CN' ? '德国' : 'Germany', value: 'DE' },
+              { type: 'option', label: lang === 'CN' ? '法国' : 'France', value: 'FR' },
+              { type: 'option', label: lang === 'CN' ? '意大利' : 'Italy', value: 'IT' },
+              { type: 'option', label: lang === 'CN' ? '西班牙' : 'Spain', value: 'ES' },
+              { type: 'option', label: lang === 'CN' ? '瑞士' : 'Switzerland', value: 'CH' },
+              { type: 'option', label: lang === 'CN' ? '沙特阿拉伯' : 'Saudi Arabia', value: 'SA' },
+              { type: 'option', label: lang === 'CN' ? '卡塔尔' : 'Qatar', value: 'QA' },
+              { type: 'option', label: lang === 'CN' ? '科威特' : 'Kuwait', value: 'KW' },
+              { type: 'option', label: lang === 'CN' ? '阿曼' : 'Oman', value: 'OM' },
+              { type: 'option', label: lang === 'CN' ? '巴林' : 'Bahrain', value: 'BH' },
+            ]}
+          />
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.state}</label>

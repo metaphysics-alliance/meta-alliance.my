@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import type { Locale } from '@/lib/i18n'
+import Dropdown from '@/components/Dropdown'
 
 interface Props { locale: Locale }
 
@@ -341,27 +342,18 @@ export default function ContactForm({ locale }: Props){
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
-          <div className="relative">
-            <select
-              name="country"
-              value={state.country}
-              onChange={handleChange}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-            >
-              <option value="MY">{locale === 'CN' ? '马来西亚' : 'Malaysia'}</option>
-              <optgroup label={locale === 'CN' ? '亚洲' : 'Asia'}>
-                {asiaCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
-                ))}
-              </optgroup>
-              <optgroup label={locale === 'CN' ? '世界其他地区' : 'Rest of World'}>
-                {worldCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
-                ))}
-              </optgroup>
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.country}
+            onChange={(v) => setState((s) => ({ ...s, country: v }))}
+            items={[
+              { type: 'heading', label: locale === 'CN' ? '马来西亚' : 'Malaysia' },
+              { type: 'option', label: locale === 'CN' ? '马来西亚' : 'Malaysia', value: 'MY' },
+              { type: 'heading', label: locale === 'CN' ? '亚洲' : 'Asia' },
+              ...asiaCountries.map((o) => ({ type: 'option' as const, label: o.label, value: o.value })),
+              { type: 'heading', label: locale === 'CN' ? '世界其他地区' : 'Rest of World' },
+              ...worldCountries.map((o) => ({ type: 'option' as const, label: o.label, value: o.value })),
+            ]}
+          />
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.state}</label>
