@@ -622,8 +622,8 @@ export default dictionary
 try {
   const t2 = dictionary?.EN?.about?.story?.timeline
   if (Array.isArray(t2)){
-    if (t2[4]) t2[4].body = 'We upgraded our cross-validation into a 2.0 system: multiple methods must agree, and when they diverge we write down the trade-offs and offer a safer path. "Why now" is checked against market pace and team capacity. Timing is precise-weeks and quarters-with prep steps and risk signals. It's decision support you can execute.'
-    if (t2[5]) t2[5].body = 'We crossed 500 clients and expanded B2B across three industries. The recipe stays the same: stable inputs, cross-validated signals, and aligning people and space to the calendar. Reports became roadmaps with owners, steps and measures. The proof is practical: fewer detours, better timing, and teams making moves in the right windows.'
+    if (t2[4]) t2[4].body = `We upgraded our cross-validation into a 2.0 system: multiple methods must agree, and when they diverge we write down the trade-offs and offer a safer path. "Why now" is checked against market pace and team capacity. Timing is precise—weeks and quarters—with prep steps and risk signals. It's decision support you can execute.`
+    if (t2[5]) t2[5].body = `We crossed 500 clients and expanded B2B across three industries. The recipe stays the same: stable inputs, cross-validated signals, and aligning people and space to the calendar. Reports became roadmaps with owners, steps and measures. The proof is practical: fewer detours, better timing, and teams making moves in the right windows.`
   }
 } catch (e) { /* no-op */ }
 
