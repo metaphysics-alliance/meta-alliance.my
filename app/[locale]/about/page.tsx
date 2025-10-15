@@ -111,7 +111,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         className={"min-h-[50vh] flex items-center -mt-10 -mb-10"}
         fullBleed
         bannerSrc="/page-banner.png"
-        bannerOpacity={0.3}
+        bannerOpacity={0.2}
         overlayOpacity={0}
         noPaddingY
         actions={
