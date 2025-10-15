@@ -12,6 +12,7 @@ type FormState = {
   phone: string
   companyRole: string
   country: string
+  malaysiaState?: string
   topic: 'Sales' | 'Partnership' | 'Media' | 'Other'
   budget: string
   timeline: 'Immediate' | '1–3 months' | '3–6 months'
@@ -21,12 +22,14 @@ type FormState = {
 }
 
 export default function ContactForm({ locale }: Props){
-  const [state, setState] = useState<FormState>({
+
+
     name: '',
     email: '',
     phone: '',
     companyRole: '',
     country: 'MY',
+    malaysiaState: '',
     topic: 'Sales',
     budget: '',
     timeline: 'Immediate',
@@ -339,11 +342,7 @@ export default function ContactForm({ locale }: Props){
               onChange={handleChange}
               className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
             >
-              <optgroup label={locale === 'CN' ? '马来西亚与州属' : 'Malaysia & States'}>
-                {malaysiaStates.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
-                ))}
-              </optgroup>
+              <option value="MY">{locale === 'CN' ? '马来西亚' : 'Malaysia'}</option>
               <optgroup label={locale === 'CN' ? '亚洲' : 'Asia'}>
                 {asiaCountries.map((o) => (
                   <option key={o.value} value={o.value}>{o.label}</option>
@@ -358,6 +357,25 @@ export default function ContactForm({ locale }: Props){
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
         </div>
+        {state.country === 'MY' ? (
+          <div>
+            <label className="block text-sm text-white/80 mb-1">{t.state}</label>
+            <div className="relative">
+              <select
+                name="malaysiaState"
+                value={state.malaysiaState || ''}
+                onChange={handleChange}
+                className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+              >
+                <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
+                {malaysiaStates.filter(o => o.value !== 'MY').map((o) => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+            </div>
+          </div>
+        ) : null}
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
           <div className="relative">

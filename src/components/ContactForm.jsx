@@ -242,25 +242,7 @@ export default function ContactForm(){
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
           <div className="relative">
             <select name="country" value={state.country} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-              <optgroup label={lang === 'CN' ? '马来西亚与州属' : 'Malaysia & States'}>
-                <option value="MY">Malaysia</option>
-                <option value="MY-JHR">Johor</option>
-                <option value="MY-KDH">Kedah</option>
-                <option value="MY-KTN">Kelantan</option>
-                <option value="MY-MLK">Melaka</option>
-                <option value="MY-NSN">Negeri Sembilan</option>
-                <option value="MY-PHG">Pahang</option>
-                <option value="MY-PRK">Perak</option>
-                <option value="MY-PLS">Perlis</option>
-                <option value="MY-PNG">Penang (Pulau Pinang)</option>
-                <option value="MY-SBH">Sabah</option>
-                <option value="MY-SRW">Sarawak</option>
-                <option value="MY-SGR">Selangor</option>
-                <option value="MY-TRG">Terengganu</option>
-                <option value="MY-KUL">Kuala Lumpur</option>
-                <option value="MY-LBN">Labuan</option>
-                <option value="MY-PJY">Putrajaya</option>
-              </optgroup>
+              <option value="MY">{lang === 'CN' ? '马来西亚' : 'Malaysia'}</option>
               <optgroup label={lang === 'CN' ? '亚洲' : 'Asia'}>
                 <option value="SG">Singapore</option>
                 <option value="HK">Hong Kong</option>
@@ -305,6 +287,33 @@ export default function ContactForm(){
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
           </div>
         </div>
+        {state.country === 'MY' ? (
+          <div>
+            <label className="block text-sm text-white/80 mb-1">{t.state}</label>
+            <div className="relative">
+              <select name="malaysiaState" value={state.malaysiaState || ''} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
+                <option value="">{lang === 'CN' ? '请选择州属' : 'Select state'}</option>
+                <option value="MY-JHR">Johor</option>
+                <option value="MY-KDH">Kedah</option>
+                <option value="MY-KTN">Kelantan</option>
+                <option value="MY-MLK">Melaka</option>
+                <option value="MY-NSN">Negeri Sembilan</option>
+                <option value="MY-PHG">Pahang</option>
+                <option value="MY-PRK">Perak</option>
+                <option value="MY-PLS">Perlis</option>
+                <option value="MY-PNG">Penang (Pulau Pinang)</option>
+                <option value="MY-SBH">Sabah</option>
+                <option value="MY-SRW">Sarawak</option>
+                <option value="MY-SGR">Selangor</option>
+                <option value="MY-TRG">Terengganu</option>
+                <option value="MY-KUL">Kuala Lumpur</option>
+                <option value="MY-LBN">Labuan</option>
+                <option value="MY-PJY">Putrajaya</option>
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+            </div>
+          </div>
+        ) : null}
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
           <select name="topic" value={state.topic} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
