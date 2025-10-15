@@ -14,9 +14,10 @@ interface HeroProps {
   fullHeight?: boolean // if true, min-h-screen
   minVh?: number // optional override for min-height in vh (e.g., 50)
   noPaddingY?: boolean // remove top/bottom padding for edge-to-edge banner
+  overlayOpacity?: number // 0..1, optional dark overlay above banner image (default 0)
 }
 
-export default function Hero({ title, sub, eyebrow, description, actions, children, className, fullBleed, bannerSrc, bannerOpacity, fullHeight, minVh, noPaddingY }: HeroProps){
+export default function Hero({ title, sub, eyebrow, description, actions, children, className, fullBleed, bannerSrc, bannerOpacity, fullHeight, minVh, noPaddingY, overlayOpacity }: HeroProps){
   const pad = noPaddingY ? 'px-8 md:px-12 py-0' : 'p-8 md:p-12'
   const base = `relative overflow-hidden ${pad}`
   const framed = 'rounded-3xl border border-white/10 shadow-soft-xl'
@@ -29,11 +30,11 @@ export default function Hero({ title, sub, eyebrow, description, actions, childr
       {bannerSrc ? (
         <>
           <img src={bannerSrc} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity }} />
-          <div className="absolute inset-0 bg-black/30" />
+          {typeof overlayOpacity === 'number' && overlayOpacity > 0 ? (
+            <div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }} />
+          ) : null}
         </>
-      ) : (
-        <div className="absolute inset-0 bg-black/30" />
-      )}
+      ) : null}
       <div className="relative z-10 space-y-4 text-center md:text-left flex flex-col justify-center">
         {eyebrow ? <span className="text-xs uppercase tracking-[0.3em] text-white/60">{eyebrow}</span> : null}
         {title ? <h1 className="text-3xl md:text-5xl font-semibold leading-tight text-white">{title}</h1> : null}

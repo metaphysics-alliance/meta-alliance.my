@@ -76,6 +76,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         fullBleed
         bannerSrc="/page-banner.png"
         bannerOpacity={0.3}
+        overlayOpacity={0}
         noPaddingY
       />
 
