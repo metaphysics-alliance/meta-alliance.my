@@ -279,33 +279,57 @@ export default function ContactForm({ locale }: Props){
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
-          <select name="topic" value={state.topic} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
-            <option value="Sales">{locale === 'CN' ? '销售/咨询' : 'Sales'}</option>
-            <option value="Partnership">{locale === 'CN' ? '合作' : 'Partnership'}</option>
-            <option value="Media">{locale === 'CN' ? '媒体' : 'Media'}</option>
-            <option value="Other">{locale === 'CN' ? '其他' : 'Other'}</option>
-          </select>
+          <div className="relative">
+            <select
+              name="topic"
+              value={state.topic}
+              onChange={handleChange}
+              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+            >
+              <option value="Sales">{locale === 'CN' ? '销售/咨询' : 'Sales'}</option>
+              <option value="Partnership">{locale === 'CN' ? '合作' : 'Partnership'}</option>
+              <option value="Media">{locale === 'CN' ? '媒体' : 'Media'}</option>
+              <option value="Other">{locale === 'CN' ? '其他' : 'Other'}</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+          </div>
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.budget}</label>
-          <select name="budget" value={state.budget} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
-            <option value="">{locale === 'CN' ? '未指定' : 'Not specified'}</option>
-            <option value="<1k">{locale === 'CN' ? '< RM 1k' : '< RM 1k'}</option>
-            <option value="1–5k">RM 1–5k</option>
-            <option value="5–15k">RM 5–15k</option>
-            <option value=">15k">{locale === 'CN' ? 'RM 15k 以上' : 'RM 15k+'}</option>
-          </select>
+          <div className="relative">
+            <select
+              name="budget"
+              value={state.budget}
+              onChange={handleChange}
+              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+            >
+              <option value="">{locale === 'CN' ? '未指定' : 'Not specified'}</option>
+              <option value="<1k">{locale === 'CN' ? '< RM 1k' : '< RM 1k'}</option>
+              <option value="1-5k">RM 1-5k</option>
+              <option value="5-15k">RM 5-15k</option>
+              <option value=">15k">{locale === 'CN' ? 'RM 15k 以上' : 'RM 15k+'}</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+          </div>
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.timeline}</label>
-          <select name="timeline" value={state.timeline} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
-            <option value="Immediate">{locale === 'CN' ? '立即' : 'Immediate'}</option>
-            <option value="1–3 months">{locale === 'CN' ? '1–3 个月' : '1–3 months'}</option>
-            <option value="3–6 months">{locale === 'CN' ? '3–6 个月' : '3–6 months'}</option>
-          </select>
+          <div className="relative">
+            <select
+              name="timeline"
+              value={state.timeline}
+              onChange={handleChange}
+              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+            >
+              <option value="Immediate">{locale === 'CN' ? '立即' : 'Immediate'}</option>
+              <option value="1-3 months">{locale === 'CN' ? '1-3 个月' : '1-3 months'}</option>
+              <option value="3-6 months">{locale === 'CN' ? '3-6 个月' : '3-6 months'}</option>
+            </select>
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
+          </div>
         </div>
       </div>
 

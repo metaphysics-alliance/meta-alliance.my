@@ -193,7 +193,7 @@ export default function ContactForm(){
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.phone}</label>
           <div className="flex gap-2">
-            <select name="phoneCode" value={state.phoneCode} onChange={handleChange} className="w-40 shrink-0 rounded-lg border border-white/15 bg-white text-black px-3 py-2">
+            <select name="phoneCode" value={state.phoneCode} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-8 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
               {/* Asia (priority) */}
               <option value="+60">Malaysia (+60)</option>
               <option value="+65">Singapore (+65)</option>
@@ -244,7 +244,7 @@ export default function ContactForm(){
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
-          <select name="topic" value={state.topic} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
+          <select name="topic" value={state.topic} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
             <option value="Sales">{lang === 'CN' ? '销售/咨询' : 'Sales'}</option>
             <option value="Partnership">{lang === 'CN' ? '合作' : 'Partnership'}</option>
             <option value="Media">{lang === 'CN' ? '媒体' : 'Media'}</option>
@@ -253,7 +253,7 @@ export default function ContactForm(){
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.budget}</label>
-          <select name="budget" value={state.budget} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
+          <select name="budget" value={state.budget} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
             <option value="">{lang === 'CN' ? '未指定' : 'Not specified'}</option>
             <option value="<1k">{lang === 'CN' ? '< RM 1k' : '< RM 1k'}</option>
             <option value="1–5k">RM 1–5k</option>
@@ -266,7 +266,7 @@ export default function ContactForm(){
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.timeline}</label>
-          <select name="timeline" value={state.timeline} onChange={handleChange} className="w-full rounded-lg border border-white/15 bg-white text-black px-3 py-2">
+          <select name="timeline" value={state.timeline} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
             <option value="Immediate">{lang === 'CN' ? '立即' : 'Immediate'}</option>
             <option value="1–3 months">{lang === 'CN' ? '1–3 个月' : '1–3 months'}</option>
             <option value="3–6 months">{lang === 'CN' ? '3–6 个月' : '3–6 months'}</option>
