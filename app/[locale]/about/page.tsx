@@ -109,6 +109,10 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         sub={hero.sub}
         description={hero.description}
         className="backdrop-blur-md"
+        fullBleed
+        fullHeight
+        bannerSrc="/page-banner.png"
+        bannerOpacity={0.2}
         actions={
           <div className="flex items-center gap-3">
             <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
