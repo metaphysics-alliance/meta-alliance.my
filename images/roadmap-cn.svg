@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520">
+  <defs>
+    <linearGradient id="roadGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8c6c00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0.9"/>
+    </linearGradient>
+    <style>
+      .bg { fill: #0b0b0b; }
+      .road { stroke: url(#roadGrad); stroke-width: 10; fill: none; }
+      .dot { fill: #d4af37; stroke: #000; stroke-width: 3; }
+      .card { fill: rgba(255,255,255,0.06); stroke: rgba(255,255,255,0.15); }
+      .title { font: 600 20px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #fff; }
+      .date { font: 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #cfcfcf; }
+      .body { font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #d9d9d9; }
+      .label { font: 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #f1e7bd; letter-spacing: 2px; }
+    </style>
+  </defs>
+  <rect class="bg" width="100%" height="100%" rx="18"/>
+  <text x="40" y="48" class="label">里程碑路线图</text>
+
+  <path class="road" d="M80,420 C300,340 380,120 600,180 C830,245 820,420 1040,380 C1230,345 1320,220 1510,180"/>
+
+  <circle class="dot" cx="180" cy="380" r="10"/>
+  <circle class="dot" cx="410" cy="220" r="10"/>
+  <circle class="dot" cx="650" cy="210" r="10"/>
+  <circle class="dot" cx="900" cy="330" r="10"/>
+  <circle class="dot" cx="1160" cy="320" r="10"/>
+  <circle class="dot" cx="1410" cy="220" r="10"/>
+
+  <g>
+    <rect x="100" y="70" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="120" y="96" class="date">2021‑03</text>
+    <text x="120" y="122" class="title">工作室成立</text>
+    <foreignObject x="120" y="136" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">整合八字、紫微、奇门流程，服务真实业务场景。</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="360" y="30" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="380" y="56" class="date">2021‑11</text>
+    <text x="380" y="82" class="title">真太阳时</text>
+    <foreignObject x="380" y="96" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">统一时间戳，降低噪音，形成可执行窗口。</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="620" y="70" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="640" y="96" class="date">2022‑08</text>
+    <text x="640" y="122" class="title">交叉验证</text>
+    <foreignObject x="640" y="136" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">多法达成共识；分歧时明确取舍与路径。</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="880" y="380" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="900" y="406" class="date">2023‑04</text>
+    <text x="900" y="432" class="title">可视化报告</text>
+    <foreignObject x="900" y="446" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">提供路线图与化解方案图形化呈现。</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="1140" y="360" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="1160" y="386" class="date">2024‑10</text>
+    <text x="1160" y="412" class="title">交叉验证 2.0</text>
+    <foreignObject x="1160" y="426" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">时机建议更为精细，冲突信号给出取舍与备选路径。</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="1240" y="40" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="1260" y="66" class="date">2025‑03</text>
+    <text x="1260" y="92" class="title">服务 500+ 客户</text>
+    <foreignObject x="1260" y="106" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">累计服务 500+ 客户；B2B 项目覆盖 3 个行业。</div>
+    </foreignObject>
+  </g>
+</svg>
