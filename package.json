@@ -10,7 +10,7 @@
     "dev:next": "next dev -p 3000",
     "dev:vite": "vite --port 5173",
     "build": "npm run assets:roadmap && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port 4173",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
     "test:browserstack": "playwright test --config=playwright.browserstack.config.ts",
