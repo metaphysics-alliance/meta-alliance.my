@@ -28,7 +28,7 @@ export default function AboutPage(){
       <section className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] overflow-hidden min-h-[50vh]">
         <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.2 }} />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 px-4 py-10">
+        <div className="relative z-10 px-4 py-0">
           <div className="mx-auto max-w-6xl">
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
         <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{hero.title || 'About Metaphysics Alliance'}</h1>
