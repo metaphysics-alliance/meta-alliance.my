@@ -12,16 +12,18 @@ interface HeroProps {
   bannerSrc?: string
   bannerOpacity?: number // 0..1, default 0.2 when bannerSrc provided
   fullHeight?: boolean // if true, min-h-screen
+  minVh?: number // optional override for min-height in vh (e.g., 50)
 }
 
-export default function Hero({ title, sub, eyebrow, description, actions, children, className, fullBleed, bannerSrc, bannerOpacity, fullHeight }: HeroProps){
+export default function Hero({ title, sub, eyebrow, description, actions, children, className, fullBleed, bannerSrc, bannerOpacity, fullHeight, minVh }: HeroProps){
   const base = 'relative overflow-hidden p-8 md:p-12'
   const framed = 'rounded-3xl border border-white/10 shadow-soft-xl'
   const bleed = "w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] rounded-none border-0 shadow-none"
-  const useFullHeight = Boolean(fullHeight || bannerSrc)
+  const useFullHeight = Boolean((fullHeight || bannerSrc) && !minVh)
   const opacity = bannerSrc ? (typeof bannerOpacity === 'number' ? bannerOpacity : 0.2) : undefined
+  const inlineStyle = typeof minVh === 'number' ? { minHeight: `${minVh}vh` } : undefined
   return (
-    <section className={`${base} ${fullBleed ? bleed : framed} ${useFullHeight ? 'min-h-screen' : ''} ${className ?? ''}`}>
+    <section className={`${base} ${fullBleed ? bleed : framed} ${useFullHeight ? 'min-h-screen' : ''} ${className ?? ''}`} style={inlineStyle}>
       {bannerSrc ? (
         <>
           <img src={bannerSrc} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity }} />

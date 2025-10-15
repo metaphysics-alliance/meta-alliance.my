@@ -25,7 +25,7 @@ export default function AboutPage(){
     <main className="container mx-auto max-w-6xl space-y-12 px-4 py-10">
       <SEOAbout lang={lang} title={hero.title} description={hero.description} />
       {/* Hero (edge-to-edge banner) */}
-      <section className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] overflow-hidden min-h-screen">
+      <section className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] overflow-hidden min-h-[50vh]">
         <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.2 }} />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 px-4 py-10">
