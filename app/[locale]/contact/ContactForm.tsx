@@ -22,8 +22,7 @@ type FormState = {
 }
 
 export default function ContactForm({ locale }: Props){
-
-
+  const [state, setState] = useState<FormState>({
     name: '',
     email: '',
     phone: '',
@@ -48,6 +47,7 @@ export default function ContactForm({ locale }: Props){
     phone: locale === 'CN' ? '电话（自动识别国家）' : 'Phone (auto-detect country)',
     company: locale === 'CN' ? '公司 / 职位' : 'Company / Role',
     country: locale === 'CN' ? '国家/地区' : 'Country/Region',
+    state: locale === 'CN' ? '选择州属（仅限马来西亚）' : 'Select State (Malaysia Only)',
     topic: locale === 'CN' ? '主题' : 'Topic',
     budget: locale === 'CN' ? '预算（可选）' : 'Budget (optional)',
     timeline: locale === 'CN' ? '时间规划' : 'Timeline',
@@ -351,12 +351,12 @@ export default function ContactForm({ locale }: Props){
               <option value="MY">{locale === 'CN' ? '马来西亚' : 'Malaysia'}</option>
               <optgroup label={locale === 'CN' ? '亚洲' : 'Asia'}>
                 {asiaCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{locale === 'CN' ? (o as any).labelCn : o.label}</option>
+                  <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </optgroup>
               <optgroup label={locale === 'CN' ? '世界其他地区' : 'Rest of World'}>
                 {worldCountries.map((o) => (
-                  <option key={o.value} value={o.value}>{locale === 'CN' ? (o as any).labelCn : o.label}</option>
+                  <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </optgroup>
             </select>
@@ -375,7 +375,7 @@ export default function ContactForm({ locale }: Props){
             >
               <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
               {malaysiaStates.map((o) => (
-                <option key={o.value} value={o.value}>{locale === 'CN' ? o.labelCn : o.label}</option>
+                <option key={o.value} value={o.value}>{o.label}</option>
               ))}
             </select>
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
