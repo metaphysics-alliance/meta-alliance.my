@@ -67,3 +67,14 @@ body > * { position: relative; z-index: 1; }
   outline: 2px solid var(--brand-gold); outline-offset: 2px;
 }
 a { color: #fff; text-decoration: none; }
+
+/* Dark form controls: standardize dropdown popups to dark theme (best-effort) */
+:root { color-scheme: dark; }
+select {
+  background-color: rgba(255,255,255,0.05);
+  color: #fff;
+}
+select option, select optgroup {
+  background-color: rgba(6,10,24,0.98);
+  color: #fff;
+}
