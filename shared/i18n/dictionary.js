@@ -419,12 +419,12 @@ dictionary.EN.about = {
   milestones: {
     title: 'Milestones',
     items: [
-      { date: '2023‑03', outcome: 'Metaphysics Alliance founded; first 50 clients' },
-      { date: '2023‑09', outcome: 'First corporate advisory pilot' },
-      { date: '2024‑02', outcome: 'EN/CN services; 200+ clients' },
-      { date: '2024‑06', outcome: '3 SME workshops; improved lead‑time' },
-      { date: '2024‑10', outcome: 'Cross‑validation framework v2' },
-      { date: '2025‑03', outcome: '500+ clients; expanded B2B' }
+      { date: '2023-03', outcome: 'Metaphysics Alliance founded; first 50 clients', icon: 'FiFlag' },
+      { date: '2023-09', outcome: 'First corporate advisory pilot', icon: 'FiUsers' },
+      { date: '2024-02', outcome: 'EN/CN services; 200+ clients', icon: 'FiGlobe' },
+      { date: '2024-06', outcome: '3 SME workshops; improved lead-time', icon: 'FiVideo' },
+      { date: '2024-10', outcome: 'Cross-validation framework v2', icon: 'FiLayers' },
+      { date: '2025-03', outcome: '500+ clients; expanded B2B', icon: 'FiCheckCircle' }
     ]
   },
   team: {
@@ -622,8 +622,42 @@ export default dictionary
 try {
   const t2 = dictionary?.EN?.about?.story?.timeline
   if (Array.isArray(t2)){
-    if (t2[4]) t2[4].body = 'We upgraded our cross‑validation into a 2.0 system: multiple methods must agree, and when they diverge we write down the trade‑offs and offer a safer path. “Why now” is checked against market pace and team capacity. Timing is precise—weeks and quarters—with prep steps and risk signals. It’s decision support you can execute.'
-    if (t2[5]) t2[5].body = 'We crossed 500 clients and expanded B2B across three industries. The recipe stays the same: stable inputs, cross‑validated signals, and aligning people and space to the calendar. Reports became roadmaps with owners, steps and measures. The proof is practical: fewer detours, better timing, and teams making moves in the right windows.'
+    if (t2[4]) t2[4].body = 'We upgraded our cross-validation into a 2.0 system: multiple methods must agree, and when they diverge we write down the trade-offs and offer a safer path. "Why now" is checked against market pace and team capacity. Timing is precise-weeks and quarters-with prep steps and risk signals. It's decision support you can execute.'
+    if (t2[5]) t2[5].body = 'We crossed 500 clients and expanded B2B across three industries. The recipe stays the same: stable inputs, cross-validated signals, and aligning people and space to the calendar. Reports became roadmaps with owners, steps and measures. The proof is practical: fewer detours, better timing, and teams making moves in the right windows.'
+  }
+} catch (e) { /* no-op */ }
+
+// Attach icons to About milestones (EN/CN) for roadmap component
+try {
+  const en = dictionary?.EN?.about?.milestones?.items
+  if (Array.isArray(en)){
+    for (const it of en){
+      if (!it || typeof it !== 'object') continue
+      switch (it.date){
+        case '2023-03': it.icon = it.icon || 'FiFlag'; break
+        case '2023-09': it.icon = it.icon || 'FiUsers'; break
+        case '2024-02': it.icon = it.icon || 'FiGlobe'; break
+        case '2024-06': it.icon = it.icon || 'FiVideo'; break
+        case '2024-10': it.icon = it.icon || 'FiLayers'; break
+        case '2025-03': it.icon = it.icon || 'FiCheckCircle'; break
+        default: /* leave fallback */ break
+      }
+    }
+  }
+  const cn = dictionary?.CN?.about?.milestones?.items
+  if (Array.isArray(cn)){
+    for (const it of cn){
+      if (!it || typeof it !== 'object') continue
+      switch (it.date){
+        case '2023-03': it.icon = it.icon || 'FiFlag'; break
+        case '2023-09': it.icon = it.icon || 'FiUsers'; break
+        case '2024-02': it.icon = it.icon || 'FiGlobe'; break
+        case '2024-06': it.icon = it.icon || 'FiVideo'; break
+        case '2024-10': it.icon = it.icon || 'FiLayers'; break
+        case '2025-03': it.icon = it.icon || 'FiCheckCircle'; break
+        default: break
+      }
+    }
   }
 } catch (e) { /* no-op */ }
 
