@@ -26,7 +26,7 @@ export default function ContactPage(){
 
   return (
     <div className="container my-8 space-y-10">
-      <header className="w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-black/50 bg-blend-multiply min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12">
+      <header className="w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-3xl font-semibold text-white md:text-5xl">{heroTitle}</h1>
           <p className="mt-3 text-white/80 text-lg">{heroSub}</p>

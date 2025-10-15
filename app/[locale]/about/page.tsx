@@ -108,7 +108,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         title={hero.title || navTitle}
         sub={hero.sub}
         description={hero.description}
-        className={"bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-blend-multiply bg-black/50 min-h-[50vh] flex items-center -mt-10 -mb-10"}
+        className={"bg-[url('/page-banner.png')] bg-cover bg-center bg-no-repeat bg-blend-multiply bg-black/70 min-h-[50vh] flex items-center -mt-10 -mb-10"}
         fullBleed
         actions={
           <div className="flex items-center gap-3">
