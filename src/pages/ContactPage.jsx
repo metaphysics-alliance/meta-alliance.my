@@ -27,7 +27,7 @@ export default function ContactPage(){
   return (
     <div className="container my-8 space-y-10">
       <header className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12 overflow-hidden">
-        <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.55 }} />
+        <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.75 }} />
         <div className="relative z-10 mx-auto max-w-3xl">
           <h1 className="text-3xl font-semibold text-white md:text-5xl">{heroTitle}</h1>
           <p className="mt-3 text-white/80 text-lg">{heroSub}</p>
