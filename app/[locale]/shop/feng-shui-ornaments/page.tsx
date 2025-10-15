@@ -4,6 +4,23 @@ import MediaGrid from '@/components/MediaGrid';
 import Testimonials from '@/components/Testimonials';
 import MapEmbed from '@/components/MapEmbed';
 import { getDict, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitleSafe(dict as any, 'shop.feng_shui_ornaments') || 'Feng Shui Ornaments'
+  const desc = locale === 'CN' ? '风水摆件与布局器物。' : 'Feng Shui ornaments and layout items.'
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `/${locale}/shop/feng-shui-ornaments`, languages: { en: '/EN/shop/feng-shui-ornaments', zh: '/CN/shop/feng-shui-ornaments' } },
+    openGraph: { title, description: desc, url: `/${locale}/shop/feng-shui-ornaments` },
+  }
+  function dictTitleSafe(d:any, key:string){
+    try{ return key.split('.').reduce((o:any,k)=>o&&o[k]!=null?o[k]:key, d) }catch{ return key }
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);

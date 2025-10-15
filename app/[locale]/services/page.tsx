@@ -1,7 +1,25 @@
 import Link from 'next/link'
 import Hero from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
+import StructuredData from '@/components/StructuredData'
 import { getDict, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitle(dict as any, 'nav.celestial') || dictTitle(dict as any, 'nav.services')
+  const desc = (dict as any).why_long || 'Explore our Chinese metaphysics services.'
+  return {
+    title,
+    description: desc,
+    alternates: {
+      canonical: `/${locale}/services`,
+      languages: { en: '/EN/services', zh: '/CN/services' },
+    },
+    openGraph: { title, description: desc, url: `/${locale}/services` },
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const locale = params.locale
@@ -11,6 +29,17 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
   const localise = (href: string) => (href === '/' ? `/${locale}` : `/${locale}${href}`)
   return (
     <div className='space-y-10'>
+      {/* JSON-LD: ItemList of services */}
+      <StructuredData json={{
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: (groups || []).flatMap((g: any) => Array.isArray(g.items) ? g.items : []).map((item: any, index: number) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || ''}${localise(item.href || '')}`,
+          name: item.title,
+        }))
+      }} />
       <Hero title={title} sub={dict.why_long} />
 
       {groups.map((group, gi) => (

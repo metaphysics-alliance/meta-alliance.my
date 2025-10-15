@@ -133,6 +133,44 @@ export const dictionary = {
       slide5_title: 'Corporate Destiny Blueprint & Opportunity Matrix',
       slide5_sub: 'Harnessing BaZi, Zi Wei, Qi Men, and Feng Shui for Corporate Growth'
     },
+    about: {
+      story: {
+        title: 'Our Story',
+        timeline: [
+          {
+            date: '2021',
+            title: 'Origins of the Studio',
+            outcome: 'We started as a tiny studio with one obsession: turning classical Chinese metaphysics into practical, accountable guidance. Before drawing charts, we listened. Clients shared real constraints—budgets, teams, deadlines—and we tested how BaZi, Zi Wei and Qi Men could inform timing, strategy and design decisions. Every idea had to survive reality: What launches when, who to hire, which path to drop. That discipline shaped our voice—clear, calm and candid—and set the tone for a practice built on evidence, not mystique. The goal was simple: fewer guesses, stronger moves, better timing.'
+          },
+          {
+            date: '2022',
+            title: 'True Solar Time Standard',
+            outcome: 'Accuracy starts with inputs. We standardised every reading to True Solar Time and the 24 Solar Terms, then rechecked against authoritative calendars. The result was immediate: less noise between methods and clear, repeatable windows for career shifts, launches and relocations. When techniques converged, outcomes improved; when they conflicted, we learned why. Clients noticed fewer surprises and more confidence. Timing stopped feeling mystical and became a usable lever—specific weeks and quarters to act, pause or prepare—so plans could move from “hope” to tested probability.'
+          },
+          {
+            date: '2023',
+            title: 'Cross‑Validation Framework',
+            outcome: 'We codified a simple rule: no single method decides. BaZi, Zi Wei, Qi Men and, where relevant, Feng Shui must support the same direction. We built a checklist to force agreement, surface risks and document trade‑offs. Sessions turned into collaborative strategy workshops: clear objectives, evidence, options and timing. When signals diverged, we explained why and adjusted the plan, not the promise. Clients left with accountable roadmaps they could share with teams—who does what, when, and how success will be measured.'
+          },
+          {
+            date: '2024',
+            title: 'Studio & Enterprise Work',
+            outcome: 'As demand grew, we opened a dedicated studio and expanded into enterprise work. We embedded with clients for audits, site selection and quarterly planning, aligning spatial layouts with hiring cycles and market timing. Reports became roadmaps with owners and checkpoints. The method matured: consistent inputs, cross‑validated signals, and practical execution. It’s still metaphysics—just applied like operations. Less flourish, more follow‑through. The measure is impact: better windows chosen, fewer costly detours, and a team that moves with timing instead of fighting it.'
+          }
+        ]
+      },
+      milestones: {
+        title: 'Milestones',
+        items: [
+          { date: '2021‑03', outcome: 'Studio founded; piloted combined BaZi, Zi Wei and Qi Men workflows.' },
+          { date: '2021‑11', outcome: 'Adopted True Solar Time and 24 Solar Terms across all timestamping.' },
+          { date: '2022‑08', outcome: 'Published cross‑validation checklist; reduced variance across methods.' },
+          { date: '2023‑04', outcome: 'Launched visual reports with structured remediation roadmaps.' },
+          { date: '2024‑02', outcome: 'Opened dedicated studio; expanded to enterprise audits and site selection.' },
+          { date: '2025‑06', outcome: 'Introduced bilingual delivery (EN/CN) and short video explainers.' }
+        ]
+      }
+    },
   },
   CN: {
     brand_top: '玄域联盟',
@@ -251,6 +289,44 @@ export const dictionary = {
         '住宅风水评估'
       ]
     },
+    about: {
+      story: {
+        title: '我们的故事',
+        timeline: [
+          {
+            date: '2021',
+            title: '工作室起源',
+            outcome: 'Metaphysics Alliance 以小型工作室起步，把传统术数与现代决策方法结合。先理解客户约束，再以八字、紫微、奇门校验时机与策略，聚焦清晰、可落地、可复用的方案，让建议在真实业务场景中反复验证。'
+          },
+          {
+            date: '2022',
+            title: '真太阳时标准',
+            outcome: '统一口径，全面采用真太阳时与二十四节气校准时间戳，显著降低多法噪音。由此看见职业转折、产品发布、搬迁等重复窗口，信号由散乱变为聚焦，落到可验证、可执行的时间区间。'
+          },
+          {
+            date: '2023',
+            title: '交叉验证框架',
+            outcome: '制定跨方法核对清单：八字、紫微、奇门与风水需形成共识。信号不一致时给出取舍依据与调整路线。咨询升级为协作式策略工作坊，产出可追责的行动计划，而非空泛的吉凶判断。'
+          },
+          {
+            date: '2024',
+            title: '工作室与企业项目',
+            outcome: '成立独立工作室并扩展企业服务：常驻审计、选址与季度规划，把空间布局与招聘、市场节奏整合。方法学沉淀为可复用体系，将时机、设计与增长统一在同一张路线图上。'
+          }
+        ]
+      },
+      milestones: {
+        title: '里程碑',
+        items: [
+          { date: '2021‑03', outcome: '工作室成立；试点整合八字、紫微、奇门流程。' },
+          { date: '2021‑11', outcome: '全面采用真太阳时与二十四节气时间校准。' },
+          { date: '2022‑08', outcome: '发布交叉验证清单；显著降低多法差异。' },
+          { date: '2023‑04', outcome: '上线可视化报告与结构化化解路线图。' },
+          { date: '2024‑02', outcome: '启用独立工作室；拓展企业审计与选址服务。' },
+          { date: '2025‑06', outcome: '推出中英双语交付与短视频讲解内容。' }
+        ]
+      }
+    },
   },
     services: CELESTIAL_SERVICES.CN,
     hero: {
@@ -354,9 +430,9 @@ dictionary.EN.about = {
   team: {
     title: 'Our Team',
     members: [
-      { name_en: 'Shaun Quan', name_cn: '宸麟老师', role: 'Chief Chinese Metaphysician Analyst', focus: 'BaZi • Zi Wei • Qi Men • Feng Shui | Strategy & Timing', portrait: '/images/team/shaun-quan.jpg' },
-      { name_en: 'Mei Lin Tan', name_cn: '陈美琳老师', role: 'Senior Consultant — BaZi • Qi Men • Date Selection', focus: 'Professionals & SMEs; career transitions and launch timing', portrait: '/images/team/mei-lin-tan.jpg' },
-      { name_en: 'Daniel Lee', name_cn: '李文杰老师', role: 'Feng Shui Strategist & BaZi Advisor', focus: 'Residential/Commercial Feng Shui; site and opening timing', portrait: '/images/team/daniel-lee.jpg' }
+      { name_en: 'Shaun Quan', name_cn: '宸麟老师', role: 'Chief Chinese Metaphysician Analyst', focus: 'BaZi • Zi Wei • Qi Men • Feng Shui | Strategy & Timing', portrait: '/images/team/Shaun Quan.png' },
+      { name_en: 'Mei Lin Tan', name_cn: '陈美琳老师', role: 'Senior Consultant — BaZi • Qi Men • Date Selection', focus: 'Professionals & SMEs; career transitions and launch timing', portrait: '/images/team/Tan Mei Ling.png' },
+      { name_en: 'Daniel Lee', name_cn: '李文杰老师', role: 'Feng Shui Strategist & BaZi Advisor', focus: 'Residential/Commercial Feng Shui; site and opening timing', portrait: '/images/team/Danial.png' }
     ]
   },
   faq: {
@@ -439,9 +515,9 @@ dictionary.CN.about = {
   team: {
     title: '团队',
     members: [
-      { name_en: 'Shaun Quan', name_cn: '宸麟老师', role: '首席中国玄学分析师', focus: '八字 • 紫微 • 奇门 • 风水｜战略与时机', portrait: '/images/team/shaun-quan.jpg' },
-      { name_en: 'Mei Lin Tan', name_cn: '陈美琳老师', role: '资深顾问 — 八字 • 奇门 • 择日', focus: '职场与中小企业；转型与发布时机', portrait: '/images/team/mei-lin-tan.jpg' },
-      { name_en: 'Daniel Lee', name_cn: '李文杰老师', role: '风水战略顾问 & 八字顾问', focus: '住宅/商业风水；选址与开业时机', portrait: '/images/team/daniel-lee.jpg' }
+      { name_en: 'Shaun Quan', name_cn: '宸麟老师', role: '首席中国玄学分析师', focus: '八字 • 紫微 • 奇门 • 风水｜战略与时机', portrait: '/images/team/Shaun Quan.png' },
+      { name_en: 'Mei Lin Tan', name_cn: '陈美琳老师', role: '资深顾问 — 八字 • 奇门 • 择日', focus: '职场与中小企业；转型与发布时机', portrait: '/images/team/Tan Mei Ling.png' },
+      { name_en: 'Daniel Lee', name_cn: '李文杰老师', role: '风水战略顾问 & 八字顾问', focus: '住宅/商业风水；选址与开业时机', portrait: '/images/team/Danial.png' }
     ]
   },
   faq: {
@@ -486,6 +562,37 @@ try {
   // no-op
 }
 
+// Enrich CN storytelling with longer, human-tone body text for the About timeline
+try {
+  const t = dictionary?.CN?.about?.story?.timeline
+  if (Array.isArray(t)){
+    if (t[0]) t[0].body = '我们从一个小型工作室起步，目标很朴素：把传统术数变成真正在业务里可用的决策工具。开始之前先听客户讲真实约束——预算、团队、时间线——再用八字、紫微、奇门去校验时机与方案。每一个建议都要过“能否落地”的关，能量不空谈，时间要可验证。渐渐地，我们形成了清晰、诚恳的表达方式：不神秘化，不夸大承诺，给出可执行路径和取舍依据。'
+    if (t[1]) t[1].body = '准确性从输入开始。我们把全部排盘与时间戳统一为真太阳时，并对照二十四节气与权威历法复核。立刻看到两个变化：不同方法之间的噪音显著降低，职业转折、产品发布、迁移等“窗口期”更清晰、可复用。当多个方法同时指向同一段时间，成功率明显提升；出现分歧时，也能说明原因并调整行动节奏。'
+    if (t[2]) t[2].body = '我们制定了“交叉验证清单”：单一方法不拍板，八字、紫微、奇门及必要的风水需形成共识。每次咨询像一次小型策略会：明确目标、证据、选项与时间安排。若信号不一致，就把风险和取舍讲清楚，并给出B方案与过渡步骤。客户拿到的是可以和团队对齐的计划，而不是模糊的吉凶判断。'
+    if (t[3]) t[3].body = '随着需求增长，我们成立独立工作室并进入企业项目：常驻做审计、选址与季度规划，把空间布局与招聘节奏、市场周期整合。报告不止“怎么想”，更给出“怎么做、谁负责、何时验收”。方法逐步沉淀为可复用的体系——稳定的输入、可交叉验证的信号、能够落地的执行。衡量标准只有一个：实际影响。'
+    // Enrich later items (5,6) with full storytelling
+    if (t[4]) t[4].body = '我们把“交叉验证清单”升级为 2.0：要求多法一致，分歧要给出取舍与备选路径；“为何是现在”必须与市场节奏、团队与空间条件对齐。时机精细到周与季度，配套准备步骤与风险信号。方法论不再停留在“判断”，而是落到“执行可行”。'
+    if (t[5]) t[5].body = '服务累计 500+ 客户，B2B 项目覆盖 3 个行业。我们保持同一做法：稳定输入、交叉验证、把人事空间与日历节奏对齐。报告是路线图：负责人、步骤、时间点、度量清晰。结果是真实可见——更少折返、更好时机，团队不再被动。'
+    // Append 2025 story if missing
+    if (t.length < 5) {
+      t.push({
+        date: '2025',
+        title: '行业拓展',
+        body: '我们把方法用于更大的场景，B2B 项目已覆盖 3 个行业。每个行业都从“时机—团队—空间”三件事入手：把时间窗口精细到周与季度，把人员与流程嵌入节奏，把空间布局与动线配合目标。结果是更少的反复与等待，更多在正确窗口里的动作。我们仍然坚持同一原则：清晰、可验证、可执行。'
+      })
+    }
+  }
+} catch (e) { /* no-op */ }
+
+// Update CN milestones latest highlights
+try {
+  const m = dictionary?.CN?.about?.milestones?.items
+  if (Array.isArray(m)){
+    if (m[4]) m[4].outcome = '交叉验证 2.0；时机建议更为精细'
+    if (m[5]) m[5].outcome = '服务 500+ 客户'
+  }
+} catch (e) { /* no-op */ }
+
 export const locales = Object.keys(dictionary)
 
 export function getDictionary(locale = 'EN'){
@@ -509,4 +616,14 @@ export function resolvePath(dict, path){
 export default dictionary
 
 
+
+
+// Enrich EN storytelling items 5 & 6 if present
+try {
+  const t2 = dictionary?.EN?.about?.story?.timeline
+  if (Array.isArray(t2)){
+    if (t2[4]) t2[4].body = 'We upgraded our cross‑validation into a 2.0 system: multiple methods must agree, and when they diverge we write down the trade‑offs and offer a safer path. “Why now” is checked against market pace and team capacity. Timing is precise—weeks and quarters—with prep steps and risk signals. It’s decision support you can execute.'
+    if (t2[5]) t2[5].body = 'We crossed 500 clients and expanded B2B across three industries. The recipe stays the same: stable inputs, cross‑validated signals, and aligning people and space to the calendar. Reports became roadmaps with owners, steps and measures. The proof is practical: fewer detours, better timing, and teams making moves in the right windows.'
+  }
+} catch (e) { /* no-op */ }
 

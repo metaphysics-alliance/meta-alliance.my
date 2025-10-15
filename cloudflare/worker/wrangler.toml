@@ -1,0 +1,18 @@
+name = "meta-alliance-contact"
+main = "src/index.ts"
+compatibility_date = "2024-10-01"
+
+[vars]
+# Optional: tune limits
+# RATE_LIMIT_MAX = "5"          # max requests within window
+# RATE_LIMIT_WINDOW = "300"      # seconds
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "8757059faa2c44609d0b718386c1e9aa"
+
+# Set these via `wrangler secret put` in your environment
+# - RECAPTCHA_SECRET
+# - MAILCHANNELS_FROM_EMAIL (e.g., no-reply@meta-alliance.my)
+# - MAILCHANNELS_FROM_NAME  (e.g., Metaphysics Alliance)
+# - SALES_EMAIL / SUPPORT_EMAIL / MEDIA_EMAIL

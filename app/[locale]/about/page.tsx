@@ -7,7 +7,30 @@ import Testimonials from '@/components/Testimonials'
 import VideoCarousel from '@/components/VideoCarousel'
 import SectionDivider from '@/components/SectionDivider'
 import StructuredData from '@/components/StructuredData'
+import TextCarousel from '@/components/TextCarousel'
+import Roadmap from '@/components/Roadmap'
 import { getDict, type Locale } from '@/lib/i18n'
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params.locale || 'EN'
+  const dict = getDict(locale)
+  const about = (dict as any).about || {}
+  const hero = about.hero || {}
+  return {
+    title: hero.title || ((dict as any).nav?.about ?? 'About'),
+    description: hero.description || (dict as any).why_long,
+    alternates: {
+      canonical: `/${locale}/about`,
+      languages: { en: '/EN/about', zh: '/CN/about' },
+    },
+    openGraph: {
+      title: hero.title || 'About',
+      description: hero.description || (dict as any).why_long,
+      url: `/${locale}/about`,
+    },
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const locale = params.locale
@@ -63,6 +86,18 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
           }))
         }} />
       ) : null}
+      {/* JSON-LD: FAQPage */}
+      {Array.isArray((about.faq || {}).items) && (about.faq.items as any[]).length ? (
+        <StructuredData json={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: (about.faq.items as any[]).map((qa: any) => ({
+            '@type': 'Question',
+            name: qa.q,
+            acceptedAnswer: { '@type': 'Answer', text: qa.a },
+          })),
+        }} />
+      ) : null}
       {/* Hero */}
       <Hero
         title={hero.title || navTitle}
@@ -87,7 +122,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
       <section className="grid gap-6 rounded-3xl border border-white/10 bg-black/20 p-6 backdrop-blur-md md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
         <div className="space-y-3">
           <img
-            src={(team.members && team.members[0] && team.members[0].portrait) || '/images/team/shaun-quan.jpg'}
+            src={founder && (founder as any).portrait || '/images/team/founder.png'}
             alt={`${founder.name_en || 'Founder'} portrait`}
             className="h-64 w-full rounded-2xl object-cover object-center ring-1 ring-white/10"
           />
@@ -134,30 +169,21 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
       <SectionDivider title={locale === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
 
       {/* Story & Milestones */}
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="space-y-6">
         <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{story.title || 'Our Story'}</h3>
-          <div className="mt-4 space-y-3 text-sm text-white/75">
-            {(story.timeline || []).map((item: any, idx: number) => (
-              <div key={idx} className="flex items-start gap-3">
-                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{item.date}</span>
-                <div>
-                  <div className="font-medium text-white/90">{item.title}</div>
-                  <div className="text-white/65">{item.outcome}</div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-4">
+            <TextCarousel items={(story.timeline || []).map((s: any) => ({ date: s.date, title: s.title, body: (s as any).body || s.outcome }))} />
           </div>
         </article>
         <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{(milestones.title) || 'Milestones'}</h3>
-          <div className="mt-4 space-y-3 text-sm text-white/75">
-            {(milestones.items || []).map((m: any, idx: number) => (
-              <div key={idx} className="flex items-start gap-3">
-                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{m.date}</span>
-                <div className="text-white/70">{m.outcome}</div>
-              </div>
-            ))}
+          <div className="mt-4">
+            {Array.isArray(milestones.items) && (milestones.items as any[]).length ? (
+              <Roadmap items={milestones.items as any} />
+            ) : (
+              <img src={locale === 'CN' ? '/images/roadmap-cn.png' : '/images/roadmap-en.png'} alt={(milestones.title as string) || 'Milestones Roadmap'} className="w-full h-auto rounded-xl ring-1 ring-white/10" />
+            )}
           </div>
         </article>
       </section>

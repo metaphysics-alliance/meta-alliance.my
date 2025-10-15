@@ -4,6 +4,20 @@ import MediaGrid from '@/components/MediaGrid';
 import Testimonials from '@/components/Testimonials';
 import MapEmbed from '@/components/MapEmbed';
 import { getDict, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitle(dict as any, 'res.title') || 'Resources'
+  const desc = (dict as any).why_long || 'Free tools and learning materials.'
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `/${locale}/resources`, languages: { en: '/EN/resources', zh: '/CN/resources' } },
+    openGraph: { title, description: desc, url: `/${locale}/resources` },
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);

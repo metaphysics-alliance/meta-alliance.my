@@ -2,6 +2,7 @@ import AboutPage from '../pages/AboutPage.jsx'
 import CelestialServicePage from '../pages/CelestialServicePage.jsx'
 import ContentPage from '../pages/ContentPage.jsx'
 import Home from '../pages/Home.jsx'
+import ContactPage from '../pages/ContactPage.jsx'
 import ServicesIndex from '../pages/ServicesIndex.jsx'
 
 const CTA_CONTACT = {
@@ -49,6 +50,10 @@ export const ROUTES = [
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: '/contact',
+    element: <ContactPage />,
   },
   {
     path: '/vip-report',

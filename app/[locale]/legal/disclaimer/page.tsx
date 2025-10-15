@@ -4,6 +4,20 @@ import MediaGrid from '@/components/MediaGrid';
 import Testimonials from '@/components/Testimonials';
 import MapEmbed from '@/components/MapEmbed';
 import { getDict, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitle(dict as any, 'legal.disclaimer') || 'Disclaimer'
+  const desc = locale === 'CN' ? 'Metaphysics Alliance 免责声明。' : 'Metaphysics Alliance Disclaimer.'
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `/${locale}/legal/disclaimer`, languages: { en: '/EN/legal/disclaimer', zh: '/CN/legal/disclaimer' } },
+    openGraph: { title, description: desc, url: `/${locale}/legal/disclaimer` },
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);

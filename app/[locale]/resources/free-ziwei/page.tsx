@@ -4,6 +4,23 @@ import MediaGrid from '@/components/MediaGrid';
 import Testimonials from '@/components/Testimonials';
 import MapEmbed from '@/components/MapEmbed';
 import { getDict, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitleSafe(dict as any, 'res.free_ziwei') || 'Free Zi Wei Chart'
+  const desc = locale === 'CN' ? '免费紫微斗数排盘。' : 'Free Zi Wei Dou Shu charting tool.'
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `/${locale}/resources/free-ziwei`, languages: { en: '/EN/resources/free-ziwei', zh: '/CN/resources/free-ziwei' } },
+    openGraph: { title, description: desc, url: `/${locale}/resources/free-ziwei` },
+  }
+  function dictTitleSafe(d:any, key:string){
+    try{ return key.split('.').reduce((o:any,k)=>o&&o[k]!=null?o[k]:key, d) }catch{ return key }
+  }
+}
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);

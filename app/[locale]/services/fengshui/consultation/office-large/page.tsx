@@ -1,15 +1,33 @@
 import Hero from '@/components/Hero';
+import StructuredData from '@/components/StructuredData'
+import type { Metadata } from 'next'
 import Content from '@/components/Content';
 import MediaGrid from '@/components/MediaGrid';
 import Testimonials from '@/components/Testimonials';
 import MapEmbed from '@/components/MapEmbed';
 import { getDict, type Locale } from '@/lib/i18n';
 
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = dictTitle(dict as any, 'nav.fengshui_com') || 'Feng Shui Consultation - Office (Large)'
+  const desc = locale === 'CN' ? '大型办公室风水咨询与布局。' : 'Large office Feng Shui consultation and layout.'
+  return {
+    title,
+    description: desc,
+    alternates: { canonical: `/${locale}/services/fengshui/consultation/office-large`, languages: { en: '/EN/services/fengshui/consultation/office-large', zh: '/CN/services/fengshui/consultation/office-large' } },
+    openGraph: { title, description: desc, url: `/${locale}/services/fengshui/consultation/office-large` },
+  }
+}
+
 export default function Page({ params }:{ params:{ locale: Locale }}){
   const dict = getDict(params.locale);
-  const title = dictTitle(dict, 'svc.fs.consult.officeLarge');
+  const title = dictTitle(dict, 'nav.fengshui') || 'Feng Shui Consultation — Office (Large)'
+  const base = process.env.NEXT_PUBLIC_SITE_URL || ''
   return (
     <div className='space-y-10'>
+      <StructuredData json={{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: params.locale, item: `${base}/${params.locale}` }, { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/${params.locale}/services` }, { '@type': 'ListItem', position: 3, name: String(title), item: `${base}/${params.locale}/services/fengshui/consultation/office-large` } ] }} />
+      <StructuredData json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: String(title), provider: { '@type': 'Organization', name: 'Metaphysics Alliance', url: (process.env.NEXT_PUBLIC_SITE_URL || undefined) }, areaServed: ['Malaysia','Singapore','APAC'], availableLanguage: ['en','zh'], url: `${base}/${params.locale}/services/fengshui/consultation/office-large` }} />
       <Hero title={title} />
       <Content title={title} />
       <MediaGrid/>

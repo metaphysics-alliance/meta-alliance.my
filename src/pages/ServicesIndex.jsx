@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import dictAll from '../../shared/i18n/dictionary.js'
@@ -11,6 +12,7 @@ export default function ServicesIndex(){
 
   return (
     <main className="container mx-auto max-w-6xl space-y-10 px-4 py-10">
+      <SEOServices lang={lang} title={dict.nav?.celestial || 'Services'} description={(dict.why_long || '').slice(0,160)} />
       <header className="rounded-2xl border border-white/10 bg-black/30 p-8">
         <h1 className="text-3xl font-semibold text-white md:text-5xl">{dict.nav?.celestial || 'Celestial Services'}</h1>
         {dict.why_long ? (
@@ -48,4 +50,33 @@ export default function ServicesIndex(){
       ))}
     </main>
   )
+}
+
+function SEOServices({ lang, title, description }){
+  useEffect(() => {
+    document.title = `${title} | Metaphysics Alliance`
+    const setMeta = (name, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[name="${name}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('name', name); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setOg = (property, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[property="${property}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('property', property); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setLink = (rel, href) => {
+      let link = document.querySelector(`link[rel="${rel}"]`)
+      if (!link){ link = document.createElement('link'); link.setAttribute('rel', rel); document.head.appendChild(link) }
+      link.setAttribute('href', href)
+    }
+    setMeta('description', description)
+    setLink('canonical', `/${lang}/services`)
+    setOg('og:title', title)
+    setOg('og:description', description)
+    setOg('og:image', '/images/og-default.jpg')
+  }, [lang, title, description])
+  return null
 }

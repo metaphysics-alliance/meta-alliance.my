@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520">
+  <defs>
+    <linearGradient id="roadGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8c6c00" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0.9"/>
+    </linearGradient>
+    <style>
+      .bg { fill: #0b0b0b; }
+      .road { stroke: url(#roadGrad); stroke-width: 10; fill: none; }
+      .dot { fill: #d4af37; stroke: #000; stroke-width: 3; }
+      .card { fill: rgba(255,255,255,0.06); stroke: rgba(255,255,255,0.15); }
+      .title { font: 600 20px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #fff; }
+      .date { font: 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #cfcfcf; }
+      .body { font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #d9d9d9; }
+      .label { font: 12px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill: #f1e7bd; letter-spacing: 2px; }
+    </style>
+  </defs>
+  <rect class="bg" width="100%" height="100%" rx="18"/>
+  <text x="40" y="48" class="label">MILESTONES ROADMAP</text>
+
+  <!-- Curved road -->
+  <path class="road" d="M80,420 C300,340 380,120 600,180 C830,245 820,420 1040,380 C1230,345 1320,220 1510,180"/>
+
+  <!-- Dots -->
+  <circle class="dot" cx="180" cy="380" r="10"/>
+  <circle class="dot" cx="410" cy="220" r="10"/>
+  <circle class="dot" cx="650" cy="210" r="10"/>
+  <circle class="dot" cx="900" cy="330" r="10"/>
+  <circle class="dot" cx="1160" cy="320" r="10"/>
+  <circle class="dot" cx="1410" cy="220" r="10"/>
+
+  <!-- Cards with short labels -->
+  <g>
+    <rect x="100" y="70" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="120" y="96" class="date">2021‑03</text>
+    <text x="120" y="122" class="title">Studio founded</text>
+    <foreignObject x="120" y="136" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">Piloted integrated BaZi, Zi Wei and Qi Men workflows for real projects.</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="360" y="30" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="380" y="56" class="date">2021‑11</text>
+    <text x="380" y="82" class="title">True Solar Time</text>
+    <foreignObject x="380" y="96" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">Standardised timestamping; reduced noise and revealed repeatable timing windows.</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="620" y="70" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="640" y="96" class="date">2022‑08</text>
+    <text x="640" y="122" class="title">Cross‑validation</text>
+    <foreignObject x="640" y="136" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">Checklist across methods; make trade‑offs explicit and accountable.</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="880" y="380" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="900" y="406" class="date">2023‑04</text>
+    <text x="900" y="432" class="title">Visual reports</text>
+    <foreignObject x="900" y="446" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">Launched clear roadmaps and remediation visuals.</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="1140" y="360" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="1160" y="386" class="date">2024‑02</text>
+    <text x="1160" y="412" class="title">Studio &amp; enterprise</text>
+    <foreignObject x="1160" y="426" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">Opened studio; expanded to audits, site selection and planning.</div>
+    </foreignObject>
+  </g>
+
+  <g>
+    <rect x="1240" y="40" rx="12" ry="12" width="300" height="120" class="card"/>
+    <text x="1260" y="66" class="date">2025‑06</text>
+    <text x="1260" y="92" class="title">Bilingual &amp; videos</text>
+    <foreignObject x="1260" y="106" width="260" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="body">English/Chinese delivery and concise explainers.</div>
+    </foreignObject>
+  </g>
+</svg>

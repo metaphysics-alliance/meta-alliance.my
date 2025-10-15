@@ -1,7 +1,10 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import i18nDict from '../../shared/i18n/dictionary.js'
 import SectionDivider from '../components/SectionDivider.jsx'
+import TextCarousel from '../components/TextCarousel.jsx'
+import Roadmap from '../components/Roadmap.jsx'
 import VideoCarousel from '../components/VideoCarousel.jsx'
 import { useI18n } from '../i18n.jsx'
 
@@ -20,6 +23,7 @@ export default function AboutPage(){
 
   return (
     <main className="container mx-auto max-w-6xl space-y-12 px-4 py-10">
+      <SEOAbout lang={lang} title={hero.title} description={hero.description} />
       {/* Hero */}
       <header className="rounded-2xl border border-white/10 bg-black/30 p-8 backdrop-blur-md">
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
@@ -36,7 +40,11 @@ export default function AboutPage(){
       {/* Founder's Note */}
       <section className="grid gap-6 rounded-2xl border border-white/10 bg-black/20 p-6 backdrop-blur-md md:grid-cols-[minmax(0,300px)_1fr] md:p-10">
         <div className="space-y-3">
-          <div className="h-64 w-full rounded-2xl bg-white/5 ring-1 ring-white/10" />
+          <img
+            src={(about?.founder && about.founder.portrait) || '/images/team/founder.png'}
+            alt={`${(about?.founder?.name_en || 'Founder')} portrait`}
+            className="h-64 w-full rounded-2xl object-cover object-center ring-1 ring-white/10"
+          />
           <div className="text-white/85">
             <div className="text-lg font-semibold">
               {(founder.name_en || 'Shaun Quan')} {founder.name_cn ? ` / ${founder.name_cn}` : ''}
@@ -82,30 +90,17 @@ export default function AboutPage(){
 
       {/* Story & Milestones */}
       <SectionDivider title={lang === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="space-y-6">
         <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{story.title || (lang === 'CN' ? '成长历程' : 'Our Story')}</h3>
-          <div className="mt-4 space-y-3 text-sm text-white/75">
-            {(story.timeline || []).map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{item.date}</span>
-                <div>
-                  <div className="font-medium text-white/90">{item.title}</div>
-                  <div className="text-white/65">{item.outcome}</div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-4">
+            <TextCarousel items={(story.timeline || []).map(s => ({ date: s.date, title: s.title, body: (s && (s.body || s.outcome)) }))} />
           </div>
         </article>
         <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
           <h3 className="text-xl font-semibold text-white">{milestones.title || (lang === 'CN' ? '里程碑' : 'Milestones')}</h3>
-          <div className="mt-4 space-y-3 text-sm text-white/75">
-            {(milestones.items || []).map((m, idx) => (
-              <div key={idx} className="flex items-start gap-3">
-                <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-xs text-white/80">{m.date}</span>
-                <div className="text-white/70">{m.outcome}</div>
-              </div>
-            ))}
+          <div className="mt-4">
+            <img src={lang === 'CN' ? '/images/roadmap-cn.png' : '/images/roadmap-en.png'} alt={milestones.title || (lang === 'CN' ? '里程碑' : 'Milestones Roadmap')} className="w-full h-auto rounded-xl ring-1 ring-white/10" />
           </div>
         </article>
       </section>
@@ -159,3 +154,40 @@ export default function AboutPage(){
     </main>
   )
 }
+
+function SEOAbout({ lang, title, description }){
+  useEffect(() => {
+    const t = `${title || (lang === 'CN' ? '关于我们' : 'About Metaphysics Alliance')} | Metaphysics Alliance`
+    document.title = t
+    const setMeta = (name, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[name="${name}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('name', name); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setOg = (property, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[property="${property}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('property', property); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setLink = (rel, href) => {
+      let link = document.querySelector(`link[rel="${rel}"]`)
+      if (!link){ link = document.createElement('link'); link.setAttribute('rel', rel); document.head.appendChild(link) }
+      link.setAttribute('href', href)
+    }
+    const desc = (description || '').slice(0, 160)
+    setMeta('description', desc)
+    setLink('canonical', `/${lang}/about`)
+    setOg('og:title', title || 'About')
+    setOg('og:description', desc)
+    setOg('og:image', '/images/og-default.jpg')
+  }, [lang, title, description])
+  return null
+}
+
+
+
+
+
+

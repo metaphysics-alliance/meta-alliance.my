@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import MapCard from '../components/MapCard.jsx'
@@ -196,6 +197,7 @@ export default function CelestialServicePage({ serviceKey, content }){
 
   return (
     <main className="space-y-14 pb-20">
+      <SEOService lang={lang} title={data.title} description={data.subtitle} />
       <header className="bg-black/40 border-b border-white/10 py-16 backdrop-blur-2xl">
         <div className="container max-w-4xl mx-auto text-center space-y-4">
           {data.badge ? (
@@ -243,5 +245,51 @@ export default function CelestialServicePage({ serviceKey, content }){
       </div>
     </main>
   )
+}
+
+function SEOService({ lang, title, description }){
+  useEffect(() => {
+    const path = window.location.pathname
+    document.title = `${title || 'Service'} | Metaphysics Alliance`
+    const setMeta = (name, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[name="${name}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('name', name); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setOg = (property, content) => {
+      if (!content) return
+      let tag = document.querySelector(`meta[property="${property}"]`)
+      if (!tag){ tag = document.createElement('meta'); tag.setAttribute('property', property); document.head.appendChild(tag) }
+      tag.setAttribute('content', content)
+    }
+    const setLink = (rel, href) => {
+      let link = document.querySelector(`link[rel="${rel}"]`)
+      if (!link){ link = document.createElement('link'); link.setAttribute('rel', rel); document.head.appendChild(link) }
+      link.setAttribute('href', href)
+    }
+    const desc = (description || '').slice(0, 160)
+    setMeta('description', desc)
+    setLink('canonical', path)
+    setOg('og:title', title)
+    setOg('og:description', desc)
+    setOg('og:image', '/images/og-default.jpg')
+
+    const json = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: lang, item: `/${lang}` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `/${lang}/services` },
+        { '@type': 'ListItem', position: 3, name: title, item: path },
+      ],
+    }
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.text = JSON.stringify(json)
+    document.head.appendChild(script)
+    return () => { document.head.removeChild(script) }
+  }, [lang, title, description])
+  return null
 }
 

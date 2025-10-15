@@ -4,6 +4,23 @@ import MapEmbed from '@/components/MapEmbed'
 import MediaGrid from '@/components/MediaGrid'
 import Testimonials from '@/components/Testimonials'
 import { getDict, type Locale } from '@/lib/i18n'
+import type { Metadata } from 'next'
+
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params?.locale || 'EN'
+  const dict = getDict(locale)
+  const title = (dict.brand_bottom as string) || 'Metaphysics Alliance'
+  const desc = (dict.why_long as string) || 'Chinese metaphysics for decisive clarity.'
+  return {
+    title,
+    description: desc,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: '/EN', zh: '/CN' },
+    },
+    openGraph: { title, description: desc, url: `/${locale}` },
+  }
+}
 
 export default function Page({ params }: { params: { locale: Locale } }) {
   const { locale } = params
