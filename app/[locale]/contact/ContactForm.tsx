@@ -357,75 +357,55 @@ export default function ContactForm({ locale }: Props){
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.state}</label>
-          <div className="relative">
-            <select
-              name="malaysiaState"
-              value={state.malaysiaState || ''}
-              onChange={handleChange}
-              disabled={state.country !== 'MY'}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white disabled:opacity-50 disabled:cursor-not-allowed focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-            >
-              <option value="">{locale === 'CN' ? '请选择州属' : 'Select state'}</option>
-              {malaysiaStates.map((o) => (
-                <option key={o.value} value={o.value}>{o.label}</option>
-              ))}
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.malaysiaState || ''}
+            onChange={(v) => setState((s) => ({ ...s, malaysiaState: v }))}
+            disabled={state.country !== 'MY'}
+            placeholder={locale === 'CN' ? '请选择州属' : 'Select state'}
+            items={malaysiaStates.map((o) => ({ type: 'option' as const, label: o.label, value: o.value }))}
+          />
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
-          <div className="relative">
-            <select
-              name="topic"
-              value={state.topic}
-              onChange={handleChange}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-            >
-              <option value="Sales">{locale === 'CN' ? '销售/咨询' : 'Sales'}</option>
-              <option value="Partnership">{locale === 'CN' ? '合作' : 'Partnership'}</option>
-              <option value="Media">{locale === 'CN' ? '媒体' : 'Media'}</option>
-              <option value="Other">{locale === 'CN' ? '其他' : 'Other'}</option>
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.topic}
+            onChange={(v) => setState((s) => ({ ...s, topic: v as FormState['topic'] }))}
+            items={[
+              { type: 'option', label: locale === 'CN' ? '销售/咨询' : 'Sales', value: 'Sales' },
+              { type: 'option', label: locale === 'CN' ? '合作' : 'Partnership', value: 'Partnership' },
+              { type: 'option', label: locale === 'CN' ? '媒体' : 'Media', value: 'Media' },
+              { type: 'option', label: locale === 'CN' ? '其他' : 'Other', value: 'Other' },
+            ]}
+          />
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.budget}</label>
-          <div className="relative">
-            <select
-              name="budget"
-              value={state.budget}
-              onChange={handleChange}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-            >
-              <option value="">{locale === 'CN' ? '未指定' : 'Not specified'}</option>
-              <option value="<1k">{locale === 'CN' ? '< RM 1k' : '< RM 1k'}</option>
-              <option value="1-5k">RM 1-5k</option>
-              <option value="5-15k">RM 5-15k</option>
-              <option value=">15k">{locale === 'CN' ? 'RM 15k 以上' : 'RM 15k+'}</option>
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.budget}
+            onChange={(v) => setState((s) => ({ ...s, budget: v }))}
+            items={[
+              { type: 'option', label: locale === 'CN' ? '未指定' : 'Not specified', value: '' },
+              { type: 'option', label: '< RM 1k', value: '<1k' },
+              { type: 'option', label: 'RM 1-5k', value: '1-5k' },
+              { type: 'option', label: 'RM 5-15k', value: '5-15k' },
+              { type: 'option', label: locale === 'CN' ? 'RM 15k 以上' : 'RM 15k+', value: '>15k' },
+            ]}
+          />
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.timeline}</label>
-          <div className="relative">
-            <select
-              name="timeline"
-              value={state.timeline}
-              onChange={handleChange}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
-            >
-              <option value="Immediate">{locale === 'CN' ? '立即' : 'Immediate'}</option>
-              <option value="1-3 months">{locale === 'CN' ? '1-3 个月' : '1-3 months'}</option>
-              <option value="3-6 months">{locale === 'CN' ? '3-6 个月' : '3-6 months'}</option>
-            </select>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
-          </div>
+          <Dropdown
+            value={state.timeline}
+            onChange={(v) => setState((s) => ({ ...s, timeline: v as FormState['timeline'] }))}
+            items={[
+              { type: 'option', label: locale === 'CN' ? '立即' : 'Immediate', value: 'Immediate' },
+              { type: 'option', label: locale === 'CN' ? '1-3 个月' : '1-3 months', value: '1-3 months' },
+              { type: 'option', label: locale === 'CN' ? '3-6 个月' : '3-6 months', value: '3-6 months' },
+            ]}
+          />
         </div>
       </div>
 

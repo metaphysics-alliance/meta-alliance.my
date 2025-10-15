@@ -316,33 +316,45 @@ export default function ContactForm(){
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
-          <select name="topic" value={state.topic} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-            <option value="Sales">{lang === 'CN' ? '销售/咨询' : 'Sales'}</option>
-            <option value="Partnership">{lang === 'CN' ? '合作' : 'Partnership'}</option>
-            <option value="Media">{lang === 'CN' ? '媒体' : 'Media'}</option>
-            <option value="Other">{lang === 'CN' ? '其他' : 'Other'}</option>
-          </select>
+          <Dropdown
+            value={state.topic}
+            onChange={(v) => setState(s => ({ ...s, topic: v }))}
+            items={[
+              { type: 'option', label: lang === 'CN' ? '销售/咨询' : 'Sales', value: 'Sales' },
+              { type: 'option', label: lang === 'CN' ? '合作' : 'Partnership', value: 'Partnership' },
+              { type: 'option', label: lang === 'CN' ? '媒体' : 'Media', value: 'Media' },
+              { type: 'option', label: lang === 'CN' ? '其他' : 'Other', value: 'Other' },
+            ]}
+          />
         </div>
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.budget}</label>
-          <select name="budget" value={state.budget} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-            <option value="">{lang === 'CN' ? '未指定' : 'Not specified'}</option>
-            <option value="<1k">{lang === 'CN' ? '< RM 1k' : '< RM 1k'}</option>
-            <option value="1–5k">RM 1–5k</option>
-            <option value="5–15k">RM 5–15k</option>
-            <option value=">15k">{lang === 'CN' ? 'RM 15k 以上' : 'RM 15k+'}</option>
-          </select>
+          <Dropdown
+            value={state.budget}
+            onChange={(v) => setState(s => ({ ...s, budget: v }))}
+            items={[
+              { type: 'option', label: lang === 'CN' ? '未指定' : 'Not specified', value: '' },
+              { type: 'option', label: '< RM 1k', value: '<1k' },
+              { type: 'option', label: 'RM 1-5k', value: '1-5k' },
+              { type: 'option', label: 'RM 5-15k', value: '5-15k' },
+              { type: 'option', label: lang === 'CN' ? 'RM 15k 以上' : 'RM 15k+', value: '>15k' },
+            ]}
+          />
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.timeline}</label>
-          <select name="timeline" value={state.timeline} onChange={handleChange} className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40">
-            <option value="Immediate">{lang === 'CN' ? '立即' : 'Immediate'}</option>
-            <option value="1–3 months">{lang === 'CN' ? '1–3 个月' : '1–3 months'}</option>
-            <option value="3–6 months">{lang === 'CN' ? '3–6 个月' : '3–6 months'}</option>
-          </select>
+          <Dropdown
+            value={state.timeline}
+            onChange={(v) => setState(s => ({ ...s, timeline: v }))}
+            items={[
+              { type: 'option', label: lang === 'CN' ? '立即' : 'Immediate', value: 'Immediate' },
+              { type: 'option', label: lang === 'CN' ? '1-3 个月' : '1-3 months', value: '1-3 months' },
+              { type: 'option', label: lang === 'CN' ? '3-6 个月' : '3-6 months', value: '3-6 months' },
+            ]}
+          />
         </div>
       </div>
 

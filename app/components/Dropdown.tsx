@@ -10,12 +10,14 @@ export default function Dropdown({
   items,
   placeholder,
   className = '',
+  disabled = false,
 }: {
   value?: string
   onChange: (v: string) => void
   items: Item[]
   placeholder?: string
   className?: string
+  disabled?: boolean
 }){
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
@@ -40,8 +42,9 @@ export default function Dropdown({
         type="button"
         aria-haspopup="listbox"
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-        className="w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-left text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40"
+        onClick={() => { if (!disabled) setOpen((v) => !v) }}
+        disabled={disabled}
+        className={`w-full appearance-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 pr-10 text-left text-white focus:border-gold/40 focus:outline-none focus:ring-2 focus:ring-gold/40 ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       >
         <span>{selectedLabel}</span>
         <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
@@ -71,4 +74,3 @@ export default function Dropdown({
     </div>
   )
 }
-
