@@ -7,6 +7,8 @@ import FAQ from '@/components/FAQ'
 import type { Metadata } from 'next'
 import ContactForm from './ContactForm'
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa'
+import { SiTiktok } from 'react-icons/si'
+import { FaThreads } from 'react-icons/fa6'
 import { FiMail, FiBook } from 'react-icons/fi'
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
@@ -128,6 +130,12 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
               </li>
               <li>
                 <a href="https://www.facebook.com/MetaphysicsAlliance/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaFacebook className="text-blue-500" /> Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@metaphysicsalliance" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><SiTiktok className="text-white" /> TikTok</a>
+              </li>
+              <li>
+                <a href="https://www.threads.com/@metaphysics.alliance?hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaThreads className="text-white" /> Threads</a>
               </li>
             </ul>
           </div>

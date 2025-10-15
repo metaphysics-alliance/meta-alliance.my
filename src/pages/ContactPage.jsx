@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import ContactForm from '../components/ContactForm.jsx'
 import MapCard from '../components/MapCard.jsx'
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa'
+import { SiTiktok } from 'react-icons/si'
+import { FaThreads } from 'react-icons/fa6'
 import { FiMail, FiBook } from 'react-icons/fi'
 import SectionDivider from '../components/SectionDivider.jsx'
 import { useI18n } from '../i18n.jsx'
@@ -60,6 +62,8 @@ export default function ContactPage(){
               <li><a href={`https://wa.me/${whatsapp.replace(/[^\d]/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaWhatsapp className="text-green-500" /> WhatsApp</a></li>
               <li><a href="https://www.instagram.com/metaphysics.alliance/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaInstagram className="text-pink-500" /> Instagram</a></li>
               <li><a href="https://www.facebook.com/MetaphysicsAlliance/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaFacebook className="text-blue-500" /> Facebook</a></li>
+              <li><a href="https://www.tiktok.com/@metaphysicsalliance" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><SiTiktok className="text-white" /> TikTok</a></li>
+              <li><a href="https://www.threads.com/@metaphysics.alliance?hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 underline hover:text-white"><FaThreads className="text-white" /> Threads</a></li>
               <li><a className="flex items-center gap-2 underline hover:text-white" href={`mailto:${emailSales}`}><FiMail className="text-white/80" /> {lang === "CN" ? "邮件" : "Email"}</a></li>
               <li><Link className="flex items-center gap-2 underline hover:text-white" to="/resources"><FiBook className="text-white/80" /> {lang === "CN" ? "资源" : "Resources"}</Link></li>
             </ul>
