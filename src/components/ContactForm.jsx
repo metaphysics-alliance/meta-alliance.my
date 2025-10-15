@@ -18,7 +18,7 @@ export default function ContactForm(){
     phone: lang === 'CN' ? '电话（国家区号 + 号码）' : 'Phone (country code + number)',
     company: lang === 'CN' ? '公司 / 角色' : 'Company / Role',
     country: lang === 'CN' ? '国家/地区' : 'Country/Region',
-    topic: lang === 'CN' ? '主题' : 'Topic',
+    state: lang === 'CN' ? '选择州属（仅限马来西亚）' : 'Select State (Malaysia Only)',\n    topic: lang === 'CN' ? '主题' : 'Topic',
     budget: lang === 'CN' ? '预算（可选）' : 'Budget (optional)',
     timeline: lang === 'CN' ? '时间线' : 'Timeline',
     message: lang === 'CN' ? '留言*' : 'Message*',
@@ -237,7 +237,7 @@ export default function ContactForm(){
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
           <div className="relative">

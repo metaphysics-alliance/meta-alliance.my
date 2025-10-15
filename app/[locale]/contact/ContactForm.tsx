@@ -338,7 +338,7 @@ export default function ContactForm({ locale }: Props){
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <label className="block text-sm text-white/80 mb-1">{t.country}</label>
           <div className="relative">
