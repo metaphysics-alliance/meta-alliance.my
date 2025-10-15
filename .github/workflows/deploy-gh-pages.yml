@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: gh-pages-deploy
+  group: deploy-gh-pages
   cancel-in-progress: true
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -32,13 +32,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          keep_files: false
+          cname: meta-alliance.my
           force_orphan: false
 
