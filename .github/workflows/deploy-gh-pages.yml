@@ -39,3 +39,4 @@ jobs:
           publish_branch: gh-pages
           cname: meta-alliance.my
           force_orphan: false
+          spa: true
