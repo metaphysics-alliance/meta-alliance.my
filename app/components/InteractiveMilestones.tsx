@@ -275,10 +275,21 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
       </svg>
       {/* React Icons overlay (clickable) */}
       <div className="pointer-events-none absolute inset-0">
-        {items.map((_, idx) => {
+        {items.map((it, idx) => {
           const p = pos[idx]
-          const IconSet = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
-          const Icon = IconSet[idx % IconSet.length]
+          const Icon = (() => {
+            const title = (it.title || '').toLowerCase()
+            if (/foundation|创立|愿景/.test(title)) return FiFlag
+            if (/core|框架|framework/.test(title)) return FiLayers
+            if (/team|团队/.test(title)) return FiUsers
+            if (/digital|平台|infrastructure|数位/.test(title)) return FiGlobe
+            if (/refine|优化|recognition|认可/.test(title)) return FiCompass
+            if (/video|workshop|报告|report/.test(title)) return FiVideo
+            if (/time|时序|quarter|季度/.test(title)) return FiClock
+            if (/expand|扩展|legacy|传承/.test(title)) return FiCheckCircle
+            const set = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
+            return set[idx % set.length]
+          })()
           const px = Math.min(Math.max(p.x, 0), totalWidth)
           const py = Math.min(Math.max(p.y, 0), totalHeight)
           const sz = Math.max(18, sizes.dot * 6)

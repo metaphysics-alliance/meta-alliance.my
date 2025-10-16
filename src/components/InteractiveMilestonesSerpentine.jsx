@@ -1,4 +1,5 @@
 import { useMemo, useState, useRef, useEffect } from 'react'
+import { FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle } from 'react-icons/fi'
 
 export default function InteractiveMilestonesSerpentine({ title, subtitle, storyItems = [], milestoneItems = [], lang }){
   const items = useMemo(() => {
@@ -207,10 +208,21 @@ function SerpentineTimeline({ items, lang }){
       </svg>
       {/* React Icons overlay */}
       <div className="pointer-events-none absolute inset-0">
-        {items.map((_, idx) => {
+        {items.map((it, idx) => {
           const p = pos[idx]
-          const IconSet = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
-          const Icon = IconSet[idx % IconSet.length]
+          const Icon = (() => {
+            const t = (it.title || '').toLowerCase()
+            if (/foundation|创立|愿景/.test(t)) return FiFlag
+            if (/core|框架|framework/.test(t)) return FiLayers
+            if (/team|团队/.test(t)) return FiUsers
+            if (/digital|平台|infrastructure|数位/.test(t)) return FiGlobe
+            if (/refine|优化|recognition|认可/.test(t)) return FiCompass
+            if (/video|workshop|报告|report/.test(t)) return FiVideo
+            if (/time|时序|quarter|季度/.test(t)) return FiClock
+            if (/expand|扩展|legacy|传承/.test(t)) return FiCheckCircle
+            const set = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
+            return set[idx % set.length]
+          })()
           const sz = Math.max(18, sizes.dot * 6)
           return (
             <button
