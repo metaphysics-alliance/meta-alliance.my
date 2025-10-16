@@ -36,12 +36,8 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
   const heroTitle = locale === 'CN' ? '联系我们' : 'Talk To A Human Who Can Help Today'
   const heroSub = locale === 'CN' ? '我们如何帮助您达成目标' : 'Real guidance. Fast reply. No bots.'
   const heroDesc = locale === 'CN'
-    ? replyTime
-    : 'Ready to move now? Tell us what you need and we’ll reply fast with practical next steps, timelines, and options. No automated fluff—just a real expert focused on your outcome. Slots are limited this week, so reach out now and secure the earliest window for your case today if possible.'
-
-  const replyTime = locale === 'CN'
-    ? '我们通常在1个工作日内回复。'
-    : 'We typically reply within 1 business day.'
+    ? `请告诉我们您的目标、背景与限制，我们将把需求转化为清晰可执行的下一步，给出现实可行的时间表、选项与投入评估。我们以八字、紫微、奇门、风水与数字命理交叉印证，过滤噪声，聚焦能推动结果的行动。您将收到含优先级、风险与行动时点的简要方案。我们通常在1个工作日内回复；如有紧急期限，请说明，我们会酌情尽力提前安排。`
+    : `Tell us your goals, context, and constraints, and we’ll translate them into clear next steps with realistic timelines, options, and estimated effort. We cross‑validate insights across BaZi, Zi Wei, Qi Men, Feng Shui, and numerology to reduce noise and focus on actions that move results. You’ll receive a brief plan outlining priorities, risks, and when to act. We typically reply within one business day. If urgent, mention your deadline and we’ll try to secure an earlier slot, subject to availability.`
 
   const emailSales = process.env.NEXT_PUBLIC_EMAIL_SALES || 'sales@meta-alliance.my'
   const emailSupport = process.env.NEXT_PUBLIC_EMAIL_SUPPORT || 'support@meta-alliance.my'
@@ -153,9 +149,9 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
           <div className="card-3d p-5">
             <h3 className="text-lg font-semibold text-white">{locale === 'CN' ? '其他渠道' : 'Fallbacks'}</h3>
             <ul className="mt-2 space-y-2 text-sm text-white/75">
-              <li><a className="flex items-center gap-2 underline hover:text-white" href={`mailto:${emailSales}`}><FiMail className="text-white/80" /> {locale === 'CN' ? '????' : 'Email'}</a></li>
+              <li><a className="flex items-center gap-2 underline hover:text-white" href={`mailto:${emailSales}`}><FiMail className="text-white/80" /> {locale === 'CN' ? '邮件' : 'Email'}</a></li>
               <li><a className="flex items-center gap-2 underline hover:text-white" href={`https://wa.me/${whatsapp.replace(/[^\d]/g, '')}`} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="text-green-500" /> WhatsApp</a></li>
-              <li><Link className="flex items-center gap-2 underline hover:text-white" href={localise('/resources')}><FiBook className="text-white/80" /> {locale === 'CN' ? '????' : 'Resources'}</Link></li>
+              <li><Link className="flex items-center gap-2 underline hover:text-white" href={localise('/resources')}><FiBook className="text-white/80" /> {locale === 'CN' ? '资源' : 'Resources'}</Link></li>
             </ul>
           </div>
         </aside>

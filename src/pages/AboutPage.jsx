@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import i18nDict from '../../shared/i18n/dictionary.js'
 import SectionDivider from '../components/SectionDivider.jsx'
-import TextCarousel from '../components/TextCarousel.jsx'
-import Roadmap from '../components/Roadmap.jsx'
+// TextCarousel and Roadmap removed with the Story & Milestones section
 import VideoCarousel from '../components/VideoCarousel.jsx'
+import InteractiveMilestonesSerpentine from '../components/InteractiveMilestonesSerpentine.jsx'
 import { useI18n } from '../i18n.jsx'
 
 export default function AboutPage(){
@@ -46,7 +46,7 @@ export default function AboutPage(){
           <img
             src={(about?.founder && about.founder.portrait) || '/images/team/founder.png'}
             alt={`${(about?.founder?.name_en || 'Founder')} portrait`}
-            className="h-64 w-full rounded-2xl object-cover object-center ring-1 ring-white/10"
+            className="w-full h-auto rounded-2xl object-contain object-center ring-1 ring-white/10"
           />
           <div className="text-white/85">
             <div className="text-lg font-semibold">
@@ -87,26 +87,20 @@ export default function AboutPage(){
         </div>
       </section>
 
+      {/* Story & Milestones section removed as requested */}
+
       {/* Videos (carousel) */}
       <SectionDivider title={videos.title || (lang === 'CN' ? '1 分钟团队介绍' : '1‑Minute Intros')} />
       <VideoCarousel items={videos.items} locale={lang} />
 
-      {/* Story & Milestones */}
-      <SectionDivider title={lang === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
-      <section className="space-y-6">
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
-          <h3 className="text-xl font-semibold text-white">{story.title || (lang === 'CN' ? '成长历程' : 'Our Story')}</h3>
-          <div className="mt-4">
-            <TextCarousel items={(story.timeline || []).map(s => ({ date: s.date, title: s.title, body: (s && (s.body || s.outcome)) }))} />
-          </div>
-        </article>
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
-          <h3 className="text-xl font-semibold text-white">{milestones.title || (lang === 'CN' ? '里程碑' : 'Milestones')}</h3>
-          <div className="mt-4">
-            <img src={lang === 'CN' ? '/images/roadmap-cn.png' : '/images/roadmap-en.png'} alt={milestones.title || (lang === 'CN' ? '里程碑' : 'Milestones Roadmap')} className="w-full h-auto rounded-xl ring-1 ring-white/10" />
-          </div>
-        </article>
-      </section>
+      {/* Our Story & Milestones (interactive) */}
+      <SectionDivider title={(milestones.title || story.title) || (lang === 'CN' ? '里程碑与成就' : 'Milestones & Achievements')} />
+      <InteractiveMilestonesSerpentine
+        title={(milestones.title || story.title) || (lang === 'CN' ? '里程碑与成就—玄域联盟（Metaphysics Alliance）' : 'Milestones & Achievements — Metaphysics Alliance (玄域联盟)')}
+        storyItems={(story && story.timeline) || []}
+        milestoneItems={(milestones && milestones.items) || []}
+        lang={lang}
+      />
 
       {/* Team */}
       <SectionDivider title={team.title || (lang === 'CN' ? '团队' : 'Our Team')} />

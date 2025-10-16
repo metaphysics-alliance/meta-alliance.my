@@ -5,12 +5,18 @@ export default function Dropdown({ value, onChange, items, placeholder, classNam
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
   const btnRef = useRef(null)
+  const menuRef = useRef(null)
   const [menuStyle, setMenuStyle] = useState({})
 
   useEffect(() => {
-    const onDocClick = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
-    document.addEventListener('mousedown', onDocClick)
-    return () => document.removeEventListener('mousedown', onDocClick)
+    const onDocMouseDown = (e) => {
+      const target = e.target
+      const insideButton = ref.current && ref.current.contains(target)
+      const insideMenu = menuRef.current && menuRef.current.contains(target)
+      if (!insideButton && !insideMenu) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDocMouseDown)
+    return () => document.removeEventListener('mousedown', onDocMouseDown)
   }, [])
 
   useEffect(() => {
@@ -44,7 +50,7 @@ export default function Dropdown({ value, onChange, items, placeholder, classNam
         <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
       </button>
       {open ? createPortal(
-        <div style={menuStyle}>
+        <div ref={menuRef} style={menuStyle}>
           <div className="overflow-hidden rounded-lg border border-white/10 bg-black/90 shadow-xl backdrop-blur-md">
             <ul role="listbox" className="max-h-64 overflow-auto py-1">
               {items.map((it, idx) => (

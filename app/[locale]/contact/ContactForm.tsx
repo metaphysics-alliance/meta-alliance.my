@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import type { Locale } from '@/lib/i18n'
+import { getDict } from '@/lib/i18n'
 import Dropdown from '@/components/Dropdown'
 
 interface Props { locale: Locale }
@@ -14,7 +15,7 @@ type FormState = {
   companyRole: string
   country: string
   malaysiaState?: string
-  topic: 'Sales' | 'Partnership' | 'Media' | 'Other'
+  topic: string
   budget: string
   timeline: 'Immediate' | '1–3 months' | '3–6 months'
   message: string
@@ -23,6 +24,20 @@ type FormState = {
 }
 
 export default function ContactForm({ locale }: Props){
+  const initialState: FormState = {
+    name: '',
+    email: '',
+    phone: '',
+    companyRole: '',
+    country: 'MY',
+    malaysiaState: '',
+    topic: 'Sales',
+    budget: '',
+    timeline: 'Immediate',
+    message: '',
+    consent: false,
+    hp: '',
+  }
   const [state, setState] = useState<FormState>({
     name: '',
     email: '',
@@ -58,6 +73,59 @@ export default function ContactForm({ locale }: Props){
     successTitle: locale === 'CN' ? '已收到您的咨询' : 'Thanks — we’ve received your inquiry',
     successBody: locale === 'CN' ? '我们已生成案件编号并发送确认邮件。后续会在1个工作日内联系您。' : 'We’ve generated a case ID and sent an auto‑reply. We’ll follow up within 1 business day.',
   }), [locale])
+
+  const dict = useMemo(() => getDict(locale), [locale])
+
+  const topicItems = useMemo(() => {
+    const items: { type: 'heading' | 'option'; label: string; value?: string }[] = []
+    // General
+    items.push({ type: 'heading', label: locale === 'CN' ? '常规' : 'General' })
+    items.push({ type: 'option', label: locale === 'CN' ? '销售/咨询' : 'Sales', value: 'Sales' })
+    items.push({ type: 'option', label: locale === 'CN' ? '合作' : 'Partnership', value: 'Partnership' })
+    items.push({ type: 'option', label: locale === 'CN' ? '媒体' : 'Media', value: 'Media' })
+    items.push({ type: 'option', label: locale === 'CN' ? '其他' : 'Other', value: 'Other' })
+
+    // Services groups from dictionary
+    const groups = ((dict as any)?.nav?.celestial_groups ?? []) as Array<{ title: string; items: { title: string; href: string }[] }>
+    for (const g of groups){
+      if (!g || !g.title || !Array.isArray(g.items)) continue
+      items.push({ type: 'heading', label: g.title })
+      for (const it of g.items){
+        if (!it?.title) continue
+        items.push({ type: 'option', label: it.title, value: it.title })
+      }
+    }
+
+    // VIP / Holistic services
+    const navAny = (dict as any)?.nav || {}
+    const vipLabels = [navAny.vip_report, navAny.vip_essential, navAny.vip_advanced, navAny.vip_supreme].filter(Boolean)
+    if (vipLabels.length){
+      items.push({ type: 'heading', label: 'VIP' })
+      for (const label of vipLabels){
+        items.push({ type: 'option', label: String(label), value: String(label) })
+      }
+    }
+
+    // Enterprise services
+    const entHeading = navAny.enterprise || (locale === 'CN' ? '企业咨询' : 'Enterprise')
+    const entItems = [navAny.enterprise, navAny.audit, navAny.site, navAny.cycles].filter(Boolean)
+    if (entItems.length){
+      items.push({ type: 'heading', label: String(entHeading) })
+      for (const label of entItems){
+        items.push({ type: 'option', label: String(label), value: String(label) })
+      }
+    }
+
+    // Academy courses
+    items.push({ type: 'heading', label: locale === 'CN' ? '学院课程' : 'Academy Courses' })
+    const nav = (dict as any)?.nav || {}
+    const courseList: string[] = [nav.courses, nav.beginner, nav.advanced ?? 'Advanced', nav.pro].filter(Boolean)
+    for (const label of courseList){
+      items.push({ type: 'option', label: String(label), value: String(label) })
+    }
+
+    return items
+  }, [dict, locale])
 
   useEffect(() => {
     // Auto-detect country by browser locale as a friendly default.
@@ -145,7 +213,7 @@ export default function ContactForm({ locale }: Props){
     setState((s) => ({ ...s, [name]: type === 'checkbox' ? !!checked : value }))
   }
 
-  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT
+  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/api/contact'
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
@@ -230,7 +298,18 @@ export default function ContactForm({ locale }: Props){
     }
 
     const id = generateCaseId()
-    const payload: any = { ...state, id, locale }
+    const emailTo = process.env.NEXT_PUBLIC_EMAIL_SALES || 'sales@meta-alliance.my'
+    const subject = `[${id}] ${state.topic} Inquiry — ${state.name}`
+    const payload: any = {
+      ...state,
+      id,
+      locale,
+      to: emailTo,
+      from: state.email,
+      fromEmail: state.email,
+      replyTo: state.email,
+      subject,
+    }
 
     // Fetch reCAPTCHA token if available
     try{
@@ -253,20 +332,27 @@ export default function ContactForm({ locale }: Props){
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         })
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        if (!res.ok){
+          let msg = `HTTP ${res.status}`
+          try{
+            const data = await res.json()
+            if (data?.error) msg = data.error
+          }catch{}
+          throw new Error(msg)
+        }
       } else {
-        const mail = (state.topic === 'Media' ? (process.env.NEXT_PUBLIC_EMAIL_MEDIA || 'press@meta-alliance.my')
-          : state.topic === 'Sales' ? (process.env.NEXT_PUBLIC_EMAIL_SALES || 'sales@meta-alliance.my')
-          : (process.env.NEXT_PUBLIC_EMAIL_SUPPORT || 'support@meta-alliance.my'))
-        const subject = encodeURIComponent(`[${id}] ${state.topic} Inquiry — ${state.name}`)
+        const mail = emailTo
+        const encSubject = encodeURIComponent(subject)
         const body = encodeURIComponent(
           `Name: ${state.name}\nEmail: ${state.email}\nPhone: ${state.phone}\nCompany/Role: ${state.companyRole}\nCountry: ${state.country}\nTopic: ${state.topic}\nBudget: ${state.budget}\nTimeline: ${state.timeline}\n\nMessage:\n${state.message}\n\nConsent: ${state.consent ? 'Yes' : 'No'}\nLocale: ${locale}`
         )
-        window.location.href = `mailto:${mail}?subject=${subject}&body=${body}`
+        // Fallback: open mail client so the visitor can send from their email address
+        const cc = encodeURIComponent(process.env.NEXT_PUBLIC_EMAIL_ADMIN || 'admin@meta-alliance.my')
+        window.location.href = `mailto:${mail}?subject=${encSubject}&cc=${cc}&body=${body}`
       }
 
       setSuccess({ id })
-      setState((s) => ({ ...s, message: '' }))
+      // keep data for context in the thank-you modal; reset on close
     }catch(err: any){
       setError((locale === 'CN' ? '提交失败：' : 'Submission failed: ') + (err?.message || 'Unknown error'))
     }finally{
@@ -274,18 +360,30 @@ export default function ContactForm({ locale }: Props){
     }
   }
 
-  if (success){
-    return (
-      <div className="rounded-xl border border-white/10 bg-black/20 p-4">
-        <div className="text-lg font-semibold text-white">{t.successTitle}</div>
-        <div className="mt-1 text-white/75 text-sm">{t.successBody}</div>
-        <div className="mt-2 text-white/80 text-sm">Case ID: <span className="font-mono">{success.id}</span></div>
-      </div>
-    )
+  const onCloseSuccess = () => {
+    setSuccess(null)
+    setState(initialState)
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4">
+    <form onSubmit={onSubmit} className="grid gap-4 relative">
+      {success ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+          <div className="w-full max-w-lg rounded-2xl border border-white/10 bg-black/80 p-6 text-white shadow-2xl backdrop-blur-md relative">
+            <button type="button" aria-label={locale === 'CN' ? '关闭' : 'Close'} onClick={onCloseSuccess} className="absolute right-3 top-3 rounded-md bg-white/10 px-2 py-1 text-white hover:bg-white/20">×</button>
+            <div className="text-xl font-semibold">{t.successTitle}</div>
+            <div className="mt-2 text-white/80 text-sm">
+              {locale === 'CN'
+                ? '谢谢您的联系！我们已收到您的咨询并生成案件编号。顾问会在1个工作日内（通常更快）回复您。如需加急，请在留言中补充关键信息，以便我们优先处理。'
+                : 'Thanks for reaching out. Your inquiry is received and assigned a case ID. A specialist will review and reply within one business day (often sooner). If it’s time‑sensitive, include any critical context so we can prioritise and guide you to the fastest, safest next step.'}
+            </div>
+            <div className="mt-3 text-white/70 text-sm">Case ID: <span className="font-mono">{success.id}</span></div>
+            <div className="mt-5 text-right">
+              <button type="button" onClick={onCloseSuccess} className="inline-flex items-center rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black hover:bg-gold-soft">{locale === 'CN' ? '关闭窗口' : 'Close Window'}</button>
+            </div>
+          </div>
+        </div>
+      ) : null}
       <input type="text" name="hp" value={state.hp} onChange={handleChange} className="hidden" tabIndex={-1} autoComplete="off" />
       {/* Turnstile container (renders if configured) */}
       <div ref={containerRef as any} style={{ display: turnstileSiteKey ? 'block' : 'none' }} />
@@ -369,13 +467,8 @@ export default function ContactForm({ locale }: Props){
           <label className="block text-sm text-white/80 mb-1">{t.topic}</label>
           <Dropdown
             value={state.topic}
-            onChange={(v) => setState((s) => ({ ...s, topic: v as FormState['topic'] }))}
-            items={[
-              { type: 'option', label: locale === 'CN' ? '销售/咨询' : 'Sales', value: 'Sales' },
-              { type: 'option', label: locale === 'CN' ? '合作' : 'Partnership', value: 'Partnership' },
-              { type: 'option', label: locale === 'CN' ? '媒体' : 'Media', value: 'Media' },
-              { type: 'option', label: locale === 'CN' ? '其他' : 'Other', value: 'Other' },
-            ]}
+            onChange={(v) => setState((s) => ({ ...s, topic: v }))}
+            items={topicItems}
           />
         </div>
         <div>

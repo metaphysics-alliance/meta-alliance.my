@@ -6,6 +6,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          'Noto Sans CJK',
+          'system-ui',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Arial',
+          'Noto Sans',
+          'PingFang SC',
+          'Microsoft YaHei',
+          'Noto Sans CJK SC',
+          'sans-serif',
+        ],
+      },
       colors: {
         gold: "#d4af37",
         "gold-soft": "#f1e4a6"

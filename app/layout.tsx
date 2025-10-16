@@ -1,4 +1,12 @@
 import type { ReactNode } from 'react'
+import localFont from 'next/font/local'
+
+const notoCJK = localFont({
+  src: '../src/Noto Sans CJK Regular.otf',
+  display: 'swap',
+  weight: '400',
+  variable: '--font-app',
+})
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
@@ -32,7 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }){
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${notoCJK.className}`}>{children}</body>
     </html>
   )
 }

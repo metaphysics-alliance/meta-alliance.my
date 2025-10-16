@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Navigate, Outlet, useLocation } from 'react-router-dom'
 
 import Footer from './components/Footer.jsx'
 import Nav from './components/Nav.jsx'
@@ -14,21 +14,33 @@ function ScrollToTop(){
   return null
 }
 
-export default function App(){
+function Layout(){
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Nav />
-      <Routes>
-        {ROUTES.map(({ path, element }) => (
-          <Route key={path} path={path} element={element} />
-        ))}
-        {REDIRECTS.map(({ from, to }) => (
-          <Route key={`${from}->${to}`} path={from} element={<Navigate to={to} replace />} />
-        ))}
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Outlet />
       <Footer />
-    </BrowserRouter>
+    </>
+  )
+}
+
+export default function App(){
+  const router = createBrowserRouter([
+    {
+      element: <Layout />,
+      children: [
+        ...ROUTES.map(({ path, element }) => ({ path, element })),
+        ...REDIRECTS.map(({ from, to }) => ({ path: from, element: <Navigate to={to} replace /> })),
+        { path: '*', element: <NotFoundPage /> },
+      ],
+    },
+  ])
+
+  return (
+    <RouterProvider
+      router={router}
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    />
   )
 }

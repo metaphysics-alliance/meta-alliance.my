@@ -584,14 +584,157 @@ try {
   }
 } catch (e) { /* no-op */ }
 
-// Update CN milestones latest highlights
+// Humanize Story & Milestones (EN & CN)
 try {
-  const m = dictionary?.CN?.about?.milestones?.items
-  if (Array.isArray(m)){
-    if (m[4]) m[4].outcome = '交叉验证 2.0；时机建议更为精细'
-    if (m[5]) m[5].outcome = '服务 500+ 客户'
+  // EN — Our Story
+  dictionary.EN.about.story = {
+    title: 'Our Story',
+    timeline: [
+      {
+        date: '2021',
+        title: 'Listening First',
+        body: 'We began as a tiny studio and spent our time listening. Clients told us what really mattered—clarity and next steps. We simplified the language and focused on real decisions, not mystique.'
+      },
+      {
+        date: '2022',
+        title: 'When Timing Clicked',
+        body: 'Calmer plans and steadier results followed when we aligned work with seasons and rhythms. People felt less rushed and more confident about when to move or wait.'
+      },
+      {
+        date: '2023',
+        title: 'Work, Not Lectures',
+        body: 'Sessions became working conversations. Instead of dense theory, clients left with a short plan they could act on—priorities, risks and the next right week or quarter.'
+      },
+      {
+        date: '2024',
+        title: 'Studio & Community',
+        body: 'We opened a dedicated studio, hosted small workshops and began serving families and small teams together. The focus stayed the same: calm clarity and practical timing.'
+      },
+      {
+        date: '2025',
+        title: 'Bilingual, More Stories',
+        body: 'We delivered in EN/CN and shared short videos and case stories. Fewer slogans, more real life—what helped, what didn’t, and why the timing mattered.'
+      },
+    ],
+  }
+
+  // EN — Milestones (human‑readable; keeps roadmapping dates)
+  dictionary.EN.about.milestones = {
+    title: 'Milestones',
+    items: [
+      { date: '2023-03', outcome: 'First 50 clients served; we wrote our promise: clarity over mystique.' },
+      { date: '2023-09', outcome: 'First enterprise pilot; helped a team choose a calmer, better launch window.' },
+      { date: '2024-02', outcome: 'Bilingual site goes live; we begin serving Southeast Asia more easily.' },
+      { date: '2024-06', outcome: 'Hosted three community workshops; met new friends and future collaborators.' },
+      { date: '2024-10', outcome: 'Refined briefings and follow‑ups; simpler plans, steadier rhythm.' },
+      { date: '2025-03', outcome: '500+ clients served; grateful for the trust and stories shared.' },
+    ],
+  }
+
+  // CN — 我们的故事（生活化）
+  dictionary.CN.about.story = {
+    title: '里程碑与成就—玄域联盟（Metaphysics Alliance）',
+    timeline: [
+      {
+        date: '2023年第四季度',
+        title: '创立与愿景确立',
+        body: '玄域联盟于2023年底正式成立，旨在让玄学真正服务于现代决策体系。从个人探索到团队愿景，我们立志将传统玄学与数据逻辑相结合，让“天时与人事”得以被量化、验证与执行。'
+      },
+      {
+        date: '2024年第一季度',
+        title: '核心框架与早期验证',
+        body: '团队开始建立整合体系，将八字、紫微斗数、奇门遁甲、数字学等多门术数统一于一套验证模型之下。来自马来西亚与新加坡的早期客户验证了模型的精准度与实用价值，为系统化发展奠下基础。'
+      },
+      {
+        date: '2024年第二季度',
+        title: '核心团队成形',
+        body: '多领域核心成员正式组建——包括玄学师、数据分析师、系统开发员与视觉设计师，共同打造旗舰产品「VIP全息命理报告」，将多术数分析整合为单一逻辑体系。'
+      },
+      {
+        date: '2024年第三季度',
+        title: '数位化架构与成长突破',
+        body: '正式上线玄域联盟数位平台，实现客户、案例与演算模块的系统化整合。此季度活跃客户突破 200位，并达成三项企业合作计划，从个人工作室晋升为玄学研究与实务机构。'
+      },
+      {
+        date: '2024年第四季度',
+        title: '优化与认可',
+        body: '发布 Cross-Validation V2交叉验证体系，进一步提升命理推演的精度与时序一致性；并举办闭门研讨会与双语报告发布，确立「深度、精度、格局」三大品牌核心。'
+      },
+      {
+        date: '2025年',
+        title: '扩展与传承',
+        body: '玄域联盟进入新阶段，持续强化数据化玄学引擎、培育新一代顾问，并迈向国际化布局——在传承古学精神的同时，塑造玄学未来的新语言。'
+      },
+    ],
+  }
+
+  // CN — 里程碑（生活化；保留 roadmap 需要的日期格式）
+  dictionary.CN.about.milestones = {
+    title: '里程碑与成就—玄域联盟（Metaphysics Alliance）',
+    items: [
+      { date: '2023年第四季度', outcome: '玄域联盟于年末正式成立，立志让玄学服务现代决策：从个人到团队，把传统智慧与数据逻辑打通，让“天时与人事”可量化、可验证、可执行。' },
+      { date: '2024年第一季度', outcome: '统一多术数为一套验证模型（八字、紫微、奇门、数字学）；来自马来西亚与新加坡的早期客户验证其准确性与实用价值。' },
+      { date: '2024年第二季度', outcome: '多领域核心团队成形：玄学师、数据分析师、系统开发员与视觉设计师共创旗舰「VIP全息命理报告」，将多体系整合为单一逻辑。' },
+      { date: '2024年第三季度', outcome: '数位平台正式上线，客户、案例与演算模块实现系统化整合；活跃客户突破 200 位，签下三项企业合作，从工作室迈向实务机构。' },
+      { date: '2024年第四季度', outcome: '发布 Cross‑Validation V2 交叉验证体系；举办闭门研讨与双语报告，确立品牌核心：深度、精度、格局。' },
+      { date: '2025年', outcome: '进入扩展阶段：强化数据化玄学引擎、培养新一代顾问、迈向国际化布局；在传承中塑造玄学的未来语言。' },
+    ],
   }
 } catch (e) { /* no-op */ }
+
+// EN: Milestones & Achievements — override with provided content
+try {
+  const titleEN = 'Milestones & Achievements — Metaphysics Alliance (玄域联盟)'
+  dictionary.EN.about.story = {
+    title: titleEN,
+    timeline: [
+      {
+        date: '2023 Q4',
+        title: 'Foundation & Vision',
+        body: 'Metaphysics Alliance was founded at the close of 2023 with a clear purpose: to bring metaphysical science into the rhythm of modern decision‑making. What began as a one‑person pursuit of precision evolved into a collaborative vision — bridging traditional metaphysics with analytical frameworks and real‑world strategy.'
+      },
+      {
+        date: '2024 Q1',
+        title: 'Core Frameworks & Early Collaborations',
+        body: 'The team began developing a unified methodology combining BaZi, Zi Wei Dou Shu, Qi Men Dun Jia, and numerology under one verification system. Early consultations with clients across Malaysia and Singapore validated the model’s accuracy and practical value.'
+      },
+      {
+        date: '2024 Q2',
+        title: 'Formation of the Core Team',
+        body: 'A multidisciplinary team was established — blending metaphysics experts, data analysts, designers, and system developers. Together, they shaped the VIP Holistic Destiny Blueprint, the flagship service integrating multi‑system analysis into a single coherent report.'
+      },
+      {
+        date: '2024 Q3',
+        title: 'Digital Infrastructure & Growth',
+        body: 'The Alliance launched its first digital ecosystem: the Metaphysics Alliance Platform, connecting clients, case studies, and computational modules through a structured interface. By this quarter, the community surpassed 200 active clients and three corporate partnerships, marking its transition from practice to institution.'
+      },
+      {
+        date: '2024 Q4',
+        title: 'Refinement & Recognition',
+        body: 'Cross‑validation V2 was introduced — tightening accuracy and timing across all analytical layers. The team hosted closed‑door workshops and released bilingual reports, reinforcing its reputation for intellectual depth and clarity.'
+      },
+      {
+        date: '2025',
+        title: 'Expansion & Legacy Building',
+        body: 'Now entering a new phase, Metaphysics Alliance continues to refine its data‑driven metaphysics engine, train new consultants, and expand internationally — preserving the discipline’s wisdom while defining its future language.'
+      },
+    ],
+  }
+
+  dictionary.EN.about.milestones = {
+    title: titleEN,
+    items: [
+      { date: '2023 Q4', title: 'Foundation & Vision', outcome: 'Founded to align metaphysical science with modern decision‑making; a personal pursuit became a collaborative vision bridging tradition with analysis and real‑world strategy.' },
+      { date: '2024 Q1', title: 'Core Frameworks & Early Collaborations', outcome: 'Unified method combining BaZi, Zi Wei, Qi Men and numerology; early work in MY/SG validated accuracy and practical value.' },
+      { date: '2024 Q2', title: 'Formation of the Core Team', outcome: 'Built a multidisciplinary team and shaped the VIP Holistic Destiny Blueprint — a single, coherent report integrating multiple systems.' },
+      { date: '2024 Q3', title: 'Digital Infrastructure & Growth', outcome: 'Launched the Metaphysics Alliance Platform; passed 200 active clients and three corporate partnerships — from practice to institution.' },
+      { date: '2024 Q4', title: 'Refinement & Recognition', outcome: 'Released Cross‑validation V2; hosted closed‑door workshops and bilingual reports, deepening trust and clarity.' },
+      { date: '2025', title: 'Expansion & Legacy Building', outcome: 'Refining the data‑driven engine, training new consultants, expanding internationally while preserving wisdom and shaping a future language.' },
+    ],
+  }
+} catch (e) { /* no-op */ }
+
+// (Removed legacy CN milestones tweaks to keep humanized copy authoritative)
 
 export const locales = Object.keys(dictionary)
 
@@ -627,8 +770,8 @@ try {
   }
 } catch (e) { /* no-op */ }
 
-// Attach icons to About milestones (EN/CN) for roadmap component
-try {
+  // Attach icons to About milestones (EN/CN) for roadmap component
+  try {
   const en = dictionary?.EN?.about?.milestones?.items
   if (Array.isArray(en)){
     for (const it of en){
@@ -658,6 +801,34 @@ try {
         default: break
       }
     }
+  }
+  } catch (e) { /* no-op */ }
+
+// Override/update Founder's Note (EN & CN)
+try {
+  dictionary.EN.about.founder = {
+    title: "Founder's Note",
+    name_en: 'Shaun Quan',
+    name_cn: '宸麟老师',
+    role: 'Chief Chinese Metaphysician Analyst',
+    paragraphs: [
+      `I founded Metaphysics Alliance (玄域联盟) with one purpose — to make metaphysics practical, measurable, and strategic. True metaphysics is not superstition; it is an ancient system of logic, rhythm, and timing that reveals how energy flows through people, events, and environments.`,
+      `Every reading begins with True Solar Time (TST) and the Twenty‑Four Solar Terms, verified through official astronomical data. We cross‑validate each chart across multiple classical systems — BaZi, Zi Wei Dou Shu, Qi Men Dun Jia, Feng Shui, and numerology — ensuring every conclusion holds consistent structural logic. What was once hidden in complexity is now made actionable through clear frameworks and defined timing.`,
+      `At Metaphysics Alliance, our mission is to transform metaphysical insight into practical strategy — for individuals seeking direction, and for businesses planning growth. We translate cycles, elements, and patterns into decision clarity, revealing the most efficient window for movement or restraint.`,
+      `Our philosophy is simple: remove noise, preserve essence, and act with precision. Metaphysics, when applied correctly, is not fortune‑telling — it is strategic timing with scientific discipline, aligning the unseen patterns of destiny with the measurable pace of modern life.`,
+    ],
+  }
+  dictionary.CN.about.founder = {
+    title: '创始人寄语',
+    name_en: 'Shaun Quan',
+    name_cn: '宸麟老师',
+    role: '首席中国玄学分析师',
+    paragraphs: [
+      '我创立玄域联盟（Metaphysics Alliance），只为让玄学回归实用、可量化、可执行的本质。真正的玄学并非迷信，而是一套揭示能量流动、节奏与时机的古老逻辑体系。',
+      '每一次推演都以真太阳时与二十四节气为基准，并经由权威天文历法核对，再结合八字、紫微斗数、奇门遁甲、风水、数字学等多流派交叉验证，确保结构严谨、结果一致。我们将复杂的命理格局转化为清晰的行动逻辑与时机框架，让玄学从抽象走向落地。',
+      '玄域联盟的使命，是将玄学洞见转化为实战策略——无论是个人抉择，还是企业布局，都能在节奏与方向上更稳更准。我们以去噪、存真、精确行动为原则，让玄学不再是预测，而是掌握天时的战略科学，在快速变化的时代中，以理性与天机并行。',
+      '我们的准则很简单：去噪、存真、精确行动。正确运用的玄学并非算命，而是以科学纪律支撑的战略时机学，让命运之中的隐秘秩序，与现代生活的可测节奏协调一致。',
+    ],
   }
 } catch (e) { /* no-op */ }
 

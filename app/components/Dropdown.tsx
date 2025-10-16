@@ -23,15 +23,18 @@ export default function Dropdown({
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
   const btnRef = useRef<HTMLButtonElement | null>(null)
+  const menuRef = useRef<HTMLDivElement | null>(null)
   const [menuStyle, setMenuStyle] = useState<React.CSSProperties>({})
 
   useEffect(() => {
-    const onDocClick = (e: MouseEvent) => {
-      if (!ref.current) return
-      if (!ref.current.contains(e.target as Node)) setOpen(false)
+    const onDocMouseDown = (e: MouseEvent) => {
+      const target = e.target as Node
+      const insideButton = !!ref.current && ref.current.contains(target)
+      const insideMenu = !!menuRef.current && menuRef.current.contains(target)
+      if (!insideButton && !insideMenu) setOpen(false)
     }
-    document.addEventListener('mousedown', onDocClick)
-    return () => document.removeEventListener('mousedown', onDocClick)
+    document.addEventListener('mousedown', onDocMouseDown)
+    return () => document.removeEventListener('mousedown', onDocMouseDown)
   }, [])
 
   useEffect(() => {
@@ -74,7 +77,7 @@ export default function Dropdown({
         <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/60">▾</span>
       </button>
       {open ? createPortal(
-        <div style={menuStyle}>
+        <div ref={menuRef} style={menuStyle}>
           <div className="overflow-hidden rounded-lg border border-white/10 bg-black/90 shadow-xl backdrop-blur-md">
             <ul role="listbox" className="max-h-64 overflow-auto py-1">
               {items.map((it, idx) => (

@@ -7,8 +7,8 @@ import Testimonials from '@/components/Testimonials'
 import VideoCarousel from '@/components/VideoCarousel'
 import SectionDivider from '@/components/SectionDivider'
 import StructuredData from '@/components/StructuredData'
-import TextCarousel from '@/components/TextCarousel'
-import Roadmap from '@/components/Roadmap'
+// TextCarousel and Roadmap removed earlier; new interactive chart below
+import InteractiveMilestones from '@/components/InteractiveMilestones'
 import { getDict, type Locale } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
@@ -134,7 +134,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
           <img
             src={founder && (founder as any).portrait || '/images/team/founder.png'}
             alt={`${founder.name_en || 'Founder'} portrait`}
-            className="h-64 w-full rounded-2xl object-cover object-center ring-1 ring-white/10"
+            className="w-full h-auto rounded-2xl object-contain object-center ring-1 ring-white/10"
           />
           <div className="text-white/85">
             <div className="text-lg font-semibold">
@@ -176,27 +176,16 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         <VideoCarousel dict={dict as any} path="about.videos.items" locale={locale} />
       </section>
 
-      <SectionDivider title={locale === 'CN' ? '成长与里程碑' : 'Story & Milestones'} />
+      {/* Our Story & Milestones (interactive) */}
+      <SectionDivider title={(milestones.title as string) || (story.title as string) || (locale === 'CN' ? '里程碑与成就' : 'Milestones & Achievements')} />
+      <InteractiveMilestones
+        title={(milestones.title as string) || (story.title as string) || (locale === 'CN' ? '里程碑与成就—玄域联盟（Metaphysics Alliance）' : 'Milestones & Achievements — Metaphysics Alliance (玄域联盟)')}
+        storyItems={(story?.timeline as any[]) || []}
+        milestoneItems={(milestones?.items as any[]) || []}
+        locale={locale}
+      />
 
-      {/* Story & Milestones */}
-      <section className="space-y-6">
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
-          <h3 className="text-xl font-semibold text-white">{story.title || 'Our Story'}</h3>
-          <div className="mt-4">
-            <TextCarousel items={(story.timeline || []).map((s: any) => ({ date: s.date, title: s.title, body: (s as any).body || s.outcome }))} />
-          </div>
-        </article>
-        <article className="rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-md">
-          <h3 className="text-xl font-semibold text-white">{(milestones.title) || 'Milestones'}</h3>
-          <div className="mt-4">
-            {Array.isArray(milestones.items) && (milestones.items as any[]).length ? (
-              <Roadmap items={milestones.items as any} />
-            ) : (
-              <img src={locale === 'CN' ? '/images/roadmap-cn.png' : '/images/roadmap-en.png'} alt={(milestones.title as string) || 'Milestones Roadmap'} className="w-full h-auto rounded-xl ring-1 ring-white/10" />
-            )}
-          </div>
-        </article>
-      </section>
+      {/* Story & Milestones section removed as requested */}
 
       <SectionDivider title={team.title || (locale === 'CN' ? '团队' : 'Our Team')} />
 

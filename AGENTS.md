@@ -51,9 +51,13 @@ i18n & Content Rules
 
 Commit & Work IDs
 
-- Include a Work ID in every change set description:
-  - Format: `MA-<AREA>-<DESC>-YYYY-MM-DDThh:mm:ss±TZ`.
-  - Example: `MA-ABOUT-ROADMAP-ICONS-2025-10-14T12:49:00+08:00`.
+- Always include a Work ID at the end of user-visible updates and when describing change sets.
+- Format (strict): `MA-{WORK-NAME}-{YYYY-MM-DDThh:mm:ss+08:00}`
+  - Time must be ISO 8601 with timezone `+08:00`.
+  - Replace `{WORK-NAME}` with a concise, kebab/upper-case name for the task.
+  - Examples:
+    - `MA-CONTACT-FORM-WORKFLOW-2025-10-15T15:43:00+08:00`
+    - `MA-PAGE-BANNER-UPDATE-2025-10-15T16:05:00+08:00`
 - Use concise conventional commits (feat/fix/chore/refactor/docs) with a short scope.
 
 Verification Checklist (before push/PR)
