@@ -198,15 +198,35 @@ function SerpentineTimeline({ items, lang }){
           const p = pos[idx]
           const label = (it.title || it.date || '').slice(0, 28)
           return (
-            <g key={idx} onMouseEnter={()=>setHover(idx)} onMouseLeave={()=>setHover(null)} onClick={()=>{ setSelected(idx); if (!pushedRef.current){ history.pushState({ milestone: idx }, ''); pushedRef.current = true } }}>
-              <circle cx={p.x} cy={p.y} r={sizes.dot} fill="url(#dot-grad)" stroke="#000" strokeWidth="1.2" filter="url(#glow)" />
+            <g key={`lbl-${idx}`}>
               <text x={p.x} y={p.y - (sizes.date + 18)} textAnchor="middle" fontSize={sizes.date} fill="rgba(255,255,255,0.97)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.6)', strokeWidth: 0.35 }}>{it.date}</text>
               <text x={p.x} y={p.y + (sizes.title + 22)} textAnchor="middle" fontSize={sizes.title} fill="rgba(255,255,255,0.92)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.5)', strokeWidth: 0.3 }}>{label}</text>
             </g>
           )
         })}
-      {/* End mobile modal */}
       </svg>
+      {/* React Icons overlay */}
+      <div className="pointer-events-none absolute inset-0">
+        {items.map((_, idx) => {
+          const p = pos[idx]
+          const IconSet = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
+          const Icon = IconSet[idx % IconSet.length]
+          const sz = Math.max(18, sizes.dot * 6)
+          return (
+            <button
+              key={`ico-${idx}`}
+              type="button"
+              className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 p-1 backdrop-blur-sm ring-1 ring-white/10 hover:bg-black/30"
+              style={{ left: p.x, top: p.y }}
+              onMouseEnter={()=>setHover(idx)}
+              onMouseLeave={()=>setHover(null)}
+              onClick={()=>{ setSelected(idx); if (!pushedRef.current){ history.pushState({ milestone: idx }, ''); pushedRef.current = true } }}
+            >
+              <Icon size={sz} color="#ffd86b" style={{ filter: 'drop-shadow(0 0 6px rgba(212,175,55,0.55))' }} />
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
