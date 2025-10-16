@@ -103,7 +103,6 @@ function SerpentineTimeline({ items, lang }){
     return () => window.removeEventListener('popstate', onPop)
   }, [])
   const active = hover != null ? items[hover] : null
-  const header = active ? (active.title ? (lang==='CN' ? `${active.date}｜${active.title}` : `${active.date} — ${active.title}`) : active.date) : ''
 
   const sizes = useMemo(() => {
     if (width >= 1600) return { date: 22, title: 20, dot: 9 }
@@ -117,7 +116,7 @@ function SerpentineTimeline({ items, lang }){
     <div ref={containerRef} className="relative flex min-h-[18rem] items-center justify-center overflow-x-auto">
       {width >= 768 && hover != null ? (
         <div
-          className={"pointer-events-none absolute z-10 max-w-[96vw] rounded-lg border border-white/15 bg-black/85 text-white shadow-2xl " + (width<480? 'p-3':'p-5')}
+          className={"pointer-events-none absolute z-30 max-w-[96vw] rounded-lg border border-white/15 bg-black/85 text-white shadow-2xl " + (width<480? 'p-3':'p-5')}
           style={{
             width: Math.min(width - margin*2 - 40, width<480? 300 : width<768? 380 : 520),
             left: Math.min(Math.max(pos[hover].x, margin + 160), width - margin - 160),
@@ -125,10 +124,11 @@ function SerpentineTimeline({ items, lang }){
             transform: 'translate(-50%, -50%)'
           }}
         >
-          <div className="text-[15px] font-semibold text-white/90">{header}</div>
+          <div className="text-[15px] font-semibold text-white/90">{active?.date}</div>
+          <div className="text-[14px] font-medium text-white/80 mt-1">{active?.title}</div>
           {active?.text ? (
             <div
-              className="mt-1 text-white/85"
+              className="mt-2 text-white/85"
               style={{
                 fontSize: width < 480 ? 13 : 14,
                 lineHeight: 1.35,
@@ -147,18 +147,17 @@ function SerpentineTimeline({ items, lang }){
       {/* Mobile modal */}
       {width < 768 && selected != null ? (
         <MobileModal
-          header={items[selected]?.title ? (lang==='CN' ? `${items[selected]?.date}｜${items[selected]?.title}` : `${items[selected]?.date} — ${items[selected]?.title}`) : items[selected]?.date}
+          header={items[selected] ? (
+            <div className="text-center">
+              <div className="text-base font-semibold">{items[selected].date}</div>
+              <div className="text-sm font-medium text-white/80">{items[selected].title}</div>
+            </div>
+          ) : null}
           body={items[selected]?.text}
-          currentIndex={(selected ?? 0) + 1}
-          total={items.length}
-          hasPrev={selected > 0}
-          hasNext={selected < items.length - 1}
-          onPrev={() => { if (selected != null && selected > 0){ const nextIdx = selected - 1; setSelected(nextIdx); history.pushState({ milestone: nextIdx }, ''); pushedRef.current = true } }}
-          onNext={() => { if (selected != null && selected < items.length - 1){ const nextIdx = selected + 1; setSelected(nextIdx); history.pushState({ milestone: nextIdx }, ''); pushedRef.current = true } }}
           onClose={() => { if (pushedRef.current){ history.back() } else { setSelected(null) } }}
         />
       ) : null}
-      <svg viewBox={`0 0 ${totalWidth} ${totalHeight}`} className="w-full block" style={{ height: width<480? '22rem' : width<768? '24rem' : '32rem' }}>
+      <svg viewBox={`0 0 ${totalWidth} ${totalHeight}`} className="w-full block relative z-20 pointer-events-none" style={{ height: width<480? '22rem' : width<768? '24rem' : '32rem' }}>
         <defs>
           <marker id="arrow-gold" markerWidth="6" markerHeight="6" refX="5.2" refY="3" orient="auto" markerUnits="strokeWidth">
             <path d="M0,0 L6,3 L0,6 Z" fill="#d4af37" />
@@ -197,17 +196,21 @@ function SerpentineTimeline({ items, lang }){
         })}
         {items.map((it, idx) => {
           const p = pos[idx]
-          const label = (it.title || it.date || '').slice(0, 28)
+          // Increase clearances to fully avoid overlap across DPIs and glow
+          const iconSize = Math.max(18, sizes.dot * 5.5)
+          const buttonPad = 10 // adjusted for p-0.5 + ring + blur
+          const padTop = width < 640 ? 40 : 42
+          const dateDescent = sizes.date * 0.35
+          const dateY = p.y - (iconSize / 2 + buttonPad + padTop) - dateDescent
           return (
             <g key={`lbl-${idx}`}>
-              <text x={p.x} y={p.y - (sizes.date + 18)} textAnchor="middle" fontSize={sizes.date} fill="rgba(255,255,255,0.97)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.6)', strokeWidth: 0.35 }}>{it.date}</text>
-              <text x={p.x} y={p.y + (sizes.title + 22)} textAnchor="middle" fontSize={sizes.title} fill="rgba(255,255,255,0.92)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.5)', strokeWidth: 0.3 }}>{label}</text>
+              <text x={p.x} y={dateY} textAnchor="middle" fontSize={sizes.date} fill="rgba(255,255,255,0.97)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.6)', strokeWidth: 0.35 }}>{it.date}</text>
             </g>
           )
         })}
       </svg>
-      {/* React Icons overlay */}
-      <div className="pointer-events-none absolute inset-0">
+      {/* React Icons overlay (behind SVG labels) */}
+      <div className="pointer-events-none absolute inset-0 z-10">
         {items.map((it, idx) => {
           const p = pos[idx]
           const Icon = (() => {
@@ -223,12 +226,12 @@ function SerpentineTimeline({ items, lang }){
             const set = [FiFlag, FiCompass, FiClock, FiLayers, FiVideo, FiUsers, FiGlobe, FiCheckCircle]
             return set[idx % set.length]
           })()
-          const sz = Math.max(18, sizes.dot * 6)
+          const sz = Math.max(18, sizes.dot * 5.5)
           return (
             <button
               key={`ico-${idx}`}
               type="button"
-              className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 p-1 backdrop-blur-sm ring-1 ring-white/10 hover:bg-black/30"
+              className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 p-0.5 backdrop-blur-sm ring-1 ring-white/10 hover:bg-black/30"
               style={{ left: p.x, top: p.y }}
               onMouseEnter={()=>setHover(idx)}
               onMouseLeave={()=>setHover(null)}

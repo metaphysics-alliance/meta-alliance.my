@@ -31,7 +31,7 @@ export default function AboutPage(){
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
         <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{hero.title || 'About Metaphysics Alliance'}</h1>
         {hero.description ? <p className="mt-3 max-w-3xl text-white/70">{hero.description}</p> : null}
-        <div className="mt-5 flex flex-wrap gap-3 text-sm">
+        <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm">
           <Link to="/contact" className="rounded-lg bg-gold px-4 py-2 font-medium text-black hover:bg-gold-soft">{(about.cta && about.cta.label) || (lang === 'CN' ? '联系我们' : 'Contact Us')}</Link>
           <Link to="/services" className="rounded-lg border border-white/15 px-4 py-2 font-medium text-white/85 transition hover:border-gold/40 hover:text-white">{lang === 'CN' ? '了解我们的服务' : 'Explore Our Services'}</Link>
         </div>
@@ -56,7 +56,14 @@ export default function AboutPage(){
           </div>
         </div>
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-white md:text-3xl">{founder.title || (lang === 'CN' ? '创始人寄语' : "Founder's Note")}</h2>
+          <div className="flex items-end justify-between gap-3">
+            <h2 className="text-2xl font-semibold leading-none text-white md:text-3xl">{founder.title || (lang === 'CN' ? '创始人寄语' : "Founder's Note")}</h2>
+            <img
+              src="/images/team/SQ-SIGN.png"
+              alt="Founder signature"
+              className="shrink-0 self-end w-20 opacity-90 sm:w-24 md:w-28 transform origin-bottom-right scale-[1.3] translate-y-[7px]"
+            />
+          </div>
           {(founder.paragraphs || []).map((p, i) => (
             <p key={i} className="text-base leading-relaxed text-white/75">{p}</p>
           ))}

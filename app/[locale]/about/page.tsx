@@ -115,7 +115,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         overlayOpacity={0}
         noPaddingY
         actions={
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">
               {(about.cta && about.cta.label) || (hero.cta || 'Contact Us')}
             </Link>
@@ -144,7 +144,14 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
           </div>
         </div>
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-white md:text-3xl">{founder.title || "Founder's Note"}</h2>
+          <div className="flex items-end justify-between gap-3">
+            <h2 className="text-2xl font-semibold leading-none text-white md:text-3xl">{founder.title || "Founder's Note"}</h2>
+            <img
+              src="/images/team/SQ-SIGN.png"
+              alt="Founder signature"
+              className="shrink-0 self-end w-20 opacity-90 sm:w-24 md:w-28 transform origin-bottom-right scale-[1.3] translate-y-[7px]"
+            />
+          </div>
           {(founder.paragraphs || []).map((p: string, i: number) => (
             <p key={i} className="text-base leading-relaxed text-white/75">{p}</p>
           ))}

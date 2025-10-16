@@ -57,7 +57,7 @@ export default function InteractiveMilestones({
   )
 }
 
-function MobileModal({ header, body, onClose, onPrev, onNext, hasPrev, hasNext, currentIndex, total }:{ header?: string; body?: string; onClose: () => void; onPrev?: () => void; onNext?: () => void; hasPrev?: boolean; hasNext?: boolean; currentIndex?: number; total?: number }){
+function MobileModal({ header, body, onClose, onPrev, onNext, hasPrev, hasNext, currentIndex, total }: { header?: React.ReactNode; body?: string; onClose: () => void; onPrev?: () => void; onNext?: () => void; hasPrev?: boolean; hasNext?: boolean; currentIndex?: number; total?: number }){
   const touchStart = useRef<number | null>(null)
   const touchDelta = useRef<number>(0)
   return (
@@ -145,14 +145,13 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
     return () => window.removeEventListener('popstate', onPop)
   }, [])
   const active = hover != null ? items[hover] : null
-  const header = active ? (active.title ? (locale==='CN' ? `${active.date}｜${active.title}` : `${active.date} — ${active.title}`) : active.date) : ''
 
   return (
     <div ref={containerRef} className="relative flex min-h-[18rem] items-center justify-center overflow-x-auto">
       {/* Desktop hover tooltip */}
       {width >= 768 && hover != null ? (
         <div
-          className={`pointer-events-none absolute z-10 max-w-[96vw] rounded-lg border border-white/15 bg-black/85 text-white shadow-2xl ${sizes.tipPad}`}
+          className={`pointer-events-none absolute z-30 max-w-[96vw] rounded-lg border border-white/15 bg-black/85 text-white shadow-2xl ${sizes.tipPad}`}
           style={{
             width: Math.min(sizes.tipW, Math.max(260, totalWidth - margin * 2 - 40)),
             left: Math.min(Math.max(pos[hover].x, margin + 160), totalWidth - margin - 160),
@@ -160,10 +159,11 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <div className="text-[15px] font-semibold text-white/90">{header}</div>
+          <div className="text-[15px] font-semibold text-white/90">{active?.date}</div>
+          <div className="text-[14px] font-medium text-white/80 mt-1">{active?.title}</div>
           {active?.text ? (
             <div
-              className="mt-1 text-white/85"
+              className="mt-2 text-white/85"
               style={{
                 fontSize: width < 480 ? 13 : 14,
                 lineHeight: 1.35,
@@ -182,7 +182,12 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
       {/* Mobile modal tooltip (centered) */}
       {width < 768 && selected != null ? (
         <MobileModal
-          header={items[selected]?.title ? (locale==='CN' ? `${items[selected]?.date}｜${items[selected]?.title}` : `${items[selected]?.date} — ${items[selected]?.title}`) : items[selected]?.date}
+          header={items[selected] ? (
+            <div className="text-center">
+              <div className="text-base font-semibold">{items[selected].date}</div>
+              <div className="text-sm font-medium text-white/80">{items[selected].title}</div>
+            </div>
+          ) : null}
           body={items[selected]?.text}
           currentIndex={(selected ?? 0) + 1}
           total={items.length}
@@ -213,16 +218,8 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
           }}
         />
       ) : null}
-            <div className="flex items-start justify-between gap-3">
-              <div className="text-base font-semibold">{items[selected]?.title ? (locale==='CN' ? `${items[selected]?.date}｜${items[selected]?.title}` : `${items[selected]?.date} — ${items[selected]?.title}`) : items[selected]?.date}</div>
-              <button className="rounded-md bg-white/10 px-2 py-1 text-sm text-white hover:bg-white/20" onClick={()=>setSelected(null)}>×</button>
-            </div>
-            <div className="mt-2 max-h-[70vh] overflow-auto text-[14px] leading-relaxed text-white/85">{items[selected]?.text}</div>
-          </div>
-        </div>
-      ) : null}
 
-      <svg viewBox={`0 0 ${totalWidth} ${totalHeight}`} className="w-full block" style={{ height: sizes.svgH }}>
+      <svg viewBox={`0 0 ${totalWidth} ${totalHeight}`} className="w-full block relative z-20 pointer-events-none" style={{ height: sizes.svgH }}>
         <defs>
           <marker id="arrow-gold" markerWidth="6" markerHeight="6" refX="5.2" refY="3" orient="auto" markerUnits="strokeWidth">
             <path d="M0,0 L6,3 L0,6 Z" fill="#d4af37" />
@@ -261,20 +258,10 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
           const d = `M ${prev.x} ${prev.y} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${p.x} ${p.y}`
           return <path key={`c-${i}`} d={d} fill="none" stroke="url(#grad-line)" strokeWidth="3.25" markerEnd="url(#arrow-gold)" opacity="0.98" filter="url(#glow)" />
         })}
-        {/* Labels only (dates/titles). Icons are overlaid via HTML for flexibility */}
-        {items.map((it, idx) => {
-          const label = (it.title || it.date || '').slice(0, width < 640 ? 18 : 28)
-          const p = pos[idx]
-          return (
-            <g key={`lbl-${idx}`}>
-              <text x={p.x} y={p.y - (sizes.date + 20)} textAnchor="middle" fontSize={sizes.date} fill="rgba(255,255,255,0.97)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.6)', strokeWidth: 0.35 }}>{it.date}</text>
-              <text x={p.x} y={p.y + (sizes.title + 26)} textAnchor="middle" fontSize={sizes.title} fill="rgba(255,255,255,0.92)" style={{ paintOrder: 'stroke', stroke: 'rgba(0,0,0,0.5)', strokeWidth: 0.3 }}>{label}</text>
-            </g>
-          )
-        })}
+        {/* SVG labels removed; rendered as HTML overlay above icons to ensure no overlap */}
       </svg>
       {/* React Icons overlay (clickable) */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 z-10">
         {items.map((it, idx) => {
           const p = pos[idx]
           const Icon = (() => {
@@ -292,12 +279,12 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
           })()
           const px = Math.min(Math.max(p.x, 0), totalWidth)
           const py = Math.min(Math.max(p.y, 0), totalHeight)
-          const sz = Math.max(18, sizes.dot * 6)
+          const sz = Math.max(18, sizes.dot * 5.5)
           return (
             <button
               key={`ico-${idx}`}
               type="button"
-              className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 p-1 backdrop-blur-sm ring-1 ring-white/10 hover:bg-black/30"
+              className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 p-0.5 backdrop-blur-sm ring-1 ring-white/10 hover:bg-black/30"
               style={{ left: px, top: py }}
               onMouseEnter={()=> setHover(idx)}
               onMouseLeave={()=> setHover(null)}
@@ -311,6 +298,25 @@ function Timeline({ items, locale }: { items: { date: string; title?: string; te
             >
               <Icon size={sz} color="#ffd86b" style={{ filter: 'drop-shadow(0 0 6px rgba(212,175,55,0.55))' }} />
             </button>
+          )
+        })}
+      </div>
+
+      {/* Labels overlay (above icons, non-interactive) */}
+      <div className="pointer-events-none absolute inset-0 z-20">
+        {items.map((it, idx) => {
+          const p = pos[idx]
+          const px = Math.min(Math.max(p.x, 0), totalWidth)
+          const py = Math.min(Math.max(p.y, 0), totalHeight)
+          const iconSize = Math.max(18, sizes.dot * 5.5)
+          const buttonPad = 10
+          const padTop = width < 640 ? 40 : 42
+          const dateDescent = sizes.date * 0.35
+          const dateY = py - (iconSize / 2 + buttonPad + padTop) - dateDescent
+          return (
+            <div key={`lbl-html-${idx}`}>
+              <div className="absolute -translate-x-1/2 text-white" style={{ left: px, top: dateY, fontSize: sizes.date, textShadow: '0 0 2px rgba(0,0,0,0.6)' }}>{it.date}</div>
+            </div>
           )
         })}
       </div>
