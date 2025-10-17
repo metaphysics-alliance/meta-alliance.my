@@ -1,3 +1,4 @@
+import Banner from '../components/Banner.jsx';
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -13,12 +14,10 @@ export default function ServicesIndex(){
   return (
     <main className="container mx-auto max-w-6xl space-y-10 px-4 py-10">
       <SEOServices lang={lang} title={dict.nav?.celestial || 'Services'} description={(dict.why_long || '').slice(0,160)} />
-      <header className="rounded-2xl border border-white/10 bg-black/30 p-8">
-        <h1 className="text-3xl font-semibold text-white md:text-5xl">{dict.nav?.celestial || 'Celestial Services'}</h1>
-        {dict.why_long ? (
-          <p className="mt-3 max-w-3xl text-white/70">{dict.why_long}</p>
-        ) : null}
-      </header>
+            <Banner
+        title={dict.nav?.celestial || 'Celestial Services'}
+        description={dict.why_long}
+      />
 
       {groups.map((group, gi) => (
         <section key={gi} className="space-y-4">

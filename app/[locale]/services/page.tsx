@@ -40,7 +40,16 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
           name: item.title,
         }))
       }} />
-      <Hero title={title} sub={dict.why_long} />
+      <Hero
+        title={title}
+        description={dict.why_long}
+        className={"min-h-[50vh] flex items-center -mt-10 -mb-10"}
+        fullBleed
+        bannerSrc="/page-banner.png"
+        bannerOpacity={0.75}
+        overlayOpacity={0}
+        noPaddingY
+      />
 
       {groups.map((group, gi) => (
         <section key={gi} className='space-y-4'>

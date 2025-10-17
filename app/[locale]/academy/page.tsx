@@ -27,7 +27,16 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
   const title = dictTitle(dict, 'acd.title');
   return (
     <div className='space-y-10'>
-      <Hero title={title} />
+      <Hero
+        title={title}
+        description={(dict as any).why_long || 'Courses and learning paths.'}
+        className={"min-h-[50vh] flex items-center -mt-10 -mb-10"}
+        fullBleed
+        bannerSrc="/page-banner.png"
+        bannerOpacity={0.75}
+        overlayOpacity={0}
+        noPaddingY
+      />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>

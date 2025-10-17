@@ -1,3 +1,4 @@
+import Banner from '../components/Banner.jsx';
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -198,19 +199,11 @@ export default function CelestialServicePage({ serviceKey, content }){
   return (
     <main className="space-y-14 pb-20">
       <SEOService lang={lang} title={data.title} description={data.subtitle} />
-      <header className="bg-black/40 border-b border-white/10 py-16 backdrop-blur-2xl">
-        <div className="container max-w-4xl mx-auto text-center space-y-4">
-          {data.badge ? (
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-white/70 text-xs uppercase tracking-[0.3em]">
-              {data.badge}
-            </span>
-          ) : null}
-          <h1 className="text-3xl md:text-4xl font-semibold text-gold leading-tight">{data.title}</h1>
-          {data.subtitle ? (
-            <p className="text-white/70 md:text-lg leading-relaxed">{data.subtitle}</p>
-          ) : null}
-        </div>
-      </header>
+            <Banner
+        title={data.title}
+        sub={data.badge}
+        description={data.subtitle}
+      />
 
       <div className="space-y-16">
         {sections.map((section) => (

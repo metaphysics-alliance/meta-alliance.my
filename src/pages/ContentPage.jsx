@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Banner from '../components/Banner.jsx';
 
 export default function ContentPage({ title, intro, sections = [], cta }){
   return (
     <main className="container py-16">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-semibold text-gold mb-4">{title}</h1>
-        {intro ? <p className="text-white/80 leading-relaxed text-lg mb-8">{intro}</p> : null}
+              <Banner
+        title={title}
+        description={intro}
+      />
 
         <div className="space-y-10">
           {sections.map((section, index) => (

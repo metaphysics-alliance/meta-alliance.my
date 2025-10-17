@@ -26,7 +26,16 @@ export function I18nProvider({ children }){
         if (cur && segment in cur){
           cur = cur[segment]
         } else {
-          return path
+          // Fallback to English if translation is missing for the current language
+          let englishCur = dict['EN']
+          for (const englishSegment of parts){
+            if (englishCur && englishSegment in englishCur){
+              englishCur = englishCur[englishSegment]
+            } else {
+              return path // If English translation is also missing, return the path
+            }
+          }
+          return englishCur
         }
       }
       return cur
