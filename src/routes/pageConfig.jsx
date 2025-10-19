@@ -1,6 +1,7 @@
 import AboutPage from '../pages/AboutPage.jsx'
 import CelestialServicePage from '../pages/CelestialServicePage.jsx'
 import ContentPage from '../pages/ContentPage.jsx'
+import LegalPage from '../components/LegalPage.jsx'
 import Home from '../pages/Home.jsx'
 import ContactPage from '../pages/ContactPage.jsx'
 import ServicesIndex from '../pages/ServicesIndex.jsx'
@@ -131,6 +132,7 @@ export const ROUTES = [
         "overviewSubtitle": "How we engineer a living sanctuary",
         "overviewTitle": "Celestial Habitat Blueprint",
         "imageLabel": "Residential Energy Map",
+        "overviewImageUrl": "/images/page-fs-home/home-img-01.png",
         "bullets": [
           "Hybrid onsite and digital survey layering landform, Flying Star and household BaZi intelligence.",
           "Critical-room protocols covering wealth altars, wellness anchors, sleep optimisation and focus zones.",
@@ -138,6 +140,7 @@ export const ROUTES = [
           "Curated remedy procurement list with vetted metals, crystals, water features and artisan suppliers."
         ],
         "ideal": "Perfect for households upgrading to a sanctuary that multiplies vitality, intimacy and financial momentum.",
+        "idealImageUrl": "/images/page-fs-home/home-img-04.png",
         "extraSections": [
           {
             "key": "method",
@@ -145,6 +148,7 @@ export const ROUTES = [
             "dividerSubtitle": "Why discerning families trust this audit",
             "title": "Evidence-Based Feng Shui Process",
             "imageLabel": "Fieldwork Protocol",
+            "imageUrl": "/images/page-fs-home/home-img-02.png",
             "body": "From intake to post-audit coaching, every step is documented so you know precisely how each recommendation was produced.",
             "points": [
               "Pre-audit data room with questionnaires, floor plans, compass shots and occupant profiles.",
@@ -158,6 +162,7 @@ export const ROUTES = [
             "dividerSubtitle": "Metrics households report",
             "title": "Health, Prosperity, Harmony",
             "imageLabel": "Household Wins",
+            "imageUrl": "/images/page-fs-home/home-img-03.png",
             "body": "Clients reference calmer households, healthier bodies and more consistent cashflow within months of implementation.",
             "points": [
               "Sleep quality, emotional tone and overall immunity stabilise within forty five days of bedroom rewiring.",
@@ -187,6 +192,7 @@ export const ROUTES = [
         "overviewSubtitle": "我们如何打造居家圣域",
         "overviewTitle": "宅运能量蓝图",
         "imageLabel": "住宅气场图",
+        "overviewImageUrl": "/images/page-fs-home/home-img-01.png",
         "bullets": [
           "结合现场勘查与云端分析，整合形峦、飞星与家庭成员八字。",
           "围绕财富、健康、睡眠与专注区，制定核心空间的操作规范。",
@@ -194,6 +200,7 @@ export const ROUTES = [
           "附上精选化煞与催旺物料清单，含可信的金属、晶石、水景与匠人资源。"
         ],
         "ideal": "适合希望让家庭活力、关系和财务同步提升的居者。",
+        "idealImageUrl": "/images/page-fs-home/home-img-04.png",
         "extraSections": [
           {
             "key": "method",
@@ -201,6 +208,7 @@ export const ROUTES = [
             "dividerSubtitle": "为何高端家庭指定此服务",
             "title": "证据化的风水工作法",
             "imageLabel": "勘查流程",
+            "imageUrl": "/images/page-fs-home/home-img-02.png",
             "body": "从资料蒐集到实施辅导，全程留痕，让你清楚知道每个建议的依据。",
             "points": [
               "审前资料库包含问卷、平面图、罗盘照与成员资料。",
@@ -214,6 +222,7 @@ export const ROUTES = [
             "dividerSubtitle": "客户共同的指标",
             "title": "健康・财气・和谐同步",
             "imageLabel": "家庭成果",
+            "imageUrl": "/images/page-fs-home/home-img-03.png",
             "body": "多数家庭在数月内明显感受到情绪稳定、收入稳定与家庭氛围升级。",
             "points": [
               "卧室优化四十五天后，睡眠品质与免疫状态显著提升。",
@@ -248,6 +257,7 @@ export const ROUTES = [
         "overviewSubtitle": "Structure every floor for performance and cohesion",
         "overviewTitle": "Performance Floor Masterplan",
         "imageLabel": "Boardroom Energy Grid",
+        "overviewImageUrl": "/images/page-fs-office/office-img-01.png",
         "bullets": [
           "Executive war-room placement calibrated to leadership authority and decision velocity sectors.",
           "Revenue, marketing and innovation pods sequenced to time gates that amplify pipeline flow.",
@@ -255,6 +265,7 @@ export const ROUTES = [
           "Annual retuning and renovation governance blueprint to protect momentum during change."
         ],
         "ideal": "Designed for scaling companies, venture teams and funds that demand spatial advantage on demand.",
+        "idealImageUrl": "/images/page-fs-office/office-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -262,6 +273,7 @@ export const ROUTES = [
             "dividerSubtitle": "How the audit is governed",
             "title": "Corporate-Grade Delivery",
             "imageLabel": "Corporate Audit Playbook",
+            "imageUrl": "/images/page-fs-office/office-img-03.png",
             "body": "We run the engagement like a capital project, scoped, benchmarked and documented for stakeholders.",
             "points": [
               "Stakeholder discovery with leadership, HR, facilities and brand guardians to set measurable objectives.",
@@ -275,6 +287,7 @@ export const ROUTES = [
             "dividerSubtitle": "KPIs clients attribute to the programme",
             "title": "Revenue Resilience and Team Cohesion",
             "imageLabel": "Corporate Wins",
+            "imageUrl": "/images/page-fs-office/office-img-04.png",
             "body": "Leadership teams report tighter rhythms, faster deal flow and healthier morale within one quarter.",
             "points": [
               "Quarterly revenue volatility narrows as sales pods operate within activated sectors.",
@@ -304,6 +317,7 @@ export const ROUTES = [
         "overviewSubtitle": "为每层楼注入战斗力",
         "overviewTitle": "绩效楼层总蓝图",
         "imageLabel": "企业能量网格",
+        "overviewImageUrl": "/images/page-fs-office/office-img-01.png",
         "bullets": [
           "将决策核心布置于权力旺位，强化决策速度与执行定力。",
           "销售、市场与创新团队按照时门节奏排兵布阵，提升管线流速。",
@@ -311,6 +325,7 @@ export const ROUTES = [
           "提供年度调频与装修治理准则，确保动工期间不失控。"
         ],
         "ideal": "适合高速成长的企业、投资团队与基金，追求空间即战力。",
+        "idealImageUrl": "/images/page-fs-office/office-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -318,6 +333,7 @@ export const ROUTES = [
             "dividerSubtitle": "项目如何控管",
             "title": "企业级交付流程",
             "imageLabel": "企业审查手册",
+            "imageUrl": "/images/page-fs-office/office-img-03.png",
             "body": "以资本项目的严谨度执行，从访谈、建模到落地都有记录可循。",
             "points": [
               "与高层、HR、总务与品牌部门深度访谈，确认可量化目标。",
@@ -331,6 +347,7 @@ export const ROUTES = [
             "dividerSubtitle": "客户实际反馈",
             "title": "营收韧性・团队黏着",
             "imageLabel": "企业成果",
+            "imageUrl": "/images/page-fs-office/office-img-04.png",
             "body": "导入后一个季度内即可看到业绩稳定、协作顺畅与士气提升。",
             "points": [
               "销售管线稳定上扬，季度波动明显收窄。",
@@ -365,6 +382,7 @@ export const ROUTES = [
         "overviewSubtitle": "Reading the land before the first pile",
         "overviewTitle": "Dragon Vein Field Report",
         "imageLabel": "Landform Intelligence Map",
+        "overviewImageUrl": "/images/page-fs-dragon/dragon-img-01.png",
         "bullets": [
           "Macro landform reconnaissance using drone, satellite and classical compass diagnostics for every candidate site.",
           "Geomantic scoring matrix ranking prosperity, wellness, protection and legacy potential by parcel.",
@@ -372,6 +390,7 @@ export const ROUTES = [
           "Due diligence binder covering soil notes, compliance alerts and long-term maintenance rituals."
         ],
         "ideal": "Essential for developers, resorts and multigenerational estates demanding geomantic precision before acquisition.",
+        "idealImageUrl": "/images/page-fs-dragon/dragon-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -379,6 +398,7 @@ export const ROUTES = [
             "dividerSubtitle": "How each expedition is governed",
             "title": "Field Intelligence Playbook",
             "imageLabel": "Survey Protocol",
+            "imageUrl": "/images/page-fs-dragon/dragon-img-03.png",
             "body": "We blend classical geomancy, geospatial technology and feasibility analysis to produce defensible recommendations.",
             "points": [
               "Pre-expedition scoping with planners, legal advisors and environmental consultants to align intent and constraints.",
@@ -392,6 +412,7 @@ export const ROUTES = [
             "dividerSubtitle": "Results clients experience",
             "title": "Longevity, Protection, Prestige",
             "imageLabel": "Landform Wins",
+            "imageUrl": "/images/page-fs-dragon/dragon-img-04.png",
             "body": "Expect smoother approvals, favourable financing and proud community reception when the land plan follows the dragon vein.",
             "points": [
               "Flagship developments enjoy sustained footfall and premium pricing thanks to supportive topography.",
@@ -421,6 +442,7 @@ export const ROUTES = [
         "overviewSubtitle": "动土前先读地",
         "overviewTitle": "龙脉实勘报告",
         "imageLabel": "地形情报图",
+        "overviewImageUrl": "/images/page-fs-dragon/dragon-img-01.png",
         "bullets": [
           "结合航拍、卫星与罗盘，逐一巡检候选基地的山水格局。",
           "建立吉凶评分矩阵，量化财富、健康、安全与传承潜力。",
@@ -428,6 +450,7 @@ export const ROUTES = [
           "附上土质、法规与长期养气维护的完整备忘录。"
         ],
         "ideal": "适合开发商、度假村与多世代家族，在购地前先锁定最具生命力的土地。",
+        "idealImageUrl": "/images/page-fs-dragon/dragon-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -435,6 +458,7 @@ export const ROUTES = [
             "dividerSubtitle": "每一次外勤如何控管",
             "title": "地形情报工作手册",
             "imageLabel": "勘查流程",
+            "imageUrl": "/images/page-fs-dragon/dragon-img-03.png",
             "body": "团队融合经典堪舆、地理科技与可行性分析，给出经得起检验的建议。",
             "points": [
               "出队前与规划、法务与环评团队对齐目标与限制。",
@@ -448,6 +472,7 @@ export const ROUTES = [
             "dividerSubtitle": "客户普遍回馈",
             "title": "稳定・护持・荣耀",
             "imageLabel": "地形成果",
+            "imageUrl": "/images/page-fs-dragon/dragon-img-04.png",
             "body": "依圣图行事的项目在审查、融资与社区沟通上更顺畅。",
             "points": [
               "旗舰项目凭借天赐地势，客流稳定、溢价能力强。",
@@ -1390,27 +1415,7 @@ export const ROUTES = [
   },
   {
     path: '/privacy',
-    element: (
-      <ContentPage
-        title="Privacy Policy"
-        intro="We respect the sensitivity of personal birth data, charts and proprietary business information. This policy outlines how we collect, store and protect your information."
-        sections={[
-          {
-            heading: 'Information we collect',
-            bullets: [
-              'Birth data, names and contact details supplied for chart work.',
-              'Property layouts, photos and business metrics for Feng Shui and corporate audits.',
-              'Payment details processed securely via trusted gateways.',
-            ],
-          },
-          {
-            heading: 'How we safeguard data',
-            body: 'All files are stored in encrypted folders with restricted access. We do not share your information with third parties unless required by law or explicitly authorised by you.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    element: <LegalPage policyKey="privacy" />,
   },
   {
     path: '/terms',

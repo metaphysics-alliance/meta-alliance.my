@@ -82,9 +82,13 @@ function getDefaultNewsletter(lang){
 const Card = ({ section }) => (
   <div className="card-3d p-6 md:p-8 flex flex-col md:flex-row gap-6">
     <div className="w-full md:w-1/3 aspect-video md:aspect-square">
-      <div className={`${placeholderStyles} w-full h-full`}>
-        {section.imageLabel || 'Visual Preview'}
-      </div>
+      {section.imageUrl ? (
+        <img src={section.imageUrl} alt={section.title || 'Service Image'} className="w-full h-full object-cover rounded-xl" />
+      ) : (
+        <div className={`${placeholderStyles} w-full h-full`}>
+          {section.imageLabel || 'Visual Preview'}
+        </div>
+      )}
     </div>
     <div className="flex-1 space-y-4">
       {section.title ? <h3 className="text-2xl font-semibold text-gold">{section.title}</h3> : null}
@@ -115,6 +119,27 @@ const CTASection = ({ cta }) => (
   </div>
 )
 
+const GallerySection = ({ images = [] }) => (
+  <div className="container">
+    <div className="grid gap-4 sm:grid-cols-2">
+      {images.map((image) => (
+        <figure key={image.src} className="card-3d overflow-hidden rounded-xl">
+          <img
+            src={image.src}
+            alt={image.alt || image.label || 'Service visual'}
+            className="h-full w-full object-cover"
+          />
+          {(image.label || image.caption) ? (
+            <figcaption className="px-4 py-3 text-sm text-white/70">
+              {image.label || image.caption}
+            </figcaption>
+          ) : null}
+        </figure>
+      ))}
+    </div>
+  </div>
+)
+
 function buildFromContent(content, lang){
   const labels = FALLBACK_LABELS[lang] ?? FALLBACK_LABELS.EN
   const defaultCta = getDefaultCta(lang)
@@ -129,6 +154,7 @@ function buildFromContent(content, lang){
     dividerSubtitle: content.overviewSubtitle ?? labels.overviewDividerSubtitle,
     title: content.overviewTitle ?? content.title,
     imageLabel: content.imageLabel ?? labels.overviewImageLabel,
+    imageUrl: content.overviewImageUrl,
     body: content.overviewBody ?? subtitle,
     points: content.bullets ?? [],
   })
@@ -139,6 +165,7 @@ function buildFromContent(content, lang){
       dividerTitle: content.idealHeading ?? labels.idealDividerTitle,
       dividerSubtitle: content.idealSubtitle ?? labels.idealDividerSubtitle,
       title: content.idealTitle ?? labels.idealTitle,
+      imageUrl: content.idealImageUrl,
       body: content.ideal ?? '',
       points: content.idealPoints,
     })
@@ -156,6 +183,9 @@ function buildFromContent(content, lang){
     cta: content.cta ?? defaultCta,
     newsletterTitle: content.newsletterTitle ?? defaultNewsletter.title,
     newsletterSubtitle: content.newsletterSubtitle ?? defaultNewsletter.subtitle,
+    gallery: Array.isArray(content.gallery) ? content.gallery : undefined,
+    galleryDividerTitle: content.galleryDividerTitle,
+    galleryDividerSubtitle: content.galleryDividerSubtitle,
   }
 }
 
@@ -194,6 +224,9 @@ export default function CelestialServicePage({ serviceKey, content }){
   const defaultNewsletter = getDefaultNewsletter(lang)
   const newsletterTitle = data.newsletterTitle ?? defaultNewsletter.title
   const newsletterSubtitle = data.newsletterSubtitle ?? defaultNewsletter.subtitle
+  const galleryImages = Array.isArray(data.gallery) ? data.gallery : []
+  const galleryDividerTitle = data.galleryDividerTitle
+  const galleryDividerSubtitle = data.galleryDividerSubtitle
   const mapLabels = MAP_DIVIDER[lang] ?? MAP_DIVIDER.EN
 
   return (
@@ -214,6 +247,13 @@ export default function CelestialServicePage({ serviceKey, content }){
             </div>
           </section>
         ))}
+
+        {galleryImages.length ? (
+          <section className="space-y-6">
+            <SectionDivider title={galleryDividerTitle} subtitle={galleryDividerSubtitle} />
+            <GallerySection images={galleryImages} />
+          </section>
+        ) : null}
 
         {cta ? (
           <section className="space-y-6">

@@ -16,9 +16,9 @@ export default function MapCard({ variant = 'section', id = 'location', classNam
     'Malaysia.'
   ]
 
-  const email = 'admin@meta-alliance.my'
-  const whatsappDisplay = '+60-17-587-3141'
-  const whatsappLink = 'https://wa.me/60175873141'
+  const email = 'sales@meta-alliance.my'
+  const whatsappDisplay = '+60-16-587-3141'
+  const whatsappLink = 'https://wa.me/60165873141'
 
   const lat = 3.15494
   const lng = 101.59737

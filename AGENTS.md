@@ -59,6 +59,7 @@ Commit & Work IDs
     - `MA-CONTACT-FORM-WORKFLOW-2025-10-15T15:43:00+08:00`
     - `MA-PAGE-BANNER-UPDATE-2025-10-15T16:05:00+08:00`
 - Use concise conventional commits (feat/fix/chore/refactor/docs) with a short scope.
+- Permanent instruction: whenever you create a new Work ID, also append a side-by-side single-line change summary for that Work ID in the `Work Log` section of this document.
 
 Verification Checklist (before push/PR)
 
@@ -109,3 +110,14 @@ Work Log (for resume)
 - MA-FIX-USEI18N-IMPORT-2025-10-16T21:16:11+08:00
 - MA-FIX-I18N-FALLBACK-LOGIC-2025-10-16T21:18:25+08:00
 - MA-FIX-ENCODING-ISSUES-PAGECONFIG-2025-10-17T13:01:00+08:00: Fixed character encoding issues and resulting syntax errors in src/routes/pageConfig.jsx.
+- MA-GEMINI-CONTEXT-2025-10-18T14:00:00+08:00: Created `GEMINI.md` to provide context for future AI interactions.
+- MA-SERVICE-PAGE-REFACTOR-2025-10-18T15:00:00+08:00: Refactored the celestial service pages to use a consistent template and added images to the `bazi` and `ziwei` pages. Renamed image directory and updated paths.
+- MA-QIMEN-IMAGES-2025-10-18T15:30:00+08:00: Added images to the "Arcane Strategy Matrix (Qi Men)" page.
+- MA-ZIMEI-RENAME-2025-10-18T16:00:00+08:00: Renamed the `zimei-page` directory to `page-zimei` and updated the image paths.
+- MA-MAP-CARD-UPDATE-2025-10-18T16:30:00+08:00: Updated email and WhatsApp number on the MapCard component.
+- MA-PRIVACY-POLICY-UPDATE-2025-10-18T17:00:00+08:00: Rewrote the Privacy Policy based on Malaysian PDPA, added content to dictionary, created a generic `LegalPage` component, and added a downloadable PDF link.
+- MA-FIX-DICTIONARY-SYNTAX-2025-10-18T17:15:00+08:00: Fixed a syntax error in `shared/i18n/dictionary.js` by adding a missing comma and removing a duplicated object.
+- MA-PRIVACY-CN-POLICY-FIX-2025-10-19T00:41:37+08:00: Reattached the CN privacy policy data to the shared dictionary so the CN legal page renders correctly across both stacks.
+- MA-AGENTS-WORKID-INSTRUCTION-2025-10-19T14:40:00+08:00: Added permanent rule requiring every new Work ID to include a matching summary entry in the Work Log.
+- MA-OFFICE-POWER-IMAGERY-2025-10-19T15:05:00+08:00: Wired Office Power Alignment sections on both stacks to the `/public/images/page-fs-office` assets and registered the new Next.js route.
+- MA-DRAGON-VEIN-IMAGERY-2025-10-19T15:25:00+08:00: Linked Dragon Vein Oracle sections to `/public/images/page-fs-dragon`, updated shared service data, and added the Next.js route.

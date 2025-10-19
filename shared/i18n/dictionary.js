@@ -438,16 +438,179 @@ dictionary.EN.about = {
   faq: {
     title: 'FAQ',
     items: [
-      { q: 'How long is a session?', a: 'Typically 60–90 minutes for individuals; 90–120 minutes for teams.' },
+      { q: 'How long is a session?', a: 'Typically 60-90 minutes for individuals; 90-120 minutes for teams.' },
       { q: 'How should I prepare?', a: 'Share your birth details, goals and current decisions; we will guide the rest.' },
-      { q: 'Do you guarantee accuracy?', a: 'We aim for exceptional consistency via cross‑validation and disciplined timing, but no outcome can be guaranteed.' },
-      { q: 'Do you offer bilingual sessions?', a: 'Yes — English and Chinese.' },
+      { q: 'Do you guarantee accuracy?', a: 'We aim for exceptional consistency via cross-validation and disciplined timing, but no outcome can be guaranteed.' },
+      { q: 'Do you offer bilingual sessions?', a: 'Yes - English and Chinese.' },
       { q: 'How do I start?', a: 'Contact us to book a discovery call.' }
     ]
   },
   cta: { label: 'Contact Us', title: 'Ready to get clarity?', message: 'Share your goals and timing horizon. We will propose a path and schedule a discovery call.' }
-}
-
+};
+dictionary.EN.legal = {
+  privacy: {
+    title: 'Privacy Policy',
+    last_updated: 'October 19, 2025',
+    intro: 'This notice explains how Metaphysics Alliance collects, uses, stores, and shares personal data across consultations, audits, events, and digital products. It also summarises the rights available to you under the Personal Data Protection Act 2010 (Malaysia).',
+    downloadUrl: '/privacy-policy.pdf',
+    summary: [
+      {
+        title: 'Coverage',
+        description: 'Applies to clients, prospects, workshop participants, and visitors engaging with Metaphysics Alliance services, reports, events, and digital platforms.',
+      },
+      {
+        title: 'Regulation',
+        description: 'We comply with the Personal Data Protection Act 2010 (Malaysia) and honour contractual commitments for cross-border engagements.',
+      },
+      {
+        title: 'Support',
+        description: 'Direct privacy questions to <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a>. Critical incidents are escalated within 24 hours.',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. Who we are & scope',
+        intro: 'Metaphysics Alliance (meta-alliance.my) is the data controller for personal data we collect when you interact with our team, receive services, purchase digital products, or visit our sites.',
+        items: [
+          {
+            title: 'When we act as controller',
+            description: 'We determine the purpose and means of processing when you submit data through enquiry forms, booking requests, payments, events, or audits that we initiate. We decide how long that data is retained and which safeguards apply.',
+          },
+          {
+            title: 'When we act as processor',
+            description: 'For enterprise engagements we may handle staff or customer data supplied by you. We only use that information to deliver the contracted work, follow your documented instructions, and delete or return the data once the work concludes.',
+          },
+        ],
+        note: 'By engaging us you confirm that any third-party data you supply was collected lawfully and that you have authority to share it.',
+      },
+      {
+        heading: '2. Personal data we collect',
+        intro: 'We operate on the principle of data minimisation—collecting only what is required to deliver accurate readings, audits, and support.',
+        items: [
+          {
+            title: 'Identity & contact details',
+            description: 'Name, preferred honorific, email, phone number, company information, billing address, and communication preferences.',
+          },
+          {
+            title: 'Consultation inputs',
+            description: 'Birth details (date, time, place), floor plans, team structures, business metrics, questionnaires, and other materials you provide so that we can perform calculations and design recommendations.',
+          },
+          {
+            title: 'Operational & transaction data',
+            description: 'Service history, booking information, invoices, payment confirmations (processed via secure gateways), support enquiries, session notes, and follow-up actions.',
+          },
+          {
+            title: 'Website & systems data',
+            description: 'Language preference cookies, device metadata, and anonymised analytics generated through privacy-filtered tools. We do not run behavioural advertising or sell your browsing history.',
+          },
+        ],
+        note: 'Where sensitive personal data (for example, health indicators or family circumstances) is relevant to your consultation, we rely on your explicit consent and restrict internal access to authorised consultants only.',
+      },
+      {
+        heading: '3. How we use personal data',
+        intro: 'We rely on contract performance, legitimate interests, legal obligations, and consent (where required) to process personal data.',
+        items: [
+          {
+            title: 'Deliver readings, audits, and programmes',
+            description: 'Preparing charts, analytics, written reports, digital dashboards, and briefings; scheduling sessions; tailoring recommendations to your objectives.',
+            legal: 'Legal basis: contract performance & legitimate interests.',
+          },
+          {
+            title: 'Client support & communications',
+            description: 'Responding to enquiries, sharing progress updates, sending resource materials, and providing post-engagement follow-up when you request it.',
+            legal: 'Legal basis: legitimate interests & consent (for optional updates).',
+          },
+          {
+            title: 'Operations & finance',
+            description: 'Billing, accounting, record keeping, fraud prevention, and verifying identity or authority where mandated.',
+            legal: 'Legal basis: legal obligation & legitimate interests.',
+          },
+          {
+            title: 'Compliance & risk management',
+            description: 'Investigating complaints, enforcing agreements, protecting intellectual property, and responding to lawful requests from authorities.',
+            legal: 'Legal basis: legal obligation & legitimate interests.',
+          },
+        ],
+      },
+      {
+        heading: '4. Retention & security',
+        intro: 'We maintain structured retention schedules so data is stored only for as long as it remains useful or legally required.',
+        items: [
+          {
+            title: 'Retention windows',
+            description: 'Core client files and invoices are stored for seven (7) years to satisfy PDPA and accounting requirements. Prospect enquiries with no follow-up are deleted after 18 months. Raw analysis inputs—floor plans, spreadsheets, recordings—are purged within 90 days of project sign-off unless you request an extended archive.',
+          },
+          {
+            title: 'Security controls',
+            description: 'Safeguards include encrypted storage, role-based access, secure portals for large files, mandatory confidentiality agreements, and annual security reviews with documented remediation plans.',
+            bullets: [
+              'Production systems are hosted in ISO 27001-certified environments.',
+              'Portable devices are protected with full-disk encryption and biometric access.',
+              'Data shared with consultants uses expiring links or vetted collaboration suites.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '5. Sharing & international transfers',
+        intro: 'We never sell personal data. Transfers occur only when necessary to deliver services or comply with the law.',
+        items: [
+          {
+            title: 'Vetted processors',
+            description: 'We engage payment gateways, secure cloud storage, analytics, transcription, and communication providers located in Malaysia, Singapore, or jurisdictions with comparable safeguards. Each provider signs a PDPA-aligned data processing agreement.',
+          },
+          {
+            title: 'Cross-border processing',
+            description: 'When tools process data outside Malaysia, we ensure contractual clauses mandate equivalent protection and enable audits if required.',
+          },
+        ],
+        bullets: [
+          'We disclose personal data when compelled by law, court order, or governmental authority, and we document each disclosure.',
+          'If Metaphysics Alliance undergoes a merger or acquisition, you will be notified before data is transferred and given the opportunity to opt out where applicable.',
+        ],
+      },
+      {
+        heading: '6. Your rights & preferences',
+        columns: [
+          {
+            title: 'You may exercise the following rights:',
+            points: [
+              'Request access to the personal data we hold about you.',
+              'Ask for corrections to inaccurate or incomplete data.',
+              'Withdraw consent to non-essential processing and opt out of marketing messages at any time.',
+              'Request deletion or anonymisation, subject to legal retention requirements.',
+              'Request a portable copy of data you provided to us.',
+            ],
+          },
+          {
+            title: 'How to submit a request:',
+            points: [
+              'Email <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a> with the subject line “PDPA Request” and specify the right you wish to exercise.',
+              'We acknowledge requests within one (1) business day and provide a full response within five (5) business days, or explain if we require additional time (maximum 21 days allowed by PDPA).',
+              'We may request proof of identity or authority to protect your data from wrongful disclosure.',
+              'If we must retain certain records for legal reasons, we will explain the rationale and confirm once retention obligations expire.',
+            ],
+          },
+        ],
+        note: 'Marketing emails include an unsubscribe link. WhatsApp broadcasts and community groups are invitation-only and require explicit opt-in.',
+      },
+      {
+        heading: '7. Updates to this notice',
+        bullets: [
+          'We review and update this policy whenever we launch new services, adopt new data processors, or change how we use personal data.',
+          'Material changes will be announced on meta-alliance.my/legal/privacy and, where applicable, communicated directly to active clients.',
+        ],
+      },
+    ],
+    contact: {
+      name: 'Data Protection Lead, Metaphysics Alliance',
+      email: 'privacy@meta-alliance.my',
+      phone: '+60 16-587-3141',
+      hours: 'We acknowledge all privacy requests within 24 hours and aim to resolve them within five business days.',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+};
 // About page content (CN)
 dictionary.CN.about = {
   hero: {
@@ -531,7 +694,175 @@ dictionary.CN.about = {
     ]
   },
   cta: { label: '联系我们', title: '准备开始？', message: '告诉我们你的目标与时间规划。我们会提供路线建议并安排首次沟通。' }
-}
+
+};
+
+dictionary.CN.legal = {
+  privacy: {
+    title: '隐私政策',
+    last_updated: '2025年10月19日',
+    intro: '本政策阐述 Metaphysics Alliance 在咨询、审计、课程与数字产品中的个人数据收集、使用、保存和分享方式，并说明您在马来西亚《2010 年个人数据保护法》（PDPA）下的权利。',
+    downloadUrl: '/privacy-policy-cn.pdf',
+    summary: [
+      {
+        title: '适用范围',
+        description: '适用于与 Metaphysics Alliance 互动的客户、潜在客户、课程学员、活动参与者以及访问 meta-alliance.my 的访客。'
+      },
+      {
+        title: '合规标准',
+        description: '遵循马来西亚《2010 年个人数据保护法》，并履行跨境合作的合同义务与安全条款。'
+      },
+      {
+        title: '支援窗口',
+        description: '隐私问题请发邮件至 <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a>；重大事件将在 24 小时内升级处理。'
+      }
+    ],
+    sections: [
+      {
+        heading: '1. 我们的角色与适用范围',
+        intro: 'Metaphysics Alliance（meta-alliance.my）在咨询、审计、活动及数字平台收集的个人数据上承担数据控制者角色。',
+        items: [
+          {
+            title: '当我们是数据控制者',
+            description: '当您通过咨询表单、预约、付款、活动或由我们发起的审计提交资料时，我们决定处理目的与方式，并设定保留期限及安全措施。'
+          },
+          {
+            title: '当我们是数据处理者',
+            description: '企业项目中，如您向我们提供员工或客户数据，我们仅按合同与书面指示处理，并在项目结束后删除或归还相关资料。'
+          }
+        ],
+        note: '向我们提供第三方资料时，请确保该资料是合法收集并且您具有分享授权。'
+      },
+      {
+        heading: '2. 我们收集的个人数据',
+        intro: '我们遵循“数据最小化”原则，仅收集完成服务所需的信息。',
+        items: [
+          {
+            title: '身份与联系信息',
+            description: '姓名、称谓、邮箱、电话、公司信息、账单地址及沟通偏好等基本资料。'
+          },
+          {
+            title: '咨询所需资料',
+            description: '出生日期、时间、地点，平面图、团队结构、业务指标、问卷，以及为完成分析而提供的其他材料。'
+          },
+          {
+            title: '运营与交易记录',
+            description: '服务历史、预约信息、发票、付款确认（由安全通道处理）、咨询记录及后续跟进。'
+          },
+          {
+            title: '网站与系统数据',
+            description: '语言偏好 Cookie、设备元数据、匿名化分析数据。我们不进行行为广告，也不会出售浏览记录。'
+          }
+        ],
+        note: '若服务需要处理敏感个人数据（如健康状况、家庭信息），我们会事先征得您的明确同意，并仅允许相关顾问访问。'
+      },
+      {
+        heading: '3. 数据使用目的',
+        intro: '我们依据合同履行、合法利益、法律义务及（如需）您的同意来处理数据。',
+        items: [
+          {
+            title: '交付咨询、审计与方案',
+            description: '用于绘制命盘、分析、撰写报告、准备简报、安排会议，并根据目标定制建议。',
+            legal: '法律依据：合同履行 + 合法利益。'
+          },
+          {
+            title: '客户沟通与支持',
+            description: '回应咨询、汇报进度、发送资源资料，以及在您要求时提供后续支持。',
+            legal: '法律依据：合法利益 + 同意（适用于可选更新）。'
+          },
+          {
+            title: '运营与财务管理',
+            description: '账务、会计、记录保存、防范欺诈，以及在需要时核实身份或授权。',
+            legal: '法律依据：法律义务 + 合法利益。'
+          },
+          {
+            title: '合规与风险管理',
+            description: '调查投诉、执行协议、保护知识产权，并回应主管机关的合法要求。',
+            legal: '法律依据：法律义务 + 合法利益。'
+          }
+        ]
+      },
+      {
+        heading: '4. 数据保留与安全',
+        intro: '我们设有保留周期，确保数据仅在必要期限内存放。',
+        items: [
+          {
+            title: '保留期限',
+            description: '核心客户文件与发票保留七（7）年以符合法规；无后续接触的潜在客户资料在 18 个月后删除；原始分析素材（平面图、表格、录音）于项目验收后 90 天内清除，除非您要求延长存档。'
+          },
+          {
+            title: '安全控制',
+            description: '我们实施加密存储、分级权限、安全传输及年度安全审查，并记录整改计划。',
+            bullets: [
+              '生产环境托管于通过 ISO 27001 认证的平台。',
+              '移动设备启用全盘加密与生物识别访问。',
+              '与顾问共享资料时使用限时链接或受控协作工具。'
+            ]
+          }
+        ]
+      },
+      {
+        heading: '5. 数据共享与跨境传输',
+        intro: '我们不会出售个人数据，仅在履约或符合法律要求时共享。',
+        items: [
+          {
+            title: '受信的数据处理方',
+            description: '支付通道、云端存储、分析、转录与通讯供应商位于马来西亚、新加坡或具备同等保护水平的地区，并签署符合 PDPA 的数据处理协议。'
+          },
+          {
+            title: '跨境处理',
+            description: '当工具在境外处理数据时，我们通过合同条款要求等同保护，并保留审计权。'
+          }
+        ],
+        bullets: [
+          '若法律、法院或主管机关要求披露，我们会依法提供并记录。',
+          '如 Metaphysics Alliance 发生合并或收购，我们会提前通知并提供退出选项。'
+        ]
+      },
+      {
+        heading: '6. 您的个人数据权利',
+        columns: [
+          {
+            title: '您可行使的权利：',
+            points: [
+              '申请查阅我们持有的个人数据；',
+              '要求更正不准确或不完整的数据；',
+              '随时撤回非必要用途（含行销资讯）的同意；',
+              '在符合法定保留要求的前提下，请求删除或匿名化个人数据；',
+              '申请获取可移转的个人数据副本。'
+            ]
+          },
+          {
+            title: '提交请求的方式：',
+            points: [
+              '发送邮件至 <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a>，标题注明 “PDPA Request”，并说明需求。',
+              '我们会在 1 个工作日内确认，并在 5 个工作日内完成回复；如需延长（最长 21 天），会同步说明原因。',
+              '为保障安全，我们可能要求验证身份或授权。',
+              '如因法规需保留部分资料，我们会说明理由，并在义务届满后通知您。'
+            ]
+          }
+        ],
+        note: '营销邮件均附退订链接；WhatsApp 广播或社群需经您明确同意才会加入。'
+      },
+      {
+        heading: '7. 政策更新',
+        bullets: [
+          '当我们推出新服务、引入新处理方或调整数据用途时，将审阅并更新本政策。',
+          '重大变更会在 meta-alliance.my/legal/privacy 公布，并在适用时通知现有客户。'
+        ]
+      }
+    ],
+    contact: {
+      name: 'Metaphysics Alliance 隐私负责人',
+      email: 'privacy@meta-alliance.my',
+      phone: '+60 16-587-3141',
+      hours: '我们会在 24 小时内回应所有隐私请求，并力争在 5 个工作日内完成处理。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.'
+    }
+  }
+};
+
+
 // Inject placeholder video src/thumbnails for About videos (EN/CN)
 try {
   if (

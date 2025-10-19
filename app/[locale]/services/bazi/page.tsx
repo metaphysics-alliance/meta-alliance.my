@@ -1,63 +1,19 @@
-import Hero from '@/components/Hero';
-import StructuredData from '@/components/StructuredData'
-import Content from '@/components/Content';
-import MediaGrid from '@/components/MediaGrid';
-import Testimonials from '@/components/Testimonials';
-import MapEmbed from '@/components/MapEmbed';
+import CelestialServicePage from '@/components/CelestialServicePage';
 import { getDict, type Locale } from '@/lib/i18n';
 import type { Metadata } from 'next'
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
   const locale = params.locale || 'EN'
   const dict = getDict(locale)
-  const title = dictTitle(dict as any, 'svc.bazi')
-  const desc = (dict as any).why_long || 'BaZi analysis aligned to True Solar Time and classical methods.'
+  const service = dict.services.bazi
   return {
-    title: String(title),
-    description: String(desc).slice(0, 160),
+    title: service.title,
+    description: service.subtitle,
     alternates: { canonical: `/${locale}/services/bazi`, languages: { en: '/EN/services/bazi', zh: '/CN/services/bazi' } },
-    openGraph: { title: String(title), description: String(desc).slice(0, 160), url: `/${locale}/services/bazi` },
+    openGraph: { title: service.title, description: service.subtitle, url: `/${locale}/services/bazi` },
   }
 }
 
 export default function Page({ params }:{ params:{ locale: Locale }}){
-  const dict = getDict(params.locale);
-  const title = dictTitle(dict, 'svc.bazi');
-  const base = process.env.NEXT_PUBLIC_SITE_URL || ''
-  return (
-    <div className='space-y-10'>
-      <StructuredData json={{
-        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: params.locale, item: `${base}/${params.locale}` },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/${params.locale}/services` },
-          { '@type': 'ListItem', position: 3, name: String(title), item: `${base}/${params.locale}/services/bazi` },
-        ]
-      }} />
-      <StructuredData json={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        serviceType: String(title),
-        provider: { '@type': 'Organization', name: 'Metaphysics Alliance', url: base || undefined },
-        areaServed: ['Malaysia','Singapore','APAC'],
-        availableLanguage: ['en','zh'],
-        url: `${base}/${params.locale}/services/bazi`
-      }} />
-      <Hero title={title} />
-      <Content title={title} />
-      <MediaGrid/>
-      <Testimonials/>
-      <section className='space-y-4'>
-        <h2 className='text-2xl md:text-3xl font-semibold'>Map</h2>
-        <MapEmbed/>
-      </section>
-    </div>
-  );
+  return <CelestialServicePage serviceKey="bazi" lang={params.locale} />;
 }
-
-function dictTitle(dict:any, key:string){
-  try{
-    return key.split('.').reduce((o:any,k)=>o&&o[k]!=null?o[k]:key, dict);
-  }catch(e){return key;}
-}
-

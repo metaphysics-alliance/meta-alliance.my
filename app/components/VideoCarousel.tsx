@@ -1,6 +1,7 @@
-"use client"
+'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import type { Dictionary, Locale } from '@/lib/i18n'
 import { pick } from '@/lib/i18n'
@@ -57,57 +58,76 @@ export default function VideoCarousel({ dict, path, items, locale = 'EN' as Loca
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [lang, setLang] = useState<'EN' | 'CN'>(locale === 'CN' ? 'CN' : 'EN')
   const [modalTab, setModalTab] = useState<'video' | 'script'>('video')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % derived.length)
+  }
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + derived.length) % derived.length)
+  }
+
+  useEffect(() => {
+    if (!isHovering) {
+      timerRef.current = setInterval(() => {
+        handleNext()
+      }, 5000)
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+      }
+    }
+  }, [isHovering, derived.length])
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-black/15 p-6 md:p-10">
-      <div className="flex items-center justify-between">
-        <div className="text-sm text-white/60">Swipe to explore</div>
-        <div className="inline-flex overflow-hidden rounded-lg border border-white/15 text-xs">
-          <button
-            className={`px-3 py-1.5 ${lang === 'EN' ? 'bg-white/15 text-white' : 'text-white/70 hover:bg-white/10'}`}
-            onClick={() => setLang('EN')}
-          >EN</button>
-          <button
-            className={`px-3 py-1.5 ${lang === 'CN' ? 'bg-white/15 text-white' : 'text-white/70 hover:bg-white/10'}`}
-            onClick={() => setLang('CN')}
-          >中文</button>
+    <div
+      className="relative w-full aspect-video bg-black/20 overflow-hidden group"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      {derived.map((v, idx) => (
+        <div
+          key={`${v.title}-${idx}`}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-out ${currentIndex === idx ? 'opacity-100' : 'opacity-0'}`}>
+          <img
+            src={v.thumbnail || '/images/video/placeholder.svg'}
+            alt={v.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <button
+              onClick={() => { setOpenIndex(idx); setModalTab(v.src ? 'video' : 'script') }}
+              className="w-20 h-20 rounded-full bg-black/50 flex items-center justify-center text-white/80 hover:bg-black/70 transition-colors">
+              <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </button>
+          </div>
+          <div className="absolute bottom-0 left-0 p-8 text-white">
+            <h3 className="text-2xl font-semibold">{v.title}</h3>
+            <p className="text-white/80">{v.description}</p>
+          </div>
         </div>
-      </div>
-      <div className="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2">
-        {derived.map((v, idx) => (
-          <article
-            key={`${v.title}-${idx}`}
-            className="min-w-[280px] max-w-[320px] shrink-0 snap-start rounded-2xl border border-white/10 bg-black/35 p-4 backdrop-blur-md"
-          >
-            <div className="relative mb-3 h-40 w-full overflow-hidden rounded-xl ring-1 ring-white/10">
-              <img
-                src={v.thumbnail || '/images/video/placeholder.svg'}
-                alt={v.title}
-                className="h-full w-full object-cover object-center"
-              />
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <div className="h-10 w-10 rounded-full bg-black/50 ring-1 ring-white/30" />
-              </div>
-            </div>
-            <h3 className="text-base font-semibold text-white/90">{v.title}</h3>
-            {v.description ? <p className="mt-1 text-sm text-white/65">{v.description}</p> : null}
-            <div className="mt-3 flex gap-2">
-              <button
-                onClick={() => { setOpenIndex(idx); setModalTab(derived[idx]?.src ? 'video' : 'script') }}
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/85 transition hover:border-gold/40 hover:text-white"
-              >
-                {derived[idx]?.src ? 'Play' : 'View Script'}
-              </button>
-              <button
-                onClick={() => { setOpenIndex(idx); setModalTab('script') }}
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/85 transition hover:border-gold/40 hover:text-white"
-              >
-                Script
-              </button>
-            </div>
-          </article>
-        ))}
-      </div>
+      ))}
+
+      <button
+        onClick={handlePrev}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition rounded-xl bg-black/50 hover:bg-black/70 border border-white/15 p-2"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={handleNext}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition rounded-xl bg-black/50 hover:bg-black/70 border border-white/15 p-2"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
 
       {openIndex !== null ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -150,6 +170,7 @@ export default function VideoCarousel({ dict, path, items, locale = 'EN' as Loca
                     src={derived[openIndex!]?.src}
                     poster={derived[openIndex!]?.thumbnail || '/images/video/placeholder.svg'}
                     controls
+                    autoPlay
                     preload="metadata"
                     className="h-auto w-full rounded-xl ring-1 ring-white/15"
                   />
