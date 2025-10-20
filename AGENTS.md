@@ -43,11 +43,19 @@ Deployment Notes
   - CI workflow `deploy-gh-pages.yml` must set `cname: meta-alliance.my`.
 - Do not remove or overwrite `CNAME` in builds/commits.
 
+GitHub Automation
+
+- All pushes to `main` trigger the `deploy-gh-pages.yml` GitHub Actions workflow, which builds the project and deploys `dist/` to the `gh-pages` branch.
+- Before pushing, run the Verification Checklist locally so automation jobs do not fail.
+- Keep workflow configuration, secrets, and branch protections intact; raise any required updates via PR review before changing automation.
+- Ensure every push includes the latest `CNAME` and static asset updates so automation can publish the custom domain correctly.
+- GitHub organization/account ID: `metaphysics-alliance`.
+
 i18n & Content Rules
 
 - All new content must support EN and CN where relevant.
 - About milestones and timeline items should render consistently on both stacks.
-- When adding visual affordances (e.g., icons), keep data under `shared/i18n/dictionary.js` or add non‑breaking post‑processing.
+- When adding visual affordances (e.g., icons), keep data under `shared/i18n/dictionary.js` or add non-breaking post-processing.
 
 Commit & Work IDs
 
@@ -121,3 +129,10 @@ Work Log (for resume)
 - MA-AGENTS-WORKID-INSTRUCTION-2025-10-19T14:40:00+08:00: Added permanent rule requiring every new Work ID to include a matching summary entry in the Work Log.
 - MA-OFFICE-POWER-IMAGERY-2025-10-19T15:05:00+08:00: Wired Office Power Alignment sections on both stacks to the `/public/images/page-fs-office` assets and registered the new Next.js route.
 - MA-DRAGON-VEIN-IMAGERY-2025-10-19T15:25:00+08:00: Linked Dragon Vein Oracle sections to `/public/images/page-fs-dragon`, updated shared service data, and added the Next.js route.
+- MA-GIT-PUSH-PREPARATION-2025-10-19T17:30:00+08:00: Prepared the project for a git push by staging and committing all changes, including new service pages, legal pages, and updated components.
+- MA-COSMIC-CYCLE-IMAGERY-2025-10-19T18:10:00+08:00: Placed the page-3core imagery across all Cosmic Cycle of Fate sections in both stacks and exposed the new Next.js service route.
+- MA-COSMIC-CYCLE-TITLE-2025-10-19T18:20:00+08:00: Renamed the CN title for the Cosmic Cycle service to 三元九运 across both stacks.
+- MA-CELESTIAL-STAR-IMAGERY-2025-10-19T18:40:00+08:00: Routed page-flying-star visuals into every Celestial Star Matrix section for both stacks and stood up the matching Next.js service entry.
+- MA-ENERGY-CONVERGENCE-IMAGERY-2025-10-19T18:55:00+08:00: Applied page-land imagery to all Energy Convergence Field sections in both stacks and registered the shared Next.js route.
+- MA-ICHING-IMAGERY-2025-10-19T19:05:00+08:00: Connected page-iching assets to the I-Ching Energy Matrix content for both stacks and added the Next.js service route.
+- MA-GITHUB-AUTOMATION-2025-10-19T19:15:00+08:00: Documented the GitHub Actions push-to-deploy process and safeguards for the automation pipeline in AGENTS.md.

@@ -349,6 +349,290 @@ export const CELESTIAL_SERVICES = {
       newsletterTitle: 'Landform Intelligence Alerts',
       newsletterSubtitle: 'Terrain case studies, acquisition timing cues and qi stewardship strategies.'
     },
+    fsCycle: {
+      badge: 'Feng Shui Layout',
+      title: 'Cosmic Cycle of Fate Layout',
+      subtitle: 'Ride every twenty four Solar Term without guesswork by installing seasonal Feng Shui adjustments that keep your property synchronised with moving qi currents.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Seasonal Playbook',
+          dividerSubtitle: 'What each quarter delivers',
+          title: 'Solar Term Synchronisation',
+          imageLabel: 'Seasonal Strategy Grid',
+          imageUrl: '/images/page-3core/3Core-Img-01.png',
+          body: 'Ride every twenty four Solar Term without guesswork by installing seasonal Feng Shui adjustments that keep your property synchronised with moving qi currents.',
+          points: [
+            'Quarterly tuning plans covering wealth, wellbeing, protection and relationship sectors.',
+            'Integration with household or office calendars so rituals land effortlessly.',
+            'Elemental support kits detailing aromas, colours, nutrition and actions for each season.',
+            'Stakeholder briefing notes so family or teams understand the intention behind each shift.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Who the stewardship supports',
+          title: 'Families and Teams in Motion',
+          imageLabel: 'Seasonal Cohesion Blueprint',
+          imageUrl: '/images/page-3core/3Core-Img-02.png',
+          body: 'Built for families and teams committed to sustaining momentum all year instead of fighting seasonal drag.'
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Delivery Framework',
+          dividerSubtitle: 'How each quarter is managed',
+          title: 'Seasonal Stewardship System',
+          imageLabel: 'Seasonal Control Centre',
+          imageUrl: '/images/page-3core/3Core-Img-03.png',
+          body: 'We provide a structured cadence—briefing, implementation, checkpoints and review—so adjustments never feel ad hoc or mystical.',
+          points: [
+            'Seasonal briefing highlighting focus themes, rituals and success metrics for the upcoming phase.',
+            'Implementation checklists for layout tweaks, supply kits and behavioural prompts.',
+            'Mid-season check-in and end-season review with action logs and metric dashboards.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Performance Outcomes',
+          dividerSubtitle: 'How clients quantify progress',
+          title: 'Rhythm, Revenue, Resilience',
+          imageLabel: 'Seasonal Wins',
+          imageUrl: '/images/page-3core/3Core-Img-04.png',
+          body: 'Expect smoother energy, fewer health dips and more predictable cashflow as the property stays in phase with the calendar.',
+          points: [
+            'Family wellbeing incidents decrease as rest and activity schedules mirror elemental shifts.',
+            'Launches and campaigns timed to seasonal qi outperform prior-year benchmarks.',
+            'Teams report higher morale and lower burnout thanks to built-in recovery rituals.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Claim Your Seasonal Edge',
+        dividerSubtitle: 'Quarterly retainer seats fill quickly',
+        title: 'Subscribe to Cosmic Cycle Stewardship',
+        message: 'Share your current layout, annual priorities and available resources so we can craft the seasonal intervention roadmap.',
+        primaryLabel: 'Unlock Seasonal Stewardship',
+        primaryHref: '/contact',
+        secondaryLabel: 'Preview Seasonal Guide',
+        secondaryHref: '/resources/feng-shui'
+      },
+      newsletterTitle: 'Seasonal Layout Signals',
+      newsletterSubtitle: 'Solar term reminders, ritual checklists and protection alerts delivered before each shift.'
+    },
+    fsMatrix: {
+      badge: 'Feng Shui Layout',
+      title: 'Celestial Star Matrix Design',
+      subtitle: 'Translate Flying Star charts into interior design that feels luxurious and performs like a precision instrument.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Design Intelligence',
+          dividerSubtitle: 'Where aesthetics meets measurable qi',
+          title: 'Flying Star Interior Playbook',
+          imageLabel: 'Interior Energy Matrix',
+          imageUrl: '/images/page-flying-star/flying-img-01.png',
+          body: 'Translate Flying Star charts into interior design that feels luxurious and performs like a precision instrument.',
+          points: [
+            'Sector diagnostics with recommendations for layout, traffic flow and functional zoning.',
+            'Lighting, colour and material palettes tuned to annual, monthly and daily star dynamics.',
+            'Detailed handover packs for designers, contractors and stylists with measurements and specifications.',
+            'Quality assurance visits or video audits prior to handover to ensure compliance.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Who this matrix serves',
+          title: 'Renovations, New Builds, Show Units',
+          imageLabel: 'Design Momentum Map',
+          imageUrl: '/images/page-flying-star/flying-img-02.jpg',
+          body: 'Ideal for renovations, new builds and show units requiring beauty with measurable energetic performance.'
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Design Workflow',
+          dividerSubtitle: 'How we collaborate with your creative team',
+          title: 'Co-Creation Delivery',
+          imageLabel: 'Design Studio Workflow',
+          imageUrl: '/images/page-flying-star/flying-img-03.png',
+          body: 'We slot into your architect and interior ecosystem, providing metaphysical guardrails without stifling creativity.',
+          points: [
+            'Kick-off workshops aligning vision, user journeys and energetic objectives.',
+            'Iterative design reviews overlaying star charts onto plans until aesthetics and qi align.',
+            'Installation supervision plus punch-list adjustments before client reveal.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Performance Outcomes',
+          dividerSubtitle: 'What owners and designers observe',
+          title: 'Awards, Sales, Wellbeing',
+          imageLabel: 'Design Impact',
+          imageUrl: '/images/page-flying-star/flying-img-04.jpg',
+          body: 'Projects win design praise, sell faster and feel calmer because every detail echoes the star matrix.',
+          points: [
+            'Show units and luxury residences achieve faster sell-through and premium pricing.',
+            'Occupants report improved focus, sleep and creative flow as sectors support key life roles.',
+            'Design approvals accelerate because energetic rationale is documented for stakeholders.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Design with Celestial Precision',
+        dividerSubtitle: 'Concept slots limited each quarter',
+        title: 'Commission a Star Matrix Design',
+        message: 'Share your architectural package, timelines and brand positioning so we can co-create the design roadmap.',
+        primaryLabel: 'Start My Design Brief',
+        primaryHref: '/contact',
+        secondaryLabel: 'See Design Outcomes',
+        secondaryHref: '/case-studies/feng-shui'
+      },
+      newsletterTitle: 'Matrix Design Notes',
+      newsletterSubtitle: 'Star trend reports, palette inspirations and implementation tips for design teams.'
+    },
+    fsEnergy: {
+      badge: 'Feng Shui Layout',
+      title: 'Energy Convergence Field',
+      subtitle: 'Fuse Feng Shui, Qi Men and numerology to craft a signature energetic identity for flagship homes, headquarters or hospitality icons.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Signature Identity',
+          dividerSubtitle: 'Where space, timing and brand unite',
+          title: 'Convergence Masterplan',
+          imageLabel: 'Signature Energy Blueprint',
+          imageUrl: '/images/page-land/land-img-01.jpg',
+          body: 'Fuse Feng Shui, Qi Men and numerology to craft a signature energetic identity for flagship homes, headquarters or hospitality icons.',
+          points: [
+            'Holistic masterplan layering orientation, formation timing and numeric branding cues.',
+            'Launch, onboarding and VIP rituals codified to anchor the field in daily operations.',
+            'Audit of signage, pathways, scent and digital touchpoints to maintain convergence.',
+            'KPI dashboard aligning experiential goals with energetic metrics for leadership review.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Who commissions this field',
+          title: 'Hotels, Flagships, Clubs, Boardrooms',
+          imageLabel: 'Signature Presence Map',
+          imageUrl: '/images/page-land/land-img-02.jpg',
+          body: 'Tailored for hotels, retail flagships, clubs and boardrooms that must radiate an unmistakable aura.'
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Commission Process',
+          dividerSubtitle: 'How we partner from concept to handover',
+          title: 'Flagship Project Governance',
+          imageLabel: 'Commission Workflow',
+          imageUrl: '/images/page-land/land-img-03.jpg',
+          body: 'We work alongside brand, architecture, HR and operations so the energetic identity becomes a living system, not a one-time ritual.',
+          points: [
+            'Brand and experience diagnostics aligning story, scent, sound and movement with celestial archetypes.',
+            'Iterative convergence labs with cross-functional stakeholders to test rituals and wayfinding.',
+            'Training manuals and SOP integration so teams can uphold the field long after launch.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Signature Outcomes',
+          dividerSubtitle: 'Metrics owners track',
+          title: 'Presence, Loyalty, Revenue',
+          imageLabel: 'Signature Wins',
+          imageUrl: '/images/page-land/land-img-04.jpg',
+          body: 'Spaces feel unforgettable, teams align faster and commercial metrics hold steady because the field anchors every interaction.',
+          points: [
+            'Flagship venues record higher dwell time, repeat visitation and premium conversions.',
+            'Staff engagement and brand adherence scores climb as rituals embed culture.',
+            'Corporate suites report smoother negotiations and strategic clarity within the energy field.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Anchor Your Signature Field',
+        dividerSubtitle: 'Bespoke commissions by application',
+        title: 'Begin an Energy Convergence Commission',
+        message: 'Outline your property vision, guest journey and success metrics so we can map the convergence roadmap and stakeholders.',
+        primaryLabel: 'Submit Commission Brief',
+        primaryHref: '/contact',
+        secondaryLabel: 'Explore Iconic Cases',
+        secondaryHref: '/case-studies/feng-shui'
+      },
+      newsletterTitle: 'Signature Field Signals',
+      newsletterSubtitle: 'Launch rituals, staff alignment practices and ambience maintenance notes for flagship spaces.'
+    },
+    mmIching: {
+      badge: 'Magnetic Matrix',
+      title: 'I-Ching Energy Matrix',
+      subtitle: 'Turn volatile decisions into measured breakthroughs with I-Ching hexagram intelligence integrated into your strategy dashboard.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Hexagram Intelligence',
+          dividerSubtitle: 'How guidance becomes execution',
+          title: 'Strategic Hexagram Playbook',
+          imageLabel: 'Hexagram Dashboard',
+          imageUrl: '/images/page-iching/iching-img-01.png',
+          body: 'Turn volatile decisions into measured breakthroughs with I-Ching hexagram intelligence integrated into your strategy dashboard.',
+          points: [
+            'Primary and relating hexagrams decoded into scenario storyboards and leadership cues.',
+            'Action plays for talent moves, partnerships and crisis pivots anchored to changing lines.',
+            'Decision calendar aligning upcoming choices with favourable hexagram phases.',
+            'Executive briefing sheets with rituals, communication angles and accountability prompts.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Who thrives with this matrix',
+          title: 'Founders, Chiefs-of-Staff, Strategists',
+          imageLabel: 'Decision Focus Map',
+          imageUrl: '/images/page-iching/iching-img-02.png',
+          body: 'A must-have for founders, chiefs-of-staff and strategists driving multi-threaded initiatives.'
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Analytical Approach',
+          dividerSubtitle: 'How each reading stays rigorous',
+          title: 'Data-Backed Divination',
+          imageLabel: 'Hexagram Lab',
+          imageUrl: '/images/page-iching/iching-img-03.png',
+          body: 'We triangulate classical texts, modern analytics and stakeholder interviews so the matrix feels precise and actionable.',
+          points: [
+            'Multi-method casting to confirm the dominant hexagram narrative before prescribing moves.',
+            'Integration with BaZi and Zi Wei profiles to ensure personal resonance and timing alignment.',
+            'Encrypted delivery workspace with searchable transcripts, diagrams and action trackers.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Strategic Outcomes',
+          dividerSubtitle: 'What teams experience',
+          title: 'Clarity, Confidence, Control',
+          imageLabel: 'Decision Wins',
+          imageUrl: '/images/page-iching/iching-img-04.png',
+          body: 'Leaders report faster decision cycles, fewer reversals and calmer teams when the I-Ching matrix guides the agenda.',
+          points: [
+            'Key approvals land sooner because stakeholders see logical and energetic justification side by side.',
+            'Talent deployment improves as compatibility and timing cues prevent misaligned hires.',
+            'Crisis pivots become measured rather than reactive thanks to contingency hexagrams.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Install Your Hexagram Matrix',
+        dividerSubtitle: 'Strategy retainers filled by screening',
+        title: 'Book an I-Ching Advisory Session',
+        message: 'Share your decision horizon and team structure so we can architect the hexagram intelligence cadence.',
+        primaryLabel: 'Secure Advisory Window',
+        primaryHref: '/contact',
+        secondaryLabel: 'Download Matrix Outline',
+        secondaryHref: '/resources/magnetic-matrix'
+      },
+      newsletterTitle: 'Hexagram Signals',
+      newsletterSubtitle: 'Changing-line alerts, decision rituals and leadership prompts before each critical window.'
+    },
     fsHome: {
       badge: 'Feng Shui Assessment',
       title: 'Home Destiny Compass',
@@ -944,6 +1228,290 @@ export const CELESTIAL_SERVICES = {
       },
       newsletterTitle: '地形情报速递',
       newsletterSubtitle: '掌握择地案例、购地天窗与长期养气秘诀。'
+    },
+    fsCycle: {
+      badge: '风水布局',
+      title: '三元九运',
+      subtitle: '顺着二十四节气调整风水布局，让空间与气场四季同频而不被拖累。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '季度手册',
+          dividerSubtitle: '每一季的关键部署',
+          title: '节气同步蓝图',
+          imageLabel: '节气策略图',
+          imageUrl: '/images/page-3core/3Core-Img-01.png',
+          body: '顺着二十四节气调整风水布局，让空间与气场四季同频而不被拖累。',
+          points: [
+            '提供财富、健康、防护与关系方位的季节性调校计划。',
+            '与家庭或团队行程整合，让仪式与调整自然落地。',
+            '附上香氛、色彩、饮食与行动指南，让五行平衡有据可依。',
+            '准备沟通手册，让成员理解每次调整的意义与注意事项。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '谁最受益',
+          title: '全年保持动能的家庭与团队',
+          imageLabel: '节律协同蓝图',
+          imageUrl: '/images/page-3core/3Core-Img-02.png',
+          body: '适合全年保持动能、不想被季节拖慢的家庭与团队。'
+        },
+        {
+          key: 'method',
+          dividerTitle: '落实机制',
+          dividerSubtitle: '每季如何执行',
+          title: '节律守护系统',
+          imageLabel: '节律控制台',
+          imageUrl: '/images/page-3core/3Core-Img-03.png',
+          body: '我们提供完整节奏：季前简报、落实清单、巡检到复盘，让调整不散乱。',
+          points: [
+            '季前说明会，交代本季主题、仪式与衡量指标。',
+            '执行清单涵盖摆设调整、物资采购与行为提醒。',
+            '季中巡检与季末复盘，附行动日志与指标仪表板。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '成果验证',
+          dividerSubtitle: '客户常见反馈',
+          title: '节奏・营收・复原力',
+          imageLabel: '季节成果',
+          imageUrl: '/images/page-3core/3Core-Img-04.png',
+          body: '随着空间与节令同步，能量更稳、健康起伏更少、现金流更可预测。',
+          points: [
+            '家庭健康与情绪波动下降，因为作息配合五行能量。',
+            '配合节气推出的活动与项目，达成率明显高于往年。',
+            '团队倦怠感下降，因定期内建复原仪式。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '抢占季节先机',
+        dividerSubtitle: '季度顾问名额有限',
+        title: '订阅节律守护计划',
+        message: '告诉我们现有布局、年度目标与资源配置，我们将设计节气干预路线。',
+        primaryLabel: '启动季度守护',
+        primaryHref: '/contact',
+        secondaryLabel: '预览节气指南',
+        secondaryHref: '/resources/feng-shui'
+      },
+      newsletterTitle: '节气情报',
+      newsletterSubtitle: '即时掌握节气提醒、仪式清单与防护预警。'
+    },
+    fsMatrix: {
+      badge: '风水布局',
+      title: '飞星矩阵设计',
+      subtitle: '把飞星盘化成兼具奢华美感与精准能量表现的室内设计。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '设计情报',
+          dividerSubtitle: '美感与能量同步',
+          title: '飞星室内攻略',
+          imageLabel: '室内能量矩阵',
+          imageUrl: '/images/page-flying-star/flying-img-01.png',
+          body: '把飞星盘化成兼具奢华美感与精准能量表现的室内设计。',
+          points: [
+            '逐宫提供布局、动线与机能分区建议。',
+            '灯光、色彩与材质组合依年度、月度乃至日柱飞星调配。',
+            '为设计师、承包商与软装团队准备含尺寸的执行文件。',
+            '交付前复检（现场或远程），确保每项细节符合能量要求。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '谁最适合此矩阵',
+          title: '装修・新建・样板空间',
+          imageLabel: '设计动能地图',
+          imageUrl: '/images/page-flying-star/flying-img-02.jpg',
+          body: '适合装修、新建与样板空间，在颜值与能量表现之间取得平衡。'
+        },
+        {
+          key: 'method',
+          dividerTitle: '协作流程',
+          dividerSubtitle: '如何与设计团队共创',
+          title: '共创式交付',
+          imageLabel: '设计协作流程',
+          imageUrl: '/images/page-flying-star/flying-img-03.png',
+          body: '与建筑师、室内团队紧密协作，在不压制创意的前提下提供玄学护栏。',
+          points: [
+            '启动工作坊，统一愿景、用户旅程与能量目标。',
+            '按阶段审阅图面，将飞星图层叠加至设计方案。',
+            '施工与陈设阶段提供现场或远程监造与微调。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '成果反馈',
+          dividerSubtitle: '业主与设计师的观察',
+          title: '奖项・销售・舒适',
+          imageLabel: '设计成果',
+          imageUrl: '/images/page-flying-star/flying-img-04.jpg',
+          body: '在矩阵护航下，作品兼具奖项质感、销售速度与生活舒适度。',
+          points: [
+            '样板房与豪宅更快售出且溢价更高。',
+            '居住者在专注、睡眠与灵感上明显受益。',
+            '有完整能量说明，设计方案更易取得审批。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '以天星精准设计',
+        dividerSubtitle: '每季限量概念名额',
+        title: '委托飞星矩阵设计',
+        message: '提供建筑资料、时程与品牌定位，我们将共创专属设计路线。',
+        primaryLabel: '开启设计简报',
+        primaryHref: '/contact',
+        secondaryLabel: '查看设计成果',
+        secondaryHref: '/case-studies/feng-shui'
+      },
+      newsletterTitle: '矩阵设计笔记',
+      newsletterSubtitle: '飞星趋势、配色灵感与施工要点一次掌握。'
+    },
+    fsEnergy: {
+      badge: '风水布局',
+      title: '能域汇聚场',
+      subtitle: '融合风水、奇门与数理，为旗舰住宅、总部或酒店打造不可复制的能量标识。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '标志氛围',
+          dividerSubtitle: '空间・时机・品牌一次到位',
+          title: '汇聚总蓝图',
+          imageLabel: '标志能量图',
+          imageUrl: '/images/page-land/land-img-01.jpg',
+          body: '融合风水、奇门与数理，为旗舰住宅、总部或酒店打造不可复制的能量标识。',
+          points: [
+            '整合方位、阵法时序与数理品牌的整体规划。',
+            '设计开幕、员工启动与 VIP 体验的日常仪式。',
+            '全面检视动线、指示、香氛与数位触点，让能量持续汇聚。',
+            '建立 KPI 仪表，让管理层以能量与商业双指标追踪。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '谁最适合此能场',
+          title: '酒店・旗舰门店・会所・董事会议中心',
+          imageLabel: '标志动能地图',
+          imageUrl: '/images/page-land/land-img-02.jpg',
+          body: '适合酒店、旗舰门店、私密会所与董事会议中心，打造独有气场。'
+        },
+        {
+          key: 'method',
+          dividerTitle: '委案流程',
+          dividerSubtitle: '从概念到交接的全程陪伴',
+          title: '旗舰专案治理',
+          imageLabel: '委案流程',
+          imageUrl: '/images/page-land/land-img-03.jpg',
+          body: '与品牌、建筑、HR 与营运团队并肩合作，让能量标识成为日常系统。',
+          points: [
+            '解析品牌故事、嗅觉、声场与动线，确保与天象原型对齐。',
+            '举办跨部门共创工作坊，测试仪式、导视与顾客旅程。',
+            '编写培训手册与 SOP，让团队在开幕后也能维护能场。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '成效验证',
+          dividerSubtitle: '业主持续追踪的指标',
+          title: '存在感・忠诚度・收益',
+          imageLabel: '标志成果',
+          imageUrl: '/images/page-land/land-img-04.jpg',
+          body: '空间令人难忘、团队价值观更一致，商业指标也随之稳健。',
+          points: [
+            '旗舰场所的停留时间、回访率与高价转化显著提升。',
+            '仪式融入文化后，员工参与感与品牌遵循度持续走高。',
+            '企业会客区在能场护持下，谈判与策略沟通更顺畅。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '锚定专属能场',
+        dividerSubtitle: '量身定制采申请制',
+        title: '启动能域汇聚委案',
+        message: '说明物业愿景、嘉宾旅程与成功指标，我们将规划汇聚路线与关键参与者。',
+        primaryLabel: '提交委案简报',
+        primaryHref: '/contact',
+        secondaryLabel: '浏览标志案例',
+        secondaryHref: '/case-studies/feng-shui'
+      },
+      newsletterTitle: '能场情报',
+      newsletterSubtitle: '掌握启动仪式、团队对齐与氛围维护的方法。'
+    },
+    mmIching: {
+      badge: '磁场矩阵',
+      title: '易经能量矩阵',
+      subtitle: '让关键抉择化为可控突破，把易经卦象智慧植入你的战略仪表。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '卦象情报',
+          dividerSubtitle: '从启示到执行',
+          title: '战略卦象手册',
+          imageLabel: '卦象仪表板',
+          imageUrl: '/images/page-iching/iching-img-01.png',
+          body: '让关键抉择化为可控突破，把易经卦象智慧植入你的战略仪表。',
+          points: [
+            '解析本卦与互卦，转化为情境剧本与领导指令。',
+            '依据动爻制定用人、合作与危机转向的行动方案。',
+            '建立决策行事历，让重大选择踩在有利卦运上。',
+            '附上仪式、沟通与责任分配表，确保执行到位。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '谁最受益',
+          title: '创办人・幕僚长・策略负责人',
+          imageLabel: '决策动能地图',
+          imageUrl: '/images/page-iching/iching-img-02.png',
+          body: '适合推进多线计划的创办人、幕僚长与策略负责人。'
+        },
+        {
+          key: 'method',
+          dividerTitle: '分析方法',
+          dividerSubtitle: '如何确保精准',
+          title: '数据化卦象分析',
+          imageLabel: '卦象实验室',
+          imageUrl: '/images/page-iching/iching-img-03.png',
+          body: '结合经典文献、现代数据与团队访谈，让矩阵既精准又可执行。',
+          points: [
+            '多重占算确认主轴后再提出建议，避免偏误。',
+            '与八字、紫微档案交叉验证，确保人事与时机同频。',
+            '提供加密平台，存放逐字稿、图像与任务追踪表。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '战略成果',
+          dividerSubtitle: '团队实际反馈',
+          title: '清晰・信心・掌控',
+          imageLabel: '决策成果',
+          imageUrl: '/images/page-iching/iching-img-04.png',
+          body: '导入后，决策更快定案、反复更少，团队情绪更稳。',
+          points: [
+            '兼顾逻辑与能量，关键提案更容易取得审批。',
+            '职位与用人决定更稳定，避免不合时宜的聘任。',
+            '危机转向有预案，行动不再仓皇。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '部署卦象矩阵',
+        dividerSubtitle: '策略顾问需先筛选排程',
+        title: '预约易经顾问会议',
+        message: '说明决策周期与团队配置，我们将规划卦象情报节奏。',
+        primaryLabel: '锁定顾问时段',
+        primaryHref: '/contact',
+        secondaryLabel: '下载矩阵概要',
+        secondaryHref: '/resources/magnetic-matrix'
+      },
+      newsletterTitle: '卦象情报',
+      newsletterSubtitle: '第一时间掌握动爻提醒、决策仪式与领导提示。'
     },
     qimen: {
       badge: '战略奇门',

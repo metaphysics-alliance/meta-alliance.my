@@ -503,42 +503,49 @@ export const ROUTES = [
         "badge": "Feng Shui Layout",
         "title": "Cosmic Cycle of Fate Layout",
         "intro": "Ride every twenty four Solar Term without guesswork by installing seasonal Feng Shui adjustments that keep your property synchronised with moving qi currents.",
-        "overviewHeading": "Seasonal Playbook",
-        "overviewSubtitle": "What each quarter delivers",
-        "overviewTitle": "Solar Term Synchronisation",
-        "imageLabel": "Seasonal Strategy Grid",
-        "bullets": [
-          "Quarterly tuning plans covering wealth, wellbeing, protection and relationship sectors.",
-          "Integration with household or office calendars so rituals land effortlessly.",
-          "Elemental support kits detailing aromas, colours, nutrition and actions for each season.",
-          "Stakeholder briefing notes so family or teams understand the intention behind each shift."
-        ],
-        "ideal": "Built for families and teams committed to sustaining momentum all year instead of fighting seasonal drag.",
-        "extraSections": [
-          {
-            "key": "method",
-            "dividerTitle": "Delivery Framework",
-            "dividerSubtitle": "How each quarter is managed",
-            "title": "Seasonal Stewardship System",
-            "imageLabel": "Seasonal Control Centre",
-            "body": "We provide a structured cadence—briefing, implementation, checkpoints and review—so adjustments never feel ad hoc or mystical.",
-            "points": [
-              "Seasonal briefing highlighting focus themes, rituals and success metrics for the upcoming phase.",
-              "Implementation checklists for layout tweaks, supply kits and behavioural prompts.",
-              "Mid-season check-in and end-season review with action logs and metric dashboards."
+      "overviewHeading": "Seasonal Playbook",
+      "overviewSubtitle": "What each quarter delivers",
+      "overviewTitle": "Solar Term Synchronisation",
+      "imageLabel": "Seasonal Strategy Grid",
+      "overviewImageUrl": "/images/page-3core/3Core-Img-01.png",
+      "bullets": [
+        "Quarterly tuning plans covering wealth, wellbeing, protection and relationship sectors.",
+        "Integration with household or office calendars so rituals land effortlessly.",
+        "Elemental support kits detailing aromas, colours, nutrition and actions for each season.",
+        "Stakeholder briefing notes so family or teams understand the intention behind each shift."
+      ],
+      "ideal": "Built for families and teams committed to sustaining momentum all year instead of fighting seasonal drag.",
+      "idealHeading": "Ideal Beneficiaries",
+      "idealSubtitle": "Who the stewardship supports",
+      "idealTitle": "Families and Teams in Motion",
+      "idealImageUrl": "/images/page-3core/3Core-Img-02.png",
+      "extraSections": [
+        {
+          "key": "method",
+          "dividerTitle": "Delivery Framework",
+          "dividerSubtitle": "How each quarter is managed",
+          "title": "Seasonal Stewardship System",
+          "imageLabel": "Seasonal Control Centre",
+          "imageUrl": "/images/page-3core/3Core-Img-03.png",
+          "body": "We provide a structured cadence—briefing, implementation, checkpoints and review—so adjustments never feel ad hoc or mystical.",
+          "points": [
+            "Seasonal briefing highlighting focus themes, rituals and success metrics for the upcoming phase.",
+            "Implementation checklists for layout tweaks, supply kits and behavioural prompts.",
+            "Mid-season check-in and end-season review with action logs and metric dashboards."
             ]
           },
           {
             "key": "impact",
             "dividerTitle": "Performance Outcomes",
             "dividerSubtitle": "How clients quantify progress",
-            "title": "Rhythm, Revenue, Resilience",
-            "imageLabel": "Seasonal Wins",
-            "body": "Expect smoother energy, fewer health dips and more predictable cashflow as the property stays in phase with the calendar.",
-            "points": [
-              "Family wellbeing incidents decrease as rest and activity schedules mirror elemental shifts.",
-              "Launches and campaigns timed to seasonal qi outperform prior-year benchmarks.",
-              "Teams report higher morale and lower burnout thanks to built-in recovery rituals."
+          "title": "Rhythm, Revenue, Resilience",
+          "imageLabel": "Seasonal Wins",
+          "imageUrl": "/images/page-3core/3Core-Img-04.png",
+          "body": "Expect smoother energy, fewer health dips and more predictable cashflow as the property stays in phase with the calendar.",
+          "points": [
+            "Family wellbeing incidents decrease as rest and activity schedules mirror elemental shifts.",
+            "Launches and campaigns timed to seasonal qi outperform prior-year benchmarks.",
+            "Teams report higher morale and lower burnout thanks to built-in recovery rituals."
             ]
           }
         ],
@@ -557,44 +564,51 @@ export const ROUTES = [
       },
       "CN": {
         "badge": "风水布局",
-        "title": "命运节律布局",
+        "title": "三元九运",
         "intro": "顺着二十四节气调整风水布局，让空间与气场四季同频而不被拖累。",
-        "overviewHeading": "季度手册",
-        "overviewSubtitle": "每一季的关键部署",
-        "overviewTitle": "节气同步蓝图",
-        "imageLabel": "节气策略图",
-        "bullets": [
-          "提供财富、健康、防护与关系方位的季节性调校计划。",
-          "与家庭或团队行程整合，让仪式与调整自然落地。",
-          "附上香氛、色彩、饮食与行动指南，让五行平衡有据可依。",
-          "准备沟通手册，让成员理解每次调整的意义与注意事项。"
-        ],
-        "ideal": "适合全年保持动能、不想被季节拖慢的家庭与团队。",
-        "extraSections": [
-          {
-            "key": "method",
-            "dividerTitle": "落实机制",
-            "dividerSubtitle": "每季如何执行",
-            "title": "节律守护系统",
-            "imageLabel": "节律控制台",
-            "body": "我们提供完整节奏：季前简报、落实清单、巡检到复盘，让调整不散乱。",
-            "points": [
-              "季前说明会，交代本季主题、仪式与衡量指标。",
-              "执行清单涵盖摆设调整、物资采购与行为提醒。",
-              "季中巡检与季末复盘，附行动日志与指标仪表板。"
+      "overviewHeading": "季度手册",
+      "overviewSubtitle": "每一季的关键部署",
+      "overviewTitle": "节气同步蓝图",
+      "imageLabel": "节气策略图",
+      "overviewImageUrl": "/images/page-3core/3Core-Img-01.png",
+      "bullets": [
+        "提供财富、健康、防护与关系方位的季节性调校计划。",
+        "与家庭或团队行程整合，让仪式与调整自然落地。",
+        "附上香氛、色彩、饮食与行动指南，让五行平衡有据可依。",
+        "准备沟通手册，让成员理解每次调整的意义与注意事项。"
+      ],
+      "ideal": "适合全年保持动能、不想被季节拖慢的家庭与团队。",
+      "idealHeading": "适合对象",
+      "idealSubtitle": "谁最受益",
+      "idealTitle": "全年保持动能的家庭与团队",
+      "idealImageUrl": "/images/page-3core/3Core-Img-02.png",
+      "extraSections": [
+        {
+          "key": "method",
+          "dividerTitle": "落实机制",
+          "dividerSubtitle": "每季如何执行",
+          "title": "节律守护系统",
+          "imageLabel": "节律控制台",
+          "imageUrl": "/images/page-3core/3Core-Img-03.png",
+          "body": "我们提供完整节奏：季前简报、落实清单、巡检到复盘，让调整不散乱。",
+          "points": [
+            "季前说明会，交代本季主题、仪式与衡量指标。",
+            "执行清单涵盖摆设调整、物资采购与行为提醒。",
+            "季中巡检与季末复盘，附行动日志与指标仪表板。"
             ]
           },
           {
             "key": "impact",
             "dividerTitle": "成果验证",
             "dividerSubtitle": "客户常见反馈",
-            "title": "节奏・营收・复原力",
-            "imageLabel": "季节成果",
-            "body": "随着空间与节令同步，能量更稳、健康起伏更少、现金流更可预测。",
-            "points": [
-              "家庭健康与情绪波动下降，因为作息配合五行能量。",
-              "配合节气推出的活动与项目，达成率明显高于往年。",
-              "团队倦怠感下降，因定期内建复原仪式。"
+          "title": "节奏・营收・复原力",
+          "imageLabel": "季节成果",
+          "imageUrl": "/images/page-3core/3Core-Img-04.png",
+          "body": "随着空间与节令同步，能量更稳、健康起伏更少、现金流更可预测。",
+          "points": [
+            "家庭健康与情绪波动下降，因为作息配合五行能量。",
+            "配合节气推出的活动与项目，达成率明显高于往年。",
+            "团队倦怠感下降，因定期内建复原仪式。"
             ]
           }
         ],
@@ -624,6 +638,7 @@ export const ROUTES = [
         "overviewSubtitle": "Where aesthetics meets measurable qi",
         "overviewTitle": "Flying Star Interior Playbook",
         "imageLabel": "Interior Energy Matrix",
+        "overviewImageUrl": "/images/page-flying-star/flying-img-01.png",
         "bullets": [
           "Sector diagnostics with recommendations for layout, traffic flow and functional zoning.",
           "Lighting, colour and material palettes tuned to annual, monthly and daily star dynamics.",
@@ -631,6 +646,7 @@ export const ROUTES = [
           "Quality assurance visits or video audits prior to handover to ensure compliance."
         ],
         "ideal": "Ideal for renovations, new builds and show units requiring beauty with measurable energetic performance.",
+        "idealImageUrl": "/images/page-flying-star/flying-img-02.jpg",
         "extraSections": [
           {
             "key": "method",
@@ -638,6 +654,7 @@ export const ROUTES = [
             "dividerSubtitle": "How we collaborate with your creative team",
             "title": "Co-Creation Delivery",
             "imageLabel": "Design Studio Workflow",
+            "imageUrl": "/images/page-flying-star/flying-img-03.png",
             "body": "We slot into your architect and interior ecosystem, providing metaphysical guardrails without stifling creativity.",
             "points": [
               "Kick-off workshops aligning vision, user journeys and energetic objectives.",
@@ -651,6 +668,7 @@ export const ROUTES = [
             "dividerSubtitle": "What owners and designers observe",
             "title": "Awards, Sales, Wellbeing",
             "imageLabel": "Design Impact",
+            "imageUrl": "/images/page-flying-star/flying-img-04.jpg",
             "body": "Projects win design praise, sell faster and feel calmer because every detail echoes the star matrix.",
             "points": [
               "Show units and luxury residences achieve faster sell-through and premium pricing.",
@@ -680,6 +698,7 @@ export const ROUTES = [
         "overviewSubtitle": "美感与能量同步",
         "overviewTitle": "飞星室内攻略",
         "imageLabel": "室内能量矩阵",
+        "overviewImageUrl": "/images/page-flying-star/flying-img-01.png",
         "bullets": [
           "逐宫提供布局、动线与机能分区建议。",
           "灯光、色彩与材质组合依年度、月度乃至日柱飞星调配。",
@@ -687,6 +706,7 @@ export const ROUTES = [
           "交付前复检（现场或远程），确保每项细节符合能量要求。"
         ],
         "ideal": "适合装修、新建与样板空间，在颜值与能量表现之间取得平衡。",
+        "idealImageUrl": "/images/page-flying-star/flying-img-02.jpg",
         "extraSections": [
           {
             "key": "method",
@@ -694,6 +714,7 @@ export const ROUTES = [
             "dividerSubtitle": "如何与设计团队共创",
             "title": "共创式交付",
             "imageLabel": "设计协作流程",
+            "imageUrl": "/images/page-flying-star/flying-img-03.png",
             "body": "与建筑师、室内团队紧密协作，在不压制创意的前提下提供玄学护栏。",
             "points": [
               "启动工作坊，统一愿景、用户旅程与能量目标。",
@@ -707,6 +728,7 @@ export const ROUTES = [
             "dividerSubtitle": "业主与设计师的观察",
             "title": "奖项・销售・舒适",
             "imageLabel": "设计成果",
+            "imageUrl": "/images/page-flying-star/flying-img-04.jpg",
             "body": "在矩阵护航下，作品兼具奖项质感、销售速度与生活舒适度。",
             "points": [
               "样板房与豪宅更快售出且溢价更高。",
@@ -741,6 +763,7 @@ export const ROUTES = [
         "overviewSubtitle": "Where space, timing and brand unite",
         "overviewTitle": "Convergence Masterplan",
         "imageLabel": "Signature Energy Blueprint",
+        "overviewImageUrl": "/images/page-land/land-img-01.jpg",
         "bullets": [
           "Holistic masterplan layering orientation, formation timing and numeric branding cues.",
           "Launch, onboarding and VIP rituals codified to anchor the field in daily operations.",
@@ -748,6 +771,7 @@ export const ROUTES = [
           "KPI dashboard aligning experiential goals with energetic metrics for leadership review."
         ],
         "ideal": "Tailored for hotels, retail flagships, clubs and boardrooms that must radiate an unmistakable aura.",
+        "idealImageUrl": "/images/page-land/land-img-02.jpg",
         "extraSections": [
           {
             "key": "method",
@@ -755,6 +779,7 @@ export const ROUTES = [
             "dividerSubtitle": "How we partner from concept to handover",
             "title": "Flagship Project Governance",
             "imageLabel": "Commission Workflow",
+            "imageUrl": "/images/page-land/land-img-03.jpg",
             "body": "We work alongside brand, architecture, HR and operations so the energetic identity becomes a living system, not a one-time ritual.",
             "points": [
               "Brand and experience diagnostics aligning story, scent, sound and movement with celestial archetypes.",
@@ -768,6 +793,7 @@ export const ROUTES = [
             "dividerSubtitle": "Metrics owners track",
             "title": "Presence, Loyalty, Revenue",
             "imageLabel": "Signature Wins",
+            "imageUrl": "/images/page-land/land-img-04.jpg",
             "body": "Spaces feel unforgettable, teams align faster and commercial metrics hold steady because the field anchors every interaction.",
             "points": [
               "Flagship venues record higher dwell time, repeat visitation and premium conversions.",
@@ -797,6 +823,7 @@ export const ROUTES = [
         "overviewSubtitle": "空间・时机・品牌一次到位",
         "overviewTitle": "汇聚总蓝图",
         "imageLabel": "标志能量图",
+        "overviewImageUrl": "/images/page-land/land-img-01.jpg",
         "bullets": [
           "整合方位、阵法时序与数理品牌的整体规划。",
           "设计开幕、员工启动与 VIP 体验的日常仪式。",
@@ -804,6 +831,7 @@ export const ROUTES = [
           "建立 KPI 仪表，让管理层以能量与商业双指标追踪。"
         ],
         "ideal": "适合酒店、旗舰门店、私密会所与董事会议中心，打造独有气场。",
+        "idealImageUrl": "/images/page-land/land-img-02.jpg",
         "extraSections": [
           {
             "key": "method",
@@ -811,6 +839,7 @@ export const ROUTES = [
             "dividerSubtitle": "从概念到交接的全程陪伴",
             "title": "旗舰专案治理",
             "imageLabel": "委案流程",
+            "imageUrl": "/images/page-land/land-img-03.jpg",
             "body": "与品牌、建筑、HR 与营运团队并肩合作，让能量标识成为日常系统。",
             "points": [
               "解析品牌故事、嗅觉、听觉与动线，确保与天象 archetype 对齐。",
@@ -824,6 +853,7 @@ export const ROUTES = [
             "dividerSubtitle": "业主持续追踪的指标",
             "title": "存在感・忠诚度・收益",
             "imageLabel": "标志成果",
+            "imageUrl": "/images/page-land/land-img-04.jpg",
             "body": "空间令人难忘、团队价值观更一致，商业指标也随之稳健。",
             "points": [
               "旗舰场所的停留时间、回访率与高价转化显著提升。",
@@ -858,6 +888,7 @@ export const ROUTES = [
         "overviewSubtitle": "How guidance becomes execution",
         "overviewTitle": "Strategic Hexagram Playbook",
         "imageLabel": "Hexagram Dashboard",
+        "overviewImageUrl": "/images/page-iching/iching-img-01.png",
         "bullets": [
           "Primary and relating hexagrams decoded into scenario storyboards and leadership cues.",
           "Action plays for talent moves, partnerships and crisis pivots anchored to changing lines.",
@@ -865,6 +896,7 @@ export const ROUTES = [
           "Executive briefing sheets with rituals, communication angles and accountability prompts."
         ],
         "ideal": "A must-have for founders, chiefs-of-staff and strategists driving multi-threaded initiatives.",
+        "idealImageUrl": "/images/page-iching/iching-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -872,6 +904,7 @@ export const ROUTES = [
             "dividerSubtitle": "How each reading stays rigorous",
             "title": "Data-Backed Divination",
             "imageLabel": "Hexagram Lab",
+            "imageUrl": "/images/page-iching/iching-img-03.png",
             "body": "We triangulate classical texts, modern analytics and stakeholder interviews so the matrix feels precise and actionable.",
             "points": [
               "Multi-method casting to confirm the dominant hexagram narrative before prescribing moves.",
@@ -885,6 +918,7 @@ export const ROUTES = [
             "dividerSubtitle": "What teams experience",
             "title": "Clarity, Confidence, Control",
             "imageLabel": "Decision Wins",
+            "imageUrl": "/images/page-iching/iching-img-04.png",
             "body": "Leaders report faster decision cycles, fewer reversals and calmer teams when the I-Ching matrix guides the agenda.",
             "points": [
               "Key approvals land sooner because stakeholders see logical and energetic justification side by side.",
@@ -914,6 +948,7 @@ export const ROUTES = [
         "overviewSubtitle": "从启示到执行",
         "overviewTitle": "战略卦象手册",
         "imageLabel": "卦象仪表板",
+        "overviewImageUrl": "/images/page-iching/iching-img-01.png",
         "bullets": [
           "解析本卦与互卦，转化为情境剧本与领导指令。",
           "依据动爻制定用人、合作与危机转向的行动方案。",
@@ -921,6 +956,7 @@ export const ROUTES = [
           "附上仪式、沟通与责任分配表，确保执行到位。"
         ],
         "ideal": "适合推进多线计划的创办人、幕僚长与策略负责人。",
+        "idealImageUrl": "/images/page-iching/iching-img-02.png",
         "extraSections": [
           {
             "key": "method",
@@ -928,6 +964,7 @@ export const ROUTES = [
             "dividerSubtitle": "如何确保精准",
             "title": "数据化卦象分析",
             "imageLabel": "卦象实验室",
+            "imageUrl": "/images/page-iching/iching-img-03.png",
             "body": "结合经典文献、现代数据与团队访谈，让矩阵既精准又可执行。",
             "points": [
               "多重占算确认主轴，再提出建议，避免偏误。",
@@ -941,6 +978,7 @@ export const ROUTES = [
             "dividerSubtitle": "团队实际感受",
             "title": "清晰・信心・掌控",
             "imageLabel": "决策成果",
+            "imageUrl": "/images/page-iching/iching-img-04.png",
             "body": "导入后，决策更快定案、反复更少，团队情绪更稳。",
             "points": [
               "因为兼顾逻辑与能量，关键提案更容易取得审批。",
