@@ -165,6 +165,7 @@ export default function Nav(){
   const { t, lang, setLang } = useI18n()
   const [mobileOpen, setMobileOpen] = useState(false)
   const isTouch = usePointerPreference()
+  const closeMobileNav = () => setMobileOpen(false)
 
   const celestialMenu = transformSections(t('nav.celestial_groups'))
 
@@ -257,18 +258,38 @@ export default function Nav(){
                             <div className="text-xs uppercase tracking-wide text-white/50 my-1">{c.label}</div>
                             <div className="flex flex-col gap-1 pl-2">
                               {c.children.map((cc, j) => (
-                                <Link key={j} to={cc.href} className="nav-link">{cc.label}</Link>
+                                <Link
+                                  key={j}
+                                  to={cc.href}
+                                  className="nav-link"
+                                  onClick={closeMobileNav}
+                                >
+                                  {cc.label}
+                                </Link>
                               ))}
                             </div>
                           </div>
                         ) : (
-                          <Link key={idx} to={c.href} className="nav-link">{c.label}</Link>
+                          <Link
+                            key={idx}
+                            to={c.href}
+                            className="nav-link"
+                            onClick={closeMobileNav}
+                          >
+                            {c.label}
+                          </Link>
                         )
                       ))}
                     </div>
                   </details>
                 ) : (
-                  <Link to={item.href} className="nav-link">{item.label}</Link>
+                  <Link
+                    to={item.href}
+                    className="nav-link"
+                    onClick={closeMobileNav}
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}

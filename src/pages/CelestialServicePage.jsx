@@ -15,9 +15,9 @@ const FALLBACK_LABELS = {
     overviewDividerTitle: 'Service Overview',
     overviewDividerSubtitle: 'What this engagement covers',
     overviewImageLabel: 'Service Blueprint',
-    idealDividerTitle: 'Ideal Clients',
-    idealDividerSubtitle: 'Who benefits most',
-    idealTitle: 'Ideal for',
+    idealDividerTitle: 'Ideal Beneficiaries',
+    idealDividerSubtitle: 'Where this engagement delivers the greatest leverage',
+    idealTitle: 'Ideal Beneficiaries',
   },
   CN: {
     badge: '服务',

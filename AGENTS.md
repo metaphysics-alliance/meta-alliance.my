@@ -136,3 +136,10 @@ Work Log (for resume)
 - MA-ENERGY-CONVERGENCE-IMAGERY-2025-10-19T18:55:00+08:00: Applied page-land imagery to all Energy Convergence Field sections in both stacks and registered the shared Next.js route.
 - MA-ICHING-IMAGERY-2025-10-19T19:05:00+08:00: Connected page-iching assets to the I-Ching Energy Matrix content for both stacks and added the Next.js service route.
 - MA-GITHUB-AUTOMATION-2025-10-19T19:15:00+08:00: Documented the GitHub Actions push-to-deploy process and safeguards for the automation pipeline in AGENTS.md.
+- MA-NAV-MOBILE-AUTOCLOSE-2025-10-19T19:25:00+08:00: Updated the mobile navigation so selecting an item automatically closes the menu and navigates to the target page.
+- MA-CELESTIAL-ENGAGEMENT-PROFILES-2025-10-19T19:35:00+08:00: Reframed Celestial service “Ideal Clients” sections into technical engagement profiles for BaZi, Zi Wei and Qi Men in EN/CN.
+- MA-CELESTIAL-IDEAL-REFINEMENT-2025-10-19T19:55:00+08:00: Converted Ideal Clients sections across Feng Shui Assessment/Layout and Magnetic Matrix services into technical engagement profiles with explicit deployment bullet points in both stacks.
+- MA-MAGNETIC-IDEAL-BENEFICIARIES-2025-10-19T20:20:00+08:00: Added Name Destiny Code and Soul Number Blueprint engagement profiles, assets, and bilingual Ideal Beneficiaries metadata across both stacks.
+- MA-SECTION-DIVIDER-BRAND-2025-10-19T20:30:00+08:00: Restyled SectionDivider lines and typography with black-gold to deep-blue gradients across Vite and Next implementations.
+- MA-BACKGROUND-DIM-2025-10-19T20:34:00+08:00: Increased global overlay opacity to 50% in both stacks to deliver a deeper dimmed backdrop.
+- MA-SECTION-DIVIDER-GLOW-2025-10-19T20:40:00+08:00: Added luminous panels and stronger glow to SectionDivider fonts and lines for higher contrast.

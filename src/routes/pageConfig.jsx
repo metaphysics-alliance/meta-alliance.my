@@ -139,8 +139,13 @@ export const ROUTES = [
           "Annual retuning calendar with date-specific cures, activations and maintenance actions.",
           "Curated remedy procurement list with vetted metals, crystals, water features and artisan suppliers."
         ],
-        "ideal": "Perfect for households upgrading to a sanctuary that multiplies vitality, intimacy and financial momentum.",
+        "ideal": "Built for residential leadership cohorts requiring measurable wellness, protection and succession outcomes from their living environments.",
         "idealImageUrl": "/images/page-fs-home/home-img-04.png",
+        "idealPoints": [
+          "Multi-generational estates calibrating sleep suites, stewardship rooms and legacy zones to occupant BaZi matrices.",
+          "Portfolio residences staging relocation sequences, tenancy transitions and auspicious move-ins with energetic proofing.",
+          "Hybrid live-work sanctuaries balancing focus pods, childcare ecosystems and recovery rituals within one command plan."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -199,8 +204,13 @@ export const ROUTES = [
           "提供全年调整日历，明确何时化煞、催旺与维护。",
           "附上精选化煞与催旺物料清单，含可信的金属、晶石、水景与匠人资源。"
         ],
-        "ideal": "适合希望让家庭活力、关系和财务同步提升的居者。",
+        "ideal": "服务需要量化家居绩效的家庭领导者，确保健康、财务与承传目标都能在空间中落地。",
         "idealImageUrl": "/images/page-fs-home/home-img-04.png",
+        "idealPoints": [
+          "多代共居与照护架构：区分养护、睡眠与资源指挥区，让成员各得其所。",
+          "资产组合住宅：规划迁入、租赁与交接流程，在每个节点维持吉时与气场。",
+          "混合工作宅：整合专注模块、育儿支持与复原仪式，维持高强度生活节奏。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -264,8 +274,13 @@ export const ROUTES = [
           "Recruitment, onboarding and retention rituals embedded into spatial choreography.",
           "Annual retuning and renovation governance blueprint to protect momentum during change."
         ],
-        "ideal": "Designed for scaling companies, venture teams and funds that demand spatial advantage on demand.",
+        "ideal": "Engineered for venture-backed enterprises, funds and leadership councils aligning revenue floors, governance cadence and talent velocity through precision workspace modelling.",
         "idealImageUrl": "/images/page-fs-office/office-img-02.png",
+        "idealPoints": [
+          "Hypergrowth floorplates recalibrating leadership, revenue and enablement hubs to time-gated energetic sectors.",
+          "Investment studios coordinating diligence war rooms, analyst bays and investor hospitality pathways.",
+          "Transformation offices sequencing renovation phases, swing spaces and compliance checkpoints without interrupting throughput."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -324,8 +339,13 @@ export const ROUTES = [
           "把招募、启用与留才仪式融入空间动线，让文化自然展开。",
           "提供年度调频与装修治理准则，确保动工期间不失控。"
         ],
-        "ideal": "适合高速成长的企业、投资团队与基金，追求空间即战力。",
+        "ideal": "服务高速扩张的企业、基金与领导梯队，以高精度空间模型统筹营收底盘、治理节奏与人才动线。",
         "idealImageUrl": "/images/page-fs-office/office-img-02.png",
+        "idealPoints": [
+          "高速营收楼层：针对领导、营收与赋能核心进行时门布阵，稳定流水与节奏。",
+          "投资与风投工作室：统筹尽调战情室、分析工位与投资者接待动线。",
+          "变革指挥中心：规划装修、临时办公室与合规节点，确保项目不中断。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -389,8 +409,13 @@ export const ROUTES = [
           "Gateway, water architecture and access road schematics tuned to capture and retain qi.",
           "Due diligence binder covering soil notes, compliance alerts and long-term maintenance rituals."
         ],
-        "ideal": "Essential for developers, resorts and multigenerational estates demanding geomantic precision before acquisition.",
+        "ideal": "Reserved for development syndicates, hospitality flagships and legacy estate councils requiring defensible geomantic intelligence before committing capital.",
         "idealImageUrl": "/images/page-fs-dragon/dragon-img-02.png",
+        "idealPoints": [
+          "Greenfield townships and integrated resorts validating long-horizon prosperity, protection and water governance corridors.",
+          "Institutional land banks auditing regulatory readiness, investor optics and phased release strategies with geomantic evidence.",
+          "Legacy estate councils configuring ancestral alignment, memorial precincts and stewardship infrastructure before acquisition."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -449,8 +474,13 @@ export const ROUTES = [
           "规划出入口、水景与道路，让气流顺利聚合并长久维持。",
           "附上土质、法规与长期养气维护的完整备忘录。"
         ],
-        "ideal": "适合开发商、度假村与多世代家族，在购地前先锁定最具生命力的土地。",
+        "ideal": "适用于大型开发计划、顶级度假资产与多世代家族，在投入资本前取得可验证的地理能量情报。",
         "idealImageUrl": "/images/page-fs-dragon/dragon-img-02.png",
+        "idealPoints": [
+          "新城镇与综合度假项目：验证聚气、护砂与水系治理的长期图谱。",
+          "机构土地库：评估法规通过率、投资者观感与分期启用的能量窗口。",
+          "家族庄园：规划祖祠、纪念轴线与守护设施，确保承传能量稳定。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -514,11 +544,16 @@ export const ROUTES = [
         "Elemental support kits detailing aromas, colours, nutrition and actions for each season.",
         "Stakeholder briefing notes so family or teams understand the intention behind each shift."
       ],
-      "ideal": "Built for families and teams committed to sustaining momentum all year instead of fighting seasonal drag.",
+      "ideal": "Designed for households and leadership teams institutionalising quarterly recalibration so momentum, wellbeing and risk controls stay synchronised with solar term dynamics.",
       "idealHeading": "Ideal Beneficiaries",
       "idealSubtitle": "Who the stewardship supports",
       "idealTitle": "Families and Teams in Motion",
       "idealImageUrl": "/images/page-3core/3Core-Img-02.png",
+      "idealPoints": [
+        "Household rhythm boards synchronising rituals, recovery blocks and protective cures with solar term diagnostics.",
+        "Executive cadence councils aligning capital sprints, product pushes and safeguard windows to seasonal qi patterns.",
+        "Estate or campus managers orchestrating occupant briefings, supply kits and intervention logs each quarter."
+      ],
       "extraSections": [
         {
           "key": "method",
@@ -577,11 +612,16 @@ export const ROUTES = [
         "附上香氛、色彩、饮食与行动指南，让五行平衡有据可依。",
         "准备沟通手册，让成员理解每次调整的意义与注意事项。"
       ],
-      "ideal": "适合全年保持动能、不想被季节拖慢的家庭与团队。",
+      "ideal": "服务全年维持动能的家庭与领导团队，以制度化季度校准，让健康、营收与防护随节气同频。",
       "idealHeading": "适合对象",
       "idealSubtitle": "谁最受益",
       "idealTitle": "全年保持动能的家庭与团队",
       "idealImageUrl": "/images/page-3core/3Core-Img-02.png",
+      "idealPoints": [
+        "家庭节律小组：统筹仪式、休憩与防护布署，让成员随节气调频。",
+        "企业节拍委员会：将产品冲刺、资本动作与防护窗口对齐季节气场。",
+        "园区／社区管理者：季度通告居民、准备物资并记录干预落地情况。"
+      ],
       "extraSections": [
         {
           "key": "method",
@@ -645,8 +685,13 @@ export const ROUTES = [
           "Detailed handover packs for designers, contractors and stylists with measurements and specifications.",
           "Quality assurance visits or video audits prior to handover to ensure compliance."
         ],
-        "ideal": "Ideal for renovations, new builds and show units requiring beauty with measurable energetic performance.",
+        "ideal": "Targeted at architecture and interior teams delivering luxury refurbishments, showcase units and flagship residences where Flying Star intelligence must translate into measurable performance.",
         "idealImageUrl": "/images/page-flying-star/flying-img-02.jpg",
+        "idealPoints": [
+          "Luxury refurbishment labs translating annual, monthly and daily stars into structural, acoustic and material directives.",
+          "Developer showcase teams codifying compliance checklists, staging protocols and QA punchlists sector by sector.",
+          "Flagship residence designers orchestrating circulation choreography, sensory layering and amenity placement with energetic matrices."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -705,8 +750,13 @@ export const ROUTES = [
           "为设计师、承包商与软装团队准备含尺寸的执行文件。",
           "交付前复检（现场或远程），确保每项细节符合能量要求。"
         ],
-        "ideal": "适合装修、新建与样板空间，在颜值与能量表现之间取得平衡。",
+        "ideal": "服务建筑与室内团队，在豪装翻修、样板工程与顶级住宅中同步飞星性能与美学表现。",
         "idealImageUrl": "/images/page-flying-star/flying-img-02.jpg",
+        "idealPoints": [
+          "豪装翻修团队：将年度、月度与日度飞星转译为结构、声学与材质规范。",
+          "开发样板工程：逐区制定合规检查、陈设动线与交付复核清单。",
+          "顶级住宅设计：统筹动线编排、五感层次与配套设施，使能量矩阵落地。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -770,8 +820,13 @@ export const ROUTES = [
           "Audit of signage, pathways, scent and digital touchpoints to maintain convergence.",
           "KPI dashboard aligning experiential goals with energetic metrics for leadership review."
         ],
-        "ideal": "Tailored for hotels, retail flagships, clubs and boardrooms that must radiate an unmistakable aura.",
+        "ideal": "Reserved for hospitality portfolios, flagship retail programs and executive councils orchestrating immersive ambience, loyalty economics and governance cadence via convergence engineering.",
         "idealImageUrl": "/images/page-land/land-img-02.jpg",
+        "idealPoints": [
+          "Luxury hospitality programs sequencing guest journeys, amenity activation and ritualised service choreography against convergence diagnostics.",
+          "Flagship retail precincts aligning experiential nodes, loyalty pathways and premium merchandising windows with energetic anchors.",
+          "Executive councils governing board deliberations, stakeholder diplomacy and confidential briefings within stabilised energy envelopes."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -830,8 +885,13 @@ export const ROUTES = [
           "全面检视动线、指示、香氛与数位触点，让能量持续汇聚。",
           "建立 KPI 仪表，让管理层以能量与商业双指标追踪。"
         ],
-        "ideal": "适合酒店、旗舰门店、私密会所与董事会议中心，打造独有气场。",
+        "ideal": "服务酒店集团、旗舰零售与高层会议中心，以能场工程稳固沉浸体验、忠诚收益与治理节奏。",
         "idealImageUrl": "/images/page-land/land-img-02.jpg",
+        "idealPoints": [
+          "豪华酒店：以能量板块规划宾客旅程、服务动线与仪式级体验。",
+          "旗舰零售地标：同步体验节点、会员循环与高客单陈列，放大营收曲线。",
+          "董事／指挥中心：在高压谈判、战略沟通与闭门会议中维持稳定能场。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -895,8 +955,13 @@ export const ROUTES = [
           "Decision calendar aligning upcoming choices with favourable hexagram phases.",
           "Executive briefing sheets with rituals, communication angles and accountability prompts."
         ],
-        "ideal": "A must-have for founders, chiefs-of-staff and strategists driving multi-threaded initiatives.",
+        "ideal": "Purpose-built for strategy offices, deal teams and chiefs-of-staff orchestrating multi-threaded initiatives that require hexagram-based decision cadence.",
         "idealImageUrl": "/images/page-iching/iching-img-02.png",
+        "idealPoints": [
+          "Strategic advisory cells sequencing board deliberations, capital allocation and risk reviews by hexagram timetables.",
+          "Deal and partnership squads integrating line changes into negotiation playbooks, escalation routes and exit triggers.",
+          "Operational command centres coordinating crisis drills, communications protocols and resource hedging through matrix dashboards."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -955,8 +1020,13 @@ export const ROUTES = [
           "建立决策行事历，让重大选择踩在有利卦运上。",
           "附上仪式、沟通与责任分配表，确保执行到位。"
         ],
-        "ideal": "适合推进多线计划的创办人、幕僚长与策略负责人。",
+        "ideal": "服务统筹多线项目的策略长、交易团队与幕僚体系，让卦象情报成为决策节奏的一部分。",
         "idealImageUrl": "/images/page-iching/iching-img-02.png",
+        "idealPoints": [
+          "战略顾问局：规划董事会议程、资本配置与风险审查的周期节奏。",
+          "交易／合作小组：将动爻结果植入谈判脚本、升级路径与退出触发器。",
+          "运营指挥中心：以卦象矩阵协调危机演练、沟通流程与资源调度。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -1019,7 +1089,15 @@ export const ROUTES = [
           "Activation plan covering legal change, launch rituals and communication rollout.",
           "Brand tone, domain and social handle checks to ensure seamless adoption."
         ],
-        "ideal": "Ideal for newborns, rebrands, mergers and signature product lines needing instant resonance.",
+        "ideal": "Built for naming command cells that require measurable resonance across legal, phonetic and destiny governance.",
+        "idealHeading": "Ideal Beneficiaries",
+        "idealSubtitle": "Where naming intelligence delivers the greatest lift",
+        "idealTitle": "Naming Command Cells",
+        "idealPoints": [
+          "Brand and product launch councils aligning legal clearance, phonetic stress-testing and numerology governance for new ventures.",
+          "Renaming taskforces steering M&A integrations, reputation resets or crisis response while maintaining multi-market resonance.",
+          "Legacy naming commissions codifying heirloom frameworks, auspicious activation schedules and identity governance playbooks."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -1075,7 +1153,15 @@ export const ROUTES = [
           "规划法律手续、启用仪式与对外沟通脚本。",
           "同步评估网址、社交帐号与品牌资产，避免落差。"
         ],
-        "ideal": "适合新生儿、品牌换名、并购整合与需要即时共鸣的产品线。",
+        "ideal": "服务品牌、产品与传承命名团队，以数理＋命盘＋法务架构打造高共鸣姓名。",
+        "idealHeading": "适合对象",
+        "idealSubtitle": "最能放大命势命名成效的团队",
+        "idealTitle": "命势命名指挥单元",
+        "idealPoints": [
+          "品牌／产品命名委员会：同步法务检索、语音测试与数理治理，确保新计划一次到位。",
+          "改名／并购整合小组：跨市场完成声誉重整、危机应对或整并统一。",
+          "家族与传承命名委员会：建立世袭框架、启用吉时与身份治理手册。"
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -1136,7 +1222,15 @@ export const ROUTES = [
           "Daily rhythm and environment prescriptions covering colours, directions and restorative rituals.",
           "Quarterly checkpoints aligning personal goals with incoming numerology cycles."
         ],
-        "ideal": "Designed for individuals, couples and leadership duos seeking alignment without sacrificing ambition.",
+        "ideal": "Built for numerology strategy cells that convert personal and partnership intelligence into operational cadence.",
+        "idealHeading": "Ideal Beneficiaries",
+        "idealSubtitle": "Decision environments stabilised by this blueprint",
+        "idealTitle": "Numerology Strategy Cells",
+        "idealPoints": [
+          "Personal strategy offices translating life lessons, karmic debts and timing windows into adaptive roadmaps.",
+          "Leadership partnerships synchronising compatibility, rituals and shared sprints across business and personal arenas.",
+          "Wellness and coaching collectives aligning daily rhythm, environment design and accountability frameworks to personal numbers."
+        ],
         "extraSections": [
           {
             "key": "method",
@@ -1192,7 +1286,15 @@ export const ROUTES = [
           "提供每日节奏与环境处方：颜色、方位与修复仪式。",
           "安排季度复盘，将个人目标与来临的数字周期对齐。"
         ],
-        "ideal": "适合追求对齐又不牺牲野心的个人、伴侣与领导搭档。",
+        "ideal": "为策略长、合作伙伴与幕僚体系提供跨数理与命盘的行动蓝图。",
+        "idealHeading": "适合对象",
+        "idealSubtitle": "最适合部署灵数蓝图的决策体系",
+        "idealTitle": "灵数策略指挥单元",
+        "idealPoints": [
+          "战略顾问局：依灵数与节奏安排董事议程、资本配置与风险检视。",
+          "伙伴／谈判小组：把动爻与灵数信号写入谈判脚本、升级流程与退场机制。",
+          "运营指挥中心：借助灵数矩阵统筹危机演练、沟通流程与资源调度。"
+        ],
         "extraSections": [
           {
             "key": "method",

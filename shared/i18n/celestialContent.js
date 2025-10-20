@@ -50,15 +50,15 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'audience',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who this protocol is built for',
-          title: 'Founders, Investors, Power Builders',
+          dividerSubtitle: 'Where the algorithm delivers quantifiable lift',
+          title: 'Capital Allocation & Leadership Continuity Programs',
           imageLabel: 'Leadership Circle',
           imageUrl: '/images/page-bazi/Bazi-Img-04.png',
-          body: 'Crafted for visionaries orchestrating people, capital and legacy assets who demand decision clarity before taking the next leap.',
+          body: 'Engineered for coalitions that manage capital velocity, succession stability and cross-portfolio execution using quantified BaZi intelligence.',
           points: [
-            'Series A–pre-IPO founders sequencing global expansion and liquidity events.',
-            'Family office principals balancing portfolio growth with succession and governance.',
-            'High-impact creatives and executives calibrating brand, wellness and influence cycles.'
+            'Multi-entity founders and investment partners choreographing funding rounds, liquidity events and governance rotations.',
+            'Family offices codifying stewardship mandates, succession playbooks and intergenerational asset deployment.',
+            'Executive boards aligning hiring, incentive design and resilience infrastructure to long-range cycle analysis.'
           ]
         },
         {
@@ -154,15 +154,15 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'audience',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who this imperial protocol serves',
-          title: 'Public Figures, Family Offices, Legacy Builders',
+          dividerSubtitle: 'Stakeholders requiring imperial star governance',
+          title: 'Reputation Command & Succession Councils',
           imageLabel: 'Imperial Council',
           imageUrl: '/images/page-zimei/zimei-img-04.png',
-          body: 'Tailored for leaders responsible for perception capital—political, corporate, artistic or dynastic—who require clarity on cycles of favour, scrutiny and renewal.',
+          body: 'Built for public-facing principals and advisory boards that administer influence portfolios, alliance stability and succession risk through forensic Zi Wei intelligence.',
           points: [
-            'Institutional leaders balancing shareholder, regulator and citizen expectations.',
-            'Family office principals choreographing inheritance, philanthropy and public diplomacy.',
-            'Spokespersons and creatives whose brands move markets and culture.'
+            'Heads of state, public officials and flagship brand figureheads calibrating visibility, alliances and crisis posture.',
+            'Family office councils engineering legacy transitions, philanthropy mandates and diplomatic programmes.',
+            'Reputation, communications and influence strategists supervising narrative orchestration across volatile cycles.'
           ]
         },
         {
@@ -230,11 +230,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who this audit is built for',
-          title: 'Scaling Teams With No Slack',
+          dividerSubtitle: 'Operational landscapes engineered for this audit',
+          title: 'Hypergrowth Floorplate Coalitions',
           imageLabel: 'Power Floor Strategy',
           imageUrl: '/images/page-fs-office/office-img-02.png',
-          body: 'Designed for scaling companies, venture teams and funds that demand spatial advantage on demand.'
+          body: 'Built for venture-backed enterprises, funds and leadership councils aligning revenue floors, governance cadence and talent velocity through precision workspace modelling.',
+          points: [
+            'Hypergrowth floorplates recalibrating leadership, revenue and enablement hubs to time-gated energetic sectors.',
+            'Investment studios coordinating diligence war rooms, analyst bays and investor hospitality pathways.',
+            'Transformation offices sequencing renovation phases, swing spaces and compliance checkpoints without interrupting throughput.'
+          ]
         },
         {
           key: 'method',
@@ -301,11 +306,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who commissions this reconnaissance',
-          title: 'Developers, Resorts, Legacy Estates',
+          dividerSubtitle: 'Land and capital programs suited for this expedition',
+          title: 'Geomantic Acquisition Mandates',
           imageLabel: 'Strategic Land Selection',
           imageUrl: '/images/page-fs-dragon/dragon-img-02.png',
-          body: 'Essential for developers, resorts and multigenerational estates demanding geomantic precision before acquisition.'
+          body: 'Ideal for development syndicates, hospitality flagships and legacy estate councils requiring defensible geomantic intelligence before committing capital.',
+          points: [
+            'Greenfield townships and integrated resorts validating multi-decade prosperity, protection and water governance corridors.',
+            'Institutional land banks mapping regulatory readiness, investor optics and phased release strategies with geomantic evidence.',
+            'Legacy estates configuring ancestral alignment, memorial precincts and stewardship infrastructure prior to acquisition.'
+          ]
         },
         {
           key: 'method',
@@ -372,11 +382,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who the stewardship supports',
-          title: 'Families and Teams in Motion',
+          dividerSubtitle: 'Seasonal programs calibrated for this stewardship',
+          title: 'Family & Enterprise Rhythm Councils',
           imageLabel: 'Seasonal Cohesion Blueprint',
           imageUrl: '/images/page-3core/3Core-Img-02.png',
-          body: 'Built for families and teams committed to sustaining momentum all year instead of fighting seasonal drag.'
+          body: 'Designed for households and leadership teams institutionalising quarterly recalibration so momentum, wellbeing and protection stay synchronised with solar term dynamics.',
+          points: [
+            'Household rhythm boards synchronising rituals, recovery blocks and protective cures with solar term diagnostics.',
+            'Executive cadence councils aligning capital sprints, product pushes and safeguard windows to seasonal qi patterns.',
+            'Estate or campus managers orchestrating occupant briefings, supply kits and intervention logs across each quarter.'
+          ]
         },
         {
           key: 'method',
@@ -443,11 +458,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who this matrix serves',
-          title: 'Renovations, New Builds, Show Units',
+          dividerSubtitle: 'Design programs aligned for this matrix',
+          title: 'Showpiece Renovation & Interior Command Studios',
           imageLabel: 'Design Momentum Map',
           imageUrl: '/images/page-flying-star/flying-img-02.jpg',
-          body: 'Ideal for renovations, new builds and show units requiring beauty with measurable energetic performance.'
+          body: 'Best suited for architecture, interior and development teams integrating Flying Star intelligence into luxury refurbishments, showcase units and flagship residences.',
+          points: [
+            'Luxury refurbishment labs translating annual, monthly and daily stars into structural, acoustic and material directives.',
+            'Developer showcase teams codifying compliance checklists, staging protocols and QA punchlists sector by sector.',
+            'Flagship residence designers orchestrating circulation choreography, sensory layers and amenity placement with energetic matrices.'
+          ]
         },
         {
           key: 'method',
@@ -514,11 +534,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who commissions this field',
-          title: 'Hotels, Flagships, Clubs, Boardrooms',
+          dividerSubtitle: 'Flagship environments optimised by this field',
+          title: 'Hospitality, Retail & Executive Signature Programs',
           imageLabel: 'Signature Presence Map',
           imageUrl: '/images/page-land/land-img-02.jpg',
-          body: 'Tailored for hotels, retail flagships, clubs and boardrooms that must radiate an unmistakable aura.'
+          body: 'Reserved for hospitality groups, flagship retail portfolios and executive councils calibrating immersive ambience, loyalty economics and governance cadence through energetic convergence.',
+          points: [
+            'Luxury hospitality groups programming guest journeys, amenity activation and service rituals against convergence diagnostics.',
+            'Flagship retail programmes synchronising experiential nodes, loyalty pathways and premium merchandising windows with energetic anchors.',
+            'Executive councils governing board deliberations, stakeholder diplomacy and confidential briefings within stabilised energy envelopes.'
+          ]
         },
         {
           key: 'method',
@@ -585,11 +610,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who thrives with this matrix',
-          title: 'Founders, Chiefs-of-Staff, Strategists',
+          dividerSubtitle: 'Decision environments stabilised by this matrix',
+          title: 'Strategic Command & Advisory Cells',
           imageLabel: 'Decision Focus Map',
           imageUrl: '/images/page-iching/iching-img-02.png',
-          body: 'A must-have for founders, chiefs-of-staff and strategists driving multi-threaded initiatives.'
+          body: 'Designed for strategy offices, deal teams and chiefs-of-staff orchestrating multi-threaded initiatives that demand hexagram-governed decision cadence.',
+          points: [
+            'Strategic advisory cells sequencing board deliberations, capital allocation and risk reviews by hexagram timetables.',
+            'Deal and partnership squads integrating line changes into negotiation playbooks, escalation routes and exit triggers.',
+            'Operational command centres coordinating crisis drills, comms protocols and resource hedging through matrix dashboards.'
+          ]
         },
         {
           key: 'method',
@@ -633,6 +663,150 @@ export const CELESTIAL_SERVICES = {
       newsletterTitle: 'Hexagram Signals',
       newsletterSubtitle: 'Changing-line alerts, decision rituals and leadership prompts before each critical window.'
     },
+    mmName: {
+      badge: 'Magnetic Matrix',
+      title: 'Name Destiny Code',
+      subtitle: 'Craft names that amplify destiny by synthesising numerology, BaZi resonance and phonetic magnetism.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Naming Intelligence',
+          dividerSubtitle: 'Where story, sound and fate align',
+          title: 'Destiny Naming Playbook',
+          imageLabel: 'Name Resonance Map',
+          body: 'We audit existing identities, generate magnetic naming shortlists and deliver activation plans that align legal, commercial and metaphysical standards.',
+          points: [
+            'Audit current names to locate energetic leakage, legal friction and pronunciation drag.',
+            'Curated shortlists with narrative positioning, phonetic analysis and numeric scoring.',
+            'Activation workflows covering legal change, launch rituals and communication rollout.',
+            'Brand tone, domain and social handle checks to ensure seamless adoption.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Where naming intelligence delivers the greatest lift',
+          title: 'Naming Command Cells',
+          imageLabel: 'Naming Governance Map',
+          body: 'Built for naming command cells that require measurable resonance across legal, phonetic and destiny governance.',
+          points: [
+            'Brand and product launch councils aligning legal clearance, phonetic stress-testing and numerology governance for new ventures.',
+            'Renaming taskforces steering M&A integrations, reputation resets or crisis response while maintaining multi-market resonance.',
+            'Legacy naming commissions codifying heirloom frameworks, auspicious activation schedules and identity governance playbooks.'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Naming Methodology',
+          dividerSubtitle: 'How we engineer magnetism',
+          title: 'Data + Story + Destiny',
+          imageLabel: 'Naming Lab',
+          body: 'We merge linguistic science, numerology and destiny profiling so your name works legally, commercially and metaphysically.',
+          points: [
+            'Stakeholder interviews to define archetype, market positioning and emotional tone.',
+            'Phonetic heat-mapping across key languages and dialects to avoid negative connotations.',
+            'Numerology alignment with personal or corporate charts including cycle timing recommendations.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Performance Outcomes',
+          dividerSubtitle: 'What clients notice post-launch',
+          title: 'Recognition, Conversion, Loyalty',
+          imageLabel: 'Naming Wins',
+          body: 'Names crafted through the Destiny Code pull audiences faster, stabilise internal identity and convert more efficiently.',
+          points: [
+            'Brand recall and click-through metrics lift as names become easier to pronounce and remember.',
+            'Team pride and alignment improve when the name mirrors mission and destiny.',
+            'Legal and cross-border adoption smooths out because conflicts and unlucky codes are removed up front.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Author Your Signature Name',
+        dividerSubtitle: 'Naming commissions limited each cycle',
+        title: 'Start a Name Destiny Project',
+        message: 'Share your objectives, audience and timeline so we can assemble the research cell and delivery schedule.',
+        primaryLabel: 'Start Naming Brief',
+        primaryHref: '/contact',
+        secondaryLabel: 'View Naming Wins',
+        secondaryHref: '/case-studies/magnetic-matrix'
+      },
+      newsletterTitle: 'Naming Intelligence Digest',
+      newsletterSubtitle: 'Phonetic trends, numerology tips and launch activation scripts delivered monthly.'
+    },
+    mmSoul: {
+      badge: 'Magnetic Matrix',
+      title: 'Soul Number Blueprint',
+      subtitle: 'Synchronise your numerology with BaZi and Zi Wei to reveal life lessons, karmic debts and partnership chemistry you can operationalise.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Numerology Intelligence',
+          dividerSubtitle: 'From insight to integration',
+          title: 'Soul Blueprint Portfolio',
+          imageLabel: 'Numerology Command Board',
+          body: 'We map core, destiny, soul and maturity numbers alongside celestial charts so your personal operating system is precise and actionable.',
+          points: [
+            'Comprehensive reading of core, destiny, soul and maturity numbers with actionable guidance.',
+            'Compatibility matrix for partners, family members and key team roles.',
+            'Daily rhythm and environment prescriptions covering colours, directions and restorative rituals.',
+            'Quarterly checkpoints aligning personal goals with incoming numerology cycles.'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Decision environments stabilised by this blueprint',
+          title: 'Numerology Strategy Cells',
+          imageLabel: 'Blueprint Alignment Map',
+          body: 'Built for numerology strategy cells that convert personal and partnership intelligence into operational cadence.',
+          points: [
+            'Personal strategy offices translating life lessons, karmic debts and timing windows into adaptive roadmaps.',
+            'Leadership partnerships synchronising compatibility, rituals and shared sprints across business and personal arenas.',
+            'Wellness and coaching collectives aligning daily rhythm, environment design and accountability frameworks to personal numbers.'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: 'Analytical Method',
+          dividerSubtitle: 'How the blueprint is assembled',
+          title: 'Cross-System Calibration',
+          imageLabel: 'Blueprint Lab',
+          body: 'We map numerology, BaZi and Zi Wei into a single dashboard so you know when to accelerate, pause or renegotiate.',
+          points: [
+            'Data intake covering life milestones, relationships and health markers for pattern recognition.',
+            'Cross-validation of numbers against celestial charts to confirm supportive or conflicting influences.',
+            'Secure portal hosting visual dashboards, meditations and habit trackers to embed the blueprint.'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: 'Life and Business Outcomes',
+          dividerSubtitle: 'Changes clients report',
+          title: 'Alignment, Momentum, Peace',
+          imageLabel: 'Blueprint Results',
+          body: 'Clients move with more certainty, repair key relationships faster and enjoy steadier wellbeing once rhythms are aligned.',
+          points: [
+            'Goal execution accelerates as personal timing windows replace random hustle.',
+            'Partnerships and teams stabilise because compatibility and conflict intervals are managed proactively.',
+            'Crisis pivots become measured rather than reactive thanks to contingency hexagrams.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Unlock Your Soul Blueprint',
+        dividerSubtitle: 'Consult slots open by application',
+        title: 'Book a Soul Number Intensive',
+        message: 'Outline your current transitions and relationship map so we can prepare the integrated numerology briefing.',
+        primaryLabel: 'Schedule Blueprint Session',
+        primaryHref: '/contact',
+        secondaryLabel: 'Explore Numerology Wins',
+        secondaryHref: '/case-studies/magnetic-matrix'
+      },
+      newsletterTitle: 'Soul Number Signals',
+      newsletterSubtitle: 'Monthly number forecasts, compatibility prompts and ritual reminders.'
+    },
     fsHome: {
       badge: 'Feng Shui Assessment',
       title: 'Home Destiny Compass',
@@ -655,12 +829,17 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'ideal',
-          dividerTitle: 'Ideal Clients',
-          dividerSubtitle: 'Who benefits most',
-          title: 'Households Ready To Ascend',
+          dividerTitle: 'Ideal Beneficiaries',
+          dividerSubtitle: 'Residential programs engineered for this audit',
+          title: 'Performance-Driven Residential Coalitions',
           imageLabel: 'Family Alignment',
           imageUrl: '/images/page-fs-home/home-img-04.png',
-          body: 'Perfect for households upgrading to a sanctuary that multiplies vitality, intimacy and financial momentum.'
+          body: 'Built for residential leadership cohorts requiring measurable wellness, protection and succession outcomes from their living environments.',
+          points: [
+            'Multi-generational estates calibrating sleep suites, stewardship rooms and heritage zones to occupant BaZi matrices.',
+            'Portfolio residences staging relocation sequences, tenancy transitions and auspicious move-ins with energetic proofing.',
+            'Hybrid live-work sanctuaries balancing focus pods, childcare ecosystems and recovery rituals under one energetic framework.'
+          ]
         },
         {
           key: 'method',
@@ -726,12 +905,17 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'ideal',
-          dividerTitle: '适用人群',
-          dividerSubtitle: '谁最需要这套勘察',
-          title: '家庭升级动能',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合导入宅运评估的家庭结构',
+          title: '多代共居・资产组合・混合工作宅',
           imageLabel: '家庭对位',
           imageUrl: '/images/page-fs-home/home-img-04.png',
-          body: '适合希望让家庭活力、关系和财务同步提升的居者。'
+          body: '服务需要量化家居绩效的家庭领导者，确保健康、财务与承传目标都能在空间中落地。',
+          points: [
+            '多代共居与照护架构：区分养护、睡眠与资源指挥区，让成员各得其所。',
+            '资产组合住宅：规划迁入、租赁与交接流程，在每个关键节点维持吉时与气场。',
+            '混合工作宅：整合专注模块、育儿支持与复原仪式，维持高强度生活与事业节奏。'
+          ]
         },
         {
           key: 'method',
@@ -825,15 +1009,15 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'audience',
           dividerTitle: 'Ideal Beneficiaries',
-          dividerSubtitle: 'Who moves best with Qi Men support',
-          title: 'Operators, Negotiators, Expansion Squads',
+          dividerSubtitle: 'Operational theatres primed for Qi Men deployment',
+          title: 'High-Stakes Operations & Negotiation Cells',
           imageLabel: 'Operations Team',
           imageUrl: '/images/page-qimen/qimen-img-04.png',
-          body: 'Perfect for founders, deal teams, security strategists and crisis navigators who cannot afford guesswork.',
+          body: 'Purpose-built for mission-critical units executing market entries, negotiations and crisis manoeuvres that demand time-gated tactical intelligence.',
           points: [
-            'High-stakes negotiators closing partnerships, term sheets and geopolitical dialogue.',
-            'M&A and expansion squads coordinating cross-border launches or relocations.',
-            'Crisis commanders handling litigation, cyber events or reputation fires in compressed timelines.'
+            'Expansion squads sequencing market launches, channel activations and site acquisitions against competitive pressure.',
+            'Deal and negotiation teams steering funding, M&A and regulatory settlements within compressed tactical windows.',
+            'Crisis response and security command centres orchestrating containment, countermeasures and resilience drills.'
           ]
         },
         {
@@ -929,16 +1113,16 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'audience',
-          dividerTitle: '适用对象',
-          dividerSubtitle: '谁最该纳入这套情报',
-          title: '创办人・资本掌舵者・影响力策动者',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '算法发挥最大杠杆的场景',
+          title: '资本调度与领导承接体系',
           imageLabel: '领袖核心圈',
           imageUrl: '/images/page-bazi/Bazi-Img-04.png',
-          body: '专为统筹人脉、资金与传承资产的决策者打造，让每一次跃迁都有可量化的底气。',
+          body: '适用于掌管资本速度、接班布局与战略转向的高阶团队，需要以量化八字情报统筹决策。',
           points: [
-            '正筹备跨国扩张或资本动作的 A 轮至 pre-IPO 创办人。',
-            '兼顾资产增值、家族治理与慈善布局的家族办公室。',
-            '需要同步顾及品牌、健康与创作节奏的高影响力人士。'
+            '多实体创办人／投资人，统筹募资节奏、退出窗口与治理轮替。',
+            '家族办公室，建立接班、托管授权与跨世代资产配置框架。',
+            '执行董事会，校准招募、激励与健康保障，使长期周期分析落地。'
           ]
         },
         {
@@ -1033,16 +1217,16 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'audience',
-          dividerTitle: '适用对象',
-          dividerSubtitle: '谁最需要帝星洞见',
-          title: '公众人物・家族办公室・传承规划者',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '需以帝星情报治理杠杆的角色',
+          title: '声誉指挥与承传治理委员会',
           imageLabel: '帝星议会',
           imageUrl: '/images/page-zimei/zimei-img-04.png',
-          body: '专为掌管舆论资本的领袖打造：政治、企业、艺术或家族体系皆适用。',
+          body: '服务需要精细掌握影响力周期、联盟稳固度与承传风险的公众核心与顾问团队。',
           points: [
-            '需同步协调股东、监管与民意的机构领袖。',
-            '统筹资产、慈善与外交的家族办公室负责人。',
-            '影响文化与市场节奏的发言人、创作者与品牌掌舵者。'
+            '国家／公共领袖与品牌代言人，调度曝光、联盟与危机姿态。',
+            '家族办公室理事会，设计承传、慈善与外交项目。',
+            '企业声誉与公关策略团队，统筹多周期的叙事与阵列。'
           ]
         },
         {
@@ -1109,12 +1293,17 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'ideal',
-          dividerTitle: '适用对象',
-          dividerSubtitle: '最能发挥此方案的团队',
-          title: '高速成长团队',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合导入此审计的营运场景',
+          title: '高速扩张楼层指挥体系',
           imageLabel: '能量布局策略',
           imageUrl: '/images/page-fs-office/office-img-02.png',
-          body: '适合高速成长的企业、投资团队与基金，追求空间即战力。'
+          body: '服务高速成长的企业、基金与领导团队，以高精度空间模型统筹营收底盘、治理节奏与人才动线。',
+          points: [
+            '高速营收楼层：针对领导、营收与赋能核心进行时门布阵，稳定流水与节奏。',
+            '投资与风投工作室：统筹尽调战情室、分析工位与投资者接待动线。',
+            '变革指挥中心：规划装修、临时办公与合规节点，确保项目不中断。'
+          ]
         },
         {
           key: 'method',
@@ -1180,12 +1369,17 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'ideal',
-          dividerTitle: '适用对象',
-          dividerSubtitle: '谁需要龙脉勘察',
-          title: '开发商・度假村・家族庄园',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合导入龙脉勘察的资本布局',
+          title: '开发旗舰・度假集群・承传庄园',
           imageLabel: '龙脉择地策略',
           imageUrl: '/images/page-fs-dragon/dragon-img-02.png',
-          body: '适合开发商、度假村与多世代家族，在购地前先锁定最具生命力的土地。'
+          body: '为大型开发计划、顶级度假资产与多世代家族所设，在投入资金前取得可验证的地理能量情报。',
+          points: [
+            '新城镇、综合度假村等长期项目，验证聚气、护砂与水系治理图谱。',
+            '机构土地银行，评估法规通过率、投资者观感与分期启用节奏。',
+            '家族庄园与承传资产，规划祖祠、纪念轴线与世代守护设施。'
+          ]
         },
         {
           key: 'method',
@@ -1252,11 +1446,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: '适合对象',
-          dividerSubtitle: '谁最受益',
-          title: '全年保持动能的家庭与团队',
+          dividerSubtitle: '最适合导入此季节守护的团队',
+          title: '家庭节律委员会・企业节拍小组',
           imageLabel: '节律协同蓝图',
           imageUrl: '/images/page-3core/3Core-Img-02.png',
-          body: '适合全年保持动能、不想被季节拖慢的家庭与团队。'
+          body: '服务全年维持动能的家庭与领导团队，以制度化季度校准，确保健康、营收与防护随节气同频。',
+          points: [
+            '家庭节律小组：统筹仪式、休憩与防护布署，让成员随节气调频。',
+            '企业节拍委员会：把产品冲刺、资本操作与防护窗口对齐季节气场。',
+            '园区／社区管理人：季度通报住户、准备物资并记录干预执行情况。'
+          ]
         },
         {
           key: 'method',
@@ -1323,11 +1522,11 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: '适合对象',
-          dividerSubtitle: '谁最适合此矩阵',
-          title: '装修・新建・样板空间',
+          dividerSubtitle: '最适合导入此矩阵的设计项目',
+          title: '旗舰整装・样板指挥・豪宅室内实验室',
           imageLabel: '设计动能地图',
           imageUrl: '/images/page-flying-star/flying-img-02.jpg',
-          body: '适合装修、新建与样板空间，在颜值与能量表现之间取得平衡。'
+          body: '服务建筑、室内与开发团队，把飞星情报融入顶级翻修、样板工程与豪宅室内设计，以兼顾美感与性能。'
         },
         {
           key: 'method',
@@ -1394,11 +1593,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: '适合对象',
-          dividerSubtitle: '谁最适合此能场',
-          title: '酒店・旗舰门店・会所・董事会议中心',
+          dividerSubtitle: '最能放大能域汇聚成效的场域',
+          title: '酒店旗舰・零售地标・高层指挥中心',
           imageLabel: '标志动能地图',
           imageUrl: '/images/page-land/land-img-02.jpg',
-          body: '适合酒店、旗舰门店、私密会所与董事会议中心，打造独有气场。'
+          body: '专为酒店集团、旗舰零售与高层会议中心打造，以能量汇聚工程稳固沉浸体验、忠诚收益与治理节奏。',
+          points: [
+            '豪华酒店：以能量板块规划宾客旅程、服务动线与仪式级体验。',
+            '旗舰零售地标：同步橱窗节奏、体验节点与会员循环，提升客单与停留时间。',
+            '董事／指挥中心：在高压谈判、战略沟通与闭门会议中维持稳定能场。'
+          ]
         },
         {
           key: 'method',
@@ -1465,11 +1669,16 @@ export const CELESTIAL_SERVICES = {
         {
           key: 'ideal',
           dividerTitle: '适合对象',
-          dividerSubtitle: '谁最受益',
-          title: '创办人・幕僚长・策略负责人',
+          dividerSubtitle: '最适合部署卦象矩阵的决策团队',
+          title: '战略指挥・交易谈判・幕僚决策体系',
           imageLabel: '决策动能地图',
           imageUrl: '/images/page-iching/iching-img-02.png',
-          body: '适合推进多线计划的创办人、幕僚长与策略负责人。'
+          body: '服务统筹多线任务的策略长、交易团队与幕僚体系，让卦象情报化为固定的决策节奏。',
+          points: [
+            '战略顾问局：规划董事会议程、资本配置与风险审查的周期化节奏。',
+            '交易／合作小组：将动爻结果植入谈判脚本、升级路径与退出触发器。',
+            '运营指挥中心：以卦象矩阵协调危机演练、沟通流程与资源调度。'
+          ]
         },
         {
           key: 'method',
@@ -1512,6 +1721,150 @@ export const CELESTIAL_SERVICES = {
       },
       newsletterTitle: '卦象情报',
       newsletterSubtitle: '第一时间掌握动爻提醒、决策仪式与领导提示。'
+    },
+    mmName: {
+      badge: '磁场矩阵',
+      title: '姓名命势代码',
+      subtitle: '融合数理、八字共振与语音磁场，打造放大命运的专属姓名。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '命名情报',
+          dividerSubtitle: '故事・音韵・命势的交汇',
+          title: '命势命名攻略',
+          imageLabel: '姓名共振图',
+          body: '检视现用姓名、生成磁性命名清单，并提供落地计划，让名字在法规、商业与能量层面同时通关。',
+          points: [
+            '检视现用姓名，找出能量流失、法律风险与发音阻力。',
+            '提供具故事性、音韵分析与数理评分的精选名单。',
+            '规划法律手续、启用仪式与对外沟通脚本。',
+            '同步评估网址、社交帐号与品牌资产，避免落差。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最能放大命势命名成效的团队',
+          title: '命势命名指挥单元',
+          imageLabel: '命名治理图',
+          body: '服务品牌、产品与传承命名团队，以数理＋命盘＋法务架构打造高共鸣姓名。',
+          points: [
+            '品牌／产品命名委员会：同步法务检索、语音测试与数理治理，确保新计划一次到位。',
+            '改名／并购整合小组：跨市场完成声誉重整、危机应对或整并统一。',
+            '家族与传承命名委员会：建立世袭架构、启用吉时与身份治理手册。'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: '命名方法论',
+          dividerSubtitle: '我们如何打造磁性名字',
+          title: '数据 × 故事 × 命运',
+          imageLabel: '命名实验室',
+          body: '结合语言科学、数理与命盘分析，让名字在法规、商业与能量层面都能通关。',
+          points: [
+            '访谈利害关系人，厘清品牌 archetype、市场定位与情绪基调。',
+            '针对主要语言与口音进行音声热力图，避开负面联想。',
+            '与个人或企业命盘对齐，并配合时运给予启用建议。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '成果体现',
+          dividerSubtitle: '客户上线后的感受',
+          title: '辨识・转化・忠诚',
+          imageLabel: '命名成果',
+          body: '透过命势代码锻造的名字，更容易被记住、被喜欢，也更能凝聚团队。',
+          points: [
+            '品牌记忆度与点击率提升，因为名字好读又好记。',
+            '团队认同感增强，因为名字贴近使命与命势。',
+            '跨国与法律落地更顺畅，因事前排除冲突与不吉数。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '写下你的专属名号',
+        dividerSubtitle: '命名委案采限量制度',
+        title: '启动命势命名计画',
+        message: '说明目标受众、用途与时程，我们将规划研究小组与交付排程。',
+        primaryLabel: '开始命名简报',
+        primaryHref: '/contact',
+        secondaryLabel: '查看命名成果',
+        secondaryHref: '/case-studies/magnetic-matrix'
+      },
+      newsletterTitle: '命名情报站',
+      newsletterSubtitle: '掌握音韵趋势、数理精选与启用仪式脚本。'
+    },
+    mmSoul: {
+      badge: '磁场矩阵',
+      title: '灵数全息蓝图',
+      subtitle: '让数理、八字与紫微同频，揭示生命课题、因果亏欠与关系化学，并付诸行动。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '灵数情报',
+          dividerSubtitle: '从洞见到整合',
+          title: '灵数蓝图组合',
+          imageLabel: '灵数指挥台',
+          body: '完整解析命格数、灵魂数、成熟数等核心指标，并给出执行建议。',
+          points: [
+            '完整解析命格数、灵魂数、成熟数等核心指标，并给出执行建议。',
+            '建立伴侣、家人与关键团队角色的合拍矩阵。',
+            '提供每日节奏与环境处方：颜色、方位与修复仪式。',
+            '安排季度复盘，将个人目标与来临的数字周期对齐。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合部署灵数蓝图的决策体系',
+          title: '灵数策略指挥单元',
+          imageLabel: '灵数对位图',
+          body: '为策略长、合作伙伴与幕僚体系提供跨数理与命盘的行动蓝图。',
+          points: [
+            '战略顾问局：依灵数与节奏安排董事议程、资本配置与风险检视。',
+            '伙伴／谈判小组：把动爻与灵数信号写入谈判脚本、升级流程与退场机制。',
+            '运营指挥中心：借助灵数矩阵统筹危机演练、沟通流程与资源调度。'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: '分析方法',
+          dividerSubtitle: '蓝图如何建构',
+          title: '多系统校准',
+          imageLabel: '蓝图实验室',
+          body: '把灵数、八字与紫微整合成一个仪表板，让你知道何时加速、暂停或重组。',
+          points: [
+            '蒐集关键里程碑、关系与健康指标，辨识模式。',
+            '跨比数字与星盘，确认助力与冲突的时间点。',
+            '提供安全平台，存放可视化仪表、冥想与习惯追踪工具。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '生活与事业成效',
+          dividerSubtitle: '客户的真实回馈',
+          title: '对齐・动能・安稳',
+          imageLabel: '蓝图成果',
+          body: '当节奏与使命同步后，客户行动更笃定，关系修复更快，身心状态更稳。',
+          points: [
+            '依照个人天窗执行计划，目标达成速度提升。',
+            '伙伴与团队在事前预判冲突与合拍期，合作更顺。',
+            '透过明确的复原、创意与决策仪式，心智负担明显下降。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '解锁灵数蓝图',
+        dividerSubtitle: '顾问席次采申请制',
+        title: '预约灵数深度会谈',
+        message: '说明目前的转折与关系地图，我们将准备整合式灵数简报。',
+        primaryLabel: '预约蓝图会议',
+        primaryHref: '/contact',
+        secondaryLabel: '览阅灵数成果',
+        secondaryHref: '/case-studies/magnetic-matrix'
+      },
+      newsletterTitle: '灵数情报',
+      newsletterSubtitle: '获取月度数字预测、关系提醒与仪式提示。'
     },
     qimen: {
       badge: '战略奇门',
@@ -1562,16 +1915,16 @@ export const CELESTIAL_SERVICES = {
         },
         {
           key: 'audience',
-          dividerTitle: '适用对象',
-          dividerSubtitle: '谁最能发挥奇门战力',
-          title: '运营指挥・谈判高手・扩张小组',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合部署奇门矩阵的作战现场',
+          title: '高压运营与谈判指挥单元',
           imageLabel: '行动小队',
           imageUrl: '/images/page-qimen/qimen-img-04.png',
-          body: '适合再也容不得试错的创办人、交易团队、安全策士与危机掌舵者。',
+          body: '为执行市场攻防、谈判议价与危机调度的任务小组量身打造，需要依时门掌握战术窗口。',
           points: [
-            '高额谈判、并购与跨国合资团队。',
-            '筹备大规模发布或市场切入的品牌与资金团队。',
-            '处理诉讼、舆情或资安突发的危机指挥中心。'
+            '扩张小组：规划市场进入、渠道落地与据点布局，在竞争压制下抢先部署。',
+            '谈判与交易团队：主导融资、并购、合规和解等高额谈判，压缩战术窗口。',
+            '危机与安全指挥中心：统筹封堵、反制与复原演练，保持组织韧性。'
           ]
         },
         {
@@ -1620,3 +1973,4 @@ export const CELESTIAL_SERVICES = {
 };
 
 export default CELESTIAL_SERVICES;
+

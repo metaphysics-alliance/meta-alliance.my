@@ -24,7 +24,7 @@ body::after{
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: rgba(2,5,15,0.35);
+  background: rgba(5,10,25,0.5);
   z-index: 0;
 }
 body::before {
