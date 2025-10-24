@@ -119,9 +119,11 @@ export default function HeroCarousel(){
         {/* Captions */}
         <div className="absolute inset-x-0 bottom-4 md:bottom-8 px-6 sm:px-8 z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-xl md:text-4xl font-semibold drop-shadow-sm">
-              {slides[idx].title}
-            </h1>
+            <div className="inline-block rounded-2xl px-5 py-3 md:px-6 md:py-4" style={TITLE_PANEL_STYLES}>
+              <h1 className="title-gradient text-xl md:text-4xl font-semibold drop-shadow-sm pb-[10px]">
+                {slides[idx].title}
+              </h1>
+            </div>
             <p className="text-white/80 mt-1.5 md:mt-3">
               {slides[idx].sub}
             </p>
@@ -149,3 +151,9 @@ export default function HeroCarousel(){
     </section>
   )
 }
+const TITLE_PANEL_STYLES = {
+  background: 'linear-gradient(125deg, rgba(255,238,184,0.92) 0%, rgba(26,46,104,0.9) 100%)',
+  boxShadow: '0 16px 36px rgba(10,18,56,0.55)',
+  border: '1px solid rgba(240,198,102,0.6)',
+  backdropFilter: 'blur(24px)',
+};

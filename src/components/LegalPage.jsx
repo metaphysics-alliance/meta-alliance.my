@@ -68,7 +68,7 @@ export default function LegalPage({ policyKey }) {
   if (!policy) {
     return (
       <main className="container py-16 text-white/75">
-        <h1 className="text-3xl font-semibold text-white mb-4">
+        <h1 className="title-gradient text-3xl font-semibold mb-4 pb-[10px]">
           {lang === 'CN' ? '未找到政策' : 'Policy Not Found'}
         </h1>
         <p>{lang === 'CN' ? '请求的政策暂时不可用。' : 'The requested policy is not available.'}</p>

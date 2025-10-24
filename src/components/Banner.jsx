@@ -6,7 +6,7 @@ export default function Banner({ title, sub, description, actions }) {
       <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.75 }} />
       <div className="relative z-10 mx-auto max-w-3xl">
         {sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{sub}</p> : null}
-        <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{title}</h1>
+        <h1 className="title-gradient mt-3 text-3xl font-semibold md:text-5xl pb-[10px]">{title}</h1>
         {description ? <p className="mt-3 max-w-3xl text-white/70">{description}</p> : null}
         {actions && (
           <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm">

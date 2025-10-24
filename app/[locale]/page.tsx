@@ -37,6 +37,7 @@ export default function Page({ params }: { params: { locale: Locale } }) {
         eyebrow={dict.brand_top ?? 'Meta Alliance'}
         title={dict.brand_bottom ?? 'Metaphysics Alliance'}
         sub={dict.why_long}
+        titlePanel
       />
 
       <Content

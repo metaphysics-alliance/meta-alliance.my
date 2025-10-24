@@ -173,9 +173,9 @@ export default function Nav(){
     { label: t('nav.home'), href: '/' },
     { label: t('nav.celestial'), children: celestialMenu },
     { label: t('nav.oracles'), children: [
-      { label: t('nav.celestial_numbers'), href: '/oracle/celestial' },
-      { label: t('nav.taiyi_numbers'), href: '/oracle/celestial' },
-      { label: t('nav.six_ren'), href: '/oracle/celestial' },
+      { label: t('nav.celestial_numbers'), href: '/oracle/celestial-numbers' },
+      { label: t('nav.taiyi_numbers'), href: '/oracle/taiyi-numbers' },
+      { label: t('nav.six_ren'), href: '/oracle/six-ren' },
     ]},
     { label: t('nav.vip_report'), href: lang === 'EN' ? '/vip-report' : '/services/vip-report', children: [
       { label: t('nav.vip_essential'), href: '/vip-report/essential' },

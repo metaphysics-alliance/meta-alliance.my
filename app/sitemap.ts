@@ -53,6 +53,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'services/fengshui/layout/hiddenwind',
     'services/fengshui/layout/sanyuan',
     'services/fengshui/layout/xuankong',
+    'oracle/celestial-numbers',
+    'oracle/taiyi-numbers',
+    'oracle/six-ren',
   ]
   const urls: MetadataRoute.Sitemap = []
   for (const l of locales){

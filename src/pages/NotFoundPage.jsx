@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function NotFoundPage(){
   return (
     <main className="container py-24 text-center">
-      <h1 className="text-4xl font-semibold text-gold mb-4">Page not found</h1>
+      <h1 className="title-gradient mb-4 text-4xl font-semibold pb-[10px]">Page not found</h1>
       <p className="text-white/70 mb-8">
         The page you were looking for may have moved or is still under construction.
       </p>

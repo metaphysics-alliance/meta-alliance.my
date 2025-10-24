@@ -674,6 +674,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Where story, sound and fate align',
           title: 'Destiny Naming Playbook',
           imageLabel: 'Name Resonance Map',
+          imageUrl: '/images/page-name/name-img-01.jpg',
           body: 'We audit existing identities, generate magnetic naming shortlists and deliver activation plans that align legal, commercial and metaphysical standards.',
           points: [
             'Audit current names to locate energetic leakage, legal friction and pronunciation drag.',
@@ -688,6 +689,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Where naming intelligence delivers the greatest lift',
           title: 'Naming Command Cells',
           imageLabel: 'Naming Governance Map',
+          imageUrl: '/images/page-name/name-img-02.jpg',
           body: 'Built for naming command cells that require measurable resonance across legal, phonetic and destiny governance.',
           points: [
             'Brand and product launch councils aligning legal clearance, phonetic stress-testing and numerology governance for new ventures.',
@@ -701,6 +703,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'How we engineer magnetism',
           title: 'Data + Story + Destiny',
           imageLabel: 'Naming Lab',
+          imageUrl: '/images/page-name/name-img-03.jpg',
           body: 'We merge linguistic science, numerology and destiny profiling so your name works legally, commercially and metaphysically.',
           points: [
             'Stakeholder interviews to define archetype, market positioning and emotional tone.',
@@ -714,6 +717,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'What clients notice post-launch',
           title: 'Recognition, Conversion, Loyalty',
           imageLabel: 'Naming Wins',
+          imageUrl: '/images/page-name/name-img-04.jpg',
           body: 'Names crafted through the Destiny Code pull audiences faster, stabilise internal identity and convert more efficiently.',
           points: [
             'Brand recall and click-through metrics lift as names become easier to pronounce and remember.',
@@ -746,6 +750,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'From insight to integration',
           title: 'Soul Blueprint Portfolio',
           imageLabel: 'Numerology Command Board',
+          imageUrl: '/images/page-numerology/num-img-01.jpg',
           body: 'We map core, destiny, soul and maturity numbers alongside celestial charts so your personal operating system is precise and actionable.',
           points: [
             'Comprehensive reading of core, destiny, soul and maturity numbers with actionable guidance.',
@@ -760,6 +765,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Decision environments stabilised by this blueprint',
           title: 'Numerology Strategy Cells',
           imageLabel: 'Blueprint Alignment Map',
+          imageUrl: '/images/page-numerology/num-img-02.jpg',
           body: 'Built for numerology strategy cells that convert personal and partnership intelligence into operational cadence.',
           points: [
             'Personal strategy offices translating life lessons, karmic debts and timing windows into adaptive roadmaps.',
@@ -773,6 +779,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'How the blueprint is assembled',
           title: 'Cross-System Calibration',
           imageLabel: 'Blueprint Lab',
+          imageUrl: '/images/page-numerology/num-img-03.jpg',
           body: 'We map numerology, BaZi and Zi Wei into a single dashboard so you know when to accelerate, pause or renegotiate.',
           points: [
             'Data intake covering life milestones, relationships and health markers for pattern recognition.',
@@ -786,6 +793,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Changes clients report',
           title: 'Alignment, Momentum, Peace',
           imageLabel: 'Blueprint Results',
+          imageUrl: '/images/page-numerology/num-img-04.jpg',
           body: 'Clients move with more certainty, repair key relationships faster and enjoy steadier wellbeing once rhythms are aligned.',
           points: [
             'Goal execution accelerates as personal timing windows replace random hustle.',
@@ -883,81 +891,167 @@ export const CELESTIAL_SERVICES = {
       newsletterTitle: 'Home Energy Intelligence',
       newsletterSubtitle: 'Seasonal layout tweaks, auspicious move-in windows and live transformation stories.'
     },
-    fsHome: {
-      badge: '风水评估',
-      title: '宅运罗盘',
-      subtitle: '把住所打造为与全家命盘共振的能量指挥中心。',
+
+    taiyiNumbers: {
+      badge: 'Imperial Oracle',
+      title: 'Cosmic Tai Yi Strategy',
+      subtitle: 'Command the stars, govern the flow of fate.',
       sections: [
         {
-          key: 'overview',
-          dividerTitle: '服务亮点',
-          dividerSubtitle: '我们如何打造居家圣域',
-          title: '宅运能量蓝图',
-          imageLabel: '住宅气场图',
-          imageUrl: '/images/page-fs-home/home-img-01.png',
-          body: '把住所打造为与全家命盘共振的能量指挥中心。',
+          key: 'introduction',
+          dividerTitle: 'Introduction · 太乙概述',
+          dividerSubtitle: 'Every enterprise needs a Tai Yi chart',
+          title: '御天星局，掌乾坤之策',
+          imageLabel: 'Golden celestial compass',
+          imageUrl: '/images/page-services/7-cosmic.jpg',
+          body: 'The Cosmic Tai Yi Strategy springs from Tai Yi Jin Jing Shi Jing—the imperial art for “observing the heavens, governing destiny.” By decoding the Tai Yi Star Matrix we forecast prosperity, calamity and strategic advantage across personal and national arenas.',
           points: [
-            '结合现场勘查与云端分析，整合形峦、飞星与家庭成员八字。',
-            '围绕财富、健康、睡眠与专注区，制定核心空间的操作规范。',
-            '提供全年调整日历，明确何时化煞、催旺与维护。',
-            '附上精选化煞与催旺物料清单，含可信的金属、晶石、水景与匠人资源。'
+            '三才同策：Heaven (时) · Earth (位) · Human (应) working in unison.',
+            'Formula: Timing × Direction × Decision = Outcome.',
+            'Design cue: gilded celestial compass floating over a cosmic spiral.'
           ]
         },
         {
-          key: 'ideal',
-          dividerTitle: '适合对象',
-          dividerSubtitle: '最适合导入宅运评估的家庭结构',
-          title: '多代共居・资产组合・混合工作宅',
-          imageLabel: '家庭对位',
-          imageUrl: '/images/page-fs-home/home-img-04.png',
-          body: '服务需要量化家居绩效的家庭领导者，确保健康、财务与承传目标都能在空间中落地。',
+          key: 'structure',
+          dividerTitle: 'Tai Yi Structure · 星局架构',
+          dividerSubtitle: 'Heaven’s algorithm revealed',
+          title: 'Nine Palaces · Sixty Divine Numbers',
+          imageLabel: 'Tai Yi star matrix',
+          imageUrl: '/images/page-services/8-celestial.jpg',
+          body: 'Tai Yi models a 360-degree cosmic rotation, split into 72 configurations and 60 divine numbers to simulate Heaven’s algorithm.',
           points: [
-            '多代共居与照护架构：区分养护、睡眠与资源指挥区，让成员各得其所。',
-            '资产组合住宅：规划迁入、租赁与交接流程，在每个关键节点维持吉时与气场。',
-            '混合工作宅：整合专注模块、育儿支持与复原仪式，维持高强度生活与事业节奏。'
+            'Nine-Palace Tai Yi board: Tai Yi Star in the centre, eight directions as heavenly branches.',
+            'Sixty Divine Numbers index: each number maps to themes—wealth, warfare, illness, nobility, humanity, spirits.',
+            'Three Talents integration: synchronise Heaven Luck, Earth Position, Human Action.',
+            'Output: “Tai Yi Core Map 太乙主局图” featuring 9-grid board plus numeric orbit ring.'
           ]
         },
         {
-          key: 'method',
-          dividerTitle: '专业流程',
-          dividerSubtitle: '为何高端家庭指定此服务',
-          title: '证据化的风水工作法',
-          imageLabel: '勘查流程',
-          imageUrl: '/images/page-fs-home/home-img-02.png',
-          body: '从资料蒐集到实施辅导，全程留痕，让你清楚知道每个建议的依据。',
+          key: 'cycles',
+          dividerTitle: 'Cycle Mechanics · 运数推演',
+          dividerSubtitle: 'Track rise and decline',
+          title: 'Nine Heavens, Sixty Numbers',
+          imageLabel: 'Tai Yi cycle wave',
+          imageUrl: '/images/page-services/9-energy.jpg',
+          body: 'Following the Tai Yi Star through Nine Heavens and Sixty Numbers reveals the rhythm of prosperity versus stagnation.',
           points: [
-            '审前资料库包含问卷、平面图、罗盘照与成员资料。',
-            '结合现场丈量、航拍影像与飞星模拟确认每个落点。',
-            '三十天顾问随行，追踪化煞效果、解答疑问并调整生活习惯。'
+            'Yearly cycle sheet: Main Star × Heavenly Stem × Earthly Branch.',
+            'Monthly phases diagram marking 旺 / 衰 transitions.',
+            'Dynamic formula: Luck = (Main Star Strength × Cycle Harmony) ÷ Conflict Index.',
+            'Output: “Tai Yi Fortune Flow Chart 太乙运势流图” (energy wave line, cycle radar, temporal heatmap).'
           ]
         },
         {
-          key: 'impact',
-          dividerTitle: '成效验证',
-          dividerSubtitle: '客户共同的指标',
-          title: '健康・财气・和谐同步',
-          imageLabel: '家庭成果',
-          imageUrl: '/images/page-fs-home/home-img-03.png',
-          body: '多数家庭在数月内明显感受到情绪稳定、收入稳定与家庭氛围升级。',
+          key: 'strategy',
+          dividerTitle: 'Strategic Interpretation · 乾坤策论',
+          dividerSubtitle: 'Turn charts into action',
+          title: 'Advance, Defend, Transform',
+          imageLabel: 'Tai Yi strategy wheel',
+          imageUrl: '/images/page-services/10-iching.jpg',
+          body: 'Tai Yi strategy pinpoints when to expand, consolidate or convert adversity into leverage.',
           points: [
-            '卧室优化四十五天后，睡眠品质与免疫状态显著提升。',
-            '学习与事业区对位吉方，孩子与大人专注力明显提高。',
-            '财富位催旺后，回款周期缩短，储蓄比率上升。'
+            'Offensive vs defensive cycle map: expansion, consolidation, retreat.',
+            'Directional tactics: Four Symbols and Five Elements overlays.',
+            'Crisis conversion: use the taboo numbers to neutralise hostile currents.',
+            'Output: professional + plain-language tactical brief with 0/30/90 day windows.'
+          ]
+        },
+        {
+          key: 'application',
+          dividerTitle: 'Applications · 实战应用',
+          dividerSubtitle: 'Bridge theory and execution',
+          title: 'Leadership, Warfare, Capital, Healing',
+          imageLabel: 'Tai Yi application grid',
+          imageUrl: '/images/page-services/11-name.jpg',
+          body: 'Embed Tai Yi insight in leadership cadence, market plays and wellbeing protocols.',
+          points: [
+            'Personal timing: align birth chart and Tai Yi numbers for decisive moves.',
+            'Corporate deployment: sync expansion, restructuring and IPO timelines with Tai Yi cycles.',
+            'Health rhythm: match meridian care to Tai Yi heavens for recovery.',
+            'Output: “Tai Yi Practical Matrix 实用矩阵图” plus personalised guidelines.'
+          ]
+        },
+        {
+          key: 'references',
+          dividerTitle: 'Classical References · 典籍依据',
+          dividerSubtitle: 'Imperial astronomy, modern validation',
+          title: 'Canonical Tai Yi Lineage',
+          imageLabel: 'Tai Yi archive',
+          imageUrl: '/images/page-services/12-soul.jpg',
+          body: 'Rooted in imperial astronomy and metaphysical mathematics, verified with contemporary datasets.',
+          points: [
+            'Texts: 《太乙金镜式经》《太乙淘金歌》《太乙秘断》《三式合参》《奇门太乙合参录》《皇极经世书》。',
+            'Validation: 中国国家天文台、香港天文台、NASA JPL、真太阳时。',
+            'Design cue: golden constellation map with subtle nebula motion layer.'
           ]
         }
       ],
       cta: {
-        dividerTitle: '升级你的居家能场',
-        dividerSubtitle: '每月限量实地档期',
-        title: '预约宅运评估',
-        message: '提交平面图、罗盘资料与家庭成员信息，我们将锁定勘察日期并准备专属报告。',
-        primaryLabel: '预约宅运诊断',
-        primaryHref: '/contact',
-        secondaryLabel: '查看成功案例',
-        secondaryHref: '/case-studies/feng-shui'
+        dividerTitle: 'Command Tai Yi Now',
+        dividerSubtitle: 'Limited computations per cycle',
+        title: 'Start Tai Yi Computation',
+        message: 'Priority Tai Yi sessions fill fast—submit your mission brief, timeline and objectives to secure your window.',
+        primaryLabel: 'Start Tai Yi Computation｜开启太乙推策',
+        primaryHref: '/contact'
       },
-      newsletterTitle: '宅运情报站',
-      newsletterSubtitle: '季节布局提示、搬迁吉时与真实案例即时送达。'
+      newsletterTitle: 'Tai Yi Signals',
+      newsletterSubtitle: 'Cycle alerts, directional cues and ritual reminders delivered ahead of key windows.'
+    },
+    sixRen: {
+      badge: 'Imperial Oracle',
+      title: 'Mystical Mechanism of Six Ren',
+      subtitle: 'Fast, tactical Six Ren divination for negotiations, crisis response and decisive pivots.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Oracle Focus',
+          dividerSubtitle: 'Decide with certainty',
+          title: 'Six Ren Tactical Intelligence',
+          imageLabel: 'Six Ren divination grid',
+          body: 'Six Ren reveals ally positioning, hidden threats and momentum direction so you can act the instant clarity is required.',
+          points: [
+            'Rapid casting for negotiations, travel, crisis containment and mission go/no-go.',
+            'Maps Heaven, Earth and Human plates to highlight supportive versus hostile energies.',
+            'Integrates with Qi Men or BaZi overlays for reinforced yes/no guidance.'
+          ]
+        },
+        {
+          key: 'playbook',
+          dividerTitle: 'Action Playbook',
+          dividerSubtitle: 'From divination to decision',
+          title: 'Move, Hold or Redirect',
+          imageLabel: 'Six Ren action board',
+          body: 'Each session concludes with concrete recommendations for immediate execution.',
+          points: [
+            'Immediate move/hold/redirect instructions tied to plate dynamics.',
+            'Suggested protective rituals and positioning to neutralise hostile forces.',
+            'Contingency pathways if conditions change mid-operation.'
+          ]
+        },
+        {
+          key: 'support',
+          dividerTitle: 'Support & Follow-up',
+          dividerSubtitle: 'Stay responsive',
+          title: 'After-Action Support',
+          imageLabel: 'Six Ren support dossier',
+          body: 'Receive note summaries and follow-up slots to reassess when new variables surface.',
+          points: [
+            'Concise post-session brief for leadership distribution.',
+            'Optional next-step casting when variables shift.',
+            'Access to ritual kits and directional cues for ongoing protection.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Command with Six Ren',
+        dividerSubtitle: 'Limited tactical seats each cycle',
+        title: 'Start Six Ren Consultation',
+        message: 'Submit your tactical brief—we respond within 24 hours with availability and preparation guidance.',
+        primaryLabel: 'Book Six Ren Oracle',
+        primaryHref: '/contact'
+      },
+      newsletterTitle: 'Six Ren Dispatch',
+      newsletterSubtitle: 'Instant alerts on directional shifts, ally signals and ritual prompts.'
     },
     qimen: {
       badge: 'Strategic Warfare',
@@ -1271,6 +1365,83 @@ export const CELESTIAL_SERVICES = {
       newsletterTitle: '保持帝星轨道',
       newsletterSubtitle: '定期接收影响力提醒、联盟案例与声誉洞察。'
     },
+    fsHome: {
+      badge: '风水评估',
+      title: '宅运罗盘',
+      subtitle: '把住所打造为与全家命盘共振的能量指挥中心。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '服务亮点',
+          dividerSubtitle: '我们如何打造居家圣域',
+          title: '宅运能量蓝图',
+          imageLabel: '住宅气场图',
+          imageUrl: '/images/page-fs-home/home-img-01.png',
+          body: '把住所打造为与全家命盘共振的能量指挥中心。',
+          points: [
+            '结合现场勘查与云端分析，整合形峦、飞星与家庭成员八字。',
+            '围绕财富、健康、睡眠与专注区，制定核心空间的操作规范。',
+            '提供全年调整日历，明确何时化煞、催旺与维护。',
+            '附上精选化煞与催旺物料清单，含可信的金属、晶石、水景与匠人资源。'
+          ]
+        },
+        {
+          key: 'ideal',
+          dividerTitle: '适合对象',
+          dividerSubtitle: '最适合导入宅运评估的家庭结构',
+          title: '多代共居・资产组合・混合工作宅',
+          imageLabel: '家庭对位',
+          imageUrl: '/images/page-fs-home/home-img-04.png',
+          body: '服务需要量化家居绩效的家庭领导者，确保健康、财务与承传目标都能在空间中落地。',
+          points: [
+            '多代共居与照护架构：区分养护、睡眠与资源指挥区，让成员各得其所。',
+            '资产组合住宅：规划迁入、租赁与交接流程，在每个关键节点维持吉时与气场。',
+            '混合工作宅：整合专注模块、育儿支持与复原仪式，维持高强度生活与事业节奏。'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: '专业流程',
+          dividerSubtitle: '为何高端家庭指定此服务',
+          title: '证据化的风水工作法',
+          imageLabel: '勘查流程',
+          imageUrl: '/images/page-fs-home/home-img-02.png',
+          body: '从资料蒐集到实施辅导，全程留痕，让你清楚知道每个建议的依据。',
+          points: [
+            '审前资料库包含问卷、平面图、罗盘照与成员资料。',
+            '结合现场丈量、航拍影像与飞星模拟确认每个落点。',
+            '三十天顾问随行，追踪化煞效果、解答疑问并调整生活习惯。'
+          ]
+        },
+        {
+          key: 'impact',
+          dividerTitle: '成效验证',
+          dividerSubtitle: '客户共同的指标',
+          title: '健康・财气・和谐同步',
+          imageLabel: '家庭成果',
+          imageUrl: '/images/page-fs-home/home-img-03.png',
+          body: '多数家庭在数月内明显感受到情绪稳定、收入稳定与家庭氛围升级。',
+          points: [
+            '卧室优化四十五天后，睡眠品质与免疫状态显著提升。',
+            '学习与事业区对位吉方，孩子与大人专注力明显提高。',
+            '财富位催旺后，回款周期缩短，储蓄比率上升。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '升级你的居家能场',
+        dividerSubtitle: '每月限量实地档期',
+        title: '预约宅运评估',
+        message: '提交平面图、罗盘资料与家庭成员信息，我们将锁定勘察日期并准备专属报告。',
+        primaryLabel: '预约宅运诊断',
+        primaryHref: '/contact',
+        secondaryLabel: '查看成功案例',
+        secondaryHref: '/case-studies/feng-shui'
+      },
+      newsletterTitle: '宅运情报站',
+      newsletterSubtitle: '季节布局提示、搬迁吉时与真实案例即时送达。'
+    },
+
     fsOffice: {
       badge: '风水评估',
       title: '权势办公格局',
@@ -1733,6 +1904,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '故事・音韵・命势的交汇',
           title: '命势命名攻略',
           imageLabel: '姓名共振图',
+          imageUrl: '/images/page-name/name-img-01.jpg',
           body: '检视现用姓名、生成磁性命名清单，并提供落地计划，让名字在法规、商业与能量层面同时通关。',
           points: [
             '检视现用姓名，找出能量流失、法律风险与发音阻力。',
@@ -1747,6 +1919,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '最能放大命势命名成效的团队',
           title: '命势命名指挥单元',
           imageLabel: '命名治理图',
+          imageUrl: '/images/page-name/name-img-02.jpg',
           body: '服务品牌、产品与传承命名团队，以数理＋命盘＋法务架构打造高共鸣姓名。',
           points: [
             '品牌／产品命名委员会：同步法务检索、语音测试与数理治理，确保新计划一次到位。',
@@ -1760,6 +1933,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '我们如何打造磁性名字',
           title: '数据 × 故事 × 命运',
           imageLabel: '命名实验室',
+          imageUrl: '/images/page-name/name-img-03.jpg',
           body: '结合语言科学、数理与命盘分析，让名字在法规、商业与能量层面都能通关。',
           points: [
             '访谈利害关系人，厘清品牌 archetype、市场定位与情绪基调。',
@@ -1773,6 +1947,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '客户上线后的感受',
           title: '辨识・转化・忠诚',
           imageLabel: '命名成果',
+          imageUrl: '/images/page-name/name-img-04.jpg',
           body: '透过命势代码锻造的名字，更容易被记住、被喜欢，也更能凝聚团队。',
           points: [
             '品牌记忆度与点击率提升，因为名字好读又好记。',
@@ -1794,6 +1969,118 @@ export const CELESTIAL_SERVICES = {
       newsletterTitle: '命名情报站',
       newsletterSubtitle: '掌握音韵趋势、数理精选与启用仪式脚本。'
     },
+    taiyiNumbers: {
+      badge: '帝师神数',
+      title: '乾坤太乙策',
+      subtitle: '运用太乙数推演机会、阻力与时机，将玄学情报转化为可执行策略。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '核心范围',
+          dividerSubtitle: '太乙为何关键',
+          title: '太乙战略指挥简报',
+          imageLabel: '太乙星盘示意',
+          body: '客制化排盘太乙数局，揭露机会窗口、阻力势力与最优时机。',
+          points: [
+            '依任务或项目排定太乙数局。',
+            '解析天地人三盘，辨识助力、对手与暗流。',
+            '将盘局讯号转译为董事会可用的策略建议。'
+          ]
+        },
+        {
+          key: 'timing',
+          dividerTitle: '时机窗口',
+          dividerSubtitle: '精准择时',
+          title: '机会与避忌提示',
+          imageLabel: '太乙时机轮盘',
+          body: '标注吉时、方位与注意事项，让行动顺势而上。',
+          points: [
+            '机会矩阵：吉日吉时与有利方位。',
+            '避忌清单：冲煞日期、敌对力量与修正仪式。',
+            '契约、启动、谈判等场景的执行检查表。'
+          ]
+        },
+        {
+          key: 'deliverables',
+          dividerTitle: '交付内容',
+          dividerSubtitle: '拿到什么',
+          title: '太乙神谕包',
+          imageLabel: '太乙简报',
+          body: '提供盘局快照、策略建议与仪式支持，一目了然。',
+          points: [
+            '管理层摘要：将盘局讯号转化为具体行动。',
+            '标注天地人三盘重点的图像与说明。',
+            '必要时安排追踪会议，因应外部变量。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '启动太乙战略',
+        dividerSubtitle: '席位按月限量',
+        title: '预约乾坤太乙策',
+        message: '提交任务目标与时程，我们将在 48 小时内确认档期与准备事项。',
+        primaryLabel: '预约太乙咨询',
+        primaryHref: '/contact'
+      },
+      newsletterTitle: '太乙情报',
+      newsletterSubtitle: '提前掌握周期提醒、方位提示与仪式建议。'
+    },
+    sixRen: {
+      badge: '帝师神数',
+      title: '六壬神机战策',
+      subtitle: '以六壬神机快速获取可执行的战术情报。',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '占策焦点',
+          dividerSubtitle: '掌握进退',
+          title: '六壬战术情报',
+          imageLabel: '六壬盘局示意',
+          body: '六壬揭示助力、隐藏风险与动能方向，帮助你在关键时刻做出明确决定。',
+          points: [
+            '快速适用于谈判、出行、危机应对等战术决策。',
+            '解析天地人三盘，高速辨认助力与阻力。',
+            '可与奇门、八字交叉验证，强化宜／忌指示。'
+          ]
+        },
+        {
+          key: 'playbook',
+          dividerTitle: '行动手册',
+          dividerSubtitle: '从占策到执行',
+          title: '进攻・防守・转向',
+          imageLabel: '六壬策略板',
+          body: '每次占策都会附上具体的立即行动建议。',
+          points: [
+            '明确指示：宜进、宜守或宜转向。',
+            '配套仪式与方位调整，化解敌对能量。',
+            '若情势突变，提供应变路径。'
+          ]
+        },
+        {
+          key: 'support',
+          dividerTitle: '支持与追踪',
+          dividerSubtitle: '保持灵活',
+          title: '行动后的护航',
+          imageLabel: '六壬追踪包',
+          body: '提供摘要、追踪档期与仪式支持，确保决策持续稳定。',
+          points: [
+            '提供简报摘要，方便团队流转。',
+            '情势变动时，可安排追加占策。',
+            '提供随行仪式与方位提示，守住行动成果。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '掌握六壬神机',
+        dividerSubtitle: '战术席次限量',
+        title: '预约六壬占策',
+        message: '告知战术背景，我们将在 24 小时内回覆可用时段与准备清单。',
+        primaryLabel: '开启六壬咨询',
+        primaryHref: '/contact'
+      },
+      newsletterTitle: '六壬快讯',
+      newsletterSubtitle: '及时获取方位、护佑与冲煞提醒。'
+    },
     mmSoul: {
       badge: '磁场矩阵',
       title: '灵数全息蓝图',
@@ -1805,6 +2092,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '从洞见到整合',
           title: '灵数蓝图组合',
           imageLabel: '灵数指挥台',
+          imageUrl: '/images/page-numerology/num-img-01.jpg',
           body: '完整解析命格数、灵魂数、成熟数等核心指标，并给出执行建议。',
           points: [
             '完整解析命格数、灵魂数、成熟数等核心指标，并给出执行建议。',
@@ -1819,6 +2107,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '最适合部署灵数蓝图的决策体系',
           title: '灵数策略指挥单元',
           imageLabel: '灵数对位图',
+          imageUrl: '/images/page-numerology/num-img-02.jpg',
           body: '为策略长、合作伙伴与幕僚体系提供跨数理与命盘的行动蓝图。',
           points: [
             '战略顾问局：依灵数与节奏安排董事议程、资本配置与风险检视。',
@@ -1832,6 +2121,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '蓝图如何建构',
           title: '多系统校准',
           imageLabel: '蓝图实验室',
+          imageUrl: '/images/page-numerology/num-img-03.jpg',
           body: '把灵数、八字与紫微整合成一个仪表板，让你知道何时加速、暂停或重组。',
           points: [
             '蒐集关键里程碑、关系与健康指标，辨识模式。',
@@ -1845,6 +2135,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '客户的真实回馈',
           title: '对齐・动能・安稳',
           imageLabel: '蓝图成果',
+          imageUrl: '/images/page-numerology/num-img-04.jpg',
           body: '当节奏与使命同步后，客户行动更笃定，关系修复更快，身心状态更稳。',
           points: [
             '依照个人天窗执行计划，目标达成速度提升。',
@@ -1973,4 +2264,3 @@ export const CELESTIAL_SERVICES = {
 };
 
 export default CELESTIAL_SERVICES;
-

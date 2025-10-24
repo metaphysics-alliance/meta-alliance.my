@@ -29,7 +29,7 @@ export default function AboutPage(){
         <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.75 }} />
         <div className="relative z-10 mx-auto max-w-6xl">
         {hero.sub ? <p className="text-xs uppercase tracking-[0.3em] text-white/60">{hero.sub}</p> : null}
-        <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{hero.title || 'About Metaphysics Alliance'}</h1>
+        <h1 className="title-gradient mt-3 text-3xl font-semibold md:text-5xl pb-[10px]">{hero.title || 'About Metaphysics Alliance'}</h1>
         {hero.description ? <p className="mt-3 max-w-3xl text-white/70">{hero.description}</p> : null}
         <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm">
           <Link to="/contact" className="rounded-lg bg-gold px-4 py-2 font-medium text-black hover:bg-gold-soft">{(about.cta && about.cta.label) || (lang === 'CN' ? '联系我们' : 'Contact Us')}</Link>

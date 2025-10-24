@@ -1,13 +1,13 @@
 // src/components/SectionDivider.jsx
 export default function SectionDivider({ title, subtitle = '' }){
   const titleGlow = { textShadow: '0 0 6px rgba(255,215,128,0.85), 0 0 14px rgba(17,31,78,0.65), 0 0 2px rgba(0,0,0,0.55)' }
-  const subtitleGlow = { textShadow: '0 0 8px rgba(17,31,78,0.5)' }
+  const subtitleGlow = titleGlow
   const blueLineGlow = { boxShadow: '0 0 16px rgba(14,30,88,0.65)' }
   const goldLineGlow = { boxShadow: '0 0 18px rgba(246,212,125,0.7)' }
   const panelStyles = {
-    background: 'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(8,12,28,0.75))',
-    boxShadow: '0 14px 32px rgba(3,6,20,0.48)',
-    border: '1px solid rgba(212,175,55,0.35)',
+    background: 'linear-gradient(125deg, rgba(255,238,184,0.92) 0%, rgba(26,46,104,0.9) 100%)',
+    boxShadow: '0 16px 36px rgba(10,18,56,0.55)',
+    border: '1px solid rgba(240,198,102,0.6)',
     backdropFilter: 'blur(20px)'
   }
   return (
@@ -19,7 +19,7 @@ export default function SectionDivider({ title, subtitle = '' }){
             {title}
           </h3>
           {subtitle ? (
-            <p className="text-xs md:text-sm mt-2 text-[#1d2f6f] font-medium" style={subtitleGlow}>
+            <p className="text-xs md:text-sm mt-2 font-medium text-[#0b122f]" style={subtitleGlow}>
               {subtitle}
             </p>
           ) : null}
