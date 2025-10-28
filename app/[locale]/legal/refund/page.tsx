@@ -24,7 +24,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
   const title = dictTitle(dict, 'legal.refund');
   return (
     <div className='space-y-10'>
-      <Hero title={title} />
+      <Hero title={title} locale={params.locale} />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>

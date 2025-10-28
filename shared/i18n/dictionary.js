@@ -37,14 +37,14 @@ export const dictionary = {
       vip_supreme: 'Supreme Destiny Blueprint',
       academy: 'Academy',
       courses: 'Courses Overview',
+      foundation: 'Chinese Metaphysics Foundation',
       beginner: 'Beginner',
       advanced: 'Advanced',
       pro: 'Professional Certification',
-      calendar: 'Calendar & Booking',
       enterprise: 'Enterprise',
-      audit: 'Corporate Audit',
-      site: 'Site Selection',
-      cycles: 'Strategy & Cycles',
+      audit: 'Corporate Destiny Intelligence',
+      site: 'Enterprise Site Strategy',
+      cycles: 'Enterprise Strategy Intelligence',
       resources: 'Resources',
       four_pillars: 'Cosmic Four Pillars Chart',
       purple_star: 'Celestial Star Oracle Chart',
@@ -93,30 +93,33 @@ export const dictionary = {
       pro_title: 'Advanced Destiny Blueprint',
       supreme_title: 'Supreme Destiny Blueprint',
       lite_points: [
-        '100+ page destiny report',
-        'Talents & potentials, destined industries, earning models',
-        '10-year Luck Pillars (Da Yun) analysis',
-        'Life numbers (numerology) analysis',
-        'Practical remediation advice'
+        '100+ page personalised destiny blueprint',
+        'Talent & potential analysis',
+        'Career & industry alignment roadmap',
+        'Wealth dynamics & management guidance',
+        '10-year Luck Cycle (Da Yun) timing analysis',
+        'Life numbers (numerology) decoding',
+        'Actionable adjustments to balance weaknesses'
       ],
       pro_points: [
-        '200+ page destiny report',
-        'Talents & potentials, destined industries, earning models',
-        '10-year Luck Pillars (Da Yun) analysis',
-        'Life numbers (numerology) analysis',
-        'Practical remediation advice',
-        'Numeric field analysis',
-        'Name auspiciousness analysis'
+        '200+ page destiny mastery blueprint',
+        'Complete career and industry resonance mapping',
+        'Wealth structure diagnostics and risk alerts',
+        '10-year Luck Phases with transition strategies',
+        'Numerology overlays for behavioural refinement',
+        'Energy field analysis across health, relationships and productivity',
+        'Name vibration audit with optimisation guidance',
+        'Timing-based action plan and practical remedies'
       ],
       supreme_points: [
-        '300+ page destiny report',
-        'Talents & potentials, destined industries, earning models',
-        '10-year Luck Pillars (Da Yun) analysis',
-        'Life numbers (numerology) analysis',
-        'Practical remediation advice',
-        'Numeric field analysis & change recommendations',
-        'Name auspiciousness analysis & change recommendations',
-        'Feng Shui evaluation (residential only)'
+        '300+ page full-holographic destiny command deck',
+        'Complete integration of destiny, numerology, name energy and Feng Shui',
+        'Wealth architecture insights with capital and legacy strategies',
+        '10-year & annual timing roadmap with activation protocols',
+        'Personal energy field analysis with advanced balancing remedies',
+        'Name vibration optimisation with strategic renaming options',
+        'Residential Feng Shui assessment and spatial harmonisation plan',
+        'Custom action programme aligning timing, space and energy'
       ]
       },
     },
@@ -124,628 +127,1403 @@ export const dictionary = {
       ...CELESTIAL_SERVICES.EN,
       corporateAudit: {
         badge: 'Corporate Destiny Audit',
-        title: 'Corporate Destiny Audit Intelligence',
-        subtitle: 'Diagnose and optimise leadership energy, operational flow, decision rhythm and spatial qi through Chinese metaphysics + corporate analytics.',
+        title: 'Corporate Destiny Intelligence',
+        subtitle: 'Decode the hidden forces behind corporate success.',
         sections: [
           {
-            key: 'introduction',
-            dividerTitle: 'Introduction',
-            dividerSubtitle: 'Every company has a destiny chart',
-            title: 'Strategy × Energy × Space × Timing',
-            imageLabel: 'Black-gold cosmic banner',
-            body: 'Metaphysics Alliance exposes the unseen structure of enterprises so boards can move with cosmic precision. Every company has a destiny chart—we reveal it, align it and weaponise it.',
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Strategic metaphysics for enterprise foresight',
+            title: 'See the Energetic DNA of the Enterprise',
+            imageLabel: 'Corporate destiny intelligence collage',
+            body: `Corporate Destiny Intelligence is a strategic metaphysical assessment that reveals how a company’s energy structure, leadership rhythm and spatial environment align with the universal cycle of prosperity. By combining time, direction and human synergy, it exposes the unseen factors shaping growth, culture and wealth flow so leadership can realign for momentum and longevity.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'The structure behind performance',
+            title: 'Diagnose the Hidden Architecture of Success',
+            imageLabel: 'Enterprise energy flow dashboard',
+            body: 'Every company carries a destiny pattern—shaped by its founding moment, people and place.',
             points: [
-              'Corporate audit blend: destiny analytics, spatial feng shui, leadership profiling and timing intelligence.',
-              'Outcome: relentless clarity on what to accelerate, shield or rewire before the next fiscal gate.',
-              'Urgency CTA: priority audit slots release monthly—secure your window now.'
+              'Corporate Energy Flow: is the organisation in expansion, transition or rest?',
+              'Leadership Resonance: how the core team’s charts align with the corporate energy.',
+              'Wealth Pathways: directions and timing that favour growth, capital or partnership.',
+              'Environmental Influence: how office or site qi supports or constrains outcomes.',
+              'Strategic Foresight: early signals of stagnation or breakthrough windows.'
             ]
           },
           {
-            key: 'destinyMapping',
-            dividerTitle: 'Corporate Destiny Mapping',
-            dividerSubtitle: 'Decode the enterprise chart',
-            title: 'Founding BaZi & Zi Wei Intelligence',
-            imageLabel: 'Corporate destiny matrices',
-            body: 'Convert founding date/time and registered location into BaZi and Zi Wei charts to expose innate strengths and risks.',
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Time · Space · People alignment',
+            title: 'Map the Enterprise Against Cosmic Rhythm',
+            imageLabel: 'Corporate timing matrix storyboard',
+            body: 'We integrate corporate astrology, energy flow and strategic metaphysics to map founding data and operational cycles against cosmic timing, identifying when growth is supported and when caution is required.',
             points: [
-              'Founding BaZi chart with five-element radar, yin/yang ratio and Heaven–Earth–Human balance.',
-              'Corporate Zi Wei analysis covering business luck, finance, brand and reputation palaces.',
-              'Energy Index scoreboard highlighting competitive edges and weak spots.'
+              'Foundational analysis of the corporate destiny map.',
+              'Calibration of leadership charts with enterprise rhythm.',
+              'Spatial review of headquarters, branches or key sites for resonance with goals.',
+              'Cycle timing that distinguishes momentum phases from consolidation periods.',
+              'Action sequencing that aligns initiatives with supportive windows.'
             ]
           },
           {
-            key: 'leadership',
-            dividerTitle: 'Leadership Audit',
-            dividerSubtitle: 'C-suite resonance',
-            title: 'Leadership Energy Compatibility',
-            imageLabel: 'Leadership resonance grid',
-            body: 'Cross-map executive birth data with the company chart to validate decision rhythm and succession stability.',
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From discovery to activation',
+            title: 'Six Steps to Corporate Destiny Clarity',
+            imageLabel: 'Corporate audit workflow board',
+            body: 'A structured workflow turns energetic diagnostics into executive-ready intelligence.',
             points: [
-              'Decision Frequency map comparing CEO BaZi with company BaZi cycles.',
-              'Leadership Element Type breakdown and Team Energy Matrix radar chart.',
-              'Compatibility Score (0–100) with immediate harmonisation playbook.'
+              'Discovery Briefing – align on history, challenges and goals.',
+              'Data & Chart Mapping – build the corporate destiny map from founding and leadership details.',
+              'Energy Diagnosis – analyse operational flow, leadership synergy and spatial resonance.',
+              'Cycle Interpretation – decode 1-year, 3-year and 10-year trendlines.',
+              'Strategic Consultation – present findings in clear, practical language.',
+              'Action Blueprint – deliver timing and directional guidance for decisions and site planning.'
             ]
           },
           {
-            key: 'spatial',
-            dividerTitle: 'Spatial Feng Shui Diagnostics',
-            dividerSubtitle: 'Office qi orchestration',
-            title: 'Engineer the Headquarters Qi-Field',
-            imageLabel: 'Office qi map',
-            body: 'Link workspace qi-flow to operational performance, retention and culture.',
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'For leaders stewarding pivotal moves',
+            title: 'Built for Founders, Boards and Investors',
+            imageLabel: 'Enterprise leadership alignment briefing',
+            body: 'Engineered for leadership teams who require timing clarity before executing major initiatives.',
             points: [
-              'Office Qi Map with current-period flying star overlays.',
-              'Directional Wealth Chart for entrances, finance hubs and executive suites.',
-              'Magnetic Flow Path from arrival to boardroom with correction suggestions (plants, lighting, colour harmonics).'
+              'Companies preparing expansion, rebranding or market entry.',
+              'Boards seeking energetic alignment to stabilise morale and execution.',
+              'Investors vetting timing for capital deployment and partner synergy.',
+              'Family enterprises structuring succession and legacy continuity.'
             ]
           },
           {
-            key: 'operations',
-            dividerTitle: 'Operational Energy Cycle',
-            dividerSubtitle: 'Timing intelligence',
-            title: 'Cashflow, PR and Growth Rhythm',
-            imageLabel: 'Operational cycle board',
-            body: 'Audit timing cycles that govern liquidity, reputation and expansion.',
-            points: [
-              'Ten-Year Luck Cycle curve for long-range strategy.',
-              'Annual Forecast chart (12-month bar + radar combo) showing surge vs caution windows.',
-              'Seasonal Action Window card with pro/human-mode timing guidance.'
-            ]
-          },
-          {
-            key: 'naming',
-            dividerTitle: 'Corporate Naming & Numerology',
-            dividerSubtitle: 'Brand resonance',
-            title: 'Numerology Magnetics Audit',
-            imageLabel: 'Name numerology radar',
-            body: 'Evaluate corporate, brand and product names via 三才五格 and number magnetics.',
-            points: [
-              'Corporate Name Five-Grid report with auspiciousness scoring.',
-              'Brand numerology radar and numeric fortune pie chart.',
-              'IC/phone/account energy audit plus renaming recommendations when balance falters.'
-            ]
-          },
-          {
-            key: 'wealth',
-            dividerTitle: 'Wealth Structure & Flow',
-            dividerSubtitle: 'Capital choreography',
-            title: 'Visualise the Capital Rivers',
-            imageLabel: 'Wealth flow diagram',
-            body: 'Map how resources move through the enterprise so the CFO can plug leaks fast.',
-            points: [
-              'Wealth Flow Sankey diagram (income → expense → reinvestment).',
-              'Elemental wealth mapping (Fire marketing, Metal finance, Water logistics, etc.).',
-              'Optimisation prescriptions combining timing, feng shui adjustments and HR deployment.'
-            ]
-          },
-          {
-            key: 'fateScore',
-            dividerTitle: 'Corporate Fate Score',
-            dividerSubtitle: 'Multi-dimensional index',
-            title: 'Energy × Timing × Space × Leadership',
-            imageLabel: 'Fate score dashboard',
-            body: 'Deliver a composite scoreboard across energy, timing, spatial support and leadership alignment.',
-            points: [
-              'Energy Stability radar, Decision Harmony matrix and Wealth Flow efficiency bars.',
-              'Risk Heatmap with palace-by-palace scoring (0–100).',
-              'Highlight Red Alert quadrants demanding immediate executive action.'
-            ]
-          },
-          {
-            key: 'actionPlan',
-            dividerTitle: 'Action Plan & Recommendations',
-            dividerSubtitle: 'From insight to execution',
-            title: '90-Day Command Plan',
-            imageLabel: 'Action plan timeline',
-            body: 'Translate diagnosis into a phased playbook the board can deploy instantly.',
-            points: [
-              'Immediate (1 week), 30-day and 90-day action lists.',
-              'Long-term feng shui layout and cultural cadence update (12-month view).',
-              'Urgency: audit seats are limited—lock your slot before the next quarter closes.'
-            ]
-          },
-          {
-            key: 'references',
-            dividerTitle: 'Reference & Authority',
-            dividerSubtitle: 'Classics + analytics',
-            title: 'Imperial Source, Modern Proof',
-            imageLabel: 'Reference compendium',
-            body: 'Ground the audit in classical canon and modern data discipline.',
-            points: [
-              'Classics: 《渊海子平》《三命通会》《滴天髓》《紫微斗数全书》《青囊经》《葬经》《皇极经世书》。',
-              'Modern references: corporate analytics, capital flow datasets, ESG benchmarks.'
-            ]
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you receive',
+            title: 'A Strategic Map of Corporate Destiny',
+            imageLabel: 'Corporate destiny cycle chart',
+            body: 'You receive a clear visual of the enterprise destiny cycle—when to grow, consolidate or transform. Corporate Destiny Intelligence augments analytics with timing and energetic alignment so leadership acts in flow with time, not against it.'
           }
         ],
-        cta: {
-          dividerTitle: 'Command Your Corporate Destiny',
-          dividerSubtitle: 'Priority audit windows release monthly',
-          title: 'Start Corporate Destiny Audit',
-          message: 'Upload your briefing (founding data, leadership roster, floor plans). We respond within 48 hours with scope, fees and the earliest audit window.',
-          primaryLabel: 'Start Corporate Audit → 开启企业审查推演',
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Uncover Your Company’s Hidden Blueprint?',
+          dividerSubtitle: 'Reserve your corporate destiny audit',
+          title: 'Start Your Corporate Destiny Consultation',
+          message: 'Click to begin a personalised corporate audit and align your enterprise with the rhythm of success.',
+          primaryLabel: 'Start Your Corporate Destiny Consultation',
           primaryHref: '/contact'
-        },
-        newsletterTitle: 'Corporate Resonance Signals',
-        newsletterSubtitle: 'Seasonal board briefings, energy diagnostics and regulatory qi alerts.'
+      },
+      advancedBlueprint: {
+        badge: '360全维度',
+        title: '天机蓝图·进阶版',
+        subtitle: '洞察命格结构 · 掌握人生天机。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '命格深度解读',
+            title: '从认识到掌控的进阶蓝图',
+            imageLabel: '进阶命运概览图',
+            body: '《天机蓝图·进阶版》是一份超过 200 页的深度命运解析，整合八字、生命数字与姓名能量，揭示命格如何运作、何时转折，以及如何掌握人生节奏。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '命运系统全结构',
+            title: '全面解构命格八大板块',
+            imageLabel: '命运多层洞察面板',
+            body: '蓝图揭示命运系统的更深层结构：',
+            points: [
+              '天赋潜能：挖掘隐藏能力与性格驱动力。',
+              '行业定位：锁定最契合五行能量的事业领域。',
+              '财富结构：看懂财富流入、积累、风险与止损位。',
+              '十年大运：提前预判长期周期的兴衰与转折。',
+              '生命数字：解析行为密码与成长课题。',
+              '能量场分析：捕捉健康、人际与效率的能量失衡。',
+              '姓名吉象：评估姓名与命格的共振度与优化建议。',
+              '实用化解：提供针对性调整方案与时机动作。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '结构与节奏共读',
+            title: '三重系统交叉解码命运',
+            imageLabel: '结构与节奏共振图',
+            body: '综合“八字五行”、“生命数字频率”与“姓名能量共振”，同时解析命的结构与运的节奏，让你看见命运的触发机制。'
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '六步完成进阶蓝图',
+            title: '从资料到专属策略',
+            imageLabel: '进阶蓝图流程板',
+            body: '严谨流程确保洞察落地：',
+            points: [
+              '资料收集：记录出生与姓名信息。',
+              '命盘分析：整合八字、数字与能量模型。',
+              '姓名共振评估：判断姓名与命格能量的合拍度。',
+              '周期预测：推演十年与流年节奏变化。',
+              '蓝图编制：产生 200+ 页深度报告。',
+              '解读咨询：一对一讲解与专属策略讨论。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '关键转折的行动指南',
+            title: '为准备升级的人而设',
+            imageLabel: '进阶用户场景图',
+            body: '适合正处重要阶段、需要掌控时间节奏的决策者：',
+            points: [
+              '准备重大转型或跨界发展的个人。',
+              '希望事业节奏与命格相辅相成的创业者。',
+              '追求长期布局与节奏掌控的专业人士。',
+              '想理解姓名能量如何影响命运的人。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '一生可用的命运运行图',
+            title: '让挑战化为节奏而非阻力',
+            imageLabel: '命运运行蓝图',
+            body: '你将带走一份完整的命运运行图谱，知道自己是谁、节奏如何展开、下一步怎么走。当你掌握命运节奏，阻力会变节奏，人生会更从容。'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想深入解锁命运的隐藏结构？',
+          dividerSubtitle: '预约天机蓝图·进阶版',
+          title: '领取天机蓝图·进阶版',
+          message: '点击开启专属命运解析，掌握人生节奏。',
+          primaryLabel: '领取天机蓝图·进阶版',
+          primaryHref: '/contact'
+        }
+      },
+      advancedBlueprint: {
+        badge: '360 Holistic',
+        title: 'Advanced Destiny Blueprint',
+        subtitle: 'Decode the hidden structure of destiny · master the code behind your life.',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Deep-dive destiny mastery',
+            title: 'Move from Awareness to Mastery',
+            imageLabel: 'Advanced destiny overview panel',
+            body: `The Advanced Destiny Blueprint is a 200+ page personalised analysis that reveals how your destiny system operates. It integrates BaZi, numerology and name energy to expose your energetic structure, timing triggers and life cycles so you can steer with precision.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Multi-layered intelligence',
+            title: 'Understand Every Layer of Your Destiny',
+            imageLabel: 'Destiny layers insight board',
+            body: 'This blueprint goes beyond the foundation level to decode the mechanics behind your life pattern.',
+            points: [
+              'Talent & Core Potential: uncover hidden gifts shaping your natural abilities.',
+              'Career & Industry Resonance: pinpoint environments and roles that amplify your elements.',
+              'Wealth Structure: analyse how resources flow, accumulate or disperse in your chart.',
+              'Ten-Year Luck Phases: map transitions so you can plan long-range timing decisions.',
+              'Numerology Insights: cross-reference life numbers for personality refinement.',
+              'Energy Field Analysis: detect imbalances affecting health, productivity or relationships.',
+              'Name Energy & Symbolism: evaluate how your name supports—or conflicts with—your destiny.',
+              'Practical Adjustments: receive targeted remedies and timing-based action steps.'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Structure and motion',
+            title: 'Fuse Pattern, Frequency and Timing',
+            imageLabel: 'Methodology resonance map',
+            body: 'We merge BaZi elemental logic, numerology frequency and name resonance to reveal who you are and how your destiny breathes.',
+            points: [
+              'Layered BaZi analysis showing elemental strengths, weaknesses and capacity.',
+              'Numerology overlays that highlight behavioural codes and growth lessons.',
+              'Name energy resonance audit comparing current vibration with destiny needs.',
+              'Cycle mapping that connects structure (命) with movement (运) for practical decisions.'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From intake to decoding',
+            title: 'Six Steps to an Advanced Blueprint',
+            imageLabel: 'Advanced blueprint workflow',
+            body: 'A comprehensive workflow ensures insight transforms into strategy.',
+            points: [
+              'Personal Information Collection – gather precise birth and name data.',
+              'Comprehensive Data Analysis – integrate BaZi, numerology and energy mapping.',
+              'Name Resonance Assessment – test alignment between your name and destiny field.',
+              'Ten-Year & Annual Cycle Forecast – uncover long and short-term timing triggers.',
+              'Blueprint Compilation – deliver a 200+ page in-depth destiny report.',
+              'Interpretation Consultation – translate findings into personalised strategy.'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'Designed for turning points',
+            title: 'Built for Those Ready to Level Up',
+            imageLabel: 'Advanced audience storyboard',
+            body: 'Perfect for individuals moving through major transitions or seeking mastery over timing.',
+            points: [
+              'Leaders planning significant personal or career pivots.',
+              'Entrepreneurs syncing personal destiny with business growth.',
+              'Professionals engineering long-term strategy through timing mastery.',
+              'Individuals curious about how name energy shapes their trajectory.'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you take away',
+            title: 'A Time-Coded Master Plan',
+            imageLabel: 'Destiny master plan map',
+            body: `You leave with a complete, time-coded roadmap that shows who you are, how your cycles unfold and how to move forward with power and precision. Challenges become rhythm—not resistance—once you understand your internal frequency.`
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Unlock the Deeper Layers of Your Destiny?',
+          dividerSubtitle: 'Reserve your Advanced Destiny Blueprint',
+          title: 'Get Your Advanced Destiny Blueprint',
+          message: 'Click to begin your personalised analysis and master the rhythm of your life.',
+          primaryLabel: 'Get Your Advanced Destiny Blueprint',
+          primaryHref: '/contact'
+        }
+      },
+      newsletterTitle: 'Corporate Destiny Dispatch',
+      newsletterSubtitle: 'Board-level timing intelligence, spatial diagnostics and leadership alignment guidance.'
+    },
+      essentialBlueprint: {
+        badge: '360 Holistic',
+        title: 'Essential Destiny Blueprint',
+        subtitle: 'Decode your destiny · begin the journey with clarity and confidence.',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Foundational destiny blueprint',
+            title: 'Start with Strategic Self-Awareness',
+            imageLabel: 'Destiny blueprint overview panel',
+            body: `The Essential Destiny Blueprint is a 100+ page personalised analysis for people ready to understand their purpose, talents and timing. It combines BaZi, numerology and life-cycle intelligence so you can move with your inherent rhythm instead of fighting against it.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Full-spectrum clarity',
+            title: 'See the Pattern Behind Who You Are',
+            imageLabel: 'Destiny insight board',
+            body: 'Your report delivers a holistic view of who you are and where your destiny leads.',
+            points: [
+              'Talent & Potential: uncover innate gifts and strengths that activate easily.',
+              'Career & Industry Alignment: identify roles, environments and industries that amplify your element mix.',
+              'Wealth Dynamics: understand how you attract, manage and retain financial flow.',
+              'Life Rhythm: map Ten-Year and Annual cycles so you can time moves with confidence.',
+              'Numerology Insights: decode core life numbers for deeper self-understanding.',
+              'Practical Adjustments: receive actionable remedies to balance weaknesses and unlock momentum.'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Metaphysics translated into strategy',
+            title: 'Connect Pattern, Timing and Action',
+            imageLabel: 'Methodology flow chart',
+            body: 'We transform ancient metaphysical formulas into clear, relatable guidance that you can apply immediately.',
+            points: [
+              'Five-element calibration that exposes your foundational energy pattern.',
+              'Ten-Year Luck Cycle and annual overlays showing when to accelerate, stabilise or pivot.',
+              'Personal strategy guidance that keeps decisions aligned with opportunity flow.',
+              'Downloadable charts and dashboards so you can revisit insights anytime.'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From intake to blueprint',
+            title: 'Five Steps to Your Destiny Blueprint',
+            imageLabel: 'Blueprint creation workflow',
+            body: 'A precise workflow ensures every report is rigorous, personalised and actionable.',
+            points: [
+              'Information Intake – capture birth date, time and location to anchor the analysis.',
+              'Comprehensive Analysis – interpret BaZi, numerology and destiny cycles in tandem.',
+              'Blueprint Creation – produce a 100+ page report with visuals, commentary and actions.',
+              'Interpretation Session – walk through key insights in plain, practical language.',
+              'Practical Guidance – receive mindset, timing and environment adjustments for smoother flow.'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'Clarity before action',
+            title: 'Designed for People Ready to Lead Their Destiny',
+            imageLabel: 'Audience alignment storyboard',
+            body: 'Perfect for individuals who want to take ownership of their direction and momentum.',
+            points: [
+              'Purpose seekers looking for confident career or life choices.',
+              'Professionals feeling stuck or misaligned with timing.',
+              'Entrepreneurs aligning personal destiny with business cycles.',
+              'Anyone ready to understand their rhythm and unlock long-term flow.'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you take away',
+            title: 'A Lifetime Reference for Your Destiny',
+            imageLabel: 'Destiny reference map',
+            body: `You receive more than a report—you gain a personal atlas for navigating timing, relationships, money and purpose. Once you understand your cycles, you stop chasing outcomes and start creating them with calm, confidence and intent.`
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Begin Your Destiny Journey?',
+          dividerSubtitle: 'Reserve your Essential Destiny Blueprint',
+          title: 'Get Your Destiny Blueprint',
+          message: 'Click to begin your personalised report and uncover the logic of your destiny.',
+          primaryLabel: 'Get Your Destiny Blueprint',
+          primaryHref: '/contact'
+        }
+      },
+      advancedBlueprint: {
+        badge: '360 Holistic',
+        title: 'Advanced Destiny Blueprint',
+        subtitle: 'Decode the hidden structure of destiny · master the code behind your life.',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Destiny mastery deep dive',
+            title: 'Move from Awareness to Mastery',
+            imageLabel: 'Advanced destiny overview panel',
+            body: `The Advanced Destiny Blueprint is a 200+ page personalised analysis that reveals how your destiny system operates. It fuses BaZi, numerology and name energy to expose your energetic structure, timing triggers and life cycles so you can steer with precision.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Multi-layered intelligence',
+            title: 'Understand Every Layer of Your Destiny',
+            imageLabel: 'Destiny layers insight board',
+            body: 'This blueprint goes beyond the foundation level to decode the mechanics behind your life pattern.',
+            points: [
+              'Talent & Core Potential: uncover hidden gifts shaping your natural abilities.',
+              'Career & Industry Resonance: pinpoint environments and roles that amplify your elements.',
+              'Wealth Structure: analyse how resources flow, accumulate or disperse in your chart.',
+              'Ten-Year Luck Phases: map transitions so you can plan long-range timing decisions.',
+              'Numerology Insights: cross-reference life numbers for personality refinement.',
+              'Energy Field Analysis: detect imbalances affecting health, productivity or relationships.',
+              'Name Energy & Symbolism: evaluate how your name supports—or conflicts with—your destiny.',
+              'Practical Adjustments: receive targeted remedies and timing-based action steps.'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Structure and motion',
+            title: 'Fuse Pattern, Frequency and Timing',
+            imageLabel: 'Methodology resonance map',
+            body: 'We merge BaZi elemental logic, numerology frequency and name resonance to reveal who you are and how your destiny breathes.',
+            points: [
+              'Layered BaZi analysis showing elemental strengths, weaknesses and capacity.',
+              'Numerology overlays that highlight behavioural codes and growth lessons.',
+              'Name energy resonance audit comparing current vibration with destiny needs.',
+              'Cycle mapping that connects structure (命) with movement (运) for practical decisions.'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From intake to decoding',
+            title: 'Six Steps to an Advanced Blueprint',
+            imageLabel: 'Advanced blueprint workflow',
+            body: 'A comprehensive workflow ensures insight transforms into strategy.',
+            points: [
+              'Personal Information Collection – gather precise birth and name data.',
+              'Comprehensive Data Analysis – integrate BaZi, numerology and energy mapping.',
+              'Name Resonance Assessment – test alignment between your name and destiny field.',
+              'Ten-Year & Annual Cycle Forecast – uncover long and short-term timing triggers.',
+              'Blueprint Compilation – deliver a 200+ page in-depth destiny report.',
+              'Interpretation Consultation – translate findings into personalised strategy.'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'Designed for turning points',
+            title: 'Built for Those Ready to Level Up',
+            imageLabel: 'Advanced audience storyboard',
+            body: 'Perfect for individuals moving through major transitions or seeking mastery over timing.',
+            points: [
+              'Leaders planning significant personal or career pivots.',
+              'Entrepreneurs syncing personal destiny with business growth.',
+              'Professionals engineering long-term strategy through timing mastery.',
+              'Individuals curious about how name energy shapes their trajectory.'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you take away',
+            title: 'A Time-Coded Master Plan',
+            imageLabel: 'Destiny master plan map',
+            body: `You leave with a complete, time-coded roadmap that shows who you are, how your cycles unfold and how to move forward with power and precision. Challenges become rhythm—not resistance—once you understand your internal frequency.`
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Unlock the Deeper Layers of Your Destiny?',
+          dividerSubtitle: 'Reserve your Advanced Destiny Blueprint',
+          title: 'Get Your Advanced Destiny Blueprint',
+          message: 'Click to begin your personalised analysis and master the rhythm of your life.',
+          primaryLabel: 'Get Your Advanced Destiny Blueprint',
+          primaryHref: '/contact'
+        }
+      },
+      supremeBlueprint: {
+        badge: '360 Holistic',
+        title: 'Supreme Destiny Blueprint',
+        subtitle: 'When Heaven, Earth, and Human align — destiny becomes clarity.',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Full-spectrum mastery',
+            title: 'Unify Heaven, Earth and Human',
+            imageLabel: 'Supreme destiny overview panel',
+            body: `The Supreme Destiny Blueprint is a 300+ page full-spectrum consultation—the most complete edition in the Destiny Blueprint series. It unites BaZi, numerology, name energy and Feng Shui to reveal how time, space and personal energy converge so you can command every dimension of your life.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Holographic destiny system',
+            title: 'See the Entire Ecosystem of Your Destiny',
+            imageLabel: 'Destiny ecosystem board',
+            body: 'This blueprint delivers the most complete metaphysical portrait available.',
+            points: [
+              'Talent & Core Potential: reveal innate gifts, hidden strengths and life mission.',
+              'Career & Industry Blueprint: highlight industries and environments aligned with your element pattern.',
+              'Wealth Structure: decode how prosperity flows, accumulates and is protected in your chart.',
+              'Ten-Year Luck & Timing: map decadal transitions for long-range strategic planning.',
+              'Numerology Insights: refine personality and behaviour through life number overlays.',
+              'Energy Field Assessment: evaluate personal vibration and provide realignment guidance.',
+              'Name Energy Optimisation: assess name resonance and suggest enhancements.',
+              'Home Feng Shui Assessment: align residential energy with your personal destiny.',
+              'Practical Remedies: deliver custom strategies to enhance opportunities and dissolve obstacles.'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Heaven · Earth · Human cohesion',
+            title: 'Synchronise Heaven, Earth and Human',
+            imageLabel: 'Heaven earth human alignment map',
+            body: 'This consultation integrates Heaven (time cycles), Earth (Feng Shui and location energy), and Human (personal chart) into one cohesive analysis. By synchronising your personal destiny code with environmental and temporal flow, the Supreme Destiny Blueprint shows how to align every area of your life—career, wealth, health and relationships—with cosmic rhythm. You’ll gain:',
+            points: [
+              'A holographic understanding of your entire destiny system.',
+              'A forward-looking blueprint for the coming decades of timing.',
+              'An integrated plan that weaves time, space and energy into one strategy.'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From assessment to activation',
+            title: 'Six Steps to a Supreme Blueprint',
+            imageLabel: 'Supreme blueprint workflow',
+            body: 'A rigorous workflow ensures insight becomes transformation.',
+            points: [
+              'Initial Consultation – clarify background, goals and life stage.',
+              'Comprehensive Data Analysis – integrate BaZi, numerology, name energy and Feng Shui.',
+              'Cycle Forecasting – map Ten-Year and Annual transitions for opportunity control.',
+              'Energy Field Evaluation – assess personal and environmental resonance.',
+              'Blueprint Compilation – deliver a 300+ page full-holographic destiny report.',
+              'Interpretation Session – walk through insights with tailored strategy briefings.'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'For total alignment',
+            title: 'Designed for Those Leading Whole Lifetimes',
+            imageLabel: 'Supreme audience storyboard',
+            body: 'Perfect for visionaries integrating destiny, energy and environment into one system.',
+            points: [
+              'Leaders and founders orchestrating multi-decade plans.',
+              'Entrepreneurs engineering legacy ventures and wealth structures.',
+              'Individuals at major crossroads in life, career or relationship.',
+              'Homeowners aligning personal energy with residential Feng Shui.'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you receive',
+            title: 'Own a Full-Holographic Destiny Ecosystem',
+            imageLabel: 'Holographic destiny map',
+            body: 'You receive the most detailed destiny intelligence ever designed—a complete holographic system that connects your inner blueprint with the outer world. The Supreme Destiny Blueprint empowers you to make every choice with confidence, foresight and resonance. When timing, environment and energy align, success stops being unpredictable—it becomes natural flow.'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to See Your Destiny in Full Dimension?',
+          dividerSubtitle: 'Reserve your Supreme Destiny Blueprint',
+          title: 'Get Your Supreme Destiny Blueprint',
+          message: 'Click to begin your full-holographic consultation and experience destiny from every dimension.',
+          primaryLabel: 'Get Your Supreme Destiny Blueprint',
+          primaryHref: '/contact'
+        }
       },
       enterpriseSite: {
         badge: 'Enterprise Advisory',
-        title: 'Enterprise Site Selection Command Deck',
-        subtitle: 'Fuse landform qi, San Yuan Jiu Yun timing and business use-cases to select sites that stay prosperous.',
+        title: 'Enterprise Site Strategy',
+        subtitle: 'The site must harmonize landform energy, cosmic cycles, and business nature to endure prosperity.',
         sections: [
           {
-            key: 'purpose',
-            dividerTitle: 'Purpose & Scope',
-            dividerSubtitle: 'Why alignment matters',
-            title: 'Set the Mandate Before the Survey',
-            imageLabel: 'Purpose briefing overlay',
-            body: 'Explain why site selection must align with landform qi, San Yuan Jiu Yun cycles and the intended business function.',
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Strategic site foresight',
+            title: 'Where Earth and Enterprise Align',
+            imageLabel: 'Enterprise site strategy collage',
+            body: `Enterprise Site Strategy is a specialised metaphysical consultation that helps organisations choose, evaluate and optimise locations using classical Feng Shui and time–space principles. It integrates landform, directional energy and cyclical timing to identify places that amplify opportunity instead of consuming it—ensuring every chosen ground supports long-term success.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Invisible forces, visible results',
+            title: 'Expose the Energetic Blueprint of Each Site',
+            imageLabel: 'Site energy intelligence board',
+            body: 'Every site carries a pattern of unseen energy that shapes business momentum. This analysis surfaces the levers you need.',
             points: [
-              'Audit coverage: journey from macro landform reading to micro interior fit-out recommendations.',
-              'Applicable scenarios: HQ, manufacturing plant, flagship retail, clinic, data centre.',
-              'Deliverables overview: scorecards, layered maps and a sequenced action plan.'
+              'Geographical Qi Flow: whether the surrounding topography gathers or scatters prosperity.',
+              'Directional Wealth Line: ideal facing, entrance and flow paths that attract resources.',
+              'Timing Alignment: auspicious periods to sign, renovate or launch operations.',
+              'Industry Resonance: match between site element and business nature (Fire for tech, Metal for finance, etc.).',
+              'Hidden Constraints: early warning for structures or alignments that may restrict performance.'
             ]
           },
           {
-            key: 'clientBrief',
-            dividerTitle: 'Client & Project Brief',
-            dividerSubtitle: 'Use-case intake',
-            title: 'Capture the Strategic Brief',
-            imageLabel: 'Stakeholder briefing grid',
-            body: 'Gather use-case, capacity, timeline and budget so the audit targets real-world constraints.',
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Land · Direction · Timing',
+            title: 'Synchronise Enterprise Destiny with Terrain',
+            imageLabel: 'Site resonance matrix',
+            body: 'We blend landform study, directional Feng Shui and cosmic timing to align corporate destiny with location energy so every square metre works with you—not against you.',
             points: [
-              'Collect company profile, stakeholder birth data (for resonance mapping) and key decision makers.',
-              'Document required GFA / plot ratio, development phases, lease vs freehold preference and target opening date.',
-              'Output a constraints summary separating “must-have” from “nice-to-have”.'
+              'Landform intelligence evaluates mountains, waterways and surrounding structures.',
+              'Directional mapping determines optimal facing, entrances and internal flow.',
+              'Timing overlays apply San Yuan cycles and activation dates.',
+              'Enterprise calibration correlates company charts with site energy.',
+              'Mitigation protocols outline remedies when terrain requires reinforcement.'
             ]
           },
           {
-            key: 'geoIntake',
-            dividerTitle: 'Geo-Spatial Intake',
-            dividerSubtitle: 'Regional sampling',
-            title: 'Load Your Candidates',
-            imageLabel: 'Regional intake map',
-            body: 'Import candidate coordinates or polygons to create the base spatial canvas.',
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From scouting to decision',
+            title: 'Six Steps to Site Selection Clarity',
+            imageLabel: 'Enterprise site workflow board',
+            body: 'A rigorous workflow converts terrain diagnostics into board-level guidance.',
             points: [
-              'Collect address, latitude/longitude, cadastral parcel map and nearby features (mountains, water, highways).',
-              'Display base maps with 1/3/5 km rings plus POI overlays highlighting rivers, ridgelines, transport and EMF sources.'
+              'Consultation & Objective Setting – clarify expansion goals and site criteria.',
+              'Site Data Collection – gather coordinates, layouts and surroundings for shortlisted plots.',
+              'Energy & Flow Analysis – review landform, facing and natural qi distribution.',
+              'Timing & Cycle Review – match site potential with current and upcoming cycles.',
+              'Comparative Ranking – score sites by synergy, resilience and regulatory fit.',
+              'Strategic Delivery – present final recommendations with actionable timing and layout insights.'
             ]
           },
           {
-            key: 'macroLandform',
-            dividerTitle: 'Macro Landform (Form School)',
-            dividerSubtitle: 'Dragon · Sand · Water · Facing',
-            title: 'Assess the Big Qi',
-            imageLabel: 'Form school contour sketch',
-            body: 'Judge mountain spine (dragon), embracing sand, incoming/outgoing water and overall facing.',
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'Land equals momentum',
+            title: 'Built for Strategic Decision Makers',
+            imageLabel: 'Leadership site evaluation briefing',
+            body: 'Designed for enterprises and investors whose next move depends on choosing ground that compounds success.',
             points: [
-              'Show ridge and valley sketches, Bright Hall openness, shielding vs exposure.',
-              'Analyse water patterns (approach, meander, exit) and flag water arrows.',
-              'Output: Form score (0–100) plus risk notes for冲射、割脚水、反弓水.'
+              'Companies establishing headquarters or entering new cities.',
+              'Developers assessing high-value land or mixed-use investments.',
+              'Retail and F&B brands selecting flagship or multi-outlet locations.',
+              'Manufacturers relocating plants for logistics efficiency and energy stability.'
             ]
           },
           {
-            key: 'compass',
-            dividerTitle: 'Compass Audit (Xuan Kong)',
-            dividerSubtitle: 'Flying Star analytics',
-            title: 'Establish Sitting and Facing',
-            imageLabel: 'Flying star compass grid',
-            body: 'Determine sitting/facing degrees and assemble the period star chart for the building plot.',
-            points: [
-              'Collect precise facing measurements, current Period (Yun) and site notes.',
-              'Display nine-grid Flying Star map showing mountain/water stars and auspicious vs inauspicious sectors.',
-              'Output: Use/avoid guidance by function (entrance, finance room, CEO office, server room).'
-            ]
-          },
-          {
-            key: 'cycles',
-            dividerTitle: 'San Yuan Jiu Yun Alignment',
-            dividerSubtitle: 'Period compliance check',
-            title: 'Match the Current Yun',
-            imageLabel: 'San Yuan timeline ribbon',
-            body: 'Check whether the site naturally benefits the active period and suggest rectifications when it does not.',
-            points: [
-              'Show period compliance matrix (旺山旺向、双星到向、双星到山等).',
-              'Output: Period-fit score plus rectification advice (water feature, lighting, façade massing).'
-            ]
-          },
-          {
-            key: 'waterLaw',
-            dividerTitle: 'Water Law & Roads as Water',
-            dividerSubtitle: 'Wealth flow diagnostics',
-            title: 'Track Money Flow',
-            imageLabel: 'Water law schematic',
-            body: 'Apply classical water formulas while treating major roads as water flows.',
-            points: [
-              'Diagram incoming (来水) vs outgoing (去水) routes, junction types and roundabouts.',
-              'Output: Wealth retention potential, leak points and recommended fixes.'
-            ]
-          },
-          {
-            key: 'microFit',
-            dividerTitle: 'Site Micro-Fit',
-            dividerSubtitle: 'Parcel resonance',
-            title: 'Optimise Entrances and Cores',
-            imageLabel: 'Parcel micro-fit grid',
-            body: 'Plot entrances, ramps, cores, loading zones and vertical circulation on the parcel.',
-            points: [
-              'Ensure entrances land in auspicious sectors and avoid pressing sha lines or knife edges.',
-              'Output: Entrance/facade tweaks plus canopy, planter and screen positioning guidance.'
-            ]
-          },
-          {
-            key: 'functionZoning',
-            dividerTitle: 'Function Zoning',
-            dividerSubtitle: 'Five-element allocation',
-            title: 'Match Departments to Qi',
-            imageLabel: 'Functional zoning storyboard',
-            body: 'Place teams in sectors that support their elemental needs.',
-            points: [
-              'Produce zoning map covering leadership, finance, sales, R&D, storage, IT/servers and wellness areas.',
-              'Output: Room-to-sector assignment table with rationale and notes on noise/heat/EMF isolation.'
-            ]
-          },
-          {
-            key: 'stakeholders',
-            dividerTitle: 'Stakeholder Resonance',
-            dividerSubtitle: 'People-field alignment',
-            title: 'Seat Key Leaders in Power Zones',
-            imageLabel: 'Stakeholder resonance radar',
-            body: 'Cross-map CEO and owners’ charts to site sectors for seating and facing recommendations.',
-            points: [
-              'Derive personal Kua and useful elements to guide seating/meeting orientations.',
-              'Output: Executive seating plan and orientation sheet.'
-            ]
-          },
-          {
-            key: 'access',
-            dividerTitle: 'Access, Light, Wind, EMF',
-            dividerSubtitle: 'Engineering filters',
-            title: 'Respect Physical Qi Conditions',
-            imageLabel: 'Environmental diagnostics grid',
-            body: 'Account for non-metaphysical filters that affect how qi manifests.',
-            points: [
-              'Show venturi wind channels vs dead corners, daylight availability and proximity to transformer rooms or towers.',
-              'Output: Mitigation list covering baffles, screens, green walls and grounding measures.'
-            ]
-          },
-          {
-            key: 'risks',
-            dividerTitle: 'Risk & Red Flags',
-            dividerSubtitle: 'Fatal flaw scan',
-            title: 'Flag Deal-Breakers Early',
-            imageLabel: 'Risk flag dashboard',
-            body: 'Identify critical issues such as T-junction sha, sharp-corner attack or severe water leaks.',
-            points: [
-              'Checklist includes downhill backs, coffin-lid forms and other structural threats.',
-              'Output: Red/Amber/Green map with corrective options or “Do Not Select” verdict.'
-            ]
-          },
-          {
-            key: 'timing',
-            dividerTitle: 'Time Windows (Qi Men / Almanac)',
-            dividerSubtitle: 'Activation playbook',
-            title: 'Pick the Right Date',
-            imageLabel: 'Timing window matrix',
-            body: 'Recommend groundbreaking, contract signing and move-in windows using Qi Men Dun Jia and Tong Shu.',
-            points: [
-              'Present 3–5 optimal windows plus cautions.',
-              'Output: Ceremony and facing protocol cheat-sheet.'
-            ]
-          },
-          {
-            key: 'compliance',
-            dividerTitle: 'Compliance & Practicalities',
-            dividerSubtitle: 'Reality check',
-            title: 'Validate Planning and Logistics',
-            imageLabel: 'Compliance checklist board',
-            body: 'Review planning rules, utilities, logistics and capex/opex assumptions.',
-            points: [
-              'Compare zoning class vs intended use, access limits, flood/fire/heritage overlays.',
-              'Output: Feasibility gate (Go / Revise / No-Go) with key dependencies.'
-            ]
-          },
-          {
-            key: 'scoring',
-            dividerTitle: 'Scoring & Shortlist',
-            dividerSubtitle: 'Weighted decision',
-            title: 'Rank Your Candidates',
-            imageLabel: 'Site scoring radar',
-            body: 'Apply a four-axis weighted score—Form, Compass, Time, Practical.',
-            points: [
-              'Display radar or stacked bar comparisons for each site with tie-break notes.',
-              'Output: Top 1–3 shortlist with pros/cons and mandatory remedies.'
-            ]
-          },
-          {
-            key: 'actionPlan',
-            dividerTitle: 'Action Plan',
-            dividerSubtitle: 'Execution roadmap',
-            title: 'Move from Audit to Activation',
-            imageLabel: 'Action roadmap storyboard',
-            body: 'Outline what to change now, in 30 days and in 90 days.',
-            points: [
-              'Provide drawing markups, furnishing and landscape cues plus contractor brief bullets.'
-            ]
-          },
-          {
-            key: 'documentation',
-            dividerTitle: 'Documentation & References',
-            dividerSubtitle: 'Evidence trail',
-            title: 'Grounded in Classics & Standards',
-            imageLabel: 'Documentation stack mockup',
-            body: 'Reference the classical canon and measurement standards supporting the audit.',
-            points: [
-              'Include 《青囊经》《葬经》《撼龙经》《地理人子须知》《玄空飞星》体系 alongside survey/measurement standards.',
-              'Deliver digital dashboards, annotated plans and compliance-ready memos.'
-            ]
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you receive',
+            title: 'A Prosperity Map for Your Next Site',
+            imageLabel: 'Prosperity flow site map',
+            body: 'You gain more than a report—you receive a strategic map of prosperity flow. Enterprise Site Strategy empowers confident selection so your new foundation resonates with Heaven’s timing and Earth’s rhythm, making growth sustainable rather than accidental.'
           }
         ],
-        cta: {
-          dividerTitle: 'Ready to Evaluate Locations?',
-          dividerSubtitle: 'Secure your enterprise site blueprint',
-          title: 'Upload Candidate Sites',
-          message: 'Submit KML, CSV and briefing documents so we can ingest your shortlist and generate landform plus Flying Star intelligence within five business days.',
-          primaryLabel: 'Upload Site KML/CSV',
-          primaryHref: '/contact',
-          secondaryLabel: 'Submit Candidate Site → Generate Report',
-          secondaryHref: '/contact'
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Find the Ground Where Fortune Begins?',
+          dividerSubtitle: 'Reserve your site selection consultation',
+          title: 'Start Your Site Strategy Consultation',
+          message: 'Click to begin your personalised site consultation and discover where your enterprise truly belongs.',
+          primaryLabel: 'Start Your Site Strategy Consultation',
+          primaryHref: '/contact'
         },
-        newsletterTitle: 'Site Selection Intelligence',
-        newsletterSubtitle: 'Maps, timing alerts and zoning insights tailored to enterprise expansion.'
+        newsletterTitle: 'Enterprise Site Dispatch',
+        newsletterSubtitle: 'Landform intelligence, timing alerts and location optimisation for executive teams.'
       },
-enterpriseCycles: {
+      enterpriseCycles: {
         badge: 'Enterprise Advisory',
-        title: 'Enterprise Strategy & Cycles Command Suite',
-        subtitle: 'Every destiny follows a rhythm—command cycles to master timing, strategy and execution.',
+        title: 'Enterprise Strategy & Cycle Intelligence',
+        subtitle: 'Those who move with time, move ahead of fate.',
         sections: [
           {
-            key: 'introduction',
-            dividerTitle: 'Introduction',
-            dividerSubtitle: 'Metaphysical strategy defined',
-            title: 'Metaphysical Strategy = Destiny + Cycle + Momentum + Timing',
-            imageLabel: 'Triangular destiny flow diagram',
-            body: 'Every destiny follows a rhythm. Metaphysical strategy fuses 命 (Destiny), 运 (Cycle), 势 (Momentum) and 时 (Timing) so leadership, capital and culture move in lockstep.',
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Strategy meets cosmic timing',
+            title: 'Use the Rhythm of Time as a Strategic Asset',
+            imageLabel: 'Enterprise timing intelligence collage',
+            body: `Enterprise Strategy & Cycle Intelligence is an advanced metaphysical consultation that aligns business decisions with the natural rhythm of time. It bridges strategic planning with metaphysical timing—revealing when expansion thrives, when to consolidate, and when to shift direction so cosmic rhythm becomes a practical competitive edge.`
+          },
+          {
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Cycles decoded',
+            title: 'See the Patterns Behind Performance',
+            imageLabel: 'Cycle diagnostics board',
+            body: 'Every company operates inside cycles of markets, people and time. This consultation uncovers the hidden cadence steering results.',
             points: [
-              'Definition: combine destiny blueprint, cycle intelligence, momentum leverage and precise timing.',
-              'Diagram: triangular flow Destiny → Opportunity → Action → Renewal, rendered in black-gold cosmic arc with Taiji halo.',
-              'Cycle spiral motif introduces the command suite’s visual language.'
+              'Strategic Timing: when to grow, pause or pivot based on destiny trends.',
+              'Cycle Mapping: locate your current phase in the prosperity curve.',
+              'Opportunity Windows: identify upcoming months or years favourable for launches, funding or alliances.',
+              'Crisis Forecast: detect volatility and internal misalignment before they erupt.',
+              'Momentum Optimisation: synchronise leadership actions with cosmic flow.'
             ]
           },
           {
-            key: 'macroStructure',
-            dividerTitle: 'Macro Time Structure',
-            dividerSubtitle: 'Heaven’s grand clock',
-            title: 'San Yuan → Jiu Yun → Year → Month → Day → Hour',
-            imageLabel: 'Macro cycle arc with professional line chart',
-            body: 'The Heaven’s clock governs macro rhythm: San Yuan (180 years) flow into Jiu Yun (20 years) and cascade down to yearly, monthly, daily and hourly beats.',
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Heaven · Earth · Human alignment',
+            title: 'Translate Cosmic Rhythm into Boardroom Intelligence',
+            imageLabel: 'Heaven earth human resonance map',
+            body: 'We map the enterprise founding chart, leadership rhythm and market flow against greater celestial cycles, revealing resonance and friction between Heaven (timing), Earth (operations) and Human (decisions). The result is timing guidance executives can act on.',
             points: [
-              'Three Yuan & Nine Yun table featuring current Period 9 (2024–2043) Fire-element signature.',
-              'Yearly Element Trend board forecasting impact on industries, markets and emotion climate.',
-              'Cycle Energy Curve (line chart) illustrating Fire peak vs Water decline with annotations.',
-              'Output: Macro Cycle Report summarising current and forthcoming Yun implications.'
+              'Founding destiny profile with cycle overlays.',
+              'Leadership timing dashboard matched to corporate targets.',
+              'Industry cycle correlation using macro yin-yang trends.',
+              'Cycle heatmaps showing active vs dormant phases.',
+              'Risk and opportunity tagging for upcoming windows.'
             ]
           },
           {
-            key: 'strategicAlignment',
-            dividerTitle: 'Strategic Alignment',
-            dividerSubtitle: 'Synchronise Heaven, Earth and Human',
-            title: 'Align Strategy with the Right Cycle',
-            imageLabel: 'Cycle–Direction–Action matrix',
-            body: 'Ensure personal or corporate strategy resonates with Heaven–Earth rhythm so execution never fights prevailing qi.',
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From intent to implementation',
+            title: 'Six Steps to Cycle-Led Strategy',
+            imageLabel: 'Cycle strategy workflow board',
+            body: 'A structured pathway converts metaphysical timing into executable action plans.',
             points: [
-              'Cycle Matching table comparing natal cycles against current Yun to reveal resonance gaps.',
-              'Flow Harmony Index (0–100) tracking alignment across key initiatives.',
-              'Directional Strategy Chart: East/Wood = Growth, South/Fire = Visibility, West/Metal = Monetisation, North/Water = Intuition.',
-              'Output: Cycle–Direction–Action Matrix specifying when to act, pause or recalibrate.'
+              'Strategic Briefing – align on goals, challenges and horizon.',
+              'Cycle Profiling – analyse enterprise destiny and leadership cadence.',
+              'External Alignment – sync internal rhythm with market and macro cycles.',
+              'Period Forecasting – map 1/3/10-year growth and caution phases.',
+              'Interpretation Session – translate insights into plain, strategic language.',
+              'Action Blueprint – deliver a time-based plan with key focus points.'
             ]
           },
           {
-            key: 'annualCycle',
-            dividerTitle: 'Annual Strategy Cycle',
-            dividerSubtitle: 'Yearly command cadence',
-            title: 'Twelve Months, Four Strategic Seasons',
-            imageLabel: 'Annual radial strategy map',
-            body: 'Each year carries bespoke opportunity and bottleneck signatures derived from Four Pillars and Zi Wei transformations.',
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'Clarity before commitment',
+            title: 'For Leaders Steering Pivotal Moves',
+            imageLabel: 'Leadership timing briefing',
+            body: 'Ideal for leadership teams and investors who require timing insight before committing capital and resources.',
             points: [
-              'Annual Flow Map (radial wheel chart) with month-by-month highlights.',
-              'Quarterly Focus card: Q1 Planting (Wood), Q2 Fire & Expansion, Q3 Harvest (Metal), Q4 Reflection (Water).',
-              'Strategy Calendar marking favourable vs avoid periods with ★ opportunity and ⚠ risk tags.',
-              'Output: 2025 Strategy Path infographic combining opportunity and risk overlays.'
+              'CEOs and founders planning expansion or restructure.',
+              'Investors timing market entry, scaling or divestment.',
+              'Teams managing rapid growth, integration or transition.',
+              'Visionaries aligning destiny with long-term business cycles.'
             ]
           },
           {
-            key: 'monthlyRhythm',
-            dividerTitle: 'Monthly & Seasonal Rhythm',
-            dividerSubtitle: '24 Solar Terms',
-            title: 'Tune to the Solar Pulse',
-            imageLabel: 'Seasonal wheel – Solar Strategy Chart',
-            body: 'Synchronise business or life rhythm with the 24 solar terms to maximise support from nature’s cadence.',
-            points: [
-              'Solar Term Table listing all 24节气 with Gregorian anchors.',
-              'Monthly Element Bias board identifying predominant qi each month.',
-              'Action Guidance scripts detailing initiations and cautions per term.',
-              'Output: interactive Solar Strategy Chart (seasonal wheel) for planning rituals and operations.'
-            ]
-          },
-          {
-            key: 'microCycles',
-            dividerTitle: 'Micro Cycles',
-            dividerSubtitle: 'Qi Men tactical grid',
-            title: 'Short-Term Tactical Timing',
-            imageLabel: 'Qi Men nine-palace tactical map',
-            body: 'Deploy Qi Men Dun Jia for day/hour precision—locking in favourable gates, stars and deities for tactical wins.',
-            points: [
-              'Qi Men Nine Palace diagram with gates, stars and deities overlay.',
-              'Favourable Time Windows card listing auspicious hour blocks from live Qi Men charts.',
-              'Day Officer & Star Trend table for daily leadership of qi.',
-              'Output: Tactical Calendar plus Qi Men Energy Window cards for mission planning.'
-            ]
-          },
-          {
-            key: 'crossMapping',
-            dividerTitle: 'Cycle Cross-Mapping',
-            dividerSubtitle: 'BaZi · Zi Wei · Feng Shui synthesis',
-            title: 'Find Convergence Nodes',
-            imageLabel: 'Three-layer synergy map',
-            body: 'Cross-map BaZi decades, Zi Wei limits and Feng Shui flying stars to locate convergence points where strategy compounds.',
-            points: [
-              'BaZi 10-Year Cycle × Zi Wei Decade Limit matrix.',
-              'Feng Shui Flying Star overlay to highlight supported vs challenged sectors.',
-              'Three-Layer Synergy Map rating high/medium/low convergence.',
-              'Output: Strategic Momentum Quadrant illustrating high synergy vs low synergy actions.'
-            ]
-          },
-          {
-            key: 'industryWealth',
-            dividerTitle: 'Industry & Wealth Cycle',
-            dividerSubtitle: 'Elemental market intelligence',
-            title: 'Surf Prosperity Waves',
-            imageLabel: 'Elemental wealth radar/bar combo',
-            body: 'Identify industries entering or exiting prosperity phases based on elemental correlations and economic overlays.',
-            points: [
-              'Element–Industry Mapping chart linking sectors to five elements.',
-              'Economic Cycle Overlay aligning macroeconomic indicators with elemental movements.',
-              'Wealth Flow Indicator (radar/bar combo) grading Prosper / Pause / Pivot recommendations.',
-              'Output: Investment & Business Timing Table annotated by element.'
-            ]
-          },
-          {
-            key: 'strategyFormulation',
-            dividerTitle: 'Strategy Formulation',
-            dividerSubtitle: 'Execution blueprint',
-            title: 'From Insight to Action',
-            imageLabel: 'Strategy blueprint storyboard',
-            body: 'Translate cycle intelligence into grounded moves with sequencing, resource allocation and communications support.',
-            points: [
-              'Action Sequencing card outlining Now / 30 Days / 90 Days plays.',
-              'Elemental Strategy Deck: Wood=Initiate, Fire=Promote, Earth=Stabilise, Metal=Harvest, Water=Adapt.',
-              'Risk–Opportunity Balance radar chart for leadership briefings.',
-              'Output: Strategy Blueprint PDF with dual commentary (professional & plain language).'
-            ]
-          },
-          {
-            key: 'references',
-            dividerTitle: 'References',
-            dividerSubtitle: 'Classics & validation',
-            title: 'Canonical Foundations',
-            imageLabel: 'Classics and datasets collage',
-            body: 'Cycle intelligence is anchored in authentic texts and validated with modern astronomical and economic data.',
-            points: [
-              'Classics: 《皇极经世书》《三命通会》《紫微斗数全书》《奇门遁甲》《协纪辨方书》《易传》《渊海子平》《天玉经》《青囊经》.',
-              'Modern validation: economic cycle datasets, NASA ephemeris, True Solar Time, industry analytics.',
-              'Documentation includes cycle analysis workflow notebooks and verification summaries.'
-            ]
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you receive',
+            title: 'A Strategic Rhythm Playbook',
+            imageLabel: 'Time-centred strategy map',
+            body: 'You leave with deep clarity on where your company sits in the time cycle and how to turn timing into advantage. Enterprise Strategy & Cycle Intelligence merges destiny rhythm with decision science so leadership acts with foresight—not hindsight—making success repeatable rather than accidental.'
           }
         ],
-        cta: {
-          dividerTitle: 'Lead with Temporal Precision',
-          dividerSubtitle: 'Reserve your strategic rhythm audit',
-          title: 'Start Strategy Cycle Analysis',
-          message: 'Share your corporate calendar, strategic priorities and stakeholder roster. We reply within three business days with the scope and data requirements.',
-          primaryLabel: 'Start Strategy Cycle Analysis｜开启策略周期推演',
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to Master the Rhythm of Your Enterprise?',
+          dividerSubtitle: 'Reserve your strategy & cycle consultation',
+          title: 'Start Your Strategy & Cycle Consultation',
+          message: 'Click to begin your personalised session and turn timing into strategic power.',
+          primaryLabel: 'Start Your Strategy & Cycle Consultation',
           primaryHref: '/contact'
         },
-        newsletterTitle: 'Cycle Intelligence Dispatch',
-        newsletterSubtitle: 'Seasonal wheels, cycle curves and polarity gauges distilled for board-level clarity.'
+        newsletterTitle: 'Enterprise Cycle Dispatch',
+        newsletterSubtitle: 'Cycle alerts, timing forecasts and rhythm optimisation for executive teams.'
       },
-      celestialNumbers: {
+            celestialNumbers: {
         badge: 'Imperial Oracle',
-        title: 'Supreme Celestial Numbers Oracle',
-        subtitle: 'Decode the Huangji Divine Cycles to orchestrate destiny across sovereigns, enterprises and individuals.',
+        title: 'Supreme Celestial Numbers',
+        subtitle: 'Decode the rhythm of time and move in sync with your destiny.',
         sections: [
           {
-            key: 'introduction',
-            dividerTitle: 'Introduction',
-            dividerSubtitle: 'Origins of Huangji Divine Cycles',
-            title: 'Where Astronomy Meets Imperial Numerology',
-            imageLabel: 'Golden Huangji spiral with cosmic halo',
-            body: 'The Huangji Divine Cycles stem from the Supreme Celestial Numbers Oracle—an imperial science blending astronomy, numerology and timing. It maps how universal order flows through dynasties, nations, enterprises and personal destinies.',
-            points: [
-              'Historical root: Shao Yong’s Huangji Jing Shi Shu (宋·邵雍).',
-              'Principle: “Numbers define order, Time defines change” (数以理推，理以时演).',
-              'Visual treatment: metallic gold concentric spiral framed by deep-space halo.'
-            ]
+            key: 'overview',
+            dividerTitle: 'Overview',
+            dividerSubtitle: 'Service synopsis',
+            title: 'Live in Rhythm with Destiny',
+            imageLabel: 'Time, space and destiny woven together',
+            body: `Supreme Celestial Numbers is a precision metaphysical consultation that decodes how time, space and personal destiny intertwine. Rooted in the ancient Huangji Tian Shu philosophy, it reveals not only what may happen but why events unfold and how to act before they surface so you move with, not against, the current of time.`,
           },
           {
-            key: 'cosmicFramework',
-            dividerTitle: 'Cosmic Time Framework',
-            dividerSubtitle: 'Heaven · Earth · Human',
-            title: 'Macro–Meso–Micro Time Architecture',
-            imageLabel: 'Triple-layer time matrix (Heaven–Earth–Human)',
-            body: 'All movement follows cyclic waves: Heaven (macro), Earth (environmental) and Human (micro). Huangji synchronises these layers into a single command chart.',
+            key: 'insight',
+            dividerTitle: 'What It Reveals',
+            dividerSubtitle: 'Uncover your hidden timeline',
+            title: 'See the Rhythm Beneath Every Chapter',
+            imageLabel: 'Destiny rhythm insight board',
+            body: 'Every life follows an invisible rhythm. This reading uncovers the currents shaping your decisions before they surface.',
             points: [
-              'Three-Tier Matrix: Heaven Cycle (San Yuan Jiu Yun · 180/20-year waves), Earth Cycle (regional landform and socio-economic pulses), Human Cycle (10-year luck pillars + annual flows).',
-              'visual: triple-ring circular timeline, outer ring = Heaven, middle = Earth, inner = Human.',
-              'Output: Macro–Meso–Micro Synchrony Score spreadsheet with executive commentary.'
-            ]
+              'Life Momentum: when your personal cycle strengthens or wanes.',
+              'Turning Points: windows of opportunity and risk before they appear.',
+              'Hidden Influences: people, environments or timing shaping results silently.',
+              'The Grand Blueprint: the overarching theme your destiny is unfolding.',
+            ],
           },
           {
-            key: 'numericalLaw',
-            dividerTitle: 'Numerical Law of Huangji',
-            dividerSubtitle: 'Living numbers, responsive qi',
-            title: 'The Mathematics of Resonance',
-            imageLabel: 'Huangji number spiral with Yin-Yang bar',
-            body: 'Huangji treats numbers as living energies. By weaving 1–10 Heavenly Numbers with the 60 Jia-Zi cycle, it calculates resonance between time, space and people.',
+            key: 'method',
+            dividerTitle: 'How It Works',
+            dividerSubtitle: 'Celestial mathematics in action',
+            title: 'Align Inner Rhythm with Cosmic Timing',
+            imageLabel: 'Celestial mathematics overlay',
+            body: `Through celestial mathematics and temporal mapping, the oracle aligns your personal timeline with the universal cycle of change. It reveals the harmony and tension between your inner rhythm and the world's external timing so clarity replaces guesswork.`,
             points: [
-              'Core Equation: Divine Index = (Heaven_Number × Earth_Number × Human_Number) ÷ Temporal_Position.',
-              'Numerical Layers: Origin Number (元数 – cosmic source vibration), Cycle Number (运数 – timewave strength), Response Number (应数 – individual resonance).',
-              'Charts: Huangji Number Spiral + Yin-Yang Polarity Bar showing elemental balance.'
-            ]
+              'A destiny map that makes clear which side time currently stands on.',
+              'Command of energy rhythms across the coming year and decade.',
+              'A decision reference that clarifies when to advance and when to hold.',
+            ],
           },
           {
-            key: 'cycleInterpretation',
-            dividerTitle: 'Cycle Interpretation',
-            dividerSubtitle: 'Forecasting momentum turns',
-            title: 'Reading Prosperity and Risk Windows',
-            imageLabel: 'Huangji wave chart with fortune arcs',
-            body: 'Tracing Heaven Numbers reveals when fortune climbs, plateaus or reverses, guiding the choice to advance or defend.',
+            key: 'process',
+            dividerTitle: 'Service Process',
+            dividerSubtitle: 'From data to directives',
+            title: 'Five Steps from Intake to Blueprint',
+            imageLabel: 'Celestial consultation workflow board',
+            body: 'Our workflow turns metaphysical insight into precise guidance, from first contact through the action blueprint.',
             points: [
-              'Decade Waves: observe ten-year expansion and consolidation beats.',
-              'Annual Flow: pinpoint yearly inflection nodes with activation tasks.',
-              'Seasonal Pivot: four-season five-element map for quarterly course corrections.',
-              'Visuals: Huangji Wave Chart (line) + Fortune Arc Diagram and annotated Opportunity/Risk windows.'
-            ]
+              'Information Intake – collect essential birth or founding details and focus area.',
+              'Celestial Mapping – construct your personalised destiny timeline.',
+              'Cycle Analysis – decode long, medium and short-term prosperity phases.',
+              'Interpretation Session – hold a one-to-one briefing in clear, practical language.',
+              'Action Blueprint – deliver customised timing, focus and directional guidance.',
+            ],
           },
           {
-            key: 'strategicApplication',
-            dividerTitle: 'Strategic Application',
-            dividerSubtitle: 'Turning insight into action',
-            title: 'From Knowing to Deploying Heaven’s Rhythm',
-            imageLabel: 'Strategy timing matrix storyboard',
-            body: 'Cycle intelligence fuels tangible moves—launch dates, relocations, negotiations, wellness programs—all sequenced to the same cosmic pulse.',
+            key: 'audience',
+            dividerTitle: 'Who It Is For',
+            dividerSubtitle: 'People who sense change',
+            title: 'Designed for Leaders Who Feel the Shift',
+            imageLabel: 'Leaders preparing pivotal decisions',
+            body: 'Ideal for individuals and teams who notice momentum shifting and want clarity before acting.',
             points: [
-              'Action Timing Table: best months/days per element, delivered as heat-map grids.',
-              'Heaven–Earth–Human Strategy Matrix aligning objectives, resources and qi support.',
-              'Industry Correlation Sheet mapping Finance=Metal, Tech=Fire, Education=Wood, Construction=Earth, Logistics=Water.',
-              'Output: Strategic Roadmap PDF plus dual commentary (executive deck + plain-language brief).'
-            ]
+              'Executives making pivotal choices.',
+              'Entrepreneurs preparing transformation.',
+              'Professionals navigating uncertainty.',
+              `Anyone sensing life's rhythm changing but unsure of direction.`,
+            ],
           },
           {
-            key: 'references',
-            dividerTitle: 'References & Legacy',
-            dividerSubtitle: 'Classical canon · modern validation',
-            title: 'An Oracle Rooted in Scholarship',
-            imageLabel: 'Imperial scrolls and modern data stack',
-            body: 'Every calculation is anchored to authentic classics and cross-checked with contemporary astronomical datasets.',
-            points: [
-              'Primary sources: 《皇极经世书》, 《皇极系述》, 《皇极推命真诀》, 《皇极与奇门遁甲合参》, 《皇极与风水周期法》, 《协纪辨方书》, 《易传》, 《河图洛书》, 《梅花易数》.',
-              'Modern validation: National Astronomical Observatories of China, Taiwan ephemeris, True Solar Time, NASA JPL kernels.',
-              'Documentation includes generation notebooks and verification logs.'
-            ]
-          }
+            key: 'outcome',
+            dividerTitle: 'Outcome & Value',
+            dividerSubtitle: 'What you take away',
+            title: 'Leave with a Time-Coded Strategy',
+            imageLabel: 'Time-coded strategic blueprint',
+            body: 'You receive a time-coded strategy for your next chapter. Know what to accelerate, what to pause and what to release as Supreme Celestial Numbers realigns you with the current of time so opportunities meet you halfway.',
+          },
         ],
-        cta: {
-          dividerTitle: 'Ready to Command Huangji Cycles?',
-          dividerSubtitle: 'Secure your imperial numerology analysis',
-          title: 'Start Huangji Calculation',
-          message: 'Provide strategic focus, key stakeholders and target timelines so we can assemble your Supreme Celestial Numbers dossier.',
-          primaryLabel: 'Start Huangji Calculation｜开启皇极推演',
-          primaryHref: '/contact'
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: 'Ready to See the Pattern Behind Time?',
+          dividerSubtitle: 'Reserve your Supreme Celestial Numbers session',
+          title: 'Start Your Celestial Numbers Consultation',
+          message: 'Click to begin your personalised session and unlock the logic of your destiny.',
+          primaryLabel: 'Start Your Celestial Numbers Consultation',
+          primaryHref: '/contact',
         },
-        newsletterTitle: 'Huangji Cycle Bulletin',
-        newsletterSubtitle: 'Circular spirals, energy waves and polarity gauges distilled for your court or board.'
+        newsletterTitle: 'Celestial Numbers Dispatch',
+        newsletterSubtitle: 'Temporal pattern intelligence, opportunity windows and rhythm calibration notes.',
       },
+    },
+    academyOverview: {
+      badge: 'Academy',
+      title: 'Metaphysics Mastery Pathway',
+      subtitle: 'From Foundation to Mastery – A Complete Journey into Chinese Metaphysics',
+      sections: [
+        {
+          key: 'overview',
+          type: 'text',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'The complete journey',
+          title: 'A Progressive Pathway to Mastery',
+          paragraphs: [
+            'The Metaphysics Mastery Pathway is a complete, progressive journey that takes you from foundational understanding to professional-level mastery of Chinese metaphysics.',
+            'It unites the wisdom of BaZi, Zi Wei Dou Shu, Feng Shui, Numerology and Qi Men Dun Jia, translating classical knowledge into modern, applicable life strategy.',
+            'You will not only learn to interpret destiny—you will learn to flow with it.'
+          ]
+        },
+        {
+          key: 'path',
+          type: 'levels',
+          dividerTitle: 'Learning Path',
+          dividerSubtitle: 'Four levels of structured progression',
+          title: 'A Cohesive Four-Level Journey',
+          intro: 'The pathway consists of four progressive levels, each deepening your understanding and real-world mastery.',
+          levels: [
+            {
+              key: 'foundation',
+              badge: '🜃 1️⃣',
+              slug: 'foundation',
+              anchor: 'foundation-course',
+              title: 'Chinese Metaphysics Foundation',
+              duration: '3–6 Months',
+              body: 'Establish your foundation in Yin-Yang balance, Five Elements theory and cosmic cycles. Understand how Heaven (timing), Earth (environment) and Human (decision) interact—the framework behind all metaphysical systems.',
+              ctaLabel: 'Learn More'
+            },
+            {
+              key: 'beginner',
+              badge: '🜃 2️⃣',
+              slug: 'beginner',
+              anchor: 'beginner-course',
+              title: 'Beginners',
+              duration: '6 Months',
+              body: 'Dive into the core systems of BaZi, Zi Wei Dou Shu, Numerology and Qi Men Dun Jia. Learn how destiny charts are structured, how energy patterns are formed and how direction and time influence outcomes. By the end of this level, you can interpret foundational charts and spot personal destiny patterns with confidence.',
+              ctaLabel: 'Learn More'
+            },
+            {
+              key: 'advanced',
+              badge: '🜃 3️⃣',
+              slug: 'advanced',
+              anchor: 'advanced-course',
+              title: 'Advanced',
+              duration: '3 Months',
+              body: 'Integrate every metaphysical system to analyse complex relationships between time, elements and space. Practise high-level chart interpretation, case study analysis and timing-based forecasting using Qi Men and BaZi cross-validation. Gain the insight to decode major life transitions and strategic decision timing.',
+              ctaLabel: 'Learn More'
+            },
+            {
+              key: 'professional',
+              badge: '🜃 4️⃣',
+              slug: 'professional',
+              anchor: 'professional-course',
+              title: 'Professional',
+              duration: '3 Months',
+              body: 'Transition from learner to practitioner. Learn to conduct consultations, compile professional destiny reports and communicate metaphysical insight with clarity and precision. This level focuses on advanced synthesis, ethics and real-world application for client guidance or business consulting.',
+              ctaLabel: 'Learn More'
+            }
+          ]
+        },
+        {
+          key: 'curriculum',
+          type: 'bullets',
+          dividerTitle: 'What You Will Learn',
+          dividerSubtitle: 'Capabilities you build',
+          title: 'Build Strategic Metaphysics Skills',
+          points: [
+            'Full comprehension of Yin-Yang and Five Elements interactions.',
+            'Chart-building and analysis across BaZi, Zi Wei, Numerology and Qi Men.',
+            'Application of Feng Shui and energy flow logic.',
+            'Ten-Year and Annual luck cycle interpretation.',
+            'Timing and opportunity management for life and business.',
+            'Integration of metaphysics into decision-making and leadership.'
+          ]
+        },
+        {
+          key: 'format',
+          type: 'details',
+          dividerTitle: 'Teaching Method & Format',
+          dividerSubtitle: 'Theory, casework and mentorship',
+          title: 'A Guided Hybrid Learning Experience',
+          body: 'Each level blends theory, guided casework and mentorship.',
+          details: [
+            { label: 'Format', value: 'Online + in-person hybrid' },
+            { label: 'Duration', value: '3–6 months per level' },
+            { label: 'Materials', value: 'Visual charts, workbooks and live case examples' },
+            { label: 'Mentorship', value: 'One-on-one feedback and Q&A checkpoints' },
+            { label: 'Certification', value: 'Official certificate awarded at each level' }
+          ]
+        },
+        {
+          key: 'audience',
+          type: 'bullets',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Designed for clarity and command',
+          title: 'Built for Learners Seeking Mastery',
+          points: [
+            'Individuals exploring personal destiny and potential.',
+            'Practitioners advancing into deeper technical understanding.',
+            'Coaches, healers and consultants integrating metaphysics.',
+            'Entrepreneurs and leaders applying timing intelligence for foresight.'
+          ]
+        },
+        {
+          key: 'outcome',
+          type: 'text',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'Where the pathway leads',
+          title: 'Transform Knowledge into Strategic Foresight',
+          paragraphs: [
+            'Upon completing the Metaphysics Mastery Pathway, you can interpret, forecast and realign destiny patterns across multiple systems.',
+            'You gain mastery not only in theory but in practice—transforming insight into foresight, and foresight into confident action.'
+          ]
+        }
+      ],
+      faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+        dividerTitle: 'Enroll in the Metaphysics Mastery Pathway',
+        dividerSubtitle: 'Begin your certified journey from Foundation to Professional Mastery.',
+        title: 'Start Your Metaphysics Mastery Pathway',
+        message: 'Click below to begin your certified journey—from Foundation to Professional Mastery.',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact'
+      }
+    },
+    academyFoundation: {
+      hero: {
+        badge: 'Academy',
+        title: 'Chinese Metaphysics Foundation',
+        subtitle: 'Build the Foundation · Understand Heaven & Humanity · Master the Logic Behind Destiny',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Course summary',
+          title: 'Lay the Blueprint for Every Metaphysical Discipline',
+          paragraphs: [
+            'The Chinese Metaphysics Foundation course is the cornerstone of your entire metaphysical journey. It introduces the essential frameworks of Chinese metaphysics—Yin and Yang, the Five Elements, Heavenly Stems, Earthly Branches, and the dynamic flow of Qi—revealing the rational energetic architecture behind life events, personality traits and timing cycles.',
+            'By grounding yourself in these principles, you move beyond superstition into structured, accountable insight. Destiny stops feeling mysterious; it becomes a system you can read, anticipate and align with confidence.'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: 'What You Will Learn',
+          dividerSubtitle: 'Core building blocks',
+          title: 'Decode the Universal Rules Behind Destiny',
+          points: [
+            'Yin & Yang dynamics: the dual forces shaping balance, polarity and transformation.',
+            'Five Elements (Wu Xing): Wood, Fire, Earth, Metal and Water as the energetic blueprint of creation.',
+            'Heavenly Stems & Earthly Branches: the 60 Jia Zi cycle that ties time, behaviour and fate together.',
+            'Qi movement & environmental resonance: how energy circulates through seasons, locations and decisions.',
+            'The Heaven–Earth–Human triad: positioning yourself within the cosmic code so action meets timing.'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: 'Why It Matters',
+          dividerSubtitle: 'The base of every discipline',
+          title: 'Master Concepts Before Methods',
+          paragraphs: [
+            'BaZi, Zi Wei Dou Shu, Qi Men Dun Jia and Feng Shui all rest on these foundations. Without a coherent grasp of the underlying logic, advanced study becomes fragmented opinion instead of repeatable analysis.',
+            'This course gives you the mental structure and energetic intuition to interpret any metaphysical system with clarity—protecting you from misconceptions and helping you apply techniques responsibly.'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: 'Course Structure',
+          dividerSubtitle: '3–6 month journey',
+          title: 'Blend Theory with Applied Practice',
+          paragraphs: [
+            'Across 3–6 months you move from core principles into applied interpretation, combining lectures, guided study and practice labs.'
+          ],
+          points: [
+            'Module 1 · Logic of Yin & Yang — universal duality, balance and transformation.',
+            'Module 2 · Five Elements Cycle — creation, control and elemental diagnostics.',
+            'Module 3 · Heavenly Stems & Earthly Branches — the cosmic calendar and 60 Jia Zi rhythm.',
+            'Module 4 · Energy Flow & Qi Patterns — how movement shapes momentum and outcomes.',
+            'Module 5 · Applied Foundation Practice — reading people and environments through elemental balance.'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Designed for seekers of structure',
+          title: 'Built for New Learners and Returning Practitioners',
+          points: [
+            'New students exploring how Chinese metaphysics actually works.',
+            'Advanced learners solidifying conceptual clarity before deeper study.',
+            'Practitioners from other modalities seeking systematic grounding.',
+            'Individuals curious about destiny mechanics beyond belief or myth.'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'Where this foundation leads',
+          title: 'Gain the Language of Destiny Itself',
+          paragraphs: [
+            'By completing the Chinese Metaphysics Foundation, you gain a clear, structured understanding of how destiny and energy interact. Fate stops being coincidence—it becomes a pattern you can interpret, anticipate and harmonise with.',
+            'This course does more than transfer knowledge. It gives you the language of destiny so every future method—BaZi, Zi Wei, Qi Men or Feng Shui—slots into place with precision.'
+          ]
+        }
+      ],
+      faq: [
+        { question: 'Which core frameworks will I master?', answer: 'You will internalise Yin-Yang dynamics, the Five Elements cycle, and the 10 Heavenly Stems / 12 Earthly Branches so every later chart or timing method has a clear structure.' },
+        { question: 'How does this course connect to advanced study?', answer: 'It creates the conceptual bridge to the Beginner Track—once you grasp the elemental logic here, multi-system analysis in BaZi, Zi Wei and Qi Men becomes much easier.' },
+        { question: 'Will we practise on real charts?', answer: 'Yes. Guided labs walk you through real-world case studies so you can apply elemental balance, timing rhythms and Qi flow to practical scenarios.' },
+        { question: 'Do I keep the learning resources after class?', answer: 'You retain lifetime access to the workbooks, reference decks and recorded sessions, so you can revisit the material whenever you progress to the next tier.' }
+      ],
+      cta: {
+        dividerTitle: 'Ready to Begin Your Foundation?',
+        dividerSubtitle: 'Start the journey toward mastery',
+        title: 'Enroll in the Chinese Metaphysics Foundation',
+        message: 'Click below to reserve your seat in the next cohort or reconnect with the core logic behind destiny.',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyBeginner: {
+      hero: {
+        badge: 'Academy',
+        title: "Beginner's Metaphysic Course",
+        subtitle: 'Step Into Metaphysics · Decode the Hidden Order · Open the First Door to Destiny',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Course snapshot',
+          title: 'Bridge Curiosity into Structured Clarity',
+          paragraphs: [
+            "The Beginner's Metaphysic Course is the bridge between curiosity and clarity—built for learners ready to explore the energetic language behind destiny.",
+            'Across six months you journey through BaZi, Zi Wei Dou Shu, numerology and Qi Men Dun Jia so you can see how timing, elemental balance and spatial flow weave together to shape real outcomes.',
+            "You will learn how to interpret entry-level charts, recognise structural patterns and read the unseen influences that guide decisions, opportunities and challenges."
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: 'What You Will Learn',
+          dividerSubtitle: 'Core disciplines',
+          title: 'Activate Four Metaphysical Systems',
+          points: [
+            'BaZi foundations: understand the Four Pillars, elemental strength and how they influence personality, potential and timing.',
+            'Zi Wei Dou Shu basics: explore star groupings and how each palace reflects critical life arenas.',
+            'Numerology and life path: decode birth numbers to reveal personal vibration and destiny flow.',
+            'Qi Men Dun Jia overview: learn how time, direction and energy converge to open windows of advantage.',
+            'Practical interpretation: connect theory to real scenarios through guided chart reading and case practice.'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: 'Why It Matters',
+          dividerSubtitle: 'Clarity over guesswork',
+          title: 'See the Blueprint Instead of Guessing',
+          paragraphs: [
+            'Understanding metaphysics at this level is like studying the architectural drawing of life—you stop guessing and start seeing how everything connects.',
+            'It gives you a clear lens on strengths, timing windows and decision cycles so you can navigate with foresight instead of confusion.'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: 'Course Structure',
+          dividerSubtitle: '6-month guided journey',
+          title: 'Modular Learning with Guided Practice',
+          paragraphs: [
+            'This is a six-month immersive pathway that blends teaching, guided interpretation and application so concepts immediately translate into skill.'
+          ],
+          points: [
+            'Module 1 · BaZi Framework — chart building, elemental calibration and personal analysis.',
+            'Module 2 · Zi Wei Chart Reading — palace dynamics, star interpretation and life overview.',
+            'Module 3 · Numerology Fundamentals — life path and destiny numbers decoded for practical use.',
+            'Module 4 · Qi Men Dun Jia Overview — time-space energetics and foundational plate layouts.',
+            'Module 5 · Integration Practice — real-case interpretation clinics with mentor Q&A.'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Built for committed explorers',
+          title: 'Designed for Learners Ready to Apply Insight',
+          points: [
+            'Individuals curious about how metaphysics shapes life direction and daily decisions.',
+            'Students seeking a structured pathway before moving into advanced disciplines.',
+            'Practitioners from adjacent fields who want to integrate destiny logic into their work.',
+            "Anyone ready to begin reading their own or others' destiny charts with accountability."
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What changes after six months',
+          title: 'Read Destiny Charts with Confidence',
+          paragraphs: [
+            "By completing the Beginner's course you gain the ability to interpret foundational charts across four core systems.",
+            'Destiny stops feeling mysterious—it becomes structured, readable and actionable.',
+            'You expand perception, strengthen intuition and build the platform needed for every advanced or professional track that follows.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Ready to Begin Your Beginner Track?',
+        dividerSubtitle: 'Start your six-month journey',
+        title: "Enroll in the Beginner's Metaphysic Course",
+        message: 'Click below to begin your six-month journey into the logic of destiny and energy flow.',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyIntermediate: {
+      hero: {
+        badge: 'Academy',
+        title: 'Advanced Course',
+        subtitle: 'Integrate the Arts · Master Destiny Intersections · See the Hidden Order Behind Life',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Course focus',
+          title: 'Integrate Multiple Systems into One Command Framework',
+          paragraphs: [
+            'The Advanced Course is where theory transforms into mastery. Building on the foundation and beginner levels, this stage shows you how to integrate BaZi, Zi Wei Dou Shu, numerology, Feng Shui and Qi Men Dun Jia into a cohesive interpretive workflow.',
+            'You will analyse how time, elements and space interact, identify chart cause and effect, and spot turning points before they manifest. Destiny becomes a map—one you can read, navigate and influence with clarity.'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: 'What You Will Learn',
+          dividerSubtitle: 'Integration skill set',
+          title: 'Cross-Validate Every Axis of Destiny',
+          points: [
+            'Integrated chart analysis: cross-interpret BaZi, Zi Wei and Qi Men to reveal timing intersections.',
+            'Cycle mapping: track ten-year and annual luck trends and their relationship with environmental qi.',
+            'Feng Shui application: align personal destiny patterns with residential or workplace energy.',
+            'Numerology expansion: deepen life path resonance with cosmic timing windows.',
+            'Advanced case studies: practise on real scenarios to sharpen precision and pattern recognition.'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: 'Why It Matters',
+          dividerSubtitle: 'Beyond surface reading',
+          title: 'Turn Knowledge into Strategic Foresight',
+          paragraphs: [
+            'This level transforms metaphysics from scattered knowledge into strategic insight. You learn how separate systems confirm and balance one another—a hallmark of professional practitioners.',
+            'By integrating logic and intuition you can decode complex destinies and deliver grounded guidance that truly shifts decisions.'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: 'Course Structure',
+          dividerSubtitle: '3-month intensive',
+          title: 'Modules That Blend Integration with Practice',
+          paragraphs: [
+            'A three-month intensive journey combining system synthesis, live casework and mentor guidance.'
+          ],
+          points: [
+            'Module 1 · Cross-System Framework — how BaZi, Zi Wei and Qi Men interact.',
+            'Module 2 · Cycle Forecasting — analysing timing patterns and life transitions.',
+            'Module 3 · Feng Shui Resonance — matching destiny codes with space and environment.',
+            'Module 4 · Numerology Depth — applying energy frequency to time-based decisions.',
+            'Module 5 · Case Application — constructing cohesive interpretations from real engagements.'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Built for committed analysts',
+          title: 'Designed for Practitioners Elevating to Multi-System Mastery',
+          points: [
+            'Learners who have completed the foundation and beginner levels.',
+            'Practitioners seeking to integrate multiple metaphysical systems into one workflow.',
+            'Consultants refining interpretive precision for client engagements.',
+            'Individuals ready to forecast timing windows and guide others with confidence.'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What changes post-course',
+          title: 'Read Destiny Intersections with Confidence',
+          paragraphs: [
+            'By completing the Advanced Course you gain the rare ability to read the intersections where time, space and energy converge.',
+            'Metaphysics becomes a coherent system rather than fragments, empowering you to anticipate shifts and align life decisions with cosmic rhythm.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Ready to Master Multi-System Integration?',
+        dividerSubtitle: 'Begin your three-month intensive',
+        title: 'Enroll in the Advanced Course',
+        message: 'Click below to begin your three-month journey into multi-system integration and destiny mastery.',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyProfessional: {
+      hero: {
+        badge: 'Academy',
+        title: 'Professional Course & Certification',
+        subtitle: 'From Learning to Mastery · From Knowledge to Guidance',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Pathway pinnacle',
+          title: 'Turn Mastery into Professional Practice',
+          paragraphs: [
+            'The Professional Course & Certification marks the summit of the Metaphysics Mastery Pathway—built for learners ready to transform knowledge into practice and practice into purpose.',
+            'This stage refines analytical technique, strengthens consulting communication and establishes the professional standards required to advise with accuracy, ethics and confidence.'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: 'What You Will Learn',
+          dividerSubtitle: 'Professional toolkit',
+          title: 'Four Domains of Professional Command',
+          points: [
+            'Consulting framework: structured engagements from discovery to delivery.',
+            'Advanced interpretation logic: integrate BaZi, Zi Wei, numerology, Feng Shui and Qi Men inside one diagnostic model.',
+            'Client communication & ethics: cultivate clarity, empathy and integrity throughout every session.',
+            'Report writing & presentation: craft comprehensive destiny reports and present actionable guidance.',
+            'Certification practicum: supervised readings and project assignments that lead to accreditation.'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: 'Why It Matters',
+          dividerSubtitle: 'Wisdom with responsibility',
+          title: 'Translate Insight into Human Impact',
+          paragraphs: [
+            'This stage is about embodying wisdom, not just memorising information. Becoming a certified consultant means translating destiny data into human understanding and practical action.',
+            'You gain the technical depth and emotional maturity to serve responsibly, turning metaphysical insight into transformative outcomes.'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: 'Course Structure',
+          dividerSubtitle: '3-month practicum',
+          title: 'Mentored Practicum with Certification Evaluation',
+          paragraphs: [
+            'A three-month intensive combining mentorship, supervised cases and final certification assessments.'
+          ],
+          points: [
+            'Module 1 · Consulting Framework & Ethics — professional standards and service flow.',
+            'Module 2 · Cross-System Analysis — blending all five systems for holistic readings.',
+            'Module 3 · Client Simulation & Practice — guided sessions with instructor feedback.',
+            'Module 4 · Report Writing & Presentation — delivering polished written and verbal guidance.',
+            'Module 5 · Certification Assessment — written and oral evaluations for official recognition.'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Designed for practitioners',
+          title: 'Built for Future Metaphysics Consultants',
+          points: [
+            'Graduates of the Advanced Course seeking formal certification.',
+            'Practitioners preparing to operate as professional metaphysics consultants.',
+            'Coaches, wellness and consulting professionals adding metaphysical depth.',
+            'Individuals ready to guide others ethically and confidently with destiny insight.'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'After certification',
+          title: 'Become a Certified Metaphysics Consultant',
+          paragraphs: [
+            'Upon completion you are recognised as a Certified Metaphysics Consultant equipped with advanced analysis, interpretation and client management skills.',
+            'You graduate with more than a certificate—you leave with mastery, ready to serve, advise and lead within the field of Chinese metaphysics.'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: 'Ready to Earn Your Certification?',
+        dividerSubtitle: 'Begin the final stage of mastery',
+        title: 'Enroll in the Professional Course & Certification',
+        message: 'Click below to start your final step toward professional certification and metaphysics mastery.',
+        primaryLabel: 'Enroll Now',
+        primaryHref: '/contact',
+        secondaryLabel: 'Back to Course Overview',
+        secondaryHref: '/academy/courses'
+      }
     },
     hero: {
       slide1_title: 'The Ultimate Destiny Matrix',
@@ -833,14 +1611,14 @@ enterpriseCycles: {
       vip_supreme: '乾坤至尊·全息版',
       academy: '学院',
       courses: '课程概览',
+      foundation: '玄学基础课程',
       beginner: '初阶课程',
       advanced: '进阶课程',
       pro: '专业认证',
-      calendar: '预约日历',
       enterprise: '企业咨询',
-      audit: '企业风水审计',
-      site: '选址布局',
-      cycles: '战略周期',
+      audit: '企业风水格局',
+      site: '天元企业选址',
+      cycles: '企业战略布局',
       resources: '资源库',
       four_pillars: '四柱命盘',
       purple_star: '紫微星图',
@@ -889,20 +1667,23 @@ enterpriseCycles: {
       pro_title: '天机剖象·进阶版',
       supreme_title: '乾坤至尊·全息版',
       lite_points: [
-        '100+ 页命运报告',
-        '天赋潜能 · 行业定位 · 财运模式',
-        '十年大运交替分析',
+        '100+ 页个人命运蓝图',
+        '天赋潜能深度解析',
+        '职业定位与行业适配建议',
+        '财富模式诊断与优化',
+        '十年大运节奏分析',
         '生命数字命理解析',
-        '实用化解建议'
+        '针对短板的实用调整方案'
       ],
       pro_points: [
-        '200+ 页命运报告',
-        '天赋潜能 · 行业定位 · 财运模式',
-        '十年大运交替分析',
-        '生命数字命理解析',
-        '实用化解建议',
-        '数理能量场分析',
-        '姓名吉象解析'
+        '200+ 页命运深度蓝图',
+        '事业领域与行业共振定位',
+        '财富结构诊断与风险预警',
+        '十年大运转折与策略建议',
+        '生命数字交叉解析',
+        '健康、人际、效率的能量场分析',
+        '姓名能量共振评估与优化建议',
+        '结合时机的行动与化解方案'
       ],
       supreme_points: [
         '300+ 页命运报告',
@@ -957,621 +1738,1112 @@ enterpriseCycles: {
     services: {
       ...CELESTIAL_SERVICES.CN,
       corporateAudit: {
-        badge: '企业审查',
-        title: '企业命格审查智能',
-        subtitle: '综合八字、紫微、奇门、风水与数理磁场，诊断并优化企业的领导能量、运营节奏与空间气场。',
+        badge: '乾坤企业策',
+        title: '乾坤企业策',
+        subtitle: '洞察企业背后的命运格局。',
         sections: [
           {
-            key: 'introduction',
-            dividerTitle: '简介',
-            dividerSubtitle: '每个企业都有命盘',
-            title: '战略 × 能量 × 空间 × 时间',
-            imageLabel: '黑金宇宙横幅',
-            body: '每个企业都有属于它的命盘。玄域联盟以帝师级玄学结合企业分析，揭示公司世界里的隐形结构，帮助董事会踩准时机、抢占先机。',
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '让企业与天时同步',
+            title: '看见企业的能量底层',
+            imageLabel: '企业命盘全景图',
+            body: '《乾坤企业策》以东方玄学为基础，从时间、空间、人事三轴解读企业的命运结构。它揭示财务报表看不出的隐性力量——能量平衡、成长节奏与长期气场，让决策层校准方向，使团队、场地与时间节奏保持同频。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '企业运势的隐形结构',
+            title: '读懂企业命运的脉络',
+            imageLabel: '企业能量流洞察板',
+            body: '企业命运由成立时间、关键人物与场地格局共同塑造。通过推演，你将看到：',
             points: [
-              '方案核心：命格诊断、空间风水、领导气场、时间节奏四合一。',
-              '成果目标：明确下一财务窗口前必须加速、守护或重组的重点。',
-              '紧迫提醒：企业审查席位每月极少，请立即预约占位。'
+              '企业能量流：当前是扩张、转型还是休整周期。',
+              '领导共振：核心团队的气场是否与企业命盘匹配。',
+              '财富路径：哪一方向与时间最利于增长、融资与合作。',
+              '环境影响：办公或厂区的气场如何支撑或限制发展。',
+              '趋势预警：提前捕捉停滞与爆发的信号。'
             ]
           },
           {
-            key: 'destinyMapping',
-            dividerTitle: '企业命格剖析',
-            dividerSubtitle: '企业八字 + 紫微',
-            title: '拆解企业天生结构',
-            imageLabel: '企业命格矩阵',
-            body: '以成立时间、注册地推演企业八字与紫微星图，洞见天生优势、风险与成长瓶颈。',
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '时间·空间·人事共振',
+            title: '让策略与天时共舞',
+            imageLabel: '企业时空共振模型',
+            body: '通过“企业时间盘 + 场地气场 + 领导命盘”的三维分析，我们推演企业运势的周期规律，辨识顺势与逆势的时间节点。',
             points: [
-              '企业八字：五行能量雷达、阴阳比例、天地人三才平衡。',
-              '企业紫微：官禄、财帛、迁移、福德等关键宫位的策略含义。',
-              '五行能量指数：揭露竞争优势与薄弱环节。'
+              '建立专属企业命运图。',
+              '校准领导命盘与企业节奏。',
+              '评估关键场所的空间共振。',
+              '识别顺势增长与应当蓄势的阶段。',
+              '制定顺应节奏的行动排序。'
             ]
           },
           {
-            key: 'leadership',
-            dividerTitle: '领导层能量审计',
-            dividerSubtitle: '领导 × 企业共振',
-            title: 'C-Suite 气场兼容度',
-            imageLabel: '领导共振矩阵',
-            body: '交叉高层命盘，检视决策节奏、接班稳定性与团队气场分布。',
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '六个步骤完成企业推演',
+            title: '从诊断到蓝图的全链路',
+            imageLabel: '企业审查流程图',
+            body: '严谨流程将玄学诊断转化为高层可执行的策略指令。',
             points: [
-              '决策节奏匹配：CEO 八字与企业八字周期的契合度。',
-              '领导五行属性分析与团队能量雷达图。',
-              '气场共振指数（0–100）及现场纠偏方案。'
+              '前期访谈：梳理企业历史、痛点与愿景。',
+              '命盘绘制：依据成立与领导数据构建企业命盘。',
+              '能量诊断：检测经营节奏、领导气场与环境共振。',
+              '周期解读：推演未来1年、3年、10年的趋势。',
+              '策略咨询：以通俗语言呈现关键洞察。',
+              '行动蓝图：交付方向、时机、布局与团队对齐建议。'
             ]
           },
           {
-            key: 'spatial',
-            dividerTitle: '空间风水诊断',
-            dividerSubtitle: '总部气场布局',
-            title: '营造总部气场引擎',
-            imageLabel: '办公气场九宫图',
-            body: '以空间气流对应运营表现，优化动线、财位与核心层。',
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '关键节点的最佳助力',
+            title: '为掌舵者提供时间先见',
+            imageLabel: '企业领导层策略会议',
+            body: '专为在重大阶段寻求清晰与节奏的人打造。',
             points: [
-              '办公室飞星九宫图（当前运盘）。',
-              '财气方位图：大门、财务室、董事区。',
-              '磁场流动图：入口→会议→财位→核心层，并附植物、灯光、色彩调和建议。'
+              '计划扩张、品牌重塑或开拓新市场的企业。',
+              '希望稳定团队气场、提高执行的管理层。',
+              '需要判断投资节奏与合作匹配的投资人。',
+              '进行传承规划与交接安排的家族企业。'
             ]
           },
           {
-            key: 'operations',
-            dividerTitle: '运营能量周期',
-            dividerSubtitle: '时间波动',
-            title: '现金流·声量·成长节奏',
-            imageLabel: '运营节奏图',
-            body: '审视十年运、流年、节气行动窗，掌握资金、人气、成长的时间波。',
-            points: [
-              '十年运势曲线：刻画长周期兴衰。',
-              '年度运势表：12 个月趋势图，标注进攻与收敛月份。',
-              '节气关键行动期＋策略建议卡（专业版＋人话版）。'
-            ]
-          },
-          {
-            key: 'naming',
-            dividerTitle: '企业命名与数理磁场',
-            dividerSubtitle: '品牌共振',
-            title: '三才五格数理体检',
-            imageLabel: '命名数理雷达',
-            body: '以三才五格与数字磁场审查企业、品牌及产品名称，确保气场不漏。',
-            points: [
-              '企业名五格分析表，评估吉凶与稳定性。',
-              '品牌数理雷达＋数字吉凶饼图。',
-              '电话、账号、IC 数字能量审计；若失衡，提供改名优化建议。'
-            ]
-          },
-          {
-            key: 'wealth',
-            dividerTitle: '财富流动结构',
-            dividerSubtitle: '资源动线',
-            title: '看见财富流向',
-            imageLabel: '财富流动桑基图',
-            body: '用财富能量图呈现资金流、资源配比与再投入效率，让 CFO 快速堵漏。',
-            points: [
-              '财富桑基图：收入→支出→再投资。',
-              '五行财富类型（火=营销、金=金融、水=流通等）。',
-              '财富增益建议：结合时间、风水与人事调整。'
-            ]
-          },
-          {
-            key: 'fateScore',
-            dividerTitle: '企业命格综合评分',
-            dividerSubtitle: '四维指数',
-            title: '能量 × 时间 × 空间 × 领导',
-            imageLabel: '命格评分仪表板',
-            body: '提供能量、时间、空间、领导四维度的综合得分与风险提示。',
-            points: [
-              '能量稳定度雷达、决策协调度矩阵、财富流速图。',
-              '风险热力图：宫位得分 0–100。',
-              '高风险象限清单，提醒董事会立即处理。'
-            ]
-          },
-          {
-            key: 'actionPlan',
-            dividerTitle: '行动计划与建议',
-            dividerSubtitle: '执行蓝图',
-            title: '90 天指挥方案',
-            imageLabel: '行动计划时间轴',
-            body: '将诊断转化为可执行的分阶段计划，让团队立即动起来。',
-            points: [
-              '即时（1 周）、30 天、90 天的行动清单。',
-              '一年期空间与文化节奏优化指南。',
-              '强调紧迫性：审查席位稀缺，请立刻锁定档期。'
-            ]
-          },
-          {
-            key: 'references',
-            dividerTitle: '典籍与科学依据',
-            dividerSubtitle: '经典＋数据',
-            title: '正统来源，现代验证',
-            imageLabel: '典籍与数据集合',
-            body: '列出所引用的玄学经典与现代数据来源，确保每一句建议都有源。',
-            points: [
-              '典籍： 《渊海子平》《三命通会》《滴天髓》《紫微斗数全书》《青囊经》《葬经》《皇极经世书》。',
-              '现代验证：企业分析、资金流数据、ESG 指标等。'
-            ]
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '获得一份时间战略图',
+            title: '让决策与节奏同频',
+            imageLabel: '企业命运周期图',
+            body: '你将获得一份清晰的企业命运周期图——知道何时扩张、何时蓄力、何时转型。《乾坤企业策》不是取代管理工具，而是揭开数据背后的天机，让企业的每一步都顺势而为。'
           }
         ],
-        cta: {
-          dividerTitle: '掌控企业命格主导权',
-          dividerSubtitle: '审查席位每月限额',
-          title: '立即启动企业命格审查',
-          message: '提交成立信息、领导名单与空间图纸，我们将在 48 小时内回传范围、方案投资与最近档期。',
-          primaryLabel: 'Start Corporate Audit → 开启企业审查推演',
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想看清企业命运的隐藏轨迹？',
+          dividerSubtitle: '预约你的企业命运审查',
+          title: '开启乾坤企业策审查',
+          message: '点击开启你的专属企业审查，让战略与节奏同步推进。',
+          primaryLabel: '开启乾坤企业策审查',
           primaryHref: '/contact'
         },
-        newsletterTitle: '企业共振快讯',
-        newsletterSubtitle: '董事会节律简报、能量诊断与法规气候预警。'
+        newsletterTitle: '企业命运情报站',
+        newsletterSubtitle: '董事会级别的时间情报、空间诊断与团队共振指引。'
+      },
+      essentialBlueprint: {
+        badge: '360全维度',
+        title: '命运蓝图·启程版',
+        subtitle: '看清天命底图 · 开启人生正向循环。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '打好命运底图',
+            title: '以战略视角认知自己',
+            imageLabel: '命运蓝图概览图',
+            body: '《命运蓝图·启程版》是一份超过 100 页的个人命理分析，融合八字、生命数字与时间周期，帮助你在顺势节奏中行动，而不是靠运气碰撞。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '命运全景图',
+            title: '看清你是谁、将去往何处',
+            imageLabel: '命运洞察面板',
+            body: '报告揭示命理全景，让你知道如何把握人生关键节点：',
+            points: [
+              '天赋潜能：找出与生俱来的优势与专长。',
+              '职业定位：明确行业、岗位与环境的最佳匹配度。',
+              '财富模式：理解如何吸引、运用与守护财富流。',
+              '人生节奏：掌握十年大运与年度节奏，提前布局。',
+              '生命数字：从数字命理洞察性格密码与行动逻辑。',
+              '实用调整：提供针对短板的补强方案，释放潜在势能。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '古法命理 · 现代解读',
+            title: '把命理转化为行动策略',
+            imageLabel: '方法论流程图',
+            body: '我们以“古法命理 + 现代逻辑”把复杂的格局与时间结构，转化为易懂、可执行的策略建议。',
+            points: [
+              '五行校准，揭示先天气场与能量构成。',
+              '十年大运与流年叠图，指出加速或蓄势的节奏节点。',
+              '个人战略建议，让行动始终踩在机会流之上。',
+              '附带图表与仪表板，方便随时复盘与跟进。'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '五步完成命运蓝图',
+            title: '从资料到行动一气呵成',
+            imageLabel: '服务流程故事板',
+            body: '严谨流程确保报告既专业又贴近现实：',
+            points: [
+              '资料输入：提供出生年月日时与出生地，锁定命盘锚点。',
+              '数据推演：整合八字、生命数字与周期节奏进行交叉分析。',
+              '蓝图制作：输出 100+ 页专属报告，图文并茂、结构清晰。',
+              '讲解咨询：一对一说明重点，用人话解析复杂规律。',
+              '实用指导：提供心态、时间、环境的调整方案，让行动顺畅。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '想走在时间前面的人',
+            title: '为准备掌控人生的人而设',
+            imageLabel: '适合人群情境图',
+            body: '特别适合以下决策者：',
+            points: [
+              '想找到人生方向与使命的探索者。',
+              '在事业或关系上感到卡关、想突破的人。',
+              '希望个人命格与事业周期互相配合的创业者。',
+              '渴望看清自身节奏、重新掌握人生主动权的人。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '终身可参考的命运指南',
+            title: '看见命运语言，自信行动',
+            imageLabel: '命运参考图',
+            body: '你得到的不只是报告，而是一张可以长期参考的命运地图。懂得自己的时间节奏后，不必焦虑等待，而是带着底气创造结果。'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想看清属于你的人生蓝图？',
+          dividerSubtitle: '预约命运蓝图·启程版',
+          title: '领取命运蓝图·启程版',
+          message: '点击预约专属命运蓝图，让人生进入正向循环。',
+          primaryLabel: '领取命运蓝图·启程版',
+          primaryHref: '/contact'
+        }
+      },
+      supremeBlueprint: {
+        badge: '360全维度',
+        title: '乾坤至尊·全息版',
+        subtitle: '天地人三合 · 命运全息启示。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '命运全息启示',
+            title: '让天地人与命运合一',
+            imageLabel: '全息命运概览图',
+            body: '《乾坤至尊·全息版》是一份超过 300 页的全方位命运咨询报告，整合八字、生命数字、姓名能量与住宅风水，揭示命格结构与运势节奏。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '命运全息系统',
+            title: '看见命运的完整生态',
+            imageLabel: '命运全息面板',
+            body: '从命格、时间、能量、空间四大面向全面解析人生：',
+            points: [
+              '天赋潜能：揭示人生使命与隐藏力量。',
+              '行业蓝图：界定与命格五行最契合的事业方向。',
+              '财富结构：分析财富生成、流动与守护模式。',
+              '十年大运：掌握长周期节奏，把握关键节点。',
+              '生命数字：解读性格密码与成长课题。',
+              '能量场分析：评估个人磁场平衡与阻力。',
+              '姓名吉象：判断姓名能量与命格匹配程度，并给出优化方案。',
+              '住宅风水：评估居所气场，确保“宅运助人运”。',
+              '实用化解：提供行动与补强策略，让好运更稳定。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '天时·地利·人和',
+            title: '同步天人地三才',
+            imageLabel: '天地人共振图',
+            body: '此服务通过“天时、地利、人和”三大系统的交汇分析，将八字命盘、空间气场与时间节奏融为一体。同步个人命格与外部环境周期，让事业、财富、健康、人际四大领域都与命运节奏一致。你将获得：',
+            points: [
+              '对人生命运系统的全息理解。',
+              '对未来数十年周期的前瞻蓝图。',
+              '一套结合时间、空间与能量的整合方案。'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '六步完成全息蓝图',
+            title: '从资料到策略一气呵成',
+            imageLabel: '全息蓝图流程板',
+            body: '严谨流程确保洞察落地：',
+            points: [
+              '初步沟通：厘清背景、目标与人生阶段。',
+              '资料分析：综合八字、数字、姓名与住宅风水数据。',
+              '周期推演：分析十年与流年节奏，预测机缘与挑战。',
+              '能量评估：检测个人与环境的共振状况。',
+              '蓝图编制：制作 300+ 页全息命运报告。',
+              '讲解咨询：一对一深度说明与专属策略建议。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '全局掌控者',
+            title: '为引领全局的人而设',
+            imageLabel: '用户情境图',
+            body: '适合寻求命格、能量、空间三合一掌控力的决策者：',
+            points: [
+              '规划长期事业与家族布局的领导者。',
+              '希望整合命格与环境打造事业体系的创业者。',
+              '处于人生重大转折期、需要全局视角的人。',
+              '想让居家风水与个人命格共振的家庭决策者。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '命运全息生态',
+            title: '掌握命运全息系统',
+            imageLabel: '命运全息作战图',
+            body: '你将得到一份前所未有的全息命运系统，将个人命格、环境能量与时间节奏完美结合。《乾坤至尊·全息版》让你在每一个决定中更从容、更笃定；当天时、地利、人和合一，成功不再偶然，而是必然的流向。'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想看清人生全息命盘的奥秘？',
+          dividerSubtitle: '预约乾坤至尊·全息版',
+          title: '领取乾坤至尊·全息版',
+          message: '点击开启专属咨询，掌握天地人三合的命运节奏。',
+          primaryLabel: '领取乾坤至尊·全息版',
+          primaryHref: '/contact'
+        }
       },
       enterpriseSite: {
-        badge: '企业咨询',
-        title: '企业选址指挥指挥舱',
+        badge: '天元选址策',
+        title: '天元选址策',
         subtitle: '选址需同时吻合地形气场、三元九运与业态用途，方能长久旺运。',
         sections: [
           {
-            key: 'purpose',
-            dividerTitle: '选址宗旨与范围',
-            dividerSubtitle: '为何必须对齐',
-            title: '明确审查范畴再动工',
-            imageLabel: '选址宗旨图示',
-            body: '说明选址为何必须与地形气场、三元九运周期及业态用途匹配。',
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '让选址成为企业助力',
+            title: '地利与企业节奏的完美匹配',
+            imageLabel: '企业选址全景图',
+            body: '《天元选址策》结合东方风水与现代企业战略，从地形气场、朝向布局与时间周期三大维度推演，找出最能助旺企业的生财之地。无论是总部建设、分支扩张，还是搬迁布局，都以人、地、时三合为准，让地气助力、财气自来。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '地气与企业同步的关键',
+            title: '看清土地的隐形脉络',
+            imageLabel: '地理能量洞察图',
+            body: '每一块土地都有其气场与能量脉络，直接影响企业的运势走向。通过综合分析，你将看到：',
             points: [
-              '审查范围：由宏观形势到微观室内落位的完整链路。',
-              '适用情境：总部、工厂、旗舰店、诊所、数据中心等多种场景。',
-              '交付概览：评分表、分层地图、执行路线图。'
+              '地理气场：周边山水格局是否聚气生财。',
+              '财气走向：何种朝向与动线最能引入资源。',
+              '时间匹配：何时签约、启用或开张最顺天时。',
+              '业态匹配：行业五行属性（如金融属金、教育属木）与地气是否协调。',
+              '潜在隐患：提前识别气场断流或冲煞结构，防患未然。'
             ]
           },
           {
-            key: 'clientBrief',
-            dividerTitle: '客户与项目概况',
-            dividerSubtitle: '使用情境盘点',
-            title: '采集完整项目简报',
-            imageLabel: '项目简报栅格',
-            body: '采集用途、容量、工期与预算，让评估聚焦真实约束。',
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '地势·朝向·时间三合',
+            title: '让企业与土地形成共振',
+            imageLabel: '选址共振矩阵',
+            body: '以地势、朝向、时间为核心，结合企业命盘与地理能量，判断地气与运势的契合度。当企业格局顺应地脉，时间又逢当运，努力才能更轻松地转化为成果——这是让位置成为力量的科学。',
             points: [
-              '收集公司概况、关键决策者命盘（用于共振落位）。',
-              '记录所需 GFA/容积率、开发阶段、租赁或产权偏好、目标开业日期。',
-              '输出约束摘要：区分必须条件与可选条件。'
+              '地形地势分析：评估山水、路网与周边建筑。',
+              '朝向布局推演：找出最利于纳气的坐向与动线。',
+              '时间周期叠加：运用三元九运及关键择日。',
+              '企业命盘校准：将企业命格与地气能量交叉匹配。',
+              '补救方案制定：当地形需要加固时提供化解建议。'
             ]
           },
           {
-            key: 'geoIntake',
-            dividerTitle: '区域地理采样',
-            dividerSubtitle: '候选地导入',
-            title: '建立空间底图',
-            imageLabel: '区域采样地图',
-            body: '导入候选坐标或边界，形成基础空间画布。',
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '从踏勘到决策',
+            title: '六个步骤完成选址推演',
+            imageLabel: '企业选址流程板',
+            body: '严谨流程将地气诊断转化为董事会可执行的策略。',
             points: [
-              '收集地址、经纬度、地籍图、周边山脉、水系、交通节点。',
-              '展示 1/3/5 公里同心圈与 POI 图层（河流、山脊、交通、EMF 来源）。'
+              '沟通目标：明确企业规划与选址方向。',
+              '资料采集：收集候选地点的坐标、格局与周边环境。',
+              '气场评估：分析地形走势、朝向与自然气流分布。',
+              '时运匹配：结合三元九运周期判断地气当旺与否。',
+              '优劣对比：多地方案评分与优先排序。',
+              '方案呈现：交付选址建议与时间布局执行计划。'
             ]
           },
           {
-            key: 'macroLandform',
-            dividerTitle: '形势龙穴砂水向',
-            dividerSubtitle: '宏观气场',
-            title: '判定大地气脉',
-            imageLabel: '形势草图',
-            body: '评断龙脉（山脊）、砂手（环抱）、水法（来去）、明堂与坐向。',
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '懂得“选址即战略”的人',
+            title: '为关键决策者打造',
+            imageLabel: '领导团队选址简报',
+            body: '专为在扩张、迁移或投资阶段寻求清晰与节奏的企业打造。',
             points: [
-              '呈现山脊山谷、明堂开阔度、护砂与暴露程度。',
-              '分析来水、回水与去水，并标记水箭等风险。',
-              '输出：形势评分（0–100）与风险提示（冲射、割脚水、反弓水）。'
+              '筹建总部或开拓新市场的企业。',
+              '评估地块潜力的投资者与开发商。',
+              '寻找旺铺旺地的品牌连锁与餐饮团队。',
+              '希望迁厂提升效益与气场稳定的制造业主。'
             ]
           },
           {
-            key: 'compass',
-            dividerTitle: '罗盘与玄空飞星',
-            dividerSubtitle: '理气分析',
-            title: '定坐向 · 看运盘',
-            imageLabel: '玄空罗盘图',
-            body: '确定地块坐向并生成运盘，评估山星、水星分布。',
-            points: [
-              '收集精确朝向角度、当前运期与测量备忘。',
-              '绘制九宫飞星图，标注吉凶方位。',
-              '输出：各功能分区的用/避建议（大门、财务室、董事室、机房等）。'
-            ]
-          },
-          {
-            key: 'cycles',
-            dividerTitle: '三元九运周期匹配',
-            dividerSubtitle: '运势同调',
-            title: '核对地块是否顺运',
-            imageLabel: '三元九运矩阵',
-            body: '核对地块是否顺应当前运，必要时提出化解建议。',
-            points: [
-              '呈现旺山旺向、双星到山/向等运盘矩阵。',
-              '输出：运势匹配评分与整改建议（如水景、灯光、体量调整）。'
-            ]
-          },
-          {
-            key: 'waterLaw',
-            dividerTitle: '水法与路水',
-            dividerSubtitle: '财气流向',
-            title: '把道路当成水口',
-            imageLabel: '水法示意图',
-            body: '按水法评估来水去水，并将主要道路视作水路。',
-            points: [
-              '绘制来水/去水动线、路口类型、环岛等。',
-              '输出：聚财潜力、泄财点与补救方案。'
-            ]
-          },
-          {
-            key: 'microFit',
-            dividerTitle: '微观落点适配',
-            dividerSubtitle: '地块共振',
-            title: '优化入口与动线',
-            imageLabel: '地块落位图',
-            body: '落位入口、坡道、核心筒、装卸区与垂直交通。',
-            points: [
-              '确保入口落在吉方，避开煞线与刀锋。',
-              '输出：入口/立面微调建议，以及雨棚、花坛、屏风配置。'
-            ]
-          },
-          {
-            key: 'functionZoning',
-            dividerTitle: '功能分区',
-            dividerSubtitle: '五行落位',
-            title: '部门与气场匹配',
-            imageLabel: '功能分区故事板',
-            body: '依据五行需求，将部门落位于合适的吉位。',
-            points: [
-              '绘制功能分区图：领袖区、财务、销售、研发、仓储、机房、身心健康等。',
-              '输出：部门—方位对照表及噪音/热源/电磁隔离建议。'
-            ]
-          },
-          {
-            key: 'stakeholders',
-            dividerTitle: '关键人气场共振',
-            dividerSubtitle: '人地同调',
-            title: '安排关键人物座向',
-            imageLabel: '共振雷达图',
-            body: '将董事及股东命盘与场域方位交叉，给出座向建议。',
-            points: [
-              '依据个人卦数与用神拟定座位与会议朝向。',
-              '输出：高层座位与会议动线方案。'
-            ]
-          },
-          {
-            key: 'access',
-            dividerTitle: '通达采光风道电磁',
-            dividerSubtitle: '工程筛查',
-            title: '确保物理条件能承载气场',
-            imageLabel: '环境诊断网格',
-            body: '从风、光、电磁等工程角度检视气场是否可实现。',
-            points: [
-              '呈现文丘里风道与死角、自然采光、变电房与基站位置。',
-              '输出：缓解清单（挡板、绿墙、屏风、接地等）。'
-            ]
-          },
-          {
-            key: 'risks',
-            dividerTitle: '风险与红线',
-            dividerSubtitle: '致命缺陷扫描',
-            title: '提前标记“不可选”项目',
-            imageLabel: '风险预警图',
-            body: '列出 T 字路冲、尖角冲射、后低前高、水患等致命问题。',
-            points: [
-              '检查：煞冲、割脚水、棺材煞、楼后急降等。',
-              '输出：Red/Amber/Green 风险图与应对方案或“不可选”判定。'
-            ]
-          },
-          {
-            key: 'timing',
-            dividerTitle: '启动时机（奇门/通胜）',
-            dividerSubtitle: '择时策略',
-            title: '选好动工与签约吉时',
-            imageLabel: '择时矩阵',
-            body: '采用奇门遁甲与通胜择定动工、签约、进驻良辰。',
-            points: [
-              '提供 3–5 个最佳窗口与避讳事项。',
-              '输出：仪式与朝向指南。'
-            ]
-          },
-          {
-            key: 'compliance',
-            dividerTitle: '合规与可行性',
-            dividerSubtitle: '现实落地',
-            title: '检核法规与后勤',
-            imageLabel: '合规检查表',
-            body: '对规划管制、公用设施、物流与投入产出进行 sanity check。',
-            points: [
-              '比对分区限制与预定用途，检视通达、淹水、消防、文资等。',
-              '输出：可行性判定（Go / Revise / No-Go）。'
-            ]
-          },
-          {
-            key: 'scoring',
-            dividerTitle: '综合评分与候选清单',
-            dividerSubtitle: '四维加权',
-            title: '用形·理·时·用四维评分',
-            imageLabel: '综合评分雷达图',
-            body: '以形（Form）、理（Compass）、时（Time）、用（Practical）四大面向进行加权评分。',
-            points: [
-              '呈现雷达或堆叠柱图，附加观察纪录。',
-              '输出：Top 1–3 候选地，列出优缺点与必做补救。'
-            ]
-          },
-          {
-            key: 'actionPlan',
-            dividerTitle: '执行路线图',
-            dividerSubtitle: '行动分阶段',
-            title: 'Now / 30 Days / 90 Days 行动表',
-            imageLabel: '行动蓝图故事板',
-            body: '列出立即、30 天、90 天需完成的关键调整。',
-            points: [
-              '提供图纸标注、家具/景观配置、承包商说明要点。'
-            ]
-          },
-          {
-            key: 'documentation',
-            dividerTitle: '文献与口径',
-            dividerSubtitle: '依据有源',
-            title: '经典＋测量标准',
-            imageLabel: '文档堆栈示意',
-            body: '列出所依据的经典与测量口径，确保报告可追溯。',
-            points: [
-              '典籍含《青囊经》《葬经》《撼龙经》《地理人子须知》《玄空飞星》体系。',
-              '同步提供测量标准、仪器校准与输出格式说明。'
-            ]
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '不仅是一份报告',
+            title: '获得“企业旺运布局图”',
+            imageLabel: '旺运选址地图',
+            body: '你得到的不只是选址报告，而是一张企业旺运布局图。《天元选址策》帮助你在决策前看清哪一处地气能帮你起势，让新址同时得天时、地利、人和。当选址与业态、时间同频，旺运便不再依赖运气。'
           }
         ],
-        cta: {
-          dividerTitle: '准备评估候选地了吗？',
-          dividerSubtitle: '获取企业选址蓝图',
-          title: '提交候选地资料',
-          message: '上传 KML、CSV 与项目简报，我们将在五个工作日内生成形势与飞星资料。',
-          primaryLabel: '上传 Site KML/CSV',
-          primaryHref: '/contact',
-          secondaryLabel: '提交候选地 → 生成报告',
-          secondaryHref: '/contact'
-        },
-        newsletterTitle: '选址情报简报',
-        newsletterSubtitle: '地图、择时与分区洞察，助力企业扩张。'
-      },
-enterpriseCycles: {
-        badge: '企业咨询',
-        title: '策略与周期指挥套件',
-        subtitle: '万事皆有周期，掌握节律，方能乘势而为。',
-        sections: [
-          {
-            key: 'introduction',
-            dividerTitle: '概述',
-            dividerSubtitle: '节律决定成败',
-            title: '乘势而为的时间学',
-            imageLabel: '周期概述故事板',
-            body: '万事皆有周期。我们把真太阳时、三元九运与企业战略交织，确保每一步动作踩在顺势节拍上。',
-            points: [
-              '排版采用 Noto Sans CJK，强调执行简报的清晰与稳重。',
-              '周期折线图（人工数据）展示历史共振窗口。',
-              '交付物包含高层简报、战术剧本与节奏仪表板。'
-            ]
-          },
-          {
-            key: 'macroStructure',
-            dividerTitle: '时间总结构',
-            dividerSubtitle: '天地人三才架构',
-            title: '构建时间母盘',
-            imageLabel: '宏周期轮盘（人工）',
-            body: '整合真太阳时、三元九运与企业里程碑，定位加速、收敛与防守的最佳时点。',
-            points: [
-              '季节轮盘标示全年气场强弱。',
-              '叠合财季、产品节奏与监管窗口。',
-              '情境切换展示不同节奏组合下的影响。'
-            ]
-          },
-          {
-            key: 'strategicAlignment',
-            dividerTitle: '战略节律校准',
-            dividerSubtitle: '目标同步',
-            title: '战略与节奏同频',
-            imageLabel: '战略对齐雷达图（人工）',
-            body: '重新校准战略优先级、资本流与人力动能，避免战略偏离时间母盘。',
-            points: [
-              '雷达图比较现况与目标对齐度。',
-              '跨部门工作坊将玄学洞见转译为 OKR。',
-              '决策备忘录标注重大行动的放行与暂停条件。'
-            ]
-          },
-          {
-            key: 'annualCycle',
-            dividerTitle: '年度战略周期',
-            dividerSubtitle: '年度节奏',
-            title: '编排年度主线',
-            imageLabel: '年度周期折线图（人工）',
-            body: '规划全年关键行动：上市、审核、资本动作与文化节点均匹配旺气窗口。',
-            points: [
-              '季节折线图呈现十二个月能量振幅。',
-              '季度简报提供预防性清单与守护重点。',
-              '与预算与董事会汇报节奏无缝整合。'
-            ]
-          },
-          {
-            key: 'monthlyRhythm',
-            dividerTitle: '月度与节气节律',
-            dividerSubtitle: '月令与节气',
-            title: '把握月令节拍',
-            imageLabel: '节气轮图（人工）',
-            body: '围绕节气与月令安排人力排班、营销与风险控管。',
-            points: [
-              '季节轮图标示每个节气的主轴与禁忌。',
-              '周、日操作脚本提示启用、守势与回补时段。',
-              '对冲个人或市场气场冲突的提醒机制。'
-            ]
-          },
-          {
-            key: 'microCycles',
-            dividerTitle: '微周期与奇门布局',
-            dividerSubtitle: '日时级部署',
-            title: '微周期作战手册',
-            imageLabel: '奇门热力图（人工）',
-            body: '以奇门遁甲指引日时级决策，涵盖谈判、危机处置与高层简报。',
-            points: [
-              '热力图呈现关键时段的行动优先级。',
-              '部署、观望、撤退的日程模板一应俱全。',
-              '整合数位行事历与提醒系统，实时推送。'
-            ]
-          },
-          {
-            key: 'crossMapping',
-            dividerTitle: '周期交叉映射',
-            dividerSubtitle: '多维联动',
-            title: '交叉映射带来确定性',
-            imageLabel: '周期矩阵故事板（人工）',
-            body: '对齐宏观、中观、微观周期，提前曝光冲突并制定化解方案。',
-            points: [
-              '周期矩阵仪表板让高层快速掌握对齐度。',
-              '周期冲突的优先处理流程与决策准则。',
-              '版本化时间轴管理，确保持份者同步更新。'
-            ]
-          },
-          {
-            key: 'industryWealth',
-            dividerTitle: '行业与财富周期',
-            dividerSubtitle: '外部节奏',
-            title: '行业财富同步情报',
-            imageLabel: '五行元素柱状图（人工）',
-            body: '将行业、资本市场与企业五行结构比对，掌握扩张、收购或防守的最佳窗口。',
-            points: [
-              '元素柱状图追踪产业气场与企业命盘的匹配度。',
-              '提供募资、并购或防御性布局的先行指标。',
-              '投资者与财务团队的策略简报同步完成。'
-            ]
-          },
-          {
-            key: 'strategyFormulation',
-            dividerTitle: '战略推演与执行',
-            dividerSubtitle: '从洞见到执行',
-            title: '打造战备级战略蓝图',
-            imageLabel: '战略推演故事板',
-            body: '将时间情报转化为可执行计划，明确责任、预算与监控机制。',
-            points: [
-              '决策树框架把时间节点对应到策略选项。',
-              '雷达图追踪资源配置与周期需求的平衡度。',
-              '变革管理模块协助团队随节奏快速调整。'
-            ]
-          },
-          {
-            key: 'references',
-            dividerTitle: '典籍与算法依据',
-            dividerSubtitle: '学术根基',
-            title: '经典文献支撑',
-            imageLabel: '参考典籍示意',
-            body: '详尽列出经典典籍、天文数据与运算模型，确保分析可追溯。',
-            points: [
-              '《黄帝内经》、通胜、三元九运经典与奇门遁甲全书。',
-              '现代参考：NASA 星历、财经周期研究、昼夜节律领导力论文。',
-              '附录说明运算流程与验证记录。'
-            ]
-          }
-        ],
-        cta: {
-          dividerTitle: '掌握时间主导权',
-          dividerSubtitle: '预约策略节奏审查',
-          title: '开启策略周期推演',
-          message: '提交企业年历、战略重点与利益相关者名单，我们将在三个工作日内回传范围与资料需求。',
-          primaryLabel: 'Start Strategy Cycle Analysis｜开启策略周期推演',
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想找出能带来长久旺运的企业旺地？',
+          dividerSubtitle: '预约你的天元选址推演',
+          title: '开启天元选址策推演',
+          message: '点击开启专属选址咨询，找出真正属于企业的旺地。',
+          primaryLabel: '开启天元选址策推演',
           primaryHref: '/contact'
         },
-        newsletterTitle: '周期情报快讯',
-        newsletterSubtitle: '专属折线、雷达、轮盘与柱状洞察，服务董事会节奏管理。'
+        newsletterTitle: '企业选址情报',
+        newsletterSubtitle: '地形能量、择时提醒与选址优化建议。'
+      },
+      enterpriseCycles: {
+        badge: '天时战略策',
+        title: '天时战略策',
+        subtitle: '懂天时者，得先机；顺周期者，赢未来。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '将时间变成战略优势',
+            title: '顺天时者，掌先机',
+            imageLabel: '天时战略全景图',
+            body: '《天时战略策》是一项以时间节奏为核心的企业战略咨询，结合东方天时周期学与现代管理逻辑，让企业在正确的时间做正确的事，揭示运营节奏与外部大势的关系。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '看见周期背后的规律',
+            title: '读懂时间的底层结构',
+            imageLabel: '周期洞察图',
+            body: '每个企业都在周期中运转——市场有周期、人事有周期、命运也有周期。通过推演，你将看到：',
+            points: [
+              '战略时机：何时扩张、何时蓄势、何时转向。',
+              '周期定位：企业当前处于兴旺、转折还是整顿。',
+              '机会窗口：哪些时间点最利于启动、融资或合作。',
+              '危机预警：在风险出现之前识别能量波动。',
+              '势能优化：让领导层与团队节奏与“天运”同频。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '天·地·人三才共振',
+            title: '让战略踩准时间节拍',
+            imageLabel: '天时共振模型',
+            body: '通过“企业命盘 + 管理层节奏 + 行业周期”的交叉分析，找出天时、人事、地运之间的共振与冲突，把玄学中的运势节奏转化为可执行的经营策略。',
+            points: [
+              '企业命盘与周期叠图。',
+              '核心团队的时间特质与目标匹配。',
+              '行业周期与宏观阴阳趋势交叉对照。',
+              '周期热力图揭示动静阶段。',
+              '机会/风险标签提示关键窗口。'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '从洞察到执行',
+            title: '六个步骤完成天时推演',
+            imageLabel: '战略节奏流程图',
+            body: '严谨流程让时间智慧转化为实战方案。',
+            points: [
+              '前期访谈：了解目标、痛点与阶段规划。',
+              '周期建模：分析企业命运节奏与管理层时间特征。',
+              '外部匹配：结合市场与大势周期，找出最佳契合。',
+              '阶段推演：预判未来1年、3年、10年的兴衰节奏。',
+              '咨询说明：一对一讲解，让复杂规律变简单。',
+              '行动蓝图：提供按时间推进的战略指引。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '关键节点的指路灯',
+            title: '为远见领导者而设',
+            imageLabel: '领导团队节奏简报',
+            body: '适合在扩张、转型或投资阶段，寻求时间先见与节奏掌控的决策者。',
+            points: [
+              '规划扩张或转型的企业创始人与高层。',
+              '关注进出时机的投资人。',
+              '面对增长与变革的团队管理者。',
+              '希望把“天时”变成战略优势的远见领导者。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '获得时间战略框架',
+            title: '走在时间之前，而非之后',
+            imageLabel: '时间战略蓝图',
+            body: '你将清楚了解企业当前所处的时间阶段，并学会如何把“天时”转化为战略优势。《天时战略策》让领导者从事后应变走向事前掌控，当时间、战略与气场同频，成功就成为节奏的必然。'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想让企业与时间同频共振？',
+          dividerSubtitle: '预约你的天时战略推演',
+          title: '开启天时战略策推演',
+          message: '点击开启专属咨询，把时间节奏转化为战略力量。',
+          primaryLabel: '开启天时战略策推演',
+          primaryHref: '/contact'
+        },
+        newsletterTitle: '天时战略情报',
+        newsletterSubtitle: '周期提醒、时间节奏与战略优化建议。'
       },
       celestialNumbers: {
-        badge: '帝师神数',
-        title: '皇极天数至尊神谕',
-        subtitle: '重启皇极神数，把天文、历法、数理与命理合一，掌控帝王级的节律推演。',
+        badge: '帝皇洞见',
+        title: '皇极天数咨询',
+        subtitle: '看懂时间的秩序，顺势掌握命运节奏。',
         sections: [
           {
-            key: 'introduction',
-            dividerTitle: '概述',
-            dividerSubtitle: '皇极神数的源起',
-            title: '天文数术的帝师圣典',
-            imageLabel: '金色同心周期螺旋＋星河背景',
-            body: '皇极神数源自宋·邵雍《皇极经世书》，是集天文、历法、数理与命理于一体的最高数术，推演天运与人运的周期律，洞见王朝、国家、企业与个体的兴衰。',
-            points: [
-              '历史根基：宋·邵雍《皇极经世书》。',
-              '核心法则：数以理推，理以时演 —— 数定义秩序，时决定变易。',
-              '视觉规范：金色螺旋配深蓝星云光晕，呈现帝师仪式感。'
-            ]
+            key: 'overview',
+            dividerTitle: '服务概览',
+            dividerSubtitle: '为何值得布局',
+            title: '与命运节奏对齐',
+            imageLabel: '时间与命运交织的意象',
+            body: '《皇极天数》是一门以“时空秩序”为核心的高精度玄学咨询。源自《皇极经世》的宇宙推演思想，它揭示命运运作的底层逻辑，让你看见事件为何发生、如何提前部署，真正做到顺势而行。',
           },
           {
-            key: 'cosmicFramework',
-            dividerTitle: '宇宙时序架构',
-            dividerSubtitle: '天地人三才同运',
-            title: '宏·中·微三重时间母盘',
-            imageLabel: '三层同心时间矩阵',
-            body: '天地人三才同运，周期相贯：天运主势，地运主场，人运主应。皇极构建三层时间母盘，让战略动作与节律完全同步。',
+            key: 'insight',
+            dividerTitle: '可以看见什么',
+            dividerSubtitle: '掌握命运的底层节拍',
+            title: '读懂时间背后的暗流',
+            imageLabel: '命运节奏洞察图',
+            body: '人生的节奏从不随机，《皇极天数》让你看见推动结果的隐形力量。',
             points: [
-              '三重矩阵：天运（三元九运 180/20 年）、地运（区域地理与社会脉动）、人运（十年大运＋流年）。',
-              '专业图表视觉：三环时间轮，外环天运、中环地运、内环人运。',
-              '交付：宏–中–微同步指数表，附高层注解。'
-            ]
+              '运势流向：哪些年份能量上升、哪些阶段宜静观。',
+              '转折时点：成功或风险来临前的信号。',
+              '潜在推手：谁或什么在悄悄左右你的命运。',
+              '人生主线：命运想让你成为怎样的人，你现在在哪个章节。',
+            ],
           },
           {
-            key: 'numericalLaw',
-            dividerTitle: '皇极数理法则',
-            dividerSubtitle: '数即气，数可通天',
-            title: '以数推理，以时演变',
-            imageLabel: '皇极数螺旋＋阴阳平衡条',
-            body: '皇极神数将数字视为活的能量，结合一十天数与六十甲子，推演时间、空间与人的共振。',
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '数理与时间的联动',
+            title: '天道数理与个人节奏的对接',
+            imageLabel: '皇极数理运算示意',
+            body: '以天道数理为基础，通过时间推演与能量映射，找出你与世界运转之间的契合点。看清命运的逻辑之后，人生不再只是“遇到”，而是“掌握”。',
             points: [
-              '核心公式：神数指数 = (天数 × 地数 × 人数) ÷ 时间位。',
-              '数理层级：元数（宇宙本源振动）、运数（时间波强度）、应数（个体共振）。',
-              '图表：专业图表皇极数螺旋图＋阴阳平衡条形图。',
-            ]
+              '一份命运地图，清楚知道时间站在哪一边。',
+              '掌握未来一年与十年的能量节奏。',
+              '一套可落地的决策参考，知道何时动、何时守。',
+            ],
           },
           {
-            key: 'cycleInterpretation',
-            dividerTitle: '周期推演与应象',
-            dividerSubtitle: '识进退之机',
-            title: '洞悉盛衰转折',
-            imageLabel: '皇极周期波形＋运势弧线',
-            body: '沿着皇极数运行，可测盛衰消长、气运转折，判定何时进攻、何时守成。',
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '从资料到行动蓝图',
+            title: '五个阶段完成专属推演',
+            imageLabel: '皇极咨询流程板',
+            body: '层层推演，把玄学洞察化为可执行的节奏安排。',
             points: [
-              '十年周期波：观人生与企业长河节拍。',
-              '年度能量流：定位年度兴衰节点与执行要点。',
-              '节令转折：四季五行旺衰规划季度校正。',
-              '视觉：专业图表皇极周期波图（折线）＋运势弧线图，附开运期/逆势期标注。'
-            ]
+              '资料收集：确认出生或创立时间与聚焦主题。',
+              '天数绘制：建立个人或企业的命运时间曲线。',
+              '周期解读：拆解长期、中期、短期的能量节奏。',
+              '咨询讲解：一对一说明，用清晰语言告知当下行动。',
+              '行动方案：交付具体时间、重点与方向建议。',
+            ],
           },
           {
-            key: 'strategicApplication',
-            dividerTitle: '战略应用',
-            dividerSubtitle: '知天时·用天时',
-            title: '把节律化为战术',
-            imageLabel: '天地人策略矩阵故事板',
-            body: '择时开业、迁移、谈判、疗愈都需顺势而为。皇极将节律洞见转化为可执行的时间表与策略矩阵。',
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '感知变化、需要验证的你',
+            title: '为察觉节奏转向的决策者而设',
+            imageLabel: '关键抉择的领导团队',
+            body: '适合所有需要先看清方向再行动的人。',
             points: [
-              '行动择时表：以元素映射最佳月/日，专业图表热力图呈现。',
-              '天地人三才策略矩阵：目标、资源、气场三位一体。',
-              '行业五行映射：金融=金、科技=火、教育=木、建筑=土、物流=水。',
-              '交付：策略路线图 PDF＋双语解读（专业版＋通俗版）。'
-            ]
+              '正在做关键抉择的管理者与领导者。',
+              '计划扩张或转型的创业者。',
+              '想突破瓶颈、规划下一步的职场人士。',
+              '感到运势在变却找不到节奏的人。',
+            ],
           },
           {
-            key: 'references',
-            dividerTitle: '典籍与传承',
-            dividerSubtitle: '经典＋现代校准',
-            title: '有根有据的帝师密学',
-            imageLabel: '经典卷轴与现代数据阵列',
-            body: '以正统典籍为根、以现代天文数据为证，确保推演可追溯、可验证。',
-            points: [
-              '典籍： 《皇极经世书》《皇极系述》《皇极推命真诀》《皇极与奇门遁甲合参》《皇极与风水周期法》《协纪辨方书》《易传》《河图洛书》《梅花易数》。',
-              '现代验证：中国国家天文台、台湾万年历、真太阳时、NASA JPL 星历数据。',
-              '附录：专业图表生成脚本与验证日志，确保数据透明。'
-            ]
-          }
+            key: 'outcome',
+            dividerTitle: '交付价值',
+            dividerSubtitle: '带走的不是预测',
+            title: '获得时间编码的行动蓝图',
+            imageLabel: '时间编码战略文件',
+            body: '结果不是“好或不好”的判断，而是一份时间化的策略蓝图。你会知道哪些该冲、哪些该缓、哪些该放下，《皇极天数》让你重新与时间对齐，让好运成为节奏，而非偶然。',
+          },
         ],
-        cta: {
-          dividerTitle: '准备掌控皇极周期？',
-          dividerSubtitle: '预约帝师级数理推演',
-          title: '开启皇极推演',
-          message: '提供战略重心、关键人员与目标时间轴，我们将在三个工作日内回传皇极天数推演方案。',
-          primaryLabel: 'Start Huangji Calculation｜开启皇极推演',
-          primaryHref: '/contact'
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想看懂时间背后的规律？',
+          dividerSubtitle: '预约你的皇极天数推演',
+          title: '开启皇极天数推演',
+          message: '点击开启专属推演，读懂命运的运行逻辑。',
+          primaryLabel: '开启皇极天数推演',
+          primaryHref: '/contact',
         },
-        newsletterTitle: '皇极周期简报',
-        newsletterSubtitle: '螺旋、能量波与阴阳平衡图，为董事会与内阁提供节律情报。'
+        newsletterTitle: '皇极时序情报',
+        newsletterSubtitle: '掌握时间脉动、机会窗口与节奏校准提醒。',
       },
+    },
+    academyOverview: {
+      badge: '学院',
+      title: '玄学系统学习全程概览',
+      subtitle: '由浅入深 · 系统化掌握中国玄学的思维与实践',
+      sections: [
+        {
+          key: 'overview',
+          type: 'text',
+          dividerTitle: '课程总览',
+          dividerSubtitle: '全链路学习旅程',
+          title: '从基础扎根到专业实践',
+          paragraphs: [
+            '《玄学系统学习全程》是一条由浅入深的学习路径，让你从基础理论到专业实践，系统掌握中国玄学的核心体系。',
+            '课程融合八字、紫微斗数、风水、生命数字与奇门遁甲等术数精华，帮助你将传统智慧转化为现代思维与实用策略，学会顺应命运节奏，让选择更有方向。'
+          ]
+        },
+        {
+          key: 'path',
+          type: 'levels',
+          dividerTitle: '学习路径',
+          dividerSubtitle: '四大阶段循序渐进',
+          title: '完整的四阶段修习旅程',
+          intro: '课程共分四个阶段，每一阶都让理解更深入、实战更扎实。',
+          levels: [
+            {
+              key: 'foundation',
+              badge: '🜃 1️⃣',
+              slug: 'foundation',
+              anchor: 'foundation-course',
+              title: '玄学基础课程',
+              duration: '3–6 个月',
+              body: '奠定玄学根基，学习阴阳、五行与时间循环规律。理解“天时、地利、人和”的整体逻辑，掌握术数背后的世界观。',
+              ctaLabel: '了解详情'
+            },
+            {
+              key: 'beginner',
+              badge: '🜃 2️⃣',
+              slug: 'beginner',
+              anchor: 'beginner-course',
+              title: '入门课程',
+              duration: '6 个月',
+              body: '系统学习八字、紫微斗数、生命数字与奇门遁甲四大核心术数。掌握命盘结构逻辑、能量形成机制，以及时间与方位的影响原理。结业后即可独立阅读基础命盘，辨识个人命格特征与运势走向。',
+              ctaLabel: '了解详情'
+            },
+            {
+              key: 'advanced',
+              badge: '🜃 3️⃣',
+              slug: 'advanced',
+              anchor: 'advanced-course',
+              title: '进阶课程',
+              duration: '3 个月',
+              body: '整合多门术数体系，深入研究时间、五行与空间气场的交互规律。练习高阶命盘解读、案例分析与奇门择时预测，掌握洞察人生转折与制定策略时机的能力。',
+              ctaLabel: '了解详情'
+            },
+            {
+              key: 'professional',
+              badge: '🜃 4️⃣',
+              slug: 'professional',
+              anchor: 'professional-course',
+              title: '专业课程',
+              duration: '3 个月',
+              body: '迈向命理顾问与实战咨询阶段。学习专业命盘解读、报告编制与沟通技巧，掌握咨询流程、伦理规范与实务应用，将玄学智慧融入事业、决策与人生辅导中。',
+              ctaLabel: '了解详情'
+            }
+          ]
+        },
+        {
+          key: 'curriculum',
+          type: 'bullets',
+          dividerTitle: '学习内容',
+          dividerSubtitle: '六大核心能力',
+          title: '掌握系统化玄学技能',
+          points: [
+            '阴阳五行生克的运行规律。',
+            '八字、紫微、数字与奇门命盘的架构与分析技巧。',
+            '风水能量的应用与空间气场理解。',
+            '十年大运与流年运势的周期判断方法。',
+            '时间节奏与机会管理的实战策略。',
+            '将玄学智慧融入事业规划与人生决策的系统思维。'
+          ]
+        },
+        {
+          key: 'format',
+          type: 'details',
+          dividerTitle: '教学形式',
+          dividerSubtitle: '理论·实战·导师辅导',
+          title: '多维度混合式教学',
+          body: '课程融合理论讲解、案例实操与导师辅导。',
+          details: [
+            { label: '授课形式', value: '线上 + 线下结合' },
+            { label: '学习周期', value: '每阶段 3 至 6 个月' },
+            { label: '课程内容', value: '图解教材、命盘实例与实操练习' },
+            { label: '导师辅导', value: '一对一答疑与学习指导' },
+            { label: '认证机制', value: '每阶段完成后颁发官方认证证书' }
+          ]
+        },
+        {
+          key: 'audience',
+          type: 'bullets',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '清晰·掌控·专业',
+          title: '为追求系统掌握的学员而设',
+          points: [
+            '想透过命理了解自我方向与天赋潜能的个人。',
+            '希望深化技术与体系理解的进阶学员。',
+            '将玄学逻辑融入疗愈、辅导与咨询工作的专业人士。',
+            '善用“天时智慧”进行事业布局与决策的企业管理者。'
+          ]
+        },
+        {
+          key: 'outcome',
+          type: 'text',
+          dividerTitle: '学习成果',
+          dividerSubtitle: '修习后的转变',
+          title: '把洞见转化为笃定行动',
+          paragraphs: [
+            '完成《玄学系统学习全程》后，你将具备系统的命理解读与预测能力，能洞悉多术数的交汇规律。',
+            '把知识转化为洞察，把洞察转化为行动，以清晰、节奏与自信引领人生。'
+          ]
+        }
+      ],
+      faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+        dividerTitle: '立即开启玄学学习之旅',
+        dividerSubtitle: '从基础到专业，全程认证学习路径。',
+        title: '预约玄学系统学习全程',
+        message: '点击立即报名，开启从基础到专业的玄学修习旅程。',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact'
+      }
+    },
+    academyBeginner: {
+      hero: {
+        badge: '学院',
+        title: '初阶课程',
+        subtitle: '入门命理 · 探索天机 · 打开命运的第一扇门',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '课程概述',
+          dividerSubtitle: '学习定位',
+          title: '从好奇走向结构化理解',
+          paragraphs: [
+            '《初阶课程》是从好奇到理解的桥梁，专为想深入探索命运机制与能量语言的学习者而设。',
+            '课程为期 6 个月，系统导入八字、紫微斗数、生命数字与奇门遁甲四大核心体系，让你看见时间、元素与空间气场如何交织成命运轨迹。',
+            '你将学会阅读基础命盘、识别命格结构，洞察影响抉择与机遇的隐形规律。'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: '学习内容',
+          dividerSubtitle: '四大核心体系',
+          title: '实作理解命运语言',
+          points: [
+            '八字基础：理解四柱结构与命格个性、潜能、时运的关系。',
+            '紫微斗数入门：认识宫位层次与星曜能量对应的关键领域。',
+            '生命数字：解读出生数字密码，掌握人生节奏与气场振动。',
+            '奇门遁甲概念：学习时间、方位与能量如何组合成吉凶窗口。',
+            '实用解盘：通过案例演练将理论转化为现实判断。'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: '学习意义',
+          dividerSubtitle: '清晰取代猜测',
+          title: '拿到人生的结构图',
+          paragraphs: [
+            '学习玄学初阶课程仿佛握住人生的结构图——你不再凭感觉行事，而是看见方向、节奏与节气。',
+            '当你理解命运运作的底层逻辑，你将由被动应对转为主动掌控。'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: '课程结构',
+          dividerSubtitle: '6 个月引导旅程',
+          title: '模块化教学搭配导师辅导',
+          paragraphs: [
+            '课程为期 6 个月，结合理论讲解、实战推演与导师辅导，让吸收与应用同步进行。'
+          ],
+          points: [
+            '模块一 · 八字架构——命盘建立、五行强弱与个人洞察。',
+            '模块二 · 紫微斗数——星曜解析与十二宫生命地图。',
+            '模块三 · 生命数字——生命路径与数字密码的实务解读。',
+            '模块四 · 奇门遁甲——时间方位能量的入门布局。',
+            '模块五 · 统整实战——真实案例推演与导师答疑。'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '为有准备的学习者而设',
+          title: '转换兴趣为可执行理解',
+          points: [
+            '对命理与人生规律充满好奇的探索者。',
+            '希望系统学习玄学并建立方法论的初学者。',
+            '想把命理逻辑融入辅导、疗愈或咨询工作的专业人士。',
+            '准备开始阅读自己或他人命盘的学习者。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '学习成果与价值',
+          dividerSubtitle: '六个月后的转变',
+          title: '具备跨体系命盘阅读力',
+          paragraphs: [
+            '完成《初阶课程》后，你将具备跨越四大术数体系的基础命盘阅读能力。',
+            '命运不再神秘，而是可读、可解、可顺势的结构。',
+            '你将开启新的感知层次，让逻辑与直觉并行，为未来的进阶与专业课程奠定根基。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '准备好踏上初阶学习了吗？',
+        dividerSubtitle: '开启你的六个月修习旅程',
+        title: '报名《初阶课程》',
+        message: '点击下方，展开理解命运结构与能量流动的 6 个月修习。',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyIntermediate: {
+      hero: {
+        badge: '学院',
+        title: '进阶课程',
+        subtitle: '融合多术数 · 掌握命运交汇点 · 看见人生的隐藏规律',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '课程概述',
+          dividerSubtitle: '学习焦点',
+          title: '把多门术数整合成一套掌控框架',
+          paragraphs: [
+            '《进阶课程》是从“懂原理”到“通推演”的关键阶段。在基础与初阶课程的基础上，本阶段将带你学习如何融合八字、紫微斗数、生命数字、风水与奇门遁甲，形成完整的命理分析流程。',
+            '你将看懂时间、元素与空间的互动关系，读懂命盘背后的因果结构，并在转折发生前先行识别。命运于是从未知变得可读、可导航、可调整。'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: '学习内容',
+          dividerSubtitle: '整合能力',
+          title: '掌握命运交汇点的五大技巧',
+          points: [
+            '命盘交叉解析：综合八字、紫微、奇门命盘，找出时运交汇点。',
+            '周期推演：掌握十年大运、流年与环境气场的互动规律。',
+            '风水应用：让个人命格与居家、办公空间的能量同频。',
+            '数理进阶：理解生命数字与宇宙时间的共振节奏。',
+            '高阶案例：透过真实案例训练分析精度与结构思维。'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: '学习意义',
+          dividerSubtitle: '超越表层解盘',
+          title: '把知识升级为战略洞察',
+          paragraphs: [
+            '进阶阶段让玄学不再停留在知识堆叠，而是成为可以预判与决策的战略工具。你将学会让不同术数彼此印证、互补与制衡，这也是专业命理师与普通解盘者的分水岭。',
+            '当逻辑与直觉融合，你就能精准解析复杂命盘，为自己与他人提供真正具指导力的行动方案。'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: '课程结构',
+          dividerSubtitle: '3 个月强化班',
+          title: '模块化整合 × 实战演练',
+          paragraphs: [
+            '课程为期 3 个月，结合系统整合法、案例实战与导师辅导，让理解与应用同步延伸。'
+          ],
+          points: [
+            '模块一 · 术数整合 —— 八字、紫微、奇门的逻辑互动。',
+            '模块二 · 周期预测 —— 时间规律与人生转折节点解析。',
+            '模块三 · 风水共振 —— 命格与空间气场的匹配应用。',
+            '模块四 · 数理深化 —— 以时间为主轴的能量频率分析。',
+            '模块五 · 案例实训 —— 从真实命盘练习整合推演与判断。'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '为追求整合力的学习者而设',
+          title: '升阶为多体系命理实战者',
+          points: [
+            '已完成基础与初阶课程的学员。',
+            '希望融合多术数体系的命理研究者与学习者。',
+            '需要提升分析精度的命理顾问与咨询师。',
+            '想精准预测时运并为他人提供方向的进阶学习者。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '学习成果与价值',
+          dividerSubtitle: '结业后的能力',
+          title: '读懂时间与能量交汇的关键点',
+          paragraphs: [
+            '完成《进阶课程》后，你将具备读取命运交汇点的综合能力，看清时间、空间与能量的交错运行。',
+            '玄学不再是零散知识，而是一套有逻辑、有系统的完整体系。你将学会预见变化，并在正确的时间做出正确的选择。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '准备好掌握多术数整合了吗？',
+        dividerSubtitle: '开启三个月的深度修习',
+        title: '报名《进阶课程》',
+        message: '点击下方，展开三个月的整合修习旅程，掌握命运交汇的核心逻辑。',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyProfessional: {
+      hero: {
+        badge: '学院',
+        title: '专业课程与认证',
+        subtitle: '学以致用 · 以术为道 · 以道达人',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '课程概述',
+          dividerSubtitle: '巅峰阶段',
+          title: '把掌握力转化为专业实践',
+          paragraphs: [
+            '《专业课程与认证》是玄学修习体系的终极阶段，专为准备将知识转化为实践、将实践升华为使命的学员而设。',
+            '课程帮助你精炼分析技巧、强化咨询沟通，并建立专业命理顾问所需的职业标准——精准、理性与责任。'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: '学习内容',
+          dividerSubtitle: '专业能力矩阵',
+          title: '全面掌握四大专业核心',
+          points: [
+            '命理咨询框架：从准备到讲解，建立完整咨询流程。',
+            '高阶推演逻辑：融合八字、紫微、数理、风水与奇门的整合模型。',
+            '客户沟通与职业伦理：学习清晰表达、共情倾听与专业自律。',
+            '报告编制与呈现：编写完整命运报告并进行口头分析说明。',
+            '认证实训：导师监督的实操案例与结业项目，完成认证要求。'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: '学习意义',
+          dividerSubtitle: '承载智慧',
+          title: '把洞察力化为实际影响',
+          paragraphs: [
+            '这一阶段不止于“学得更多”，而是“学会承载智慧”。成为认证命理顾问，意味着将命盘与数字背后的规律转化为人性的理解与实际解决方案。',
+            '你将兼具技术深度与情感智慧，以责任与温度引导他人前行。'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: '课程结构',
+          dividerSubtitle: '3 个月认证实训',
+          title: '导师辅导 × 案例实战 × 认证评审',
+          paragraphs: [
+            '课程为期 3 个月，结合导师辅导、监督案例与最终认证评估，让专业力与实战力同步提升。'
+          ],
+          points: [
+            '模块一 · 咨询框架与伦理 —— 建立专业标准与服务流程。',
+            '模块二 · 术数整合推演 —— 五大体系融合分析，精准诊断。',
+            '模块三 · 客户模拟与实操 —— 实战演练，导师逐案指导。',
+            '模块四 · 报告撰写与呈现 —— 制作并讲解专业命运报告。',
+            '模块五 · 认证考核 —— 书面与口头评估，完成官方认证。'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '为未来的专业顾问而设',
+          title: '成为玄学命理顾问的最后一里路',
+          points: [
+            '已完成进阶课程，准备取得正式认证的学员。',
+            '希望成为具资格的玄学命理顾问的实践者。',
+            '来自心理、疗愈、咨询领域，想融入玄学深度的专业人士。',
+            '想以责任感与自信引导他人理解命运的人。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '学习成果与价值',
+          dividerSubtitle: '完成后的身份',
+          title: '获得认证玄学命理顾问资格',
+          paragraphs: [
+            '完成课程后，你将获得认证玄学命理顾问资格，具备高阶命理分析、沟通表达与客户管理能力。',
+            '你拥有的不只是证书，更是专业与智慧并行的掌控力，准备好以术为桥、以道为志、以心为师。'
+          ]
+        }
+      ],
+      cta: {
+        dividerTitle: '准备好迎接认证了吗？',
+        dividerSubtitle: '迈向专业的最后一步',
+        title: '报名《专业课程与认证》',
+        message: '点击下方，开启认证之旅，让你以专业身份引领玄学服务。',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      }
+    },
+    academyFoundation: {
+      hero: {
+        badge: '学院',
+        title: '玄学基础课程',
+        subtitle: '夯实根基 · 理解天人之道 · 掌握命运底层逻辑',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      },
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: '课程概述',
+          dividerSubtitle: '学习起点',
+          title: '夯实一切玄学体系的根基',
+          paragraphs: [
+            '《玄学基础课程》是进入玄学世界的起点与根基。课程系统讲解阴阳、五行、天干地支与气场流转，让你看懂万事万物背后的能量逻辑与时间规律。',
+            '它不是神秘学，而是一套科学化的命运结构语言。掌握基础后，你将能以结构化、可验证的方式理解命运，为后续八字、紫微、奇门与风水学习打下坚实基础。'
+          ]
+        },
+        {
+          key: 'curriculum',
+          dividerTitle: '学习内容',
+          dividerSubtitle: '核心法则',
+          title: '掌握命运与能量的底层规律',
+          points: [
+            '阴阳原理：洞悉平衡、互动与变化的根源。',
+            '五行学说：木火土金水的能量结构与生克制化规律。',
+            '天干地支：六十甲子循环与时间、命运的联系。',
+            '气场流动：能量在时间与空间中的运行规律。',
+            '天人合一：明确自身在“天、地、人”三才之间的位置与作用。'
+          ]
+        },
+        {
+          key: 'why',
+          dividerTitle: '学习意义',
+          dividerSubtitle: '为什么要学',
+          title: '先懂概念，再进方法',
+          paragraphs: [
+            '所有玄学体系——无论八字、紫微斗数、风水还是奇门遁甲——都建立在这些基础概念之上。没有扎实根基，后续学习容易停留在片段信息，难以整合。',
+            '本课程帮助你建立清晰的思维框架与能量感知力，让你在实战中避免误用概念、误判结构。'
+          ]
+        },
+        {
+          key: 'structure',
+          dividerTitle: '课程结构',
+          dividerSubtitle: '3–6 个月',
+          title: '理论 × 实修，循序渐进',
+          paragraphs: [
+            '课程为期 3–6 个月，结合理论讲解、图表解析与实操练习，帮助你把“概念”转化为“可用的工具”。'
+          ],
+          points: [
+            '模块一 · 阴阳逻辑 — 对立统一与能量平衡。',
+            '模块二 · 五行循环 — 生克制化与结构诊断。',
+            '模块三 · 天干地支 — 六十甲子时间密码与运行节奏。',
+            '模块四 · 气场运行 — 气动与结果之间的因果关联。',
+            '模块五 · 基础实修 — 从五行平衡视角解读人生结构。'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '谁该学习',
+          title: '为渴望系统掌握玄学的人而设',
+          points: [
+            '想从零开始了解命理机制的初学者。',
+            '希望在进阶前夯实理论基础的学习者。',
+            '其他命理体系的研究者，需要系统化框架与共通语言。',
+            '对命运机制好奇、想从理性角度理解“玄学”的人。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '学习成果',
+          dividerSubtitle: '课程价值',
+          title: '掌握“命运语言”的起点',
+          paragraphs: [
+            '完成课程后，你将清楚看到命运与能量之间的结构关系。命运不再是“未知”，而是一套可读、可解、可顺应的系统。',
+            '这不仅是一门课程，更是通往高级术数的语言入口，让后续学习与实践都拥有清晰的坐标。'
+          ]
+        }
+      ],
+      faq: [
+        { question: '课程会让我掌握哪些核心框架？', answer: '你将扎实掌握阴阳、五行运作，以及十干十二支的时间密码，让后续所有命理推演都有清晰结构。' },
+        { question: '这门课怎样衔接进阶学习？', answer: '它是进阶班的桥梁——打好基础后，进入八字、紫微、奇门等多术数整合时会更轻松。' },
+        { question: '课程中会有实战演练吗？', answer: '会。导师会带领你实作真实案例，从五行平衡、时间节奏与气场流动角度进行解析。' },
+        { question: '课程资料是否可以无限期使用？', answer: '是的。你可持续下载讲义、参考图表与直播回放，随时复习并在下一阶段继续使用。' }
+      ],
+            cta: {
+        dividerTitle: '准备好启动基础修习了吗？',
+        dividerSubtitle: '迈向命运掌控的第一步',
+        title: '报名《玄学基础课程》',
+        message: '点击下方即可预约最新一期课程名额，或洽询私人定制班级。',
+        primaryLabel: '立即报名',
+        primaryHref: '/contact',
+        secondaryLabel: '返回课程总览',
+        secondaryHref: '/academy/courses'
+      }
     },
     hero: {
       slide1_title: '天命蓝图 · VIP 专属',
@@ -1591,6 +2863,22 @@ dictionary.EN.who = { title: dictionary.EN.who_title, body: dictionary.EN.who_lo
 dictionary.EN.why = { title: dictionary.EN.why_title, long: dictionary.EN.why_long }
 dictionary.CN.who = { title: dictionary.CN.who_title, body: dictionary.CN.who_long }
 dictionary.CN.why = { title: dictionary.CN.why_title, long: dictionary.CN.why_long }
+
+dictionary.EN.acd = {
+  courses: dictionary.EN.nav.courses,
+  foundation: dictionary.EN.nav.foundation,
+  beginner: dictionary.EN.nav.beginner,
+  intermediate: dictionary.EN.nav.advanced,
+  professional: dictionary.EN.nav.pro,
+}
+
+dictionary.CN.acd = {
+  courses: dictionary.CN.nav.courses,
+  foundation: dictionary.CN.nav.foundation,
+  beginner: dictionary.CN.nav.beginner,
+  intermediate: dictionary.CN.nav.advanced,
+  professional: dictionary.CN.nav.pro,
+}
 
 // About page content (EN)
 dictionary.EN.about = {

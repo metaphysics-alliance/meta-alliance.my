@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'services',
     // Academy
     'academy',
+    'academy/foundation',
     'academy/beginner',
     'academy/intermediate',
     'academy/professional',

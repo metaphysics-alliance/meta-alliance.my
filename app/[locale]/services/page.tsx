@@ -49,6 +49,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         bannerOpacity={0.75}
         overlayOpacity={0}
         noPaddingY
+        locale={locale}
       />
 
       {groups.map((group, gi) => (

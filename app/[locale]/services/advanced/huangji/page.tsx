@@ -35,7 +35,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         ]
       }} />
       <StructuredData json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: String(title), provider: { '@type': 'Organization', name: 'Metaphysics Alliance', url: base || undefined }, areaServed: ['Malaysia','Singapore','APAC'], availableLanguage: ['en','zh'], url: `${base}/${params.locale}/services/advanced/huangji` }} />
-      <Hero title={title} />
+      <Hero title={title} locale={params.locale} />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>

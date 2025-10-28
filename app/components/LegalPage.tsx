@@ -47,7 +47,7 @@ export default function LegalPage({ policyKey, locale }: LegalPageProps) {
   if (!policy) {
     return (
       <div className="space-y-10">
-        <Hero title="Policy Not Found" />
+        <Hero title="Policy Not Found" locale={locale} />
         <div className="container py-10 text-white/75">
           <p>The requested legal policy could not be found.</p>
         </div>
@@ -66,6 +66,7 @@ export default function LegalPage({ policyKey, locale }: LegalPageProps) {
         title={policy.title}
         description={policy.intro}
         className="bg-black/40 backdrop-blur-xl"
+        locale={locale}
       />
 
       {summary.length ? (

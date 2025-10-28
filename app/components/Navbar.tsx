@@ -10,7 +10,7 @@ interface NavbarProps {
 const PRIMARY_LINKS = [
   { key: 'home', href: '/' },
   { key: 'celestial', href: '/services' },
-  { key: 'vip_report', href: '/services/vip/lite' },
+  { key: 'vip_report', href: '/vip-report/essential' },
   { key: 'academy', href: '/academy' },
   { key: 'resources', href: '/resources' },
   { key: 'about', href: '/about' },

@@ -18,7 +18,7 @@ export default function ContactForm(){
     phone: lang === 'CN' ? '电话（国家码 + 号码）' : 'Phone (country code + number)',
     company: lang === 'CN' ? '公司 / 职位' : 'Company / Role',
     country: lang === 'CN' ? '国家/地区' : 'Country/Region',
-    state: lang === 'CN' ? '选择州属（仅限马来西亚）' : 'Select State (Malaysia Only)',
+    state: lang === 'CN' ? '选择州属（仅限马来西亚）' : 'State (Malaysia Only)',
     topic: lang === 'CN' ? '主题' : 'Topic',
     budget: lang === 'CN' ? '预算（可选）' : 'Budget (optional)',
     timeline: lang === 'CN' ? '时间线' : 'Timeline',
@@ -74,7 +74,7 @@ export default function ContactForm(){
     // Academy courses
     items.push({ type: 'heading', label: lang === 'CN' ? '学院课程' : 'Academy Courses' })
     const nav = dict?.nav || {}
-    const courseList = [nav.courses, nav.beginner, nav.advanced || 'Advanced', nav.pro].filter(Boolean)
+const courseList = [nav.courses, nav.foundation, nav.beginner, nav.advanced || 'Advanced', nav.pro].filter(Boolean)
     for (const label of courseList){
       items.push({ type: 'option', label: String(label), value: String(label) })
     }

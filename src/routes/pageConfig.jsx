@@ -1,4 +1,6 @@
 import AboutPage from '../pages/AboutPage.jsx'
+import AcademyCourseDetail from '../pages/AcademyCourseDetail.jsx'
+import AcademyCoursesPage from '../pages/AcademyCoursesPage.jsx'
 import CelestialServicePage from '../pages/CelestialServicePage.jsx'
 import ContentPage from '../pages/ContentPage.jsx'
 import LegalPage from '../components/LegalPage.jsx'
@@ -84,36 +86,9 @@ export const ROUTES = [
       />
     ),
   },
-  service('/vip-report/essential', {
-    title: 'Essential Destiny Blueprint',
-    intro: 'A 100+ page dossier for individuals who want clarity on their inherent pattern, profit engines and annual momentum. We use cross-verified BaZi, Zi Wei, numerology and timing charts so every decision is supported by classical data.',
-    bullets: [
-      'Talents, industries and earning models aligned to your element matrix.',
-      'Ten-year Luck Pillars and annual timing highlights with mitigation steps.',
-      'Life number review plus remedial actions to stabilise finances and relationships.',
-    ],
-    ideal: 'Ideal for founders, professionals and creators planning their next 18—36 months and wanting confidence that each move synchronises with their inherent rhythm.',
-  }),
-  service('/vip-report/advanced', {
-    title: 'Advanced Destiny Blueprint',
-    intro: 'A 200+ page strategy pack for leaders managing teams, brands or families. We expand into numeric field studies, advanced Qi Men stratagems and Feng Shui overlays for the environments you operate in most.',
-    bullets: [
-      'Everything in Essential plus numeric field and name auspiciousness analysis.',
-      'Qi Men Dun Jia charts for tactical openings and negotiations.',
-      'Environment recommendations for home and office to support the new strategy.',
-    ],
-    ideal: 'Ideal for business owners and executives who need lifetime perspective with tactical windows for launches, hires and relocations.',
-  }),
-  service('/vip-report/supreme', {
-    title: 'Supreme Destiny Blueprint',
-    intro: 'A 300+ page master plan for those orchestrating multi-entity portfolios or generational wealth. We combine imperial astrology, Tai Yi, Liu Ren and onsite Feng Shui review where required.',
-    bullets: [
-      'Name and numeric field optimisation with change recommendations.',
-      'Feng Shui evaluation for core residences (and optional offices).',
-      'Strategic roadmap that blends Emerald Court protocols, seasonal qi flow and legacy planning.',
-    ],
-    ideal: 'Ideal for investors, family offices and visionaries who require a north star for decades ahead and need every layer of metaphysics in one command deck.',
-  }),
+  celestialService('/vip-report/essential', { serviceKey: 'essentialBlueprint' }),
+  celestialService('/vip-report/pro', { serviceKey: 'advancedBlueprint' }),
+  celestialService('/vip-report/supreme', { serviceKey: 'supremeBlueprint' }),
   {
     path: '/services/celestial/destiny-algorithm',
     element: <CelestialServicePage serviceKey="bazi" />,
@@ -141,68 +116,24 @@ export const ROUTES = [
   celestialService('/oracle/six-ren', { serviceKey: 'sixRen' }),
   {
     path: '/academy/courses',
-    element: (
-      <ContentPage
-        title="Courses Overview"
-        intro="Our Academy curates pathways from beginner to professional certification. Sessions combine live teaching, case clinics and guided practice with real charts."
-        sections={[
-          {
-            heading: 'Learning approach',
-            bullets: [
-              'Hybrid delivery with live cohorts, recordings and lifetime resources.',
-              'Small group labs for chart reading, Feng Shui audits and Qi Men strategy.',
-              'Mentorship checkpoints to ensure you can apply each discipline with confidence.',
-            ],
-          },
-          {
-            heading: 'How to enrol',
-            body: 'Review the track below that suits your stage. Join the waitlist or book a discovery call to confirm your placement.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    element: <AcademyCoursesPage />,
   },
-  service('/academy/beginner', {
-    title: 'Beginner Track',
-    intro: 'Ground yourself in BaZi foundations, numerology and essential Feng Shui so you can read charts for yourself and family.',
-    bullets: [
-      'Basics of Yin/Yang, five elements and Heavenly Stem / Earthly Branch cycles.',
-      'Hands-on practice interpreting natal charts and yearly luck pillars.',
-      'Introduction to space harmonisation and energetic hygiene.',
-    ],
-    ideal: 'Ideal for enthusiasts and new practitioners beginning their metaphysics journey.',
-  }),
-  service('/academy/advanced', {
-    title: 'Advanced Track',
-    intro: 'Expand into Zi Wei, Qi Men and timing selection. Learn how to construct multi-system strategies that hold in real casework.',
-    bullets: [
-      'Deep dives into palace interplay, star families and strategic formations.',
-      'Timing algorithms integrating True Solar Time and 24 Solar Terms.',
-      'Mentored projects working on real client briefs.',
-    ],
-    ideal: 'Ideal after completing the Beginner Track or equivalent knowledge.',
-  }),
-  service('/academy/pro', {
-    title: 'Professional Certification',
-    intro: 'Become a certified metaphysics consultant. We cover consulting frameworks, ethics, case management and business building.',
-    bullets: [
-      'Capstone assessments with live clients under supervision.',
-      'Consulting toolkit including templates, pricing structures and delivery flow.',
-      'Ongoing peer community and case support after graduation.',
-    ],
-    ideal: 'Ideal for practitioners ready to serve clients professionally.',
-  }),
-  service('/academy/calendar', {
-    title: 'Academy Calendar & Booking',
-    intro: 'View upcoming cohorts, masterclasses and clinics. Reserve your seat or request private training for your team.',
-    bullets: [
-      'Quarterly intake dates with early-enrolment advantages.',
-      'Private cohort options for corporate or family teams.',
-      'Flexible payment plans and sponsorship opportunities.',
-    ],
-    ideal: 'Ideal for learners picking their start date or arranging bespoke programmes.',
-  }),
+  {
+    path: '/academy/foundation',
+    element: <AcademyCourseDetail courseKey="academyFoundation" />,
+  },
+  {
+    path: '/academy/beginner',
+    element: <AcademyCourseDetail courseKey="academyBeginner" />,
+  },
+  {
+    path: '/academy/intermediate',
+    element: <AcademyCourseDetail courseKey="academyIntermediate" />,
+  },
+  {
+    path: '/academy/professional',
+    element: <AcademyCourseDetail courseKey="academyProfessional" />,
+  },
   celestialService('/enterprise/audit', { serviceKey: 'corporateAudit' }),
   celestialService('/enterprise/site', { serviceKey: 'enterpriseSite' }),
   celestialService('/enterprise/cycles', { serviceKey: 'enterpriseCycles' }),
@@ -235,7 +166,7 @@ export const ROUTES = [
     element: (
       <ContentPage
         title="Contact"
-        intro="Let's map out the support you need. Share your intention and preferred timelines—our team will respond within two business days."
+        intro="Let's map out the support you need. Share your intention and preferred timelines-our team will respond within two business days."
         sections={[
           {
             heading: 'How to reach us',

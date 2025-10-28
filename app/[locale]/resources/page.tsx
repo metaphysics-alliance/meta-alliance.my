@@ -33,6 +33,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         bannerOpacity={0.75}
         overlayOpacity={0}
         noPaddingY
+        locale={params.locale}
       />
       <Content title={title} />
       <MediaGrid/>

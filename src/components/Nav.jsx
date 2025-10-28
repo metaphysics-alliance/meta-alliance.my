@@ -179,15 +179,15 @@ export default function Nav(){
     ]},
     { label: t('nav.vip_report'), href: lang === 'EN' ? '/vip-report' : '/services/vip-report', children: [
       { label: t('nav.vip_essential'), href: '/vip-report/essential' },
-      { label: t('nav.vip_advanced'), href: '/vip-report/advanced' },
+      { label: t('nav.vip_advanced'), href: '/vip-report/pro' },
       { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
     ]},
     { label: t('nav.academy'), children: [
       { label: t('nav.courses'), href: '/academy/courses' },
+      { label: t('nav.foundation'), href: '/academy/foundation' },
       { label: t('nav.beginner'), href: '/academy/beginner' },
-      { label: t('nav.advanced'), href: '/academy/advanced' },
-      { label: t('nav.pro'), href: '/academy/pro' },
-      { label: t('nav.calendar'), href: '/academy/calendar' },
+      { label: t('nav.advanced'), href: '/academy/intermediate' },
+      { label: t('nav.pro'), href: '/academy/professional' },
     ]},
     { label: t('nav.enterprise'), children: [
       { label: t('nav.audit'), href: '/enterprise/audit' },
@@ -299,6 +299,4 @@ export default function Nav(){
     </header>
   )
 }
-
-
 

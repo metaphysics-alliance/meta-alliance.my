@@ -114,6 +114,8 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         bannerOpacity={0.75}
         overlayOpacity={0}
         noPaddingY
+        locale={params.locale}
+        showDefaultCta={false}
         actions={
           <div className="flex items-center justify-center gap-3">
             <Link href={localise('/contact')} className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-black transition hover:bg-gold-soft">

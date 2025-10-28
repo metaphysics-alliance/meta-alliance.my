@@ -63,7 +63,7 @@ export default function ContactForm({ locale }: Props){
     phone: locale === 'CN' ? '电话（自动识别国家）' : 'Phone (auto-detect country)',
     company: locale === 'CN' ? '公司 / 职位' : 'Company / Role',
     country: locale === 'CN' ? '国家/地区' : 'Country/Region',
-    state: locale === 'CN' ? '选择州属（仅限马来西亚）' : 'Select State (Malaysia Only)',
+    state: locale === 'CN' ? '选择州属（仅限马来西亚）' : 'State (Malaysia Only)',
     topic: locale === 'CN' ? '主题' : 'Topic',
     budget: locale === 'CN' ? '预算（可选）' : 'Budget (optional)',
     timeline: locale === 'CN' ? '时间规划' : 'Timeline',
@@ -119,7 +119,7 @@ export default function ContactForm({ locale }: Props){
     // Academy courses
     items.push({ type: 'heading', label: locale === 'CN' ? '学院课程' : 'Academy Courses' })
     const nav = (dict as any)?.nav || {}
-    const courseList: string[] = [nav.courses, nav.beginner, nav.advanced ?? 'Advanced', nav.pro].filter(Boolean)
+const courseList: string[] = [nav.courses, nav.foundation, nav.beginner, nav.advanced ?? 'Advanced', nav.pro].filter(Boolean)
     for (const label of courseList){
       items.push({ type: 'option', label: String(label), value: String(label) })
     }

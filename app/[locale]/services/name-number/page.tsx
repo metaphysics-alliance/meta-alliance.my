@@ -43,7 +43,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
         availableLanguage: ['en','zh'],
         url: `${base}/${params.locale}/services/name-number`
       }} />
-      <Hero title={title} />
+      <Hero title={title} locale={params.locale} />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>

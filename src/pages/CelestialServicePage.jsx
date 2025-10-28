@@ -109,11 +109,20 @@ export default function CelestialServicePage({ serviceKey }) {
 
   const primaryHref = cta?.primaryHref || '/contact';
   const secondaryHref = cta?.secondaryHref || null;
+  const primaryClass = 'px-5 py-2.5 rounded-lg bg-gold text-black font-semibold shadow-soft-xl hover:brightness-110 transition';
 
   return (
     <main className="space-y-14 pb-20">
       <SEOService lang={lang} title={data.title} description={data.subtitle} />
-      <Banner title={data.title} sub={data.badge} description={data.subtitle} />
+      <Banner
+        title={data.title}
+        sub={data.badge}
+        description={data.subtitle}
+        showDefaultCta={Boolean(primaryLabel)}
+        ctaLabel={primaryLabel}
+        ctaHref={primaryHref}
+        ctaClassName={primaryClass}
+      />
 
       <div className="space-y-16">
         {sections.map((section) => (
@@ -158,7 +167,7 @@ export default function CelestialServicePage({ serviceKey }) {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
                   <Link
                     to={primaryHref}
-                    className="px-5 py-2.5 rounded-lg bg-gold text-black font-semibold shadow-soft-xl hover:brightness-110 transition"
+                    className={primaryClass}
                   >
                     {primaryLabel}
                   </Link>

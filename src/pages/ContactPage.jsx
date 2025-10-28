@@ -14,7 +14,7 @@ export default function ContactPage(){
   const { lang, t } = useI18n()
 
   const title = t('nav.contact') || (lang === 'CN' ? '联系我们' : 'Contact')
-  const heroTitle = lang === 'CN' ? '联系我们' : 'Talk To A Human Who Can Help Today'
+  const heroTitle = lang === 'CN' ? '联系我们' : 'Contact Our Professionals'
   const heroSub = lang === 'CN' ? '我们如何帮助您达成目标' : 'Real guidance. Fast reply. No bots.'
   const heroDesc = lang === 'CN'
     ? `请告诉我们您的目标、背景与限制，我们将把需求转化为清晰可执行的下一步，给出现实可行的时间表、选项与投入评估。我们以八字、紫微、奇门、风水与数字命理交叉印证，过滤噪声，聚焦能推动结果的行动。您将收到含优先级、风险与行动时点的简要方案。我们通常在1个工作日内回复；如有紧急期限，请说明，我们会酌情尽力提前安排。`
@@ -32,6 +32,7 @@ export default function ContactPage(){
         title={heroTitle}
         sub={heroSub}
         description={heroDesc}
+        showDefaultCta={false}
       />
 
       <SectionDivider title={lang === 'CN' ? '主要联系' : 'Primary Contacts'} />

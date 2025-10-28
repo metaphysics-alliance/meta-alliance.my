@@ -23,7 +23,7 @@ export default function Page({ params }:{ params:{ locale: Locale }}){
     <div className='space-y-10'>
       <StructuredData json={{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: params.locale, item: `${base}/${params.locale}` }, { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/${params.locale}/services` }, { '@type': 'ListItem', position: 3, name: String(title), item: `${base}/${params.locale}/services/fengshui/layout/sanyuan` } ] }} />
       <StructuredData json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: String(title), provider: { '@type': 'Organization', name: 'Metaphysics Alliance', url: (process.env.NEXT_PUBLIC_SITE_URL || undefined) }, areaServed: ['Malaysia','Singapore','APAC'], availableLanguage: ['en','zh'], url: `${base}/${params.locale}/services/fengshui/layout/sanyuan` }} />
-      <Hero title={title} />
+      <Hero title={title} locale={params.locale} />
       <Content title={title} />
       <MediaGrid/>
       <Testimonials/>

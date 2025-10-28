@@ -894,164 +894,181 @@ export const CELESTIAL_SERVICES = {
 
     taiyiNumbers: {
       badge: 'Imperial Oracle',
-      title: 'Cosmic Tai Yi Strategy',
-      subtitle: 'Command the stars, govern the flow of fate.',
-      sections: [
-        {
-          key: 'introduction',
-          dividerTitle: 'Introduction · 太乙概述',
-          dividerSubtitle: 'Every enterprise needs a Tai Yi chart',
-          title: '御天星局，掌乾坤之策',
-          imageLabel: 'Golden celestial compass',
-          imageUrl: '/images/page-services/7-cosmic.jpg',
-          body: 'The Cosmic Tai Yi Strategy springs from Tai Yi Jin Jing Shi Jing—the imperial art for “observing the heavens, governing destiny.” By decoding the Tai Yi Star Matrix we forecast prosperity, calamity and strategic advantage across personal and national arenas.',
-          points: [
-            '三才同策：Heaven (时) · Earth (位) · Human (应) working in unison.',
-            'Formula: Timing × Direction × Decision = Outcome.',
-            'Design cue: gilded celestial compass floating over a cosmic spiral.'
-          ]
-        },
-        {
-          key: 'structure',
-          dividerTitle: 'Tai Yi Structure · 星局架构',
-          dividerSubtitle: 'Heaven’s algorithm revealed',
-          title: 'Nine Palaces · Sixty Divine Numbers',
-          imageLabel: 'Tai Yi star matrix',
-          imageUrl: '/images/page-services/8-celestial.jpg',
-          body: 'Tai Yi models a 360-degree cosmic rotation, split into 72 configurations and 60 divine numbers to simulate Heaven’s algorithm.',
-          points: [
-            'Nine-Palace Tai Yi board: Tai Yi Star in the centre, eight directions as heavenly branches.',
-            'Sixty Divine Numbers index: each number maps to themes—wealth, warfare, illness, nobility, humanity, spirits.',
-            'Three Talents integration: synchronise Heaven Luck, Earth Position, Human Action.',
-            'Output: “Tai Yi Core Map 太乙主局图” featuring 9-grid board plus numeric orbit ring.'
-          ]
-        },
-        {
-          key: 'cycles',
-          dividerTitle: 'Cycle Mechanics · 运数推演',
-          dividerSubtitle: 'Track rise and decline',
-          title: 'Nine Heavens, Sixty Numbers',
-          imageLabel: 'Tai Yi cycle wave',
-          imageUrl: '/images/page-services/9-energy.jpg',
-          body: 'Following the Tai Yi Star through Nine Heavens and Sixty Numbers reveals the rhythm of prosperity versus stagnation.',
-          points: [
-            'Yearly cycle sheet: Main Star × Heavenly Stem × Earthly Branch.',
-            'Monthly phases diagram marking 旺 / 衰 transitions.',
-            'Dynamic formula: Luck = (Main Star Strength × Cycle Harmony) ÷ Conflict Index.',
-            'Output: “Tai Yi Fortune Flow Chart 太乙运势流图” (energy wave line, cycle radar, temporal heatmap).'
-          ]
-        },
-        {
-          key: 'strategy',
-          dividerTitle: 'Strategic Interpretation · 乾坤策论',
-          dividerSubtitle: 'Turn charts into action',
-          title: 'Advance, Defend, Transform',
-          imageLabel: 'Tai Yi strategy wheel',
-          imageUrl: '/images/page-services/10-iching.jpg',
-          body: 'Tai Yi strategy pinpoints when to expand, consolidate or convert adversity into leverage.',
-          points: [
-            'Offensive vs defensive cycle map: expansion, consolidation, retreat.',
-            'Directional tactics: Four Symbols and Five Elements overlays.',
-            'Crisis conversion: use the taboo numbers to neutralise hostile currents.',
-            'Output: professional + plain-language tactical brief with 0/30/90 day windows.'
-          ]
-        },
-        {
-          key: 'application',
-          dividerTitle: 'Applications · 实战应用',
-          dividerSubtitle: 'Bridge theory and execution',
-          title: 'Leadership, Warfare, Capital, Healing',
-          imageLabel: 'Tai Yi application grid',
-          imageUrl: '/images/page-services/11-name.jpg',
-          body: 'Embed Tai Yi insight in leadership cadence, market plays and wellbeing protocols.',
-          points: [
-            'Personal timing: align birth chart and Tai Yi numbers for decisive moves.',
-            'Corporate deployment: sync expansion, restructuring and IPO timelines with Tai Yi cycles.',
-            'Health rhythm: match meridian care to Tai Yi heavens for recovery.',
-            'Output: “Tai Yi Practical Matrix 实用矩阵图” plus personalised guidelines.'
-          ]
-        },
-        {
-          key: 'references',
-          dividerTitle: 'Classical References · 典籍依据',
-          dividerSubtitle: 'Imperial astronomy, modern validation',
-          title: 'Canonical Tai Yi Lineage',
-          imageLabel: 'Tai Yi archive',
-          imageUrl: '/images/page-services/12-soul.jpg',
-          body: 'Rooted in imperial astronomy and metaphysical mathematics, verified with contemporary datasets.',
-          points: [
-            'Texts: 《太乙金镜式经》《太乙淘金歌》《太乙秘断》《三式合参》《奇门太乙合参录》《皇极经世书》。',
-            'Validation: 中国国家天文台、香港天文台、NASA JPL、真太阳时。',
-            'Design cue: golden constellation map with subtle nebula motion layer.'
-          ]
-        }
-      ],
-      cta: {
-        dividerTitle: 'Command Tai Yi Now',
-        dividerSubtitle: 'Limited computations per cycle',
-        title: 'Start Tai Yi Computation',
-        message: 'Priority Tai Yi sessions fill fast—submit your mission brief, timeline and objectives to secure your window.',
-        primaryLabel: 'Start Tai Yi Computation｜开启太乙推策',
-        primaryHref: '/contact'
-      },
-      newsletterTitle: 'Tai Yi Signals',
-      newsletterSubtitle: 'Cycle alerts, directional cues and ritual reminders delivered ahead of key windows.'
-    },
-    sixRen: {
-      badge: 'Imperial Oracle',
-      title: 'Mystical Mechanism of Six Ren',
-      subtitle: 'Fast, tactical Six Ren divination for negotiations, crisis response and decisive pivots.',
+      title: 'Celestial Tai Yi Strategy',
+      subtitle: 'Master the Celestial Map · Turn Time into Advantage.',
       sections: [
         {
           key: 'overview',
-          dividerTitle: 'Oracle Focus',
-          dividerSubtitle: 'Decide with certainty',
-          title: 'Six Ren Tactical Intelligence',
-          imageLabel: 'Six Ren divination grid',
-          body: 'Six Ren reveals ally positioning, hidden threats and momentum direction so you can act the instant clarity is required.',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'What this service delivers',
+          title: 'Imperial Strategy for Modern Decisions',
+          imageLabel: 'Tai Yi celestial command chart',
+          body: `The Celestial Tai Yi Strategy is an advanced metaphysical consultation rooted in Tai Yi Shen Shu—the imperial art used to forecast shifts in destiny and power. It interprets where cosmic timing and human decision intersect so you know when to advance, when to pause, and where unseen opportunities are forming. Ancient celestial algorithms are translated into clear, actionable guidance for today.`
+        },
+        {
+          key: 'insight',
+          dividerTitle: 'What Tai Yi Reveals',
+          dividerSubtitle: 'Precision timing intelligence',
+          title: 'Know the Rhythm Behind Every Move',
+          imageLabel: 'Celestial timing dashboard',
+          body: 'Tai Yi’s strength lies in timing clarity. It illuminates the landscape before events surface.',
           points: [
-            'Rapid casting for negotiations, travel, crisis containment and mission go/no-go.',
-            'Maps Heaven, Earth and Human plates to highlight supportive versus hostile energies.',
-            'Integrates with Qi Men or BaZi overlays for reinforced yes/no guidance.'
+            'Strategic Momentum: phases destined for expansion or consolidation.',
+            'Hidden Shifts: forces quietly shaping upcoming events and relationships.',
+            'Power Dynamics: windows where authority, wealth or influence align in your favour.',
+            'Turning Points: cycles where decisive action changes everything.'
           ]
         },
         {
-          key: 'playbook',
-          dividerTitle: 'Action Playbook',
-          dividerSubtitle: 'From divination to decision',
-          title: 'Move, Hold or Redirect',
-          imageLabel: 'Six Ren action board',
-          body: 'Each session concludes with concrete recommendations for immediate execution.',
+          key: 'method',
+          dividerTitle: 'How It Works',
+          dividerSubtitle: 'Heaven · Earth · Human alignment',
+          title: 'Decode the Cause-and-Timing Mechanism',
+          imageLabel: 'Tri-layer Tai Yi resonance model',
+          body: 'Using the Tai Yi celestial model, every person or organisation is mapped against cosmic cycles to expose resonance, imbalance and potential.',
           points: [
-            'Immediate move/hold/redirect instructions tied to plate dynamics.',
-            'Suggested protective rituals and positioning to neutralise hostile forces.',
-            'Contingency pathways if conditions change mid-operation.'
+            'Cycle cadence so you know when to accelerate and when to stabilise.',
+            'Clarity on the cause-and-timing chain that drives success or friction.',
+            'A practical timing strategy so every decision carries confidence.'
           ]
         },
         {
-          key: 'support',
-          dividerTitle: 'Support & Follow-up',
-          dividerSubtitle: 'Stay responsive',
-          title: 'After-Action Support',
-          imageLabel: 'Six Ren support dossier',
-          body: 'Receive note summaries and follow-up slots to reassess when new variables surface.',
+          key: 'process',
+          dividerTitle: 'Service Process',
+          dividerSubtitle: 'From intake to execution',
+          title: 'Five Steps to Command Tai Yi Intelligence',
+          imageLabel: 'Tai Yi strategy workflow board',
+          body: 'A tightly sequenced workflow converts celestial intelligence into ready-to-apply guidance.',
           points: [
-            'Concise post-session brief for leadership distribution.',
-            'Optional next-step casting when variables shift.',
-            'Access to ritual kits and directional cues for ongoing protection.'
+            'Consultation Intake – clarify objectives across career, business or life decisions.',
+            'Tai Yi Charting – build the personal celestial layout through time mapping.',
+            'Cycle Interpretation – surface strategic windows and pivotal turning phases.',
+            'Strategic Briefing – receive a one-on-one explanation in precise, practical language.',
+            'Action Plan – take away tailored guidance covering timing, direction and decision flow.'
           ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Designed for inflection points',
+          title: 'For Leaders Who Refuse to Move Blindly',
+          imageLabel: 'Decision makers navigating change',
+          body: 'Ideal for anyone facing high-stakes transitions or mission-critical timing choices.',
+          points: [
+            'Leaders and founders navigating strategic crossroads.',
+            'Investors identifying trend reversals or new cycles.',
+            'Professionals preparing significant career pivots.',
+            'Individuals who sense change and want to act with foresight.'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What you receive',
+          title: 'Leave with a Strategic Time Map',
+          imageLabel: 'Time-coded opportunity blueprint',
+          body: 'You receive a strategic map—not vague predictions, but a timeline of opportunities, risks and inflection points. Celestial Tai Yi Strategy gives you the rare advantage of timing so you act before events unfold and steer destiny instead of reacting to it.'
         }
       ],
       cta: {
-        dividerTitle: 'Command with Six Ren',
-        dividerSubtitle: 'Limited tactical seats each cycle',
-        title: 'Start Six Ren Consultation',
-        message: 'Submit your tactical brief—we respond within 24 hours with availability and preparation guidance.',
-        primaryLabel: 'Book Six Ren Oracle',
+        dividerTitle: 'Ready to Anticipate the Unseen?',
+        dividerSubtitle: 'Reserve your Tai Yi command window',
+        title: 'Start Your Tai Yi Strategy Consultation',
+        message: 'Click to begin your personalised Tai Yi reading and uncover the rhythm behind destiny.',
+        primaryLabel: 'Start Your Tai Yi Strategy Consultation',
         primaryHref: '/contact'
       },
-      newsletterTitle: 'Six Ren Dispatch',
-      newsletterSubtitle: 'Instant alerts on directional shifts, ally signals and ritual prompts.'
+      newsletterTitle: 'Tai Yi Strategy Dispatch',
+      newsletterSubtitle: 'Timing intelligence, cycle alerts and celestial briefings for decisive leaders.'
+    },
+    sixRen: {
+      badge: 'Imperial Oracle',
+      title: 'The Divine Mechanism of Six Ren',
+      subtitle: 'See before it happens.',
+      sections: [
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Strategic foresight in action',
+          title: 'Ancient Foresight, Modern Command',
+          imageLabel: 'Six Ren celestial decision grid',
+          body: `The Divine Mechanism of Six Ren is a high-level metaphysical strategy consultation derived from Liu Ren Shen Shu—the classical art generals used to forecast outcomes before action. It decodes the interplay between time, people and circumstance so you can navigate turning points, anticipate unseen factors and decide in rhythm with Heaven.`
+        },
+        {
+          key: 'insight',
+          dividerTitle: 'What Six Ren Reveals',
+          dividerSubtitle: 'Structure behind the chaos',
+          title: 'Understand the Forces Shaping Tomorrow',
+          imageLabel: 'Hidden dynamics intelligence board',
+          body: 'Six Ren exposes the pattern within apparent chaos so you can move decisively.',
+          points: [
+            'Decision Timing: when to advance, pause or reposition.',
+            'Hidden Influences: people, trends and energies silently shaping results.',
+            'Crisis Indicators: subtle warnings before disruption takes hold.',
+            'Strategic Openings: unseen doors of opportunity ready to unlock momentum.'
+          ]
+        },
+        {
+          key: 'method',
+          dividerTitle: 'How It Works',
+          dividerSubtitle: 'Heaven · Earth · Human interplay',
+          title: 'Read the Living Energy Chessboard',
+          imageLabel: 'Dynamic timing resonance map',
+          body: 'Through Six Ren, every scenario becomes a living network of timing and energy flow. We observe how Heaven (timing), Earth (environment) and Human (decision) interact to pinpoint the moments where action converts into impact.',
+          points: [
+            'Panoramic understanding of your current situation.',
+            'Advance awareness of how momentum will unfold.',
+            'A time-based action strategy tuned to the cycles ahead.'
+          ]
+        },
+        {
+          key: 'process',
+          dividerTitle: 'Service Process',
+          dividerSubtitle: 'From discovery to deployment',
+          title: 'Five Steps to Harness Six Ren Intelligence',
+          imageLabel: 'Six Ren consultation workflow',
+          body: 'A disciplined sequence transforms metaphysical insight into decisive guidance.',
+          points: [
+            'Discovery Consultation – clarify context and primary goals.',
+            'Situation Mapping – chart timing, influence and power flows.',
+            'Cycle Interpretation – surface upcoming phases of rise, conflict and opportunity.',
+            'One-to-One Session – translate findings into plain, practical language.',
+            'Strategic Roadmap – deliver a time-backed execution plan with clear priorities.'
+          ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Engineered for inflection points',
+          title: 'For Those Who Lead from Foresight',
+          imageLabel: 'Leaders sensing pivotal change',
+          body: 'Designed for individuals and organisations who sense change and refuse to move blindly.',
+          points: [
+            'Entrepreneurs planning expansion or investment.',
+            'Executives navigating competitive pressure.',
+            'Professionals charting significant career transitions.',
+            'Individuals seeking destiny clarity beyond coincidence.'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What you receive',
+          title: 'A Strategic Lens for Invisible Forces',
+          imageLabel: 'Invisible forces strategy map',
+          body: 'You leave with a clear strategic lens—not vague prophecy. The Divine Mechanism of Six Ren equips you to anticipate outcomes, act at the right moment and neutralise risks before they form. It is built for decision-makers who know timing defines success.'
+        }
+      ],
+      cta: {
+        dividerTitle: 'Ready to See the Invisible Strategy?',
+        dividerSubtitle: 'Reserve your Six Ren consultation',
+        title: 'Begin Your Six Ren Consultation',
+        message: 'Start your personalised session and master the rhythm of change.',
+        primaryLabel: 'Begin Your Six Ren Consultation',
+        primaryHref: '/contact'
+      },
+      newsletterTitle: 'Six Ren Strategy Dispatch',
+      newsletterSubtitle: 'Energy shifts, timing alerts and strategic counsel for anticipatory leaders.'
     },
     qimen: {
       badge: 'Strategic Warfare',
@@ -1255,9 +1272,7 @@ export const CELESTIAL_SERVICES = {
         title: '启动量子命盘指挥',
         message: '提交目标、时间线与团队结构，抢先占位。我们维持小型名额以确保深度。',
         primaryLabel: '预约战略通话',
-        primaryHref: '/contact',
-        secondaryLabel: '下载范例洞察',
-        secondaryHref: '/resources/four-pillars'
+        primaryHref: '/contact'
       },
       newsletterTitle: '同步天时脉动',
       newsletterSubtitle: '每月接收吉时提醒、资本布局与身心优化建议。'
@@ -1970,116 +1985,182 @@ export const CELESTIAL_SERVICES = {
       newsletterSubtitle: '掌握音韵趋势、数理精选与启用仪式脚本。'
     },
     taiyiNumbers: {
-      badge: '帝师神数',
+      badge: '帝皇天策',
       title: '乾坤太乙策',
-      subtitle: '运用太乙数推演机会、阻力与时机，将玄学情报转化为可执行策略。',
+      subtitle: '洞察天机 · 掌握乾坤先机',
       sections: [
         {
           key: 'overview',
-          dividerTitle: '核心范围',
-          dividerSubtitle: '太乙为何关键',
-          title: '太乙战略指挥简报',
-          imageLabel: '太乙星盘示意',
-          body: '客制化排盘太乙数局，揭露机会窗口、阻力势力与最优时机。',
+          dividerTitle: '服务概述',
+          dividerSubtitle: '太乙为何能定乾坤',
+          title: '帝师级战略洞察',
+          imageLabel: '太乙天盘策略图',
+          body: '《乾坤太乙策》源自《太乙神数》——帝师以此观星筹谋、推演权势走势。它解析“天时”与“人事”相交之处，告诉你何时出击、何时退守、哪里潜藏机会，让古老的天机成为现代决策的行动指南。'
+        },
+        {
+          key: 'insight',
+          dividerTitle: '太乙能揭示什么',
+          dividerSubtitle: '以时间掌控局势',
+          title: '未动先知的战略透视',
+          imageLabel: '天时节奏洞察板',
+          body: '太乙的核心是“知时而动”，在事件发生之前看清局势。',
           points: [
-            '依任务或项目排定太乙数局。',
-            '解析天地人三盘，辨识助力、对手与暗流。',
-            '将盘局讯号转译为董事会可用的策略建议。'
+            '战略节奏：哪些阶段宜攻、哪些阶段宜守。',
+            '潜在变局：谁或什么正在暗中推动局势。',
+            '能量格局：财富、权力、人脉何时自动聚合。',
+            '命运转折：关键年份、月令能否逆转与突破。'
           ]
         },
         {
-          key: 'timing',
-          dividerTitle: '时机窗口',
-          dividerSubtitle: '精准择时',
-          title: '机会与避忌提示',
-          imageLabel: '太乙时机轮盘',
-          body: '标注吉时、方位与注意事项，让行动顺势而上。',
+          key: 'method',
+          dividerTitle: '推演原理',
+          dividerSubtitle: '天·地·人三才同参',
+          title: '看见成败的时间逻辑',
+          imageLabel: '三层太乙共振模型',
+          body: '太乙以天、地、人三才模型，将个人或企业置于宇宙周期中推演共振与失衡，不算运气，只算成败背后的时间链。',
           points: [
-            '机会矩阵：吉日吉时与有利方位。',
-            '避忌清单：冲煞日期、敌对力量与修正仪式。',
-            '契约、启动、谈判等场景的执行检查表。'
+            '掌握周期节奏，明白何时加速、何时沉稳。',
+            '理解成败因果链，不再盲目等待或碰运气。',
+            '收获可执行的时间策略，让每一步更有底气。'
           ]
         },
         {
-          key: 'deliverables',
-          dividerTitle: '交付内容',
-          dividerSubtitle: '拿到什么',
-          title: '太乙神谕包',
-          imageLabel: '太乙简报',
-          body: '提供盘局快照、策略建议与仪式支持，一目了然。',
+          key: 'process',
+          dividerTitle: '服务流程',
+          dividerSubtitle: '五步完成太乙推演',
+          title: '从洞察到行动的全链路',
+          imageLabel: '太乙策略流程板',
+          body: '严谨的步骤把天机洞察转化为可立即应用的决策指令。',
           points: [
-            '管理层摘要：将盘局讯号转化为具体行动。',
-            '标注天地人三盘重点的图像与说明。',
-            '必要时安排追踪会议，因应外部变量。'
+            '初步沟通：厘清目标与当前困境（事业、财富、重大决策）。',
+            '太乙排局：绘制专属天盘运行图，掌握命运格局。',
+            '周期解读：拆解关键周期与可操作时机。',
+            '策略讲解：一对一说明，直接告诉你怎么做、何时动。',
+            '行动方案：交付时间、方向与决策顺序的专属规划。'
           ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '关键阶段的最佳助手',
+          title: '给不愿盲走的决策者',
+          imageLabel: '关键抉择的领导团队',
+          body: '适合正处于高风险转折或重大时间节点的人。',
+          points: [
+            '正在做战略抉择的管理者与企业家。',
+            '关注周期转势的投资人。',
+            '准备转型或跃迁的职场精英。',
+            '感知变化、想提前布局的行动派。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '结果与价值',
+          dividerSubtitle: '带走的不是预测',
+          title: '掌握时间主导权',
+          imageLabel: '时间编码决策图',
+          body: '你得到的是一份时间战略图——清楚列出机会、挑战与拐点，帮助你提前布局、主动出击。《乾坤太乙策》让你掌握时间的主动权，不再被命运推着走，而是亲自掌舵未来。'
         }
       ],
       cta: {
-        dividerTitle: '启动太乙战略',
-        dividerSubtitle: '席位按月限量',
-        title: '预约乾坤太乙策',
-        message: '提交任务目标与时程，我们将在 48 小时内确认档期与准备事项。',
-        primaryLabel: '预约太乙咨询',
+        dividerTitle: '想掌握先机、洞察未见？',
+        dividerSubtitle: '预约你的太乙推演窗口',
+        title: '开启乾坤太乙策推演',
+        message: '点击预约专属推演，解锁隐藏的时间节奏与布局策略。',
+        primaryLabel: '开启乾坤太乙策推演',
         primaryHref: '/contact'
       },
-      newsletterTitle: '太乙情报',
-      newsletterSubtitle: '提前掌握周期提醒、方位提示与仪式建议。'
+      newsletterTitle: '太乙策略情报',
+      newsletterSubtitle: '掌握时间节奏、周期提醒与决策指令。'
     },
     sixRen: {
-      badge: '帝师神数',
-      title: '六壬神机战策',
-      subtitle: '以六壬神机快速获取可执行的战术情报。',
+      badge: '帝师预策',
+      title: '六壬天机策',
+      subtitle: '预见未发之机。',
       sections: [
         {
           key: 'overview',
-          dividerTitle: '占策焦点',
-          dividerSubtitle: '掌握进退',
-          title: '六壬战术情报',
-          imageLabel: '六壬盘局示意',
-          body: '六壬揭示助力、隐藏风险与动能方向，帮助你在关键时刻做出明确决定。',
+          dividerTitle: '服务概述',
+          dividerSubtitle: '以时间掌控局势',
+          title: '古法先见，为当下决策而生',
+          imageLabel: '六壬天盘策略图',
+          body: '《六壬天机策》源自《六壬神数》，古代将相以此“未战先知”，把握局势、先人一步。它解析天时、人事与环境的互动，让你在变化来临前洞察关键节点、识别风险并作出最佳选择。这不是算命，而是一套以时间为武器的战略体系。'
+        },
+        {
+          key: 'insight',
+          dividerTitle: '六壬能揭示什么',
+          dividerSubtitle: '混乱背后的结构',
+          title: '看懂命运的隐形布局',
+          imageLabel: '隐性动能洞察板',
+          body: '六壬揭示的是时机、选择与命运交织的结构，让你不再盲行。',
           points: [
-            '快速适用于谈判、出行、危机应对等战术决策。',
-            '解析天地人三盘，高速辨认助力与阻力。',
-            '可与奇门、八字交叉验证，强化宜／忌指示。'
+            '行动时机：何时宜动、何时宜守、何时转向。',
+            '潜在影响：谁或什么在暗中左右局势。',
+            '风险信号：危机爆发前的能量预警。',
+            '隐藏机会：原本无形却能撬动格局的突破口。'
           ]
         },
         {
-          key: 'playbook',
-          dividerTitle: '行动手册',
-          dividerSubtitle: '从占策到执行',
-          title: '进攻・防守・转向',
-          imageLabel: '六壬策略板',
-          body: '每次占策都会附上具体的立即行动建议。',
+          key: 'method',
+          dividerTitle: '推演原理',
+          dividerSubtitle: '天·地·人三才同参',
+          title: '读懂动态时间棋局',
+          imageLabel: '六壬气机共振图',
+          body: '在六壬视角下，万事万物是一张随时间、气机而变化的棋盘。通过推演天时（时间节奏）、地势（环境格局）与人应（决策行动），找出成败转化的关键瞬间。',
           points: [
-            '明确指示：宜进、宜守或宜转向。',
-            '配套仪式与方位调整，化解敌对能量。',
-            '若情势突变，提供应变路径。'
+            '掌握当下局势的全景视角。',
+            '提前预判未来走势的强弱变化。',
+            '以时间为轴制定行动策略，让每一步都顺势而为。'
           ]
         },
         {
-          key: 'support',
-          dividerTitle: '支持与追踪',
-          dividerSubtitle: '保持灵活',
-          title: '行动后的护航',
-          imageLabel: '六壬追踪包',
-          body: '提供摘要、追踪档期与仪式支持，确保决策持续稳定。',
+          key: 'process',
+          dividerTitle: '服务流程',
+          dividerSubtitle: '从洞察到执行',
+          title: '五个阶段完成六壬推演',
+          imageLabel: '六壬咨询流程图',
+          body: '严谨流程让玄学洞察转化为具备可执行性的战略建议。',
           points: [
-            '提供简报摘要，方便团队流转。',
-            '情势变动时，可安排追加占策。',
-            '提供随行仪式与方位提示，守住行动成果。'
+            '初步沟通：厘清处境与核心目标。',
+            '局势绘制：梳理时间节奏、能量走势与权势结构。',
+            '周期解读：识别上升期、冲突期与突破窗口。',
+            '咨询说明：一对一说明，用通俗语言呈现复杂局面。',
+            '策略蓝图：交付含时间维度的行动计划。'
           ]
+        },
+        {
+          key: 'audience',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '关键抉择者的工具',
+          title: '给站在十字路口的你',
+          imageLabel: '关键决策的领导团队',
+          body: '适合身处关键阶段、需要时间先见与节奏掌控的人。',
+          points: [
+            '筹划扩张或投资的创业者。',
+            '面对竞争与变局的管理者。',
+            '正在进行重大职业抉择的专业人士。',
+            '想跳出盲点、掌握命运节奏的个人。'
+          ]
+        },
+        {
+          key: 'outcome',
+          dividerTitle: '结果与价值',
+          dividerSubtitle: '带走的是真正的掌控力',
+          title: '在对的时间做对的事',
+          imageLabel: '隐形动能战略图',
+          body: '你得到的是一份清晰的战略视角：看见隐藏的力量，提前布局，危机未起先化，机会未显先动。《六壬天机策》让努力与天时同步，让决定更有方向感。'
         }
       ],
       cta: {
-        dividerTitle: '掌握六壬神机',
-        dividerSubtitle: '战术席次限量',
-        title: '预约六壬占策',
-        message: '告知战术背景，我们将在 24 小时内回覆可用时段与准备清单。',
-        primaryLabel: '开启六壬咨询',
+        dividerTitle: '想看懂命运的隐藏布局？',
+        dividerSubtitle: '预约你的六壬推演',
+        title: '开启六壬天机策推演',
+        message: '点击开启专属推演，掌握变化节奏，先人一步布局。',
+        primaryLabel: '开启六壬天机策推演',
         primaryHref: '/contact'
       },
-      newsletterTitle: '六壬快讯',
-      newsletterSubtitle: '及时获取方位、护佑与冲煞提醒。'
+      newsletterTitle: '六壬先见情报',
+      newsletterSubtitle: '掌握能量变化、时间提醒与战略指导。'
     },
     mmSoul: {
       badge: '磁场矩阵',

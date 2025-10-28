@@ -1,8 +1,9 @@
 import type { Locale } from '@/lib/i18n'
 
-type QA = { enQ: string; cnQ: string; enA: string; cnA: string }
+type DefaultQA = { enQ: string; cnQ: string; enA: string; cnA: string }
+type CustomQA = { question: string; answer: string }
 
-const ITEMS: QA[] = [
+const DEFAULT_ITEMS: DefaultQA[] = [
   {
     enQ: 'What is Bazi Astrology?',
     cnQ: '什么是八字命理？',
@@ -41,23 +42,39 @@ const ITEMS: QA[] = [
   },
 ]
 
-export default function FAQ({ locale = 'EN' as Locale }){
+interface FAQProps {
+  locale?: Locale
+  items?: CustomQA[]
+}
+
+export default function FAQ({ locale = 'EN' as Locale, items }: FAQProps){
   const isEN = locale === 'EN'
+
+  const resolved = items
+    ? items
+    : DEFAULT_ITEMS.map((item) => ({
+        question: isEN ? item.enQ : item.cnQ,
+        answer: isEN ? item.enA : item.cnA
+      }))
+
   return (
     <section id="faq" className="container">
       <div className="grid gap-6 md:grid-cols-2">
-        {ITEMS.map((item, i) => (
-          <details key={i} className="rounded-2xl border border-white/10 bg-black/20 p-4 md:p-5 backdrop-blur-xl open:bg-black/25">
+        {resolved.map((item, i) => (
+          <details
+            key={i}
+            className="rounded-2xl border border-white/10 bg-black/20 p-4 md:p-5 backdrop-blur-xl open:bg-black/25"
+          >
             <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
               <h4 className="font-semibold text-base md:text-lg text-white">
-                {isEN ? item.enQ : item.cnQ}
+                {item.question}
               </h4>
               <span className="shrink-0 mt-0.5 rounded-md border border-white/15 px-2 text-xs text-white/70">
                 {isEN ? 'Expand' : '展开'}
               </span>
             </summary>
             <div className="mt-3 text-sm text-white/80 leading-relaxed">
-              {isEN ? item.enA : item.cnA}
+              {item.answer}
             </div>
           </details>
         ))}
@@ -65,4 +82,3 @@ export default function FAQ({ locale = 'EN' as Locale }){
     </section>
   )
 }
-

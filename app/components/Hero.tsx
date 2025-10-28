@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react'
+import Link from 'next/link'
+import { Children, type ReactNode } from 'react'
 
 interface HeroProps {
   title?: string
@@ -8,6 +9,7 @@ interface HeroProps {
   actions?: ReactNode
   children?: ReactNode
   className?: string
+  locale?: Locale
   fullBleed?: boolean
   bannerSrc?: string
   bannerOpacity?: number // 0..1, default 0.2 when bannerSrc provided
@@ -16,9 +18,50 @@ interface HeroProps {
   noPaddingY?: boolean // remove top/bottom padding for edge-to-edge banner
   overlayOpacity?: number // 0..1, optional dark overlay above banner image (default 0)
   titlePanel?: boolean // wrap title in gradient panel
+  showDefaultCta?: boolean // toggle default CTA rendering
+  ctaLabel?: string
+  ctaHref?: string
+  ctaPrefetch?: boolean
 }
 
-export default function Hero({ title, sub, eyebrow, description, actions, children, className, fullBleed, bannerSrc, bannerOpacity, fullHeight, minVh, noPaddingY, overlayOpacity, titlePanel }: HeroProps){
+import type { Locale } from '@/lib/i18n'
+
+const CTA_LABELS: Partial<Record<Locale, string>> = {
+  EN: 'Contact Our Professionals',
+  CN: '联系专业顾问'
+} as const
+
+function resolveLocaleHref(locale: Locale, href?: string | null){
+  if (!href) return `/${locale}/contact`
+  if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return href
+  if (href === '/') return `/${locale}`
+  if (href.startsWith(`/${locale}/`) || href === `/${locale}`) return href
+  if (href.startsWith('/')) return `/${locale}${href}`
+  return `/${locale}/${href}`
+}
+
+export default function Hero({
+  title,
+  sub,
+  eyebrow,
+  description,
+  actions,
+  children,
+  className,
+  fullBleed,
+  bannerSrc,
+  bannerOpacity,
+  fullHeight,
+  minVh,
+  noPaddingY,
+  overlayOpacity,
+  titlePanel,
+  locale,
+  showDefaultCta = true,
+  ctaLabel,
+  ctaHref,
+  ctaPrefetch
+}: HeroProps){
   const pad = noPaddingY ? 'px-8 md:px-12 py-0' : 'p-8 md:p-12'
   const base = `relative overflow-hidden ${pad}`
   const framed = 'rounded-3xl border border-white/10 shadow-soft-xl'
@@ -32,6 +75,39 @@ export default function Hero({ title, sub, eyebrow, description, actions, childr
     border: '1px solid rgba(240,198,102,0.6)',
     backdropFilter: 'blur(24px)'
   } as const
+  const resolvedLocale = (locale ?? 'EN') as Locale
+  const defaultCtaLabel = ctaLabel ?? CTA_LABELS[resolvedLocale] ?? CTA_LABELS.EN
+  const resolvedHref = resolveLocaleHref(resolvedLocale, ctaHref)
+  const isExternal = resolvedHref.startsWith('http') || resolvedHref.startsWith('mailto:') || resolvedHref.startsWith('tel:')
+  const isAnchor = resolvedHref.startsWith('#')
+
+  const customActions = Children.toArray(actions ?? null)
+  if (showDefaultCta){
+    const buttonClass =
+      'inline-flex items-center justify-center rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110'
+    const defaultAction = isExternal || isAnchor ? (
+      <a key="hero-default-cta" href={resolvedHref} className={buttonClass}>
+        {defaultCtaLabel}
+      </a>
+    ) : (
+      <Link
+        key="hero-default-cta"
+        href={resolvedHref}
+        prefetch={ctaPrefetch ?? false}
+        className={buttonClass}
+      >
+        {defaultCtaLabel}
+      </Link>
+    )
+    customActions.push(defaultAction)
+  }
+
+  const actionsContent = customActions.length ? (
+    <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
+      {customActions}
+    </div>
+  ) : null
+
   const renderTitle = () => {
     if (!title) return null
     const heading = <h1 className="title-gradient text-3xl md:text-5xl font-semibold leading-tight pb-[10px]">{title}</h1>
@@ -57,7 +133,7 @@ export default function Hero({ title, sub, eyebrow, description, actions, childr
         {renderTitle()}
         {sub ? <p className="text-lg text-white/70 md:max-w-2xl">{sub}</p> : null}
         {description ? <p className="text-base text-white/60 md:max-w-3xl">{description}</p> : null}
-        {actions ? <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">{actions}</div> : null}
+        {actionsContent}
       </div>
       {children ? <div className="relative z-10 mt-6 md:mt-8">{children}</div> : null}
     </section>

@@ -38,6 +38,8 @@ export default function Page({ params }: { params: { locale: Locale } }) {
         title={dict.brand_bottom ?? 'Metaphysics Alliance'}
         sub={dict.why_long}
         titlePanel
+        locale={locale}
+        showDefaultCta={false}
       />
 
       <Content

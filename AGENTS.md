@@ -174,3 +174,34 @@ Work Log (for resume)
 - MA-TAIYI-CTA-BUTTON-2025-10-22T23:08:01+08:00: Restored the Celestial CTA block in the Vite stack with bilingual Tai Yi buttons to match the shared service metadata.
 - MA-FSHOME-LANG-FIX-2025-10-22T23:23:48+08:00: Corrected the Home Destiny Compass service data split so EN renders English copy and CN retains the Mandarin set across both stacks.
 - MA-MATPLOTLIB-REMOVAL-2025-10-20T11:00:00+08:00: Replaced all occurrences of "Matplotlib" with a professional term in the website content.
+- MA-TAIYI-CN-SYNC-2025-10-20T12:00:00+08:00: Synced the Chinese content of the Cosmic Tai Yi Strategy page with the English version.
+- MA-TAIYI-HEADER-MONOLINGUAL-2025-10-20T13:00:00+08:00: Made the section headers on the Cosmic Tai Yi Strategy page monolingual.
+- MA-TAIYI-CONTENT-MONOLINGUAL-2025-10-20T14:00:00+08:00: Made the content of the Cosmic Tai Yi Strategy page monolingual.
+- MA-SIX-REN-PAGE-CREATION-2025-10-20T15:00:00+08:00: Created the Mystical Mechanism of Six Ren page and added it to the navigation.
+- MA-FIX-NAV-SYNTAX-2025-10-20T15:30:00+08:00: Fixed syntax errors in the navigation object in dictionary.js.
+- MA-FIX-CELESTIAL-SYNTAX-2025-10-20T16:00:00+08:00: Fixed syntax errors in celestialContent.js.
+- MA-FIX-CELESTIAL-SYNTAX-AGAIN-2025-10-20T16:30:00+08:00: Fixed syntax errors in celestialContent.js again.
+- MA-SUPREME-CELESTIAL-REFRESH-2025-10-26T01:52:01+08:00: Rewrote Supreme Celestial Numbers Oracle content and CTA per the new design layout across both stacks.
+- MA-CONTACT-PRO-CTA-2025-10-27T12:07:25+08:00: Updated Contact hero headline and Malaysia state label across Next/Vite forms to match new wording.
+- MA-CONTACT-PRO-HERO-2025-10-27T13:23:05+08:00: Synced the Vite contact hero copy to “Contact Our Professionals” so both stacks display the new main title.
+- MA-CEL-NUMBERS-CTA-SPLIT-2025-10-27T13:55:44+08:00: Localised Supreme Celestial Numbers CTA button labels so EN/CN render single-language text per navigation toggle.
+- MA-TAIYI-STRATEGY-REFRESH-2025-10-27T14:07:07+08:00: Rebuilt Celestial Tai Yi Strategy content and CTA in both languages to match the new design layout.
+- MA-SIX-REN-STRATEGY-2025-10-27T14:21:16+08:00: Reauthored the Six Ren strategy page copy and CTA in EN/CN following the latest design layout.
+- MA-CORPORATE-DESTINY-REFRESH-2025-10-27T14:42:01+08:00: Rebuilt Corporate Destiny Intelligence content and CTA in both languages per the new enterprise design brief.
+- MA-SITE-STRATEGY-REFRESH-2025-10-27T14:57:01+08:00: Updated Enterprise Site Strategy copy, sections, and CTA in EN/CN to align with the new selection blueprint.
+- MA-STRATEGY-CYCLE-REFRESH-2025-10-27T15:07:47+08:00: refreshed Strategy & Cycle Intelligence narrative, flow, and CTA for both locales.
+- MA-ESSENTIAL-BLUEPRINT-REFRESH-2025-10-27T15:56:27+08:00: Updated Essential Destiny Blueprint tier copy and Vite route messaging per new blueprint design.
+- MA-ADVANCED-BLUEPRINT-REFRESH-2025-10-27T16:40:25+08:00: Rebuilt Advanced Destiny Blueprint content, routes, and homepage bullets/links for the new consultation structure.
+- MA-SUPREME-BLUEPRINT-REFRESH-2025-10-27T17:02:28+08:00: Rebuilt Supreme Destiny Blueprint content, routes, and homepage tier details to match the new full-holographic design.
+- MA-SUPREME-BLUEPRINT-OUTCOME-2025-10-27T17:31:03+08:00: Synced Supreme Destiny Blueprint How It Works and Outcome copy with the latest doc structure across EN/CN.
+- MA-ACADEMY-COURSE-OVERVIEW-2025-10-27T18:46:29+08:00: Designed the bilingual Academy course overview pages with the new mastery pathway structure across Next and Vite stacks.
+- MA-HERO-GLOBAL-CTA-2025-10-27T22:16:33+08:00: Added matching hero/banner CTA buttons (excluding home/about/contact) using each page’s primary CTA copy across both stacks.
+- MA-ACADEMY-MENU-REALIGN-2025-10-27T23:18:43+08:00: Reordered Academy navigation to courses → foundation → beginner → advanced → professional and removed calendar links across both stacks.
+- MA-ACADEMY-FOUNDATION-DESIGN-2025-10-27T23:37:55+08:00: Built a bilingual Chinese Metaphysics Foundation page with hero CTAs, structured sections, and mirrored Vite routing/components.
+- MA-ACADEMY-FOUNDATION-FAQ-2025-10-27T23:41:18+08:00: Replaced the map section with a dedicated FAQ block for the Foundation course and mirrored it in the SPA detail page.
+- MA-ACADEMY-FOUNDATION-FAQ-REFINE-2025-10-28T00:32:49+08:00: Removed duplicate FAQ renders and replaced with Foundation-specific Q&A in both EN/CN dictionaries and layouts.
+- MA-ACADEMY-FAQ-RELOCATION-2025-10-28T01:05:00+08:00: Shifted the Foundation FAQ onto the Academy Courses overview and stripped the redundant detail-page rendering across both stacks.
+- MA-ACADEMY-BEGINNER-REDESIGN-2025-10-28T01:45:00+08:00: Rebuilt the Beginner course content (EN/CN) from the new layout, updated Next/Vite pages, and aligned hero/CTA actions.
+- MA-ACADEMY-INTERMEDIATE-REDESIGN-2025-10-28T02:20:00+08:00: Authored the Advanced Course content in EN/CN, updated Next/Vite routes, and synced hero plus CTA structure with the new integration blueprint.
+- MA-ACADEMY-PROFESSIONAL-REDESIGN-2025-10-28T02:55:00+08:00: Delivered the professional certification course copy (EN/CN), rebuilt the Next/Vite pages, and wired the hero/CTA flows to the shared dictionary.
+ - MA-NEXT-BUILD-HERO-FIX-2025-10-28T03:20:00+08:00: Replaced missing Banner import with Hero in app/components/CelestialServicePage.tsx to restore Next build.

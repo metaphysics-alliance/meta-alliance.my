@@ -1,7 +1,7 @@
 // src/components/FAQ.jsx
 import { useI18n } from '../i18n.jsx'
 
-const QA = [
+const DEFAULT_QA = [
   {
     enQ: 'What is Bazi Astrology?',
     cnQ: '什么是八字命理？',
@@ -58,28 +58,35 @@ const QA = [
   },
 ]
 
-export default function FAQ(){
+export default function FAQ({ items }){
   const { lang } = useI18n()
   const isEN = lang === 'EN'
+
+  const resolved = Array.isArray(items) && items.length
+    ? items
+    : DEFAULT_QA.map((item) => ({
+        question: isEN ? item.enQ : item.cnQ,
+        answer: isEN ? item.enA : item.cnA
+      }))
 
   return (
     <section id="faq" className="container py-12">
       <div className="grid md:grid-cols-2 gap-6">
-        {QA.map((item, i) => (
+        {resolved.map((item, i) => (
           <details
             key={i}
             className="group card-3d p-4 md:p-5"
           >
             <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
               <h4 className="font-semibold text-base md:text-lg">
-                {isEN ? item.enQ : item.cnQ}
+                {item.question}
               </h4>
               <span className="shrink-0 mt-0.5 rounded-md border border-white/15 px-2 text-xs text-white/70 group-open:bg-white/10">
                 {isEN ? 'Expand' : '展开'}
               </span>
             </summary>
             <div className="mt-3 text-sm text-white/80 leading-relaxed">
-              {isEN ? item.enA : item.cnA}
+              {item.answer}
             </div>
           </details>
         ))}
