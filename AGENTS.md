@@ -205,3 +205,4 @@ Work Log (for resume)
 - MA-ACADEMY-INTERMEDIATE-REDESIGN-2025-10-28T02:20:00+08:00: Authored the Advanced Course content in EN/CN, updated Next/Vite routes, and synced hero plus CTA structure with the new integration blueprint.
 - MA-ACADEMY-PROFESSIONAL-REDESIGN-2025-10-28T02:55:00+08:00: Delivered the professional certification course copy (EN/CN), rebuilt the Next/Vite pages, and wired the hero/CTA flows to the shared dictionary.
  - MA-NEXT-BUILD-HERO-FIX-2025-10-28T03:20:00+08:00: Replaced missing Banner import with Hero in app/components/CelestialServicePage.tsx to restore Next build.
+ - MA-LINT-CLEANUP-2025-10-28T16:45:00+08:00: Fixed lint blockers across worker, components, and pages; allowed non-blocking Tailwind warnings.

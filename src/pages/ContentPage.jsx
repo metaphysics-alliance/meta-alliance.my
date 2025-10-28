@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner.jsx';
 

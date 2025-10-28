@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import AboutPage from '../pages/AboutPage.jsx'
 import AcademyCourseDetail from '../pages/AcademyCourseDetail.jsx'
 import AcademyCoursesPage from '../pages/AcademyCoursesPage.jsx'

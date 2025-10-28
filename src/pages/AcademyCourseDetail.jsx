@@ -1,8 +1,8 @@
+/* eslint-disable import/order */
 import { Link } from 'react-router-dom';
-
+import { useI18n } from '../i18n.jsx';
 import Banner from '../components/Banner.jsx';
 import SectionDivider from '../components/SectionDivider.jsx';
-import { useI18n } from '../i18n.jsx';
 
 const PRIMARY_CLASS =
   'inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110';
@@ -10,7 +10,7 @@ const SECONDARY_CLASS =
   'inline-flex items-center justify-center rounded-lg border border-gold/50 px-6 py-2.5 text-sm font-semibold text-gold transition hover:bg-gold/10';
 
 export default function AcademyCourseDetail({ courseKey = 'academyFoundation' }){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const course = t(courseKey) || {};
   const hero = course.hero || {};
   const sections = Array.isArray(course.sections) ? course.sections : [];

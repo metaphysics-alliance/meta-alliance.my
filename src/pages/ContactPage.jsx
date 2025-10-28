@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Banner from '../components/Banner.jsx';
 import { Link } from 'react-router-dom'
 import ContactForm from '../components/ContactForm.jsx'
@@ -11,9 +12,7 @@ import { useI18n } from '../i18n.jsx'
 import FAQ from '../components/FAQ.jsx'
 
 export default function ContactPage(){
-  const { lang, t } = useI18n()
-
-  const title = t('nav.contact') || (lang === 'CN' ? '联系我们' : 'Contact')
+  const { lang } = useI18n()
   const heroTitle = lang === 'CN' ? '联系我们' : 'Contact Our Professionals'
   const heroSub = lang === 'CN' ? '我们如何帮助您达成目标' : 'Real guidance. Fast reply. No bots.'
   const heroDesc = lang === 'CN'

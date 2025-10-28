@@ -26,6 +26,7 @@ type Payload = {
   locale?: string
   hp?: string
   recaptchaToken?: string
+  turnstileToken?: string
 }
 
 const corsHeaders = {
@@ -71,13 +72,13 @@ export default {
       let verified = false
       // Prefer Turnstile if token present
       if (!verified && env.TURNSTILE_SECRET && data.recaptchaToken == null) {
-        verified = await verifyTurnstile(env.TURNSTILE_SECRET, (data as any).turnstileToken || '', ip)
+        verified = await verifyTurnstile(env.TURNSTILE_SECRET, data.turnstileToken || '', ip)
       }
       if (!verified && env.RECAPTCHA_SECRET) {
         verified = await verifyRecaptcha(env.RECAPTCHA_SECRET, data.recaptchaToken || '', ip)
       }
       if (!verified && env.TURNSTILE_SECRET) {
-        verified = await verifyTurnstile(env.TURNSTILE_SECRET, (data as any).turnstileToken || '', ip)
+        verified = await verifyTurnstile(env.TURNSTILE_SECRET, data.turnstileToken || '', ip)
       }
       if (!verified) return json({ error: 'Captcha failed' }, 400)
     }
@@ -126,9 +127,10 @@ async function verifyRecaptcha(secret: string, token: string, ip: string | null)
       body: params,
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
     })
-    const json = await resp.json<any>()
-    if (!json.success) return false
-    if (typeof json.score === 'number' && json.score < 0.5) return false
+    const jsonData: unknown = await resp.json()
+    const result = jsonData as { success?: boolean, score?: number }
+    if (!result.success) return false
+    if (typeof result.score === 'number' && result.score < 0.5) return false
     return true
   } catch {
     return false
@@ -146,8 +148,9 @@ async function verifyTurnstile(secret: string, token: string, ip: string | null)
       method: 'POST',
       body: form,
     })
-    const json = await resp.json<any>()
-    return !!json.success
+    const jsonData: unknown = await resp.json()
+    const result = jsonData as { success?: boolean }
+    return !!result.success
   } catch {
     return false
   }

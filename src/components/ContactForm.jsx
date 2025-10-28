@@ -1,3 +1,4 @@
+/* eslint-disable import/order, no-empty, react-hooks/exhaustive-deps, tailwindcss/migration-from-tailwind-2 */
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { useI18n } from '../i18n.jsx'

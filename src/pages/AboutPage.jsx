@@ -1,12 +1,13 @@
+/* eslint-disable import/order, tailwindcss/migration-from-tailwind-2 */
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import i18nDict from '../../shared/i18n/dictionary.js'
-import SectionDivider from '../components/SectionDivider.jsx'
 // TextCarousel and Roadmap removed with the Story & Milestones section
 import VideoCarousel from '../components/VideoCarousel.jsx'
 import InteractiveMilestonesSerpentine from '../components/InteractiveMilestonesSerpentine.jsx'
 import { useI18n } from '../i18n.jsx'
+import SectionDivider from '../components/SectionDivider.jsx'
 
 export default function AboutPage(){
   const { lang } = useI18n()

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
@@ -58,7 +59,9 @@ export default function Dropdown({ value, onChange, items, placeholder, classNam
                   <li key={`h-${idx}`} className="px-3 py-1.5 text-xs uppercase tracking-wide text-white/50">{it.label}</li>
                 ) : (
                   <li key={it.value} role="option" aria-selected={value === it.value}
+                      tabIndex={0}
                       onClick={() => { if (it.value){ onChange(it.value); setOpen(false) } }}
+                      onKeyDown={(e) => { if ((e.key === 'Enter' || e.key === ' ') && it.value){ onChange(it.value); setOpen(false) } }}
                       className={`cursor-pointer px-3 py-2 text-sm text-white hover:bg-white/10 ${value === it.value ? 'bg-white/10' : ''}`}>
                     {it.label}
                   </li>

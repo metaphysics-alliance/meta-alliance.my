@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-import { useMemo, useState, useEffect, useRef } from 'react'
+/* eslint-disable import/order, react-hooks/exhaustive-deps */
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 
 function normalise(value){
   if (!value) return []

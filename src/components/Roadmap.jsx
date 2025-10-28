@@ -46,7 +46,7 @@ export default function Roadmap({ items = [] }){
             const Ico = (m && m.icon && IconMap[m.icon]) || fallbackIcons[i % fallbackIcons.length]
             return (
               <div key={i} className="flex items-center gap-6">
-                <div className="w-72 max-w-[18rem] shrink-0 rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md">
+                <div className="w-72 max-w-72 shrink-0 rounded-2xl border border-white/10 bg-black/30 p-5 backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-semibold text-black ring-2 ring-black">
                       {i + 1}

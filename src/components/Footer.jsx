@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLemon, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa6'
 import { SiTiktok } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 

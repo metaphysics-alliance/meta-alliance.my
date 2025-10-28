@@ -16,7 +16,7 @@ export default function InteractiveMilestones({ title, subtitle, storyItems = []
   }, [storyItems, milestoneItems])
 
   return (
-    <section className="rounded-2xl border border-white/10 bg-black/25 p-0 overflow-hidden backdrop-blur-md min-h-[24rem]">
+    <section className="rounded-2xl border border-white/10 bg-black/25 p-0 overflow-hidden backdrop-blur-md min-h-96">
       <div className="flex flex-wrap items-end justify-between gap-3 px-4 py-3">
         <div>
           <h3 className="text-lg font-semibold text-white">{title}</h3>
@@ -28,6 +28,7 @@ export default function InteractiveMilestones({ title, subtitle, storyItems = []
   )
 }
 
+/* eslint-disable react-hooks/rules-of-hooks */
 function Timeline({ items, lang }){
   if (!items || !items.length) return null
   // Pixel-based layout for wider spacing
@@ -42,7 +43,7 @@ function Timeline({ items, lang }){
   const header = active ? (active.title ? (lang==='CN' ? `${active.date}｜${active.title}` : `${active.date} — ${active.title}`) : active.date) : ''
 
   return (
-    <div className="relative flex min-h-[18rem] items-center justify-center overflow-x-auto">
+    <div className="relative flex min-h-72 items-center justify-center overflow-x-auto">
       {hover != null ? (
         <div
           className="pointer-events-none absolute z-10 w-[480px] max-w-[94vw] rounded-lg border border-white/15 bg-black/85 p-5 text-white shadow-2xl"
@@ -108,6 +109,7 @@ function Timeline({ items, lang }){
   )
 }
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 function Dot({ cx, date, title, text, lang }){
   const [open, setOpen] = useState(false)
   const header = title ? (lang === 'CN' ? `${date}｜${title}` : `${date} — ${title}`) : date

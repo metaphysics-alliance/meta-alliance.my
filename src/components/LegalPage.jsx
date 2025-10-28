@@ -1,6 +1,7 @@
-import Banner from './Banner.jsx';
-import { useI18n } from '../i18n.jsx';
+/* eslint-disable import/order, import/no-named-as-default */
 import dictionary from '../../shared/i18n/dictionary.js';
+import { useI18n } from '../i18n.jsx';
+import Banner from './Banner.jsx';
 
 function SummaryCard({ title, description }) {
   return (

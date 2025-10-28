@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
+/* eslint-disable import/order */
 import { Link } from 'react-router-dom';
-
+import { useI18n } from '../i18n.jsx';
 import Banner from '../components/Banner.jsx';
 import SectionDivider from '../components/SectionDivider.jsx';
-import { useI18n } from '../i18n.jsx';
 
 const noopArray = [];
 
 export default function AcademyCoursesPage() {
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const overview = t('academyOverview') || {};
   const foundation = t('academyFoundation') || {};
   const sections = Array.isArray(overview.sections) ? overview.sections : noopArray;
@@ -26,10 +26,10 @@ export default function AcademyCoursesPage() {
 
       <div className="space-y-16">
         {sections.map((section) => (
-          <SectionBlock key={section.key ?? section.dividerTitle ?? section.title} section={section} lang={lang} />
+          <SectionBlock key={section.key ?? section.dividerTitle ?? section.title} section={section} />
         ))}
 
-        {foundationFaq.length ? <FoundationFaq items={foundationFaq} lang={lang} /> : null}
+        {foundationFaq.length ? <FoundationFaq items={foundationFaq} lang={overview.lang} /> : null}
 
         {overview.cta ? <CtaBlock cta={overview.cta} /> : null}
       </div>
@@ -37,8 +37,8 @@ export default function AcademyCoursesPage() {
   );
 }
 
-function FoundationFaq({ items, lang }) {
-  const isEN = lang === 'EN';
+function FoundationFaq({ items, lang: _lang }) {
+  const isEN = _lang === 'EN';
   return (
     <section className="space-y-6">
       <SectionDivider
@@ -65,7 +65,7 @@ function FoundationFaq({ items, lang }) {
   );
 }
 
-function SectionBlock({ section, lang }) {
+function SectionBlock({ section }) {
   const title = section.dividerTitle || section.title || '';
   const subtitle = section.dividerSubtitle || '';
 
@@ -73,13 +73,13 @@ function SectionBlock({ section, lang }) {
     <section className="space-y-6">
       <SectionDivider title={title} subtitle={subtitle} />
       <div className="container">
-        {renderSectionContent(section, lang)}
+        {renderSectionContent(section)}
       </div>
     </section>
   );
 }
 
-function renderSectionContent(section, lang) {
+function renderSectionContent(section) {
   const type = section.type || 'text';
 
   if (type === 'levels') {
@@ -90,7 +90,7 @@ function renderSectionContent(section, lang) {
         {section.intro ? <p className="text-white/70 md:text-lg">{section.intro}</p> : null}
         <div className="grid gap-6 md:grid-cols-2">
           {levels.map((level) => (
-            <LevelCard key={level.key ?? level.title} level={level} lang={lang} />
+            <LevelCard key={level.key ?? level.title} level={level} />
           ))}
         </div>
       </div>
@@ -146,7 +146,7 @@ function renderSectionContent(section, lang) {
   );
 }
 
-function LevelCard({ level, lang }) {
+function LevelCard({ level }) {
   const href = resolveCourseHref(level.slug);
   const anchorId = level.anchor || undefined;
 

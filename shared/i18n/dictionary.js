@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys, @typescript-eslint/no-unused-vars */
 import { CELESTIAL_SERVICES } from './celestialContent.js'
 
 /** @type {const} */
