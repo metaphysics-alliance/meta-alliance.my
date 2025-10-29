@@ -39,8 +39,8 @@ export const dictionary = {
       academy: 'Academy',
       courses: 'Courses Overview',
       foundation: 'Chinese Metaphysics Foundation',
-      beginner: 'Beginner',
-      advanced: 'Advanced',
+      beginner: 'Beginner Course',
+      advanced: 'Advanced Course',
       pro: 'Professional Certification',
       enterprise: 'Enterprise',
       audit: 'Corporate Destiny Intelligence',
@@ -137,6 +137,7 @@ export const dictionary = {
             dividerSubtitle: 'Strategic metaphysics for enterprise foresight',
             title: 'See the Energetic DNA of the Enterprise',
             imageLabel: 'Corporate destiny intelligence collage',
+            imageUrl: '/images/page-audit/audit-img-01.jpeg',
             body: `Corporate Destiny Intelligence is a strategic metaphysical assessment that reveals how a company’s energy structure, leadership rhythm and spatial environment align with the universal cycle of prosperity. By combining time, direction and human synergy, it exposes the unseen factors shaping growth, culture and wealth flow so leadership can realign for momentum and longevity.`
           },
           {
@@ -145,6 +146,7 @@ export const dictionary = {
             dividerSubtitle: 'The structure behind performance',
             title: 'Diagnose the Hidden Architecture of Success',
             imageLabel: 'Enterprise energy flow dashboard',
+            imageUrl: '/images/page-audit/audit-img-02.jpeg',
             body: 'Every company carries a destiny pattern—shaped by its founding moment, people and place.',
             points: [
               'Corporate Energy Flow: is the organisation in expansion, transition or rest?',
@@ -160,6 +162,7 @@ export const dictionary = {
             dividerSubtitle: 'Time · Space · People alignment',
             title: 'Map the Enterprise Against Cosmic Rhythm',
             imageLabel: 'Corporate timing matrix storyboard',
+            imageUrl: '/images/page-audit/audit-img-03.jpeg',
             body: 'We integrate corporate astrology, energy flow and strategic metaphysics to map founding data and operational cycles against cosmic timing, identifying when growth is supported and when caution is required.',
             points: [
               'Foundational analysis of the corporate destiny map.',
@@ -175,6 +178,7 @@ export const dictionary = {
             dividerSubtitle: 'From discovery to activation',
             title: 'Six Steps to Corporate Destiny Clarity',
             imageLabel: 'Corporate audit workflow board',
+            imageUrl: '/images/page-audit/audit-img-04.jpeg',
             body: 'A structured workflow turns energetic diagnostics into executive-ready intelligence.',
             points: [
               'Discovery Briefing – align on history, challenges and goals.',
@@ -191,6 +195,7 @@ export const dictionary = {
             dividerSubtitle: 'For leaders stewarding pivotal moves',
             title: 'Built for Founders, Boards and Investors',
             imageLabel: 'Enterprise leadership alignment briefing',
+            imageUrl: '/images/page-audit/audit-img-05.jpeg',
             body: 'Engineered for leadership teams who require timing clarity before executing major initiatives.',
             points: [
               'Companies preparing expansion, rebranding or market entry.',
@@ -205,6 +210,7 @@ export const dictionary = {
             dividerSubtitle: 'What you receive',
             title: 'A Strategic Map of Corporate Destiny',
             imageLabel: 'Corporate destiny cycle chart',
+            imageUrl: '/images/page-audit/audit-img-06.jpeg',
             body: 'You receive a clear visual of the enterprise destiny cycle—when to grow, consolidate or transform. Corporate Destiny Intelligence augments analytics with timing and energetic alignment so leadership acts in flow with time, not against it.'
           }
         ],
@@ -233,6 +239,7 @@ export const dictionary = {
             dividerSubtitle: '命格深度解读',
             title: '从认识到掌控的进阶蓝图',
             imageLabel: '进阶命运概览图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-01.jpeg',
             body: '《天机蓝图·进阶版》是一份超过 200 页的深度命运解析，整合八字、生命数字与姓名能量，揭示命格如何运作、何时转折，以及如何掌握人生节奏。'
           },
           {
@@ -241,6 +248,7 @@ export const dictionary = {
             dividerSubtitle: '命运系统全结构',
             title: '全面解构命格八大板块',
             imageLabel: '命运多层洞察面板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-02.jpeg',
             body: '蓝图揭示命运系统的更深层结构：',
             points: [
               '天赋潜能：挖掘隐藏能力与性格驱动力。',
@@ -259,7 +267,15 @@ export const dictionary = {
             dividerSubtitle: '结构与节奏共读',
             title: '三重系统交叉解码命运',
             imageLabel: '结构与节奏共振图',
-            body: '综合“八字五行”、“生命数字频率”与“姓名能量共振”，同时解析命的结构与运的节奏，让你看见命运的触发机制。'
+            imageUrl: '/images/page-360-advanced/360-adv-img-03.jpeg',
+            body: `服务通过整合“八字五行结构”、“生命数字频率”与“姓名能量共振”，绘制出你命运系统的多维运行蓝图。
+它揭示的不只是性格与倾向，更是命运的“触发机制”——什么时间、什么选择，会带来突破或阻力。
+报告让你既看懂“命的结构”，也理解“运的节奏”。`,
+            points: [
+              '对自身命格机制的全面认知；',
+              '对未来十年周期的前瞻规划；',
+              '一套能量与时运结合的可执行策略。'
+            ]
           },
           {
             key: 'process',
@@ -267,6 +283,7 @@ export const dictionary = {
             dividerSubtitle: '六步完成进阶蓝图',
             title: '从资料到专属策略',
             imageLabel: '进阶蓝图流程板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-04.jpeg',
             body: '严谨流程确保洞察落地：',
             points: [
               '资料收集：记录出生与姓名信息。',
@@ -283,6 +300,7 @@ export const dictionary = {
             dividerSubtitle: '关键转折的行动指南',
             title: '为准备升级的人而设',
             imageLabel: '进阶用户场景图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-05.jpeg',
             body: '适合正处重要阶段、需要掌控时间节奏的决策者：',
             points: [
               '准备重大转型或跨界发展的个人。',
@@ -297,6 +315,113 @@ export const dictionary = {
             dividerSubtitle: '一生可用的命运运行图',
             title: '让挑战化为节奏而非阻力',
             imageLabel: '命运运行蓝图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-06.jpeg',
+            body: '你将带走一份完整的命运运行图谱，知道自己是谁、节奏如何展开、下一步怎么走。当你掌握命运节奏，阻力会变节奏，人生会更从容。'
+          }
+        ],
+        faq: [
+          { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+          { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+          { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+          { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+        ],
+        cta: {
+          dividerTitle: '想深入解锁命运的隐藏结构？',
+          dividerSubtitle: '预约天机蓝图·进阶版',
+          title: '领取天机蓝图·进阶版',
+          message: '点击开启专属命运解析，掌握人生节奏。',
+          primaryLabel: '领取天机蓝图·进阶版',
+          primaryHref: '/contact'
+        }
+      },
+      advancedBlueprint: {
+        badge: '360全维度',
+        title: '天机蓝图·进阶版',
+        subtitle: '洞察命格结构 · 掌握人生天机。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '命格深度解读',
+            title: '从认识到掌控的进阶蓝图',
+            imageLabel: '进阶命运概览图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-01.jpeg',
+            body: '《天机蓝图·进阶版》是一份超过 200 页的深度命运解析，整合八字、生命数字与姓名能量，揭示命格如何运作、何时转折，以及如何掌握人生节奏。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '命运系统全结构',
+            title: '全面解构命格八大板块',
+            imageLabel: '命运多层洞察面板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-02.jpeg',
+            body: '蓝图揭示命运系统的更深层结构：',
+            points: [
+              '天赋潜能：挖掘隐藏能力与性格驱动力。',
+              '行业定位：锁定最契合五行能量的事业领域。',
+              '财富结构：看懂财富流入、积累、风险与止损位。',
+              '十年大运：提前预判长期周期的兴衰与转折。',
+              '生命数字：解析行为密码与成长课题。',
+              '能量场分析：捕捉健康、人际与效率的能量失衡。',
+              '姓名吉象：评估姓名与命格的共振度与优化建议。',
+              '实用化解：提供针对性调整方案与时机动作。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '结构与节奏共读',
+            title: '三重系统交叉解码命运',
+            imageLabel: '结构与节奏共振图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-03.jpeg',
+            body: `服务通过整合“八字五行结构”、“生命数字频率”与“姓名能量共振”，绘制出你命运系统的多维运行蓝图。
+它揭示的不只是性格与倾向，更是命运的“触发机制”——什么时间、什么选择，会带来突破或阻力。
+报告让你既看懂“命的结构”，也理解“运的节奏”。`,
+            points: [
+              '对自身命格机制的全面认知；',
+              '对未来十年周期的前瞻规划；',
+              '一套能量与时运结合的可执行策略。'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '六步完成进阶蓝图',
+            title: '从资料到专属策略',
+            imageLabel: '进阶蓝图流程板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-04.jpeg',
+            body: '严谨流程确保洞察落地：',
+            points: [
+              '资料收集：记录出生与姓名信息。',
+              '命盘分析：整合八字、数字与能量模型。',
+              '姓名共振评估：判断姓名与命格能量的合拍度。',
+              '周期预测：推演十年与流年节奏变化。',
+              '蓝图编制：产生 200+ 页深度报告。',
+              '解读咨询：一对一讲解与专属策略讨论。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '关键转折的行动指南',
+            title: '为准备升级的人而设',
+            imageLabel: '进阶用户场景图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-05.jpeg',
+            body: '适合正处重要阶段、需要掌控时间节奏的决策者：',
+            points: [
+              '准备重大转型或跨界发展的个人。',
+              '希望事业节奏与命格相辅相成的创业者。',
+              '追求长期布局与节奏掌控的专业人士。',
+              '想理解姓名能量如何影响命运的人。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '一生可用的命运运行图',
+            title: '让挑战化为节奏而非阻力',
+            imageLabel: '命运运行蓝图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-06.jpeg',
             body: '你将带走一份完整的命运运行图谱，知道自己是谁、节奏如何展开、下一步怎么走。当你掌握命运节奏，阻力会变节奏，人生会更从容。'
           }
         ],
@@ -326,6 +451,7 @@ export const dictionary = {
             dividerSubtitle: 'Deep-dive destiny mastery',
             title: 'Move from Awareness to Mastery',
             imageLabel: 'Advanced destiny overview panel',
+            imageUrl: '/images/page-360-advanced/360-adv-img-01.jpeg',
             body: `The Advanced Destiny Blueprint is a 200+ page personalised analysis that reveals how your destiny system operates. It integrates BaZi, numerology and name energy to expose your energetic structure, timing triggers and life cycles so you can steer with precision.`
           },
           {
@@ -334,6 +460,7 @@ export const dictionary = {
             dividerSubtitle: 'Multi-layered intelligence',
             title: 'Understand Every Layer of Your Destiny',
             imageLabel: 'Destiny layers insight board',
+            imageUrl: '/images/page-360-advanced/360-adv-img-02.jpeg',
             body: 'This blueprint goes beyond the foundation level to decode the mechanics behind your life pattern.',
             points: [
               'Talent & Core Potential: uncover hidden gifts shaping your natural abilities.',
@@ -352,6 +479,7 @@ export const dictionary = {
             dividerSubtitle: 'Structure and motion',
             title: 'Fuse Pattern, Frequency and Timing',
             imageLabel: 'Methodology resonance map',
+            imageUrl: '/images/page-360-advanced/360-adv-img-03.jpeg',
             body: 'We merge BaZi elemental logic, numerology frequency and name resonance to reveal who you are and how your destiny breathes.',
             points: [
               'Layered BaZi analysis showing elemental strengths, weaknesses and capacity.',
@@ -366,6 +494,7 @@ export const dictionary = {
             dividerSubtitle: 'From intake to decoding',
             title: 'Six Steps to an Advanced Blueprint',
             imageLabel: 'Advanced blueprint workflow',
+            imageUrl: '/images/page-360-advanced/360-adv-img-04.jpeg',
             body: 'A comprehensive workflow ensures insight transforms into strategy.',
             points: [
               'Personal Information Collection – gather precise birth and name data.',
@@ -382,6 +511,7 @@ export const dictionary = {
             dividerSubtitle: 'Designed for turning points',
             title: 'Built for Those Ready to Level Up',
             imageLabel: 'Advanced audience storyboard',
+            imageUrl: '/images/page-360-advanced/360-adv-img-05.jpeg',
             body: 'Perfect for individuals moving through major transitions or seeking mastery over timing.',
             points: [
               'Leaders planning significant personal or career pivots.',
@@ -396,6 +526,7 @@ export const dictionary = {
             dividerSubtitle: 'What you take away',
             title: 'A Time-Coded Master Plan',
             imageLabel: 'Destiny master plan map',
+            imageUrl: '/images/page-360-advanced/360-adv-img-06.jpeg',
             body: `You leave with a complete, time-coded roadmap that shows who you are, how your cycles unfold and how to move forward with power and precision. Challenges become rhythm—not resistance—once you understand your internal frequency.`
           }
         ],
@@ -422,82 +553,88 @@ export const dictionary = {
         title: 'Essential Destiny Blueprint',
         subtitle: 'Decode your destiny · begin the journey with clarity and confidence.',
         sections: [
-          {
-            key: 'overview',
-            dividerTitle: 'Overview',
-            dividerSubtitle: 'Foundational destiny blueprint',
-            title: 'Start with Strategic Self-Awareness',
-            imageLabel: 'Destiny blueprint overview panel',
-            body: `The Essential Destiny Blueprint is a 100+ page personalised analysis for people ready to understand their purpose, talents and timing. It combines BaZi, numerology and life-cycle intelligence so you can move with your inherent rhythm instead of fighting against it.`
-          },
-          {
-            key: 'insight',
-            dividerTitle: 'What It Reveals',
-            dividerSubtitle: 'Full-spectrum clarity',
-            title: 'See the Pattern Behind Who You Are',
-            imageLabel: 'Destiny insight board',
-            body: 'Your report delivers a holistic view of who you are and where your destiny leads.',
-            points: [
-              'Talent & Potential: uncover innate gifts and strengths that activate easily.',
-              'Career & Industry Alignment: identify roles, environments and industries that amplify your element mix.',
+        {
+          key: 'overview',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Foundational destiny blueprint',
+          title: 'Start with Strategic Self-Awareness',
+          imageLabel: 'Destiny blueprint overview panel',
+          imageUrl: '/images/page-360-essential/360-e-img-01.jpeg',
+          body: `The Essential Destiny Blueprint is a 100+ page personalised analysis for people ready to understand their purpose, talents and timing. It combines BaZi, numerology and life-cycle intelligence so you can move with your inherent rhythm instead of fighting against it.`
+        },
+        {
+          key: 'insight',
+          dividerTitle: 'What It Reveals',
+          dividerSubtitle: 'Full-spectrum clarity',
+          title: 'See the Pattern Behind Who You Are',
+          imageLabel: 'Destiny insight board',
+          imageUrl: '/images/page-360-essential/360-e-img-02.jpeg',
+          body: 'Your report delivers a holistic view of who you are and where your destiny leads.',
+          points: [
+            'Talent & Potential: uncover innate gifts and strengths that activate easily.',
+            'Career & Industry Alignment: identify roles, environments and industries that amplify your element mix.',
               'Wealth Dynamics: understand how you attract, manage and retain financial flow.',
               'Life Rhythm: map Ten-Year and Annual cycles so you can time moves with confidence.',
               'Numerology Insights: decode core life numbers for deeper self-understanding.',
               'Practical Adjustments: receive actionable remedies to balance weaknesses and unlock momentum.'
             ]
           },
-          {
-            key: 'method',
-            dividerTitle: 'How It Works',
-            dividerSubtitle: 'Metaphysics translated into strategy',
-            title: 'Connect Pattern, Timing and Action',
-            imageLabel: 'Methodology flow chart',
-            body: 'We transform ancient metaphysical formulas into clear, relatable guidance that you can apply immediately.',
-            points: [
-              'Five-element calibration that exposes your foundational energy pattern.',
-              'Ten-Year Luck Cycle and annual overlays showing when to accelerate, stabilise or pivot.',
+        {
+          key: 'method',
+          dividerTitle: 'How It Works',
+          dividerSubtitle: 'Metaphysics translated into strategy',
+          title: 'Connect Pattern, Timing and Action',
+          imageLabel: 'Methodology flow chart',
+          imageUrl: '/images/page-360-essential/360-e-img-03.jpeg',
+          body: 'We transform ancient metaphysical formulas into clear, relatable guidance that you can apply immediately.',
+          points: [
+            'Five-element calibration that exposes your foundational energy pattern.',
+            'Ten-Year Luck Cycle and annual overlays showing when to accelerate, stabilise or pivot.',
               'Personal strategy guidance that keeps decisions aligned with opportunity flow.',
               'Downloadable charts and dashboards so you can revisit insights anytime.'
             ]
           },
-          {
-            key: 'process',
-            dividerTitle: 'Service Process',
-            dividerSubtitle: 'From intake to blueprint',
-            title: 'Five Steps to Your Destiny Blueprint',
-            imageLabel: 'Blueprint creation workflow',
-            body: 'A precise workflow ensures every report is rigorous, personalised and actionable.',
-            points: [
-              'Information Intake – capture birth date, time and location to anchor the analysis.',
-              'Comprehensive Analysis – interpret BaZi, numerology and destiny cycles in tandem.',
+        {
+          key: 'process',
+          dividerTitle: 'Service Process',
+          dividerSubtitle: 'From intake to blueprint',
+          title: 'Five Steps to Your Destiny Blueprint',
+          imageLabel: 'Blueprint creation workflow',
+          imageUrl: '/images/page-360-essential/360-e-img-04.jpeg',
+          body: 'A precise workflow ensures every report is rigorous, personalised and actionable.',
+          points: [
+            'Information Intake – capture birth date, time and location to anchor the analysis.',
+            'Comprehensive Analysis – interpret BaZi, numerology and destiny cycles in tandem.',
               'Blueprint Creation – produce a 100+ page report with visuals, commentary and actions.',
               'Interpretation Session – walk through key insights in plain, practical language.',
               'Practical Guidance – receive mindset, timing and environment adjustments for smoother flow.'
             ]
           },
-          {
-            key: 'audience',
-            dividerTitle: 'Who It Is For',
-            dividerSubtitle: 'Clarity before action',
-            title: 'Designed for People Ready to Lead Their Destiny',
-            imageLabel: 'Audience alignment storyboard',
-            body: 'Perfect for individuals who want to take ownership of their direction and momentum.',
-            points: [
-              'Purpose seekers looking for confident career or life choices.',
-              'Professionals feeling stuck or misaligned with timing.',
+        {
+          key: 'audience',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'Clarity before action',
+          title: 'Designed for People Ready to Lead Their Destiny',
+          imageLabel: 'Audience alignment storyboard',
+          imageUrl: '/images/page-360-essential/360-e-img-05.jpeg',
+          body: 'Perfect for individuals who want to take ownership of their direction and momentum.',
+          points: [
+            'Purpose seekers looking for confident career or life choices.',
+            'Professionals feeling stuck or misaligned with timing.',
               'Entrepreneurs aligning personal destiny with business cycles.',
               'Anyone ready to understand their rhythm and unlock long-term flow.'
             ]
           },
-          {
-            key: 'outcome',
-            dividerTitle: 'Outcome & Value',
-            dividerSubtitle: 'What you take away',
-            title: 'A Lifetime Reference for Your Destiny',
-            imageLabel: 'Destiny reference map',
-            body: `You receive more than a report—you gain a personal atlas for navigating timing, relationships, money and purpose. Once you understand your cycles, you stop chasing outcomes and start creating them with calm, confidence and intent.`
-          }
-        ],
+        {
+          key: 'outcome',
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What you take away',
+          title: 'A Lifetime Reference for Your Destiny',
+          imageLabel: 'Destiny reference map',
+          imageUrl: '/images/page-360-essential/360-e-img-06.jpeg',
+          body: `You receive more than a report—you gain a personal atlas for navigating timing, relationships, money and purpose. Once you understand your cycles, you stop chasing outcomes and start creating them with calm, confidence and intent.`
+        }
+      ],
         faq: [
         { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
         { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
@@ -524,6 +661,7 @@ export const dictionary = {
             dividerSubtitle: 'Destiny mastery deep dive',
             title: 'Move from Awareness to Mastery',
             imageLabel: 'Advanced destiny overview panel',
+            imageUrl: '/images/page-360-advanced/360-adv-img-01.jpeg',
             body: `The Advanced Destiny Blueprint is a 200+ page personalised analysis that reveals how your destiny system operates. It fuses BaZi, numerology and name energy to expose your energetic structure, timing triggers and life cycles so you can steer with precision.`
           },
           {
@@ -532,6 +670,7 @@ export const dictionary = {
             dividerSubtitle: 'Multi-layered intelligence',
             title: 'Understand Every Layer of Your Destiny',
             imageLabel: 'Destiny layers insight board',
+            imageUrl: '/images/page-360-advanced/360-adv-img-02.jpeg',
             body: 'This blueprint goes beyond the foundation level to decode the mechanics behind your life pattern.',
             points: [
               'Talent & Core Potential: uncover hidden gifts shaping your natural abilities.',
@@ -550,6 +689,7 @@ export const dictionary = {
             dividerSubtitle: 'Structure and motion',
             title: 'Fuse Pattern, Frequency and Timing',
             imageLabel: 'Methodology resonance map',
+            imageUrl: '/images/page-360-advanced/360-adv-img-03.jpeg',
             body: 'We merge BaZi elemental logic, numerology frequency and name resonance to reveal who you are and how your destiny breathes.',
             points: [
               'Layered BaZi analysis showing elemental strengths, weaknesses and capacity.',
@@ -564,6 +704,7 @@ export const dictionary = {
             dividerSubtitle: 'From intake to decoding',
             title: 'Six Steps to an Advanced Blueprint',
             imageLabel: 'Advanced blueprint workflow',
+            imageUrl: '/images/page-360-advanced/360-adv-img-04.jpeg',
             body: 'A comprehensive workflow ensures insight transforms into strategy.',
             points: [
               'Personal Information Collection – gather precise birth and name data.',
@@ -580,6 +721,7 @@ export const dictionary = {
             dividerSubtitle: 'Designed for turning points',
             title: 'Built for Those Ready to Level Up',
             imageLabel: 'Advanced audience storyboard',
+            imageUrl: '/images/page-360-advanced/360-adv-img-05.jpeg',
             body: 'Perfect for individuals moving through major transitions or seeking mastery over timing.',
             points: [
               'Leaders planning significant personal or career pivots.',
@@ -594,6 +736,7 @@ export const dictionary = {
             dividerSubtitle: 'What you take away',
             title: 'A Time-Coded Master Plan',
             imageLabel: 'Destiny master plan map',
+            imageUrl: '/images/page-360-advanced/360-adv-img-06.jpeg',
             body: `You leave with a complete, time-coded roadmap that shows who you are, how your cycles unfold and how to move forward with power and precision. Challenges become rhythm—not resistance—once you understand your internal frequency.`
           }
         ],
@@ -619,23 +762,25 @@ export const dictionary = {
         sections: [
           {
             key: 'overview',
-            dividerTitle: 'Overview',
-            dividerSubtitle: 'Full-spectrum mastery',
-            title: 'Unify Heaven, Earth and Human',
-            imageLabel: 'Supreme destiny overview panel',
-            body: `The Supreme Destiny Blueprint is a 300+ page full-spectrum consultation—the most complete edition in the Destiny Blueprint series. It unites BaZi, numerology, name energy and Feng Shui to reveal how time, space and personal energy converge so you can command every dimension of your life.`
-          },
-          {
-            key: 'insight',
-            dividerTitle: 'What It Reveals',
-            dividerSubtitle: 'Holographic destiny system',
-            title: 'See the Entire Ecosystem of Your Destiny',
-            imageLabel: 'Destiny ecosystem board',
-            body: 'This blueprint delivers the most complete metaphysical portrait available.',
-            points: [
-              'Talent & Core Potential: reveal innate gifts, hidden strengths and life mission.',
-              'Career & Industry Blueprint: highlight industries and environments aligned with your element pattern.',
-              'Wealth Structure: decode how prosperity flows, accumulates and is protected in your chart.',
+          dividerTitle: 'Overview',
+          dividerSubtitle: 'Full-spectrum mastery',
+          title: 'Unify Heaven, Earth and Human',
+          imageLabel: 'Supreme destiny overview panel',
+          imageUrl: '/images/page-360-supreme/360-pro-img-01.jpeg',
+          body: `The Supreme Destiny Blueprint is a 300+ page full-spectrum consultation—the most complete edition in the Destiny Blueprint series. It unites BaZi, numerology, name energy and Feng Shui to reveal how time, space and personal energy converge so you can command every dimension of your life.`
+        },
+        {
+          key: 'insight',
+          dividerTitle: 'What It Reveals',
+          dividerSubtitle: 'Holographic destiny system',
+          title: 'See the Entire Ecosystem of Your Destiny',
+          imageLabel: 'Destiny ecosystem board',
+          imageUrl: '/images/page-360-supreme/360-pro-img-02.jpeg',
+          body: 'This blueprint delivers the most complete metaphysical portrait available.',
+          points: [
+            'Talent & Core Potential: reveal innate gifts, hidden strengths and life mission.',
+            'Career & Industry Blueprint: highlight industries and environments aligned with your element pattern.',
+            'Wealth Structure: decode how prosperity flows, accumulates and is protected in your chart.',
               'Ten-Year Luck & Timing: map decadal transitions for long-range strategic planning.',
               'Numerology Insights: refine personality and behaviour through life number overlays.',
               'Energy Field Assessment: evaluate personal vibration and provide realignment guidance.',
@@ -646,28 +791,30 @@ export const dictionary = {
           },
           {
             key: 'method',
-            dividerTitle: 'How It Works',
-            dividerSubtitle: 'Heaven · Earth · Human cohesion',
-            title: 'Synchronise Heaven, Earth and Human',
-            imageLabel: 'Heaven earth human alignment map',
-            body: 'This consultation integrates Heaven (time cycles), Earth (Feng Shui and location energy), and Human (personal chart) into one cohesive analysis. By synchronising your personal destiny code with environmental and temporal flow, the Supreme Destiny Blueprint shows how to align every area of your life—career, wealth, health and relationships—with cosmic rhythm. You’ll gain:',
-            points: [
-              'A holographic understanding of your entire destiny system.',
-              'A forward-looking blueprint for the coming decades of timing.',
-              'An integrated plan that weaves time, space and energy into one strategy.'
+          dividerTitle: 'How It Works',
+          dividerSubtitle: 'Heaven · Earth · Human cohesion',
+          title: 'Synchronise Heaven, Earth and Human',
+          imageLabel: 'Heaven earth human alignment map',
+          imageUrl: '/images/page-360-supreme/360-pro-img-03.jpeg',
+          body: 'This consultation integrates Heaven (time cycles), Earth (Feng Shui and location energy), and Human (personal chart) into one cohesive analysis. By synchronising your personal destiny code with environmental and temporal flow, the Supreme Destiny Blueprint shows how to align every area of your life—career, wealth, health and relationships—with cosmic rhythm. You’ll gain:',
+          points: [
+            'A holographic understanding of your entire destiny system.',
+            'A forward-looking blueprint for the coming decades of timing.',
+            'An integrated plan that weaves time, space and energy into one strategy.'
             ]
           },
           {
             key: 'process',
-            dividerTitle: 'Service Process',
-            dividerSubtitle: 'From assessment to activation',
-            title: 'Six Steps to a Supreme Blueprint',
-            imageLabel: 'Supreme blueprint workflow',
-            body: 'A rigorous workflow ensures insight becomes transformation.',
-            points: [
-              'Initial Consultation – clarify background, goals and life stage.',
-              'Comprehensive Data Analysis – integrate BaZi, numerology, name energy and Feng Shui.',
-              'Cycle Forecasting – map Ten-Year and Annual transitions for opportunity control.',
+          dividerTitle: 'Service Process',
+          dividerSubtitle: 'From assessment to activation',
+          title: 'Six Steps to a Supreme Blueprint',
+          imageLabel: 'Supreme blueprint workflow',
+          imageUrl: '/images/page-360-supreme/360-pro-img-04.jpeg',
+          body: 'A rigorous workflow ensures insight becomes transformation.',
+          points: [
+            'Initial Consultation – clarify background, goals and life stage.',
+            'Comprehensive Data Analysis – integrate BaZi, numerology, name energy and Feng Shui.',
+            'Cycle Forecasting – map Ten-Year and Annual transitions for opportunity control.',
               'Energy Field Evaluation – assess personal and environmental resonance.',
               'Blueprint Compilation – deliver a 300+ page full-holographic destiny report.',
               'Interpretation Session – walk through insights with tailored strategy briefings.'
@@ -675,27 +822,29 @@ export const dictionary = {
           },
           {
             key: 'audience',
-            dividerTitle: 'Who It Is For',
-            dividerSubtitle: 'For total alignment',
-            title: 'Designed for Those Leading Whole Lifetimes',
-            imageLabel: 'Supreme audience storyboard',
-            body: 'Perfect for visionaries integrating destiny, energy and environment into one system.',
-            points: [
-              'Leaders and founders orchestrating multi-decade plans.',
-              'Entrepreneurs engineering legacy ventures and wealth structures.',
-              'Individuals at major crossroads in life, career or relationship.',
+          dividerTitle: 'Who It Is For',
+          dividerSubtitle: 'For total alignment',
+          title: 'Designed for Those Leading Whole Lifetimes',
+          imageLabel: 'Supreme audience storyboard',
+          imageUrl: '/images/page-360-supreme/360-pro-img-05.jpeg',
+          body: 'Perfect for visionaries integrating destiny, energy and environment into one system.',
+          points: [
+            'Leaders and founders orchestrating multi-decade plans.',
+            'Entrepreneurs engineering legacy ventures and wealth structures.',
+            'Individuals at major crossroads in life, career or relationship.',
               'Homeowners aligning personal energy with residential Feng Shui.'
             ]
           },
           {
             key: 'outcome',
-            dividerTitle: 'Outcome & Value',
-            dividerSubtitle: 'What you receive',
-            title: 'Own a Full-Holographic Destiny Ecosystem',
-            imageLabel: 'Holographic destiny map',
-            body: 'You receive the most detailed destiny intelligence ever designed—a complete holographic system that connects your inner blueprint with the outer world. The Supreme Destiny Blueprint empowers you to make every choice with confidence, foresight and resonance. When timing, environment and energy align, success stops being unpredictable—it becomes natural flow.'
-          }
-        ],
+          dividerTitle: 'Outcome & Value',
+          dividerSubtitle: 'What you receive',
+          title: 'Own a Full-Holographic Destiny Ecosystem',
+          imageLabel: 'Holographic destiny map',
+          imageUrl: '/images/page-360-supreme/360-pro-img-06.jpeg',
+          body: 'You receive the most detailed destiny intelligence ever designed—a complete holographic system that connects your inner blueprint with the outer world. The Supreme Destiny Blueprint empowers you to make every choice with confidence, foresight and resonance. When timing, environment and energy align, success stops being unpredictable—it becomes natural flow.'
+        }
+      ],
         faq: [
         { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
         { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
@@ -722,6 +871,7 @@ export const dictionary = {
             dividerSubtitle: 'Strategic site foresight',
             title: 'Where Earth and Enterprise Align',
             imageLabel: 'Enterprise site strategy collage',
+            imageUrl: '/images/page-site/site-img-01.jpeg',
             body: `Enterprise Site Strategy is a specialised metaphysical consultation that helps organisations choose, evaluate and optimise locations using classical Feng Shui and time–space principles. It integrates landform, directional energy and cyclical timing to identify places that amplify opportunity instead of consuming it—ensuring every chosen ground supports long-term success.`
           },
           {
@@ -730,6 +880,7 @@ export const dictionary = {
             dividerSubtitle: 'Invisible forces, visible results',
             title: 'Expose the Energetic Blueprint of Each Site',
             imageLabel: 'Site energy intelligence board',
+            imageUrl: '/images/page-site/site-img-02.jpeg',
             body: 'Every site carries a pattern of unseen energy that shapes business momentum. This analysis surfaces the levers you need.',
             points: [
               'Geographical Qi Flow: whether the surrounding topography gathers or scatters prosperity.',
@@ -745,6 +896,7 @@ export const dictionary = {
             dividerSubtitle: 'Land · Direction · Timing',
             title: 'Synchronise Enterprise Destiny with Terrain',
             imageLabel: 'Site resonance matrix',
+            imageUrl: '/images/page-site/site-img-03.jpeg',
             body: 'We blend landform study, directional Feng Shui and cosmic timing to align corporate destiny with location energy so every square metre works with you—not against you.',
             points: [
               'Landform intelligence evaluates mountains, waterways and surrounding structures.',
@@ -760,6 +912,7 @@ export const dictionary = {
             dividerSubtitle: 'From scouting to decision',
             title: 'Six Steps to Site Selection Clarity',
             imageLabel: 'Enterprise site workflow board',
+            imageUrl: '/images/page-site/site-img-04.jpeg',
             body: 'A rigorous workflow converts terrain diagnostics into board-level guidance.',
             points: [
               'Consultation & Objective Setting – clarify expansion goals and site criteria.',
@@ -776,6 +929,7 @@ export const dictionary = {
             dividerSubtitle: 'Land equals momentum',
             title: 'Built for Strategic Decision Makers',
             imageLabel: 'Leadership site evaluation briefing',
+            imageUrl: '/images/page-site/site-img-05.jpeg',
             body: 'Designed for enterprises and investors whose next move depends on choosing ground that compounds success.',
             points: [
               'Companies establishing headquarters or entering new cities.',
@@ -790,6 +944,7 @@ export const dictionary = {
             dividerSubtitle: 'What you receive',
             title: 'A Prosperity Map for Your Next Site',
             imageLabel: 'Prosperity flow site map',
+            imageUrl: '/images/page-site/site-img-06.jpeg',
             body: 'You gain more than a report—you receive a strategic map of prosperity flow. Enterprise Site Strategy empowers confident selection so your new foundation resonates with Heaven’s timing and Earth’s rhythm, making growth sustainable rather than accidental.'
           }
         ],
@@ -821,6 +976,7 @@ export const dictionary = {
             dividerSubtitle: 'Strategy meets cosmic timing',
             title: 'Use the Rhythm of Time as a Strategic Asset',
             imageLabel: 'Enterprise timing intelligence collage',
+            imageUrl: '/images/page-cycles/cycles-img-01.jpeg',
             body: `Enterprise Strategy & Cycle Intelligence is an advanced metaphysical consultation that aligns business decisions with the natural rhythm of time. It bridges strategic planning with metaphysical timing—revealing when expansion thrives, when to consolidate, and when to shift direction so cosmic rhythm becomes a practical competitive edge.`
           },
           {
@@ -829,6 +985,7 @@ export const dictionary = {
             dividerSubtitle: 'Cycles decoded',
             title: 'See the Patterns Behind Performance',
             imageLabel: 'Cycle diagnostics board',
+            imageUrl: '/images/page-cycles/cycles-img-02.jpeg',
             body: 'Every company operates inside cycles of markets, people and time. This consultation uncovers the hidden cadence steering results.',
             points: [
               'Strategic Timing: when to grow, pause or pivot based on destiny trends.',
@@ -844,6 +1001,7 @@ export const dictionary = {
             dividerSubtitle: 'Heaven · Earth · Human alignment',
             title: 'Translate Cosmic Rhythm into Boardroom Intelligence',
             imageLabel: 'Heaven earth human resonance map',
+            imageUrl: '/images/page-cycles/cycles-img-03.jpeg',
             body: 'We map the enterprise founding chart, leadership rhythm and market flow against greater celestial cycles, revealing resonance and friction between Heaven (timing), Earth (operations) and Human (decisions). The result is timing guidance executives can act on.',
             points: [
               'Founding destiny profile with cycle overlays.',
@@ -859,6 +1017,7 @@ export const dictionary = {
             dividerSubtitle: 'From intent to implementation',
             title: 'Six Steps to Cycle-Led Strategy',
             imageLabel: 'Cycle strategy workflow board',
+            imageUrl: '/images/page-cycles/cycles-img-04.jpeg',
             body: 'A structured pathway converts metaphysical timing into executable action plans.',
             points: [
               'Strategic Briefing – align on goals, challenges and horizon.',
@@ -875,6 +1034,7 @@ export const dictionary = {
             dividerSubtitle: 'Clarity before commitment',
             title: 'For Leaders Steering Pivotal Moves',
             imageLabel: 'Leadership timing briefing',
+            imageUrl: '/images/page-cycles/cycles-img-05.jpeg',
             body: 'Ideal for leadership teams and investors who require timing insight before committing capital and resources.',
             points: [
               'CEOs and founders planning expansion or restructure.',
@@ -889,6 +1049,7 @@ export const dictionary = {
             dividerSubtitle: 'What you receive',
             title: 'A Strategic Rhythm Playbook',
             imageLabel: 'Time-centred strategy map',
+            imageUrl: '/images/page-cycles/cycles-img-06.jpeg',
             body: 'You leave with deep clarity on where your company sits in the time cycle and how to turn timing into advantage. Enterprise Strategy & Cycle Intelligence merges destiny rhythm with decision science so leadership acts with foresight—not hindsight—making success repeatable rather than accidental.'
           }
         ],
@@ -920,6 +1081,7 @@ export const dictionary = {
             dividerSubtitle: 'Service synopsis',
             title: 'Live in Rhythm with Destiny',
             imageLabel: 'Time, space and destiny woven together',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-01.jpeg',
             body: `Supreme Celestial Numbers is a precision metaphysical consultation that decodes how time, space and personal destiny intertwine. Rooted in the ancient Huangji Tian Shu philosophy, it reveals not only what may happen but why events unfold and how to act before they surface so you move with, not against, the current of time.`,
           },
           {
@@ -928,6 +1090,7 @@ export const dictionary = {
             dividerSubtitle: 'Uncover your hidden timeline',
             title: 'See the Rhythm Beneath Every Chapter',
             imageLabel: 'Destiny rhythm insight board',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-02.jpeg',
             body: 'Every life follows an invisible rhythm. This reading uncovers the currents shaping your decisions before they surface.',
             points: [
               'Life Momentum: when your personal cycle strengthens or wanes.',
@@ -942,6 +1105,7 @@ export const dictionary = {
             dividerSubtitle: 'Celestial mathematics in action',
             title: 'Align Inner Rhythm with Cosmic Timing',
             imageLabel: 'Celestial mathematics overlay',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-03.jpeg',
             body: `Through celestial mathematics and temporal mapping, the oracle aligns your personal timeline with the universal cycle of change. It reveals the harmony and tension between your inner rhythm and the world's external timing so clarity replaces guesswork.`,
             points: [
               'A destiny map that makes clear which side time currently stands on.',
@@ -955,6 +1119,7 @@ export const dictionary = {
             dividerSubtitle: 'From data to directives',
             title: 'Five Steps from Intake to Blueprint',
             imageLabel: 'Celestial consultation workflow board',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-04.jpeg',
             body: 'Our workflow turns metaphysical insight into precise guidance, from first contact through the action blueprint.',
             points: [
               'Information Intake – collect essential birth or founding details and focus area.',
@@ -970,6 +1135,7 @@ export const dictionary = {
             dividerSubtitle: 'People who sense change',
             title: 'Designed for Leaders Who Feel the Shift',
             imageLabel: 'Leaders preparing pivotal decisions',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-05.jpeg',
             body: 'Ideal for individuals and teams who notice momentum shifting and want clarity before acting.',
             points: [
               'Executives making pivotal choices.',
@@ -984,6 +1150,7 @@ export const dictionary = {
             dividerSubtitle: 'What you take away',
             title: 'Leave with a Time-Coded Strategy',
             imageLabel: 'Time-coded strategic blueprint',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-06.jpeg',
             body: 'You receive a time-coded strategy for your next chapter. Know what to accelerate, what to pause and what to release as Supreme Celestial Numbers realigns you with the current of time so opportunities meet you halfway.',
           },
         ],
@@ -1749,6 +1916,7 @@ export const dictionary = {
             dividerSubtitle: '让企业与天时同步',
             title: '看见企业的能量底层',
             imageLabel: '企业命盘全景图',
+            imageUrl: '/images/page-audit/audit-img-01.jpeg',
             body: '《乾坤企业策》以东方玄学为基础，从时间、空间、人事三轴解读企业的命运结构。它揭示财务报表看不出的隐性力量——能量平衡、成长节奏与长期气场，让决策层校准方向，使团队、场地与时间节奏保持同频。'
           },
           {
@@ -1757,6 +1925,7 @@ export const dictionary = {
             dividerSubtitle: '企业运势的隐形结构',
             title: '读懂企业命运的脉络',
             imageLabel: '企业能量流洞察板',
+            imageUrl: '/images/page-audit/audit-img-02.jpeg',
             body: '企业命运由成立时间、关键人物与场地格局共同塑造。通过推演，你将看到：',
             points: [
               '企业能量流：当前是扩张、转型还是休整周期。',
@@ -1772,6 +1941,7 @@ export const dictionary = {
             dividerSubtitle: '时间·空间·人事共振',
             title: '让策略与天时共舞',
             imageLabel: '企业时空共振模型',
+            imageUrl: '/images/page-audit/audit-img-03.jpeg',
             body: '通过“企业时间盘 + 场地气场 + 领导命盘”的三维分析，我们推演企业运势的周期规律，辨识顺势与逆势的时间节点。',
             points: [
               '建立专属企业命运图。',
@@ -1787,6 +1957,7 @@ export const dictionary = {
             dividerSubtitle: '六个步骤完成企业推演',
             title: '从诊断到蓝图的全链路',
             imageLabel: '企业审查流程图',
+            imageUrl: '/images/page-audit/audit-img-04.jpeg',
             body: '严谨流程将玄学诊断转化为高层可执行的策略指令。',
             points: [
               '前期访谈：梳理企业历史、痛点与愿景。',
@@ -1803,6 +1974,7 @@ export const dictionary = {
             dividerSubtitle: '关键节点的最佳助力',
             title: '为掌舵者提供时间先见',
             imageLabel: '企业领导层策略会议',
+            imageUrl: '/images/page-audit/audit-img-05.jpeg',
             body: '专为在重大阶段寻求清晰与节奏的人打造。',
             points: [
               '计划扩张、品牌重塑或开拓新市场的企业。',
@@ -1817,6 +1989,7 @@ export const dictionary = {
             dividerSubtitle: '获得一份时间战略图',
             title: '让决策与节奏同频',
             imageLabel: '企业命运周期图',
+            imageUrl: '/images/page-audit/audit-img-06.jpeg',
             body: '你将获得一份清晰的企业命运周期图——知道何时扩张、何时蓄力、何时转型。《乾坤企业策》不是取代管理工具，而是揭开数据背后的天机，让企业的每一步都顺势而为。'
           }
         ],
@@ -1843,23 +2016,25 @@ export const dictionary = {
         subtitle: '看清天命底图 · 开启人生正向循环。',
         sections: [
           {
-            key: 'overview',
-            dividerTitle: '服务概述',
-            dividerSubtitle: '打好命运底图',
-            title: '以战略视角认知自己',
-            imageLabel: '命运蓝图概览图',
-            body: '《命运蓝图·启程版》是一份超过 100 页的个人命理分析，融合八字、生命数字与时间周期，帮助你在顺势节奏中行动，而不是靠运气碰撞。'
-          },
-          {
-            key: 'insight',
-            dividerTitle: '能揭示什么',
-            dividerSubtitle: '命运全景图',
-            title: '看清你是谁、将去往何处',
-            imageLabel: '命运洞察面板',
-            body: '报告揭示命理全景，让你知道如何把握人生关键节点：',
-            points: [
-              '天赋潜能：找出与生俱来的优势与专长。',
-              '职业定位：明确行业、岗位与环境的最佳匹配度。',
+          key: 'overview',
+          dividerTitle: '服务概述',
+          dividerSubtitle: '打好命运底图',
+          title: '以战略视角认知自己',
+          imageLabel: '命运蓝图概览图',
+          imageUrl: '/images/page-360-essential/360-e-img-01.jpeg',
+          body: '《命运蓝图·启程版》是一份超过 100 页的个人命理分析，融合八字、生命数字与时间周期，帮助你在顺势节奏中行动，而不是靠运气碰撞。'
+        },
+        {
+          key: 'insight',
+          dividerTitle: '能揭示什么',
+          dividerSubtitle: '命运全景图',
+          title: '看清你是谁、将去往何处',
+          imageLabel: '命运洞察面板',
+          imageUrl: '/images/page-360-essential/360-e-img-02.jpeg',
+          body: '报告揭示命理全景，让你知道如何把握人生关键节点：',
+          points: [
+            '天赋潜能：找出与生俱来的优势与专长。',
+            '职业定位：明确行业、岗位与环境的最佳匹配度。',
               '财富模式：理解如何吸引、运用与守护财富流。',
               '人生节奏：掌握十年大运与年度节奏，提前布局。',
               '生命数字：从数字命理洞察性格密码与行动逻辑。',
@@ -1868,28 +2043,30 @@ export const dictionary = {
           },
           {
             key: 'method',
-            dividerTitle: '推演原理',
-            dividerSubtitle: '古法命理 · 现代解读',
-            title: '把命理转化为行动策略',
-            imageLabel: '方法论流程图',
-            body: '我们以“古法命理 + 现代逻辑”把复杂的格局与时间结构，转化为易懂、可执行的策略建议。',
-            points: [
-              '五行校准，揭示先天气场与能量构成。',
-              '十年大运与流年叠图，指出加速或蓄势的节奏节点。',
+          dividerTitle: '推演原理',
+          dividerSubtitle: '古法命理 · 现代解读',
+          title: '把命理转化为行动策略',
+          imageLabel: '方法论流程图',
+          imageUrl: '/images/page-360-essential/360-e-img-03.jpeg',
+          body: '我们以“古法命理 + 现代逻辑”把复杂的格局与时间结构，转化为易懂、可执行的策略建议。',
+          points: [
+            '五行校准，揭示先天气场与能量构成。',
+            '十年大运与流年叠图，指出加速或蓄势的节奏节点。',
               '个人战略建议，让行动始终踩在机会流之上。',
               '附带图表与仪表板，方便随时复盘与跟进。'
             ]
           },
           {
             key: 'process',
-            dividerTitle: '服务流程',
-            dividerSubtitle: '五步完成命运蓝图',
-            title: '从资料到行动一气呵成',
-            imageLabel: '服务流程故事板',
-            body: '严谨流程确保报告既专业又贴近现实：',
-            points: [
-              '资料输入：提供出生年月日时与出生地，锁定命盘锚点。',
-              '数据推演：整合八字、生命数字与周期节奏进行交叉分析。',
+          dividerTitle: '服务流程',
+          dividerSubtitle: '五步完成命运蓝图',
+          title: '从资料到行动一气呵成',
+          imageLabel: '服务流程故事板',
+          imageUrl: '/images/page-360-essential/360-e-img-04.jpeg',
+          body: '严谨流程确保报告既专业又贴近现实：',
+          points: [
+            '资料输入：提供出生年月日时与出生地，锁定命盘锚点。',
+            '数据推演：整合八字、生命数字与周期节奏进行交叉分析。',
               '蓝图制作：输出 100+ 页专属报告，图文并茂、结构清晰。',
               '讲解咨询：一对一说明重点，用人话解析复杂规律。',
               '实用指导：提供心态、时间、环境的调整方案，让行动顺畅。'
@@ -1897,27 +2074,29 @@ export const dictionary = {
           },
           {
             key: 'audience',
-            dividerTitle: '适合人群',
-            dividerSubtitle: '想走在时间前面的人',
-            title: '为准备掌控人生的人而设',
-            imageLabel: '适合人群情境图',
-            body: '特别适合以下决策者：',
-            points: [
-              '想找到人生方向与使命的探索者。',
-              '在事业或关系上感到卡关、想突破的人。',
+          dividerTitle: '适合人群',
+          dividerSubtitle: '想走在时间前面的人',
+          title: '为准备掌控人生的人而设',
+          imageLabel: '适合人群情境图',
+          imageUrl: '/images/page-360-essential/360-e-img-05.jpeg',
+          body: '特别适合以下决策者：',
+          points: [
+            '想找到人生方向与使命的探索者。',
+            '在事业或关系上感到卡关、想突破的人。',
               '希望个人命格与事业周期互相配合的创业者。',
               '渴望看清自身节奏、重新掌握人生主动权的人。'
             ]
           },
           {
             key: 'outcome',
-            dividerTitle: '结果与价值',
-            dividerSubtitle: '终身可参考的命运指南',
-            title: '看见命运语言，自信行动',
-            imageLabel: '命运参考图',
-            body: '你得到的不只是报告，而是一张可以长期参考的命运地图。懂得自己的时间节奏后，不必焦虑等待，而是带着底气创造结果。'
-          }
-        ],
+          dividerTitle: '结果与价值',
+          dividerSubtitle: '终身可参考的命运指南',
+          title: '看见命运语言，自信行动',
+          imageLabel: '命运参考图',
+          imageUrl: '/images/page-360-essential/360-e-img-06.jpeg',
+          body: '你得到的不只是报告，而是一张可以长期参考的命运地图。懂得自己的时间节奏后，不必焦虑等待，而是带着底气创造结果。'
+        }
+      ],
         faq: [
         { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
         { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
@@ -1933,6 +2112,112 @@ export const dictionary = {
           primaryHref: '/contact'
         }
       },
+      advancedBlueprint: {
+        badge: '360全维度',
+        title: '天机蓝图·进阶版',
+        subtitle: '洞察命格结构 · 掌握人生天机。',
+        sections: [
+          {
+            key: 'overview',
+            dividerTitle: '服务概述',
+            dividerSubtitle: '命格深度解读',
+            title: '从认识到掌控的进阶蓝图',
+            imageLabel: '进阶命运概览图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-01.jpeg',
+            body: '《天机蓝图·进阶版》是一份超过 200 页的深度命运解析，整合八字、生命数字与姓名能量，揭示命格如何运作、何时转折，以及如何掌握人生节奏。'
+          },
+          {
+            key: 'insight',
+            dividerTitle: '能揭示什么',
+            dividerSubtitle: '命运系统全结构',
+            title: '全面解构命格八大板块',
+            imageLabel: '命运多层洞察面板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-02.jpeg',
+            body: '蓝图揭示命运系统的更深层结构：',
+            points: [
+              '天赋潜能：挖掘隐藏能力与性格驱动力。',
+              '行业定位：锁定最契合五行能量的事业领域。',
+              '财富结构：看懂财富流入、积累、风险与止损位。',
+              '十年大运：提前预判长期周期的兴衰与转折。',
+              '生命数字：解析行为密码与成长课题。',
+              '能量场分析：捕捉健康、人际与效率的能量失衡。',
+              '姓名吉象：评估姓名与命格的共振度与优化建议。',
+              '实用化解：提供针对性调整方案与时机动作。'
+            ]
+          },
+          {
+            key: 'method',
+            dividerTitle: '推演原理',
+            dividerSubtitle: '结构与节奏共读',
+            title: '三重系统交叉解码命运',
+            imageLabel: '结构与节奏共振图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-03.jpeg',
+            body: `服务通过整合“八字五行结构”、“生命数字频率”与“姓名能量共振”，绘制出你命运系统的多维运行蓝图。
+它揭示的不只是性格与倾向，更是命运的“触发机制”——什么时间、什么选择，会带来突破或阻力。
+报告让你既看懂“命的结构”，也理解“运的节奏”。`,
+            points: [
+              '对自身命格机制的全面认知；',
+              '对未来十年周期的前瞻规划；',
+              '一套能量与时运结合的可执行策略。'
+            ]
+          },
+          {
+            key: 'process',
+            dividerTitle: '服务流程',
+            dividerSubtitle: '六步完成进阶蓝图',
+            title: '从资料到专属策略',
+            imageLabel: '进阶蓝图流程板',
+            imageUrl: '/images/page-360-advanced/360-adv-img-04.jpeg',
+            body: '严谨流程确保洞察落地：',
+            points: [
+              '资料收集：记录出生与姓名信息。',
+              '命盘分析：整合八字、数字与能量模型。',
+              '姓名共振评估：判断姓名与命格能量的合拍度。',
+              '周期预测：推演十年与流年节奏变化。',
+              '蓝图编制：产生 200+ 页深度报告。',
+              '解读咨询：一对一讲解与专属策略讨论。'
+            ]
+          },
+          {
+            key: 'audience',
+            dividerTitle: '适合人群',
+            dividerSubtitle: '关键转折的行动指南',
+            title: '为准备升级的人而设',
+            imageLabel: '进阶用户场景图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-05.jpeg',
+            body: '适合正处重要阶段、需要掌控时间节奏的决策者：',
+            points: [
+              '准备重大转型或跨界发展的个人。',
+              '希望事业节奏与命格相辅相成的创业者。',
+              '追求长期布局与节奏掌控的专业人士。',
+              '想理解姓名能量如何影响命运的人。'
+            ]
+          },
+          {
+            key: 'outcome',
+            dividerTitle: '结果与价值',
+            dividerSubtitle: '一生可用的命运运行图',
+            title: '让挑战化为节奏而非阻力',
+            imageLabel: '命运运行蓝图',
+            imageUrl: '/images/page-360-advanced/360-adv-img-06.jpeg',
+            body: '你将带走一份完整的命运运行图谱，知道自己是谁、节奏如何展开、下一步怎么走。当你掌握命运节奏，阻力会变节奏，人生会更从容。'
+          }
+        ],
+        faq: [
+        { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
+        { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
+        { question: '需要有玄学基础吗？', answer: '无需基础。我们从原理出发，逐步带入应用练习，让零基础学习者也能跟上。' },
+        { question: '有哪些学习支持？', answer: '课程提供每周答疑、学习社群，以及导师对练习作业的反馈。' }
+      ],
+      cta: {
+          dividerTitle: '想深入解锁命运的隐藏结构？',
+          dividerSubtitle: '预约天机蓝图·进阶版',
+          title: '领取天机蓝图·进阶版',
+          message: '点击开启专属命运解析，掌握人生节奏。',
+          primaryLabel: '领取天机蓝图·进阶版',
+          primaryHref: '/contact'
+        }
+      },
       supremeBlueprint: {
         badge: '360全维度',
         title: '乾坤至尊·全息版',
@@ -1940,23 +2225,25 @@ export const dictionary = {
         sections: [
           {
             key: 'overview',
-            dividerTitle: '服务概述',
-            dividerSubtitle: '命运全息启示',
-            title: '让天地人与命运合一',
-            imageLabel: '全息命运概览图',
-            body: '《乾坤至尊·全息版》是一份超过 300 页的全方位命运咨询报告，整合八字、生命数字、姓名能量与住宅风水，揭示命格结构与运势节奏。'
-          },
-          {
-            key: 'insight',
-            dividerTitle: '能揭示什么',
-            dividerSubtitle: '命运全息系统',
-            title: '看见命运的完整生态',
-            imageLabel: '命运全息面板',
-            body: '从命格、时间、能量、空间四大面向全面解析人生：',
-            points: [
-              '天赋潜能：揭示人生使命与隐藏力量。',
-              '行业蓝图：界定与命格五行最契合的事业方向。',
-              '财富结构：分析财富生成、流动与守护模式。',
+          dividerTitle: '服务概述',
+          dividerSubtitle: '命运全息启示',
+          title: '让天地人与命运合一',
+          imageLabel: '全息命运概览图',
+          imageUrl: '/images/page-360-supreme/360-pro-img-01.jpeg',
+          body: '《乾坤至尊·全息版》是一份超过 300 页的全方位命运咨询报告，整合八字、生命数字、姓名能量与住宅风水，揭示命格结构与运势节奏。'
+        },
+        {
+          key: 'insight',
+          dividerTitle: '能揭示什么',
+          dividerSubtitle: '命运全息系统',
+          title: '看见命运的完整生态',
+          imageLabel: '命运全息面板',
+          imageUrl: '/images/page-360-supreme/360-pro-img-02.jpeg',
+          body: '从命格、时间、能量、空间四大面向全面解析人生：',
+          points: [
+            '天赋潜能：揭示人生使命与隐藏力量。',
+            '行业蓝图：界定与命格五行最契合的事业方向。',
+            '财富结构：分析财富生成、流动与守护模式。',
               '十年大运：掌握长周期节奏，把握关键节点。',
               '生命数字：解读性格密码与成长课题。',
               '能量场分析：评估个人磁场平衡与阻力。',
@@ -1967,28 +2254,30 @@ export const dictionary = {
           },
           {
             key: 'method',
-            dividerTitle: '推演原理',
-            dividerSubtitle: '天时·地利·人和',
-            title: '同步天人地三才',
-            imageLabel: '天地人共振图',
-            body: '此服务通过“天时、地利、人和”三大系统的交汇分析，将八字命盘、空间气场与时间节奏融为一体。同步个人命格与外部环境周期，让事业、财富、健康、人际四大领域都与命运节奏一致。你将获得：',
-            points: [
-              '对人生命运系统的全息理解。',
-              '对未来数十年周期的前瞻蓝图。',
-              '一套结合时间、空间与能量的整合方案。'
+          dividerTitle: '推演原理',
+          dividerSubtitle: '天时·地利·人和',
+          title: '同步天人地三才',
+          imageLabel: '天地人共振图',
+          imageUrl: '/images/page-360-supreme/360-pro-img-03.jpeg',
+          body: '此服务通过“天时、地利、人和”三大系统的交汇分析，将八字命盘、空间气场与时间节奏融为一体。同步个人命格与外部环境周期，让事业、财富、健康、人际四大领域都与命运节奏一致。你将获得：',
+          points: [
+            '对人生命运系统的全息理解。',
+            '对未来数十年周期的前瞻蓝图。',
+            '一套结合时间、空间与能量的整合方案。'
             ]
           },
           {
             key: 'process',
-            dividerTitle: '服务流程',
-            dividerSubtitle: '六步完成全息蓝图',
-            title: '从资料到策略一气呵成',
-            imageLabel: '全息蓝图流程板',
-            body: '严谨流程确保洞察落地：',
-            points: [
-              '初步沟通：厘清背景、目标与人生阶段。',
-              '资料分析：综合八字、数字、姓名与住宅风水数据。',
-              '周期推演：分析十年与流年节奏，预测机缘与挑战。',
+          dividerTitle: '服务流程',
+          dividerSubtitle: '六步完成全息蓝图',
+          title: '从资料到策略一气呵成',
+          imageLabel: '全息蓝图流程板',
+          imageUrl: '/images/page-360-supreme/360-pro-img-04.jpeg',
+          body: '严谨流程确保洞察落地：',
+          points: [
+            '初步沟通：厘清背景、目标与人生阶段。',
+            '资料分析：综合八字、数字、姓名与住宅风水数据。',
+            '周期推演：分析十年与流年节奏，预测机缘与挑战。',
               '能量评估：检测个人与环境的共振状况。',
               '蓝图编制：制作 300+ 页全息命运报告。',
               '讲解咨询：一对一深度说明与专属策略建议。'
@@ -1997,26 +2286,28 @@ export const dictionary = {
           {
             key: 'audience',
             dividerTitle: '适合人群',
-            dividerSubtitle: '全局掌控者',
-            title: '为引领全局的人而设',
-            imageLabel: '用户情境图',
-            body: '适合寻求命格、能量、空间三合一掌控力的决策者：',
-            points: [
-              '规划长期事业与家族布局的领导者。',
-              '希望整合命格与环境打造事业体系的创业者。',
-              '处于人生重大转折期、需要全局视角的人。',
+          dividerSubtitle: '全局掌控者',
+          title: '为引领全局的人而设',
+          imageLabel: '用户情境图',
+          imageUrl: '/images/page-360-supreme/360-pro-img-05.jpeg',
+          body: '适合寻求命格、能量、空间三合一掌控力的决策者：',
+          points: [
+            '规划长期事业与家族布局的领导者。',
+            '希望整合命格与环境打造事业体系的创业者。',
+            '处于人生重大转折期、需要全局视角的人。',
               '想让居家风水与个人命格共振的家庭决策者。'
             ]
           },
           {
             key: 'outcome',
-            dividerTitle: '结果与价值',
-            dividerSubtitle: '命运全息生态',
-            title: '掌握命运全息系统',
-            imageLabel: '命运全息作战图',
-            body: '你将得到一份前所未有的全息命运系统，将个人命格、环境能量与时间节奏完美结合。《乾坤至尊·全息版》让你在每一个决定中更从容、更笃定；当天时、地利、人和合一，成功不再偶然，而是必然的流向。'
-          }
-        ],
+          dividerTitle: '结果与价值',
+          dividerSubtitle: '命运全息生态',
+          title: '掌握命运全息系统',
+          imageLabel: '命运全息作战图',
+          imageUrl: '/images/page-360-supreme/360-pro-img-06.jpeg',
+          body: '你将得到一份前所未有的全息命运系统，将个人命格、环境能量与时间节奏完美结合。《乾坤至尊·全息版》让你在每一个决定中更从容、更笃定；当天时、地利、人和合一，成功不再偶然，而是必然的流向。'
+        }
+      ],
         faq: [
         { question: '课程时长多久？', answer: '课程周期为 3–6 个月，视你选择的班次与学习节奏而定。' },
         { question: '课程是直播还是自学？', answer: '核心模块采用直播授课并提供回放，结合自学练习与反思任务，确保理解深度。' },
@@ -2043,6 +2334,7 @@ export const dictionary = {
             dividerSubtitle: '让选址成为企业助力',
             title: '地利与企业节奏的完美匹配',
             imageLabel: '企业选址全景图',
+            imageUrl: '/images/page-site/site-img-01.jpeg',
             body: '《天元选址策》结合东方风水与现代企业战略，从地形气场、朝向布局与时间周期三大维度推演，找出最能助旺企业的生财之地。无论是总部建设、分支扩张，还是搬迁布局，都以人、地、时三合为准，让地气助力、财气自来。'
           },
           {
@@ -2051,6 +2343,7 @@ export const dictionary = {
             dividerSubtitle: '地气与企业同步的关键',
             title: '看清土地的隐形脉络',
             imageLabel: '地理能量洞察图',
+            imageUrl: '/images/page-site/site-img-02.jpeg',
             body: '每一块土地都有其气场与能量脉络，直接影响企业的运势走向。通过综合分析，你将看到：',
             points: [
               '地理气场：周边山水格局是否聚气生财。',
@@ -2066,6 +2359,7 @@ export const dictionary = {
             dividerSubtitle: '地势·朝向·时间三合',
             title: '让企业与土地形成共振',
             imageLabel: '选址共振矩阵',
+            imageUrl: '/images/page-site/site-img-03.jpeg',
             body: '以地势、朝向、时间为核心，结合企业命盘与地理能量，判断地气与运势的契合度。当企业格局顺应地脉，时间又逢当运，努力才能更轻松地转化为成果——这是让位置成为力量的科学。',
             points: [
               '地形地势分析：评估山水、路网与周边建筑。',
@@ -2081,6 +2375,7 @@ export const dictionary = {
             dividerSubtitle: '从踏勘到决策',
             title: '六个步骤完成选址推演',
             imageLabel: '企业选址流程板',
+            imageUrl: '/images/page-site/site-img-04.jpeg',
             body: '严谨流程将地气诊断转化为董事会可执行的策略。',
             points: [
               '沟通目标：明确企业规划与选址方向。',
@@ -2097,6 +2392,7 @@ export const dictionary = {
             dividerSubtitle: '懂得“选址即战略”的人',
             title: '为关键决策者打造',
             imageLabel: '领导团队选址简报',
+            imageUrl: '/images/page-site/site-img-05.jpeg',
             body: '专为在扩张、迁移或投资阶段寻求清晰与节奏的企业打造。',
             points: [
               '筹建总部或开拓新市场的企业。',
@@ -2111,6 +2407,7 @@ export const dictionary = {
             dividerSubtitle: '不仅是一份报告',
             title: '获得“企业旺运布局图”',
             imageLabel: '旺运选址地图',
+            imageUrl: '/images/page-site/site-img-06.jpeg',
             body: '你得到的不只是选址报告，而是一张企业旺运布局图。《天元选址策》帮助你在决策前看清哪一处地气能帮你起势，让新址同时得天时、地利、人和。当选址与业态、时间同频，旺运便不再依赖运气。'
           }
         ],
@@ -2142,6 +2439,7 @@ export const dictionary = {
             dividerSubtitle: '将时间变成战略优势',
             title: '顺天时者，掌先机',
             imageLabel: '天时战略全景图',
+            imageUrl: '/images/page-cycles/cycles-img-01.jpeg',
             body: '《天时战略策》是一项以时间节奏为核心的企业战略咨询，结合东方天时周期学与现代管理逻辑，让企业在正确的时间做正确的事，揭示运营节奏与外部大势的关系。'
           },
           {
@@ -2150,6 +2448,7 @@ export const dictionary = {
             dividerSubtitle: '看见周期背后的规律',
             title: '读懂时间的底层结构',
             imageLabel: '周期洞察图',
+            imageUrl: '/images/page-cycles/cycles-img-02.jpeg',
             body: '每个企业都在周期中运转——市场有周期、人事有周期、命运也有周期。通过推演，你将看到：',
             points: [
               '战略时机：何时扩张、何时蓄势、何时转向。',
@@ -2165,6 +2464,7 @@ export const dictionary = {
             dividerSubtitle: '天·地·人三才共振',
             title: '让战略踩准时间节拍',
             imageLabel: '天时共振模型',
+            imageUrl: '/images/page-cycles/cycles-img-03.jpeg',
             body: '通过“企业命盘 + 管理层节奏 + 行业周期”的交叉分析，找出天时、人事、地运之间的共振与冲突，把玄学中的运势节奏转化为可执行的经营策略。',
             points: [
               '企业命盘与周期叠图。',
@@ -2180,6 +2480,7 @@ export const dictionary = {
             dividerSubtitle: '从洞察到执行',
             title: '六个步骤完成天时推演',
             imageLabel: '战略节奏流程图',
+            imageUrl: '/images/page-cycles/cycles-img-04.jpeg',
             body: '严谨流程让时间智慧转化为实战方案。',
             points: [
               '前期访谈：了解目标、痛点与阶段规划。',
@@ -2196,6 +2497,7 @@ export const dictionary = {
             dividerSubtitle: '关键节点的指路灯',
             title: '为远见领导者而设',
             imageLabel: '领导团队节奏简报',
+            imageUrl: '/images/page-cycles/cycles-img-05.jpeg',
             body: '适合在扩张、转型或投资阶段，寻求时间先见与节奏掌控的决策者。',
             points: [
               '规划扩张或转型的企业创始人与高层。',
@@ -2210,6 +2512,7 @@ export const dictionary = {
             dividerSubtitle: '获得时间战略框架',
             title: '走在时间之前，而非之后',
             imageLabel: '时间战略蓝图',
+            imageUrl: '/images/page-cycles/cycles-img-06.jpeg',
             body: '你将清楚了解企业当前所处的时间阶段，并学会如何把“天时”转化为战略优势。《天时战略策》让领导者从事后应变走向事前掌控，当时间、战略与气场同频，成功就成为节奏的必然。'
           }
         ],
@@ -2241,6 +2544,7 @@ export const dictionary = {
             dividerSubtitle: '为何值得布局',
             title: '与命运节奏对齐',
             imageLabel: '时间与命运交织的意象',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-01.jpeg',
             body: '《皇极天数》是一门以“时空秩序”为核心的高精度玄学咨询。源自《皇极经世》的宇宙推演思想，它揭示命运运作的底层逻辑，让你看见事件为何发生、如何提前部署，真正做到顺势而行。',
           },
           {
@@ -2249,6 +2553,7 @@ export const dictionary = {
             dividerSubtitle: '掌握命运的底层节拍',
             title: '读懂时间背后的暗流',
             imageLabel: '命运节奏洞察图',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-02.jpeg',
             body: '人生的节奏从不随机，《皇极天数》让你看见推动结果的隐形力量。',
             points: [
               '运势流向：哪些年份能量上升、哪些阶段宜静观。',
@@ -2263,6 +2568,7 @@ export const dictionary = {
             dividerSubtitle: '数理与时间的联动',
             title: '天道数理与个人节奏的对接',
             imageLabel: '皇极数理运算示意',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-03.jpeg',
             body: '以天道数理为基础，通过时间推演与能量映射，找出你与世界运转之间的契合点。看清命运的逻辑之后，人生不再只是“遇到”，而是“掌握”。',
             points: [
               '一份命运地图，清楚知道时间站在哪一边。',
@@ -2276,6 +2582,7 @@ export const dictionary = {
             dividerSubtitle: '从资料到行动蓝图',
             title: '五个阶段完成专属推演',
             imageLabel: '皇极咨询流程板',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-04.jpeg',
             body: '层层推演，把玄学洞察化为可执行的节奏安排。',
             points: [
               '资料收集：确认出生或创立时间与聚焦主题。',
@@ -2291,6 +2598,7 @@ export const dictionary = {
             dividerSubtitle: '感知变化、需要验证的你',
             title: '为察觉节奏转向的决策者而设',
             imageLabel: '关键抉择的领导团队',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-05.jpeg',
             body: '适合所有需要先看清方向再行动的人。',
             points: [
               '正在做关键抉择的管理者与领导者。',
@@ -2305,6 +2613,7 @@ export const dictionary = {
             dividerSubtitle: '带走的不是预测',
             title: '获得时间编码的行动蓝图',
             imageLabel: '时间编码战略文件',
+            imageUrl: '/images/page-supreme-celestial/supreme-image-06.jpeg',
             body: '结果不是“好或不好”的判断，而是一份时间化的策略蓝图。你会知道哪些该冲、哪些该缓、哪些该放下，《皇极天数》让你重新与时间对齐，让好运成为节奏，而非偶然。',
           },
         ],

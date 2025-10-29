@@ -98,8 +98,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Submit your brief with objectives, operating horizon and team map to secure the next open slot. We only open a handful of intakes to maintain analytical depth.',
         primaryLabel: 'Book BaZi Strategy Call',
         primaryHref: '/contact',
-        secondaryLabel: 'Download Sample Insights',
-        secondaryHref: '/resources/four-pillars'
       },
       newsletterTitle: 'Executive Timing Intelligence',
       newsletterSubtitle: 'Monthly boardroom memos on celestial windows, capital moves and leadership stamina.'
@@ -201,8 +199,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Submit your objectives, stakeholders and discretion requirements to enter the imperial roster. We maintain a tight queue to guarantee confidentiality and depth.',
         primaryLabel: 'Book Imperial Consultation',
         primaryHref: '/contact',
-        secondaryLabel: 'Request Atlas Overview',
-        secondaryHref: '/resources/purple-star'
       },
       newsletterTitle: 'Stay in Imperial Orbit',
       newsletterSubtitle: 'Influence alerts, alliance case studies and celestial reputation cues curated for powerholders.'
@@ -277,8 +273,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Send your floor plans, growth targets and change roadmap so we can scope the engagement and reserve your slot.',
         primaryLabel: 'Schedule Alignment Call',
         primaryHref: '/contact',
-        secondaryLabel: 'Download Corporate Deck',
-        secondaryHref: '/resources/feng-shui'
       },
       newsletterTitle: 'Prosperous Floor Pulse',
       newsletterSubtitle: 'Launch windows, redesign checklists and boardroom rituals proven to lift KPIs.'
@@ -353,8 +347,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share coordinates, topographic data and development vision so we can scope the reconnaissance team and timeline.',
         primaryLabel: 'Plan My Expedition',
         primaryHref: '/contact',
-        secondaryLabel: 'See Landform Wins',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: 'Landform Intelligence Alerts',
       newsletterSubtitle: 'Terrain case studies, acquisition timing cues and qi stewardship strategies.'
@@ -429,8 +421,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share your current layout, annual priorities and available resources so we can craft the seasonal intervention roadmap.',
         primaryLabel: 'Unlock Seasonal Stewardship',
         primaryHref: '/contact',
-        secondaryLabel: 'Preview Seasonal Guide',
-        secondaryHref: '/resources/feng-shui'
       },
       newsletterTitle: 'Seasonal Layout Signals',
       newsletterSubtitle: 'Solar term reminders, ritual checklists and protection alerts delivered before each shift.'
@@ -505,8 +495,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share your architectural package, timelines and brand positioning so we can co-create the design roadmap.',
         primaryLabel: 'Start My Design Brief',
         primaryHref: '/contact',
-        secondaryLabel: 'See Design Outcomes',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: 'Matrix Design Notes',
       newsletterSubtitle: 'Star trend reports, palette inspirations and implementation tips for design teams.'
@@ -581,8 +569,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Outline your property vision, guest journey and success metrics so we can map the convergence roadmap and stakeholders.',
         primaryLabel: 'Submit Commission Brief',
         primaryHref: '/contact',
-        secondaryLabel: 'Explore Iconic Cases',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: 'Signature Field Signals',
       newsletterSubtitle: 'Launch rituals, staff alignment practices and ambience maintenance notes for flagship spaces.'
@@ -657,8 +643,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share your decision horizon and team structure so we can architect the hexagram intelligence cadence.',
         primaryLabel: 'Secure Advisory Window',
         primaryHref: '/contact',
-        secondaryLabel: 'Download Matrix Outline',
-        secondaryHref: '/resources/magnetic-matrix'
       },
       newsletterTitle: 'Hexagram Signals',
       newsletterSubtitle: 'Changing-line alerts, decision rituals and leadership prompts before each critical window.'
@@ -733,8 +717,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share your objectives, audience and timeline so we can assemble the research cell and delivery schedule.',
         primaryLabel: 'Start Naming Brief',
         primaryHref: '/contact',
-        secondaryLabel: 'View Naming Wins',
-        secondaryHref: '/case-studies/magnetic-matrix'
       },
       newsletterTitle: 'Naming Intelligence Digest',
       newsletterSubtitle: 'Phonetic trends, numerology tips and launch activation scripts delivered monthly.'
@@ -809,8 +791,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Outline your current transitions and relationship map so we can prepare the integrated numerology briefing.',
         primaryLabel: 'Schedule Blueprint Session',
         primaryHref: '/contact',
-        secondaryLabel: 'Explore Numerology Wins',
-        secondaryHref: '/case-studies/magnetic-matrix'
       },
       newsletterTitle: 'Soul Number Signals',
       newsletterSubtitle: 'Monthly number forecasts, compatibility prompts and ritual reminders.'
@@ -885,8 +865,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Share your floor plan, compass shots and family birth data so we can secure survey dates and prepare your bespoke evaluation dossier.',
         primaryLabel: 'Schedule My Audit',
         primaryHref: '/contact',
-        secondaryLabel: 'View Case Transformations',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: 'Home Energy Intelligence',
       newsletterSubtitle: 'Seasonal layout tweaks, auspicious move-in windows and live transformation stories.'
@@ -903,6 +881,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'What this service delivers',
           title: 'Imperial Strategy for Modern Decisions',
           imageLabel: 'Tai Yi celestial command chart',
+          imageUrl: '/images/page-taiyi/taiyi-img-01.jpg',
           body: `The Celestial Tai Yi Strategy is an advanced metaphysical consultation rooted in Tai Yi Shen Shu—the imperial art used to forecast shifts in destiny and power. It interprets where cosmic timing and human decision intersect so you know when to advance, when to pause, and where unseen opportunities are forming. Ancient celestial algorithms are translated into clear, actionable guidance for today.`
         },
         {
@@ -911,6 +890,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Precision timing intelligence',
           title: 'Know the Rhythm Behind Every Move',
           imageLabel: 'Celestial timing dashboard',
+          imageUrl: '/images/page-taiyi/taiyi-img-02.jpg',
           body: 'Tai Yi’s strength lies in timing clarity. It illuminates the landscape before events surface.',
           points: [
             'Strategic Momentum: phases destined for expansion or consolidation.',
@@ -925,6 +905,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Heaven · Earth · Human alignment',
           title: 'Decode the Cause-and-Timing Mechanism',
           imageLabel: 'Tri-layer Tai Yi resonance model',
+          imageUrl: '/images/page-taiyi/taiyi-img-03.jpg',
           body: 'Using the Tai Yi celestial model, every person or organisation is mapped against cosmic cycles to expose resonance, imbalance and potential.',
           points: [
             'Cycle cadence so you know when to accelerate and when to stabilise.',
@@ -938,6 +919,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'From intake to execution',
           title: 'Five Steps to Command Tai Yi Intelligence',
           imageLabel: 'Tai Yi strategy workflow board',
+          imageUrl: '/images/page-taiyi/taiyi-img-04.jpg',
           body: 'A tightly sequenced workflow converts celestial intelligence into ready-to-apply guidance.',
           points: [
             'Consultation Intake – clarify objectives across career, business or life decisions.',
@@ -953,6 +935,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Designed for inflection points',
           title: 'For Leaders Who Refuse to Move Blindly',
           imageLabel: 'Decision makers navigating change',
+          imageUrl: '/images/page-taiyi/taiyi-img-05.jpg',
           body: 'Ideal for anyone facing high-stakes transitions or mission-critical timing choices.',
           points: [
             'Leaders and founders navigating strategic crossroads.',
@@ -967,6 +950,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'What you receive',
           title: 'Leave with a Strategic Time Map',
           imageLabel: 'Time-coded opportunity blueprint',
+          imageUrl: '/images/page-taiyi/taiyi-img-06.jpg',
           body: 'You receive a strategic map—not vague predictions, but a timeline of opportunities, risks and inflection points. Celestial Tai Yi Strategy gives you the rare advantage of timing so you act before events unfold and steer destiny instead of reacting to it.'
         }
       ],
@@ -992,6 +976,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Strategic foresight in action',
           title: 'Ancient Foresight, Modern Command',
           imageLabel: 'Six Ren celestial decision grid',
+          imageUrl: '/images/page-sixren/sixren-img-01.jpeg',
           body: `The Divine Mechanism of Six Ren is a high-level metaphysical strategy consultation derived from Liu Ren Shen Shu—the classical art generals used to forecast outcomes before action. It decodes the interplay between time, people and circumstance so you can navigate turning points, anticipate unseen factors and decide in rhythm with Heaven.`
         },
         {
@@ -1000,6 +985,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Structure behind the chaos',
           title: 'Understand the Forces Shaping Tomorrow',
           imageLabel: 'Hidden dynamics intelligence board',
+          imageUrl: '/images/page-sixren/sixren-img-02.jpeg',
           body: 'Six Ren exposes the pattern within apparent chaos so you can move decisively.',
           points: [
             'Decision Timing: when to advance, pause or reposition.',
@@ -1014,6 +1000,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Heaven · Earth · Human interplay',
           title: 'Read the Living Energy Chessboard',
           imageLabel: 'Dynamic timing resonance map',
+          imageUrl: '/images/page-sixren/sixren-img-03.jpeg',
           body: 'Through Six Ren, every scenario becomes a living network of timing and energy flow. We observe how Heaven (timing), Earth (environment) and Human (decision) interact to pinpoint the moments where action converts into impact.',
           points: [
             'Panoramic understanding of your current situation.',
@@ -1027,6 +1014,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'From discovery to deployment',
           title: 'Five Steps to Harness Six Ren Intelligence',
           imageLabel: 'Six Ren consultation workflow',
+          imageUrl: '/images/page-sixren/sixren-img-04.jpeg',
           body: 'A disciplined sequence transforms metaphysical insight into decisive guidance.',
           points: [
             'Discovery Consultation – clarify context and primary goals.',
@@ -1042,6 +1030,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'Engineered for inflection points',
           title: 'For Those Who Lead from Foresight',
           imageLabel: 'Leaders sensing pivotal change',
+          imageUrl: '/images/page-sixren/sixren-img-05.jpeg',
           body: 'Designed for individuals and organisations who sense change and refuse to move blindly.',
           points: [
             'Entrepreneurs planning expansion or investment.',
@@ -1056,6 +1045,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: 'What you receive',
           title: 'A Strategic Lens for Invisible Forces',
           imageLabel: 'Invisible forces strategy map',
+          imageUrl: '/images/page-sixren/sixren-img-06.jpeg',
           body: 'You leave with a clear strategic lens—not vague prophecy. The Divine Mechanism of Six Ren equips you to anticipate outcomes, act at the right moment and neutralise risks before they form. It is built for decision-makers who know timing defines success.'
         }
       ],
@@ -1167,8 +1157,6 @@ export const CELESTIAL_SERVICES = {
         message: 'Provide mission objectives, stakeholders and deadlines so we can queue your operation and assemble the tactical cell.',
         primaryLabel: 'Book Qi Men Briefing',
         primaryHref: '/contact',
-        secondaryLabel: 'Request Tactical Overview',
-        secondaryHref: '/oracle/six-ren'
       },
       newsletterTitle: 'Tactical Window Alerts',
       newsletterSubtitle: 'Formation alerts, field notes and mission debrief invitations straight to your operations inbox.'
@@ -1374,8 +1362,6 @@ export const CELESTIAL_SERVICES = {
         message: '提交目标、关键关系与保密需求，即可进入帝星排程。我们维持小量名额确保深度与隐私。',
         primaryLabel: '预约帝星咨询',
         primaryHref: '/contact',
-        secondaryLabel: '索取图鉴简介',
-        secondaryHref: '/resources/purple-star'
       },
       newsletterTitle: '保持帝星轨道',
       newsletterSubtitle: '定期接收影响力提醒、联盟案例与声誉洞察。'
@@ -1450,8 +1436,6 @@ export const CELESTIAL_SERVICES = {
         message: '提交平面图、罗盘资料与家庭成员信息，我们将锁定勘察日期并准备专属报告。',
         primaryLabel: '预约宅运诊断',
         primaryHref: '/contact',
-        secondaryLabel: '查看成功案例',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: '宅运情报站',
       newsletterSubtitle: '季节布局提示、搬迁吉时与真实案例即时送达。'
@@ -1527,8 +1511,6 @@ export const CELESTIAL_SERVICES = {
         message: '提供平面图、成长目标与变革计划，我们将预留档期并拟定专案范围。',
         primaryLabel: '预约对接',
         primaryHref: '/contact',
-        secondaryLabel: '下载企业方案',
-        secondaryHref: '/resources/feng-shui'
       },
       newsletterTitle: '旺场节奏快讯',
       newsletterSubtitle: '启动吉时、空间改造与董事会议程仪式即时送达。'
@@ -1603,8 +1585,6 @@ export const CELESTIAL_SERVICES = {
         message: '提供地段坐标、地形资料与开发愿景，我们将规划勘察范围与团队。',
         primaryLabel: '安排实地勘查',
         primaryHref: '/contact',
-        secondaryLabel: '浏览地形案例',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: '地形情报速递',
       newsletterSubtitle: '掌握择地案例、购地天窗与长期养气秘诀。'
@@ -1679,8 +1659,6 @@ export const CELESTIAL_SERVICES = {
         message: '告诉我们现有布局、年度目标与资源配置，我们将设计节气干预路线。',
         primaryLabel: '启动季度守护',
         primaryHref: '/contact',
-        secondaryLabel: '预览节气指南',
-        secondaryHref: '/resources/feng-shui'
       },
       newsletterTitle: '节气情报',
       newsletterSubtitle: '即时掌握节气提醒、仪式清单与防护预警。'
@@ -1750,8 +1728,6 @@ export const CELESTIAL_SERVICES = {
         message: '提供建筑资料、时程与品牌定位，我们将共创专属设计路线。',
         primaryLabel: '开启设计简报',
         primaryHref: '/contact',
-        secondaryLabel: '查看设计成果',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: '矩阵设计笔记',
       newsletterSubtitle: '飞星趋势、配色灵感与施工要点一次掌握。'
@@ -1826,8 +1802,6 @@ export const CELESTIAL_SERVICES = {
         message: '说明物业愿景、嘉宾旅程与成功指标，我们将规划汇聚路线与关键参与者。',
         primaryLabel: '提交委案简报',
         primaryHref: '/contact',
-        secondaryLabel: '浏览标志案例',
-        secondaryHref: '/case-studies/feng-shui'
       },
       newsletterTitle: '能场情报',
       newsletterSubtitle: '掌握启动仪式、团队对齐与氛围维护的方法。'
@@ -1902,8 +1876,6 @@ export const CELESTIAL_SERVICES = {
         message: '说明决策周期与团队配置，我们将规划卦象情报节奏。',
         primaryLabel: '锁定顾问时段',
         primaryHref: '/contact',
-        secondaryLabel: '下载矩阵概要',
-        secondaryHref: '/resources/magnetic-matrix'
       },
       newsletterTitle: '卦象情报',
       newsletterSubtitle: '第一时间掌握动爻提醒、决策仪式与领导提示。'
@@ -1978,8 +1950,6 @@ export const CELESTIAL_SERVICES = {
         message: '说明目标受众、用途与时程，我们将规划研究小组与交付排程。',
         primaryLabel: '开始命名简报',
         primaryHref: '/contact',
-        secondaryLabel: '查看命名成果',
-        secondaryHref: '/case-studies/magnetic-matrix'
       },
       newsletterTitle: '命名情报站',
       newsletterSubtitle: '掌握音韵趋势、数理精选与启用仪式脚本。'
@@ -1995,6 +1965,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '太乙为何能定乾坤',
           title: '帝师级战略洞察',
           imageLabel: '太乙天盘策略图',
+          imageUrl: '/images/page-taiyi/taiyi-img-01.jpg',
           body: '《乾坤太乙策》源自《太乙神数》——帝师以此观星筹谋、推演权势走势。它解析“天时”与“人事”相交之处，告诉你何时出击、何时退守、哪里潜藏机会，让古老的天机成为现代决策的行动指南。'
         },
         {
@@ -2003,6 +1974,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '以时间掌控局势',
           title: '未动先知的战略透视',
           imageLabel: '天时节奏洞察板',
+          imageUrl: '/images/page-taiyi/taiyi-img-02.jpg',
           body: '太乙的核心是“知时而动”，在事件发生之前看清局势。',
           points: [
             '战略节奏：哪些阶段宜攻、哪些阶段宜守。',
@@ -2017,6 +1989,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '天·地·人三才同参',
           title: '看见成败的时间逻辑',
           imageLabel: '三层太乙共振模型',
+          imageUrl: '/images/page-taiyi/taiyi-img-03.jpg',
           body: '太乙以天、地、人三才模型，将个人或企业置于宇宙周期中推演共振与失衡，不算运气，只算成败背后的时间链。',
           points: [
             '掌握周期节奏，明白何时加速、何时沉稳。',
@@ -2030,6 +2003,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '五步完成太乙推演',
           title: '从洞察到行动的全链路',
           imageLabel: '太乙策略流程板',
+          imageUrl: '/images/page-taiyi/taiyi-img-04.jpg',
           body: '严谨的步骤把天机洞察转化为可立即应用的决策指令。',
           points: [
             '初步沟通：厘清目标与当前困境（事业、财富、重大决策）。',
@@ -2045,6 +2019,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '关键阶段的最佳助手',
           title: '给不愿盲走的决策者',
           imageLabel: '关键抉择的领导团队',
+          imageUrl: '/images/page-taiyi/taiyi-img-05.jpg',
           body: '适合正处于高风险转折或重大时间节点的人。',
           points: [
             '正在做战略抉择的管理者与企业家。',
@@ -2059,6 +2034,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '带走的不是预测',
           title: '掌握时间主导权',
           imageLabel: '时间编码决策图',
+          imageUrl: '/images/page-taiyi/taiyi-img-06.jpg',
           body: '你得到的是一份时间战略图——清楚列出机会、挑战与拐点，帮助你提前布局、主动出击。《乾坤太乙策》让你掌握时间的主动权，不再被命运推着走，而是亲自掌舵未来。'
         }
       ],
@@ -2084,6 +2060,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '以时间掌控局势',
           title: '古法先见，为当下决策而生',
           imageLabel: '六壬天盘策略图',
+          imageUrl: '/images/page-sixren/sixren-img-01.jpeg',
           body: '《六壬天机策》源自《六壬神数》，古代将相以此“未战先知”，把握局势、先人一步。它解析天时、人事与环境的互动，让你在变化来临前洞察关键节点、识别风险并作出最佳选择。这不是算命，而是一套以时间为武器的战略体系。'
         },
         {
@@ -2092,6 +2069,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '混乱背后的结构',
           title: '看懂命运的隐形布局',
           imageLabel: '隐性动能洞察板',
+          imageUrl: '/images/page-sixren/sixren-img-02.jpeg',
           body: '六壬揭示的是时机、选择与命运交织的结构，让你不再盲行。',
           points: [
             '行动时机：何时宜动、何时宜守、何时转向。',
@@ -2106,6 +2084,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '天·地·人三才同参',
           title: '读懂动态时间棋局',
           imageLabel: '六壬气机共振图',
+          imageUrl: '/images/page-sixren/sixren-img-03.jpeg',
           body: '在六壬视角下，万事万物是一张随时间、气机而变化的棋盘。通过推演天时（时间节奏）、地势（环境格局）与人应（决策行动），找出成败转化的关键瞬间。',
           points: [
             '掌握当下局势的全景视角。',
@@ -2119,6 +2098,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '从洞察到执行',
           title: '五个阶段完成六壬推演',
           imageLabel: '六壬咨询流程图',
+          imageUrl: '/images/page-sixren/sixren-img-04.jpeg',
           body: '严谨流程让玄学洞察转化为具备可执行性的战略建议。',
           points: [
             '初步沟通：厘清处境与核心目标。',
@@ -2134,6 +2114,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '关键抉择者的工具',
           title: '给站在十字路口的你',
           imageLabel: '关键决策的领导团队',
+          imageUrl: '/images/page-sixren/sixren-img-05.jpeg',
           body: '适合身处关键阶段、需要时间先见与节奏掌控的人。',
           points: [
             '筹划扩张或投资的创业者。',
@@ -2148,6 +2129,7 @@ export const CELESTIAL_SERVICES = {
           dividerSubtitle: '带走的是真正的掌控力',
           title: '在对的时间做对的事',
           imageLabel: '隐形动能战略图',
+          imageUrl: '/images/page-sixren/sixren-img-06.jpeg',
           body: '你得到的是一份清晰的战略视角：看见隐藏的力量，提前布局，危机未起先化，机会未显先动。《六壬天机策》让努力与天时同步，让决定更有方向感。'
         }
       ],
@@ -2232,8 +2214,6 @@ export const CELESTIAL_SERVICES = {
         message: '说明目前的转折与关系地图，我们将准备整合式灵数简报。',
         primaryLabel: '预约蓝图会议',
         primaryHref: '/contact',
-        secondaryLabel: '览阅灵数成果',
-        secondaryHref: '/case-studies/magnetic-matrix'
       },
       newsletterTitle: '灵数情报',
       newsletterSubtitle: '获取月度数字预测、关系提醒与仪式提示。'
@@ -2335,8 +2315,6 @@ export const CELESTIAL_SERVICES = {
         message: '提交任务目标、关键角色与时限，我们将进入作战排程并组建战术小组。',
         primaryLabel: '预约奇门简报',
         primaryHref: '/contact',
-        secondaryLabel: '索取战术白皮书',
-        secondaryHref: '/oracle/six-ren'
       },
       newsletterTitle: '抢先掌握天时战窗',
       newsletterSubtitle: '定期获得阵法预警、实战笔记与作战复盘邀请。'

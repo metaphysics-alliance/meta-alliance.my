@@ -181,6 +181,8 @@ Work Log (for resume)
 - MA-FIX-NAV-SYNTAX-2025-10-20T15:30:00+08:00: Fixed syntax errors in the navigation object in dictionary.js.
 - MA-FIX-CELESTIAL-SYNTAX-2025-10-20T16:00:00+08:00: Fixed syntax errors in celestialContent.js.
 - MA-FIX-CELESTIAL-SYNTAX-AGAIN-2025-10-20T16:30:00+08:00: Fixed syntax errors in celestialContent.js again.
+- MA-ADVANCED-BLUEPRINT-CN-SYNC-2025-10-29T16:15:27+08:00: Restored the CN Advanced Destiny Blueprint service content so `/vip-report/pro` renders localized data in both stacks.
+- MA-SUPREME-IMAGERY-SEQUENCE-2025-10-29T16:21:21+08:00: Wired sequential Supreme Blueprint hero images to each section across EN/CN `/vip-report/supreme` content.
 - MA-SUPREME-CELESTIAL-REFRESH-2025-10-26T01:52:01+08:00: Rewrote Supreme Celestial Numbers Oracle content and CTA per the new design layout across both stacks.
 - MA-CONTACT-PRO-CTA-2025-10-27T12:07:25+08:00: Updated Contact hero headline and Malaysia state label across Next/Vite forms to match new wording.
 - MA-CONTACT-PRO-HERO-2025-10-27T13:23:05+08:00: Synced the Vite contact hero copy to “Contact Our Professionals” so both stacks display the new main title.
@@ -196,7 +198,7 @@ Work Log (for resume)
 - MA-SUPREME-BLUEPRINT-OUTCOME-2025-10-27T17:31:03+08:00: Synced Supreme Destiny Blueprint How It Works and Outcome copy with the latest doc structure across EN/CN.
 - MA-ACADEMY-COURSE-OVERVIEW-2025-10-27T18:46:29+08:00: Designed the bilingual Academy course overview pages with the new mastery pathway structure across Next and Vite stacks.
 - MA-HERO-GLOBAL-CTA-2025-10-27T22:16:33+08:00: Added matching hero/banner CTA buttons (excluding home/about/contact) using each page’s primary CTA copy across both stacks.
-- MA-ACADEMY-MENU-REALIGN-2025-10-27T23:18:43+08:00: Reordered Academy navigation to courses → foundation → beginner → advanced → professional and removed calendar links across both stacks.
+- MA-ACADEMY-MENU-REALIGN-2025-10-27T23:18:43+08:00: Reordered Academy navigation to courses > foundation > beginner > advanced > professional and removed calendar links across both stacks.
 - MA-ACADEMY-FOUNDATION-DESIGN-2025-10-27T23:37:55+08:00: Built a bilingual Chinese Metaphysics Foundation page with hero CTAs, structured sections, and mirrored Vite routing/components.
 - MA-ACADEMY-FOUNDATION-FAQ-2025-10-27T23:41:18+08:00: Replaced the map section with a dedicated FAQ block for the Foundation course and mirrored it in the SPA detail page.
 - MA-ACADEMY-FOUNDATION-FAQ-REFINE-2025-10-28T00:32:49+08:00: Removed duplicate FAQ renders and replaced with Foundation-specific Q&A in both EN/CN dictionaries and layouts.
@@ -204,5 +206,14 @@ Work Log (for resume)
 - MA-ACADEMY-BEGINNER-REDESIGN-2025-10-28T01:45:00+08:00: Rebuilt the Beginner course content (EN/CN) from the new layout, updated Next/Vite pages, and aligned hero/CTA actions.
 - MA-ACADEMY-INTERMEDIATE-REDESIGN-2025-10-28T02:20:00+08:00: Authored the Advanced Course content in EN/CN, updated Next/Vite routes, and synced hero plus CTA structure with the new integration blueprint.
 - MA-ACADEMY-PROFESSIONAL-REDESIGN-2025-10-28T02:55:00+08:00: Delivered the professional certification course copy (EN/CN), rebuilt the Next/Vite pages, and wired the hero/CTA flows to the shared dictionary.
- - MA-NEXT-BUILD-HERO-FIX-2025-10-28T03:20:00+08:00: Replaced missing Banner import with Hero in app/components/CelestialServicePage.tsx to restore Next build.
- - MA-LINT-CLEANUP-2025-10-28T16:45:00+08:00: Fixed lint blockers across worker, components, and pages; allowed non-blocking Tailwind warnings.
+- MA-NEXT-BUILD-HERO-FIX-2025-10-28T03:20:00+08:00: Replaced missing Banner import with Hero in app/components/CelestialServicePage.tsx to restore Next build.
+- MA-LINT-CLEANUP-2025-10-28T16:45:00+08:00: Fixed lint blockers across worker, components, and pages; allowed non-blocking Tailwind warnings.
+- MA-VIP-PRO-HOW-IT-WORKS-CN-SYNC-2025-10-29T19:57:59+08:00: Synced vip-report/pro CN "How It Works" copy with the Advanced Destiny Blueprint layout and restored the bullet list cadence.
+- MA-ADV-BLUEPRINT-IMAGERY-2025-10-29T20:26:57+08:00: Assigned page-360-advanced imagery sequentially to every Advanced Destiny Blueprint section across both stacks.
+- MA-ENTERPRISE-AUDIT-IMAGERY-2025-10-29T21:05:25+08:00: Mapped page-audit visuals to each Corporate Destiny Intelligence section so /enterprise/audit cards render the new artwork in order.
+- MA-ENTERPRISE-SITE-IMAGERY-2025-10-29T21:38:34+08:00: Applied page-site imagery sequence to every Enterprise Site Strategy section in EN/CN so the site cards mirror the new visuals.
+- MA-ENTERPRISE-CYCLES-IMAGERY-2025-10-29T22:03:31+08:00: Wired page-cycles artwork sequentially into each Enterprise Strategy & Cycle Intelligence section across both stacks.
+- MA-ACADEMY-NAV-LABELS-2025-10-29T22:12:19+08:00: Renamed EN Academy menu items to "Beginner Course" and "Advanced Course" for clearer labelling.
+- MA-IMPERIAL-CTA-TUNE-2025-10-29T22:25:31+08:00: Removed the secondary CTA from Imperial Star Atlas so only the primary consultation button remains.
+- MA-QIMEN-CTA-TUNE-2025-10-29T22:27:10+08:00: Removed the secondary CTA from Arcane Strategy Matrix, leaving just the briefing button on the page.
+- MA-CELESTIAL-CTA-PRIMARY-ONLY-2025-10-29T22:28:29+08:00: Cleared secondary CTAs across Celestial services so each page shows only the main consultation button.
