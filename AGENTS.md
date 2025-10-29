@@ -217,3 +217,4 @@ Work Log (for resume)
 - MA-IMPERIAL-CTA-TUNE-2025-10-29T22:25:31+08:00: Removed the secondary CTA from Imperial Star Atlas so only the primary consultation button remains.
 - MA-QIMEN-CTA-TUNE-2025-10-29T22:27:10+08:00: Removed the secondary CTA from Arcane Strategy Matrix, leaving just the briefing button on the page.
 - MA-CELESTIAL-CTA-PRIMARY-ONLY-2025-10-29T22:28:29+08:00: Cleared secondary CTAs across Celestial services so each page shows only the main consultation button.
+- MA-ASSET-UPDATE-2025-10-29T23:10:00+08:00: feat(assets): update images for name and numerology pages
