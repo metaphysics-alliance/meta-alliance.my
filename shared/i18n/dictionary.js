@@ -46,6 +46,7 @@ export const dictionary = {
       audit: 'Corporate Destiny Intelligence',
       site: 'Enterprise Site Strategy',
       cycles: 'Enterprise Strategy Intelligence',
+      pricing: 'Pricing',
       resources: 'Resources',
       four_pillars: 'Cosmic Four Pillars Chart',
       purple_star: 'Celestial Star Oracle Chart',
@@ -85,6 +86,353 @@ export const dictionary = {
           ],
         },
       ],
+    },
+    pricing: {
+      heroTitle: 'Pricing & Engagement Levels',
+      heroSubtitle: 'Precision metaphysics for visionary leaders, heirs and enterprise teams.',
+      heroDescription: 'Fees are quoted in Malaysian Ringgit (MYR). Engagements commence once objectives are confirmed and a 50% retainer is received. Remaining balance is due on delivery of the primary dossier or consultation.',
+      noticeTitle: 'Every engagement includes',
+      noticePoints: [
+        'Discovery briefing to capture objectives, decision-makers and constraints.',
+        'True Solar Time calibration plus multi-method cross-verification.',
+        'Bilingual deliverables (EN/CN) with executive-ready summaries.',
+        '30-day post-delivery support via email for implementation clarifications.'
+      ],
+      currencyNote: 'All fees are exclusive of travel, on-site assessments and applicable taxes. International work is billed in MYR or USD at prevailing rates.',
+      categories: [
+        {
+          key: 'celestial',
+          title: 'Celestial Intelligence',
+          subtitle: 'Deep personal mastery programmes for founders, investors and mission-critical talent.',
+          tiers: [
+            {
+              name: 'Destiny Algorithm (BaZi)',
+              price: 'RM 6,888',
+              cadence: 'per executive blueprint',
+              href: '/services/celestial/destiny-algorithm',
+              features: [
+                '180-page bilingual dossier covering destiny code, influence and focus cycles.',
+                '90-minute strategy consult with 12-month action map.',
+                'True Solar Time sequencing plus relationship and leadership overlays.'
+              ]
+            },
+            {
+              name: 'Imperial Star Atlas (Zi Wei Dou Shu)',
+              price: 'RM 9,888',
+              cadence: 'per atlas issuance',
+              href: '/services/celestial/imperial-star-atlas',
+              features: [
+                'Palace-by-palace orchestration for influence, capital and public positioning.',
+                'Six major activation windows aligned to stakeholder and media cadence.',
+                'Private counsel covering succession, alliances and reputation architecture.'
+              ]
+            },
+            {
+              name: 'Arcane Strategy Matrix (Qi Men Dun Jia)',
+              price: 'RM 8,588',
+              cadence: 'per mission deployment',
+              href: '/services/celestial/arcane-strategy-matrix',
+              features: [
+                'Tactical formations for launches, negotiations or critical transitions.',
+                'Mission dashboard with hourly portals, portals to avoid and decoy paths.',
+                '30-day live support during the active operation window.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'spatial',
+          title: 'Feng Shui & Spatial Intelligence',
+          subtitle: 'Spatial command for residences, offices and flagship locations.',
+          tiers: [
+            {
+              name: 'Home Destiny Compass',
+              price: 'RM 7,288',
+              cadence: 'per residence',
+              href: '/services/fengshui/home-destiny-compass',
+              features: [
+                'On-site or digital audit covering layout, landform and annual renewals.',
+                'Life palace alignment matched to household BaZi charts.',
+                'Activation calendar covering twelve months of adjustments.'
+              ]
+            },
+            {
+              name: 'Office Power Alignment',
+              price: 'RM 12,588',
+              cadence: 'per floor or site',
+              href: '/services/fengshui/office-power-alignment',
+              features: [
+                'Executive command placement, revenue flow choreography and team zoning.',
+                'Leadership sanctuary and war-room shielding for critical decisions.',
+                'Quarterly tuning schedule plus renovation governance protocol.'
+              ]
+            },
+            {
+              name: 'Dragon Vein Oracle',
+              price: 'RM 11,888',
+              cadence: 'per site study',
+              href: '/services/fengshui/dragon-vein-oracle',
+              features: [
+                'Macro landform reconnaissance with geomantic risk scoring.',
+                'Directional pairing for entrances, signage and water features.',
+                'Timing overlays for acquisition, groundbreaking and activation.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'magnetic',
+          title: 'Magnetic Matrix & Numerology',
+          subtitle: 'Energy recalibration for naming, communication and personal rhythm.',
+          tiers: [
+            {
+              name: 'I-Ching Energy Matrix',
+              price: 'RM 4,288',
+              cadence: 'per report',
+              href: '/services/magnetic-matrix/i-ching-energy-matrix',
+              features: [
+                'Hexagram-based personality, motive and decision rhythm decoding.',
+                'Six-month timing arcs highlighting accelerate versus consolidate phases.',
+                'Daily practice stack to stabilise energy leak points.'
+              ]
+            },
+            {
+              name: 'Name Destiny Code',
+              price: 'RM 3,688',
+              cadence: 'per naming cycle',
+              href: '/services/magnetic-matrix/name-destiny-code',
+              features: [
+                'Full vibration audit of current identity across languages and scripts.',
+                'Strategic renaming proposals aligned to destiny and industry resonance.',
+                'Implementation guide covering legal, digital and public roll-out.'
+              ]
+            },
+            {
+              name: 'Soul Number Blueprint',
+              price: 'RM 2,988',
+              cadence: 'per blueprint',
+              href: '/services/magnetic-matrix/soul-number-blueprint',
+              features: [
+                'Numerology pathways for intuition, creativity and fulfilment.',
+                'Talent acceleration routines matched to core and destiny numbers.',
+                'Relationship compatibility insights with collaboration guardrails.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'imperial',
+          title: 'Imperial Oracles',
+          subtitle: 'High ceremony consultations for sovereign decisions and national scale projects.',
+          tiers: [
+            {
+              name: 'Supreme Celestial Numbers',
+              price: 'RM 12,888',
+              cadence: 'per imperial cycle',
+              href: '/oracle/celestial-numbers',
+              features: [
+                'True Solar Time matrices correlating to national and global cycles.',
+                'Court of eight analysis for influence, risk and protection strategies.',
+                'Three-part briefing (strategy, mitigation, activation) with slide deck.'
+              ]
+            },
+            {
+              name: 'Cosmic Tai Yi Strategy',
+              price: 'RM 10,888',
+              cadence: 'per directive',
+              href: '/oracle/taiyi-numbers',
+              features: [
+                'Tai Yi flight path for geopolitical or capital-intensive moves.',
+                'Heaven, Earth and Human harmonisation ledger with priority actions.',
+                'Optional emergency recalibration session within 45 days.'
+              ]
+            },
+            {
+              name: 'Mystical Mechanism of Six Ren',
+              price: 'RM 9,688',
+              cadence: 'per mission',
+              href: '/oracle/six-ren',
+              features: [
+                'Six Ren board casting for conflict resolution and covert manoeuvres.',
+                'Enemy and ally positioning grid with probability markers.',
+                'Rapid-response counsel throughout the chosen timing window.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'academy',
+          title: 'Academy Mastery Path',
+          subtitle: 'Four-stage curriculum guiding practitioners from foundations to professional certification.',
+          tiers: [
+            {
+              name: 'Foundation Course',
+              price: 'RM 2,888',
+              cadence: 'per intake (6 weeks)',
+              href: '/academy/foundation',
+              features: [
+                'Six-week live intensive covering classical frameworks and timing fundamentals.',
+                'Interactive chart labs introducing BaZi, Zi Wei and Qi Men toolkits.',
+                'Bilingual workbooks with lifetime access to recorded sessions.'
+              ]
+            },
+            {
+              name: 'Beginner Course',
+              price: 'RM 4,288',
+              cadence: 'per intake (8 weeks)',
+              href: '/academy/beginner',
+              features: [
+                'Case-led workshops applying destiny diagnostics to real scenarios.',
+                'Weekly office hours for personalised guidance and practice feedback.',
+                'Peer study pods to reinforce technique and accountability.'
+              ]
+            },
+            {
+              name: 'Advanced Course',
+              price: 'RM 5,888',
+              cadence: 'per cohort (10 weeks)',
+              href: '/academy/intermediate',
+              features: [
+                'Cross-discipline synthesis bridging destiny, space and timing intelligence.',
+                'Enterprise playbooks translating metaphysics into board-level language.',
+                'Capstone project with instructor critique and refinement.'
+              ]
+            },
+            {
+              name: 'Professional Certification',
+              price: 'RM 8,888',
+              cadence: 'per cohort (12 weeks)',
+              href: '/academy/professional',
+              features: [
+                'Supervised client simulations covering intake, analysis and delivery.',
+                'Ethics, governance and documentation standards for professional practice.',
+                'Certification panel review plus alumni community access.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'vip360',
+          title: '360 Holistic Destiny Blueprint',
+          subtitle: 'Three-tier holographic destiny intelligence for private clients and family offices.',
+          tiers: [
+            {
+              name: 'Essential Destiny Blueprint',
+              price: 'RM 9,888',
+              cadence: 'per blueprint',
+              href: '/vip-report/essential',
+              features: [
+                '120-page personalised dossier covering destiny code, wealth flow and career resonance.',
+                '10-year and annual timing overlays with priority action steps.',
+                'Discovery consult plus 75-minute walkthrough session with email support for 30 days.'
+              ]
+            },
+            {
+              name: 'Advanced Destiny Blueprint',
+              price: 'RM 14,888',
+              cadence: 'per blueprint',
+              href: '/vip-report/pro',
+              features: [
+                '220-page deep analysis integrating name energy, numerology and multi-system triangulation.',
+                'Leadership, relationship and capital orchestration matrices with contingency triggers.',
+                'Two consultation sessions (strategy + implementation) and bespoke timing calendar.'
+              ]
+            },
+            {
+              name: 'Supreme Destiny Blueprint',
+              price: 'RM 23,888',
+              cadence: 'per blueprint',
+              href: '/vip-report/supreme',
+              features: [
+                '320-page full holographic masterplan uniting destiny, Feng Shui, numerology and True Solar Time.',
+                'Family governance, legacy and asset allocation blueprints with risk mitigation protocols.',
+                'Extended concierge support for 60 days including on-call timing advisories.'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'enterprise',
+          title: 'Enterprise Command Deck',
+          subtitle: 'Board-level intelligence aligning destiny, timing and operational execution.',
+          tiers: [
+            {
+              name: 'Corporate Destiny Intelligence',
+              price: 'RM 18,588',
+              cadence: 'per enterprise',
+              href: '/enterprise/audit',
+              features: [
+                'Founding chart with leadership resonance audit and wealth channels.',
+                'Operational risk scan across markets, people and space.',
+                'Three-tier action sequence covering defend, expand and diversify moves.'
+              ]
+            },
+            {
+              name: 'Enterprise Site Strategy',
+              price: 'RM 22,088',
+              cadence: 'per location short-list',
+              href: '/enterprise/site',
+              features: [
+                'Landform, directional and timing evaluation for up to three sites.',
+                'Scoring matrix with prosperity, resilience and compliance indicators.',
+                'Implementation playbook for design, phasing and go-live timing.'
+              ]
+            },
+            {
+              name: 'Enterprise Strategy & Cycle Intelligence',
+              price: 'RM 16,588',
+              cadence: 'per annual planning cycle',
+              href: '/enterprise/cycles',
+              features: [
+                'Ten-year and annual rhythm map for growth, consolidation and pause phases.',
+                'Leadership cadence dashboard with succession safeguards.',
+                'Strategy calendar aligning launches, capital moves and partner rotations.'
+              ]
+            }
+          ]
+        }
+      ],
+      addOnsTitle: 'Retainers & Enhancements',
+      addOns: [
+        {
+          name: 'Executive Concierge Retainer',
+          price: 'From RM 5,000 / month',
+          features: [
+            'Priority WhatsApp and email counsel for real-time decisions.',
+            'Monthly timing brief aligned to board or family governance cadence.',
+            'On-call charting for travel, alliances and investments (up to four events).'
+          ]
+        },
+        {
+          name: 'On-Site Immersion',
+          price: 'From RM 3,800 / day + expenses',
+          features: [
+            'In-person walkthrough, interviews and environment tuning.',
+            'Immediate adjustments with leadership training for implementation.',
+            'Follow-up summary within 72 hours.'
+          ]
+        },
+        {
+          name: 'Confidential Briefing Deck',
+          price: 'RM 2,288',
+          features: [
+            'Executive slide deck translating metaphysics into board language.',
+            'Risk, opportunity and timing matrices for stakeholders.',
+            'Editable format for internal circulation with usage guidelines.'
+          ]
+        }
+      ],
+      finePrintTitle: 'Fine print',
+      finePrint: [
+        'Time-sensitive missions (under 7 days notice) incur a 25% rush premium.',
+        'International travel is billed at business-class rates with two support days minimum.',
+        'Engagements cancelled within 14 days of delivery forfeit the retainer.',
+        'Payment options include bank transfer, FPX and corporate card (3% surcharge).'
+      ],
+      cta: {
+        label: 'Discuss a custom bundle',
+        href: '/contact'
+      }
     },
   vip: {
     section_title: 'VIP Holistic Destiny Analysis Service',
@@ -1787,6 +2135,7 @@ export const dictionary = {
       audit: '企业风水格局',
       site: '天元企业选址',
       cycles: '企业战略布局',
+      pricing: '服务定价',
       resources: '资源库',
       four_pillars: '四柱命盘',
       purple_star: '紫微星图',
@@ -1826,6 +2175,353 @@ export const dictionary = {
           ]
         },
       ],
+    },
+    pricing: {
+      heroTitle: '服务套餐与定价',
+      heroSubtitle: '为领袖、传承者与企业团队量身打造的高精度玄学方案。',
+      heroDescription: '以上价格以马来西亚令吉（MYR）计价。确认目标并完成50%订金后启动项目，余款于交付核心报告或咨询当日结清。',
+      noticeTitle: '每项服务均包含',
+      noticePoints: [
+        '启动访谈：梳理目标、关键决策者与限制条件。',
+        '真太阳时校准并以多术数交叉验证成果。',
+        '中英双语交付，附高层摘要与执行摘要。',
+        '交付后30天内提供邮件支持，协助落地与答疑。'
+      ],
+      currencyNote: '费用不含差旅、现场勘查与相关税费。国际项目可按MYR或USD结算，汇率以签约当日为准。',
+      categories: [
+        {
+          key: 'celestial',
+          title: '命运情报体系',
+          subtitle: '适用于创办人、投资人及关键岗位人才的深度命理项目。',
+          tiers: [
+            {
+              name: '命运算法（八字）',
+              price: 'RM 6,888',
+              cadence: '每位高层调研',
+              href: '/services/celestial/destiny-algorithm',
+              features: [
+                '180页中英双语命盘，涵盖命局、影响力与节奏窗口。',
+                '90分钟策略咨询，附12个月行动路线。',
+                '真太阳时推演，结合关系与领导力位置分析。'
+              ]
+            },
+            {
+              name: '帝星天图（紫微）',
+              price: 'RM 9,888',
+              cadence: '每份帝星天图',
+              href: '/services/celestial/imperial-star-atlas',
+              features: [
+                '十二宫位深度解析，定位权力、资本与公众叙事。',
+                '六个重点启动窗口，匹配利益相关者与媒体节奏。',
+                '传承、联盟与声誉布局的高层保密简报。'
+              ]
+            },
+            {
+              name: '玄机战策（奇门）',
+              price: 'RM 8,588',
+              cadence: '每次任务部署',
+              href: '/services/celestial/arcane-strategy-matrix',
+              features: [
+                '针对发布、谈判或转折的奇门局布阵。',
+                '任务仪表板：吉门、禁门、干扰路径一目了然。',
+                '行动期内提供30天实时支援。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'spatial',
+          title: '风水与空间指挥',
+          subtitle: '涵盖住宅、总部及旗舰场所的气场营造。',
+          tiers: [
+            {
+              name: '宅运天机',
+              price: 'RM 7,288',
+              cadence: '每处住宅',
+              href: '/services/fengshui/home-destiny-compass',
+              features: [
+                '现场或远程勘查，涵盖格局、地势与年度飞星。',
+                '家庭成员命盘对位，配置睡眠、工作与学习区。',
+                '提供12个月的激活与调整日历。'
+              ]
+            },
+            {
+              name: '权势风水',
+              price: 'RM 12,588',
+              cadence: '每层/每处办公空间',
+              href: '/services/fengshui/office-power-alignment',
+              features: [
+                '高层指挥区、业绩动线与团队分区的全盘布局。',
+                '高价值会议室与决策室的保护与强化方案。',
+                '季度调校计划与装修动工把关流程。'
+              ]
+            },
+            {
+              name: '龙脉圣图',
+              price: 'RM 11,888',
+              cadence: '每个选址项目',
+              href: '/services/fengshui/dragon-vein-oracle',
+              features: [
+                '宏观地势扫描与龙脉风险评分。',
+                '入口、标识与水体的朝向组合建议。',
+                '取得、动土与启用的时间窗口规划。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'magnetic',
+          title: '磁场矩阵与数字命理',
+          subtitle: '用于命名、品牌讯息与个人节奏的能量校准。',
+          tiers: [
+            {
+              name: '太极数场',
+              price: 'RM 4,288',
+              cadence: '每份数场报告',
+              href: '/services/magnetic-matrix/i-ching-energy-matrix',
+              features: [
+                '以易经卦象解析个性、动机与决策节奏。',
+                '六个月节奏曲线：何时冲刺、何时蓄势。',
+                '每日修炼建议，封堵能量流失点。'
+              ]
+            },
+            {
+              name: '名格天命',
+              price: 'RM 3,688',
+              cadence: '每轮命名',
+              href: '/services/magnetic-matrix/name-destiny-code',
+              features: [
+                '多语言、多字母体系的现有姓名振频审核。',
+                '提供若干优化方案，匹配命盘与行业属性。',
+                '附法律、数字化与对外发布的同步规划。'
+              ]
+            },
+            {
+              name: '灵数天机',
+              price: 'RM 2,988',
+              cadence: '每份灵数蓝图',
+              href: '/services/magnetic-matrix/soul-number-blueprint',
+              features: [
+                '数字命理拆解直觉、创造力与满足路径。',
+                '匹配核心与命运数字的才能加速练习。',
+                '关系契合度分析，提供合作守护界线。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'imperial',
+          title: '帝皇天策',
+          subtitle: '适用于国家级、跨国或高敏感度决策的尊享咨询。',
+          tiers: [
+            {
+              name: '皇极天数',
+              price: 'RM 12,888',
+              cadence: '每次推演',
+              href: '/oracle/celestial-numbers',
+              features: [
+                '真太阳时矩阵，映射全球与国家层级周期。',
+                '八宫权力分析，定位影响力、风险与护卫策略。',
+                '三段式简报：战略、化解与启动步骤。'
+              ]
+            },
+            {
+              name: '乾坤太乙策',
+              price: 'RM 10,888',
+              cadence: '每次策略',
+              href: '/oracle/taiyi-numbers',
+              features: [
+                '太乙飞盘推演，用于地缘、资本或大型部署。',
+                '天地人三才合一的优先行动清单。',
+                '45天内提供一次紧急复盘调校。'
+              ]
+            },
+            {
+              name: '六壬神机数',
+              price: 'RM 9,688',
+              cadence: '每次任务',
+              href: '/oracle/six-ren',
+              features: [
+                '六壬布盘，洞察冲突化解与隐秘行动。',
+                '敌我势能图与概率评估。',
+                '任务窗口内提供实时策略指引。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'academy',
+          title: '学院大师路径',
+          subtitle: '四段式课程体系，陪伴学员从入门到专业执业。',
+          tiers: [
+            {
+              name: '玄学基础课程',
+              price: 'RM 2,888',
+              cadence: '每期（6周）',
+              href: '/academy/foundation',
+              features: [
+                '6 周直播强化班，打牢古典术数与时间节奏基础。',
+                '课堂数盘实验，实操八字、紫微与奇门基础工具。',
+                '提供中英对照教材与录播永久访问。'
+              ]
+            },
+            {
+              name: '初阶课程',
+              price: 'RM 4,288',
+              cadence: '每期（8周）',
+              href: '/academy/beginner',
+              features: [
+                '案例工作坊，将命理诊断应用到真实情境。',
+                '每周导师答疑与一对一练习反馈。',
+                '学习小组制度，强化技巧与执行力。'
+              ]
+            },
+            {
+              name: '进阶课程',
+              price: 'RM 5,888',
+              cadence: '每期（10周）',
+              href: '/academy/intermediate',
+              features: [
+                '跨术数整合，串联命运、空间与时机的策略打法。',
+                '企业沟通模版，翻译玄学语言成董事会可用的指令。',
+                '导师批改的结业项目，帮助优化实务流程。'
+              ]
+            },
+            {
+              name: '专业认证',
+              price: 'RM 8,888',
+              cadence: '每期（12周）',
+              href: '/academy/professional',
+              features: [
+                '模拟客户全流程：访谈、分析、交付与复盘。',
+                '职业伦理、合规与文档标准训练。',
+                '认证评审与校友网络支持，续建实战资源。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'vip360',
+          title: '360 全维度蓝图',
+          subtitle: '为私人客户与家族办公室打造的三层命运指挥系统。',
+          tiers: [
+            {
+              name: '命运蓝图·启程版',
+              price: 'RM 9,888',
+              cadence: '每份蓝图',
+              href: '/vip-report/essential',
+              features: [
+                '120 页专属命盘报告，涵盖财富流向、事业共振与关系定位。',
+                '十年与年度节奏叠图，标记优先行动与风险节点。',
+                '启动访谈 + 75 分钟交付说明，并提供 30 天邮件支持。'
+              ]
+            },
+            {
+              name: '天机剖象·进阶版',
+              price: 'RM 14,888',
+              cadence: '每份蓝图',
+              href: '/vip-report/pro',
+              features: [
+                '220 页深度洞察，整合姓名能量、数字命理与多术数交叉验证。',
+                '领导、关系与资本布局矩阵，附风险缓冲与对策流程。',
+                '两次咨询（策略 + 落地）与专属时机甘特图。'
+              ]
+            },
+            {
+              name: '乾坤至尊·全息版',
+              price: 'RM 23,888',
+              cadence: '每份蓝图',
+              href: '/vip-report/supreme',
+              features: [
+                '320 页全息指挥方案，融合命盘、风水、数字命理与真太阳时。',
+                '家族治理、资产配置与传承路线图，内含风险化解机制。',
+                '60 天高层顾问支援，含即时择日与行动窗口更新。'
+              ]
+            }
+          ]
+        },
+        {
+          key: 'enterprise',
+          title: '企业战略指挥中心',
+          subtitle: '为董事会与家族企业提供命运、时机与执行的整体框架。',
+          tiers: [
+            {
+              name: '企业风水格局',
+              price: 'RM 18,588',
+              cadence: '每家企业',
+              href: '/enterprise/audit',
+              features: [
+                '创立命盘、领导共振与财富渠道的全景诊断。',
+                '市场、人事与空间的风险扫描。',
+                '拆解「守、攻、转」三层行动序列。'
+              ]
+            },
+            {
+              name: '天元企业选址',
+              price: 'RM 22,088',
+              cadence: '每三处候选地点',
+              href: '/enterprise/site',
+              features: [
+                '地形、朝向与时间三维评估，最多覆盖三处地点。',
+                '繁荣、韧性与合规指数评分。',
+                '设计、分期与启用时间的一体化方案。'
+              ]
+            },
+            {
+              name: '企业战略布局',
+              price: 'RM 16,588',
+              cadence: '每个年度周期',
+              href: '/enterprise/cycles',
+              features: [
+                '十年与年度节奏图，标记扩张、整顿与静养阶段。',
+                '领导梯队节奏仪表板与接班防护。',
+                '产品发布、资本动作与合作轮换的时间蓝图。'
+              ]
+            }
+          ]
+        }
+      ],
+      addOnsTitle: '增值服务与长期顾问',
+      addOns: [
+        {
+          name: '高层顾问保留制',
+          price: '每月 RM 5,000 起',
+          features: [
+            'WhatsApp 与邮箱优先响应，实时决策支援。',
+            '每月时机简报，配合董事会或家族会议。',
+            '每月最多四个事件的额外排盘与择日。'
+          ]
+        },
+        {
+          name: '现场沉浸式工作坊',
+          price: '每日 RM 3,800 起 + 差旅',
+          features: [
+            '现场踏勘、访谈与气场微调。',
+            '即时校正并培训负责人执行。',
+            '72小时内提交总结与下一步建议。'
+          ]
+        },
+        {
+          name: '高层简报幻灯',
+          price: 'RM 2,288',
+          features: [
+            '将玄学洞见翻译为董事会语言的专业简报。',
+            '风险、机会与时间矩阵一目了然。',
+            '附内部分发与保密使用指引。'
+          ]
+        }
+      ],
+      finePrintTitle: '须知',
+      finePrint: [
+        '临时任务（提前少于7天）需加收25%加急费。',
+        '海外差旅以商务舱标准计价，并至少预留2天调研时间。',
+        '交付前14天内取消，订金不予退还。',
+        '可接受银行转账、FPX与企业信用卡（信用卡附3%手续费）。'
+      ],
+      cta: {
+        label: '预约定制方案',
+        href: '/contact'
+      }
     },
   vip: {
     section_title: '360全维度命运解析服务',

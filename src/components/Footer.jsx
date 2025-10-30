@@ -23,6 +23,7 @@ export default function Footer(){
           <ul className="space-y-2 text-white/80 text-[0.95rem]">
             <li><Link to="/" className="hover:text-gold">{t('nav.home')}</Link></li>
             <li><Link to="/academy/courses" className="hover:text-gold">{t('nav.academy')}</Link></li>
+            <li><Link to="/pricing" className="hover:text-gold">{t('nav.pricing')}</Link></li>
             <li><Link to="/enterprise/audit" className="hover:text-gold">{t('nav.enterprise')}</Link></li>
             <li><Link to="/resources/four-pillars" className="hover:text-gold">{t('nav.resources')}</Link></li>
             <li><Link to="/about" className="hover:text-gold">{t('nav.about')}</Link></li>

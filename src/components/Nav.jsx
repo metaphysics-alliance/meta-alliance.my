@@ -182,6 +182,7 @@ export default function Nav(){
       { label: t('nav.vip_advanced'), href: '/vip-report/pro' },
       { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
     ]},
+    { label: t('nav.pricing'), href: '/pricing' },
     { label: t('nav.academy'), children: [
       { label: t('nav.courses'), href: '/academy/courses' },
       { label: t('nav.foundation'), href: '/academy/foundation' },
@@ -299,4 +300,3 @@ export default function Nav(){
     </header>
   )
 }
-

@@ -12,6 +12,7 @@ const PRIMARY_LINKS = [
   { key: 'celestial', href: '/services' },
   { key: 'vip_report', href: '/vip-report/essential' },
   { key: 'academy', href: '/academy' },
+  { key: 'pricing', href: '/pricing' },
   { key: 'resources', href: '/resources' },
   { key: 'about', href: '/about' },
   { key: 'contact', href: '/contact' },

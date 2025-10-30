@@ -218,3 +218,18 @@ Work Log (for resume)
 - MA-QIMEN-CTA-TUNE-2025-10-29T22:27:10+08:00: Removed the secondary CTA from Arcane Strategy Matrix, leaving just the briefing button on the page.
 - MA-CELESTIAL-CTA-PRIMARY-ONLY-2025-10-29T22:28:29+08:00: Cleared secondary CTAs across Celestial services so each page shows only the main consultation button.
 - MA-ASSET-UPDATE-2025-10-29T23:10:00+08:00: feat(assets): update images for name and numerology pages
+- MA-PRICING-TABLE-2025-10-30T12:14:37+08:00: Added bilingual pricing data, dedicated Pricing page (including academy & 360 Holistic tiers), and navigation entry across Next/Vite stacks.
+- MA-HOMEPAGE-CAROUSEL-REFINE-2025-10-30T12:42:59+08:00: Restyled Vite hero carousel with left-aligned copy, per-slide CTAs and right-aligned imagery to reduce distortion.
+- MA-HOMEPAGE-CAROUSEL-REPAIR-2025-10-30T13:28:11+08:00: Rebuilt the Vite hero carousel file with valid JSX, restored autoplay controls, and aligned the image panel with the gradient card design.
+- MA-HOMEPAGE-CAROUSEL-IMAGE-SLIDE-2025-10-30T13:44:39+08:00: Added directional slide-in/out animation to the Vite hero imagery while keeping the existing layout intact.
+- MA-HOMEPAGE-CAROUSEL-SQUARE-2025-10-30T13:53:48+08:00: Converted the Vite hero carousel panels to square edges so both the text card and gallery frame align with the image background.
+- MA-HOMEPAGE-CAROUSEL-BORDERLESS-2025-10-30T13:56:43+08:00: Removed the outer border line from the Vite hero carousel so the card merges cleanly into the background.
+- MA-HOMEPAGE-CAROUSEL-FULLBLEED-2025-10-30T13:58:21+08:00: Stretched the text and imagery containers edge-to-edge inside the Vite hero carousel for a full-bleed layout.
+- MA-HOMEPAGE-CAROUSEL-CENTER-TEXT-2025-10-30T13:59:48+08:00: Centered the hero copy block horizontally so badge, headline, summary, and CTA align perfectly within the panel.
+- MA-HOMEPAGE-CAROUSEL-VERTICAL-CENTER-2025-10-30T14:01:14+08:00: Aligned the hero text stack vertically within the panel so content sits perfectly mid-card on every slide.
+- MA-HOMEPAGE-CAROUSEL-PANEL-BORDERLESS-2025-10-30T14:02:22+08:00: Removed the gold outline from the hero text panel so it blends seamlessly with the main carousel container.
+- MA-HOMEPAGE-CAROUSEL-INDICATOR-REMOVAL-2025-10-30T14:03:42+08:00: Removed the numeric slide indicator from the hero CTA row for a cleaner minimal layout.
+- MA-HOMEPAGE-CAROUSEL-SERVICES-CTA-2025-10-30T14:07:24+08:00: Pointed every hero CTA to `/services` with bilingual labels “Explore Our Services” / “了解我们的服务”.
+- MA-HOMEPAGE-CAROUSEL-GALACTIC-PANEL-2025-10-30T14:09:32+08:00: Swapped the hero text card background for a dark galactic solar-system motif and removed per-slide imagery.
+- MA-HOMEPAGE-CAROUSEL-CTA-HOVER-2025-10-30T14:11:47+08:00: Added a solar-flare hover treatment to the hero CTA button for higher tactile feedback.
+
