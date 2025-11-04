@@ -27,10 +27,16 @@ import {
 type PricingTier = {
   name?: string
   price?: string
+  priceSecondary?: string | null
   cadence?: string
   features?: string[]
   href?: string
   highlight?: string
+  pricingMeta?: {
+    serviceId?: string | null
+    priceMYR?: number | null
+    priceUSD?: number | null
+  }
 }
 
 type PricingCategory = {
@@ -43,8 +49,14 @@ type PricingCategory = {
 type PricingAddOn = {
   name?: string
   price?: string
+  priceSecondary?: string | null
   features?: string[]
   href?: string
+  pricingMeta?: {
+    serviceId?: string | null
+    priceMYR?: number | null
+    priceUSD?: number | null
+  }
 }
 
 export type PricingDictionary = {
@@ -357,10 +369,13 @@ function TierCard({
       id: buildCartId(category, tier),
       name: tier.name ?? 'Tier',
       price: tier.price,
+      priceSecondary: tier.priceSecondary ?? null,
       href: internalHref ?? null,
       categoryKey: category.key ?? null,
       categoryTitle: category.title ?? null,
       type: 'tier',
+      serviceId: tier.pricingMeta?.serviceId ?? null,
+      pricingMeta: tier.pricingMeta ?? null,
       locale,
     }),
     [category, tier, internalHref, locale],
@@ -376,7 +391,12 @@ function TierCard({
           <h4 className="text-xl font-semibold text-white">{tier.name}</h4>
           <div className="flex flex-wrap items-baseline gap-3 text-sm text-white/70">
             {tier.price ? <span className="text-lg font-semibold text-gold">{tier.price}</span> : null}
-            {tier.cadence ? <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-[0.22em] text-white/70">{tier.cadence}</span> : null}
+            {tier.priceSecondary ? <span className="text-sm font-medium text-white/60">{tier.priceSecondary}</span> : null}
+            {tier.cadence ? (
+              <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-[0.22em] text-white/70">
+                {tier.cadence}
+              </span>
+            ) : null}
           </div>
           {tier.highlight ? <p className="text-sm text-emerald-300/90">{tier.highlight}</p> : null}
         </header>
@@ -449,10 +469,13 @@ function AddonCard({ locale, addOn, cartLabels }: { locale: Locale; addOn: Prici
       id: `addon-${slugify(addOn.name ?? 'addon')}`,
       name: addOn.name ?? 'Add-on',
       price: addOn.price,
+      priceSecondary: addOn.priceSecondary ?? null,
       href: addOn.href ?? null,
       type: 'addon',
       categoryKey: 'addon',
-      categoryTitle: locale === 'CN' ? '增值服务' : 'Add-on',
+      categoryTitle: locale === 'CN' ? '加购方案' : 'Add-on',
+      serviceId: addOn.pricingMeta?.serviceId ?? null,
+      pricingMeta: addOn.pricingMeta ?? null,
       locale,
     }),
     [addOn, locale],
@@ -464,7 +487,10 @@ function AddonCard({ locale, addOn, cartLabels }: { locale: Locale; addOn: Prici
       <div className="flex flex-col gap-3">
         <header className="flex items-baseline justify-between gap-3">
           <h4 className="text-lg font-semibold">{addOn.name}</h4>
-          {addOn.price ? <span className="text-sm font-medium text-gold">{addOn.price}</span> : null}
+          <div className="flex flex-col items-end gap-0.5 text-sm">
+            {addOn.price ? <span className="font-medium text-gold">{addOn.price}</span> : null}
+            {addOn.priceSecondary ? <span className="text-xs font-medium text-white/60">{addOn.priceSecondary}</span> : null}
+          </div>
         </header>
         {features.length ? (
           <ul className="space-y-2 text-sm text-white/70">
@@ -476,32 +502,31 @@ function AddonCard({ locale, addOn, cartLabels }: { locale: Locale; addOn: Prici
             ))}
           </ul>
         ) : null}
-        <button
-          type="button"
-          onClick={() => toggleItem(cartEntry)}
-          className={`group relative mt-2 inline-flex items-center gap-2 overflow-hidden rounded-[14px] px-4 py-2 text-sm font-medium transition ${
-            selected ? 'bg-emerald-400/90 text-black shadow-[0_14px_34px_rgba(16,185,129,0.45)] hover:bg-emerald-300' : 'bg-black/85 text-[#f4deb4]'
-          }`}
-        >
-          {!selected ? (
-            <>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#f8d884cc] via-[#f6e7b8aa] to-[#f8d884cc] opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
-              <span className="absolute inset-0 scale-[0.86] rounded-[12px] border border-[#f8d88433] transition duration-300 group-hover:scale-100 group-hover:border-[#f8d88480]" />
-              <span
-                className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-40"
-                style={{ boxShadow: '0 0 45px 10px rgba(248,216,132,0.32)' }}
-              />
-            </>
-          ) : null}
-          <span
-            className={`relative inline-flex items-center gap-2 ${
-              selected ? '' : 'tracking-[0.18em] text-[#f4deb4] group-hover:text-[#fff5dc]'
+        <div className="flex items-center justify-between gap-3 pt-2">
+          <button
+            type="button"
+            onClick={() => toggleItem(cartEntry)}
+            className={`group inline-flex items-center gap-2 rounded-[12px] px-4 py-2 text-sm font-medium transition ${
+              selected
+                ? 'bg-emerald-400/90 text-black shadow-[0_12px_30px_rgba(16,185,129,0.35)] hover:bg-emerald-300'
+                : 'bg-black/80 text-[#f4deb4]'
             }`}
           >
-            {selected ? <FiX className="h-4 w-4" /> : <FiPlus className="h-4 w-4" />}
-            <span className="tracking-normal">{selected ? cartLabels.added : cartLabels.add}</span>
-          </span>
-        </button>
+            {!selected ? <FiPlus className="h-4 w-4" /> : <FiX className="h-4 w-4" />}
+            <span>{selected ? cartLabels.remove : cartLabels.add}</span>
+          </button>
+          {addOn.href ? (
+            <a
+              className="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-white"
+              href={addOn.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {locale === 'CN' ? '了解详情' : 'View details'}
+              <FiExternalLink className="h-4 w-4" />
+            </a>
+          ) : null}
+        </div>
       </div>
     </div>
   )

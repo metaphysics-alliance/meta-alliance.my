@@ -8,12 +8,21 @@ export type CartEntry = {
   id: string
   name: string
   price?: string | null
+  priceSecondary?: string | null
   currency?: string | null
   amount?: number | null
+  secondaryCurrency?: string | null
+  secondaryAmount?: number | null
   href?: string | null
   categoryKey?: string | null
   categoryTitle?: string | null
   type: 'tier' | 'addon'
+  serviceId?: string | null
+  pricingMeta?: {
+    serviceId?: string | null
+    priceMYR?: number | null
+    priceUSD?: number | null
+  } | null
   locale: Locale
 }
 
@@ -127,9 +136,14 @@ export function usePricingCart() {
 export function summarizeTotals(items: CartEntry[]) {
   const totals = new Map<string, number>()
   items.forEach((item) => {
-    if (!item.currency || item.amount == null) return
-    const current = totals.get(item.currency) ?? 0
-    totals.set(item.currency, current + item.amount)
+    if (item.currency && item.amount != null) {
+      const current = totals.get(item.currency) ?? 0
+      totals.set(item.currency, current + item.amount)
+    }
+    if (item.secondaryCurrency && item.secondaryAmount != null) {
+      const secondaryCurrent = totals.get(item.secondaryCurrency) ?? 0
+      totals.set(item.secondaryCurrency, secondaryCurrent + item.secondaryAmount)
+    }
   })
   return Array.from(totals.entries()).map(([currency, amount]) => ({ currency, amount }))
 }
@@ -165,12 +179,15 @@ export function formatTotalDisplay(currency: string, amount: number, locale: Loc
 }
 
 function normalizeEntry(entry: CartEntry, locale: Locale): CartEntry {
-  const withMeta = derivePriceMeta(entry.price)
+  const primary = derivePriceMeta(entry.price)
+  const secondary = derivePriceMeta(entry.priceSecondary)
   return {
     ...entry,
     locale,
-    currency: withMeta.currency ?? entry.currency ?? null,
-    amount: withMeta.amount ?? entry.amount ?? null,
+    currency: entry.currency ?? primary.currency ?? null,
+    amount: entry.amount ?? primary.amount ?? null,
+    secondaryCurrency: entry.secondaryCurrency ?? secondary.currency ?? null,
+    secondaryAmount: entry.secondaryAmount ?? secondary.amount ?? null,
   }
 }
 

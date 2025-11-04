@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import PricingExperience, { type PricingDictionary } from '@/components/PricingExperience'
 import type { Locale } from '@/lib/i18n'
 import { getDict } from '@/lib/i18n'
+import { fetchLatestServicePricingRate, fetchServicePricingRows } from '@/lib/servicePricing'
+import applyServicePricing from '../../../shared/pricing/servicePricing.js'
 
 export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
   const locale = params.locale || 'EN'
@@ -32,10 +34,22 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
   }
 }
 
-export default function PricingPage({ params }: { params: { locale: Locale } }) {
+export default async function PricingPage({ params }: { params: { locale: Locale } }) {
   const locale = params.locale || 'EN'
   const dict = getDict(locale)
-  const pricing = dict.pricing as PricingDictionary
+  const reference = getDict('EN')
+
+  const [serviceRows, rateRow] = await Promise.all([
+    fetchServicePricingRows(),
+    fetchLatestServicePricingRate(),
+  ])
+
+  const pricing = applyServicePricing(
+    dict.pricing as PricingDictionary,
+    reference.pricing as PricingDictionary,
+    serviceRows,
+    { locale, rate: rateRow },
+  ) as PricingDictionary
 
   return <PricingExperience locale={locale} pricing={pricing} />
 }

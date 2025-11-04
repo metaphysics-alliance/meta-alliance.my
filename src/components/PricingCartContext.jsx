@@ -83,9 +83,14 @@ export function usePricingCart() {
 export function summarizeTotals(items) {
   const totals = new Map()
   items.forEach((item) => {
-    if (!item.currency || item.amount == null) return
-    const current = totals.get(item.currency) ?? 0
-    totals.set(item.currency, current + item.amount)
+    if (item.currency && item.amount != null) {
+      const current = totals.get(item.currency) ?? 0
+      totals.set(item.currency, current + item.amount)
+    }
+    if (item.secondaryCurrency && item.secondaryAmount != null) {
+      const secondaryCurrent = totals.get(item.secondaryCurrency) ?? 0
+      totals.set(item.secondaryCurrency, secondaryCurrent + item.secondaryAmount)
+    }
   })
   return Array.from(totals.entries()).map(([currency, amount]) => ({ currency, amount }))
 }
@@ -119,12 +124,15 @@ export function formatTotalDisplay(currency, amount, locale = 'EN') {
 }
 
 function normalizeEntry(entry, locale) {
-  const withMeta = derivePriceMeta(entry?.price)
+  const primary = derivePriceMeta(entry?.price)
+  const secondary = derivePriceMeta(entry?.priceSecondary)
   return {
     ...entry,
     locale,
-    currency: withMeta.currency ?? entry?.currency ?? null,
-    amount: withMeta.amount ?? entry?.amount ?? null,
+    currency: entry?.currency ?? primary.currency ?? null,
+    amount: entry?.amount ?? primary.amount ?? null,
+    secondaryCurrency: entry?.secondaryCurrency ?? secondary.currency ?? null,
+    secondaryAmount: entry?.secondaryAmount ?? secondary.amount ?? null,
   }
 }
 

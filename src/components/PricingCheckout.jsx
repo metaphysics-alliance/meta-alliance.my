@@ -108,7 +108,10 @@ function CartReview({ locale, pricing, cartLabels, checkoutCopy, contactHref, pr
     )
   }
 
-  const notes = items.map((item) => `${item.name}${item.price ? ` (${item.price})` : ""}`)
+  const notes = items.map((item) => {
+    const prices = [item.price, item.priceSecondary].filter((value) => Boolean(value))
+    return prices.length ? `${item.name} (${prices.join(', ')})` : item.name
+  })
   const cartParam = encodeURIComponent(notes.join('; '))
   const primaryHref = `${contactHref}?topic=pricing&cart=${cartParam}`
 
@@ -149,7 +152,10 @@ function CartReview({ locale, pricing, cartLabels, checkoutCopy, contactHref, pr
             {items.map((item) => (
               <li key={item.id} className="flex items-baseline justify-between gap-3">
                 <span className="font-medium text-white">{item.name}</span>
-                <span className="text-sm text-white/60">{item.price}</span>
+                <div className="flex flex-col items-end gap-0.5 text-xs text-white/80">
+                  {item.price ? <span className="text-sm font-semibold text-gold">{item.price}</span> : null}
+                  {item.priceSecondary ? <span className="font-medium text-white/60">{item.priceSecondary}</span> : null}
+                </div>
               </li>
             ))}
           </ul>
@@ -221,7 +227,10 @@ function CartLine({ locale, item, removeLabel, onRemove }) {
           </Link>
         ) : null}
       </div>
-      <div className="text-sm font-semibold text-gold">{item.price}</div>
+      <div className="flex flex-col items-end gap-0.5 text-sm">
+        {item.price ? <span className="font-semibold text-gold">{item.price}</span> : null}
+        {item.priceSecondary ? <span className="text-xs font-medium text-white/60">{item.priceSecondary}</span> : null}
+      </div>
       <div className="text-right">
         <button
           type="button"
