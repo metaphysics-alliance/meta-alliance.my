@@ -6,3 +6,7 @@ backups/
 test-results/
 temp_i18n.txt
 *.bak.*
+.env
+.env.*
+!.env.example
+!.env.local.example
