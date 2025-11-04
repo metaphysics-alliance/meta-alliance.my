@@ -23,6 +23,14 @@ jobs:
           VITE_SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
         run: npm run pricing:rate -- USD/MYR
 
+      - name: Pull MYR/USD rate
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_EMAIL: ${{ secrets.SUPABASE_EMAIL }}
+          VITE_SUPABASE_PASSWORD: ${{ secrets.SUPABASE_PASSWORD }}
+        run: npm run pricing:rate -- MYR/USD
+
   notify-failure:
     runs-on: ubuntu-latest
     needs: pull-rate
