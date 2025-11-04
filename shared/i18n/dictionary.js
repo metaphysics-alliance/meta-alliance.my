@@ -99,6 +99,116 @@ export const dictionary = {
         '30-day post-delivery support via email for implementation clarifications.'
       ],
       currencyNote: 'All fees are exclusive of travel, on-site assessments and applicable taxes. International work is billed in MYR or USD at prevailing rates.',
+      heroHighlights: [
+        {
+          title: 'First strategy sprint mapped in 7 days',
+          description:
+            'We stage the kickoff, assign owners, and establish 30/60/90 checkpoints so momentum starts immediately and stays accountable.'
+        },
+        {
+          title: 'Executive-ready artefacts',
+          description:
+            'Receive bilingual decks, briefing notes and decision matrices formatted for boardrooms, investors and family councils.'
+        },
+        {
+          title: 'Operational integration support',
+          description:
+            'We stay on-call across 30/60/90-day implementation sprints to close loops fast whenever conditions shift.'
+        },
+        {
+          title: 'Stakeholder briefings pre-loaded',
+          description:
+            'Investor, board and team messaging comes scripted so you open kickoff with every stakeholder aligned on objectives and metrics.'
+        }
+      ],
+      objectionsTitle: 'Top five hesitations, disarmed',
+      objectionsSubtitle: 'We engineered each programme to neutralise the most common “no.”',
+      objections: [
+        {
+          key: 'budget',
+          objection: '“It’s too expensive.”',
+          response:
+            'We front-load the revenue defence: each engagement includes ROI baselines, cost-of-delay modelling, and milestone gates tied to measurable upticks.',
+          reinforcements: [
+            'Stage-gated payment schedule triggered by delivered artefacts.',
+            'Executive KPI sheet showing breakeven windows and upside scenarios.'
+          ]
+        },
+        {
+          key: 'time',
+          objection: '“We don’t have time to implement this.”',
+          response:
+            'We map your capacity wall first, then fold recommendations into current cadences—no new teams or mystical rituals required.',
+          reinforcements: [
+            '30/60/90-day sprint board with owners, deliverables and stand-up prompts.',
+            'Optional 20-minute weekly war-room with our strategists to clear blocks instantly.'
+          ]
+        },
+        {
+          key: 'clarity',
+          objection: '“I’m not sure it will work for us.”',
+          response:
+            'Every dossier includes risk flags, proof points and what-to-do-if variants so leadership can see how the play adapts to your environment.',
+          reinforcements: [
+            'Cross-validation appendix showing how BaZi, Zi Wei, Qi Men and Feng Shui align on the recommendation.',
+            'Scenario controls for best, base and fallback triggers.'
+          ]
+        },
+        {
+          key: 'trust',
+          objection: '“We tried metaphysics before and it was vague.”',
+          response:
+            'We operate like management consultants wielding classical systems: structured interviews, evidence packets, decision logs and post-mortem reviews.',
+          reinforcements: [
+            'Session recordings and bilingual transcripts provided for compliance.',
+            'Every recommendation ties to measurable targets—not abstract “energy shifts”.'
+          ]
+        },
+        {
+          key: 'team',
+          objection: '“My stakeholders won’t buy in.”',
+          response:
+            'We brief stakeholders, translate metaphysical insight into business language and hand you ready-to-send messaging.',
+          reinforcements: [
+            'Executive briefing deck plus talking points for investors, boards or family councils.',
+            'Change-management scripts tailored to frontline teams so adoption sticks.'
+          ]
+        }
+      ],
+      cart: {
+        add: 'Add to cart',
+        added: 'Added',
+        remove: 'Remove',
+        view: 'View cart',
+        goToCheckout: 'Go to checkout',
+        miniTitle: 'Cart preview',
+        empty: 'No services selected yet.',
+        clear: 'Clear cart',
+        continue: 'Continue browsing'
+      },
+      checkout: {
+        title: 'Review your command deck',
+        subtitle: 'Confirm the services you want us to deploy before we generate your invoice and onboarding timeline.',
+        emptyTitle: 'No services selected yet',
+        emptyDescription: 'Add at least one programme or retainer from the pricing page to begin checkout.',
+        emptyCta: 'Back to pricing',
+        summaryTitle: 'Selected services',
+        totalsLabel: 'Investment overview',
+        currencyDisclaimer: 'Final invoices mirror Malaysian Ringgit totals. USD conversions follow the latest synced rate.',
+        primaryCta: 'Confirm & request invoice',
+        secondaryCta: 'Keep exploring',
+        tableHeaders: {
+          service: 'Service',
+          investment: 'Investment',
+          remove: 'Remove'
+        }
+      },
+      checkoutAssuranceTitle: 'What happens after you confirm',
+      checkoutAssurancePoints: [
+        'We lock your consultation windows and assign lead strategists within one business day.',
+        'You receive a secure payment link and onboarding dossier outlining the data we need.',
+        'Kickoff call maps quick-win milestones so the first 30/60/90 days execute without drag.'
+      ],
       categories: [
         {
           key: 'celestial',
@@ -2188,6 +2298,107 @@ export const dictionary = {
         '交付后30天内提供邮件支持，协助落地与答疑。'
       ],
       currencyNote: '费用不含差旅、现场勘查与相关税费。国际项目可按MYR或USD结算，汇率以签约当日为准。',
+      heroHighlights: [
+        {
+          title: '7天内排定首个行动冲刺',
+          description: '我们主动安排启动会议、指派负责人并设定30/60/90天的阶段检查，让执行立即起跑并持续被追踪。'
+        },
+        {
+          title: '高管级行动文档',
+          description: '提供双语简报、决策矩阵与执行摘要，可直接用于董事会与投资者沟通。'
+        },
+        {
+          title: '运营整合支援',
+          description: '我们全程在线支援30/60/90天实施冲刺，随时调整以应对环境变化。'
+        },
+        {
+          title: '利益相关者路线图即刻就绪',
+          description: '我们预先准备投资人、董事会与团队的沟通要点，让启动会议一开始所有人就对目标与度量标准达成共识。'
+        }
+      ],
+      objectionsTitle: '我们消除前五大拒绝理由',
+      objectionsSubtitle: '每个方案都针对常见的「不要」给出直接回应。',
+      objections: [
+        {
+          key: 'budget',
+          objection: '「太贵了。」',
+          response: '我们先守住收益：每个方案附带ROI基线、延迟成本模型，以及与可量化成果绑定的阶段目标。',
+          reinforcements: [
+            '交付成果挂钩的分阶段付款安排。',
+            '高管KPI总表，清楚显示回本窗口与上行情境。'
+          ]
+        },
+        {
+          key: 'time',
+          objection: '「我们没有时间执行。」',
+          response: '先评估现有产能，再把建议折叠进原有节奏，无需额外团队也不用新增“神秘流程”。',
+          reinforcements: [
+            '30/60/90天冲刺看板，包含负责人、交付物与例会提示。',
+            '可选每周20分钟作战室，快速清除阻碍。'
+          ]
+        },
+        {
+          key: 'clarity',
+          objection: '「不确定适合我们。」',
+          response: '每份报告都列出风险提示、验证证据与应变方案，让管理层看到建议如何贴合当前环境。',
+          reinforcements: [
+            '交叉验证附录，展示八字、紫微、奇门与风水如何指向同一方向。',
+            '最佳／基准／回退触发条件的情境控盘表。'
+          ]
+        },
+        {
+          key: 'trust',
+          objection: '「之前请的老师都很空泛。」',
+          response: '我们是结合经典术数的管理顾问：结构化访谈、证据包、决策记录、复盘报告一应俱全。',
+          reinforcements: [
+            '全程录音与双语逐字稿，可供合规留档。',
+            '所有建议都对应可衡量的指标，而非抽象的「能量改变」。'
+          ]
+        },
+        {
+          key: 'team',
+          objection: '「团队不会买单。」',
+          response: '我们协助关键干系人简报，把术数洞见转换成商业语言，并提供现成沟通模板。',
+          reinforcements: [
+            '高层简报套件，含投资人／董事会／家族理事会的说辞要点。',
+            '面向一线团队的变革管理脚本，帮助落实采纳。'
+          ]
+        }
+      ],
+      cart: {
+        add: '加入购物车',
+        added: '已加入',
+        remove: '移除',
+        view: '查看购物车',
+        goToCheckout: '前往结账',
+        miniTitle: '购物车快照',
+        empty: '尚未选择任何服务。',
+        clear: '清空',
+        continue: '继续浏览'
+      },
+      checkout: {
+        title: '确认你的战略组合',
+        subtitle: '在我们生成发票与启动时间表前，再次确认需要部署的服务组合。',
+        emptyTitle: '购物车为空',
+        emptyDescription: '请先从定价页面添加至少一项方案或增值服务。',
+        emptyCta: '返回定价',
+        summaryTitle: '已选择的服务',
+        totalsLabel: '投资概览',
+        currencyDisclaimer: '最终发票以马币金额为准；美元换算将使用Supabase同步的最新汇率。',
+        primaryCta: '确认并索取发票',
+        secondaryCta: '继续探索',
+        tableHeaders: {
+          service: '服务',
+          investment: '投资金额',
+          remove: '移除'
+        }
+      },
+      checkoutAssuranceTitle: '确认后会发生什么',
+      checkoutAssurancePoints: [
+        '我们会在一个工作日内锁定咨询档期并指派首席顾问。',
+        '你会收到安全付款连结与启动资料包，列出所需文件与数据。',
+        '启动会议将排出快速成果的交付节奏，确保30/60/90天窗口落地。'
+      ],
       categories: [
         {
           key: 'celestial',
@@ -3926,20 +4137,20 @@ dictionary.EN.about = {
       {
         title: 'Shaun — 60s Intro',
         description: 'Why Chinese metaphysics, our 360° approach, and who benefits.',
-        script_en: "I’m Shaun Quan, founder of Metaphysics Alliance. We exist to bring clarity and momentum to life and business decisions. Our approach blends BaZi, Zi Wei, Qi Men, Feng Shui and numerology, and cross‑validates insights across methods for a 360° perspective. For individuals, that means clearer choices about career, relationships and timing. For organizations, it means sharper team alignment and better strategic timing. We aim for extraordinary consistency through multiple lenses and disciplined verification — so you can move forward with confidence.",
-        script_cn: '我是宸麟老师，Metaphysics Alliance 创始人。我们的使命，是为个人与企业的关键决策带来清晰与推动力。我们融合八字、紫微、奇门、风水与数字能量，并通过交叉验证获得 360° 全景视角。对个人，这意味着职业、关系与时机更明晰；对企业，这意味着团队协同更到位、战略时机更精准。通过多重视角与严谨验证，我们力求高度一致的洞见，助你笃定前行。'
+        script_en: `I’m Shaun Quan, founder of Metaphysics Alliance. We exist to bring clarity and momentum to life and business decisions. Our approach blends BaZi, Zi Wei, Qi Men, Feng Shui and numerology, and cross‑validates insights across methods for a 360° perspective. For individuals, that means clearer choices about career, relationships and timing. For organizations, it means sharper team alignment and better strategic timing. We aim for extraordinary consistency through multiple lenses and disciplined verification — so you can move forward with confidence.`,
+        script_cn: `我是宸麟老师，Metaphysics Alliance 创始人。我们的使命，是为个人与企业的关键决策带来清晰与推动力。我们融合八字、紫微、奇门、风水与数字能量，并通过交叉验证获得 360° 全景视角。对个人，这意味着职业、关系与时机更明晰；对企业，这意味着团队协同更到位、战略时机更精准。通过多重视角与严谨验证，我们力求高度一致的洞见，助你笃定前行。`,
       },
       {
         title: 'Consultant — 60s Intro',
         description: 'How sessions become next steps: triangulation and timing.',
-        script_en: 'My focus is translating complex patterns into practical next steps. In sessions, we triangulate: a primary reading, a secondary lens to confirm patterns, and a timing layer to choose when to act. You leave with a plan: what to prioritise, what to pause, and what to watch.',
-        script_cn: '我们把复杂的信息转化为清晰的下一步。在咨询中进行三角验证：主阅读确定主题，辅阅读确认模式，配合时机层决定何时行动。你将带走明确的行动清单：先做什么、暂停什么、留意什么。'
+        script_en: `My focus is translating complex patterns into practical next steps. In sessions, we triangulate: a primary reading, a secondary lens to confirm patterns, and a timing layer to choose when to act. You leave with a plan: what to prioritise, what to pause, and what to watch.`,
+        script_cn: `我们把复杂的信息转化为清晰的下一步。在咨询中进行三角验证：主阅读确定主题，辅阅读确认模式，配合时机层决定何时行动。你将带走明确的行动清单：先做什么、暂停什么、留意什么。`,
       },
       {
         title: 'Consultant — 60s Teams & Business',
         description: 'Individuals vs. organizations, and how we reduce noise.',
-        script_en: 'I work with both individuals and teams. For individuals, we map strengths, blind spots and near‑term windows for momentum. For organizations, we analyse team dynamics and strategic timing across product cycles, hiring and launches. Our cross‑validated process reduces noise and surfaces what consistently matters, so decisions feel grounded and timely.',
-        script_cn: '我们同时服务个人与企业。对个人，梳理优势、盲区与近期可乘之势；对企业，从团队协同与战略节奏入手，覆盖产品周期、用人与发布时机。通过交叉验证，尽量降低噪音、沉淀稳定要点，让决策更扎实、更合时。'
+        script_en: `I work with both individuals and teams. For individuals, we map strengths, blind spots and near‑term windows for momentum. For organizations, we analyse team dynamics and strategic timing across product cycles, hiring and launches. Our cross‑validated process reduces noise and surfaces what consistently matters, so decisions feel grounded and timely.`,
+        script_cn: `我同时服务个人与企业团队。对个人，我们梳理优势、盲点与近期发力窗口；对组织，我们分析团队节奏与战略时机，从产品周期、招募到发布。跨维度验证减少噪音、突出重点，让你的决策更扎实、更及时。`,
       }
     ]
   },

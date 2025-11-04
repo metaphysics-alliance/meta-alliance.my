@@ -9,6 +9,7 @@ import Home from '../pages/Home.jsx'
 import ContactPage from '../pages/ContactPage.jsx'
 import ServicesIndex from '../pages/ServicesIndex.jsx'
 import PricingPage from '../pages/PricingPage.jsx'
+import CheckoutPage from '../pages/CheckoutPage.jsx'
 
 const CTA_CONTACT = {
   label: 'Book a consultation',
@@ -67,6 +68,10 @@ export const ROUTES = [
   {
     path: '/pricing',
     element: <PricingPage />,
+  },
+  {
+    path: '/pricing/checkout',
+    element: <CheckoutPage />,
   },
   {
     path: '/vip-report',

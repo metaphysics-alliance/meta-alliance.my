@@ -243,3 +243,4 @@ Work Log (for resume)
 - MA-LEGAL-TERMS-RESTORE-2025-11-03T14:05:00+08:00: Reinstated the Terms of Service data in both languages and routed /legal/terms through the shared LegalPage component across stacks.
 - MA-NAV-PRICING-REORDER-2025-11-03T14:30:00+08:00: Moved the Pricing link between Resources and About across Next/Vite navigation and kept bilingual labels aligned.
 - MA-EXCHANGE-RATE-DUAL-2025-11-04T13:07:03+08:00: Extended the exchange-rate GitHub Action to capture both USD/MYR and MYR/USD pairs for Supabase automation.
+- MA-PRICING-ECOMMERCE-2025-11-04T14:23:31+08:00: Rebuilt the pricing journey with immersive visuals, cart flow, and checkout coverage across Next and Vite.
