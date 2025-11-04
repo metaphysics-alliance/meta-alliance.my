@@ -30,6 +30,7 @@ export default function Footer({ locale }: FooterProps){
   const legalLinks = [
     { label: locale === 'CN' ? '隐私政策' : 'Privacy Policy', href: '/legal/privacy' },
     { label: locale === 'CN' ? '服务条款' : 'Terms of Service', href: '/legal/terms' },
+    { label: locale === 'CN' ? 'Cookies 政策' : 'Cookies Policy', href: '/legal/cookies' },
     { label: locale === 'CN' ? '免责声明' : 'Disclaimer', href: '/legal/disclaimer' },
     { label: locale === 'CN' ? '退款政策' : 'Refund Policy', href: '/legal/refund' },
   ]

@@ -45,7 +45,7 @@ body::before{
 
 #root{ position: relative; z-index: 1; }
 
-.container{ width:100%; max-width:1200px; margin:0 auto; padding:0 1rem; }
+.container{ width:100%; max-width:1300px; margin:0 auto; padding:0 1rem; }
 
 .text-gold{ color: var(--gold); }
 .text-gold-soft{ color: var(--gold-soft); }

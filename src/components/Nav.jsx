@@ -182,7 +182,6 @@ export default function Nav(){
       { label: t('nav.vip_advanced'), href: '/vip-report/pro' },
       { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
     ]},
-    { label: t('nav.pricing'), href: '/pricing' },
     { label: t('nav.academy'), children: [
       { label: t('nav.courses'), href: '/academy/courses' },
       { label: t('nav.foundation'), href: '/academy/foundation' },
@@ -199,6 +198,7 @@ export default function Nav(){
       { label: t('nav.four_pillars'), href: '/resources/four-pillars' },
       { label: t('nav.purple_star'), href: '/resources/purple-star' },
     ]},
+    { label: t('nav.pricing'), href: '/pricing' },
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.contact'), href: '/contact' },
   ]

@@ -1,8 +1,13 @@
-/* eslint-disable import/order */
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner.jsx';
+import { useI18n } from '../i18n.jsx';
 
-export default function ContentPage({ title, intro, sections = [], cta }){
+export default function ContentPage({ policyKey }){
+  const { t } = useI18n();
+  const legalContent = t(`legal.${policyKey}`);
+
+  const { title, intro, sections = [], cta } = legalContent || {};
+
   return (
     <main className="container py-16">
       <div className="max-w-3xl mx-auto">

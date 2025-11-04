@@ -12,8 +12,9 @@ const SOURCES = [
   { src: '/assets/carousel/banner5.jpg', tKey: 5, href: '/services/fengshui/office-power-alignment' },
 ]
 
-const MAX_VH_DESKTOP = 0.82
-const MAX_VH_MOBILE = 0.68
+const MAX_VH_DESKTOP = 0.89
+const MAX_VH_MOBILE = 0.77
+const NAV_OFFSET_REM = '1rem'
 const SLIDE_INTERVAL = 6000
 const CTA_LABELS = {
   EN: 'Explore Our Services',
@@ -140,12 +141,14 @@ export default function HeroCarousel() {
   if (!totalSlides) {
     return null
   }
-
   return (
-    <section className="relative select-none">
+    <section
+      className="relative -mx-[calc((100vw-100%)/2)] select-none"
+      style={{ marginTop: `-${NAV_OFFSET_REM}` }}
+    >
       <div
         ref={stageRef}
-        className="relative w-full overflow-hidden bg-black/20 shadow-[0_28px_60px_rgba(7,12,32,0.45)] transition-all duration-500 ease-out"
+        className="relative w-screen overflow-hidden bg-black/20 shadow-[0_28px_60px_rgba(7,12,32,0.45)] transition-all duration-500 ease-out"
         style={{ height: heightPx ?? '46vh' }}
         onMouseEnter={() => {
           hovering.current = true

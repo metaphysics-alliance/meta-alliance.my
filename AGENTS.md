@@ -232,4 +232,13 @@ Work Log (for resume)
 - MA-HOMEPAGE-CAROUSEL-SERVICES-CTA-2025-10-30T14:07:24+08:00: Pointed every hero CTA to `/services` with bilingual labels “Explore Our Services” / “了解我们的服务”.
 - MA-HOMEPAGE-CAROUSEL-GALACTIC-PANEL-2025-10-30T14:09:32+08:00: Swapped the hero text card background for a dark galactic solar-system motif and removed per-slide imagery.
 - MA-HOMEPAGE-CAROUSEL-CTA-HOVER-2025-10-30T14:11:47+08:00: Added a solar-flare hover treatment to the hero CTA button for higher tactile feedback.
-
+- MA-LEGAL-TERMS-PDF-SYNC-2025-11-03T11:45:00+08:00: Synced Vite legal routes with Next and generated bilingual Terms PDF download placeholders.
+- MA-LEGAL-CONTACT-SYNC-2025-11-03T12:05:00+08:00: Renamed legal contact headings and standardised support team details across privacy and terms policies.
+- MA-LEGAL-TERMS-PDF-REFRESH-2025-11-03T12:25:00+08:00: Automated bilingual Terms/Privacy markdown export and regenerated all legal PDFs via ReportLab.
+- MA-LEGAL-DOCX-EXPORT-2025-11-03T12:45:00+08:00: Added docx outputs for Terms/Privacy (EN/CN) via shared generator so legal text is editable offline.
+- MA-LEGAL-ASSET-RELOCATE-2025-11-03T13:00:00+08:00: Pointed downloads to /legal/ paths and updated generator to emit PDFs/DOCX into the relocated public/legal directory.
+- MA-LEGAL-COOKIES-PAGE-2025-11-03T13:20:00+08:00: Added bilingual Cookies policy data, routes, and asset generation so /legal/cookies mirrors the privacy/terms structure across stacks.
+- MA-LEGAL-REFUND-PAGE-2025-11-03T13:40:00+08:00: Wired bilingual Refund policy data and routes so /legal/refund renders through the shared LegalPage across stacks.
+- MA-LEGAL-DISCLAIMER-PAGE-2025-11-03T13:50:00+08:00: Added bilingual Disclaimer policy content, aligned Next/Vite legal routes, and linked the downloadable PDF assets.
+- MA-LEGAL-TERMS-RESTORE-2025-11-03T14:05:00+08:00: Reinstated the Terms of Service data in both languages and routed /legal/terms through the shared LegalPage component across stacks.
+- MA-NAV-PRICING-REORDER-2025-11-03T14:30:00+08:00: Moved the Pricing link between Resources and About across Next/Vite navigation and kept bilingual labels aligned.

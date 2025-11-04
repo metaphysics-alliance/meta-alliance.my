@@ -197,7 +197,7 @@ export default function LegalPage({ policyKey, locale }: LegalPageProps) {
         {contact ? (
           <div className="rounded-3xl border border-white/15 bg-black/40 p-8 backdrop-blur">
             <h2 className="text-xl font-semibold text-white">
-              {locale === 'CN' ? '联系我们的隐私专员' : 'Contact our Data Protection Lead'}
+              {locale === 'CN' ? '联系支持团队' : 'Contact Our Support Team'}
             </h2>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="space-y-2 text-sm text-white/70">

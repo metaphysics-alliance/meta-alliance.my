@@ -11,6 +11,8 @@
     "dev:vite": "vite --port 5173",
     "build": "npm run assets:roadmap && vite build",
     "preview": "vite preview --port 4173",
+    "pricing:seed": "node scripts/seed-pricing.mjs",
+    "pricing:rate": "node scripts/pull-exchange-rate.mjs",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
     "test:browserstack": "playwright test --config=playwright.browserstack.config.ts",
@@ -23,6 +25,7 @@
     "cf:kv": "npx wrangler kv:namespace create RATE_LIMIT --config cloudflare/worker/wrangler.toml"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.78.0",
     "lucide-react": "^0.441.0",
     "next": "^14.2.11",
     "react": "^18.2.0",

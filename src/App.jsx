@@ -5,7 +5,9 @@ import Footer from './components/Footer.jsx'
 import Nav from './components/Nav.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import { ROUTES, REDIRECTS } from './routes/pageConfig.jsx'
+import { ensureSupabaseSession } from './lib/supabaseAuth'
 
+// Layout component to include Nav and Footer
 function ScrollToTop(){
   const location = useLocation()
   useEffect(() => {
@@ -15,6 +17,12 @@ function ScrollToTop(){
 }
 
 function Layout(){
+  useEffect(() => {
+    ensureSupabaseSession().catch((err) => {
+      console.error('Supabase automatic sign-in failed:', err)
+    })
+  }, [])
+
   return (
     <>
       <ScrollToTop />
@@ -42,5 +50,5 @@ export default function App(){
       router={router}
       future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
     />
-  )
+  ) 
 }

@@ -34,9 +34,9 @@ export default function Footer(){
         <div>
           <h4 className="text-lg font-semibold mb-3">{isEnglish ? 'Legals' : '法律条款'}</h4>
           <ul className="space-y-2 text-white/80 text-[0.95rem]">
-            <li><Link to="/privacy" className="hover:text-gold">{isEnglish ? 'Privacy Policy' : '隐私政策'}</Link></li>
-            <li><Link to="/terms" className="hover:text-gold">{isEnglish ? 'Terms of Service' : '服务条款'}</Link></li>
-            <li><Link to="/cookies" className="hover:text-gold">{isEnglish ? 'Cookie Policy' : 'Cookie 政策'}</Link></li>
+            <li><Link to="/legal/privacy" className="hover:text-gold">{isEnglish ? 'Privacy Policy' : '隐私政策'}</Link></li>
+            <li><Link to="/legal/terms" className="hover:text-gold">{isEnglish ? 'Terms of Service' : '服务条款'}</Link></li>
+            <li><Link to="/legal/cookies" className="hover:text-gold">{isEnglish ? 'Cookie Policy' : 'Cookie 政策'}</Link></li>
             <li><Link to="/disclaimer" className="hover:text-gold">{isEnglish ? 'Disclaimer' : '免责声明'}</Link></li>
             <li><Link to="/refund" className="hover:text-gold">{isEnglish ? 'Refund Policy' : '退款政策'}</Link></li>
           </ul>

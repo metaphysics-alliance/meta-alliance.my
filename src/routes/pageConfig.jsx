@@ -192,105 +192,33 @@ export const ROUTES = [
     ),
   },
   {
-    path: '/privacy',
+    path: '/legal/privacy',
     element: <LegalPage policyKey="privacy" />,
   },
   {
-    path: '/terms',
-    element: (
-      <ContentPage
-        title="Terms of Service"
-        intro="Engaging Metaphysics Alliance means agreeing to the terms below. They clarify scope, deliverables, intellectual property and client responsibilities."
-        sections={[
-          {
-            heading: 'Engagement scope',
-            bullets: [
-              'Services commence after receipt of required data and payment confirmation.',
-              'Consultations may be recorded for internal review with your consent.',
-              'Deliverables are for the client\'s personal or organisational use unless otherwise agreed.',
-            ],
-          },
-          {
-            heading: 'Client responsibilities',
-            body: 'Clients ensure the accuracy of supplied information and understand metaphysical guidance supplements—not replaces—professional advice in legal, medical or financial matters.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    path: '/legal/terms',
+    element: <LegalPage policyKey="terms" />,
   },
   {
-    path: '/cookies',
-    element: (
-      <ContentPage
-        title="Cookie Policy"
-        intro="We use minimal cookies to understand site performance and support language preferences."
-        sections={[
-          {
-            heading: 'What we use',
-            bullets: [
-              'Essential cookies to remember language selection and session state.',
-              'Analytics cookies (optional) to observe aggregate usage trends.',
-            ],
-          },
-          {
-            heading: 'Managing cookies',
-            body: 'You can disable non-essential cookies in your browser. Doing so will not affect access but may limit personalisation.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    path: '/legal/cookies',
+    element: <LegalPage policyKey="cookies" />,
   },
   {
-    path: '/disclaimer',
-    element: (
-      <ContentPage
-        title="Disclaimer"
-        intro="Our work interprets classical metaphysics to support decision-making. Outcomes depend on client action and external factors beyond our control."
-        sections={[
-          {
-            heading: 'Scope of advice',
-            bullets: [
-              'Readings provide strategic insight but are not substitutes for medical, legal or financial counsel.',
-              'We do not guarantee specific results; we provide the best analysis based on data provided.',
-            ],
-          },
-          {
-            heading: 'Client discretion',
-            body: 'Clients retain full responsibility for how they implement recommendations. We encourage collaboration with licensed professionals where appropriate.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    path: '/legal/disclaimer',
+    element: <LegalPage policyKey="disclaimer" />,
   },
   {
-    path: '/refund',
-    element: (
-      <ContentPage
-        title="Refund Policy"
-        intro="Because each engagement involves significant research and custom analysis, we outline refund eligibility below."
-        sections={[
-          {
-            heading: 'Before work begins',
-            bullets: [
-              'Full refunds available within 48 hours of payment if no work has started.',
-              'After research commences, fees become non-refundable but may be transferred to another service at our discretion.',
-            ],
-          },
-          {
-            heading: 'Rescheduling',
-            body: 'Consultations may be rescheduled once with 48 hours\' notice. No-shows or late cancellations forfeit the session fee.',
-          },
-        ]}
-        cta={CTA_ENQUIRE}
-      />
-    ),
+    path: '/legal/refund',
+    element: <LegalPage policyKey="refund" />,
   },
 ]
 
 export const REDIRECTS = [
+  { from: '/privacy', to: '/legal/privacy' },
+  { from: '/terms', to: '/legal/terms' },
+  { from: '/cookies', to: '/legal/cookies' },
+  { from: '/disclaimer', to: '/legal/disclaimer' },
+  { from: '/refund', to: '/legal/refund' },
   { from: '/services/vip-report', to: '/vip-report' },
   { from: '/oracle/celestial', to: '/oracle/celestial-numbers' },
   { from: '/oracle/taiyi', to: '/oracle/taiyi-numbers' },

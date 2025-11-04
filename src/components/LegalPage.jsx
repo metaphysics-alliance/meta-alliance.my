@@ -166,7 +166,7 @@ export default function LegalPage({ policyKey }) {
             {contact ? (
               <>
                 <h2 className="text-xl font-semibold text-white">
-                  {isCN ? '联系我们的隐私专员' : 'Contact our Data Protection Lead'}
+                  {isCN ? '联系支持团队' : 'Contact Our Support Team'}
                 </h2>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2 text-sm text-white/70">

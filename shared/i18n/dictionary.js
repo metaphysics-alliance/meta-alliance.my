@@ -46,10 +46,10 @@ export const dictionary = {
       audit: 'Corporate Destiny Intelligence',
       site: 'Enterprise Site Strategy',
       cycles: 'Enterprise Strategy Intelligence',
-      pricing: 'Pricing',
       resources: 'Resources',
       four_pillars: 'Cosmic Four Pillars Chart',
       purple_star: 'Celestial Star Oracle Chart',
+      pricing: 'Pricing',
       about: 'About',
       contact: 'Contact',
       celestial_groups: [
@@ -2135,10 +2135,10 @@ export const dictionary = {
       audit: '企业风水格局',
       site: '天元企业选址',
       cycles: '企业战略布局',
-      pricing: '服务定价',
       resources: '资源库',
       four_pillars: '四柱命盘',
       purple_star: '紫微星图',
+      pricing: '服务定价',
       about: '关于我们',
       contact: '联系我们',
       celestial_groups: [
@@ -3990,7 +3990,7 @@ dictionary.EN.legal = {
     title: 'Privacy Policy',
     last_updated: 'October 19, 2025',
     intro: 'This notice explains how Metaphysics Alliance collects, uses, stores, and shares personal data across consultations, audits, events, and digital products. It also summarises the rights available to you under the Personal Data Protection Act 2010 (Malaysia).',
-    downloadUrl: '/privacy-policy.pdf',
+    downloadUrl: '/legal/privacy-policy.pdf',
     summary: [
       {
         title: 'Coverage',
@@ -4002,7 +4002,7 @@ dictionary.EN.legal = {
       },
       {
         title: 'Support',
-        description: 'Direct privacy questions to <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a>. Critical incidents are escalated within 24 hours.',
+        description: 'Direct privacy questions to <a href="mailto:support@meta-alliance.my">support@meta-alliance.my</a>. Critical incidents are escalated within 24 hours.',
       },
     ],
     sections: [
@@ -4141,10 +4141,587 @@ dictionary.EN.legal = {
       },
     ],
     contact: {
-      name: 'Data Protection Lead, Metaphysics Alliance',
-      email: 'privacy@meta-alliance.my',
-      phone: '+60 16-587-3141',
-      hours: 'We acknowledge all privacy requests within 24 hours and aim to resolve them within five business days.',
+      name: 'Metaphysics Alliance Support Team',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: 'We reply within one business day and resolve most requests within five business days.',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+
+  terms: {
+    title: 'Terms of Service',
+    last_updated: 'November 2, 2024',
+    intro: `By accessing or using Metaphysics Alliance websites, applications, or advisory services (“Services”), you agree to these Terms of Service. Please read them carefully.`,
+    downloadUrl: '/legal/terms-of-service.pdf',
+    summary: [
+      {
+        title: 'Binding agreement',
+        description: 'These Terms govern your use of Metaphysics Alliance Services and form a legally enforceable contract between you and us.',
+      },
+      {
+        title: 'Advisory scope',
+        description: 'Our metaphysical work is informational guidance, not a substitute for professional, medical, legal, or financial advice, and results cannot be guaranteed.',
+      },
+      {
+        title: 'Support',
+        description: 'For questions or complaints, email <a href="mailto:support@meta-alliance.my">support@meta-alliance.my</a> and we aim to reply within five business days.',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. Definitions & interpretation',
+        items: [
+          {
+            title: '“Company”',
+            description: 'Refers to Metaphysics Alliance, the registered business providing the Services.',
+          },
+          {
+            title: '“User” or “you”',
+            description: 'Means any individual or organisation that accesses our website, applications, or uses the Services.',
+          },
+          {
+            title: '“Services”',
+            description: 'Includes metaphysical advisory, astrology, Feng Shui, numerology, report-generation, training, and related digital or in-person offerings.',
+          },
+          {
+            title: '“Client Materials”',
+            description: 'Refers to information, data, or content you provide to us, as well as analyses and deliverables we prepare for you.',
+          },
+        ],
+      },
+      {
+        heading: '2. Business identity & mandatory disclosures',
+        intro: 'We comply with the Consumer Protection (Electronic Trade Transactions) Regulations 2024 by disclosing the following:',
+        items: [
+          {
+            title: 'Registered entity',
+            description: 'Metaphysics Alliance · 202403287440 (AS0486487-A).',
+          },
+          {
+            title: 'Registered office',
+            description: 'Menara Mitraland, 13A Jalan PJU 5/1, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia.',
+          },
+          {
+            title: 'Primary contact',
+            description: 'support@meta-alliance.my · +60 16-587 4131.',
+          },
+          {
+            title: 'Services offered',
+            description: 'Metaphysical consultations, reports, training, and related digital or physical deliverables.',
+          },
+          {
+            title: 'Pricing & delivery',
+            description: 'Fees are displayed on product pages or engagement letters. Digital outputs are delivered via email/download; any physical items follow our shipping policy.',
+          },
+          {
+            title: 'Refund eligibility',
+            description: 'Refer to Clause 5.4 and the Refund Policy. Bespoke digital reports may be non-refundable once analysis starts or deliverables are issued.',
+          },
+          {
+            title: 'Support response time',
+            description: 'See Clause 13—we target acknowledgement within five business days.',
+          },
+        ],
+      },
+      {
+        heading: '3. Scope of services',
+        intro: 'Services are advisory in nature and described on our website or in engagement documents. Outcomes depend on your decisions and external factors, so no results are guaranteed. You remain responsible for legal, financial, or medical choices and should obtain independent professional advice where required.',
+      },
+      {
+        heading: '4. User eligibility & obligations',
+        items: [
+          {
+            title: 'Legal capacity',
+            description: 'You confirm that you are of legal age and have the authority to enter into binding contracts.',
+          },
+          {
+            title: 'Accurate information',
+            description: 'You agree to provide information that is true, current, and complete, and to keep it updated when it changes.',
+          },
+          {
+            title: 'Lawful use',
+            description: 'You will not misuse the Services, infringe third-party rights, disrupt system integrity, or introduce malicious code.',
+          },
+        ],
+      },
+      {
+        heading: '5. Fees, payment, taxes & refunds',
+        items: [
+          {
+            title: 'Fees',
+            description: 'Payable rates are displayed at checkout or stated in an engagement letter.',
+          },
+          {
+            title: 'Payment terms',
+            description: 'Unless otherwise agreed in writing, fees are due in full before work commences.',
+          },
+          {
+            title: 'Taxes & duties',
+            description: 'Prices may exclude taxes or duties; applicable charges are displayed at checkout and remain your responsibility.',
+          },
+          {
+            title: 'Refunds',
+            description: 'Custom digital reports are generally non-refundable once analysis begins. Other services follow the published Refund Policy and statutory consumer protections.',
+          },
+        ],
+      },
+      {
+        heading: '6. Reports, content & intellectual property',
+        items: [
+          {
+            title: 'Ownership',
+            description: 'The site, methodologies, reports, and associated materials are owned by Metaphysics Alliance or its licensors.',
+          },
+          {
+            title: 'Licence grant',
+            description: 'You receive a personal, non-transferable licence to use deliverables for your internal purposes only.',
+          },
+          {
+            title: 'Restrictions',
+            description: 'Reproduction, publication, distribution, or resale of deliverables requires prior written consent.',
+          },
+          {
+            title: 'Client Materials',
+            description: 'By submitting information you grant us a limited licence to process, store, and use it to deliver and improve the Services.',
+          },
+        ],
+      },
+      {
+        heading: '7. Data protection & privacy',
+        intro: `We process personal data under the Personal Data Protection Act 2010 (PDPA) and our <a href="/legal/privacy">Privacy Policy</a>. By using the Services you consent to that processing, including sharing data with vetted service providers. You may request access, corrections, or other PDPA rights through the mechanisms described in the Privacy Policy.`,
+      },
+      {
+        heading: '8. Service standards & disclaimers',
+        intro: 'Services are provided on an “as is” and “as available” basis. We apply reasonable skill and care but do not warrant uninterrupted access, error-free operation, or fitness for a particular purpose.',
+      },
+      {
+        heading: '9. Limitation of liability',
+        bullets: [
+          'To the maximum extent permitted by Malaysian law, we are not liable for indirect, incidental, consequential, special, exemplary, or punitive damages, including lost profit or goodwill.',
+          'Total liability for any claim is limited to the amount you paid for the specific Service giving rise to the claim.',
+          'Nothing in these Terms limits liability for fraud, fraudulent misrepresentation, or other liability that cannot be excluded under Malaysian law.',
+        ],
+      },
+      {
+        heading: '10. Termination',
+        bullets: [
+          'Either party may terminate with written notice if the other materially breaches these Terms and fails to remedy the breach within fourteen (14) days.',
+          'Upon termination you must cease using the deliverables and settle all outstanding fees.',
+          'Clauses relating to intellectual property, confidentiality, payment obligations, and liability survive termination.',
+        ],
+      },
+      {
+        heading: '11. Governing law & dispute resolution',
+        intro: 'These Terms are governed by the laws of Malaysia. The courts of Malaysia have non-exclusive jurisdiction over disputes arising from or related to the Services.',
+      },
+      {
+        heading: '12. Changes to these Terms',
+        intro: 'We may update these Terms from time to time. The effective date appears at the top of the policy. Material changes will be communicated through reasonable channels, and continued use after updates signifies acceptance.',
+      },
+      {
+        heading: '13. Contact & complaints',
+        items: [
+          {
+            title: 'Primary support',
+            description: 'Email support@meta-alliance.my or call +60 16-587 4131 for assistance.',
+          },
+          {
+            title: 'Complaint process',
+            description: 'Email support@meta-alliance.my with your order ID and detailed description. We aim to acknowledge within five business days and resolve issues promptly.',
+          },
+        ],
+      },
+      {
+        heading: '14. Miscellaneous',
+        bullets: [
+          'These Terms, together with referenced policies, form the entire agreement between you and Metaphysics Alliance.',
+          'If any provision is held invalid, the remaining clauses remain in force.',
+          'Failure or delay to enforce a right does not waive that right.',
+          'You may not assign these Terms without our prior consent. We may assign our rights to an affiliate or successor as part of a reorganisation or transfer.',
+          'Neither party is liable for delays or failure caused by force majeure events beyond reasonable control.',
+        ],
+      },
+      {
+        heading: '15. Regulatory notes (Malaysia)',
+        bullets: [
+          'Contracts Act 1950 (Section 10) – essentials of a valid contract and consideration.',
+          'Sale of Goods Act 1957 – governs supply of physical deliverables, where applicable.',
+          'Consumer Protection Act 1999 (Part IIIA) – prohibits unfair terms in consumer contracts.',
+          'Electronic Commerce Act 2006 – recognises electronic contracts and signatures.',
+          'Personal Data Protection Act 2010 – regulates personal data processing and rights.',
+          'Consumer Protection (Electronic Trade Transactions) Regulations 2024 – requires disclosure of business identity, contact details, pricing, refunds, and delivery arrangements.',
+        ],
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance Support Team',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: 'We reply within one business day and resolve most requests within five business days.',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+
+  disclaimer: {
+    title: 'Disclaimer',
+    last_updated: 'November 2, 2024',
+    intro: `This Disclaimer outlines the legal boundaries for all Metaphysics Alliance content, consultations, and services. All materials are provided for educational, cultural, and personal development purposes and do not constitute professional, medical, or financial advice.`,
+    downloadUrl: '/legal/disclaimer.pdf',
+    summary: [
+      {
+        title: 'Purpose',
+        description: 'Defines the legal boundaries governing all Metaphysics Alliance content, consultations, and services.',
+      },
+      {
+        title: 'Advisory scope',
+        description: 'Clarifies that metaphysical interpretations remain symbolic guidance and are not substitutes for legal, medical, psychological, or financial advice.',
+      },
+      {
+        title: 'Client responsibility',
+        description: 'Emphasises that clients decide how to apply insights and accept the risks associated with implementation.',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. Purpose and scope',
+        intro: `This Disclaimer explains the legal boundaries governing all Metaphysics Alliance content, consultations, and services. Our materials are for educational, cultural, and personal development purposes and should not be treated as professional advice.`,
+      },
+      {
+        heading: '2. Acknowledgment of terms',
+        intro: `By visiting our website, subscribing to communications, or purchasing services you acknowledge and accept this Disclaimer, which operates alongside our Terms of Service and Privacy Policy.`,
+      },
+      {
+        heading: '3. Interpretation and definitions',
+        intro: `“Services” covers all metaphysical analyses, destiny reports, Feng Shui audits, courses, and digital products. “User” refers to any individual or organisation engaging our content or services. Undefined terms carry their ordinary meaning under Malaysian law.`,
+      },
+      {
+        heading: '4. Nature of services',
+        intro: `All metaphysical interpretations are advisory and symbolic, reflecting patterns of time, energy, and environment rather than fixed or scientific certainties.`,
+      },
+      {
+        heading: '5. Educational and cultural purpose',
+        intro: `We design our services to deepen self-awareness and cultural appreciation of Eastern metaphysics. They are not intended to predict or alter legal, financial, or medical outcomes.`,
+      },
+      {
+        heading: '6. No professional advice',
+        intro: `Nothing in our reports, consultations, or digital materials constitutes legal, medical, psychological, or investment advice. Obtain independent professional guidance before making decisions that affect life, health, or assets.`,
+      },
+      {
+        heading: '7. No guarantees or promised results',
+        intro: `While we apply due care and methodological rigour, we do not guarantee the accuracy, completeness, or success of any interpretation or recommendation. Outcomes depend on personal action, timing, and circumstances beyond our control.`,
+      },
+      {
+        heading: '8. Limitation of liability',
+        intro: `To the fullest extent permitted by Malaysian law, any liability arising from the use of our content or services is limited.`,
+        bullets: [
+          `We are not liable for direct, indirect, incidental, or consequential losses, including emotional distress or business interruption.`,
+          `If liability is proven, the cap is the amount paid for the specific service.`,
+          `This limitation does not override statutory rights that cannot be excluded or restricted by law.`,
+        ],
+      },
+      {
+        heading: '9. Assumption of risk by user',
+        intro: `By engaging our services, you accept full personal responsibility for interpreting and applying metaphysical insights. Participation is voluntary and at your own risk.`,
+      },
+      {
+        heading: '10. Indemnity',
+        intro: `You agree to indemnify and hold harmless Metaphysics Alliance, its directors, consultants, and partners from any claim, damage, or expense arising from misuse of our content or the breach of applicable laws.`,
+      },
+      {
+        heading: '11. Confidentiality and PDPA compliance',
+        intro: `We handle personal data in accordance with the Personal Data Protection Act 2010 (PDPA) and the commitments set out in our Privacy Policy. Client information remains confidential unless disclosure is required by law.`,
+      },
+      {
+        heading: '12. Electronic communication and consent',
+        intro: `Under the Electronic Commerce Act 2006, your digital acceptance—including checkboxes, email confirmations, or online form submissions—constitutes valid consent. Official notices may be delivered electronically to the email address you provide.`,
+      },
+      {
+        heading: '13. Intellectual property rights',
+        intro: `All charts, calculations, methodologies, logos, text, and visual assets are the intellectual property of Metaphysics Alliance or licensed partners. Reproduction or distribution without written approval is prohibited.`,
+      },
+      {
+        heading: '14. Third-party content and external links',
+        intro: `Our website may reference third-party platforms such as analytics tools, payment gateways, or social media. We do not control or endorse external sites and disclaim liability for their content or data practices.`,
+      },
+      {
+        heading: '15. Testimonials and endorsements',
+        intro: `Testimonials describe individual experiences and are not guarantees of future results. Unless explicitly stated, no compensation is provided for testimonials.`,
+      },
+      {
+        heading: '16. User conduct and defamation',
+        intro: `Users must communicate respectfully and refrain from defamatory or false statements about our services or personnel. We may pursue remedies under the Defamation Act 1957 and related civil legislation.`,
+      },
+      {
+        heading: '17. Spiritual and cultural sensitivity',
+        intro: `Metaphysics Alliance operates from a non-religious, inclusive philosophy. Our teachings draw on cultural and historical sources without promoting or opposing any faith or belief system.`,
+      },
+      {
+        heading: '18. System availability and force majeure',
+        intro: `We do not guarantee uninterrupted access to our website or systems. We are not liable for downtime caused by maintenance, cyber incidents, natural disasters, government directives, or other force majeure events.`,
+      },
+      {
+        heading: '19. Accuracy and updates of information',
+        intro: `All information is current at the time of publication. We may update or revise data, formulas, or references without prior notice to align with evolving research and client feedback.`,
+      },
+      {
+        heading: '20. Contractual relationship',
+        intro: `Engaging our services creates a legally binding agreement under the Contracts Act 1950 and Electronic Commerce Act 2006. This Disclaimer forms part of that agreement and should be read with the Terms of Service and Refund Policy.`,
+      },
+      {
+        heading: '21. Governing law and jurisdiction',
+        intro: `This Disclaimer is governed by the laws of Malaysia, and disputes fall under the non-exclusive jurisdiction of the courts of Selangor Darul Ehsan.`,
+      },
+      {
+        heading: '22. Amendments and notification',
+        intro: `We may amend this Disclaimer to reflect legislative or operational developments. Updates will be posted on meta-alliance.my with a revised effective date, and continued use signifies acceptance of the revised terms.`,
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance Support Team',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: 'Monday - Friday, 10:00 AM - 6:00 PM (GMT +8).',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+
+  cookies: {
+    title: 'Cookies Policy',
+    last_updated: 'November 2, 2024',
+    intro: 'Metaphysics Alliance (“we”, “us”, “our”) uses cookies and similar technologies on our website to improve user experience, personalise content, and analyse site performance.',
+    downloadUrl: '/legal/cookies-policy.pdf',
+    summary: [
+      {
+        title: 'Purpose',
+        description: 'We use cookies to keep the site functional, tailor language preferences, and understand how visitors interact with our content.',
+      },
+      {
+        title: 'Control',
+        description: 'Non-essential cookies only load after you consent, and you can withdraw that consent at any time through the banner or browser settings.',
+      },
+      {
+        title: 'Third parties',
+        description: 'Analytics and media partners (such as Google Analytics and Meta Pixel) set certain cookies under their own privacy policies.',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. What are cookies?',
+        intro: 'Cookies are small text files placed on your device when you visit a website. They allow the site to recognise your device, remember preferences, and keep experiences consistent across visits.',
+        bullets: [
+          'Session cookies expire when you close the browser; persistent cookies remain until you clear them or they reach their expiry date.',
+          'Cookies may be set directly by us (first-party) or by approved service providers operating on our behalf (third-party).',
+        ],
+      },
+      {
+        heading: '2. Types of cookies we use',
+        items: [
+          {
+            title: 'Strictly necessary',
+            description: 'Enable core navigation, security, and access to member-only areas. These cannot be switched off in our systems.',
+          },
+          {
+            title: 'Performance',
+            description: 'Collect anonymous usage data so we can measure page performance and resolve issues quickly.',
+          },
+          {
+            title: 'Preference',
+            description: 'Remember selections such as language, theme, or saved forms so the site feels familiar.',
+          },
+          {
+            title: 'Analytics',
+            description: 'Use tools like Google Analytics (with IP anonymisation) to see how visitors discover and move through the site.',
+          },
+          {
+            title: 'Advertising (optional)',
+            description: 'Triggered only if you consent, these cookies help us show relevant content or measure marketing outcomes.',
+          },
+        ],
+      },
+      {
+        heading: '3. How we use cookies',
+        bullets: [
+          'Maintain secure sessions for logged-in areas and protect against misuse.',
+          'Analyse aggregated visitor journeys so we can improve layout, messaging, and load times.',
+          'Store your language or interface preferences to reduce repeated prompts.',
+          'Generate anonymised insights that inform service planning and content strategy.',
+          'Measure the effectiveness of campaigns when you opt into marketing cookies.',
+        ],
+        note: 'We never use cookies to collect sensitive personal data such as financial information, government identifiers, or medical history.',
+      },
+      {
+        heading: '4. Legal basis under Malaysian law',
+        columns: [
+          {
+            title: 'Statutory references',
+            points: [
+              'Personal Data Protection Act 2010 (Sections 6–7: Notice & Choice Principle; Section 9: Disclosure Principle).',
+              'Electronic Commerce Act 2006 – recognises electronic consent.',
+              'Consumer Protection (Electronic Trade Transactions) Regulations 2024 – requires transparent disclosure of online data practices.',
+            ],
+          },
+          {
+            title: 'Interpretation',
+            points: [
+              'Consent must be clear, informed, and freely given.',
+              'Users must be able to withdraw consent at any time without penalty.',
+              'Non-essential cookies only activate after consent is recorded.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '5. Your consent',
+        intro: 'When you first visit the site, we display a cookie banner describing our use of cookies.',
+        bullets: [
+          'Clicking “Accept” or continuing to browse signals your consent to the purposes described in this policy.',
+          'You can decline optional cookies through the banner or browser settings; strictly necessary cookies will continue to operate.',
+          'Disabling certain cookies may impact features such as saved preferences or embedded media.',
+        ],
+      },
+      {
+        heading: '6. Managing or deleting cookies',
+        intro: 'You can manage cookies directly from your browser:',
+        bullets: [
+          'Chrome: Settings → Privacy and security → Cookies and other site data.',
+          'Edge: Settings → Site permissions → Cookies and site data.',
+          'Safari: Preferences → Privacy → Manage Website Data.',
+          'Firefox: Options → Privacy & Security → Cookies and Site Data.',
+          'Google Analytics opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">https://tools.google.com/dlpage/gaoptout</a>.',
+        ],
+      },
+      {
+        heading: '7. Third-party cookies',
+        intro: 'Some cookies are set by trusted partners providing analytics, media, or advertising services on our behalf.',
+        bullets: [
+          'Google Analytics (traffic statistics).',
+          'Meta Pixel (advertising conversion tracking).',
+          'YouTube / Vimeo embeds (media playback).',
+        ],
+        note: 'These partners process data under their own privacy policies. We encourage you to review their notices directly.',
+      },
+      {
+        heading: '8. Data retention',
+        intro: 'We retain cookie data only for as long as the stated purposes require or as mandated by law. Aggregated analytics may be retained for longer-term planning in anonymised form.',
+      },
+      {
+        heading: '9. Updates to this Cookies Policy',
+        intro: 'We may update this policy to reflect legal, technological, or operational changes. A revised “Effective Date” will appear on this page, and material updates may trigger additional notices or a fresh consent request.',
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance Support Team',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: 'We reply within one business day and resolve most requests within five business days.',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+
+  refund: {
+    title: 'Refund Policy',
+    last_updated: 'November 2, 2024',
+    intro: 'This policy explains when refunds may be issued for purchases made through Metaphysics Alliance.',
+    downloadUrl: '/legal/refund-policy.pdf',
+    summary: [
+      {
+        title: 'Scope',
+        description: 'Applies to purchases made via meta-alliance.my or official Metaphysics Alliance channels and aligns with Malaysian consumer law.',
+      },
+      {
+        title: 'Personalised services',
+        description: 'Custom analyses and consultations are generally non-refundable once preparatory work has begun.',
+      },
+      {
+        title: 'How to request',
+        description: 'Email support@meta-alliance.my with your order ID; verified cases are processed within 7–14 business days.',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. Legal basis',
+        items: [
+          {
+            title: 'Contracts Act 1950 (ss. 10, 65–67)',
+            description: 'Governs lawful contracts, rescission rights, and compensation for work already performed.',
+          },
+          {
+            title: 'Consumer Protection Act 1999',
+            description: 'Protects buyers from unfair or misleading practices in personal and online transactions.',
+          },
+          {
+            title: 'Consumer Protection (Electronic Trade Transactions) Regulations 2024',
+            description: 'Requires clear disclosure of refund terms for e-commerce engagements.',
+          },
+        ],
+      },
+      {
+        heading: '2. General principles',
+        bullets: [
+          'Orders are treated as final once bespoke analysis or preparation has commenced.',
+          'Pricing, deliverables, and timelines are explained prior to payment confirmation.',
+          'Refund eligibility depends on service type, stage of delivery, and the supporting reason provided.',
+        ],
+      },
+      {
+        heading: '3. Non-refundable services',
+        intro: 'Because our work is highly customised, refunds are not available once the following services have started:',
+        bullets: [
+          'Destiny reports (BaZi, Zi Wei, Qi Men, numerology, or blended analyses).',
+          'Corporate audits, feng shui assessments, or energy field consultations.',
+          'VIP holistic or premium programmes requiring birth data or confidential business intelligence.',
+          'Workshops, live classes, or digital sessions after access links or materials have been released.',
+        ],
+        note: 'Personalised engagements are exempt from refunds once performance begins, provided limitations were disclosed beforehand (Contracts Act 1950, CPA 1999).',
+      },
+      {
+        heading: '4. Refundable circumstances',
+        bullets: [
+          'Cancellation before work commences may qualify for a refund, subject to administrative deductions.',
+          'Where we are unable to deliver a service as described and no suitable alternative is agreed.',
+          'Regulatory or statutory obligations that expressly require a refund.',
+        ],
+      },
+      {
+        heading: '5. Refunds for digital products',
+        bullets: [
+          'Requests must be submitted within three (3) days of purchase.',
+          'Eligible where the file is defective, inaccessible, or materially inconsistent with its description.',
+          'Once a download or access link works as described, refunds normally do not apply.',
+        ],
+      },
+      {
+        heading: '6. Refund procedure',
+        bullets: [
+          'Email support@meta-alliance.my with the subject “Refund Request – [Order ID]”.',
+          'Include your full name, order number, payment date, method, detailed reason, and supporting evidence.',
+          'We acknowledge within three (3) business days and review the claim promptly.',
+          'Approved refunds are processed within seven (7) to fourteen (14) business days via the original payment method or bank transfer.',
+        ],
+      },
+      {
+        heading: '7. Processing fees',
+        intro: 'If an order is cancelled before work starts, we may deduct up to 10% as an administrative or payment gateway fee (Contracts Act 1950, s.74).',
+      },
+      {
+        heading: '8. Chargeback policy',
+        bullets: [
+          'Initiating a chargeback without first contacting us may lead to suspension of ongoing services.',
+          'We provide full transaction evidence to financial institutions to resolve disputes.',
+          'Unwarranted chargebacks can be treated as breach of contract under Sections 74–75 of the Contracts Act 1950.',
+        ],
+      },
+      {
+        heading: '9. Policy updates',
+        intro: 'We may revise this policy to reflect legal or operational changes. Updates take effect on the stated date and are published on meta-alliance.my.',
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance Support Team',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: 'Monday – Friday, 10:00 AM – 6:00 PM (GMT+8).',
       address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
     },
   },
@@ -4240,7 +4817,7 @@ dictionary.CN.legal = {
     title: '隐私政策',
     last_updated: '2025年10月19日',
     intro: '本政策阐述 Metaphysics Alliance 在咨询、审计、课程与数字产品中的个人数据收集、使用、保存和分享方式，并说明您在马来西亚《2010 年个人数据保护法》（PDPA）下的权利。',
-    downloadUrl: '/privacy-policy-cn.pdf',
+    downloadUrl: '/legal/privacy-policy-cn.pdf',
     summary: [
       {
         title: '适用范围',
@@ -4252,7 +4829,7 @@ dictionary.CN.legal = {
       },
       {
         title: '支援窗口',
-        description: '隐私问题请发邮件至 <a href="mailto:privacy@meta-alliance.my">privacy@meta-alliance.my</a>；重大事件将在 24 小时内升级处理。'
+        description: '隐私相关问题请发邮件至 <a href="mailto:support@meta-alliance.my">support@meta-alliance.my</a>；重大事件将在 24 小时内升级处理。'
       }
     ],
     sections: [
@@ -4391,13 +4968,589 @@ dictionary.CN.legal = {
       }
     ],
     contact: {
-      name: 'Metaphysics Alliance 隐私负责人',
-      email: 'privacy@meta-alliance.my',
-      phone: '+60 16-587-3141',
-      hours: '我们会在 24 小时内回应所有隐私请求，并力争在 5 个工作日内完成处理。',
-      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.'
+      name: 'Metaphysics Alliance 支持团队',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: '我们会在 1 个工作日内回复，并在 5 个工作日内完成大部分请求。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
     }
-  }
+  },
+
+  cookies: {
+    title: 'Cookies 政策',
+    last_updated: '2024年11月2日',
+    intro: 'Metaphysics Alliance（以下简称“我们”或“本公司”）在本网站使用 Cookies 及类似技术，以提升用户体验、个性化内容，并分析网站表现。',
+    downloadUrl: '/legal/cookies-policy-cn.pdf',
+    summary: [
+      {
+        title: '使用目的',
+        description: 'Cookies 让网站保持稳定运行、记住语言偏好，并帮助我们了解访客如何浏览内容。',
+      },
+      {
+        title: '控制权',
+        description: '非必要性 Cookies 仅在您明确同意后才会启用，您可随时通过弹窗或浏览器设定撤回同意。',
+      },
+      {
+        title: '第三方服务',
+        description: '部分 Cookies 由受信任的伙伴（如 Google Analytics、Meta Pixel）设定，并依各自的隐私政策处理数据。',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. 什么是 Cookies？',
+        intro: 'Cookies 是当您访问网站时储存在设备上的小型文本文件，可让网站识别您的装置、记住偏好设置，并保持一致的浏览体验。',
+        bullets: [
+          '会话型 Cookies 在您关闭浏览器后即失效；持久型 Cookies 会保留至手动删除或到期为止。',
+          'Cookies 可能由我们直接设置（第一方），或由受托的第三方服务商代表我们设置。',
+        ],
+      },
+      {
+        heading: '2. 我们使用的 Cookies 类型',
+        items: [
+          {
+            title: '严格必要',
+            description: '维持基本导航、安全机制及会员专区访问，此类 Cookies 无法在系统中关闭。',
+          },
+          {
+            title: '性能监测',
+            description: '收集匿名使用数据，协助我们评估页面表现并快速排除问题。',
+          },
+          {
+            title: '偏好记忆',
+            description: '保存语言、主题或登入状态，让网站体验更贴合您的习惯。',
+          },
+          {
+            title: '分析统计',
+            description: '透过 Google Analytics（已启用 IP 匿名化）等工具，掌握访客来源与浏览路径。',
+          },
+          {
+            title: '广告用途（可选）',
+            description: '仅在您同意后启用，用于呈现更相关的内容或衡量行销成效。',
+          },
+        ],
+      },
+      {
+        heading: '3. 我们如何使用 Cookies',
+        bullets: [
+          '确保会员区与安全机制正常运作，防止未授权操作。',
+          '分析汇总后的访问路径，以优化版面设计、文案与载入速度。',
+          '记住语言或界面偏好，减少重复设定。',
+          '产出匿名洞察数据，用于服务规划与内容策略。',
+          '在您允许的情况下，用来评估行销或广告活动的成效。',
+        ],
+        note: '我们不会透过 Cookies 收集任何敏感资料，例如财务信息、身份证号码或医疗记录。',
+      },
+      {
+        heading: '4. 马来西亚法律依据',
+        columns: [
+          {
+            title: '法律条文参考',
+            points: [
+              '《2010年个人资料保护法》（第 6–7 条：通知与选择原则；第 9 条：披露原则）。',
+              '《2006年电子商务法》—— 认可电子同意的法律效力。',
+              '《2024年电子交易条例》—— 要求线上经营者明确说明数据收集用途。',
+            ],
+          },
+          {
+            title: '原则说明',
+            points: [
+              '同意必须是明确、知情且自愿的表示。',
+              '用户可随时撤回同意，且不应受不利影响。',
+              '非必要性 Cookies 必须在取得同意后才可启用。',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '5. 用户同意',
+        intro: '您首次访问网站时，系统会透过弹窗或横幅提示我们使用 Cookies。',
+        bullets: [
+          '点击“接受”或继续浏览，即表示您同意本政策所描述的用途。',
+          '您可透过弹窗或浏览器设定拒绝非必要 Cookies；严格必要的 Cookies 将持续运作。',
+          '若停用部分 Cookies，可能影响偏好记忆或内嵌媒体等功能。',
+        ],
+      },
+      {
+        heading: '6. 如何管理或删除 Cookies',
+        intro: '您可透过浏览器设定来控制或删除 Cookies：',
+        bullets: [
+          'Chrome： 设置 → 隐私和安全性 → Cookies 与其他网站数据。',
+          'Edge： 设置 → 网站权限 → Cookies 与网站数据。',
+          'Safari： 偏好设置 → 隐私 → 管理网站数据。',
+          'Firefox： 选项 → 隐私与安全 → Cookies 与网站数据。',
+          '停用 Google Analytics：<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">https://tools.google.com/dlpage/gaoptout</a>。',
+        ],
+      },
+      {
+        heading: '7. 第三方 Cookies',
+        intro: '部分 Cookies 由合作伙伴在我们授权下设置，用于分析、媒体或广告成效追踪。',
+        bullets: [
+          'Google Analytics（流量统计）。',
+          'Meta Pixel（广告转化追踪）。',
+          'YouTube / Vimeo（影音内容嵌入）。',
+        ],
+        note: '这些伙伴会依据各自的隐私政策处理资料，建议您直接参阅相关条款。',
+      },
+      {
+        heading: '8. 数据保存期限',
+        intro: '我们仅在达成上述目的所需期间或法律要求的期限内保留 Cookies 数据；经匿名化的统计资料可能会用于长期分析。',
+      },
+      {
+        heading: '9. 政策更新',
+        intro: '我们可能因技术、法律或营运调整而更新本政策。所有更新会发布于本页面，并标示最新的“生效日期”；若属重大修改，我们将提供额外通知或重新征求同意。',
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance 支持团队',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: '我们会在 1 个工作日内回复，并在 5 个工作日内完成大部分请求。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+
+  terms: {
+    title: '服务条款',
+    last_updated: '2024年11月2日',
+    intro: '当您访问或使用 Metaphysics Alliance 的网站、应用程序或任何相关服务（统称“服务”）时，即表示您已阅读并同意本《服务条款》。',
+    downloadUrl: '/legal/terms-of-service-cn.pdf',
+    summary: [
+      {
+        title: '法律约束',
+        description: '本条款规范您对服务的使用，并构成您与 Metaphysics Alliance 之间具有约束力的法律协议。',
+      },
+      {
+        title: '服务性质',
+        description: '我们的玄学与命理分析仅供参考，不替代专业、医疗、法律或财务意见，且不保证任何结果。',
+      },
+      {
+        title: '联络方式',
+        description: '如有疑问，请发送邮件至 <a href="mailto:support@meta-alliance.my">support@meta-alliance.my</a>；我们通常会在五个工作日内回复。',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. 定义与解释',
+        items: [
+          {
+            title: '“本公司”',
+            description: '指 Metaphysics Alliance，即提供本服务的注册商号。',
+          },
+          {
+            title: '“用户”或“您”',
+            description: '指任何访问网站、应用程序或使用服务的个人或机构。',
+          },
+          {
+            title: '“服务”',
+            description: '包括玄学咨询、命理分析、风水规划、数字能量、报告撰写、培训课程及其他线上或线下相关服务。',
+          },
+          {
+            title: '“客户资料”',
+            description: '指您提供给我们的信息、数据或内容，以及我们在服务过程中为您制作的分析与成果。',
+          },
+        ],
+      },
+      {
+        heading: '2. 商业身份与法定揭露（依马来西亚法规）',
+        intro: '根据《消费者保护（电子交易）条例 2024》之规定，我们公开以下信息：',
+        items: [
+          {
+            title: '注册实体',
+            description: 'Metaphysics Alliance · 202403287440 (AS0486487-A)。',
+          },
+          {
+            title: '登记地址',
+            description: 'Menara Mitraland, 13A Jalan PJU 5/1, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia。',
+          },
+          {
+            title: '主要联络',
+            description: 'support@meta-alliance.my ｜ +60 16-587 4131。',
+          },
+          {
+            title: '提供服务',
+            description: '玄学咨询、命理报告、培训课程及相关数字／实物交付项目。',
+          },
+          {
+            title: '价格与交付',
+            description: '费用以网站产品页或书面协议为准；数字成果以电邮／下载方式交付，实物商品依配送政策处理。',
+          },
+          {
+            title: '退款说明',
+            description: '详见第 5.4 条及《退款政策》。定制化数字报告一经开始分析或交付，原则上不予退款。',
+          },
+          {
+            title: '客服响应时间',
+            description: '详见第 13 条——我们目标是在五个工作日内给予回复。',
+          },
+        ],
+      },
+      {
+        heading: '3. 服务范围',
+        intro: '本公司提供的服务均属咨询性质，不保证任何特定结果。用户对个人、财务、医疗或法律决策承担全部责任，必要时应寻求持牌专业人士的意见。',
+      },
+      {
+        heading: '4. 用户资格与义务',
+        items: [
+          {
+            title: '签约能力',
+            description: '您确认已达法定年龄并具备签约与履约能力。',
+          },
+          {
+            title: '资料准确性',
+            description: '您承诺提供真实、准确、完整且及时更新的资料。',
+          },
+          {
+            title: '合法使用',
+            description: '您不得以任何违法或侵权方式使用服务，也不得破坏系统安全或上传恶意程序。',
+          },
+        ],
+      },
+      {
+        heading: '5. 收费、付款、税费与退款',
+        items: [
+          {
+            title: '费用标准',
+            description: '以结账页面或双方签署的书面协议为准。',
+          },
+          {
+            title: '付款条件',
+            description: '除非另有书面约定，服务在开始前须全额付款。',
+          },
+          {
+            title: '税费与关税',
+            description: '价格可能不含税项或关税；相关费用将在结账时列明，并由用户承担。',
+          },
+          {
+            title: '退款政策',
+            description: '定制数字报告自分析启动后通常不退款；其他服务依《退款政策》及相关消费者法例执行。',
+          },
+        ],
+      },
+      {
+        heading: '6. 报告、内容与知识产权',
+        items: [
+          {
+            title: '所有权',
+            description: '网站、方法论、咨询成果与相关素材的知识产权归本公司或授权方所有。',
+          },
+          {
+            title: '使用授权',
+            description: '用户仅获授权将成果用于个人或内部用途，不得转让。',
+          },
+          {
+            title: '使用限制',
+            description: '未经书面许可，不得复制、传播、转售或公开展示任何成果。',
+          },
+          {
+            title: '客户资料',
+            description: '您授权我们为提供与优化服务之合理范围内使用、储存、处理所提交的资料。',
+          },
+        ],
+      },
+      {
+        heading: '7. 资料保护与隐私权',
+        intro: '我们依照《2010 年个人资料保护法》及<a href="/CN/legal/privacy">《隐私政策》</a>处理个人资料；透过使用服务，您同意我们与受信合作伙伴进行所需之资料处理。您可依隐私政策申请查阅、更正或其他权利。',
+      },
+      {
+        heading: '8. 服务标准与免责声明',
+        intro: '服务以“现状”及“按可用性”基础提供。我们将尽合理专业能力交付，但不保证服务不间断、无错误，亦不担保成果满足任何特定目的。',
+      },
+      {
+        heading: '9. 责任限制',
+        bullets: [
+          '在法律允许的最大范围内，我们不对任何间接、附带、特殊或后果性损失负责，包括利润、收入或商誉损失。',
+          '若须承担责任，其总额以您为该项服务支付的费用为上限。',
+          '本条款不排除因欺诈或法律不得排除之责任。',
+        ],
+      },
+      {
+        heading: '10. 终止条款',
+        bullets: [
+          '任一方如严重违反本条款且在收到书面通知后 14 天内未纠正，另一方得终止协议。',
+          '终止后，用户应停止使用全部成果并支付尚未结清的费用。',
+          '知识产权、保密义务、费用与责任限制等条款于终止后仍继续有效。',
+        ],
+      },
+      {
+        heading: '11. 适用法律与争议解决',
+        intro: '本条款受马来西亚法律管辖并依其解释；任何争议由马来西亚法院享有非专属管辖权。',
+      },
+      {
+        heading: '12. 条款更新',
+        intro: '我们可能随时更新本条款；新版条款会标明生效日期。若属重大变更，我们将以合理方式通知，用户在更新后继续使用即视为接受。',
+      },
+      {
+        heading: '13. 联系与投诉',
+        items: [
+          {
+            title: '客服管道',
+            description: '如需协助，请电邮 support@meta-alliance.my 或致电 +60 16-587 4131。',
+          },
+          {
+            title: '投诉流程',
+            description: '发送邮件至 support@meta-alliance.my，并附上订单编号及问题说明；我们目标是在五个工作日内确认并尽快处理。',
+          },
+        ],
+      },
+      {
+        heading: '14. 其他条款',
+        bullets: [
+          '本条款及引用之政策构成双方之间的完整协议，取代先前所有口头或书面约定。',
+          '若任何条文被认定无效，其余条文仍具效力。',
+          '任一方延迟或未行使权利，不构成对未来权利的放弃。',
+          '未经书面同意，用户不得转让本协议；本公司可在重组、合并或资产转移时转让其权利与义务。',
+          '因不可抗力或不可控制事件导致的延误或未履行，不构成违约。',
+        ],
+      },
+      {
+        heading: '15. 马来西亚法规说明',
+        bullets: [
+          '《1950 年合约法》第 10 条：有效合约之必要要素与对价。',
+          '《1957 年货物买卖法》：适用于可能交付之实体商品或资料。',
+          '《1999 年消费者保护法》（第三 A 部分）：规管消费者合约中的不公平条款。',
+          '《2006 年电子商务法》：确认电子合约与电子签章的法律效力。',
+          '《2010 年个人资料保护法》：规管个人资料的蒐集、使用与权利行使。',
+          '《2024 年消费者保护（电子交易）条例》：规定商家需公开身份、价格、退款与交付信息。',
+        ],
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance 客户支持团队',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: '我们会在 1 个工作日内回复，并在 5 个工作日内完成大部分请求。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
+  disclaimer: {
+    title: '免责声明',
+    last_updated: '2024年11月2日',
+    intro: '本免责声明阐明 Metaphysics Alliance 所提供的内容、咨询与服务的法律界限。所有资料仅供教育、文化与个人成长用途，不构成任何形式的专业、医疗或财务建议。',
+    downloadUrl: '/legal/disclaimer-cn.pdf',
+    summary: [
+      {
+        title: '适用范围',
+        description: '明确 Metaphysics Alliance 在网站、咨询与课程中提供内容与服务的法律边界。'
+      },
+      {
+        title: '服务性质',
+        description: '说明玄学解读属象征性参考，并非法律、医疗、心理或财务建议。'
+      },
+      {
+        title: '客户责任',
+        description: '提醒用户自行决定如何运用资讯，并承担执行所产生的一切风险。'
+      }
+    ],
+    sections: [
+      {
+        heading: '1. 目的与适用范围',
+        intro: '本免责声明阐明 Metaphysics Alliance 提供之内容、咨询与服务的法律界限，所有资料仅用于教育、文化与个人成长参考，不构成专业建议。'
+      },
+      {
+        heading: '2. 条款确认',
+        intro: '当您访问本网站、订阅通讯或购买服务，即视为已阅读并同意本免责声明；该条款与《服务条款》及《隐私政策》共同生效。'
+      },
+      {
+        heading: '3. 释义与定义',
+        intro: '“服务”包括玄学分析、命盘报告、风水审查、课程与数字产品；“用户”指任何使用本公司内容或服务的个人或机构；未定义术语以马来西亚法律释义为准。'
+      },
+      {
+        heading: '4. 服务性质',
+        intro: '所有玄学解读均属象征性与参考性，基于时间、能量与环境规律，并非科学或实证结论。'
+      },
+      {
+        heading: '5. 教育与文化目的',
+        intro: '我们的服务旨在提升自我认知与文化理解，不用于预测或改变法律、财务或医疗结果。'
+      },
+      {
+        heading: '6. 非专业建议声明',
+        intro: '本公司提供的报告与咨询不构成法律、医疗、心理或投资建议；在作出重大决定前，请咨询持牌专业人士。'
+      },
+      {
+        heading: '7. 无保证与结果声明',
+        intro: '我们虽秉持专业审慎，仍不保证任何信息或建议的准确性、完整性或特定结果；成果取决于个人行动、时机与外部环境。'
+      },
+      {
+        heading: '8. 责任限制',
+        intro: '在马来西亚法律允许的最大范围内，本公司对使用本站内容或服务所产生的责任予以限制。',
+        bullets: [
+          '我们不对任何直接、间接、附带或后果性损失承担责任，包括情绪困扰或业务中断。',
+          '如责任被确认，我们的总赔偿金额以用户为相关服务支付的费用为上限。',
+          '本条款不影响法律规定不可排除或限制的消费者权利。'
+        ]
+      },
+      {
+        heading: '9. 用户风险承担',
+        intro: '使用本公司服务即表示用户对理解与执行结果承担全部责任；所有决定与风险由用户自行掌握。'
+      },
+      {
+        heading: '10. 赔偿责任',
+        intro: '若因违反本免责声明、误用内容或触犯法律而引发索赔，用户需赔偿 Metaphysics Alliance 及其顾问、合作方。'
+      },
+      {
+        heading: '11. 保密与个人资料保护',
+        intro: '我们依据《2010年个人资料保护法》(PDPA) 以及《隐私政策》处理个人资料；除法律要求外，客户信息将严格保密。'
+      },
+      {
+        heading: '12. 电子通信与同意',
+        intro: '依据《2006年电子商务法》，通过勾选、电子邮件或线上表格所作的确认均视为有效同意；官方通知可通过电子邮件传达。'
+      },
+      {
+        heading: '13. 知识产权',
+        intro: '网站所有文字、图表、算法、设计与视觉资产均属 Metaphysics Alliance 或授权方的知识产权，未经书面许可不得复制或传播。'
+      },
+      {
+        heading: '14. 第三方内容与外部链接',
+        intro: '本网站可能链接至第三方平台（如支付网关、社交媒体或分析工具）；相关内容与隐私政策不受我们控制，风险由用户自负。'
+      },
+      {
+        heading: '15. 用户评价与推荐声明',
+        intro: '客户评价仅代表个人体验，并不保证未来结果；除非明确说明，我们不会为评价提供任何酬劳。'
+      },
+      {
+        heading: '16. 用户行为与诽谤',
+        intro: '用户须保持尊重沟通，不得发表诽谤或虚假言论；恶意造谣可能依据《1957年诽谤法》等法律追究。'
+      },
+      {
+        heading: '17. 宗教与文化中立',
+        intro: 'Metaphysics Alliance 保持非宗教、开放立场；所引用的玄学内容源自文化与历史研究，并不代表特定宗教立场。'
+      },
+      {
+        heading: '18. 系统可用性与不可抗力',
+        intro: '我们不保证网站或系统持续可用；因维护、通讯故障、自然灾害或政府指令等不可抗力导致的停机，我们不承担责任。'
+      },
+      {
+        heading: '19. 信息准确性与更新',
+        intro: '所有资讯基于发布当下的研究与经验；我们保留随时修订数据、公式或参考资料的权利，以维持准确与及时。'
+      },
+      {
+        heading: '20. 合同关系',
+        intro: '当用户下单或付款，即形成受《1950年合同法》与《2006年电子商务法》保障的法律关系；本免责声明为合同组成部分，应与《服务条款》及《退款政策》合并阅读。'
+      },
+      {
+        heading: '21. 管辖法律与司法管辖',
+        intro: '本免责声明受马来西亚法律管辖，任何争议由马来西亚雪兰莪州法院享有非专属管辖权。'
+      },
+      {
+        heading: '22. 修订与通知',
+        intro: '我们可因法律或业务需要随时更新本免责声明；更新内容将公布于 meta-alliance.my，并注明新的生效日期；持续使用即表示接受新条款。'
+      }
+    ],
+    contact: {
+      name: 'Metaphysics Alliance 客户支持团队',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: '周一至周五，上午 10:00 - 下午 6:00（GMT +8）。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    }
+  },
+
+  refund: {
+    title: '退款政策',
+    last_updated: '2024年11月2日',
+    intro: '本政策说明在何种情形下，Metaphysics Alliance 可为您提供退款。',
+    downloadUrl: '/legal/refund-policy-cn.pdf',
+    summary: [
+      {
+        title: '适用范围',
+        description: '涵盖通过 meta-alliance.my 或官方渠道成交的订单，并符合法律要求。',
+      },
+      {
+        title: '个性化服务',
+        description: '一旦进入分析或制作阶段，专属咨询与报告通常不再提供退款。',
+      },
+      {
+        title: '申请流程',
+        description: '发送邮件至 support@meta-alliance.my 附上订单信息，审核通过后将于 7–14 个工作日内处理。',
+      },
+    ],
+    sections: [
+      {
+        heading: '1. 法律依据',
+        items: [
+          {
+            title: '《1950年合约法》（第10条、第65–67条）',
+            description: '规范有效合约与解除权，并允许就已执行的工作要求合理补偿。',
+          },
+          {
+            title: '《1999年消费者保护法》',
+            description: '防止不公平或误导性商业行为，保障消费者权益。',
+          },
+          {
+            title: '《2024年消费者保护（电子交易）条例》',
+            description: '要求线上经营者清楚披露退款与退货政策。',
+          },
+        ],
+      },
+      {
+        heading: '2. 一般原则',
+        bullets: [
+          '服务一经启动，并投入客制化分析或准备工作，即视为最终确认。',
+          '我们会在付款前提供服务说明、交付形式与费用明细，确保交易透明。',
+          '是否可退款取决于服务类别、制作进度及申请理由。',
+        ],
+      },
+      {
+        heading: '3. 不可退款项目',
+        intro: '因服务高度客制化，下列项目一旦开始分析或撰写，将不再受理退款：',
+        bullets: [
+          '命理报告（八字、紫微、奇门、数理分析或综合方案）。',
+          '企业风水审计、能量场勘测、布局咨询等服务。',
+          '需提供出生或商业敏感资讯的 VIP 全息项目。',
+          '线上课程、直播或数字内容在发放访问链接或资料后。',
+        ],
+        note: '只要事前已充分披露限制，个别化服务在履行开始后可依《1950年合约法》与《消费者保护法》拒绝退款。',
+      },
+      {
+        heading: '4. 可退款情形',
+        bullets: [
+          '在尚未开始制作前取消订单（可能扣除行政或支付手续费）。',
+          '若我们无法按约提供服务且未能达成替代方案。',
+          '法律或法规明确要求必须退款的情况。',
+        ],
+      },
+      {
+        heading: '5. 数字产品退款',
+        bullets: [
+          '需在购买后三（3）天内提出申请。',
+          '若下载链接损坏、无法访问或与描述严重不符，可申请退款。',
+          '成功下载或访问后，一般不再受理退款。',
+        ],
+      },
+      {
+        heading: '6. 退款申请流程',
+        bullets: [
+          '请发送邮件至 support@meta-alliance.my，并在标题注明 “Refund Request – [订单编号]”。',
+          '邮件中请提供姓名、订单号、付款时间、付款方式、退款原因及相关证据。',
+          '我们会在三个工作日内确认并展开审核。',
+          '审核通过后，将于七至十四个工作日内以原支付方式或银行转账完成退款。',
+        ],
+      },
+      {
+        heading: '7. 手续费',
+        intro: '若服务尚未开始前取消，我们可依《1950年合约法》第74条扣除最高 10% 作为行政或支付通道费用。',
+      },
+      {
+        heading: '8. 拒付与银行争议',
+        bullets: [
+          '未先联络我们而直接发起退单，可能导致相关服务暂停。',
+          '我们会向金融机构提交完整交易证明，以维护合法权益。',
+          '无理或虚假的退单行为将被视为违反合约义务（《1950年合约法》第74–75条）。',
+        ],
+      },
+      {
+        heading: '9. 政策更新',
+        intro: '若因法律或业务调整更新本政策，最新生效日期将标注于本页，并在 meta-alliance.my 公布；重大变更可能额外通知客户或再次征求同意。',
+      },
+    ],
+    contact: {
+      name: 'Metaphysics Alliance 支持团队',
+      email: 'support@meta-alliance.my',
+      phone: '+60165873141',
+      hours: '周一至周五，10:00 – 18:00（GMT+8）。',
+      address: 'Metaphysics Alliance\nMenara Mitraland, 13A Jalan PJU 5/1\nKota Damansara, 47810 Petaling Jaya\nSelangor, Malaysia.',
+    },
+  },
 };
 
 
