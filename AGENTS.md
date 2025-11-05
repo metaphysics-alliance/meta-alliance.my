@@ -244,5 +244,6 @@ Work Log (for resume)
 - MA-NAV-PRICING-REORDER-2025-11-03T14:30:00+08:00: Moved the Pricing link between Resources and About across Next/Vite navigation and kept bilingual labels aligned.
 - MA-PRICING-DATA-SYNC-2025-11-04T16:05:00+08:00: Synced pricing experience with Supabase service_pricing data, added live USD conversion, and introduced automatic FX rate triggers.
 - MA-ENV-IGNORE-2025-11-04T16:45:00+08:00: Removed tracked .env.local and added ignore rules to keep Supabase secrets out of git.
+- MA-ENV-SECRETS-GUIDE-2025-11-04T17:00:00+08:00: Added .env.local.example and wired deploy workflow to GitHub Secrets for Supabase credentials.
 - MA-EXCHANGE-RATE-DUAL-2025-11-04T13:07:03+08:00: Extended the exchange-rate GitHub Action to capture both USD/MYR and MYR/USD pairs for Supabase automation.
 - MA-PRICING-ECOMMERCE-2025-11-04T14:23:31+08:00: Rebuilt the pricing journey with immersive visuals, cart flow, and checkout coverage across Next and Vite.
