@@ -17,6 +17,7 @@
     "test:visual:update": "playwright test --update-snapshots",
     "test:browserstack": "playwright test --config=playwright.browserstack.config.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=9999",
+    "env:setup": "node scripts/setup-env.mjs",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
