@@ -249,3 +249,4 @@ Work Log (for resume)
 - MA-PRICING-ECOMMERCE-2025-11-04T14:23:31+08:00: Rebuilt the pricing journey with immersive visuals, cart flow, and checkout coverage across Next and Vite.
 - MA-CN-FONT-ZCOOL-2025-11-09T22:45:00+08:00: Swapped CN locale typography across Next/Vite to Simplified ZCOOL weights with automatic bold routing.
 - MA-VITE-BASE-ASSET-SYNC-2025-11-09T22:55:00+08:00: Normalized Vite base path to root and tracked the new service hero image plus intermediate CN font weight.
+- MA-ROADMAP-ASSET-REFRESH-2025-11-09T23:05:00+08:00: Regenerated the CN roadmap PNG via the sharp pipeline so automation can ship the latest asset.
