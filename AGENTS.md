@@ -247,3 +247,4 @@ Work Log (for resume)
 - MA-ENV-SECRETS-GUIDE-2025-11-04T17:00:00+08:00: Added .env.local.example and wired deploy workflow to GitHub Secrets for Supabase credentials, and added an env setup helper script.
 - MA-EXCHANGE-RATE-DUAL-2025-11-04T13:07:03+08:00: Extended the exchange-rate GitHub Action to capture both USD/MYR and MYR/USD pairs for Supabase automation.
 - MA-PRICING-ECOMMERCE-2025-11-04T14:23:31+08:00: Rebuilt the pricing journey with immersive visuals, cart flow, and checkout coverage across Next and Vite.
+- MA-CN-FONT-ZCOOL-2025-11-09T22:45:00+08:00: Swapped CN locale typography across Next/Vite to Simplified ZCOOL weights with automatic bold routing.

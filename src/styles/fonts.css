@@ -6,11 +6,32 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'ZCOOL CangEr CN';
+  src: url('../simplified-zcool-cang-er-yu-yang-ti-W02.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZCOOL CangEr CN';
+  src: url('../simplified-zcool-cang-er-yu-yang-ti-W04.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root{
   --app-font: 'Noto Sans CJK', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --cn-font: 'ZCOOL CangEr CN', 'Noto Sans CJK', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
 }
 
 html, body{
   font-family: var(--app-font);
 }
 
+html[data-lang='CN'],
+body[data-lang='CN']{
+  font-family: var(--cn-font);
+}

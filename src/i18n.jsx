@@ -14,6 +14,10 @@ export function I18nProvider({ children }){
     if (typeof window !== 'undefined'){
       localStorage.setItem('lang', lang)
     }
+    if (typeof document !== 'undefined'){
+      document.documentElement.setAttribute('data-lang', lang)
+      document.body?.setAttribute('data-lang', lang)
+    }
   }, [lang])
 
   const value = useMemo(() => ({

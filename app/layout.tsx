@@ -8,6 +8,15 @@ const notoCJK = localFont({
   variable: '--font-app',
 })
 
+const cnZcool = localFont({
+  src: [
+    { path: '../src/simplified-zcool-cang-er-yu-yang-ti-W02.ttf', weight: '400', style: 'normal' },
+    { path: '../src/simplified-zcool-cang-er-yu-yang-ti-W04.ttf', weight: '700', style: 'normal' },
+  ],
+  display: 'swap',
+  variable: '--font-cn',
+})
+
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
@@ -40,7 +49,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }){
   return (
     <html lang="en">
-      <body className={`${notoCJK.className}`}>{children}</body>
+      <body className={`${notoCJK.className} ${notoCJK.variable} ${cnZcool.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }

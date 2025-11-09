@@ -31,11 +31,13 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
 
 export default function LocaleLayout({ params, children }:{ params:{ locale: Locale }, children: React.ReactNode }){
   getDict(params.locale);
+  const localeClass = params.locale === 'CN' ? 'locale-cn' : undefined;
+
   return (
-    <>
+    <div className={localeClass} data-locale={params.locale}>
       <Navbar locale={params.locale} />
       <main className="container py-10">{children}</main>
       <Footer locale={params.locale} />
-    </>
+    </div>
   );
 }
