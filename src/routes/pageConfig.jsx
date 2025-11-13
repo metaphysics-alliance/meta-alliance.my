@@ -10,6 +10,7 @@ import ContactPage from '../pages/ContactPage.jsx'
 import ServicesIndex from '../pages/ServicesIndex.jsx'
 import PricingPage from '../pages/PricingPage.jsx'
 import CheckoutPage from '../pages/CheckoutPage.jsx'
+import QimenDatasetsPage from '../pages/QimenDatasetsPage.jsx'
 
 const CTA_CONTACT = {
   label: 'Book a consultation',
@@ -168,6 +169,10 @@ export const ROUTES = [
     ],
     ideal: 'Ideal for students wanting to deepen their imperial astrology skill set.',
   }),
+  {
+    path: '/resources/qimen-datasets',
+    element: <QimenDatasetsPage />,
+  },
   {
     path: '/about',
     element: (<AboutPage />),

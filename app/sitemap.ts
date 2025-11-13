@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'resources/free-bazi',
     'resources/free-qimen',
     'resources/free-ziwei',
+    'resources/qimen-datasets',
     // Shop
     'shop',
     'shop/amulets',
