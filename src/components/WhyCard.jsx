@@ -6,9 +6,7 @@ import { useI18n } from '../i18n.jsx'
 const IconMap = { ShieldCheck, Sparkles, Compass, Clock, LineChart, Layers }
 
 /**
- * WhyCard - inner icon cards variant
- * - Uses i18n keys if present: why.title, why.subtitle, why.items[]
- * - Falls back to embedded EN/CN text if i18n not provided
+ * WhyCard - inner icon cards variant with premium cosmic styling
  */
 export default function WhyCard(){
   const { t, lang } = useI18n()
@@ -82,10 +80,14 @@ export default function WhyCard(){
 
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <h3 className="text-2xl md:text-3xl font-semibold text-center">{title}</h3>
-      <p className="mt-2 text-white/70 text-center max-w-2xl mx-auto">{subtitle}</p>
+      <div className="text-center mb-10">
+        <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-200 via-gold to-amber-400 bg-clip-text text-transparent">
+          {title}
+        </h3>
+        <p className="mt-3 text-white/80 text-lg max-w-2xl mx-auto">{subtitle}</p>
+      </div>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((it, i) => {
           const iconName = it.icon || 'Sparkles'
           const Ico = IconMap[iconName] || Sparkles
@@ -95,15 +97,20 @@ export default function WhyCard(){
           return (
             <article
               key={i}
-              className="rounded-2xl p-5 bg-black/25 border border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.35)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] backdrop-blur-md transition-shadow"
+              className="group relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br from-black/60 via-slate-950/70 to-black/60 border border-white/20 shadow-xl hover:shadow-2xl hover:shadow-gold/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-3">
-                <div className="rounded-xl border border-yellow-500/60 p-2">
-                  <Ico size={22} className="text-yellow-400" />
+              {/* Cosmic glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/0 via-transparent to-amber-600/0 group-hover:from-yellow-500/10 group-hover:to-amber-600/10 transition-all duration-300 pointer-events-none" />
+              
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="rounded-xl bg-gradient-to-br from-yellow-500/20 to-amber-600/20 border border-yellow-500/40 p-3 group-hover:border-gold group-hover:shadow-lg group-hover:shadow-gold/50 transition-all duration-300">
+                    <Ico size={24} className="text-gold" />
+                  </div>
+                  <h4 className="text-lg font-bold text-white">{titleText}</h4>
                 </div>
-                <h4 className="text-lg font-semibold">{titleText}</h4>
+                <p className="text-white/80 leading-relaxed text-sm">{descText}</p>
               </div>
-              <p className="mt-3 text-white/75 leading-relaxed">{descText}</p>
             </article>
           )
         })}

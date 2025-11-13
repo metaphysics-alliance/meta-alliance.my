@@ -91,7 +91,7 @@ export const dictionary = {
       heroTitle: 'Pricing & Engagement Levels',
       heroSubtitle: 'Precision metaphysics for visionary leaders, heirs and enterprise teams.',
       heroDescription: 'Fees are quoted in Malaysian Ringgit (MYR). Engagements commence once objectives are confirmed and a 50% retainer is received. Remaining balance is due on delivery of the primary dossier or consultation.',
-      noticeTitle: 'Every engagement includes',
+      noticeTitle: 'Every Engagement Includes',
       noticePoints: [
         'Discovery briefing to capture objectives, decision-makers and constraints.',
         'True Solar Time calibration plus multi-method cross-verification.',
@@ -121,7 +121,7 @@ export const dictionary = {
             'Investor, board and team messaging comes scripted so you open kickoff with every stakeholder aligned on objectives and metrics.'
         }
       ],
-      objectionsTitle: 'Top five hesitations, disarmed',
+      objectionsTitle: 'Top Five Hesitations And Rejections',
       objectionsSubtitle: 'We engineered each programme to neutralise the most common “no.”',
       objections: [
         {
@@ -220,6 +220,7 @@ export const dictionary = {
               price: 'RM 6,888',
               cadence: 'per executive blueprint',
               href: '/services/celestial/destiny-algorithm',
+              shortDescription: '180-page destiny analysis with 90-min strategy consult and 12-month action map',
               features: [
                 '180-page bilingual dossier covering destiny code, influence and focus cycles.',
                 '90-minute strategy consult with 12-month action map.',
@@ -231,6 +232,7 @@ export const dictionary = {
               price: 'RM 9,888',
               cadence: 'per atlas issuance',
               href: '/services/celestial/imperial-star-atlas',
+              shortDescription: 'Palace-by-palace positioning strategy with succession and reputation counsel',
               features: [
                 'Palace-by-palace orchestration for influence, capital and public positioning.',
                 'Six major activation windows aligned to stakeholder and media cadence.',
@@ -242,6 +244,7 @@ export const dictionary = {
               price: 'RM 8,588',
               cadence: 'per mission deployment',
               href: '/services/celestial/arcane-strategy-matrix',
+              shortDescription: 'Tactical hour-by-hour formations for launches and critical negotiations',
               features: [
                 'Tactical formations for launches, negotiations or critical transitions.',
                 'Mission dashboard with hourly portals, portals to avoid and decoy paths.',
@@ -260,6 +263,7 @@ export const dictionary = {
               price: 'RM 7,288',
               cadence: 'per residence',
               href: '/services/fengshui/home-destiny-compass',
+              shortDescription: 'On-site feng shui audit with life palace alignment and 12-month activation calendar',
               features: [
                 'On-site or digital audit covering layout, landform and annual renewals.',
                 'Life palace alignment matched to household BaZi charts.',
@@ -271,6 +275,7 @@ export const dictionary = {
               price: 'RM 12,588',
               cadence: 'per floor or site',
               href: '/services/fengshui/office-power-alignment',
+              shortDescription: 'Executive placement strategy with revenue flow choreography and quarterly tuning',
               features: [
                 'Executive command placement, revenue flow choreography and team zoning.',
                 'Leadership sanctuary and war-room shielding for critical decisions.',
@@ -282,6 +287,7 @@ export const dictionary = {
               price: 'RM 11,888',
               cadence: 'per site study',
               href: '/services/fengshui/dragon-vein-oracle',
+              shortDescription: 'Macro landform analysis with geomantic risk scoring and timing overlays',
               features: [
                 'Macro landform reconnaissance with geomantic risk scoring.',
                 'Directional pairing for entrances, signage and water features.',
@@ -300,6 +306,7 @@ export const dictionary = {
               price: 'RM 4,288',
               cadence: 'per report',
               href: '/services/magnetic-matrix/i-ching-energy-matrix',
+              shortDescription: 'Hexagram-based personality analysis with 6-month timing arcs and practice stack',
               features: [
                 'Hexagram-based personality, motive and decision rhythm decoding.',
                 'Six-month timing arcs highlighting accelerate versus consolidate phases.',
@@ -311,6 +318,7 @@ export const dictionary = {
               price: 'RM 3,688',
               cadence: 'per naming cycle',
               href: '/services/magnetic-matrix/name-destiny-code',
+              shortDescription: 'Full vibration audit with strategic renaming proposals and implementation guide',
               features: [
                 'Full vibration audit of current identity across languages and scripts.',
                 'Strategic renaming proposals aligned to destiny and industry resonance.',
@@ -322,6 +330,7 @@ export const dictionary = {
               price: 'RM 2,988',
               cadence: 'per blueprint',
               href: '/services/magnetic-matrix/soul-number-blueprint',
+              shortDescription: 'Numerology pathways with talent acceleration routines and compatibility insights',
               features: [
                 'Numerology pathways for intuition, creativity and fulfilment.',
                 'Talent acceleration routines matched to core and destiny numbers.',
@@ -340,6 +349,7 @@ export const dictionary = {
               price: 'RM 12,888',
               cadence: 'per imperial cycle',
               href: '/oracle/celestial-numbers',
+              shortDescription: 'True Solar Time matrices with Court of Eight analysis and 3-part strategic briefing',
               features: [
                 'True Solar Time matrices correlating to national and global cycles.',
                 'Court of eight analysis for influence, risk and protection strategies.',
@@ -351,6 +361,7 @@ export const dictionary = {
               price: 'RM 10,888',
               cadence: 'per directive',
               href: '/oracle/taiyi-numbers',
+              shortDescription: 'Tai Yi flight path for capital moves with Heaven-Earth-Human harmonisation',
               features: [
                 'Tai Yi flight path for geopolitical or capital-intensive moves.',
                 'Heaven, Earth and Human harmonisation ledger with priority actions.',
@@ -362,6 +373,7 @@ export const dictionary = {
               price: 'RM 9,688',
               cadence: 'per mission',
               href: '/oracle/six-ren',
+              shortDescription: 'Six Ren board casting for conflict resolution with enemy-ally positioning grid',
               features: [
                 'Six Ren board casting for conflict resolution and covert manoeuvres.',
                 'Enemy and ally positioning grid with probability markers.',
@@ -380,6 +392,7 @@ export const dictionary = {
               price: 'RM 2,888',
               cadence: 'per intake (6 weeks)',
               href: '/academy/foundation',
+              shortDescription: '6-week live intensive with interactive chart labs and bilingual workbooks',
               features: [
                 'Six-week live intensive covering classical frameworks and timing fundamentals.',
                 'Interactive chart labs introducing BaZi, Zi Wei and Qi Men toolkits.',
@@ -391,6 +404,7 @@ export const dictionary = {
               price: 'RM 4,288',
               cadence: 'per intake (8 weeks)',
               href: '/academy/beginner',
+              shortDescription: 'Case-led workshops with weekly office hours and peer study pods',
               features: [
                 'Case-led workshops applying destiny diagnostics to real scenarios.',
                 'Weekly office hours for personalised guidance and practice feedback.',
@@ -402,6 +416,7 @@ export const dictionary = {
               price: 'RM 5,888',
               cadence: 'per cohort (10 weeks)',
               href: '/academy/intermediate',
+              shortDescription: 'Cross-discipline synthesis with enterprise playbooks and capstone project',
               features: [
                 'Cross-discipline synthesis bridging destiny, space and timing intelligence.',
                 'Enterprise playbooks translating metaphysics into board-level language.',
@@ -413,6 +428,7 @@ export const dictionary = {
               price: 'RM 8,888',
               cadence: 'per cohort (12 weeks)',
               href: '/academy/professional',
+              shortDescription: 'Supervised client simulations with ethics training and certification panel review',
               features: [
                 'Supervised client simulations covering intake, analysis and delivery.',
                 'Ethics, governance and documentation standards for professional practice.',
@@ -431,6 +447,7 @@ export const dictionary = {
               price: 'RM 9,888',
               cadence: 'per blueprint',
               href: '/vip-report/essential',
+              shortDescription: '120-page destiny dossier with 10-year timing overlays and 75-min walkthrough',
               features: [
                 '120-page personalised dossier covering destiny code, wealth flow and career resonance.',
                 '10-year and annual timing overlays with priority action steps.',
@@ -442,6 +459,7 @@ export const dictionary = {
               price: 'RM 14,888',
               cadence: 'per blueprint',
               href: '/vip-report/pro',
+              shortDescription: '220-page deep analysis with leadership matrices and two consultation sessions',
               features: [
                 '220-page deep analysis integrating name energy, numerology and multi-system triangulation.',
                 'Leadership, relationship and capital orchestration matrices with contingency triggers.',
@@ -453,6 +471,7 @@ export const dictionary = {
               price: 'RM 23,888',
               cadence: 'per blueprint',
               href: '/vip-report/supreme',
+              shortDescription: '320-page holographic masterplan with family governance and 60-day concierge support',
               features: [
                 '320-page full holographic masterplan uniting destiny, Feng Shui, numerology and True Solar Time.',
                 'Family governance, legacy and asset allocation blueprints with risk mitigation protocols.',
@@ -471,6 +490,7 @@ export const dictionary = {
               price: 'RM 18,588',
               cadence: 'per enterprise',
               href: '/enterprise/audit',
+              shortDescription: 'Founding chart analysis with leadership audit and 3-tier action sequence',
               features: [
                 'Founding chart with leadership resonance audit and wealth channels.',
                 'Operational risk scan across markets, people and space.',
@@ -482,6 +502,7 @@ export const dictionary = {
               price: 'RM 22,088',
               cadence: 'per location short-list',
               href: '/enterprise/site',
+              shortDescription: 'Landform evaluation for 3 sites with scoring matrix and implementation playbook',
               features: [
                 'Landform, directional and timing evaluation for up to three sites.',
                 'Scoring matrix with prosperity, resilience and compliance indicators.',
@@ -493,6 +514,7 @@ export const dictionary = {
               price: 'RM 16,588',
               cadence: 'per annual planning cycle',
               href: '/enterprise/cycles',
+              shortDescription: '10-year rhythm map with leadership cadence dashboard and strategy calendar',
               features: [
                 'Ten-year and annual rhythm map for growth, consolidation and pause phases.',
                 'Leadership cadence dashboard with succession safeguards.',
@@ -507,6 +529,7 @@ export const dictionary = {
         {
           name: 'Executive Concierge Retainer',
           price: 'From RM 5,000 / month',
+          shortDescription: 'Priority counsel with monthly timing briefs and on-call charting for key events',
           features: [
             'Priority WhatsApp and email counsel for real-time decisions.',
             'Monthly timing brief aligned to board or family governance cadence.',
@@ -516,6 +539,7 @@ export const dictionary = {
         {
           name: 'On-Site Immersion',
           price: 'From RM 3,800 / day + expenses',
+          shortDescription: 'In-person walkthrough with immediate adjustments and 72-hour follow-up summary',
           features: [
             'In-person walkthrough, interviews and environment tuning.',
             'Immediate adjustments with leadership training for implementation.',
@@ -525,6 +549,7 @@ export const dictionary = {
         {
           name: 'Confidential Briefing Deck',
           price: 'RM 2,288',
+          shortDescription: 'Executive slide deck with risk-opportunity matrices in board-ready format',
           features: [
             'Executive slide deck translating metaphysics into board language.',
             'Risk, opportunity and timing matrices for stakeholders.',
@@ -684,7 +709,7 @@ export const dictionary = {
           title: 'Start Your Corporate Destiny Consultation',
           message: 'Click to begin a personalised corporate audit and align your enterprise with the rhythm of success.',
           primaryLabel: 'Start Your Corporate Destiny Consultation',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
       },
       advancedBlueprint: {
         badge: '360全维度',
@@ -789,7 +814,7 @@ export const dictionary = {
           title: '领取天机蓝图·进阶版',
           message: '点击开启专属命运解析，掌握人生节奏。',
           primaryLabel: '领取天机蓝图·进阶版',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       advancedBlueprint: {
@@ -895,7 +920,7 @@ export const dictionary = {
           title: '领取天机蓝图·进阶版',
           message: '点击开启专属命运解析，掌握人生节奏。',
           primaryLabel: '领取天机蓝图·进阶版',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       advancedBlueprint: {
@@ -1000,7 +1025,7 @@ export const dictionary = {
           title: 'Get Your Advanced Destiny Blueprint',
           message: 'Click to begin your personalised analysis and master the rhythm of your life.',
           primaryLabel: 'Get Your Advanced Destiny Blueprint',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       newsletterTitle: 'Corporate Destiny Dispatch',
@@ -1105,7 +1130,7 @@ export const dictionary = {
           title: 'Get Your Destiny Blueprint',
           message: 'Click to begin your personalised report and uncover the logic of your destiny.',
           primaryLabel: 'Get Your Destiny Blueprint',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       advancedBlueprint: {
@@ -1210,7 +1235,7 @@ export const dictionary = {
           title: 'Get Your Advanced Destiny Blueprint',
           message: 'Click to begin your personalised analysis and master the rhythm of your life.',
           primaryLabel: 'Get Your Advanced Destiny Blueprint',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       supremeBlueprint: {
@@ -1315,7 +1340,7 @@ export const dictionary = {
           title: 'Get Your Supreme Destiny Blueprint',
           message: 'Click to begin your full-holographic consultation and experience destiny from every dimension.',
           primaryLabel: 'Get Your Supreme Destiny Blueprint',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       enterpriseSite: {
@@ -1418,7 +1443,7 @@ export const dictionary = {
           title: 'Start Your Site Strategy Consultation',
           message: 'Click to begin your personalised site consultation and discover where your enterprise truly belongs.',
           primaryLabel: 'Start Your Site Strategy Consultation',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         },
         newsletterTitle: 'Enterprise Site Dispatch',
         newsletterSubtitle: 'Landform intelligence, timing alerts and location optimisation for executive teams.'
@@ -1523,7 +1548,7 @@ export const dictionary = {
           title: 'Start Your Strategy & Cycle Consultation',
           message: 'Click to begin your personalised session and turn timing into strategic power.',
           primaryLabel: 'Start Your Strategy & Cycle Consultation',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         },
         newsletterTitle: 'Enterprise Cycle Dispatch',
         newsletterSubtitle: 'Cycle alerts, timing forecasts and rhythm optimisation for executive teams.'
@@ -1624,7 +1649,7 @@ export const dictionary = {
           title: 'Start Your Celestial Numbers Consultation',
           message: 'Click to begin your personalised session and unlock the logic of your destiny.',
           primaryLabel: 'Start Your Celestial Numbers Consultation',
-          primaryHref: '/contact',
+          primaryHref: '/pricing',
         },
         newsletterTitle: 'Celestial Numbers Dispatch',
         newsletterSubtitle: 'Temporal pattern intelligence, opportunity windows and rhythm calibration notes.',
@@ -1764,7 +1789,7 @@ export const dictionary = {
         title: 'Start Your Metaphysics Mastery Pathway',
         message: 'Click below to begin your certified journey—from Foundation to Professional Mastery.',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact'
+        primaryHref: '/pricing'
       }
     },
     academyFoundation: {
@@ -1773,7 +1798,7 @@ export const dictionary = {
         title: 'Chinese Metaphysics Foundation',
         subtitle: 'Build the Foundation · Understand Heaven & Humanity · Master the Logic Behind Destiny',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       },
@@ -1862,7 +1887,7 @@ export const dictionary = {
         title: 'Enroll in the Chinese Metaphysics Foundation',
         message: 'Click below to reserve your seat in the next cohort or reconnect with the core logic behind destiny.',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       }
@@ -1873,7 +1898,7 @@ export const dictionary = {
         title: "Beginner's Metaphysic Course",
         subtitle: 'Step Into Metaphysics · Decode the Hidden Order · Open the First Door to Destiny',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       },
@@ -1958,7 +1983,7 @@ export const dictionary = {
         title: "Enroll in the Beginner's Metaphysic Course",
         message: 'Click below to begin your six-month journey into the logic of destiny and energy flow.',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       }
@@ -1969,7 +1994,7 @@ export const dictionary = {
         title: 'Advanced Course',
         subtitle: 'Integrate the Arts · Master Destiny Intersections · See the Hidden Order Behind Life',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       },
@@ -2052,7 +2077,7 @@ export const dictionary = {
         title: 'Enroll in the Advanced Course',
         message: 'Click below to begin your three-month journey into multi-system integration and destiny mastery.',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       }
@@ -2063,7 +2088,7 @@ export const dictionary = {
         title: 'Professional Course & Certification',
         subtitle: 'From Learning to Mastery · From Knowledge to Guidance',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       },
@@ -2146,7 +2171,7 @@ export const dictionary = {
         title: 'Enroll in the Professional Course & Certification',
         message: 'Click below to start your final step toward professional certification and metaphysics mastery.',
         primaryLabel: 'Enroll Now',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: 'Back to Course Overview',
         secondaryHref: '/academy/courses'
       }
@@ -2912,7 +2937,7 @@ export const dictionary = {
           title: '开启乾坤企业策审查',
           message: '点击开启你的专属企业审查，让战略与节奏同步推进。',
           primaryLabel: '开启乾坤企业策审查',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         },
         newsletterTitle: '企业命运情报站',
         newsletterSubtitle: '董事会级别的时间情报、空间诊断与团队共振指引。'
@@ -3016,7 +3041,7 @@ export const dictionary = {
           title: '领取命运蓝图·启程版',
           message: '点击预约专属命运蓝图，让人生进入正向循环。',
           primaryLabel: '领取命运蓝图·启程版',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       advancedBlueprint: {
@@ -3122,7 +3147,7 @@ export const dictionary = {
           title: '领取天机蓝图·进阶版',
           message: '点击开启专属命运解析，掌握人生节奏。',
           primaryLabel: '领取天机蓝图·进阶版',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       supremeBlueprint: {
@@ -3227,7 +3252,7 @@ export const dictionary = {
           title: '领取乾坤至尊·全息版',
           message: '点击开启专属咨询，掌握天地人三合的命运节奏。',
           primaryLabel: '领取乾坤至尊·全息版',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         }
       },
       enterpriseSite: {
@@ -3330,7 +3355,7 @@ export const dictionary = {
           title: '开启天元选址策推演',
           message: '点击开启专属选址咨询，找出真正属于企业的旺地。',
           primaryLabel: '开启天元选址策推演',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         },
         newsletterTitle: '企业选址情报',
         newsletterSubtitle: '地形能量、择时提醒与选址优化建议。'
@@ -3435,7 +3460,7 @@ export const dictionary = {
           title: '开启天时战略策推演',
           message: '点击开启专属咨询，把时间节奏转化为战略力量。',
           primaryLabel: '开启天时战略策推演',
-          primaryHref: '/contact'
+          primaryHref: '/pricing'
         },
         newsletterTitle: '天时战略情报',
         newsletterSubtitle: '周期提醒、时间节奏与战略优化建议。'
@@ -3536,7 +3561,7 @@ export const dictionary = {
           title: '开启皇极天数推演',
           message: '点击开启专属推演，读懂命运的运行逻辑。',
           primaryLabel: '开启皇极天数推演',
-          primaryHref: '/contact',
+          primaryHref: '/pricing',
         },
         newsletterTitle: '皇极时序情报',
         newsletterSubtitle: '掌握时间脉动、机会窗口与节奏校准提醒。',
@@ -3675,7 +3700,7 @@ export const dictionary = {
         title: '预约玄学系统学习全程',
         message: '点击立即报名，开启从基础到专业的玄学修习旅程。',
         primaryLabel: '立即报名',
-        primaryHref: '/contact'
+        primaryHref: '/pricing'
       }
     },
     academyBeginner: {
@@ -3684,7 +3709,7 @@ export const dictionary = {
         title: '初阶课程',
         subtitle: '入门命理 · 探索天机 · 打开命运的第一扇门',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       },
@@ -3769,7 +3794,7 @@ export const dictionary = {
         title: '报名《初阶课程》',
         message: '点击下方，展开理解命运结构与能量流动的 6 个月修习。',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       }
@@ -3780,7 +3805,7 @@ export const dictionary = {
         title: '进阶课程',
         subtitle: '融合多术数 · 掌握命运交汇点 · 看见人生的隐藏规律',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       },
@@ -3863,7 +3888,7 @@ export const dictionary = {
         title: '报名《进阶课程》',
         message: '点击下方，展开三个月的整合修习旅程，掌握命运交汇的核心逻辑。',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       }
@@ -3874,7 +3899,7 @@ export const dictionary = {
         title: '专业课程与认证',
         subtitle: '学以致用 · 以术为道 · 以道达人',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       },
@@ -3957,7 +3982,7 @@ export const dictionary = {
         title: '报名《专业课程与认证》',
         message: '点击下方，开启认证之旅，让你以专业身份引领玄学服务。',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       }
@@ -3968,7 +3993,7 @@ export const dictionary = {
         title: '玄学基础课程',
         subtitle: '夯实根基 · 理解天人之道 · 掌握命运底层逻辑',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       },
@@ -4057,7 +4082,7 @@ export const dictionary = {
         title: '报名《玄学基础课程》',
         message: '点击下方即可预约最新一期课程名额，或洽询私人定制班级。',
         primaryLabel: '立即报名',
-        primaryHref: '/contact',
+        primaryHref: '/pricing',
         secondaryLabel: '返回课程总览',
         secondaryHref: '/academy/courses'
       }

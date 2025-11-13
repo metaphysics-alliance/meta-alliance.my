@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 
+import CTAButton from './CTAButton.jsx'
 import { useI18n } from '../i18n.jsx'
 
 const SOURCES = [
@@ -184,17 +184,9 @@ export default function HeroCarousel() {
                 {currentSlide.sub}
               </p>
               <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-                <Link
-                  to="/services"
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-[14px] bg-black/85 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-gold transition-all duration-300 md:px-7 md:py-2.5 md:text-sm"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#f8d884cc] via-[#f6e7b8aa] to-[#f8d884cc] opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
-                  <span className="absolute inset-0 scale-[0.86] rounded-[12px] border border-[#f8d88433] transition duration-300 group-hover:scale-100 group-hover:border-[#f8d88480]" />
-                  <span className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-40" style={{ boxShadow: '0 0 45px 10px rgba(248,216,132,0.32)' }} />
-                  <span className="relative tracking-[0.28em] text-[#f4deb4] group-hover:text-[#fff5dc]">
+                <CTAButton to="/services" size="lg" className="uppercase tracking-[0.28em] md:px-7 md:py-2.5">
                   {ctaLabel}
-                  </span>
-                </Link>
+                </CTAButton>
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Banner from '../components/Banner.jsx';
 import SectionDivider from '../components/SectionDivider.jsx';
+import CTAButton from '../components/CTAButton.jsx';
 import { useI18n } from '../i18n.jsx';
 
 const placeholderStyles =
@@ -107,9 +108,8 @@ export default function CelestialServicePage({ serviceKey }) {
     return cta.secondaryLabel;
   })();
 
-  const primaryHref = cta?.primaryHref || '/contact';
+  const primaryHref = '/pricing';
   const secondaryHref = cta?.secondaryHref || null;
-  const primaryClass = 'px-5 py-2.5 rounded-lg bg-gold text-black font-semibold shadow-soft-xl hover:brightness-110 transition';
 
   return (
     <main className="space-y-14 pb-20">
@@ -121,7 +121,6 @@ export default function CelestialServicePage({ serviceKey }) {
         showDefaultCta={Boolean(primaryLabel)}
         ctaLabel={primaryLabel}
         ctaHref={primaryHref}
-        ctaClassName={primaryClass}
       />
 
       <div className="space-y-16">
@@ -165,19 +164,13 @@ export default function CelestialServicePage({ serviceKey }) {
                   <p className="text-white/75 md:text-lg leading-relaxed">{cta.message}</p>
                 ) : null}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
-                  <Link
-                    to={primaryHref}
-                    className={primaryClass}
-                  >
+                  <CTAButton to={primaryHref} size="lg">
                     {primaryLabel}
-                  </Link>
+                  </CTAButton>
                   {secondaryHref && secondaryLabel ? (
-                    <Link
-                      to={secondaryHref}
-                      className="px-5 py-2.5 rounded-lg border border-gold/50 text-gold hover:bg-gold/10 transition"
-                    >
+                    <CTAButton to={secondaryHref} size="lg" className="border border-gold/50 bg-transparent text-gold hover:bg-gold/10">
                       {secondaryLabel}
-                    </Link>
+                    </CTAButton>
                   ) : null}
                 </div>
               </div>

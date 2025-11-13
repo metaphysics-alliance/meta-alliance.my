@@ -1,13 +1,8 @@
 /* eslint-disable import/order */
-import { Link } from 'react-router-dom';
 import { useI18n } from '../i18n.jsx';
 import Banner from '../components/Banner.jsx';
 import SectionDivider from '../components/SectionDivider.jsx';
-
-const PRIMARY_CLASS =
-  'inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110';
-const SECONDARY_CLASS =
-  'inline-flex items-center justify-center rounded-lg border border-gold/50 px-6 py-2.5 text-sm font-semibold text-gold transition hover:bg-gold/10';
+import CTAButton from '../components/CTAButton.jsx';
 
 export default function AcademyCourseDetail({ courseKey = 'academyFoundation' }){
   const { t } = useI18n();
@@ -16,12 +11,12 @@ export default function AcademyCourseDetail({ courseKey = 'academyFoundation' })
   const sections = Array.isArray(course.sections) ? course.sections : [];
   const cta = course.cta || null;
 
-  const primaryHref = resolveHref(hero.primaryHref || '/contact');
+  const primaryHref = resolveHref(hero.primaryHref || '/pricing');
   const secondaryHref = resolveHref(hero.secondaryHref || '/academy/courses');
 
   const heroActions = [
-    hero.primaryLabel && primaryHref ? { label: hero.primaryLabel, href: primaryHref, className: PRIMARY_CLASS } : null,
-    hero.secondaryLabel && secondaryHref ? { label: hero.secondaryLabel, href: secondaryHref, className: SECONDARY_CLASS } : null,
+    hero.primaryLabel && primaryHref ? { label: hero.primaryLabel, href: primaryHref } : null,
+    hero.secondaryLabel && secondaryHref ? { label: hero.secondaryLabel, href: secondaryHref } : null,
   ].filter(Boolean);
 
   return (
@@ -76,7 +71,7 @@ function CourseSection({ section }){
 }
 
 function CourseCta({ cta }){
-  const primaryHref = resolveHref(cta.primaryHref || '/contact');
+  const primaryHref = resolveHref(cta.primaryHref || '/pricing');
   const secondaryHref = resolveHref(cta.secondaryHref || '/academy/courses');
 
   return (
@@ -88,14 +83,14 @@ function CourseCta({ cta }){
           {cta.message ? <p className="text-white/75 md:text-lg">{cta.message}</p> : null}
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             {cta.primaryLabel && primaryHref ? (
-              <Link to={primaryHref} className={PRIMARY_CLASS}>
+              <CTAButton to={primaryHref} size="lg">
                 {cta.primaryLabel}
-              </Link>
+              </CTAButton>
             ) : null}
             {cta.secondaryLabel && secondaryHref ? (
-              <Link to={secondaryHref} className={SECONDARY_CLASS}>
+              <CTAButton to={secondaryHref} size="lg" className="border border-gold/50 bg-transparent text-gold hover:bg-gold/10">
                 {cta.secondaryLabel}
-              </Link>
+              </CTAButton>
             ) : null}
           </div>
         </div>

@@ -12,21 +12,12 @@ import {
 
 import SectionDivider from './SectionDivider.jsx'
 import {
-  PricingCartProvider,
   usePricingCart,
   summarizeTotals,
   formatTotalDisplay,
 } from './PricingCartContext.jsx'
 
 export default function PricingExperience({ locale = 'EN', pricing = {} }) {
-  return (
-    <PricingCartProvider locale={locale}>
-      <ExperienceContent locale={locale} pricing={pricing} />
-    </PricingCartProvider>
-  )
-}
-
-function ExperienceContent({ locale, pricing }) {
   const cartLabels = useMemo(() => resolveCartLabels(pricing.cart, locale), [pricing.cart, locale])
 
   const categories = Array.isArray(pricing.categories) ? pricing.categories : []
@@ -56,14 +47,14 @@ function ExperienceContent({ locale, pricing }) {
 
       <section className="container space-y-8">
         <SectionDivider
-          title={pricing.noticeTitle ?? (locale === 'CN' ? '每项服务均包含' : 'Every engagement includes')}
+          title={pricing.noticeTitle ?? (locale === 'CN' ? '每项服务均包含' : 'Every Engagement Includes')}
         />
         <NoticeGrid points={noticePoints} currencyNote={pricing.currencyNote} />
       </section>
 
       <section className="container space-y-10" id="catalog">
         <SectionDivider
-          title={locale === 'CN' ? '主力方案目录' : 'Programme catalogue'}
+          title={locale === 'CN' ? '主力方案目录' : 'Programme Catalogue'}
           subtitle={locale === 'CN' ? '为不同场景设计的核心服务组合' : 'Curated stacks for every high-stakes scenario'}
         />
         <div className="grid gap-6 xl:grid-cols-2">
@@ -77,28 +68,38 @@ function ExperienceContent({ locale, pricing }) {
               />
             ) : null,
           )}
+          
+          {/* Convert addOns to CategoryPanel style */}
+          {addOns.length > 0 && (
+            <CategoryPanel
+              key="retainers-enhancements"
+              locale={locale}
+              category={{
+                key: 'retainers',
+                title: pricing.addOnsTitle ?? (locale === 'CN' ? '托管与增值' : 'Retainers & Enhancements'),
+                subtitle: locale === 'CN' ? '持续支援服务' : 'Ongoing support services',
+                tiers: addOns.map(addOn => ({
+                  name: addOn.name,
+                  price: addOn.price,
+                  priceSecondary: addOn.priceSecondary,
+                  features: addOn.features || [addOn.shortDescription || addOn.description].filter(Boolean),
+                  href: addOn.href,
+                  pricingMeta: addOn.pricingMeta,
+                  shortDescription: addOn.shortDescription,
+                  description: addOn.description,
+                }))
+              }}
+              cartLabels={cartLabels}
+            />
+          )}
         </div>
       </section>
-
-      {addOns.length ? (
-        <section className="container space-y-8">
-          <SectionDivider
-            title={pricing.addOnsTitle ?? (locale === 'CN' ? '增值组件' : 'Retainers & amplifiers')}
-            subtitle={locale === 'CN' ? '强化既定方案的支援模块' : 'Bolt-ons that extend your stack'}
-          />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {addOns.map((addOn, idx) => (
-              <AddonCard key={`${addOn?.name ?? 'addon'}-${idx}`} locale={locale} addOn={addOn} cartLabels={cartLabels} />
-            ))}
-          </div>
-        </section>
-      ) : null}
 
       {objections.length ? (
         <section className="container space-y-8">
           <SectionDivider
             title={
-              pricing.objectionsTitle ?? (locale === 'CN' ? '我们消除前五大拒绝理由' : 'Top five hesitations, disarmed')
+              pricing.objectionsTitle ?? (locale === 'CN' ? '我们消除前五大拒绝理由' : 'Top Five Hesitations and Rejections')
             }
             subtitle={
               pricing.objectionsSubtitle ??
@@ -115,7 +116,7 @@ function ExperienceContent({ locale, pricing }) {
 
       {finePrint.length ? (
         <section className="container space-y-5">
-          <SectionDivider title={locale === 'CN' ? '重要说明' : 'Fine print'} />
+          <SectionDivider title={locale === 'CN' ? '重要说明' : 'Fine Print'} />
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1129] p-6">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,rgba(86,122,255,0.2),transparent_70%)] opacity-80" />
             <ul className="space-y-3 text-sm text-white/75">
@@ -272,7 +273,11 @@ function TierCard({ locale, category, tier, cartLabels }) {
       categoryKey: category.key ?? null,
       categoryTitle: category.title ?? null,
       serviceId: tier.pricingMeta?.serviceId ?? null,
-      pricingMeta: tier.pricingMeta ?? null,
+      description: tier.shortDescription || tier.description || category.title || null,
+      pricingMeta: {
+        ...tier.pricingMeta,
+        shortDescription: tier.shortDescription ?? tier.description ?? null,
+      },
       type: 'tier',
       locale,
     }),
@@ -372,7 +377,11 @@ function AddonCard({ locale, addOn, cartLabels }) {
     categoryKey: 'addon',
     categoryTitle: locale === 'CN' ? '加购方案' : 'Add-on',
     serviceId: addOn.pricingMeta?.serviceId ?? null,
-    pricingMeta: addOn.pricingMeta ?? null,
+    description: addOn.shortDescription || addOn.description || (locale === 'CN' ? '增值服务' : 'Add-on service') || null,
+    pricingMeta: {
+      ...addOn.pricingMeta,
+      shortDescription: addOn.shortDescription ?? addOn.description ?? null,
+    },
     locale,
   }), [addOn, locale])
   const selected = isInCart(cartEntry.id)
@@ -499,7 +508,12 @@ function CartDock({ locale, labels, checkoutHref }) {
 }
 
 function buildCartId(category, tier) {
-  const raw = `${category.key ?? category.title ?? 'category'}-${tier.name ?? 'tier'}`
+  // Include tier name AND category to ensure uniqueness
+  const categoryPart = category.key ?? category.title ?? 'category'
+  const tierPart = tier.name ?? 'tier'
+  // Add tier.pricingMeta?.serviceId if available for extra uniqueness
+  const servicePart = tier.pricingMeta?.serviceId ?? ''
+  const raw = `${categoryPart}-${tierPart}${servicePart ? `-${servicePart}` : ''}`
   return slugify(raw)
 }
 

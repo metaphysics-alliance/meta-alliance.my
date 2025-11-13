@@ -1,14 +1,10 @@
-import { Link } from 'react-router-dom';
-
+import CTAButton from './CTAButton.jsx';
 import { useI18n } from '../i18n.jsx';
 
-const DEFAULT_CTA_CLASSES = 'inline-flex items-center justify-center rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110';
-
-export default function Banner({ title, sub, description, actions, showDefaultCta = true, ctaLabel, ctaHref = '/contact', ctaClassName }) {
+export default function Banner({ title, sub, description, actions, showDefaultCta = true, ctaLabel, ctaHref = '/contact' }) {
   const { lang } = useI18n();
   const resolvedLabel = ctaLabel || (lang === 'CN' ? '联系专业顾问' : 'Contact Our Professionals');
   const resolvedHref = ctaHref || '/contact';
-  const resolvedClassName = ctaClassName || DEFAULT_CTA_CLASSES;
 
   const actionItems = [];
   if (Array.isArray(actions)) {
@@ -21,7 +17,6 @@ export default function Banner({ title, sub, description, actions, showDefaultCt
     actionItems.push({
       label: resolvedLabel,
       href: resolvedHref,
-      className: resolvedClassName,
     });
   }
 
@@ -35,9 +30,9 @@ export default function Banner({ title, sub, description, actions, showDefaultCt
         {actionItems.length ? (
           <div className="mt-5 flex flex-wrap justify-center gap-3 text-sm">
             {actionItems.map((action, index) => (
-              <Link key={index} to={action.href} className={action.className}>
+              <CTAButton key={index} to={action.href} size="lg">
                 {action.label}
-              </Link>
+              </CTAButton>
             ))}
           </div>
         ) : null}

@@ -4,7 +4,6 @@ import { FiArrowLeft, FiArrowRight, FiShoppingCart, FiTrash2 } from "react-icons
 
 import SectionDivider from "./SectionDivider.jsx"
 import {
-  PricingCartProvider,
   usePricingCart,
   summarizeTotals,
   formatTotalDisplay,
@@ -12,14 +11,6 @@ import {
 import { resolveCartLabels } from "./PricingExperience.jsx"
 
 export default function PricingCheckout({ locale = "EN", pricing = {} }) {
-  return (
-    <PricingCartProvider locale={locale}>
-      <CheckoutContent locale={locale} pricing={pricing} />
-    </PricingCartProvider>
-  )
-}
-
-function CheckoutContent({ locale, pricing }) {
   const cartLabels = useMemo(() => resolveCartLabels(pricing.cart, locale), [pricing.cart, locale])
   const checkoutCopy = pricing.checkout ?? {}
   const assurancePoints = Array.isArray(pricing.checkoutAssurancePoints) ? pricing.checkoutAssurancePoints : []
@@ -123,12 +114,11 @@ function CartReview({ locale, pricing, cartLabels, checkoutCopy, contactHref, pr
   return (
     <section className="space-y-10">
       <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#070d1f]/80 shadow-[0_30px_60px_rgba(7,13,31,0.6)]">
-        <div className="hidden grid-cols-[1.5fr_1fr_auto] gap-6 border-b border-white/10 px-8 py-4 text-sm uppercase tracking-[0.2em] text-white/50 md:grid">
+        <div className="hidden grid-cols-[2fr_1.5fr_1fr_auto] gap-6 border-b border-white/10 px-8 py-4 text-sm uppercase tracking-[0.2em] text-white/50 md:grid">
           <span>{checkoutCopy?.tableHeaders?.service ?? (locale === "CN" ? "服务" : "Service")}</span>
-          <span>{checkoutCopy?.tableHeaders?.investment ?? (locale === "CN" ? "投资金额" : "Investment")}</span>
-          <span className="text-right">
-            {checkoutCopy?.tableHeaders?.remove ?? cartLabels.remove}
-          </span>
+          <span>{checkoutCopy?.tableHeaders?.description ?? (locale === "CN" ? "详情" : "Description")}</span>
+          <span className="text-right">{checkoutCopy?.tableHeaders?.price ?? (locale === "CN" ? "价格" : "Price")}</span>
+          <span className="w-20"></span>
         </div>
         <div className="divide-y divide-white/10">
           {items.map((item) => (
@@ -181,23 +171,29 @@ function CartReview({ locale, pricing, cartLabels, checkoutCopy, contactHref, pr
             ))}
           </div>
           <div className="flex flex-col gap-3 pt-2">
-            <a
-              href={primaryHref}
+            <Link
+              to="/checkout/payment"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold via-amber-300 to-yellow-200 px-6 py-3 text-sm font-semibold text-black transition hover:translate-y-0.5 hover:shadow-[0_12px_30px_rgba(239,185,74,0.45)]"
             >
-              {primaryLabel}
+              {locale === "CN" ? "继续付款" : "Proceed to Payment"}
               <FiArrowRight className="h-4 w-4" />
+            </Link>
+            <a
+              href={primaryHref}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+            >
+              {primaryLabel}
             </a>
             <Link
               to={pricingHref}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white/70 transition hover:border-white/20 hover:text-white"
             >
               {secondaryLabel}
             </Link>
             <button
               type="button"
               onClick={clear}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white/70 transition hover:border-white hover:text-white"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white/50 transition hover:text-red-400"
             >
               <FiTrash2 className="h-4 w-4" />
               {cartLabels.clear}
@@ -210,8 +206,12 @@ function CartReview({ locale, pricing, cartLabels, checkoutCopy, contactHref, pr
 }
 
 function CartLine({ locale, item, removeLabel, onRemove }) {
+  // Get service description from item data
+  const description = item.pricingMeta?.description || item.categoryTitle || (item.type === "addon" ? (locale === "CN" ? "增值服务" : "Add-on") : "Programme")
+  
   return (
-    <div className="grid gap-4 px-6 py-5 text-sm text-white/80 md:grid-cols-[1.5fr_1fr_auto] md:items-center">
+    <div className="grid gap-4 px-6 py-5 text-sm text-white/80 md:grid-cols-[2fr_1.5fr_1fr_auto] md:items-center">
+      {/* Service Name Column */}
       <div>
         <p className="text-base font-semibold text-white">{item.name}</p>
         <p className="text-xs uppercase tracking-[0.28em] text-white/40">
@@ -227,18 +227,37 @@ function CartLine({ locale, item, removeLabel, onRemove }) {
           </Link>
         ) : null}
       </div>
+      
+      {/* Description Column */}
+      <div className="text-sm text-white/70">
+        {item.pricingMeta?.shortDescription || item.description || item.categoryTitle ? (
+          <p>{item.pricingMeta?.shortDescription || item.description || item.categoryTitle}</p>
+        ) : item.href ? (
+          <Link
+            to={item.href}
+            className="inline-flex items-center gap-1 text-xs font-medium text-gold hover:text-white"
+          >
+            {locale === "CN" ? "查看完整详情" : "View full details"}
+            <FiArrowRight className="h-3 w-3" />
+          </Link>
+        ) : null}
+      </div>
+      
+      {/* Investment/Price Column */}
       <div className="flex flex-col items-end gap-0.5 text-sm">
         {item.price ? <span className="font-semibold text-gold">{item.price}</span> : null}
         {item.priceSecondary ? <span className="text-xs font-medium text-white/60">{item.priceSecondary}</span> : null}
       </div>
+      
+      {/* Remove Button Column (no header label) */}
       <div className="text-right">
         <button
           type="button"
           onClick={onRemove}
-          className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-white/70 transition hover:border-white hover:text-white"
+          className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-white/70 transition hover:border-red-400 hover:text-red-400"
         >
           <FiTrash2 className="h-3.5 w-3.5" />
-          {removeLabel}
+          <span className="hidden md:inline">{removeLabel}</span>
         </button>
       </div>
     </div>

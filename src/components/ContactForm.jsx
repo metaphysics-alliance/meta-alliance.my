@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { useI18n } from '../i18n.jsx'
+import { supabase } from '../lib/supabase'
 import sharedDictionary from '../../shared/i18n/dictionary.js'
 import Dropdown from './Dropdown.jsx'
 
@@ -203,8 +204,46 @@ const courseList = [nav.courses, nav.foundation, nav.beginner, nav.advanced || '
         payload.turnstileToken = turnstileToken
       }
     }catch{}
+    
     try{
       setSubmitting(true)
+      
+      // 1. Save to database
+      const { data: enquiryData, error: dbError } = await supabase
+        .from('contact_enquiries')
+        .insert([
+          {
+            case_id: id,
+            full_name: state.name,
+            email: state.email.toLowerCase().trim(),
+            phone_code: state.phoneCode,
+            phone: state.phone,
+            company_role: state.companyRole,
+            country: state.country,
+            malaysia_state: state.malaysiaState,
+            topic: state.topic,
+            budget: state.budget,
+            timeline: state.timeline,
+            message: state.message,
+            consent_given: state.consent,
+            recaptcha_token: payload.recaptchaToken,
+            turnstile_token: payload.turnstileToken,
+            preferred_language: lang,
+            source_url: window.location.href,
+            user_agent: navigator.userAgent,
+          }
+        ])
+        .select()
+        .single()
+
+      if (dbError) {
+        console.error('Database save error:', dbError)
+        // Continue anyway - we'll still send email
+      } else {
+        console.log('Enquiry saved to database:', enquiryData)
+      }
+
+      // 2. Send email (existing flow)
       const endpointToUse = endpoint || (import.meta.env.DEV ? 'http://localhost:3000/api/contact' : '/api/contact')
       if (endpointToUse){
         const res = await fetch(endpointToUse, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })

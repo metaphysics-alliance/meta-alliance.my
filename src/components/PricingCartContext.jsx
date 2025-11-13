@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, useCallback } from 'react'
 
 const STORAGE_PREFIX = 'ma-pricing-cart'
 
@@ -8,65 +8,92 @@ const PricingCartContext = createContext(undefined)
 
 export function PricingCartProvider({ locale = 'EN', children }) {
   const storageKey = `${STORAGE_PREFIX}-${locale}`
-  const [items, setItems] = useState([])
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
+  
+  // Initialize state from localStorage SYNCHRONOUSLY to avoid empty-array flash
+  const [items, setItems] = useState(() => {
+    if (typeof window === 'undefined') return []
     try {
       const raw = window.localStorage.getItem(storageKey)
-      if (!raw) return
+      console.log(`📦 Initializing cart from localStorage [${storageKey}]:`, raw)
+      if (!raw) return []
       const parsed = JSON.parse(raw)
       if (Array.isArray(parsed)) {
-        setItems(parsed.map((item) => normalizeEntry(item, locale)))
+        const normalized = parsed.map((item) => normalizeEntry(item, locale))
+        console.log(`✅ Initialized with ${normalized.length} items`)
+        return normalized
       }
     } catch (err) {
-      console.warn('Failed to hydrate pricing cart from storage:', err)
+      console.warn('Failed to initialize cart from storage:', err)
     }
-  }, [storageKey, locale])
+    return []
+  })
 
+  // Save to localStorage whenever items change
   useEffect(() => {
     if (typeof window === 'undefined') return
+    
     try {
+      console.log(`💾 Saving cart to localStorage [${storageKey}]:`, items.length, 'items')
       window.localStorage.setItem(storageKey, JSON.stringify(items))
+      
+      // Trigger a storage event for cross-tab sync
+      window.dispatchEvent(new Event('cart-updated'))
     } catch (err) {
       console.warn('Failed to persist pricing cart to storage:', err)
     }
   }, [items, storageKey])
 
-  const addItem = (entry) => {
+  const addItem = useCallback((entry) => {
+    console.log('🛒 Adding to cart:', entry)
     setItems((prev) => {
-      if (prev.some((item) => item.id === entry.id)) return prev
-      return [...prev, normalizeEntry(entry, locale)]
+      if (prev.some((item) => item.id === entry.id)) {
+        console.log('⚠️ Item already in cart:', entry.id)
+        return prev
+      }
+      const normalized = normalizeEntry(entry, locale)
+      console.log('✅ Item normalized:', normalized)
+      return [...prev, normalized]
     })
-  }
+  }, [locale])
 
-  const removeItem = (id) => {
+  const removeItem = useCallback((id) => {
+    console.log('🗑️ Removing from cart:', id)
     setItems((prev) => prev.filter((item) => item.id !== id))
-  }
+  }, [])
 
-  const toggleItem = (entry) => {
+  const toggleItem = useCallback((entry) => {
+    console.log('🔄 Toggling cart item:', entry)
     setItems((prev) => {
       const exists = prev.some((item) => item.id === entry.id)
       if (exists) {
+        console.log('➖ Removing item:', entry.id)
         return prev.filter((item) => item.id !== entry.id)
       }
+      console.log('➕ Adding item:', entry.id)
       return [...prev, normalizeEntry(entry, locale)]
     })
-  }
+  }, [locale])
 
-  const clear = () => setItems([])
-  const isInCart = (id) => items.some((item) => item.id === id)
+  const clear = useCallback(() => {
+    console.log('🧹 Clearing cart')
+    setItems([])
+  }, [])
+  
+  const isInCart = useCallback((id) => items.some((item) => item.id === id), [items])
+
+  const cartCount = items.length
 
   const value = useMemo(
     () => ({
       items,
+      cartCount,
       addItem,
       removeItem,
       toggleItem,
       clear,
       isInCart,
     }),
-    [items],
+    [items, cartCount, addItem, removeItem, toggleItem, clear, isInCart],
   )
 
   return <PricingCartContext.Provider value={value}>{children}</PricingCartContext.Provider>

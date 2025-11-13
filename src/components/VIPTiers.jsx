@@ -1,5 +1,7 @@
 // src/components/VIPTiers.jsx
+import { Link } from 'react-router-dom'
 import SectionDivider from './SectionDivider.jsx'
+import CTAButton from './CTAButton.jsx'
 import { useI18n } from '../i18n.jsx'
 
 function TierCard({ title, lines, href, cta }){
@@ -9,9 +11,9 @@ function TierCard({ title, lines, href, cta }){
       <ul className="text-sm text-white/85 leading-relaxed space-y-1.5 flex-1">
         {lines.map((l, i) => <li key={i}>• {l}</li>)}
       </ul>
-      <a href={href} className="mt-5 inline-flex items-center justify-center rounded-lg border border-gold/40 text-gold px-4 py-2 hover:bg-gold/10">
+      <CTAButton to={href} size="md" className="mt-5">
         {cta}
-      </a>
+      </CTAButton>
     </article>
   )
 }

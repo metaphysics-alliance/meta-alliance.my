@@ -10,6 +10,10 @@ import ContactPage from '../pages/ContactPage.jsx'
 import ServicesIndex from '../pages/ServicesIndex.jsx'
 import PricingPage from '../pages/PricingPage.jsx'
 import CheckoutPage from '../pages/CheckoutPage.jsx'
+import PaymentPage from '../pages/PaymentPage.jsx'
+import AuthPage from '../pages/AuthPage.tsx'
+import AuthCallback from '../pages/AuthCallback.tsx'
+import ProfileCompletionForm from '../components/ProfileCompletionForm.tsx'
 
 const CTA_CONTACT = {
   label: 'Book a consultation',
@@ -53,6 +57,20 @@ const celestialService = (path, options = {}) => {
   };
 };
 export const ROUTES = [
+  // Authentication routes
+  {
+    path: '/auth',
+    element: <AuthPage locale="EN" />,
+  },
+  {
+    path: '/auth/callback',
+    element: <AuthCallback locale="EN" />,
+  },
+  {
+    path: '/profile/complete',
+    element: <ProfileCompletionForm locale="EN" />,
+  },
+  // Main routes
   {
     path: '/services',
     element: (<ServicesIndex />),
@@ -72,6 +90,10 @@ export const ROUTES = [
   {
     path: '/pricing/checkout',
     element: <CheckoutPage />,
+  },
+  {
+    path: '/checkout/payment',
+    element: <PaymentPage />,
   },
   {
     path: '/vip-report',

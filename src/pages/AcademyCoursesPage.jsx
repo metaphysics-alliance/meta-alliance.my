@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useI18n } from '../i18n.jsx';
 import Banner from '../components/Banner.jsx';
 import SectionDivider from '../components/SectionDivider.jsx';
+import CTAButton from '../components/CTAButton.jsx';
 
 const noopArray = [];
 
@@ -167,19 +168,13 @@ function LevelCard({ level }) {
 
       {level.ctaLabel && href ? (
         href.startsWith('#') ? (
-          <a
-            href={href}
-            className="inline-flex items-center justify-center rounded-lg border border-gold/50 px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold/10"
-          >
+          <CTAButton href={href} size="md" className="border border-gold/50 bg-transparent text-gold hover:bg-gold/10">
             {level.ctaLabel}
-          </a>
+          </CTAButton>
         ) : (
-          <Link
-            to={href}
-            className="inline-flex items-center justify-center rounded-lg border border-gold/50 px-4 py-2 text-sm font-semibold text-gold transition hover:bg-gold/10"
-          >
+          <CTAButton to={href} size="md" className="border border-gold/50 bg-transparent text-gold hover:bg-gold/10">
             {level.ctaLabel}
-          </Link>
+          </CTAButton>
         )
       ) : null}
     </article>
@@ -198,19 +193,13 @@ function CtaBlock({ cta }) {
           {cta.message ? <p className="text-white/75 md:text-lg">{cta.message}</p> : null}
           {cta.primaryLabel && href ? (
             href.startsWith('#') ? (
-              <a
-                href={href}
-                className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110"
-              >
+              <CTAButton href={href} size="lg">
                 {cta.primaryLabel}
-              </a>
+              </CTAButton>
             ) : (
-              <Link
-                to={href}
-                className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-black shadow-soft-xl transition hover:brightness-110"
-              >
+              <CTAButton to={href} size="lg">
                 {cta.primaryLabel}
-              </Link>
+              </CTAButton>
             )
           ) : null}
         </div>
@@ -236,7 +225,7 @@ function resolveCourseHref(slug) {
 }
 
 function resolveCtaHref(href) {
-  if (!href) return '/contact';
+  if (!href) return '/pricing';
   if (href.startsWith('#')) return href;
   if (href.startsWith('http')) return href;
   return href.startsWith('/') ? href : `/${href}`;

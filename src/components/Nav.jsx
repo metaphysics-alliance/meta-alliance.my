@@ -1,9 +1,10 @@
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronDown, ChevronRight, ShoppingCart } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Brand from './Brand.jsx'
 import { useI18n } from '../i18n.jsx'
+import { usePricingCart } from './PricingCartContext.jsx'
 
 function usePointerPreference(){
   const [coarse, setCoarse] = useState(() => {
@@ -165,7 +166,18 @@ export default function Nav(){
   const { t, lang, setLang } = useI18n()
   const [mobileOpen, setMobileOpen] = useState(false)
   const isTouch = usePointerPreference()
+  const { cartCount } = usePricingCart()
+  const [, forceUpdate] = useState({})
   const closeMobileNav = () => setMobileOpen(false)
+
+  // Force re-render when cart updates
+  useEffect(() => {
+    const handleCartUpdate = () => {
+      forceUpdate({})
+    }
+    window.addEventListener('cart-updated', handleCartUpdate)
+    return () => window.removeEventListener('cart-updated', handleCartUpdate)
+  }, [])
 
   const celestialMenu = transformSections(t('nav.celestial_groups'))
 
@@ -220,6 +232,18 @@ export default function Nav(){
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
+          <Link 
+            to="/pricing/checkout" 
+            className="relative p-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 group"
+            aria-label={`Shopping cart with ${cartCount} items`}
+          >
+            <ShoppingCart className="w-5 h-5 text-white/80 group-hover:text-gold transition-colors" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-500 to-amber-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
+                {cartCount}
+              </span>
+            )}
+          </Link>
           <button
             className={`nav-item text-xs px-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 ${lang === 'EN' ? 'text-gold border-gold bg-white/5' : 'text-white/80'}`}
             onClick={() => setLang('EN')}
@@ -235,9 +259,23 @@ export default function Nav(){
           </button>
         </div>
 
-        <button className="md:hidden p-2 rounded-xl border border-white/10 text-white/80 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <Link 
+            to="/pricing/checkout" 
+            className="relative p-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 group"
+            aria-label={`Shopping cart with ${cartCount} items`}
+          >
+            <ShoppingCart className="w-5 h-5 text-white/80 group-hover:text-gold transition-colors" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-500 to-amber-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
+                {cartCount}
+              </span>
+            )}
+          </Link>
+          <button className="p-2 rounded-xl border border-white/10 text-white/80 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
