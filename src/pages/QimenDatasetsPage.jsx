@@ -1,5 +1,4 @@
-import Hero from '../components/Hero';
-import { useLanguage } from '../hooks/useLanguage';
+import { useI18n } from '../i18n.jsx';
 
 const repositories = [
   {
@@ -155,7 +154,7 @@ const repositories = [
 ];
 
 export default function QimenDatasetsPage() {
-  const lang = useLanguage();
+  const { lang } = useI18n();
   const isEN = lang === 'EN';
 
   const content = {
@@ -202,10 +201,19 @@ export default function QimenDatasetsPage() {
 
   return (
     <div className="space-y-16">
-      <Hero 
-        title={content.title}
-        subtitle={content.subtitle}
-      />
+      {/* Hero section - matching the pattern from AboutPage */}
+      <header className="relative w-screen ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] -mt-8 -mb-8 min-h-[50vh] flex items-center text-center rounded-none border-0 p-8 md:p-12 overflow-hidden">
+        <img src="/page-banner.png" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.75 }} />
+        <div className="pointer-events-none absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3))' }} />
+        <div className="relative z-10 w-full max-w-4xl mx-auto space-y-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 pb-[10px] bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-lg">
+            {content.title}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+            {content.subtitle}
+          </p>
+        </div>
+      </header>
 
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Introduction */}
