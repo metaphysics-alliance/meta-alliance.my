@@ -37,6 +37,7 @@ export const metadata = {
     title: 'Metaphysics Alliance',
     description: 'Chinese metaphysics for decisive clarity.',
     images: ['/images/og-default.jpg'],
+    facebook: '9uxfb6r955f9cl5i4w9b2j8rz1ittg',
   },
   twitter: {
     card: 'summary_large_image',
