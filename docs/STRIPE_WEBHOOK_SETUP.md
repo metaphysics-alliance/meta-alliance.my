@@ -86,7 +86,7 @@ stripe listen --forward-to http://localhost:3000/api/webhooks
 
 **Output:**
 ```
-> Ready! You are using Stripe API Version [2024-XX-XX]. Your webhook signing secret is whsec_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ (^C to quit)
+> Ready! You are using Stripe API Version [2024-XX-XX]. Your webhook signing secret is whsec_...REDACTED_EXAMPLE_SECRET... (^C to quit)
 ```
 
 ---
@@ -95,13 +95,13 @@ stripe listen --forward-to http://localhost:3000/api/webhooks
 
 **Look for this line in the output:**
 ```
-Your webhook signing secret is whsec_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+Your webhook signing secret is whsec_...REDACTED_EXAMPLE_SECRET...
 ```
 
 **Copy the `whsec_xxx` value and add to `.env.local`:**
 ```bash
 # .env.local
-STRIPE_WEBHOOK_SECRET=whsec_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+STRIPE_WEBHOOK_SECRET=whsec_...REDACTED_EXAMPLE_SECRET...
 ```
 
 **⚠️ Important:** This secret is **temporary** and only works while `stripe listen` is running!
@@ -383,7 +383,7 @@ export async function POST(req: Request) {
 
 ```bash
 # .env.local
-STRIPE_WEBHOOK_SECRET=whsec_1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+STRIPE_WEBHOOK_SECRET=whsec_...REDACTED_EXAMPLE_SECRET...
 ```
 
 **Key Characteristics:**

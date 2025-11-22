@@ -7,6 +7,7 @@
  */
 
 import { readFileSync } from 'fs'
+import 'dotenv/config'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 
@@ -14,9 +15,9 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 // Supabase credentials
-const PROJECT_REF = 'skajbbewtntpudminpmr'
-const SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrYWpiYmV3dG50cHVkbWlucG1yIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzA0Mzg4NSwiZXhwIjoyMDc4NDAzODg1fQ.zMt93w00MpukB__xJJdhVWLLTA9IJfsWI9-LnftFrHg'
-const DB_PASSWORD = 'qhK33XLWKiABgBvV'
+const PROJECT_REF = process.env.VITE_SUPABASE_PROJECT_REF || 'skajbbewtntpudminpmr';
+const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 console.log('🔧 DB Admin: Management API Migration Executor\n')
 console.log('='.repeat(60))
