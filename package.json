@@ -29,6 +29,13 @@
     "sync:migrate": "node scripts/run-migration.mjs",
     "sync:init": "node scripts/init-service-mapping.mjs",
     "sync:monitor": "node scripts/check-sync-health.mjs",
+    "translator:autopilot": "ts-node --esm scripts/translator-autopilot.ts",
+    "translator:autopilot:check": "ts-node --esm scripts/translator-autopilot.ts --once",
+    "translator:universal": "ts-node --esm scripts/universal-translator.ts",
+    "translator:database": "ts-node --esm scripts/database-translator.ts",
+    "tongshu:translator": "ts-node --esm scripts/tongshu-translator.ts",
+    "tongshu:translator:check": "ts-node --esm scripts/tongshu-translator.ts --once",
+    "master:translator": "ts-node --esm scripts/master-feed-translator.ts",
     "agent:log": "node scripts/agent-log.mjs",
     "start": "npm run agent:log -- --agent \"Brain,DB_Admin,Workflow,QA,UI,Translator,Contentor,Architect,Codex,Replica,Master,Chartor\" --scope \"MVP\" --summary \"npm start: MVP dev bootstrap\" && npm run dev"
   },
@@ -72,6 +79,7 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.9.3",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "ts-node": "^10.9.2"
   }
 }
