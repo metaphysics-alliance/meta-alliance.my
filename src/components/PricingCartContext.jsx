@@ -92,6 +92,8 @@ export function PricingCartProvider({ locale = 'EN', children }) {
       toggleItem,
       clear,
       isInCart,
+      // Expose setter for flows that need to restore full cart (e.g. resume/order)
+      setItems,
     }),
     [items, cartCount, addItem, removeItem, toggleItem, clear, isInCart],
   )

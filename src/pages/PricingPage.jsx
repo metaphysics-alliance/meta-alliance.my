@@ -5,7 +5,6 @@ import PricingExperience from '../components/PricingExperience.jsx'
 import dictAll from '../../shared/i18n/dictionary.js'
 import { useI18n } from '../i18n.jsx'
 import { supabase } from '../lib/supabaseClient'
-import { ensureSupabaseSession } from '../lib/supabaseAuth'
 import applyServicePricing from '../../shared/pricing/servicePricing.js'
 
 export default function PricingPage() {
@@ -21,7 +20,6 @@ export default function PricingPage() {
     let cancelled = false
     async function load() {
       try {
-        await ensureSupabaseSession()
         const { data, error } = await supabase
           .from('service_pricing')
           .select('service_id, service_name, price_myr, price_usd')

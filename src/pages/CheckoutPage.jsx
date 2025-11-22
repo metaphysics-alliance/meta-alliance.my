@@ -4,7 +4,6 @@ import PricingCheckout from '../components/PricingCheckout.jsx'
 import dictAll from '../../shared/i18n/dictionary.js'
 import { useI18n } from '../i18n.jsx'
 import { supabase } from '../lib/supabaseClient'
-import { ensureSupabaseSession } from '../lib/supabaseAuth'
 import applyServicePricing from '../../shared/pricing/servicePricing.js'
 
 export default function CheckoutPage() {
@@ -20,7 +19,6 @@ export default function CheckoutPage() {
     let cancelled = false
     async function load() {
       try {
-        await ensureSupabaseSession()
         const { data, error } = await supabase
           .from('service_pricing')
           .select('service_id, service_name, price_myr, price_usd')
@@ -45,7 +43,7 @@ export default function CheckoutPage() {
           setRateRow(rateData ?? null)
         }
       } catch (err) {
-        console.error('Failed to load Supabase pricing rows:', err)
+        console.error('Failed to load Supabase pricing rows (checkout):', err)
         if (!cancelled) {
           setServiceRows([])
           setRateRow(null)

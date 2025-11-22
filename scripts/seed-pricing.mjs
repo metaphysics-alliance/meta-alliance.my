@@ -37,7 +37,7 @@ function loadEnvFile(path = '.env.local') {
 loadEnvFile();
 
 const url = process.env.VITE_SUPABASE_URL;
-const anonKey = process.env.VITE_SUPABASE_ANON_KEY;
+const anonKey = process.env.VITE_SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY;
 const email = process.env.VITE_SUPABASE_EMAIL;
 const password = process.env.VITE_SUPABASE_PASSWORD;
 
@@ -118,16 +118,24 @@ function extractCurrencyObject(value) {
 // ---------------------------------------------------------------------------
 
 async function ensureSession() {
+  // When using a service role key, we don't need an auth session; RLS is bypassed.
+  if (process.env.VITE_SUPABASE_SERVICE_ROLE_KEY) {
+    console.log('Using service role key; skipping email/password sign-in.');
+    return;
+  }
+
   if (!email || !password) {
     console.warn('No Supabase email/password in env; skipping sign-in (anon session only).');
     return;
   }
+
   const { data: authData, error: authError } = await supabase.auth.signInWithPassword({
     email,
     password,
   });
   if (authError) {
-    throw authError;
+    console.warn('Supabase email/password sign-in failed; proceeding without auth session:', authError.message);
+    return;
   }
   console.log('Signed in as', authData.user?.email);
 }

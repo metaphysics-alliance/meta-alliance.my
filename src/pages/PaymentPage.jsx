@@ -1,6 +1,6 @@
 /**
  * Payment Page - Guest checkout with payment processing
- * 
+ *
  * Flow:
  * 1. Guest fills in contact/address info
  * 2. Selects payment method (Stripe/FPX/TNG)
@@ -8,11 +8,12 @@
  * 4. Redirects to success/pending/failed page
  */
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FiArrowLeft, FiCreditCard, FiDollarSign, FiSmartphone } from 'react-icons/fi'
 
 import SectionDivider from '../components/SectionDivider.jsx'
+import StripePayment from '../components/StripePayment.jsx'
 import { usePricingCart, summarizeTotals, formatTotalDisplay } from '../components/PricingCartContext.jsx'
 import { useI18n } from '../i18n.jsx'
 import { supabase } from '../lib/supabaseClient'
@@ -43,11 +44,21 @@ export default function PaymentPage() {
   const navigate = useNavigate()
   const { items, clear } = usePricingCart()
   const totals = useMemo(() => summarizeTotals(items), [items])
+  const apiBase = import.meta.env.VITE_API_BASE
+    ? import.meta.env.VITE_API_BASE.replace(/\/+$/, '')
+    : ''
+  const apiUrl = (path) => `${apiBase}${path.startsWith('/') ? path : `/${path}`}`
 
   const [paymentMethod, setPaymentMethod] = useState('stripe') // stripe, fpx, tng
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [showCancelModal, setShowCancelModal] = useState(false)
+  const [showResumeNotice, setShowResumeNotice] = useState(false)
+  const [resumingOrderId, setResumingOrderId] = useState(null)
+  const [paymentClientSecret, setPaymentClientSecret] = useState(null)
+  const [currentOrderId, setCurrentOrderId] = useState(null)
+  const [showStripeForm, setShowStripeForm] = useState(false)
+  const [statusMessage, setStatusMessage] = useState(null)
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -64,6 +75,73 @@ export default function PaymentPage() {
     newsletter: false,
     termsAccepted: false,
   })
+  // Check for resumed order and pre-fill form
+  useEffect(() => {
+    const resumingData = sessionStorage.getItem('resuming_order')
+
+    if (!resumingData) return
+
+    const hydrateFromOrder = async () => {
+      try {
+        let order = JSON.parse(resumingData)
+
+        // Fallback: fetch full order from Supabase if address fields are missing
+        if (
+          (!order.addressLine1 || !order.city || !order.state || !order.postcode) &&
+          order.orderId
+        ) {
+          try {
+            const { data: extra, error: extraError } = await supabase
+              .from('guest_orders')
+              .select(
+                'address_line1, address_line2, city, state_province, postcode, country',
+              )
+              .eq('id', order.orderId)
+              .single()
+
+            if (!extraError && extra) {
+              order = {
+                ...order,
+                addressLine1: extra.address_line1,
+                addressLine2: extra.address_line2,
+                city: extra.city,
+                state: extra.state_province,
+                postcode: extra.postcode,
+                country: extra.country,
+              }
+            }
+          } catch (extraErr) {
+            console.warn('Failed to load full order for resume on payment page:', extraErr)
+          }
+        }
+
+        setFormData((prev) => ({
+          ...prev,
+          fullName: order.name || prev.fullName,
+          email: order.email || prev.email,
+          phone: order.phone || prev.phone,
+          addressLine1: order.addressLine1 || prev.addressLine1,
+          addressLine2: order.addressLine2 || prev.addressLine2,
+          city: order.city || prev.city,
+          state: order.state || prev.state,
+          postcode: order.postcode || prev.postcode,
+          country: order.country || prev.country || 'Malaysia',
+          preferredCurrency: order.currency || prev.preferredCurrency || 'MYR',
+        }))
+
+        setPaymentMethod(order.paymentMethod || 'stripe')
+        setShowResumeNotice(true)
+        setResumingOrderId(order.orderId)
+      } catch (err) {
+        console.error('Failed to hydrate resumed order on payment page:', err)
+      } finally {
+        // Clear after use so we don't reapply stale data
+        sessionStorage.removeItem('resuming_order')
+      }
+    }
+
+    void hydrateFromOrder()
+  }, [])
 
   const handleChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -130,14 +208,14 @@ export default function PaymentPage() {
   const closeCancelModal = () => {
     setShowCancelModal(false)
   }
-
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
-    
+
     setLoading(true)
     setError(null)
+    setStatusMessage(null)
 
     try {
       // 1. Save newsletter opt-in (if checked)
@@ -191,30 +269,287 @@ export default function PaymentPage() {
 
       console.log('Guest order created:', orderData)
 
-      // TODO: Initialize payment with selected provider (Stripe/FPX/TNG)
-      // TODO: Process payment
-      // TODO: Generate magic link token
-      // TODO: Send confirmation email
-      
-      // Temporary: Redirect to success page
-      console.log('Processing payment:', { formData, paymentMethod, items, totals })
-      
-      // Simulate payment processing
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      navigate('/checkout/success')
+      // 3. Generate resume token for order recovery
+      const { data: resumeTokenData, error: tokenError } = await supabase
+        .rpc('create_resume_token', { order_id: orderData.id })
+
+      if (tokenError) {
+        console.warn('Resume token generation failed:', tokenError)
+      } else {
+        console.log('Resume token generated for order recovery')
+
+        // Send order resume email with token (non-blocking)
+        if (resumeTokenData) {
+          const resumeUrl = `${window.location.origin}/checkout/resume/${resumeTokenData}`
+          const preferredTotal =
+            totals.find((t) => t.currency === formData.preferredCurrency)?.amount || 0
+
+          try {
+            await fetch('/api/send-email', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                type: 'order-resume',
+                to: formData.email,
+                guestName: formData.fullName,
+                cartItems: items,
+                currency: formData.preferredCurrency,
+                total: preferredTotal,
+                resumeUrl,
+              }),
+            })
+            console.log('📨 Resume email sent')
+          } catch (emailError) {
+            console.warn('Failed to send resume email:', emailError)
+            // Don't block checkout if email fails
+          }
+        }
+      }
+
+      // 4. Update order with payment tracking fields
+      await supabase
+        .from('guest_orders')
+        .update({
+          payment_status: 'pending',
+          payment_attempts: 0,
+          order_expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+        })
+        .eq('id', orderData.id)
+
+      // Store order ID for payment processing
+      setCurrentOrderId(orderData.id)
+
+      // 5. Create payment intent based on selected method
+      if (paymentMethod === 'stripe') {
+        // Create Stripe payment intent via API
+        const myrTotal = totals.find(t => t.currency === 'MYR' || t.currency === 'RM')
+        const usdTotal = totals.find(t => t.currency === 'USD')
+        const amount = formData.preferredCurrency === 'MYR'
+          ? myrTotal?.amount || 0
+          : usdTotal?.amount || 0
+
+        try {
+          const response = await fetch(apiUrl('/api/create-payment-intent'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              amount,
+              currency: formData.preferredCurrency.toLowerCase(),
+              orderId: orderData.id,
+              customerEmail: formData.email,
+              resumeToken: resumeTokenData
+            })
+          })
+
+          if (!response.ok) {
+            let details = null
+            try {
+              details = await response.json()
+            } catch {
+              // ignore
+            }
+            console.error('create-payment-intent failed:', response.status, details)
+            throw new Error(details?.error || 'Failed to create payment intent')
+          }
+
+          const { clientSecret } = await response.json()
+          setPaymentClientSecret(clientSecret)
+          setShowStripeForm(true)
+        } catch (paymentError) {
+          console.error('Payment intent error:', paymentError)
+          setError(locale === 'CN' ? '无法初始化付款' : 'Unable to initialize payment')
+          setLoading(false)
+          const message =
+            paymentError && paymentError.message
+              ? paymentError.message
+              : String(paymentError || 'Unknown error')
+          const prefix =
+            locale === 'CN'
+              ? '无法初始化付款: '
+              : 'Unable to initialize payment: '
+          setError(prefix + message)
+          return
+        }
+      } else {
+        // For FPX/TNG: redirect to external payment page (TODO)
+        setError(locale === 'CN'
+          ? '此付款方式即将上线'
+          : 'This payment method is coming soon')
+        setLoading(false)
+        return
+      }
+
+      setLoading(false)
     } catch (err) {
-      setError(err.message || (locale === 'CN' ? '付款失败' : 'Payment failed'))
-    } finally {
+      setError(err.message || (locale === 'CN' ? '创建订单失败' : 'Failed to create order'))
       setLoading(false)
     }
   }
+  const handlePaymentSuccess = async (paymentIntent) => {
+    console.log('Payment succeeded:', paymentIntent)
 
-  if (items.length === 0) {
+    try {
+      // Update order status
+      await supabase
+        .from('guest_orders')
+        .update({
+          payment_status: 'succeeded',
+          payment_attempts: 1,
+          last_payment_attempt_at: new Date().toISOString(),
+          payment_provider_id: paymentIntent.id,
+        })
+        .eq('id', currentOrderId)
+
+      // Send success email
+      try {
+        const magicLinkUrl = `${window.location.origin}/auth/magic-link?order_id=${currentOrderId}`
+        await fetch(apiUrl('/api/send-email'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'payment-success',
+            to: formData.email,
+            guestName: formData.fullName,
+            cartItems: items,
+            currency: formData.preferredCurrency,
+            total: totals.find(t => t.currency === formData.preferredCurrency)?.amount || 0,
+            orderId: currentOrderId,
+            magicLinkUrl
+          })
+        })
+        console.log('✅ Success email sent')
+      } catch (emailError) {
+        console.warn('Failed to send success email:', emailError)
+      }
+
+      // Clear cart
+      clear()
+
+      // Show short success status before redirect
+      setStatusMessage(
+        locale === 'CN'
+          ? '支付成功，正在跳转确认页。'
+          : 'Payment successful, redirecting to confirmation.',
+      )
+
+      // Redirect to success page after a brief delay
+      setTimeout(() => {
+        navigate(`/checkout/success?order_id=${currentOrderId}`)
+      }, 1000)
+    } catch (err) {
+      console.error('Failed to update order status:', err)
+      setError(locale === 'CN' ? '支付成功但更新订单失败' : 'Payment succeeded but order update failed')
+    }
+  }
+
+  const handlePaymentSuccessV2 = async (paymentIntent) => {
+    console.log('Payment succeeded (V2):', paymentIntent)
+
+    try {
+      const magicToken = `magic_${Math.random().toString(36).slice(2)}${Date.now()}`
+
+      await supabase
+        .from('guest_orders')
+        .update({
+          payment_status: 'succeeded',
+          payment_attempts: 1,
+          last_payment_attempt_at: new Date().toISOString(),
+          payment_provider_id: paymentIntent.id,
+          magic_link_token: magicToken,
+          magic_link_sent_at: new Date().toISOString(),
+        })
+        .eq('id', currentOrderId)
+
+      try {
+        await fetch(apiUrl('/api/send-email'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'payment-success',
+            to: formData.email,
+            guestName: formData.fullName,
+            cartItems: items,
+            currency: formData.preferredCurrency,
+            total:
+              totals.find(
+                (t) => t.currency === formData.preferredCurrency,
+              )?.amount || 0,
+            orderId: currentOrderId,
+            paymentDate: new Date().toISOString(),
+          }),
+        })
+        console.log('✅ Receipt email sent')
+      } catch (emailError) {
+        console.warn('Failed to send receipt email:', emailError)
+      }
+
+      // Magic link email now handled via Stripe webhook to avoid double-send/rate limits
+
+      // Clear cart in context and storage so badge + items reset
+      try {
+        clear()
+        if (typeof window !== 'undefined') {
+          const keys = ['EN', 'CN']
+          for (const k of keys) {
+            window.localStorage.removeItem(`ma-pricing-cart-${k}`)
+          }
+          window.dispatchEvent(new Event('cart-updated'))
+        }
+      } catch (clearErr) {
+        console.warn('Failed to fully clear pricing cart after payment:', clearErr)
+      }
+
+      setStatusMessage(
+        locale === 'CN'
+          ? '支付成功，正在跳转确认页'
+          : 'Payment successful, redirecting to confirmation.',
+      )
+
+      setTimeout(() => {
+        navigate(`/checkout/success?order_id=${currentOrderId}`)
+      }, 1000)
+    } catch (err) {
+      console.error('Failed to update order status (V2):', err)
+      setError(
+        locale === 'CN'
+          ? '支付成功但更新订单失败'
+          : 'Payment succeeded but order update failed',
+      )
+    }
+  }
+
+  const handlePaymentError = async (error) => {
+    console.error('Payment failed:', error)
+
+    try {
+      // Update order with failure info
+      await supabase
+        .from('guest_orders')
+        .update({
+          payment_status: 'failed',
+          payment_attempts: 1,
+          last_payment_attempt_at: new Date().toISOString(),
+          payment_failure_reason: error.message
+        })
+        .eq('id', currentOrderId)
+
+      const message = error && error.message ? error.message : 'Unknown error'
+      setError(
+        locale === 'CN'
+          ? `支付失败: ${message}`
+          : `Payment failed: ${message}`,
+      )
+    } catch (err) {
+      console.error('Failed to update order failure:', err)
+    }
+
+    setLoading(false)
+  }
+
+  if (items.length === 0 && !currentOrderId) {
     navigate('/pricing')
     return null
   }
-
   return (
     <>
       {/* Cancel Order Modal */}
@@ -261,13 +596,51 @@ export default function PaymentPage() {
           {locale === 'CN' ? '完成您的订单' : 'Complete Your Order'}
         </h1>
         <p className="mt-2 text-white/70">
-          {locale === 'CN' 
+          {locale === 'CN'
             ? '填写您的信息并选择付款方式'
             : 'Fill in your details and choose a payment method'}
         </p>
       </header>
 
-      <form onSubmit={handleSubmit} className="mx-auto max-w-6xl">
+      {/* Identity / Account section */}
+      <div className="mx-auto mb-8 max-w-6xl">
+        <section className="rounded-3xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">
+          <p className="mb-2">
+            {locale === 'CN'
+              ? '如果您愿意，可以在付款前先登录/注册，以便订单自动关联到账户（支持 Google、Facebook、Apple ID、邮箱）。'
+              : 'If you prefer, you can sign in or sign up (Google, Facebook, Apple ID, or email) before paying so your order is linked to your account.'}
+          </p>
+          <Link
+            to={`/auth?redirect=${encodeURIComponent('/checkout/payment')}`}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-amber-300 px-4 py-2 text-xs font-semibold text-black shadow-sm hover:shadow-lg"
+          >
+            {locale === 'CN' ? '登录 / 注册' : 'Sign in / Sign up'}
+          </Link>
+        </section>
+      </div>
+
+      {/* Resume Order Notice */}
+      {showResumeNotice && (
+        <div className="mx-auto mb-8 max-w-6xl">
+          <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6">
+            <div className="flex items-start gap-4">
+              <div className="text-3xl">✅</div>
+              <div className="flex-1">
+                <h3 className="mb-2 text-lg font-semibold text-emerald-400">
+                  {locale === 'CN' ? '已恢复订单' : 'Order Restored'}
+                </h3>
+                <p className="text-white/80">
+                  {locale === 'CN'
+                    ? '我们已恢复您之前的订单，请确认信息后继续付款。'
+                    : "We've restored your previous order. Please verify your details and continue to payment."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
           {/* Left Column: Form */}
           <div className="space-y-8">
@@ -276,7 +649,7 @@ export default function PaymentPage() {
               <h2 className="text-xl font-semibold">
                 {locale === 'CN' ? '联系信息' : 'Contact Information'}
               </h2>
-              
+
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm text-white/70">
@@ -386,14 +759,13 @@ export default function PaymentPage() {
                   onChange={(e) => handleChange('state', e.target.value)}
                   className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white focus:border-gold focus:outline-none"
                 >
-                  <option value="" className="bg-[#0a1025]">{locale === 'CN' ? '选择州' : 'Select state'}</option>
+                  <option value="" className="bg-[#0a1025]">{locale === 'CN' ? '请选择州' : 'Select state'}</option>
                   {MALAYSIAN_STATES.map(state => (
                     <option key={state} value={state} className="bg-[#0a1025]">{state}</option>
                   ))}
                 </select>
               </div>
             </section>
-
             {/* Payment Method */}
             <section className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
               <h2 className="text-xl font-semibold">
@@ -473,11 +845,35 @@ export default function PaymentPage() {
                 />
                 <span className="text-sm text-white/80">
                   {locale === 'CN'
-                    ? '订阅我们的新闻简报以获取更新和优惠'
+                    ? '订阅邮件，获取最新更新与优惠'
                     : 'Subscribe to our newsletter for updates and offers'}
                 </span>
               </label>
             </div>
+
+            {/* Stripe Payment Form */}
+            {showStripeForm && paymentClientSecret && (
+              <section className="space-y-4 rounded-3xl border border-emerald-500/30 bg-white/5 p-6 shadow-2xl">
+                <h2 className="mb-6 text-xl font-semibold">
+                  {locale === 'CN' ? '完成付款' : 'Complete Payment'}
+                </h2>
+                <StripePayment
+                  clientSecret={paymentClientSecret}
+                  amount={totals.find(t => t.currency === formData.preferredCurrency)?.amount || 0}
+                  currency={formData.preferredCurrency}
+                  orderId={currentOrderId}
+                  onSuccess={handlePaymentSuccessV2}
+                  onError={handlePaymentError}
+                  locale={locale}
+                />
+
+                {statusMessage && !error && (
+                  <div className="rounded-lg border border-emerald-500/50 bg-emerald-500/10 p-4 text-emerald-300">
+                    {statusMessage}
+                  </div>
+                )}
+              </section>
+            )}
 
             {/* Error Message */}
             {error && (
@@ -515,8 +911,8 @@ export default function PaymentPage() {
               </div>
 
               <button
-                type="submit"
-                disabled={loading}
+                type="button" onClick={handleSubmit}
+                disabled={loading || showStripeForm}
                 className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-emerald-500 via-teal-400 to-cyan-400 px-6 py-4 text-base font-bold text-black shadow-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {/* Glow effects */}
@@ -526,13 +922,15 @@ export default function PaymentPage() {
                   className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-50"
                   style={{ boxShadow: '0 0 50px 12px rgba(16,185,129,0.35)' }}
                 />
-                
+
                 {/* Content */}
                 <span className="relative z-10 inline-flex items-center justify-center gap-2 tracking-[0.14em] text-black group-hover:text-white">
                   <span className="tracking-normal">
-                    {loading
+                    {showStripeForm
+                      ? (locale === 'CN' ? '请先完成上方支付表单' : 'Complete payment form above')
+                      : loading
                       ? (locale === 'CN' ? '处理中...' : 'Processing...')
-                      : (locale === 'CN' ? '立即付款' : 'Pay Now')}
+                      : (locale === 'CN' ? '继续付款' : 'Proceed to Payment')}
                   </span>
                 </span>
               </button>
@@ -548,13 +946,13 @@ export default function PaymentPage() {
 
               <p className="text-center text-xs text-white/50">
                 {locale === 'CN'
-                  ? '您的付款信息安全加密'
+                  ? '您的支付信息已加密传输'
                   : 'Your payment information is securely encrypted'}
               </p>
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
     </>
   )

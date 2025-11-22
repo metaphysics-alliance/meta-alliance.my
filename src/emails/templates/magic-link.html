@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Account Setup - Metaphysics Alliance</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0e27;
+            padding: 20px;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0b1129 0%, #1a1f3a 100%);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .email-header {
+            background: linear-gradient(135deg, #1a1f3a 0%, #0b1129 100%);
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.3));
+        }
+        
+        .company-name {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        .email-body {
+            padding: 40px 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .greeting {
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .message {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+        }
+        
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .highlight-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-text {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+            color: #0a0e27;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 18px 50px;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+            letter-spacing: 0.5px;
+        }
+        
+        .expiry-notice {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .expiry-highlight { color: #FFD700; font-weight: 600; }
+        
+        .benefits {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .benefits-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            padding: 12px 0;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .benefit-icon { 
+            font-size: 20px; 
+            margin-right: 12px; 
+            color: #10b981;
+            flex-shrink: 0;
+        }
+        
+        .email-footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 30px;
+            border-top: 2px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .signature { margin-bottom: 30px; }
+        
+        .signature-line {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .signature-title { color: #FFD700; font-weight: 600; font-size: 16px; }
+        .signature-company { color: rgba(255, 255, 255, 0.7); font-size: 14px; }
+        
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .contact-title {
+            color: #FFD700;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .legal {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.6;
+        }
+        
+        .legal a { color: rgba(255, 215, 0, 0.7); text-decoration: none; }
+        
+        @media only screen and (max-width: 600px) {
+            .email-container { border-radius: 0; }
+            .email-header, .email-body, .email-footer { padding: 30px 20px; }
+            .logo { width: 140px; }
+            .company-name { font-size: 20px; }
+            .greeting { font-size: 20px; }
+            .message { font-size: 15px; }
+            .cta-button { padding: 16px 40px; font-size: 16px; }
+            .contact-links { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://meta-alliance.my/logo.png" alt="Metaphysics Alliance Logo" class="logo">
+            <div class="company-name">Metaphysics Alliance</div>
+            <div class="tagline">Brightwood Nexus Services</div>
+        </div>
+        
+        <div class="email-body">
+            <div class="greeting">✨ Welcome to Metaphysics Alliance!</div>
+            
+            <div class="message">
+                Hi {{guest_name}},<br><br>
+                Thank you for your payment! We're excited to have you join our community. Your payment has been successfully processed, and your services are ready to be activated.
+            </div>
+            
+            <div class="highlight-box">
+                <div class="highlight-title">🎯 Next Step: Complete Your Account Setup</div>
+                <div class="highlight-text">
+                    To access your services and manage your subscriptions, please create your secure account by clicking the button below. This will take less than 2 minutes.
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="{{magicLink}}" class="cta-button">Create My Account</a>
+            </div>
+            
+            <div class="expiry-notice">
+                🔒 This secure link expires in <span class="expiry-highlight">24 hours</span> and can only be used once
+            </div>
+            
+            <div class="benefits">
+                <div class="benefits-title">Your Account Benefits</div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Access all your purchased services instantly</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>View and download invoices & receipts</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Manage your subscription and billing settings</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Track consultation appointments and history</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Receive exclusive offers and early access</span>
+                </div>
+            </div>
+            
+            <div class="message">
+                If you didn't make this purchase or have any questions, please contact our sales team immediately.
+            </div>
+        </div>
+        
+        <div class="email-footer">
+            <div class="signature">
+                <div class="signature-line">Warm regards,</div>
+                <div class="signature-line signature-title">Sales Team</div>
+                <div class="signature-line signature-company">Metaphysics Alliance</div>
+                <div class="signature-line signature-company">Brightwood Nexus Services</div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-title">Need Assistance?</div>
+                <div class="contact-links">
+                    <a href="mailto:sales@meta-alliance.my" class="contact-link">📧 sales@meta-alliance.my</a>
+                    <a href="https://wa.me/60176750480" class="contact-link">📱 +60 17-675 0480</a>
+                    <a href="https://meta-alliance.my" class="contact-link">🌐 meta-alliance.my</a>
+                </div>
+            </div>
+            
+            <div class="legal">
+                © 2025-2026 Metaphysics Alliance (Brightwood Nexus Services). All rights reserved.<br>
+                Menara Mitraland, Jalan Damansara, Kuala Lumpur, Malaysia<br><br>
+                <a href="https://meta-alliance.my/legal/privacy">Privacy Policy</a> | 
+                <a href="https://meta-alliance.my/legal/terms">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

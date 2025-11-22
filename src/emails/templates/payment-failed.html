@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failed - Metaphysics Alliance</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0a0e27; padding: 20px; }
+        .email-container { max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #0b1129 0%, #1a1f3a 100%); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+        .email-header { background: linear-gradient(135deg, #1a1f3a 0%, #0b1129 100%); padding: 40px 30px; text-align: center; border-bottom: 2px solid rgba(255, 215, 0, 0.3); }
+        .logo { width: 180px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.3)); }
+        .company-name { font-size: 24px; font-weight: 700; background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; letter-spacing: 1px; }
+        .tagline { color: rgba(255, 255, 255, 0.7); font-size: 13px; letter-spacing: 0.5px; }
+        .email-body { padding: 40px 30px; color: rgba(255, 255, 255, 0.9); }
+        .greeting { font-size: 22px; font-weight: 600; color: #ef4444; margin-bottom: 20px; }
+        .message { font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.85); margin-bottom: 30px; }
+        .error-box { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+        .error-icon { font-size: 48px; margin-bottom: 15px; }
+        .error-title { font-size: 18px; font-weight: 600; color: #ef4444; margin-bottom: 12px; }
+        .error-reason { font-size: 15px; color: rgba(255, 255, 255, 0.8); background: rgba(0, 0, 0, 0.3); padding: 12px; border-radius: 8px; margin-top: 15px; }
+        .cta-container { text-align: center; margin: 40px 0; }
+        .cta-button { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #06b6d4 100%); color: #000000; font-size: 18px; font-weight: 700; padding: 18px 50px; text-decoration: none; border-radius: 12px; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4); letter-spacing: 0.5px; }
+        .reassurance { text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 14px; padding: 20px; background: rgba(16, 185, 129, 0.05); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.1); margin: 30px 0; }
+        .reassurance-icon { font-size: 24px; margin-bottom: 10px; }
+        .email-footer { background: rgba(0, 0, 0, 0.3); padding: 40px 30px; border-top: 2px solid rgba(255, 215, 0, 0.2); }
+        .signature { margin-bottom: 30px; }
+        .signature-line { color: rgba(255, 255, 255, 0.85); font-size: 15px; margin-bottom: 8px; }
+        .signature-title { color: #FFD700; font-weight: 600; font-size: 16px; }
+        .signature-company { color: rgba(255, 255, 255, 0.7); font-size: 14px; }
+        .contact-info { margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+        .contact-title { color: #FFD700; font-size: 14px; font-weight: 600; margin-bottom: 15px; }
+        .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .contact-link { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px; }
+        .legal { text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 11px; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); line-height: 1.6; }
+        .legal a { color: rgba(255, 215, 0, 0.7); text-decoration: none; }
+        @media only screen and (max-width: 600px) {
+            .email-container { border-radius: 0; }
+            .email-header, .email-body, .email-footer { padding: 30px 20px; }
+            .logo { width: 140px; }
+            .cta-button { padding: 16px 40px; font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://meta-alliance.my/logo.png" alt="Metaphysics Alliance Logo" class="logo">
+            <div class="company-name">Metaphysics Alliance</div>
+            <div class="tagline">Brightwood Nexus Services</div>
+        </div>
+        
+        <div class="email-body">
+            <div class="greeting">Payment Unsuccessful</div>
+            
+            <div class="message">
+                Hi {{guest_name}},<br><br>
+                We attempted to process your payment, but unfortunately it was declined.
+            </div>
+            
+            <div class="error-box">
+                <div class="error-icon">❌</div>
+                <div class="error-title">Payment Could Not Be Completed</div>
+                <div class="error-reason">
+                    <strong>Reason:</strong> {{failure_reason}}
+                </div>
+            </div>
+            
+            <div class="reassurance">
+                <div class="reassurance-icon">✅</div>
+                <strong>Don't worry!</strong> Your order details are saved securely.<br>
+                You can retry your payment whenever you're ready.
+            </div>
+            
+            <div class="message">
+                Common solutions:
+                <ul style="margin-top: 15px; margin-left: 20px; line-height: 2;">
+                    <li>Verify your card details are correct</li>
+                    <li>Ensure sufficient funds are available</li>
+                    <li>Try a different payment method (FPX/TNG)</li>
+                    <li>Contact your bank if the issue persists</li>
+                </ul>
+            </div>
+            
+            <div class="cta-container">
+                <a href="{{resume_url}}" class="cta-button">Retry Payment Now</a>
+            </div>
+        </div>
+        
+        <div class="email-footer">
+            <div class="signature">
+                <div class="signature-line">We're here to help,</div>
+                <div class="signature-line signature-title">Sales Team</div>
+                <div class="signature-line signature-company">Metaphysics Alliance</div>
+                <div class="signature-line signature-company">Brightwood Nexus Services</div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-title">Need Assistance?</div>
+                <div class="contact-links">
+                    <a href="mailto:sales@meta-alliance.my" class="contact-link">📧 sales@meta-alliance.my</a>
+                    <a href="https://wa.me/60176750480" class="contact-link">📱 +60 17-675 0480</a>
+                    <a href="https://meta-alliance.my" class="contact-link">🌐 meta-alliance.my</a>
+                </div>
+            </div>
+            
+            <div class="legal">
+                © 2025-2026 Metaphysics Alliance (Brightwood Nexus Services). All rights reserved.<br>
+                Menara Mitraland, Jalan Damansara, Kuala Lumpur, Malaysia<br><br>
+                <a href="https://meta-alliance.my/legal/privacy">Privacy Policy</a> | 
+                <a href="https://meta-alliance.my/legal/terms">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,9 +11,15 @@ import ServicesIndex from '../pages/ServicesIndex.jsx'
 import PricingPage from '../pages/PricingPage.jsx'
 import CheckoutPage from '../pages/CheckoutPage.jsx'
 import PaymentPage from '../pages/PaymentPage.jsx'
+import ResumeOrderPage from '../pages/ResumeOrderPage.jsx'
+import CheckoutSuccessPage from '../pages/CheckoutSuccessPage.jsx'
+import CheckoutFailedPage from '../pages/CheckoutFailedPage.jsx'
+import CheckoutPendingPage from '../pages/CheckoutPendingPage.jsx'
 import AuthPage from '../pages/AuthPage.tsx'
 import AuthCallback from '../pages/AuthCallback.tsx'
 import ProfileCompletionForm from '../components/ProfileCompletionForm.tsx'
+import MagicLinkHandler from '../pages/MagicLinkHandler.jsx'
+import ProfileCompletion from '../pages/ProfileCompletion.jsx'
 
 const CTA_CONTACT = {
   label: 'Book a consultation',
@@ -237,6 +243,30 @@ export const ROUTES = [
   {
     path: '/legal/refund',
     element: <LegalPage policyKey="refund" />,
+  },
+  {
+    path: '/checkout/resume/:token',
+    element: <ResumeOrderPage />,
+  },
+  {
+    path: '/checkout/success',
+    element: <CheckoutSuccessPage />,
+  },
+  {
+    path: '/checkout/failed',
+    element: <CheckoutFailedPage />,
+  },
+  {
+    path: '/checkout/pending',
+    element: <CheckoutPendingPage />,
+  },
+  {
+    path: '/auth/magic/:token',
+    element: <MagicLinkHandler />,
+  },
+  {
+    path: '/profile/complete',
+    element: <ProfileCompletion />,
   },
 ]
 

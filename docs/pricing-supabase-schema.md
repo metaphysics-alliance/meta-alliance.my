@@ -4,7 +4,9 @@ Use this SQL in the Supabase SQL editor. It creates/updates every table, trigger
 
 ```sql
 -- 0. Required extension -----------------------------------------------------
-create extension if not exists moddatetime schema extensions;
+-- Ensure the moddatetime extension exists in the standard Supabase extensions schema.
+-- NOTE: When copying into Supabase SQL editor, include ONLY the SQL between the ```sql fences.
+create extension if not exists moddatetime with schema extensions;
 
 -- 1. Legacy pricing snapshot ------------------------------------------------
 create table if not exists public.pricing_content (
@@ -32,7 +34,7 @@ create policy "Authenticated pricing manage"
 drop trigger if exists pricing_content_set_updated on public.pricing_content;
 create trigger pricing_content_set_updated
   before update on public.pricing_content
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 -- 2. Normalised metadata ----------------------------------------------------
 create table if not exists public.pricing_metadata (
@@ -55,7 +57,7 @@ create table if not exists public.pricing_metadata (
 drop trigger if exists pricing_metadata_set_updated on public.pricing_metadata;
 create trigger pricing_metadata_set_updated
   before update on public.pricing_metadata
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 -- 3. Sections & items -------------------------------------------------------
 create table if not exists public.pricing_sections (
@@ -74,7 +76,7 @@ create table if not exists public.pricing_sections (
 drop trigger if exists pricing_sections_set_updated on public.pricing_sections;
 create trigger pricing_sections_set_updated
   before update on public.pricing_sections
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 create table if not exists public.pricing_items (
   id bigint generated always as identity primary key,
@@ -95,7 +97,7 @@ create table if not exists public.pricing_items (
 drop trigger if exists pricing_items_set_updated on public.pricing_items;
 create trigger pricing_items_set_updated
   before update on public.pricing_items
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 -- 4. Add-ons, notice points, fine print ------------------------------------
 create table if not exists public.pricing_addons (
@@ -113,7 +115,7 @@ create table if not exists public.pricing_addons (
 drop trigger if exists pricing_addons_set_updated on public.pricing_addons;
 create trigger pricing_addons_set_updated
   before update on public.pricing_addons
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 create table if not exists public.pricing_notice_points (
   id bigint generated always as identity primary key,
@@ -127,7 +129,7 @@ create table if not exists public.pricing_notice_points (
 drop trigger if exists pricing_notice_points_set_updated on public.pricing_notice_points;
 create trigger pricing_notice_points_set_updated
   before update on public.pricing_notice_points
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 create table if not exists public.pricing_fine_print (
   id bigint generated always as identity primary key,
@@ -141,7 +143,7 @@ create table if not exists public.pricing_fine_print (
 drop trigger if exists pricing_fine_print_set_updated on public.pricing_fine_print;
 create trigger pricing_fine_print_set_updated
   before update on public.pricing_fine_print
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 -- 5. Currency rates ---------------------------------------------------------
 create table if not exists public.currency_rates (
@@ -158,7 +160,7 @@ create table if not exists public.currency_rates (
 drop trigger if exists currency_rates_set_updated on public.currency_rates;
 create trigger currency_rates_set_updated
   before update on public.currency_rates
-  for each row executes procedure extensions.moddatetime('updated_at');
+  for each row execute function extensions.moddatetime('updated_at');
 
 -- 6. RLS + policies ---------------------------------------------------------
 alter table public.pricing_metadata enable row level security;

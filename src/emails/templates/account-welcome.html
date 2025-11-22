@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Metaphysics Alliance</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a0e27;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .email-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #0b1129 0%, #1a1f3a 100%);
+      border: 1px solid rgba(255, 215, 0, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .email-header {
+      padding: 32px 32px 24px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 16px;
+    }
+
+    .company-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffd700 0%, #fbbf24 40%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .email-body {
+      padding: 32px 32px 28px;
+    }
+
+    .greeting {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffd700;
+      margin-bottom: 16px;
+    }
+
+    .message {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.86);
+      margin-bottom: 24px;
+    }
+
+    .credentials-card {
+      border-radius: 14px;
+      padding: 18px 20px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16) 0, transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.16) 0, transparent 55%),
+                  rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      margin-bottom: 24px;
+    }
+
+    .credentials-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(248, 250, 252, 0.8);
+      margin-bottom: 10px;
+    }
+
+    .credential-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 14px;
+      color: rgba(248, 250, 252, 0.9);
+    }
+
+    .credential-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .credential-value {
+      font-family: 'SF Mono', ui-monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      font-size: 13px;
+      padding-left: 12px;
+    }
+
+    .password-note {
+      font-size: 12px;
+      color: rgba(248, 250, 252, 0.75);
+      margin-top: 8px;
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 28px 0 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e 0%, #14b8a6 40%, #0ea5e9 100%);
+      color: #020617;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .cta-caption {
+      margin-top: 10px;
+      font-size: 12px;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.5), transparent);
+      margin: 24px 0 18px;
+    }
+
+    .support {
+      font-size: 12px;
+      color: rgba(148, 163, 184, 0.95);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .support strong {
+      color: rgba(248, 250, 252, 0.98);
+    }
+
+    .support a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .support a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .email-body {
+        padding: 24px 18px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header">
+      <img src="https://meta-alliance.my/assets/email/logo-light.png" alt="Metaphysics Alliance" class="logo" />
+      <div class="company-name">Metaphysics Alliance</div>
+      <div class="tagline">BRIGHTWOOD NEXUS SERVICES</div>
+    </div>
+
+    <div class="email-body">
+      <h1 class="greeting">Welcome, {{user_name}}.</h1>
+
+      <p class="message">
+        Your Metaphysics Alliance Tools account is now ready.
+        The details below will let you sign in to the master portal and
+        access your subscribed services and tools. Use these credentials to sign in,
+        then complete your profile when prompted—profile completion unlocks your tools
+        and subscriptions.
+      </p>
+
+      <div class="credentials-card">
+        <div class="credentials-title">Your Access Credentials</div>
+
+        <div class="credential-row">
+          <div class="credential-label">Login Email</div>
+          <div class="credential-value">{{login_email}}</div>
+        </div>
+        <div class="credential-row">
+          <div class="credential-label">Temporary Password</div>
+          <div class="credential-value">{{temp_password}}</div>
+        </div>
+
+        <p class="password-note">
+          For security, please sign in and change this password from your profile
+          settings after your first login.
+        </p>
+      </div>
+
+      <div class="cta-wrapper">
+        <a href="{{login_url}}" class="cta-button">Open Metaphysics Alliance Tools</a>
+        <div class="cta-caption">
+          {{login_url}}
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="support">
+        <strong>Need assistance?</strong><br />
+        Email <a href="mailto:sales@meta-alliance.my">sales@meta-alliance.my</a> or visit
+        <a href="https://meta-alliance.my" target="_blank" rel="noopener">meta-alliance.my</a>.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

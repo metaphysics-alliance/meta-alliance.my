@@ -243,27 +243,20 @@ const courseList = [nav.courses, nav.foundation, nav.beginner, nav.advanced || '
         console.log('Enquiry saved to database:', enquiryData)
       }
 
-      // 2. Send email (existing flow)
+      // 2. Send email (existing flow) - make optional since we're saving to DB
       const endpointToUse = endpoint || (import.meta.env.DEV ? 'http://localhost:3000/api/contact' : '/api/contact')
       if (endpointToUse){
-        const res = await fetch(endpointToUse, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-        if (!res.ok){
-          let msg = `HTTP ${res.status}`
-          try{
-            const data = await res.json()
-            if (data?.error) msg = data.error
-          }catch{}
-          throw new Error(msg)
+        try {
+          const res = await fetch(endpointToUse, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          if (!res.ok){
+            console.warn('Email notification failed (but enquiry is saved to database)')
+          }
+        } catch (emailErr) {
+          console.warn('Email notification failed (but enquiry is saved to database):', emailErr)
         }
-      } else {
-        const mail = emailTo
-        const encSubject = encodeURIComponent(subject)
-        const body = encodeURIComponent(
-          `Name: ${state.name}\nEmail: ${state.email}\nPhone: ${state.phone}\nCompany/Role: ${state.companyRole}\nCountry: ${state.country}\nTopic: ${state.topic}\nBudget: ${state.budget}\nTimeline: ${state.timeline}\n\nMessage:\n${state.message}\n\nConsent: ${state.consent ? 'Yes' : 'No'}\nLocale: ${lang}`
-        )
-        const cc = encodeURIComponent(import.meta.env.VITE_EMAIL_ADMIN || 'admin@meta-alliance.my')
-        window.location.href = `mailto:${mail}?subject=${encSubject}&cc=${cc}&body=${body}`
       }
+      
+      // Success - enquiry is saved to database regardless of email status
       setSuccess({ id })
       // keep data for context in the modal; reset on close
     }catch(err){

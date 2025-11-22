@@ -1,0 +1,41 @@
+name: Agents Autopilot
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '5 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Translator string check
+        run: npm run translator:autopilot:check
+      - name: Cache TongShu snapshot
+        run: npm run tongshu:cache
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.VITE_SUPABASE_SERVICE_ROLE_KEY }}
+          VITE_SUPABASE_PASSWORD: ${{ secrets.VITE_SUPABASE_PASSWORD }}
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      - name: Translate TongShu payloads
+        run: npm run tongshu:translator:check
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.VITE_SUPABASE_SERVICE_ROLE_KEY }}
+      - name: Translate Master feeds
+        run: npm run master:translator --once
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.VITE_SUPABASE_SERVICE_ROLE_KEY }}
+      - name: Autopilot health
+        run: npm run autopilot:health

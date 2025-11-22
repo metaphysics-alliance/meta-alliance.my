@@ -17,36 +17,21 @@ import { supabase } from './supabaseClient'
 // ============================================================================
 
 export interface UserProfile {
-  id: string
-  full_name: string | null
-  display_name: string | null
-  email: string
-  phone: string | null
-  avatar_url: string | null
-  
-  // Address
-  address_line1: string | null
-  address_line2: string | null
-  city: string | null
-  state_province: string | null
-  postcode: string | null
-  country: string
-  
-  // Preferences
-  preferred_language: 'EN' | 'CN'
-  preferred_currency: 'MYR' | 'USD'
-  timezone: string
-  
-  // Status
-  profile_completed: boolean
-  onboarding_step: number
-  
-  // Marketing
-  marketing_consent: boolean
-  newsletter_subscribed: boolean
-  
-  created_at: string
-  updated_at: string
+  user_id: string
+  full_name?: string | null
+  preferred_name?: string | null
+  email?: string | null
+  phone?: string | null
+  avatar_url?: string | null
+  timezone?: string | null
+  country?: string | null
+  city?: string | null
+  state?: string | null
+  profile_state?: string | null
+  completion_pct?: number | null
+  preferred_language?: 'EN' | 'CN'
+  created_at?: string
+  updated_at?: string
 }
 
 export interface ProfileUpdateData {
@@ -64,6 +49,8 @@ export interface ProfileUpdateData {
   onboarding_step?: number
   marketing_consent?: boolean
   newsletter_subscribed?: boolean
+  profile_state?: string
+  completion_pct?: number
 }
 
 // ============================================================================
@@ -101,6 +88,21 @@ export async function signInWithFacebook(redirectTo?: string) {
     },
   })
   
+  if (error) throw error
+  return data
+}
+
+/**
+ * Sign in with Apple
+ */
+export async function signInWithApple(redirectTo?: string) {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'apple',
+    options: {
+      redirectTo: redirectTo || `${window.location.origin}/auth/callback`,
+    },
+  })
+
   if (error) throw error
   return data
 }
@@ -234,8 +236,8 @@ export async function getUserProfile(userId?: string): Promise<UserProfile | nul
   const { data, error } = await supabase
     .from('user_profiles')
     .select('*')
-    .eq('id', user)
-    .single()
+    .eq('user_id', user)
+    .maybeSingle()
   
   if (error) {
     if (error.code === 'PGRST116') return null // Not found
@@ -259,7 +261,7 @@ export async function updateUserProfile(
   const { data, error } = await supabase
     .from('user_profiles')
     .update(updates)
-    .eq('id', user)
+    .eq('user_id', user)
     .select()
     .single()
   
@@ -273,8 +275,9 @@ export async function updateUserProfile(
 export async function completeProfile(profileData: ProfileUpdateData): Promise<UserProfile> {
   return updateUserProfile({
     ...profileData,
-    profile_completed: true,
-    onboarding_step: 999, // Final step
+    // Align to current schema fields
+    profile_state: 'complete' as any,
+    completion_pct: 100 as any,
   })
 }
 
@@ -287,17 +290,9 @@ export async function isProfileComplete(): Promise<boolean> {
   if (!profile) return false
   
   // Required fields for a complete profile
-  const requiredFields = [
-    profile.full_name,
-    profile.phone,
-    profile.address_line1,
-    profile.city,
-    profile.state_province,
-    profile.postcode,
-    profile.country,
-  ]
-  
-  return requiredFields.every(field => field && field.trim().length > 0)
+  if (profile.profile_state === 'complete') return true
+  if (typeof profile.completion_pct === 'number' && profile.completion_pct >= 100) return true
+  return false
 }
 
 /**
@@ -315,7 +310,7 @@ export async function ensureUserProfile(): Promise<UserProfile> {
     const { data, error } = await supabase
       .from('user_profiles')
       .insert({
-        id: user.id,
+        user_id: user.id,
         email: user.email!,
         full_name: user.user_metadata.full_name || user.user_metadata.name,
         avatar_url: user.user_metadata.avatar_url,

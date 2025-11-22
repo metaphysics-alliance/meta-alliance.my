@@ -1,0 +1,3166 @@
+{
+  "timestamp": "2025-11-14T17:26:06.823Z",
+  "tables": {
+    "academy_courses": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "course_level",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "course_code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "course_name_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "course_name_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "description_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "description_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "price_myr",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "duration_hours",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "modules_count",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "thumbnail_url",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "is_published",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "publish_date",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "bazi_records": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "client_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "summary_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "summary_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "payload",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "contact_enquiries": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "case_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'new'::text"
+        },
+        {
+          "column_name": "assigned_to",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "full_name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "email",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "phone_code",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "phone",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "company_role",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "country",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "malaysia_state",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "topic",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "budget",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "timeline",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "message",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "consent_given",
+          "data_type": "boolean",
+          "is_nullable": "NO",
+          "column_default": "true"
+        },
+        {
+          "column_name": "recaptcha_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "turnstile_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "preferred_language",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'EN'::text"
+        },
+        {
+          "column_name": "source_url",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "user_agent",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "ip_address",
+          "data_type": "inet",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "first_response_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "last_response_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "response_count",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "notes",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": "'{}'::jsonb"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "countries": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "uuid_generate_v4()"
+        },
+        {
+          "column_name": "iso2",
+          "data_type": "character",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "name_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "name_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "phone_prefix",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "phone_placeholder",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "plate_placeholder",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "plate_note",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 38
+    },
+    "guest_orders": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "uuid_generate_v4()"
+        },
+        {
+          "column_name": "guest_email",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "guest_name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "guest_phone",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "address_line1",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "address_line2",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "city",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "state_province",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "postcode",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "country",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'Malaysia'::text"
+        },
+        {
+          "column_name": "cart_items",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "total_myr",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "total_usd",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "currency",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'MYR'::text"
+        },
+        {
+          "column_name": "payment_method",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "newsletter_opt_in",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "magic_link_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "magic_link_expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "account_created",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "payment_status",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'pending'::text"
+        },
+        {
+          "column_name": "payment_attempts",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "last_payment_attempt_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "payment_failure_reason",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "payment_session_id",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "order_expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "(timezone('utc'::text, now()) + '24:00:00'::interval)"
+        },
+        {
+          "column_name": "cancelled_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "cancelled_reason",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "resume_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "resume_token_expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 0
+    },
+    "newsletter_subscriptions": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "uuid_generate_v4()"
+        },
+        {
+          "column_name": "email",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "full_name",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'active'::text"
+        },
+        {
+          "column_name": "source",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "preferred_language",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'EN'::text"
+        },
+        {
+          "column_name": "subscribed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "unsubscribed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "last_email_sent_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "email_open_count",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "email_click_count",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "ip_address",
+          "data_type": "inet",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "consent_given",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true"
+        },
+        {
+          "column_name": "double_opt_in_confirmed",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "confirmation_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": "'{}'::jsonb"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "password_resets": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "token",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "used",
+          "data_type": "boolean",
+          "is_nullable": "NO",
+          "column_default": "false"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "payments": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "subscription_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "amount",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "currency",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'MYR'::text"
+        },
+        {
+          "column_name": "payment_method",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "payment_gateway",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "transaction_id",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "gateway_reference",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'pending'::text"
+        },
+        {
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "paid_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "failed_reason",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "refund_amount",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "refunded_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "profile_completion_events": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "field_name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "action",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "score_delta",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "qimen_records": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "client_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "strategy_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "strategy_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "payload",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "regions": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "uuid_generate_v4()"
+        },
+        {
+          "column_name": "country_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "name_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "name_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "latitude",
+          "data_type": "double precision",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "longitude",
+          "data_type": "double precision",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "tz_offset",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "phone_placeholder",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "plate_placeholder",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "phone_prefix",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "plate_note",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 1560
+    },
+    "service_access_log": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "service_code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "subscription_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "action",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "accessed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "service_pricing": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "service_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "service_name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "price_myr",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "price_usd",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "service_group",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 25
+    },
+    "service_pricing_rates": {
+      "columns": [
+        {
+          "column_name": "rate_key",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "rate",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "captured_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 1
+    },
+    "services": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "service_group",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "service_code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "service_name_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "service_name_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "description_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "description_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "icon_name",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "sort_order",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "is_active",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "social_accounts": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "provider",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "provider_user_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "access_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "refresh_token",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "subscription_plans": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "plan_code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "plan_name_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "plan_name_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "description_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "description_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "price_myr",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "billing_cycle",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "features",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "report_pages",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "tool_access",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "is_active",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true"
+        },
+        {
+          "column_name": "sort_order",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "tongshu_glossary": {
+      "columns": [
+        {
+          "column_name": "term",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "category",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "label_en",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "label_cn",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "notes",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 52
+    },
+    "tongshu_snapshots": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "date_key",
+          "data_type": "date",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "source",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "payload",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 3
+    },
+    "user_contacts": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "kind",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'mobile'::text"
+        },
+        {
+          "column_name": "value",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "label",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "preferred",
+          "data_type": "boolean",
+          "is_nullable": "NO",
+          "column_default": "false"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "user_course_enrollments": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "course_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "payment_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'enrolled'::text"
+        },
+        {
+          "column_name": "progress",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": "0"
+        },
+        {
+          "column_name": "enrolled_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "started_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "completed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "certificate_issued_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 0
+    },
+    "user_plates": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "country",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "plate",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "notes",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "user_profiles": {
+      "columns": [
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "full_name",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "preferred_name",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "timezone",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "country",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "city",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "location",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "state",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "lat",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "lon",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "tz",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "client_id_value",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "report_language",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "completion_pct",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "column_name": "profile_state",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'draft'::text"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "gender",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "birth",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "lunar_birth",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "chinese_zodiac",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "tst_mode",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "tst_offset",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "std_meridian",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "delta_offset",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "local_tst_offset",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "local_std_meridian",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "local_delta_offset",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ],
+      "row_count": 0
+    },
+    "user_subscriptions": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "plan_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'pending'::text"
+        },
+        {
+          "column_name": "started_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "auto_renew",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "renewal_reminder_sent",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false"
+        },
+        {
+          "column_name": "cancellation_reason",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "cancelled_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": "now()"
+        }
+      ],
+      "row_count": 0
+    },
+    "users": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "email",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "password_hash",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "locale",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'EN'::text"
+        },
+        {
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'pending'::text"
+        },
+        {
+          "column_name": "role",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'client'::text"
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    },
+    "ziwei_records": {
+      "columns": [
+        {
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "column_name": "client_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "column_name": "reading_en",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "reading_cn",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "payload",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "timezone('utc'::text, now())"
+        }
+      ],
+      "row_count": 0
+    }
+  },
+  "foreignKeys": [
+    {
+      "constraint_name": "bazi_records_client_fk",
+      "table_name": "bazi_records",
+      "column_name": "client_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "password_resets_user_id_fkey",
+      "table_name": "password_resets",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "payments_subscription_id_fkey",
+      "table_name": "payments",
+      "column_name": "subscription_id",
+      "foreign_table_name": "user_subscriptions",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "payments_user_id_fkey",
+      "table_name": "payments",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "profile_completion_events_user_id_fkey",
+      "table_name": "profile_completion_events",
+      "column_name": "user_id",
+      "foreign_table_name": "user_profiles",
+      "foreign_column_name": "user_id"
+    },
+    {
+      "constraint_name": "qimen_records_client_fk",
+      "table_name": "qimen_records",
+      "column_name": "client_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "regions_country_id_fkey",
+      "table_name": "regions",
+      "column_name": "country_id",
+      "foreign_table_name": "countries",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "service_access_log_subscription_id_fkey",
+      "table_name": "service_access_log",
+      "column_name": "subscription_id",
+      "foreign_table_name": "user_subscriptions",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "service_access_log_user_id_fkey",
+      "table_name": "service_access_log",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "social_accounts_user_id_fkey",
+      "table_name": "social_accounts",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_contacts_user_id_fkey",
+      "table_name": "user_contacts",
+      "column_name": "user_id",
+      "foreign_table_name": "user_profiles",
+      "foreign_column_name": "user_id"
+    },
+    {
+      "constraint_name": "user_course_enrollments_course_id_fkey",
+      "table_name": "user_course_enrollments",
+      "column_name": "course_id",
+      "foreign_table_name": "academy_courses",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_course_enrollments_payment_id_fkey",
+      "table_name": "user_course_enrollments",
+      "column_name": "payment_id",
+      "foreign_table_name": "payments",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_course_enrollments_user_id_fkey",
+      "table_name": "user_course_enrollments",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_plates_user_id_fkey",
+      "table_name": "user_plates",
+      "column_name": "user_id",
+      "foreign_table_name": "user_profiles",
+      "foreign_column_name": "user_id"
+    },
+    {
+      "constraint_name": "user_profiles_user_id_fkey",
+      "table_name": "user_profiles",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_subscriptions_plan_id_fkey",
+      "table_name": "user_subscriptions",
+      "column_name": "plan_id",
+      "foreign_table_name": "subscription_plans",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "user_subscriptions_user_id_fkey",
+      "table_name": "user_subscriptions",
+      "column_name": "user_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    },
+    {
+      "constraint_name": "ziwei_records_client_fk",
+      "table_name": "ziwei_records",
+      "column_name": "client_id",
+      "foreign_table_name": "users",
+      "foreign_column_name": "id"
+    }
+  ],
+  "indexes": [
+    {
+      "table_name": "academy_courses",
+      "index_name": "academy_courses_course_code_key",
+      "column_name": "course_code",
+      "is_unique": true
+    },
+    {
+      "table_name": "academy_courses",
+      "index_name": "academy_courses_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "bazi_records",
+      "index_name": "bazi_records_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_case_id_idx",
+      "column_name": "case_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_case_id_key",
+      "column_name": "case_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_created_at_idx",
+      "column_name": "created_at",
+      "is_unique": false
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_email_idx",
+      "column_name": "email",
+      "is_unique": false
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_status_idx",
+      "column_name": "status",
+      "is_unique": false
+    },
+    {
+      "table_name": "contact_enquiries",
+      "index_name": "contact_enquiries_topic_idx",
+      "column_name": "topic",
+      "is_unique": false
+    },
+    {
+      "table_name": "countries",
+      "index_name": "countries_iso2_key",
+      "column_name": "iso2",
+      "is_unique": true
+    },
+    {
+      "table_name": "countries",
+      "index_name": "countries_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "countries",
+      "index_name": "idx_countries_iso2",
+      "column_name": "iso2",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_created_idx",
+      "column_name": "created_at",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_email_idx",
+      "column_name": "guest_email",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_email_status_idx",
+      "column_name": "payment_status",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_email_status_idx",
+      "column_name": "guest_email",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_expires_idx",
+      "column_name": "order_expires_at",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_magic_link_token_key",
+      "column_name": "magic_link_token",
+      "is_unique": true
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_magic_token_idx",
+      "column_name": "magic_link_token",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_payment_status_idx",
+      "column_name": "payment_status",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_resume_token_idx",
+      "column_name": "resume_token",
+      "is_unique": false
+    },
+    {
+      "table_name": "guest_orders",
+      "index_name": "guest_orders_resume_token_key",
+      "column_name": "resume_token",
+      "is_unique": true
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_confirmation_token_key",
+      "column_name": "confirmation_token",
+      "is_unique": true
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_email_idx",
+      "column_name": "email",
+      "is_unique": false
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_email_key",
+      "column_name": "email",
+      "is_unique": true
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_status_idx",
+      "column_name": "status",
+      "is_unique": false
+    },
+    {
+      "table_name": "newsletter_subscriptions",
+      "index_name": "newsletter_subscriptions_user_id_idx",
+      "column_name": "user_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "password_resets",
+      "index_name": "password_resets_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "password_resets",
+      "index_name": "password_resets_token_key",
+      "column_name": "token",
+      "is_unique": true
+    },
+    {
+      "table_name": "payments",
+      "index_name": "idx_payments_status",
+      "column_name": "status",
+      "is_unique": false
+    },
+    {
+      "table_name": "payments",
+      "index_name": "idx_payments_subscription",
+      "column_name": "subscription_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "payments",
+      "index_name": "idx_payments_user",
+      "column_name": "user_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "payments",
+      "index_name": "payments_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "payments",
+      "index_name": "payments_transaction_id_key",
+      "column_name": "transaction_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "profile_completion_events",
+      "index_name": "profile_completion_events_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "profile_completion_events",
+      "index_name": "profile_completion_events_user_idx",
+      "column_name": "user_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "qimen_records",
+      "index_name": "qimen_records_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "regions",
+      "index_name": "idx_regions_country_id",
+      "column_name": "country_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "regions",
+      "index_name": "regions_country_idx",
+      "column_name": "country_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "regions",
+      "index_name": "regions_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "regions",
+      "index_name": "ux_regions_country_code",
+      "column_name": "code",
+      "is_unique": true
+    },
+    {
+      "table_name": "regions",
+      "index_name": "ux_regions_country_code",
+      "column_name": "country_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "service_access_log",
+      "index_name": "idx_service_access_service",
+      "column_name": "service_code",
+      "is_unique": false
+    },
+    {
+      "table_name": "service_access_log",
+      "index_name": "idx_service_access_user",
+      "column_name": "user_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "service_access_log",
+      "index_name": "service_access_log_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "service_pricing",
+      "index_name": "service_pricing_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "service_pricing",
+      "index_name": "service_pricing_service_id_key",
+      "column_name": "service_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "service_pricing_rates",
+      "index_name": "service_pricing_rates_pkey",
+      "column_name": "rate_key",
+      "is_unique": true
+    },
+    {
+      "table_name": "services",
+      "index_name": "services_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "services",
+      "index_name": "services_service_code_key",
+      "column_name": "service_code",
+      "is_unique": true
+    },
+    {
+      "table_name": "social_accounts",
+      "index_name": "social_accounts_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "social_accounts",
+      "index_name": "social_accounts_provider_key",
+      "column_name": "provider",
+      "is_unique": true
+    },
+    {
+      "table_name": "social_accounts",
+      "index_name": "social_accounts_provider_key",
+      "column_name": "provider_user_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "subscription_plans",
+      "index_name": "subscription_plans_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "subscription_plans",
+      "index_name": "subscription_plans_plan_code_key",
+      "column_name": "plan_code",
+      "is_unique": true
+    },
+    {
+      "table_name": "tongshu_glossary",
+      "index_name": "tongshu_glossary_pkey",
+      "column_name": "term",
+      "is_unique": true
+    },
+    {
+      "table_name": "tongshu_snapshots",
+      "index_name": "tongshu_snapshots_date_key_key",
+      "column_name": "date_key",
+      "is_unique": true
+    },
+    {
+      "table_name": "tongshu_snapshots",
+      "index_name": "tongshu_snapshots_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_contacts",
+      "index_name": "user_contacts_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_contacts",
+      "index_name": "user_contacts_user_value_key",
+      "column_name": "user_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_contacts",
+      "index_name": "user_contacts_user_value_key",
+      "column_name": "value",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_course_enrollments",
+      "index_name": "idx_user_course_unique",
+      "column_name": "user_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_course_enrollments",
+      "index_name": "idx_user_course_unique",
+      "column_name": "course_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_course_enrollments",
+      "index_name": "user_course_enrollments_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_plates",
+      "index_name": "user_plates_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_plates",
+      "index_name": "user_plates_user_plate_key",
+      "column_name": "user_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_plates",
+      "index_name": "user_plates_user_plate_key",
+      "column_name": "plate",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_profiles",
+      "index_name": "user_profiles_pkey",
+      "column_name": "user_id",
+      "is_unique": true
+    },
+    {
+      "table_name": "user_subscriptions",
+      "index_name": "idx_user_subscriptions_expires",
+      "column_name": "expires_at",
+      "is_unique": false
+    },
+    {
+      "table_name": "user_subscriptions",
+      "index_name": "idx_user_subscriptions_user_status",
+      "column_name": "status",
+      "is_unique": false
+    },
+    {
+      "table_name": "user_subscriptions",
+      "index_name": "idx_user_subscriptions_user_status",
+      "column_name": "user_id",
+      "is_unique": false
+    },
+    {
+      "table_name": "user_subscriptions",
+      "index_name": "user_subscriptions_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "users",
+      "index_name": "users_email_key",
+      "column_name": "email",
+      "is_unique": true
+    },
+    {
+      "table_name": "users",
+      "index_name": "users_pkey",
+      "column_name": "id",
+      "is_unique": true
+    },
+    {
+      "table_name": "ziwei_records",
+      "index_name": "ziwei_records_pkey",
+      "column_name": "id",
+      "is_unique": true
+    }
+  ],
+  "functions": [
+    {
+      "routine_name": "apply_service_pricing_rate",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "calculate_profile_completion",
+      "routine_type": "FUNCTION",
+      "return_type": "numeric"
+    },
+    {
+      "routine_name": "create_resume_token",
+      "routine_type": "FUNCTION",
+      "return_type": "text"
+    },
+    {
+      "routine_name": "generate_case_id",
+      "routine_type": "FUNCTION",
+      "return_type": "text"
+    },
+    {
+      "routine_name": "generate_resume_token",
+      "routine_type": "FUNCTION",
+      "return_type": "text"
+    },
+    {
+      "routine_name": "get_resumable_order",
+      "routine_type": "FUNCTION",
+      "return_type": "record"
+    },
+    {
+      "routine_name": "mark_abandoned_orders",
+      "routine_type": "FUNCTION",
+      "return_type": "integer"
+    },
+    {
+      "routine_name": "service_pricing_set_updated",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "set_captured_date",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "set_updated_at",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "trigger_update_completion",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "update_contact_enquiries_updated_at",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "update_service_pricing_usd",
+      "routine_type": "FUNCTION",
+      "return_type": "void"
+    },
+    {
+      "routine_name": "update_subscription_status",
+      "routine_type": "FUNCTION",
+      "return_type": "void"
+    },
+    {
+      "routine_name": "update_updated_at",
+      "routine_type": "FUNCTION",
+      "return_type": "trigger"
+    },
+    {
+      "routine_name": "validate_resume_token",
+      "routine_type": "FUNCTION",
+      "return_type": "record"
+    },
+    {
+      "routine_name": "validate_service_access",
+      "routine_type": "FUNCTION",
+      "return_type": "boolean"
+    }
+  ],
+  "policies": [
+    {
+      "schemaname": "public",
+      "tablename": "academy_courses",
+      "policyname": "courses_admin_only",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "ALL",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = 'grand_master'::text))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "academy_courses",
+      "policyname": "courses_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "academy_courses",
+      "policyname": "courses_select_published",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "((auth.role() = 'authenticated'::text) AND (is_published = true))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bazi_records",
+      "policyname": "bazi_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = client_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bazi_records",
+      "policyname": "bazi_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "bazi_records",
+      "policyname": "bazi_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": "(auth.uid() = client_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "contact_enquiries",
+      "policyname": "Anyone can submit contact enquiry",
+      "permissive": "PERMISSIVE",
+      "roles": "{anon,authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "true"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "contact_enquiries",
+      "policyname": "Service role full access contact",
+      "permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "cmd": "ALL",
+      "qual": "true",
+      "with_check": "true"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "contact_enquiries",
+      "policyname": "Users can view own enquiries",
+      "permissive": "PERMISSIVE",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((email = (( SELECT users.email\n   FROM auth.users\n  WHERE (users.id = auth.uid())))::text) OR (assigned_to = auth.uid()))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "countries",
+      "policyname": "anon read countries",
+      "permissive": "PERMISSIVE",
+      "roles": "{anon}",
+      "cmd": "SELECT",
+      "qual": "true",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "guest_orders",
+      "policyname": "Anyone can validate resume tokens",
+      "permissive": "PERMISSIVE",
+      "roles": "{anon,authenticated}",
+      "cmd": "SELECT",
+      "qual": "((resume_token IS NOT NULL) AND (resume_token_expires_at > timezone('utc'::text, now())))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "newsletter_subscriptions",
+      "policyname": "newsletter_anon_insert",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "true"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "newsletter_subscriptions",
+      "policyname": "newsletter_service_all",
+      "permissive": "PERMISSIVE",
+      "roles": "{service_role}",
+      "cmd": "ALL",
+      "qual": "true",
+      "with_check": "true"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "password_resets",
+      "policyname": "password_resets_admin_only",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = 'grand_master'::text))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "payments",
+      "policyname": "payments_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "payments",
+      "policyname": "payments_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "profile_completion_events",
+      "policyname": "profile_events_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "qimen_records",
+      "policyname": "qimen_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = client_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "qimen_records",
+      "policyname": "qimen_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "qimen_records",
+      "policyname": "qimen_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": "(auth.uid() = client_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "regions",
+      "policyname": "anon read regions",
+      "permissive": "PERMISSIVE",
+      "roles": "{anon}",
+      "cmd": "SELECT",
+      "qual": "true",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "service_access_log",
+      "policyname": "service_log_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "service_access_log",
+      "policyname": "service_log_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "service_pricing",
+      "policyname": "Enable read access for all users",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "true",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "services",
+      "policyname": "services_admin_only",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "ALL",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = 'grand_master'::text))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "services",
+      "policyname": "services_select_authenticated",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "((auth.role() = 'authenticated'::text) AND (is_active = true))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "social_accounts",
+      "policyname": "social_accounts_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "social_accounts",
+      "policyname": "social_accounts_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "subscription_plans",
+      "policyname": "plans_admin_only",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "ALL",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = 'grand_master'::text))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "subscription_plans",
+      "policyname": "plans_select_authenticated",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "((auth.role() = 'authenticated'::text) AND (is_active = true))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_contacts",
+      "policyname": "user_contacts_delete_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "DELETE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_contacts",
+      "policyname": "user_contacts_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_contacts",
+      "policyname": "user_contacts_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_contacts",
+      "policyname": "user_contacts_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_course_enrollments",
+      "policyname": "enrollments_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_course_enrollments",
+      "policyname": "enrollments_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_course_enrollments",
+      "policyname": "enrollments_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_plates",
+      "policyname": "user_plates_delete_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "DELETE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_plates",
+      "policyname": "user_plates_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_plates",
+      "policyname": "user_plates_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_plates",
+      "policyname": "user_plates_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_profiles",
+      "policyname": "profiles_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_profiles",
+      "policyname": "profiles_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_profiles",
+      "policyname": "profiles_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_profiles",
+      "policyname": "profiles_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": "(auth.uid() = user_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_subscriptions",
+      "policyname": "subscriptions_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users\n  WHERE ((users.id = auth.uid()) AND (users.role = ANY (ARRAY['grand_master'::text, 'master'::text])))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "user_subscriptions",
+      "policyname": "subscriptions_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = user_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "users",
+      "policyname": "users_select_admin",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(EXISTS ( SELECT 1\n   FROM users users_1\n  WHERE ((users_1.id = auth.uid()) AND (users_1.role = 'grand_master'::text))))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "users",
+      "policyname": "users_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "users",
+      "policyname": "users_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = id)",
+      "with_check": "(auth.uid() = id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ziwei_records",
+      "policyname": "ziwei_insert_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = client_id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ziwei_records",
+      "policyname": "ziwei_select_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "ziwei_records",
+      "policyname": "ziwei_update_own",
+      "permissive": "PERMISSIVE",
+      "roles": "{public}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = client_id)",
+      "with_check": "(auth.uid() = client_id)"
+    }
+  ],
+  "gaps": []
+}

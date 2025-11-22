@@ -1,8 +1,8 @@
 /**
  * AuthPage Component
- * 
+ *
  * Unified authentication page with:
- * - OAuth providers (Google, Facebook)
+ * - OAuth providers (Google, Facebook, Apple)
  * - Email/password sign-up and sign-in
  * - Magic link (passwordless)
  * - Responsive design matching Meta Alliance brand
@@ -11,11 +11,12 @@
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { FcGoogle } from 'react-icons/fc'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaApple } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import {
   signInWithGoogle,
   signInWithFacebook,
+  signInWithApple,
   signInWithEmail,
   signUpWithEmail,
   sendMagicLink,
@@ -27,7 +28,7 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const redirectTo = searchParams.get('redirect') || `/${locale}/profile/complete`
-  
+
   const [mode, setMode] = useState<AuthMode>('signin')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -36,17 +37,21 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
 
-  const handleOAuthSignIn = async (provider: 'google' | 'facebook') => {
+  const handleOAuthSignIn = async (provider: 'google' | 'facebook' | 'apple') => {
     setLoading(true)
     setError(null)
-    
+
     try {
-      const redirectUrl = `${window.location.origin}/auth/callback?redirect=${encodeURIComponent(redirectTo)}`
-      
+      const redirectUrl = `${window.location.origin}/auth/callback?redirect=${encodeURIComponent(
+        redirectTo,
+      )}`
+
       if (provider === 'google') {
         await signInWithGoogle(redirectUrl)
-      } else {
+      } else if (provider === 'facebook') {
         await signInWithFacebook(redirectUrl)
+      } else {
+        await signInWithApple(redirectUrl)
       }
     } catch (err: any) {
       setError(err.message || `Failed to sign in with ${provider}`)
@@ -71,16 +76,16 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
         } else {
           setSuccess(
             locale === 'CN'
-              ? '注册成功！请检查您的电子邮件以确认您的帐户。'
-              : 'Sign up successful! Please check your email to confirm your account.'
+              ? '注册成功！请查收邮箱完成验证。'
+              : 'Sign up successful! Please check your email to confirm your account.',
           )
         }
       } else {
         await sendMagicLink(email)
         setSuccess(
           locale === 'CN'
-            ? `魔术链接已发送至 ${email}。请检查您的收件箱。`
-            : `Magic link sent to ${email}. Please check your inbox.`
+            ? `魔法链接已发送至 ${email}，请查收邮箱。`
+            : `Magic link sent to ${email}. Please check your inbox.`,
         )
       }
     } catch (err: any) {
@@ -101,6 +106,7 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
           : 'We will send you a magic link to sign in',
       googleBtn: 'Continue with Google',
       facebookBtn: 'Continue with Facebook',
+      appleBtn: 'Continue with Apple',
       orDivider: 'OR',
       emailLabel: 'Email Address',
       passwordLabel: 'Password',
@@ -117,19 +123,20 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
         mode === 'signin'
           ? '登录以访问您的订阅'
           : mode === 'signup'
-          ? '加入玄域联盟，解锁玄学洞察'
-          : '我们将向您发送魔术链接以登录',
+          ? '加入 Meta Alliance，解锁玄学洞见'
+          : '我们会发送魔法链接帮助您登录',
       googleBtn: '使用 Google 继续',
       facebookBtn: '使用 Facebook 继续',
+      appleBtn: '使用 Apple 继续',
       orDivider: '或',
       emailLabel: '电子邮件地址',
       passwordLabel: '密码',
       fullNameLabel: '全名',
-      submitBtn: mode === 'signin' ? '登录' : mode === 'signup' ? '注册' : '发送魔术链接',
-      switchToSignup: '没有账户？',
-      switchToSignin: '已有账户？',
-      switchToMagic: '更喜欢无密码？',
-      switchLink: mode === 'signin' ? '注册' : mode === 'signup' ? '登录' : '使用密码',
+      submitBtn: mode === 'signin' ? '登录' : mode === 'signup' ? '注册' : '发送魔法链接',
+      switchToSignup: '还没有账户？',
+      switchToSignin: '已经有账户？',
+      switchToMagic: '更喜欢免密登录？',
+      switchLink: mode === 'signin' ? '去注册' : mode === 'signup' ? '去登录' : '使用密码',
     },
   }
 
@@ -154,7 +161,7 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
               {error}
             </div>
           )}
-          
+
           {success && (
             <div className="mb-6 rounded-lg border border-green-500/50 bg-green-500/10 p-4 text-sm text-green-300">
               {success}
@@ -176,10 +183,19 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
               <button
                 onClick={() => handleOAuthSignIn('facebook')}
                 disabled={loading}
-                className="mb-6 flex w-full items-center justify-center gap-3 rounded-lg border border-[#1877f2] bg-[#1877f2] px-4 py-3 font-medium text-white transition hover:bg-[#166fe5] disabled:opacity-50"
+                className="mb-3 flex w-full items-center justify-center gap-3 rounded-lg border border-[#1877f2] bg-[#1877f2] px-4 py-3 font-medium text-white transition hover:bg-[#166fe5] disabled:opacity-50"
               >
                 <FaFacebook className="text-xl" />
                 {t.facebookBtn}
+              </button>
+
+              <button
+                onClick={() => handleOAuthSignIn('apple')}
+                disabled={loading}
+                className="mb-6 flex w-full items-center justify-center gap-3 rounded-lg border border-black bg-black px-4 py-3 font-medium text-white transition hover:bg-gray-900 disabled:opacity-50"
+              >
+                <FaApple className="text-xl" />
+                {t.appleBtn}
               </button>
 
               <div className="relative mb-6">
@@ -282,7 +298,7 @@ export default function AuthPage({ locale = 'EN' }: { locale?: 'EN' | 'CN' }) {
         {/* Legal Notice */}
         <p className="mt-6 text-center text-xs text-white/50">
           {locale === 'CN'
-            ? '继续即表示您同意我们的'
+            ? '继续操作即表示您同意我们的'
             : 'By continuing, you agree to our'}{' '}
           <a href={`/${locale}/legal/terms`} className="text-gold hover:underline">
             {locale === 'CN' ? '服务条款' : 'Terms of Service'}
