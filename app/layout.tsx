@@ -45,7 +45,7 @@ export const metadata = {
     images: ['/images/og-default.jpg'],
   },
   other: {
-    'facebook-domain-verification': '9uxfb6r955f9cl5i4w9b2j8rz1ittg',
+    'facebook-domain-verification': '9uxfb6r955f9cl5i4w9b2j8rz1ittg', //Facebook domain verification
   },
 }
 
