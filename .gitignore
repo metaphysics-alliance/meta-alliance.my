@@ -10,3 +10,4 @@ temp_i18n.txt
 .env.*
 !.env.example
 !.env.local.example
+scripts/health/

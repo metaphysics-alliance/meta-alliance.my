@@ -131,4 +131,10 @@
 - **Scope**: MVP
 - **Summary**: npm start: MVP dev bootstrap
 - **Logged At**: 2025-11-22T12:34:46+08:00
+---
+
+### QA Log Entry - 2025-11-24T15:32:20+08:00
+- **Scope**: MVP
+- **Summary**: npm start: MVP Marketing UI + autopilot bootstrap
+- **Logged At**: 2025-11-24T15:32:20+08:00
 

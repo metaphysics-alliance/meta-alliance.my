@@ -1,7 +1,7 @@
 #!/usr/bin/env ts-node
 
 /**
- * BRAIN AGENT: Progression Monitor & Status Tracker
+ * BRAIN AGENT: Progression Monitor & Status Tracker (AI-Enhanced)
  * 
  * Purpose: Monitor and update implementation progress across all phase documents
  * Responsibilities:
@@ -9,13 +9,19 @@
  * - Update phase documents with current progress
  * - Maintain CHANGELOG.md with implementation milestones
  * - Sync status across MASTER-IMPLEMENTATION-PLAN.md
- * - Generate weekly progress reports
+ * - Generate intelligent weekly progress reports using LLM
  * 
  * Usage: npm run brain:monitor
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
+import { LLMClient } from './lib/llm-client.ts';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config({ path: '.env.local' });
+dotenv.config();
 
 interface PhaseStatus {
   phase: string;
@@ -27,6 +33,7 @@ interface PhaseStatus {
   completedTasks: number;
   totalTasks: number;
   criticalGaps: string[];
+  summary?: string; // AI summary
 }
 
 interface ProgressReport {
@@ -36,12 +43,19 @@ interface ProgressReport {
   recentChanges: string[];
   upcomingMilestones: string[];
   blockers: string[];
+  aiAnalysis?: {
+    executiveSummary: string;
+    riskAssessment: string;
+    strategicRecommendations: string;
+    modelUsed: string;
+  };
 }
 
 class BrainProgressMonitor {
   private docsPath = resolve(process.cwd(), 'docs');
   private changelogPath = resolve(process.cwd(), 'CHANGELOG.md');
   private reportPath = resolve(process.cwd(), 'docs', 'PROGRESS-REPORT.md');
+  private llmClient: LLMClient;
   
   private phaseFiles = [
     'PHASE-0-FOUNDATION.md',
@@ -52,6 +66,10 @@ class BrainProgressMonitor {
     'PHASE-5-REPORTS-ACADEMY.md',
     'PHASE-6-PRODUCTION-DEPLOYMENT.md'
   ];
+
+  constructor() {
+    this.llmClient = new LLMClient();
+  }
 
   async analyzePhases(): Promise<PhaseStatus[]> {
     const phases: PhaseStatus[] = [];
@@ -158,6 +176,7 @@ class BrainProgressMonitor {
     console.log('[Brain] 🧠 Analyzing implementation progress...\n');
 
     const phases = await this.analyzePhases();
+    const recentChanges = await this.getRecentChanges();
     
     const overallProgress = phases.length > 0
       ? Math.round(phases.reduce((sum, p) => sum + p.progress, 0) / phases.length)
@@ -171,12 +190,69 @@ class BrainProgressMonitor {
       timestamp: new Date().toISOString(),
       overallProgress,
       phases,
-      recentChanges: await this.getRecentChanges(),
+      recentChanges,
       upcomingMilestones: this.getUpcomingMilestones(phases),
       blockers: allBlockers
     };
 
+    // Attempt AI Analysis if configured
+    if (this.llmClient.isConfigured) {
+      try {
+        console.log('[Brain] 🤖 Engaging Neural Engine for analysis...');
+        const analysis = await this.generateAIAnalysis(report);
+        report.aiAnalysis = analysis;
+        console.log(`[Brain] ✅ Analysis complete (Model: ${analysis.modelUsed})`);
+      } catch (error) {
+        console.warn('[Brain] ⚠️  AI Analysis failed, falling back to standard reporting:', error);
+      }
+    } else {
+      console.log('[Brain] ℹ️  AI Analysis skipped (No API Key configured)');
+    }
+
     return report;
+  }
+
+  private async generateAIAnalysis(report: ProgressReport): Promise<NonNullable<ProgressReport['aiAnalysis']>> {
+    const prompt = `
+    You are the "Brain" of the Meta Alliance project - a supreme AI strategist.
+    Analyze the current project status and provide an executive summary.
+    
+    Current Date: ${new Date().toLocaleString()}
+    Overall Progress: ${report.overallProgress}%
+    
+    Phases:
+    ${report.phases.map(p => `- ${p.phase}: ${p.progress}% (${p.status}) - ${p.completedTasks}/${p.totalTasks} tasks`).join('\n')}
+    
+    Critical Blockers:
+    ${report.blockers.join('\n') || 'None'}
+    
+    Recent Changes:
+    ${report.recentChanges.join('\n')}
+    
+    Please provide a response in the following JSON format ONLY:
+    {
+      "executiveSummary": "A concise, high-level summary of the project state, tone should be professional but authoritative.",
+      "riskAssessment": "Analysis of potential risks based on blockers and progress gaps.",
+      "strategicRecommendations": "3-5 actionable bullet points for the team to focus on next."
+    }
+    `;
+
+    const response = await this.llmClient.generate(prompt);
+    
+    try {
+      // Clean up markdown code blocks if present
+      const cleanJson = response.content.replace(/```json/g, '').replace(/```/g, '').trim();
+      const data = JSON.parse(cleanJson);
+      
+      return {
+        executiveSummary: data.executiveSummary,
+        riskAssessment: data.riskAssessment,
+        strategicRecommendations: data.strategicRecommendations,
+        modelUsed: response.model
+      };
+    } catch (e) {
+      throw new Error('Failed to parse AI response');
+    }
   }
 
   private async getRecentChanges(): Promise<string[]> {
@@ -263,12 +339,62 @@ class BrainProgressMonitor {
       'completed': '✅'
     };
 
+    let aiSection = '';
+    if (report.aiAnalysis) {
+      aiSection = `
+## 🧠 Supreme Brain Analysis
+> **Model:** ${report.aiAnalysis.modelUsed}
+
+### 📋 Executive Summary
+${report.aiAnalysis.executiveSummary}
+
+### 🛡️ Risk Assessment
+${report.aiAnalysis.riskAssessment}
+
+### 🧭 Strategic Recommendations
+${report.aiAnalysis.strategicRecommendations}
+
+---
+`;
+    } else {
+      aiSection = `
+## 🧠 Brain Agent Recommendations (Fallback Mode)
+*AI Analysis skipped - Configure GEMINI_API_KEY for intelligent insights.*
+
+${report.overallProgress < 50 ? `
+### Priority Actions:
+1. **Focus on Phase 0 completion** - Foundation must be solid before proceeding
+2. **Resolve critical blockers** immediately
+3. **Rotate exposed credentials** (if any security issues detected)
+4. **Complete RLS policies** to secure data access
+5. **Create missing database tables** for subscription infrastructure
+` : report.overallProgress < 100 ? `
+### Priority Actions:
+1. **Maintain momentum** on in-progress phases
+2. **Address remaining blockers** systematically
+3. **Begin user testing** on completed features
+4. **Document implementation decisions** in CHANGELOG.md
+5. **Prepare for next phase** handoff
+` : `
+### Maintenance Mode:
+1. **Monitor production metrics**
+2. **Address bug reports** promptly
+3. **Plan feature enhancements**
+4. **Update documentation** as system evolves
+5. **Conduct security audits** quarterly
+`}
+---
+`;
+    }
+
     const md = `# 🧠 Brain Agent: Implementation Progress Report
 **Generated:** ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur' })} (MYT)  
 **Overall Progress:** ${report.overallProgress}%  
 **Status:** ${report.overallProgress === 100 ? '✅ Complete' : report.overallProgress > 50 ? '🟡 In Progress' : '🔴 Early Stage'}
 
 ---
+
+${aiSection}
 
 ## 📊 Phase Progress Summary
 
@@ -331,34 +457,7 @@ ${report.phases.map(p =>
 
 ---
 
-## 🧠 Brain Agent Recommendations
-
-${report.overallProgress < 50 ? `
-### Priority Actions:
-1. **Focus on Phase 0 completion** - Foundation must be solid before proceeding
-2. **Resolve critical blockers** immediately
-3. **Rotate exposed credentials** (if any security issues detected)
-4. **Complete RLS policies** to secure data access
-5. **Create missing database tables** for subscription infrastructure
-` : report.overallProgress < 100 ? `
-### Priority Actions:
-1. **Maintain momentum** on in-progress phases
-2. **Address remaining blockers** systematically
-3. **Begin user testing** on completed features
-4. **Document implementation decisions** in CHANGELOG.md
-5. **Prepare for next phase** handoff
-` : `
-### Maintenance Mode:
-1. **Monitor production metrics**
-2. **Address bug reports** promptly
-3. **Plan feature enhancements**
-4. **Update documentation** as system evolves
-5. **Conduct security audits** quarterly
-`}
-
----
-
-**Report Generated by:** Brain Agent (Implementation Monitor)  
+**Report Generated by:** Brain Agent (AI-Enhanced)  
 **Next Update:** Auto-scheduled daily or on-demand via \`npm run brain:monitor\`  
 **Data Sources:** Phase documents, CHANGELOG.md, DB Admin analysis
 
@@ -383,6 +482,16 @@ ${report.overallProgress < 50 ? `
     console.log(`📅 Generated: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur' })} (MYT)`);
     console.log(`📊 Overall Progress: ${report.overallProgress}%`);
     console.log('='.repeat(70));
+
+    if (report.aiAnalysis) {
+      console.log('\n🤖 AI EXECUTIVE SUMMARY:\n');
+      console.log(report.aiAnalysis.executiveSummary);
+      console.log('\n🛡️  RISK ASSESSMENT:\n');
+      console.log(report.aiAnalysis.riskAssessment);
+      console.log('\ncompass STRATEGIC RECOMMENDATIONS:\n');
+      console.log(report.aiAnalysis.strategicRecommendations);
+      console.log('\n' + '-'.repeat(70));
+    }
 
     console.log('\n📋 PHASE BREAKDOWN:\n');
     report.phases.forEach(phase => {
