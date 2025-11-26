@@ -53,6 +53,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }){
   return (
     <html lang="en">
+      <head><meta name="facebook-domain-verification" content="9uxfb6r955f9cl5i4w9b2j8rz1ittg" /></head>
       <body className={`${notoCJK.className} ${notoCJK.variable} ${cnZcool.variable}`}>
         {children}
       </body>

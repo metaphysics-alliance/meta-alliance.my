@@ -16,7 +16,7 @@
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
-import { LLMClient } from './lib/llm-client.ts';
+import { LLMClient } from './lib/llm-client';
 import dotenv from 'dotenv';
 
 // Load environment variables

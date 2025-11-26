@@ -22,7 +22,7 @@ console.log('\x1b[1m\x1b[32m🚀 STARTING META ALLIANCE MVP SWARM 🚀\x1b[0m');
 console.log('==================================================');
 
 agents.forEach(agent => {
-    console.log(\\[Swarm] Spawning \ Agent...\x1b[0m\);
+    console.log(`${agent.color}[Swarm] Spawning ${agent.name} Agent...\x1b[0m`);
 
     // Use ts-node to run the scripts
     const child = spawn('npx', ['ts-node', agent.script], {
@@ -38,7 +38,7 @@ agents.forEach(agent => {
         const lines = data.toString().split('\n');
         lines.forEach((line: string) => {
             if (line.trim()) {
-                console.log(\\[\]\x1b[0m \\);
+                console.log(`${agent.color}[${agent.name}] ${line}\x1b[0m`);
             }
         });
     });
@@ -47,13 +47,13 @@ agents.forEach(agent => {
         const lines = data.toString().split('\n');
         lines.forEach((line: string) => {
             if (line.trim()) {
-                console.error(\\[\ ERROR]\x1b[0m \\);
+                console.error(`${agent.color}[${agent.name} ERROR] ${line}\x1b[0m`);
             }
         });
     });
 
     child.on('close', (code) => {
-        console.log(\\[\] Process exited with code \\x1b[0m\);
+        console.log(`${agent.color}[${agent.name}] Process exited with code ${code}\x1b[0m`);
     });
 });
 

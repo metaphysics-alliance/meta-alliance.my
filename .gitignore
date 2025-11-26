@@ -11,3 +11,5 @@ temp_i18n.txt
 !.env.example
 !.env.local.example
 scripts/health/
+build.log
+tsconfig.tsbuildinfo

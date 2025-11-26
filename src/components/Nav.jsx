@@ -1,340 +1,375 @@
-import { Menu, X, ChevronDown, ChevronRight, ShoppingCart } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
+import { Menu, X, ChevronDown, ShoppingCart } from 'lucide-react'
+import { clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+import { useI18n } from '../i18n'
 
-import Brand from './Brand.jsx'
-import { useI18n } from '../i18n.jsx'
-import { usePricingCart } from './PricingCartContext.jsx'
-
-function usePointerPreference(){
-  const [coarse, setCoarse] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return window.matchMedia('(pointer: coarse)').matches
-  })
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const mql = window.matchMedia('(pointer: coarse)')
-    const handler = (event) => setCoarse(event.matches)
-    setCoarse(mql.matches)
-    mql.addEventListener('change', handler)
-    return () => mql.removeEventListener('change', handler)
-  }, [])
-
-  return coarse
+// Utility for merging tailwind classes
+function cn(...inputs) {
+  return twMerge(clsx(inputs))
 }
 
-function useHoverDelay(isTouch = false){
-  const [open, setOpen] = useState(false)
-  const timer = useRef(null)
+// --- Navigation Structure Definition ---
+function getNavMap(t, locale) {
+  const prefix = (path) => path
 
-  useEffect(() => () => timer.current && clearTimeout(timer.current), [])
-
-  const onEnter = () => {
-    if (isTouch) return
-    if (timer.current) clearTimeout(timer.current)
-    setOpen(true)
-  }
-
-  const onLeave = () => {
-    if (isTouch) return
-    if (timer.current) clearTimeout(timer.current)
-    timer.current = setTimeout(() => setOpen(false), 160)
-  }
-
-  const toggle = () => {
-    if (timer.current) clearTimeout(timer.current)
-    setOpen(v => !v)
-  }
-
-  const instantOpen = () => {
-    if (timer.current) clearTimeout(timer.current)
-    setOpen(true)
-  }
-
-  const close = () => {
-    if (timer.current) clearTimeout(timer.current)
-    setOpen(false)
-  }
-
-  return { open, onEnter, onLeave, toggle, instantOpen, close }
+  return [
+    { label: t.home, href: prefix('/') },
+    {
+      label: t.celestial,
+      children: [
+        { label: 'BaZi (Four Pillars)', href: prefix('/services/bazi') },
+        { label: 'Zi Wei Dou Shu', href: prefix('/services/ziwei') },
+        { label: 'Qi Men Dun Jia', href: prefix('/services/qimen') },
+        { label: 'I Ching Divination', href: prefix('/services/iching') },
+        { label: 'Feng Shui', href: prefix('/services/fengshui') },
+      ]
+    },
+    {
+      label: t.oracles,
+      children: [
+        { label: t.celestial_numbers, href: prefix('/oracle/celestial-numbers') },
+        { label: t.taiyi_numbers, href: prefix('/oracle/taiyi-numbers') },
+        { label: t.six_ren, href: prefix('/oracle/six-ren') },
+      ]
+    },
+    {
+      label: t.vip_report,
+      href: prefix('/vip-report'),
+      children: [
+        { label: t.vip_essential, href: prefix('/vip-report/essential') },
+        { label: t.vip_advanced, href: prefix('/vip-report/pro') },
+        { label: t.vip_supreme, href: prefix('/vip-report/supreme') },
+      ]
+    },
+    {
+      label: t.academy,
+      children: [
+        { label: t.courses, href: prefix('/academy/courses') },
+        { label: t.foundation, href: prefix('/academy/foundation') },
+        { label: t.beginner, href: prefix('/academy/beginner') },
+        { label: t.advanced, href: prefix('/academy/intermediate') },
+        { label: t.pro, href: prefix('/academy/professional') },
+      ]
+    },
+    {
+      label: t.enterprise,
+      children: [
+        { label: t.audit, href: prefix('/enterprise/audit') },
+        { label: t.site, href: prefix('/enterprise/site') },
+        { label: t.cycles, href: prefix('/enterprise/cycles') },
+      ]
+    },
+    {
+      label: t.resources,
+      children: [
+        { label: t.four_pillars, href: prefix('/resources/four-pillars') },
+        { label: t.purple_star, href: prefix('/resources/purple-star') },
+      ]
+    },
+    { label: t.pricing, href: prefix('/pricing') },
+    { label: t.about, href: prefix('/about') },
+    { label: t.contact, href: prefix('/contact') },
+  ]
 }
 
-const transformItems = (items) => Array.isArray(items)
-  ? items.map((item) => ({
-      label: item?.title ?? '',
-      href: item?.href ?? '#'
-    }))
-  : []
+// --- Components ---
 
-const transformSections = (sections) => Array.isArray(sections)
-  ? sections.map((section) => ({
-      label: section?.title ?? '',
-      children: transformItems(section?.items)
-    }))
-  : []
-
-function SecondLevel({ group, isTouch }){
-  const { open, onEnter, onLeave, toggle, instantOpen, close } = useHoverDelay(isTouch)
-  const hasChildren = Array.isArray(group.children) && group.children.length
-
-  if (!hasChildren){
-    return (
-      <div className="px-2 py-1.5">
-        <Link to={group.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
-          <div className="font-medium">{group.label}</div>
-        </Link>
-      </div>
-    )
-  }
-
-  const hoverProps = isTouch ? {} : {
-    onMouseEnter: onEnter,
-    onMouseLeave: onLeave,
-  }
-
+function NavLink({ href, children, className, onClick }) {
   return (
-    <div className="relative px-2 py-1.5" {...hoverProps}>
-      <button
-        type="button"
-        className="nav-item nav-link h-auto py-1.5 w-full flex items-center justify-between rounded-lg transition-colors duration-150"
-        onClick={isTouch ? toggle : undefined}
-        onFocus={instantOpen}
-        onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget)) close()
-        }}
-        aria-expanded={open}
-      >
-        <span>{group.label}</span>
-        <ChevronRight className={`w-3.5 h-3.5 nav-icon transition-transform duration-150 ${open ? 'translate-x-0.5' : ''}`} />
-      </button>
-      {open && (
-        <div className="absolute top-0 left-full ml-2 w-72 rounded-xl bg-black/80 backdrop-blur-xl border border-white/10 shadow-soft-xl p-2 z-50 nav-submenu-panel">
-          {group.children.map((item, idx) => (
-            <Link key={idx} to={item.href} className="block px-3 py-1.5 rounded-lg hover:bg-white/5 nav-link whitespace-nowrap">
-              <div className="font-medium">{item.label}</div>
-            </Link>
-          ))}
-        </div>
+    <Link
+      to={href}
+      onClick={onClick}
+      className={cn(
+        "relative px-3 py-2 text-sm font-medium text-white/80 hover:text-gold transition-colors duration-200 rounded-full hover:bg-white/5",
+        className
       )}
-    </div>
+    >
+      {children}
+    </Link>
   )
 }
 
-function Dropdown({ item, isTouch }){
-  const hasChildren = Array.isArray(item.children) && item.children.length
-  const { open, onEnter, onLeave, toggle, instantOpen, close } = useHoverDelay(isTouch)
+function DesktopDropdown({ item }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const timeoutRef = useRef(null)
 
-  if (!hasChildren){
-    return (
-      <Link to={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</Link>
-    )
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setIsOpen(true)
   }
 
-  const hoverProps = isTouch ? {} : {
-    onMouseEnter: onEnter,
-    onMouseLeave: onLeave,
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setIsOpen(false), 150)
   }
 
   return (
-    <div className="relative" {...hoverProps}>
+    <div
+      className="relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
-        type="button"
-        className="nav-item nav-link whitespace-nowrap transition-colors duration-150"
-        onClick={isTouch ? toggle : undefined}
-        onFocus={instantOpen}
-        onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget)) close()
-        }}
-        aria-expanded={open}
+        className={cn(
+          "flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-full hover:bg-white/5",
+          isOpen ? "text-gold bg-white/5" : "text-white/80 hover:text-gold"
+        )}
       >
         {item.label}
-        <ChevronDown className={`w-3.5 h-3.5 nav-icon transition-transform duration-150 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-200", isOpen && "rotate-180")} />
       </button>
-      {open && (
-        <div className="absolute top-full mt-2 left-0 w-[22rem] rounded-xl bg-black/80 backdrop-blur-xl border border-white/10 shadow-soft-xl p-2 z-50 nav-dropdown-panel">
-          {item.children.map((child, idx) => (
-            <SecondLevel key={idx} group={child} isTouch={isTouch} />
-          ))}
-        </div>
-      )}
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, y: 10, scale: 0.95, filter: 'blur(4px)' }}
+            transition={{ duration: 0.2, ease: "circOut" }}
+            className="absolute top-full left-0 mt-2 w-64 p-2 rounded-2xl bg-cosmic-void/90 backdrop-blur-2xl border border-white/10 shadow-soft-xl z-50 overflow-hidden"
+          >
+            {/* Glossy overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+
+            <div className="relative flex flex-col gap-1">
+              {item.children?.map((child, idx) => (
+                child.href ? (
+                  <Link
+                    key={idx}
+                    to={child.href}
+                    className="block px-3 py-2.5 rounded-xl hover:bg-white/10 text-sm text-white/90 hover:text-gold transition-all duration-200"
+                  >
+                    {child.label}
+                  </Link>
+                ) : (
+                  <div key={idx} className="px-3 py-2 text-xs font-semibold text-white/40 uppercase tracking-wider mt-2 mb-1">
+                    {child.label}
+                  </div>
+                )
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
 
-export default function Nav(){
-  const { t, lang, setLang } = useI18n()
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const isTouch = usePointerPreference()
-  const { cartCount } = usePricingCart()
-  const [, forceUpdate] = useState({})
-  const closeMobileNav = () => setMobileOpen(false)
+function MobileMenuItem({ item, onClick }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const hasChildren = item.children && item.children.length > 0
 
-  // Force re-render when cart updates
-  useEffect(() => {
-    const handleCartUpdate = () => {
-      forceUpdate({})
-    }
-    window.addEventListener('cart-updated', handleCartUpdate)
-    return () => window.removeEventListener('cart-updated', handleCartUpdate)
-  }, [])
-
-  const celestialMenu = transformSections(t('nav.celestial_groups'))
-
-  const MAP = [
-    { label: t('nav.home'), href: '/' },
-    { label: t('nav.celestial'), children: celestialMenu },
-    { label: t('nav.oracles'), children: [
-      { label: t('nav.celestial_numbers'), href: '/oracle/celestial-numbers' },
-      { label: t('nav.taiyi_numbers'), href: '/oracle/taiyi-numbers' },
-      { label: t('nav.six_ren'), href: '/oracle/six-ren' },
-    ]},
-    { label: t('nav.vip_report'), href: lang === 'EN' ? '/vip-report' : '/services/vip-report', children: [
-      { label: t('nav.vip_essential'), href: '/vip-report/essential' },
-      { label: t('nav.vip_advanced'), href: '/vip-report/pro' },
-      { label: t('nav.vip_supreme'), href: '/vip-report/supreme' },
-    ]},
-    { label: t('nav.academy'), children: [
-      { label: t('nav.courses'), href: '/academy/courses' },
-      { label: t('nav.foundation'), href: '/academy/foundation' },
-      { label: t('nav.beginner'), href: '/academy/beginner' },
-      { label: t('nav.advanced'), href: '/academy/intermediate' },
-      { label: t('nav.pro'), href: '/academy/professional' },
-    ]},
-    { label: t('nav.enterprise'), children: [
-      { label: t('nav.audit'), href: '/enterprise/audit' },
-      { label: t('nav.site'), href: '/enterprise/site' },
-      { label: t('nav.cycles'), href: '/enterprise/cycles' },
-    ]},
-    { label: t('nav.resources'), children: [
-      { label: t('nav.four_pillars'), href: '/resources/four-pillars' },
-      { label: t('nav.purple_star'), href: '/resources/purple-star' },
-    ]},
-    { label: t('nav.pricing'), href: '/pricing' },
-    { label: t('nav.about'), href: '/about' },
-    { label: t('nav.contact'), href: '/contact' },
-  ]
+  if (!hasChildren) {
+    return (
+      <Link
+        to={item.href || '#'}
+        onClick={onClick}
+        className="block py-4 text-lg font-medium text-white/90 border-b border-white/5"
+      >
+        {item.label}
+      </Link>
+    )
+  }
 
   return (
-    <header className="navbar">
-      <div className="container py-3 md:py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="logo" className="w-10 h-10 rounded-full ring-1 ring-white/20" />
-          <Brand />
-        </Link>
-
-        <nav className="hidden lg:flex items-center gap-5 flex-nowrap">
-          {MAP.map((item, i) => (
-            item.children && item.children.length
-              ? <Dropdown key={i} item={item} isTouch={isTouch} />
-              : <Link key={i} to={item.href} className="nav-item nav-link whitespace-nowrap">{item.label}</Link>
-          ))}
-        </nav>
-
-        <div className="hidden md:flex items-center gap-2">
-          <Link 
-            to="/pricing/checkout" 
-            className="relative p-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 group"
-            aria-label={`Shopping cart with ${cartCount} items`}
+    <div className="border-b border-white/5">
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="flex items-center justify-between w-full py-4 text-lg font-medium text-white/90"
+      >
+        {item.label}
+        <ChevronDown className={cn("w-5 h-5 transition-transform", isExpanded && "rotate-180")} />
+      </button>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden bg-white/5 rounded-xl mb-3"
           >
-            <ShoppingCart className="w-5 h-5 text-white/80 group-hover:text-gold transition-colors" />
-            {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-500 to-amber-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-          <button
-            className={`nav-item text-xs px-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 ${lang === 'EN' ? 'text-gold border-gold bg-white/5' : 'text-white/80'}`}
-            onClick={() => setLang('EN')}
-            aria-label="Switch to English"
-          >EN</button>
-          <button
-            className={`nav-item text-xs px-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 ${lang === 'CN' ? 'text-gold border-gold bg-white/5' : 'text-white/80'}`}
-            onClick={() => setLang('CN')}
-            aria-label="切换到中文"
-          >中文</button>
-          <button className="lg:hidden p-2 rounded-xl border border-white/10 text-white/80 ml-2 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-
-        <div className="md:hidden flex items-center gap-2">
-          <Link 
-            to="/pricing/checkout" 
-            className="relative p-2 rounded-lg border border-white/10 hover:border-gold/40 transition-colors duration-150 group"
-            aria-label={`Shopping cart with ${cartCount} items`}
-          >
-            <ShoppingCart className="w-5 h-5 text-white/80 group-hover:text-gold transition-colors" />
-            {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-500 to-amber-500 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-          <button className="p-2 rounded-xl border border-white/10 text-white/80 transition-colors duration-150" onClick={() => setMobileOpen(v => !v)} aria-label="Toggle menu">
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </div>
-
-      {mobileOpen && (
-        <div className="md:hidden border-t border-white/10 bg-black/25 backdrop-blur-xl">
-          <div className="container py-3 flex flex-col gap-2">
-            <div className="flex gap-2 mb-2">
-              <button className={`nav-item text-xs px-2 rounded-lg border border-white/10 hover:border-gold/40 ${lang === 'EN' ? 'text-gold border-gold bg-white/5' : 'text-white/80'}`} onClick={() => setLang('EN')}>EN</button>
-              <button className={`nav-item text-xs px-2 rounded-lg border border-white/10 hover:border-gold/40 ${lang === 'CN' ? 'text-gold border-gold bg-white/5' : 'text-white/80'}`} onClick={() => setLang('CN')}>中文</button>
+            <div className="flex flex-col p-2">
+              {item.children?.map((child, idx) => (
+                <Link
+                  key={idx}
+                  to={child.href || '#'}
+                  onClick={onClick}
+                  className="block px-4 py-3 text-base text-white/70 hover:text-gold hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  {child.label}
+                </Link>
+              ))}
             </div>
-            {MAP.map((item, i) => (
-              <div key={i}>
-                {item.children && item.children.length ? (
-                  <details className="group">
-                    <summary className="nav-link cursor-pointer">{item.label}</summary>
-                    <div className="pl-4 py-1 flex flex-col gap-1">
-                      {item.children.map((c, idx) => (
-                        Array.isArray(c.children) && c.children.length ? (
-                          <div key={idx} className="pl-2">
-                            <div className="text-xs uppercase tracking-wide text-white/50 my-1">{c.label}</div>
-                            <div className="flex flex-col gap-1 pl-2">
-                              {c.children.map((cc, j) => (
-                                <Link
-                                  key={j}
-                                  to={cc.href}
-                                  className="nav-link"
-                                  onClick={closeMobileNav}
-                                >
-                                  {cc.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ) : (
-                          <Link
-                            key={idx}
-                            to={c.href}
-                            className="nav-link"
-                            onClick={closeMobileNav}
-                          >
-                            {c.label}
-                          </Link>
-                        )
-                      ))}
-                    </div>
-                  </details>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="nav-link"
-                    onClick={closeMobileNav}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+export default function Nav() {
+  const { t, lang, setLang } = useI18n()
+  const navMap = getNavMap(t('nav'), lang)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const isScrolled = latest > 50
+    if (isScrolled !== scrolled) setScrolled(isScrolled)
+  })
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [location])
+
+  const toggleLang = () => {
+    setLang(lang === 'EN' ? 'CN' : 'EN')
+  }
+
+  return (
+    <>
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{
+          y: 20,
+          opacity: 1,
+          width: scrolled ? 'auto' : '95%',
+          maxWidth: '1280px',
+          padding: scrolled ? '0.5rem 0.75rem' : '0.75rem 1.5rem',
+        }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className={cn(
+          "fixed z-50 left-1/2 -translate-x-1/2 rounded-full border transition-all duration-300",
+          scrolled
+            ? "bg-cosmic-void/80 backdrop-blur-xl border-white/10 shadow-soft-xl"
+            : "bg-cosmic-void/40 backdrop-blur-md border-white/5 shadow-lg"
+        )}
+      >
+        <div className="flex items-center justify-between gap-4 md:gap-8">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 group pl-2">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gold/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img
+                src="/logo.png"
+                alt="Meta Alliance"
+                className="relative h-9 w-9 rounded-full ring-1 ring-white/20 group-hover:ring-gold/50 transition-all duration-300"
+              />
+            </div>
+            <div className={cn(
+              "text-sm font-medium uppercase tracking-[0.32em] text-white/90 group-hover:text-white transition-all duration-300 overflow-hidden whitespace-nowrap",
+              scrolled ? "w-0 opacity-0 md:w-auto md:opacity-100" : "w-auto opacity-100"
+            )}>
+              <span className="block text-[0.65rem] text-gold-soft mb-[-2px]">Meta</span>
+              <span className="block font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/70 group-hover:from-gold group-hover:via-gold-soft group-hover:to-gold transition-all duration-500">
+                Alliance
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navMap.map((item, idx) => (
+              item.children ? (
+                <DesktopDropdown key={idx} item={item} />
+              ) : (
+                <NavLink key={idx} href={item.href || '#'}>
+                  {item.label}
+                </NavLink>
+              )
             ))}
+          </nav>
+
+          {/* Actions */}
+          <div className="flex items-center gap-2 pr-1">
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLang}
+              className="hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/10 px-3 py-1 text-xs font-medium text-white/80 hover:text-gold hover:bg-white/10 transition-all"
+            >
+              {lang === 'EN' ? '中文' : 'EN'}
+            </button>
+
+            {/* Cart */}
+            <Link
+              to="/pricing/checkout"
+              className="relative p-2.5 rounded-full hover:bg-white/10 text-white/80 hover:text-gold transition-colors group"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_8px_rgba(212,175,55,0.8)]" />
+            </Link>
+
+            {/* Mobile Toggle */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2.5 rounded-full hover:bg-white/10 text-white/80 hover:text-gold transition-colors"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
-      )}
-    </header>
+      </motion.header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 bg-cosmic-void/60 backdrop-blur-sm lg:hidden"
+            onClick={() => setMobileOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Menu Panel */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-sm bg-cosmic-void border-l border-white/10 shadow-2xl lg:hidden overflow-y-auto"
+          >
+            <div className="p-6 flex flex-col gap-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gold tracking-widest uppercase">Menu</span>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-full hover:bg-white/10 text-white/60 hover:text-white transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-1">
+                {navMap.map((item, idx) => (
+                  <MobileMenuItem key={idx} item={item} onClick={() => setMobileOpen(false)} />
+                ))}
+              </div>
+
+              <div className="mt-auto pt-6 border-t border-white/10">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-white/60">Language</span>
+                  <button
+                    onClick={toggleLang}
+                    className="px-4 py-2 text-sm font-medium rounded-lg border border-gold text-gold bg-gold/10 transition-colors"
+                  >
+                    {lang === 'EN' ? 'Switch to 中文' : 'Switch to English'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   )
 }
